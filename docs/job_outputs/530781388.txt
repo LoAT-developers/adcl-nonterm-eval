@@ -1,0 +1,208 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l15, true>
+<l1, l2, (6 <= (0 + WItemsNum^0))>
+<l1, l3, ((0 + WItemsNum^0) <= 5) /\ (undef4 = undef4), par{tmp1^0 -> undef4}>
+<l4, l5, true>
+<l5, l1, true>
+<l6, l7, true>
+<l8, l9, true>
+<l10, l11, true>
+<l7, l4, ((0 + WItemsNum^0) <= 2)>
+<l7, l6, (3 <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (~(1) + WItemsNum^0)}>
+<l11, l12, true>
+<l12, l11, true>
+<l2, l6, true>
+<l13, l5, (6 <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l13, l5, ((0 + WItemsNum^0) <= 5), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l3, l2, ((0 + tmp1^0) <= 0) /\ (0 <= (0 + tmp1^0))>
+<l3, l13, (1 <= (0 + tmp1^0))>
+<l3, l13, ((1 + tmp1^0) <= 0)>
+<l14, l4, (undef37 = undef37) /\ (undef35 = undef35), par{WItemsNum^0 -> undef35}>
+<l15, l14, true>
+
+Fresh variables:
+undef4, undef35, undef37, 
+
+Undef variables:
+undef4, undef35, undef37, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l5, (WItemsNum^0 = undef35) /\ (undef37 = undef37) /\ (undef35 = undef35)>
+<l5, l6, (6 <= (0 + WItemsNum^0))>
+<l5, l6, ((0 + WItemsNum^0) <= 5) /\ (undef4 = undef4) /\ ((0 + undef4) <= 0) /\ (0 <= (0 + undef4))>
+<l5, l5, ((0 + WItemsNum^0) <= 5) /\ (undef4 = undef4) /\ (1 <= (0 + undef4)) /\ ((0 + WItemsNum^0) <= 5), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l5, l5, ((0 + WItemsNum^0) <= 5) /\ (undef4 = undef4) /\ ((1 + undef4) <= 0) /\ ((0 + WItemsNum^0) <= 5), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l6, l5, ((0 + WItemsNum^0) <= 2)>
+<l6, l6, (3 <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (~(1) + WItemsNum^0)}>
+
+Fresh variables:
+undef4, undef35, undef37, 
+
+Undef variables:
+undef4, undef35, undef37, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l5, l6, 6 <= WItemsNum^0, {all remain the same}>
+<l5, l6, WItemsNum^0 <= 5 /\ undef4 = 0, {all remain the same}>
+<l5, l5, 1 <= undef4 /\ WItemsNum^0 <= 5, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l5, l5, 1 + undef4 <= 0 /\ WItemsNum^0 <= 5, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l6, l5, WItemsNum^0 <= 2, {all remain the same}>
+<l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+Variables:
+WItemsNum^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l5, WItemsNum^0 = undef35, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 5 , 1 )
+( 6 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.011268
+
+Checking conditional termination of SCC {l5, l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001295s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.014591s
+Trying to remove transition: <l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.065561s
+Time used: 0.065306
+Trying to remove transition: <l5, l5, 1 + undef4 <= 0 /\ WItemsNum^0 <= 5, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.042038s
+Time used: 0.041201
+Trying to remove transition: <l5, l5, 1 <= undef4 /\ WItemsNum^0 <= 5, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.042228s
+Time used: 0.040627
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002476s
+Time used: 4.00074
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.014152s
+Time used: 4.00062
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.015273s
+Time used: 1.00076
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.047926s
+Time used: 0.028336
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l5, WItemsNum^0 = undef35, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l5, WItemsNum^0 = undef35, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002746s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002843s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l5, l6, 6 <= WItemsNum^0, {all remain the same}>
+<l5, l6, WItemsNum^0 <= 5 /\ undef4 = 0, {all remain the same}>
+<l5, l5, 1 <= undef4 /\ WItemsNum^0 <= 5, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l5, l5, 1 + undef4 <= 0 /\ WItemsNum^0 <= 5, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l6, l5, WItemsNum^0 <= 2, {all remain the same}>
+<l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+Variables:
+WItemsNum^0
+
+Checking conditional non-termination of SCC {l5, l6}...
+> No exit transition to close.
+Calling reachability with...
+Transition: <l5, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l5, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l5, WItemsNum^0 = undef35, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l5, WItemsNum^0 = undef35, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

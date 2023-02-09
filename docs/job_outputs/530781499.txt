@@ -1,0 +1,290 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l5, true>
+<l1, l2, ((0 + (~(1) * x^0)) <= (0 + y^0)) /\ ((1 + x^0) <= (0 + y^0)), par{x^0 -> (1 + x^0)}>
+<l1, l2, ((0 + x^0) <= (0 + y^0)) /\ ((1 + x^0) <= (0 + (~(1) * y^0))), par{y^0 -> (1 + y^0)}>
+<l1, l2, ((0 + y^0) <= (1 + (~(1) * x^0))) /\ ((1 + y^0) <= (0 + x^0)), par{x^0 -> (~(1) + x^0)}>
+<l1, l2, ((0 + y^0) <= (0 + x^0)) /\ ((2 + (~(1) * y^0)) <= (0 + x^0)), par{y^0 -> (~(1) + y^0)}>
+<l2, l3, ((1 + x^0) <= 0)>
+<l2, l3, (1 <= (0 + x^0))>
+<l3, l1, ((1 + y^0) <= 0)>
+<l3, l1, (1 <= (0 + y^0))>
+<l4, l2, true>
+<l5, l4, true>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, true>
+<l2, l2, ((1 + x^0) <= 0) /\ ((1 + y^0) <= 0) /\ ((0 + x^0) <= (0 + y^0)) /\ ((1 + x^0) <= (0 + (~(1) * y^0))), par{y^0 -> (1 + y^0)}>
+<l2, l2, ((1 + x^0) <= 0) /\ ((1 + y^0) <= 0) /\ ((0 + y^0) <= (1 + (~(1) * x^0))) /\ ((1 + y^0) <= (0 + x^0)), par{x^0 -> (~(1) + x^0)}>
+<l2, l2, ((1 + x^0) <= 0) /\ (1 <= (0 + y^0)) /\ ((0 + (~(1) * x^0)) <= (0 + y^0)) /\ ((1 + x^0) <= (0 + y^0)), par{x^0 -> (1 + x^0)}>
+<l2, l2, ((1 + x^0) <= 0) /\ (1 <= (0 + y^0)) /\ ((0 + x^0) <= (0 + y^0)) /\ ((1 + x^0) <= (0 + (~(1) * y^0))), par{y^0 -> (1 + y^0)}>
+<l2, l2, (1 <= (0 + x^0)) /\ ((1 + y^0) <= 0) /\ ((0 + y^0) <= (1 + (~(1) * x^0))) /\ ((1 + y^0) <= (0 + x^0)), par{x^0 -> (~(1) + x^0)}>
+<l2, l2, (1 <= (0 + x^0)) /\ ((1 + y^0) <= 0) /\ ((0 + y^0) <= (0 + x^0)) /\ ((2 + (~(1) * y^0)) <= (0 + x^0)), par{y^0 -> (~(1) + y^0)}>
+<l2, l2, (1 <= (0 + x^0)) /\ (1 <= (0 + y^0)) /\ ((0 + (~(1) * x^0)) <= (0 + y^0)) /\ ((1 + x^0) <= (0 + y^0)), par{x^0 -> (1 + x^0)}>
+<l2, l2, (1 <= (0 + x^0)) /\ (1 <= (0 + y^0)) /\ ((0 + y^0) <= (0 + x^0)) /\ ((2 + (~(1) * y^0)) <= (0 + x^0)), par{y^0 -> (~(1) + y^0)}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 + y^0 <= 0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 + x^0 <= 0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 <= x^0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= y^0 /\ 1 <= x^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 <= y^0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+Variables:
+x^0, y^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, true, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.019706
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005073s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.884989s
+Trying to remove transition: <l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 <= y^0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.035451s
+Time used: 0.033426
+
+LOG: SAT solveNonLinear - Elapsed time: 0.035451s
+Cost: 0; Total time: 0.033426
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 0 <= x^0[0m
+[33mRanking function: [36my^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 + y^0 <= 0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 + x^0 <= 0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 <= x^0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= y^0 /\ 1 <= x^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003684s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.555840s
+Trying to remove transition: <l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= y^0 /\ 1 <= x^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.126734s
+Time used: 0.124981
+Trying to remove transition: <l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.187290s
+Time used: 0.184047
+Trying to remove transition: <l2, l2, 1 <= x^0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.032480s
+Time used: 0.028581
+
+LOG: SAT solveNonLinear - Elapsed time: 0.032480s
+Cost: 0; Total time: 0.028581
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: y^0 <= 0[0m
+[33mRanking function: [36mx^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 + y^0 <= 0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 + x^0 <= 0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= y^0 /\ 1 <= x^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003253s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.394417s
+Trying to remove transition: <l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= y^0 /\ 1 <= x^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.029363s
+Time used: 0.02691
+
+LOG: SAT solveNonLinear - Elapsed time: 0.029363s
+Cost: 0; Total time: 0.02691
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 0 <= x^0[0m
+[33mRanking function: [36m-x^0 + 2*y^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 + y^0 <= 0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 + x^0 <= 0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002798s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.307013s
+Trying to remove transition: <l2, l2, y^0 <= x^0 /\ 1 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 + y^0, {y^0 -> -1 + y^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.019542s
+Time used: 0.018448
+
+LOG: SAT solveNonLinear - Elapsed time: 0.019542s
+Cost: 0; Total time: 0.018448
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 0 <= x^0[0m
+[33mRanking function: [36m2*x^0 + y^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 + y^0 <= 0, {y^0 -> 1 + y^0, rest remain the same}>
+<l2, l2, 1 + x^0 <= 0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003112s
+[33mRanking function: [36m2 - 4*y^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + x^0 <= 0 /\ 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ x^0 + y^0 <= 1, {x^0 -> -1 + x^0, rest remain the same}>
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001782s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011190s
+[33mPiecewise ranking function: [36mmin(2 + x^0 - 4*y^0,2 - 3*x^0 - 8*y^0)[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+<l2, l2, x^0 <= y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 + y^0 <= 0 /\ 1 <= y^0, {y^0 -> 1 + y^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002021s
+[33mRanking function: [36m-4 - 4*x^0 - 4*y^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= x^0 + y^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= y^0 /\ 1 <= y^0, {x^0 -> 1 + x^0, rest remain the same}>
+Variables:
+x^0, y^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001316s
+[33mRanking function: [36m-1 - x^0[0m
+New Graphs: 
+[32mProgram Terminates[0m

@@ -1,0 +1,729 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l5, true>
+<l1, l2, (undef3 = undef3), par{x^0 -> ((0 + x^0) + (~(1) * y^0)), z^0 -> undef3}>
+<l1, l3, (2 <= (0 + z^0)), par{y^0 -> (1 + y^0), z^0 -> (~(1) + z^0)}>
+<l3, l1, true>
+<l2, l1, (2 <= (0 + x^0))>
+<l4, l2, true>
+<l5, l4, true>
+
+Fresh variables:
+undef3, 
+
+Undef variables:
+undef3, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, (2 <= (0 + x^0))>
+<l1, l1, (undef3 = undef3) /\ (2 <= (0 + ((0 + x^0) + (~(1) * y^0)))), par{x^0 -> ((0 + x^0) + (~(1) * y^0)), z^0 -> undef3}>
+<l1, l1, (2 <= (0 + z^0)), par{y^0 -> (1 + y^0), z^0 -> (~(1) + z^0)}>
+
+Fresh variables:
+undef3, 
+
+Undef variables:
+undef3, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, 2 <= x^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.004714
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001072s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003789s
+Trying to remove transition: <l1, l1, 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009316s
+Time used: 0.009111
+Trying to remove transition: <l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012454s
+Time used: 0.011994
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022730s
+Time used: 0.02199
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.041122s
+Time used: 0.041112
+
+LOG: SAT solveNonLinear - Elapsed time: 0.063852s
+Cost: 1; Total time: 0.063102
+[31mFailed at location 1: x^0 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: x^0 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005370s
+Remaining time after improvement: 0.998473
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: x^0 <= y^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, x^0 <= y^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, x^0 <= y^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l1, l1, x^0 <= y^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000787s
+[33mRanking function: [36m-2 + z^0[0m
+New Graphs: 
+Calling Safety with literal x^0 <= y^0 and entry <l0, l1, 2 <= x^0, {all remain the same}>
+
+LOG: CALL check - Post:x^0 <= y^0 - Process 1
+* Exit transition: <l0, l1, 2 <= x^0, {all remain the same}>
+* Postcondition  : x^0 <= y^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000410s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000495s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: x^0 <= y^0 , 
+Narrowing transition: 
+<l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001057s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006629s
+Trying to remove transition: <l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011424s
+Time used: 0.011191
+Trying to remove transition: <l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008829s
+Time used: 0.008174
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021746s
+Time used: 0.021057
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.038311s
+Time used: 0.038302
+
+LOG: SAT solveNonLinear - Elapsed time: 0.060058s
+Cost: 1; Total time: 0.059359
+[31mFailed at location 1: 1 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006543s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001798s
+Remaining time after improvement: 0.995788
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= y^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= y^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= y^0 /\ 1 + y^0 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= y^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= y^0 /\ 1 + y^0 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+[33mRanking function: [36m2*x^0 - y^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= y^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000717s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002143s
+Trying to remove transition: <l1, l1, 0 <= y^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006217s
+Time used: 0.006075
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011300s
+Time used: 0.010701
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.014946s
+Time used: 0.014939
+
+LOG: SAT solveNonLinear - Elapsed time: 0.026246s
+Cost: 1; Total time: 0.02564
+[31mFailed at location 1: 1 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003648s
+Remaining time after improvement: 0.998542
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 <= y^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= y^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + y^0 <= x^0 /\ 1 <= y^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= y^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+[33mRanking function: [36mx^0[0m
+New Graphs: 
+Calling Safety with literal 0 <= y^0 and entry <l0, l1, 1 + y^0 <= x^0 /\ 2 <= x^0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= y^0 - Process 2
+* Exit transition: <l0, l1, 1 + y^0 <= x^0 /\ 2 <= x^0, {all remain the same}>
+* Postcondition  : 0 <= y^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000532s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000615s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= y^0 , 
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 1 <= y^0 , 
+Narrowing transition: 
+<l1, l1, 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0 /\ y^0 = 0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002546s
+[33mRanking function: [36m-1 - 2*y^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0 /\ y^0 = 0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002041s
+[33mRanking function: [36m-y^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001127s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004065s
+Trying to remove transition: <l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010957s
+Time used: 0.010765
+Trying to remove transition: <l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009661s
+Time used: 0.009031
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.025041s
+Time used: 0.024206
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.081787s
+Time used: 0.081774
+
+LOG: SAT solveNonLinear - Elapsed time: 0.106828s
+Cost: 1; Total time: 0.10598
+[31mFailed at location 1: 0 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008665s
+Remaining time after improvement: 0.997472
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= y^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0 /\ y^0 = 0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+New Graphs: 
+Transitions:
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000696s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002118s
+Trying to remove transition: <l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006177s
+Time used: 0.006037
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011864s
+Time used: 0.011386
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001814s
+Time used: 4.00075
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006874s
+Time used: 1.00064
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017092s
+Time used: 0.009574
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= 0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= z^0 /\ y^0 = 0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, 1 <= y^0 /\ 2 + y^0 <= x^0, {all remain the same}>
+<l1, end, 1 <= y^0 /\ x^0 <= 1 + y^0, {all remain the same}>
+<l1, end, z^0 <= 1 /\ y^0 = 0 /\ x^0 = 1 + y^0, {all remain the same}>
+<l1, end, x^0 <= y^0 /\ y^0 = 0, {all remain the same}>
+<l1, end, 1 + y^0 <= 0 /\ z^0 <= 1 /\ x^0 = 1 + y^0, {all remain the same}>
+<l1, end, x^0 <= y^0 /\ 1 + y^0 <= 0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.052099s
+Time used: 0.051707
+Improving Solution with cost 5 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.211532s
+Time used: 0.2115
+Improving Solution with cost 4 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000924s
+Time used: 1.00082
+
+LOG: SAT solveNonLinear - Elapsed time: 1.264554s
+Cost: 4; Total time: 1.26403
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.043916s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 2 <= x^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 4
+Strengthening exit transition (result): 
+<l1, end, 1 <= y^0 /\ 2 <= x^0 /\ 2 + y^0 <= x^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, 1 <= y^0 /\ x^0 <= 1 + y^0 /\ 2 <= x^0, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 2 <= x^0 /\ 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + y^0 <= 0 /\ 2 <= x^0 /\ 2 + y^0 <= x^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= x^0 /\ 2 <= z^0 /\ y^0 = 0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, 1 <= y^0 /\ 2 <= x^0 /\ 2 + y^0 <= x^0, {all remain the same}>
+<l1, end, 1 <= y^0 /\ x^0 <= 1 + y^0 /\ 2 <= x^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.002297s
+Time used: 5.00177
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.242147s
+Time used: 0.236358
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001362s
+Time used: 1.00128
+
+LOG: SAT solveNonLinear - Elapsed time: 1.243509s
+Cost: 2; Total time: 1.23764
+[31mFailed at location 1: 1 + y^0 <= 0[0m
+[31mFailed at location 1: z^0 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + y^0 <= 0[0m
+[36mQuasi-invariant at l1: z^0 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010543s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003719s
+Remaining time after improvement: 0.990539
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.007573s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + y^0 <= 0[0m
+[36mQuasi-invariant at l1: z^0 <= 2 + y^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 2
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 2 <= x^0 /\ 2 + y^0 <= x^0 /\ y^0 = 0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + y^0 <= 0 /\ 2 <= x^0 /\ 2 + y^0 <= x^0 /\ z^0 <= 2 + y^0, {x^0 -> x^0 - y^0, z^0 -> undef3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + y^0 <= x^0 /\ 2 <= x^0 /\ 2 <= z^0 /\ y^0 = 0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + y^0 <= x^0 /\ 1 + y^0 <= 0 /\ 2 <= x^0 /\ 2 <= z^0, {y^0 -> 1 + y^0, z^0 -> -1 + z^0, rest remain the same}>
+
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 2 <= x^0, 1 + y^0 <= 0, z^0 <= 2 + y^0, 
+OPEN EXITS: 
+<l1, end, 1 + y^0 <= 0 /\ 2 <= x^0 /\ z^0 <= 2 + y^0, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l1, 2 <= x^0, {all remain the same}>
+Conditions: 1 + y^0 <= 0, 2 <= x^0, z^0 <= 2 + y^0, 
+OPEN EXITS: 
+<l0, l1, 1 + y^0 <= 0 /\ 2 <= x^0 /\ z^0 <= 2 + y^0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

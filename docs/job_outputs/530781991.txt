@@ -1,0 +1,1237 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l4, true>
+<l1, l2, (arg1 > 0) /\ (arg2 > ~(1)), par{arg1 -> 20, arg2 -> ~(20), arg3 -> arg2}>
+<l2, l3, ((arg1 - arg3) < 5) /\ (arg3 <= arg1) /\ (arg3 >= arg2), par{arg1 -> arg3, arg2 -> (~(1) * arg3), arg3 -> arg1}>
+<l2, l3, (arg3 <= arg1) /\ (arg3 >= arg2) /\ ((arg1 - arg3) >= 5) /\ ((arg1 + arg3) < 5), par{arg1 -> arg3, arg2 -> (~(1) * arg3), arg3 -> arg1}>
+<l3, l2, (arg1 <= arg3), par{arg1 -> arg3, arg2 -> (0 - arg3), arg3 -> arg2}>
+<l2, l2, (arg3 <= arg1) /\ (arg3 >= arg2) /\ ((arg1 - arg3) >= 5) /\ ((arg1 + arg3) >= 5) /\ (arg3 < 1) /\ (arg3 < (arg1 + 1)), par{arg1 -> (arg1 + 1), arg2 -> (0 - (arg1 + 1)), arg3 -> (arg3 - 1)}>
+<l2, l2, (arg3 <= arg1) /\ (arg3 >= arg2) /\ ((arg1 - arg3) >= 5) /\ ((arg1 + arg3) >= 5) /\ (arg3 > 1) /\ (arg3 < (arg1 + 1)), par{arg1 -> (arg1 + 1), arg2 -> (0 - (arg1 + 1)), arg3 -> (arg3 - 1)}>
+<l2, l2, (arg1 > 5) /\ (arg2 < 2) /\ (1 = arg3), par{arg1 -> ~(1), arg2 -> 1, arg3 -> 0}>
+<l4, l1, true, par{arg1 -> undef22, arg2 -> undef23, arg3 -> undef24}>
+
+Fresh variables:
+undef22, undef23, undef24, 
+
+Undef variables:
+undef22, undef23, undef24, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (arg1 = 20) /\ (arg2 = ~(20)) /\ (arg3 = undef23) /\ (undef22 > 0) /\ (undef23 > ~(1))>
+<l2, l2, ((arg1 - arg3) < 5) /\ (arg3 <= arg1) /\ (arg3 >= arg2) /\ (arg3 <= arg1), par{arg1 -> arg1, arg2 -> (0 - arg1), arg3 -> (~(1) * arg3)}>
+<l2, l2, (arg3 <= arg1) /\ (arg3 >= arg2) /\ ((arg1 - arg3) >= 5) /\ ((arg1 + arg3) < 5) /\ (arg3 <= arg1), par{arg1 -> arg1, arg2 -> (0 - arg1), arg3 -> (~(1) * arg3)}>
+<l2, l2, (arg3 <= arg1) /\ (arg3 >= arg2) /\ ((arg1 - arg3) >= 5) /\ ((arg1 + arg3) >= 5) /\ (arg3 < 1) /\ (arg3 < (arg1 + 1)), par{arg1 -> (arg1 + 1), arg2 -> (0 - (arg1 + 1)), arg3 -> (arg3 - 1)}>
+<l2, l2, (arg3 <= arg1) /\ (arg3 >= arg2) /\ ((arg1 - arg3) >= 5) /\ ((arg1 + arg3) >= 5) /\ (arg3 > 1) /\ (arg3 < (arg1 + 1)), par{arg1 -> (arg1 + 1), arg2 -> (0 - (arg1 + 1)), arg3 -> (arg3 - 1)}>
+<l2, l2, (arg1 > 5) /\ (arg2 < 2) /\ (1 = arg3), par{arg1 -> ~(1), arg2 -> 1, arg3 -> 0}>
+
+Fresh variables:
+undef22, undef23, undef24, 
+
+Undef variables:
+undef22, undef23, undef24, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= 1 /\ 6 <= arg1 /\ arg3 = 1, {arg1 -> -1, arg2 -> 1, arg3 -> 0, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, 0 <= undef23 /\ 1 <= undef22 /\ arg3 = undef23 /\ 20 + arg2 = 0 /\ arg1 = 20, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.090673
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005309s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.041965s
+[33mPiecewise ranking function: [36mmin(1 + 10*arg1 - 10*arg3,0)[0m
+New Graphs: 
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002371s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.124939s
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.028334s
+Time used: 0.027472
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.023395s
+Time used: 0.021892
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027787s
+Time used: 0.026329
+Trying to remove transition: <l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014321s
+Time used: 0.012737
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.116800s
+Time used: 0.114988
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000695s
+Time used: 1.00063
+
+LOG: SAT solveNonLinear - Elapsed time: 1.117495s
+Cost: 1; Total time: 1.11561
+[31mFailed at location 2: 1 + arg1 <= arg3[0m
+Before Improving: 
+[36mQuasi-invariant at l2: 1 + arg1 <= arg3[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.025832s
+Remaining time after improvement: 0.994469
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 1 + arg1 <= arg3[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= 1 /\ 6 <= arg1 /\ arg3 = 1, {arg1 -> -1, arg2 -> 1, arg3 -> 0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+New Graphs: 
+Calling Safety with literal 1 + arg1 <= arg3 and entry <l0, l2, 0 <= undef23 /\ 1 <= undef22 /\ arg3 = undef23 /\ 20 + arg2 = 0 /\ arg1 = 20, {all remain the same}>
+
+LOG: CALL check - Post:1 + arg1 <= arg3 - Process 1
+* Exit transition: <l0, l2, 0 <= undef23 /\ 1 <= undef22 /\ arg3 = undef23 /\ 20 + arg2 = 0 /\ arg1 = 20, {all remain the same}>
+* Postcondition  : 1 + arg1 <= arg3
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001099s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001232s
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + arg1 <= arg3 , 
+Narrowing transition: 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: Narrow transition size 1
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= 1 /\ 6 <= arg1 /\ arg3 = 1, {arg1 -> -1, arg2 -> 1, arg3 -> 0, rest remain the same}>
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002397s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.126217s
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.029268s
+Time used: 0.028014
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.024190s
+Time used: 0.022365
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.028872s
+Time used: 0.027084
+Trying to remove transition: <l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015086s
+Time used: 0.013315
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002961s
+Time used: 4.00107
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.021811s
+Time used: 4.00177
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.064683s
+Time used: 1.00068
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.088252s
+Time used: 0.083852
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001195s
+Time used: 1.00114
+
+LOG: SAT solveNonLinear - Elapsed time: 1.089447s
+Cost: 1; Total time: 1.08499
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: arg2 <= 1 + arg3[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - arg1[0m
+New Graphs: 
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002883s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.213410s
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.043874s
+Time used: 0.042657
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027249s
+Time used: 0.025296
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.038873s
+Time used: 0.036666
+Trying to remove transition: <l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017044s
+Time used: 0.015079
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003410s
+Time used: 4.00125
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.025722s
+Time used: 4.001
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.025562s
+Time used: 1.00004
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.093011s
+Time used: 0.089677
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001143s
+Time used: 1.00088
+
+LOG: SAT solveNonLinear - Elapsed time: 1.094153s
+Cost: 1; Total time: 1.09056
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: arg1 + arg2 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - 99998*arg1 - arg2[0m
+New Graphs: 
+Transitions:
+<l2, l2, arg1 + arg2 <= 0 /\ arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003361s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.879211s
+Trying to remove transition: <l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.046273s
+Time used: 0.044554
+Trying to remove transition: <l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.034412s
+Time used: 0.032393
+Trying to remove transition: <l2, l2, arg1 + arg2 <= 0 /\ arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.036802s
+Time used: 0.034444
+Trying to remove transition: <l2, l2, arg1 + arg2 <= 0 /\ arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018808s
+Time used: 0.016827
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004883s
+Time used: 4.00253
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.034784s
+Time used: 4.00369
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004488s
+Time used: 1.00091
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.100960s
+Time used: 0.096427
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001366s
+Time used: 1.00113
+
+LOG: SAT solveNonLinear - Elapsed time: 1.102326s
+Cost: 1; Total time: 1.09756
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= arg1 + arg2[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + arg2[0m
+New Graphs: 
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003446s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.203076s
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.047957s
+Time used: 0.04634
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.036207s
+Time used: 0.034119
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.044039s
+Time used: 0.042069
+Trying to remove transition: <l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021078s
+Time used: 0.018509
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.009016s
+Time used: 4.00179
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.042984s
+Time used: 4.0013
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.026713s
+Time used: 1.00098
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.098532s
+Time used: 0.094192
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001388s
+Time used: 1.00115
+
+LOG: SAT solveNonLinear - Elapsed time: 1.099920s
+Cost: 1; Total time: 1.09534
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= 1 + arg1 + arg2[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + 2*arg1 + 3*arg2[0m
+New Graphs: 
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003630s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.316690s
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.046869s
+Time used: 0.045091
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.033698s
+Time used: 0.031486
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.047883s
+Time used: 0.045616
+Trying to remove transition: <l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021608s
+Time used: 0.019757
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002629s
+Time used: 4.00023
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.012073s
+Time used: 4.002
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003764s
+Time used: 1.00009
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.102469s
+Time used: 0.09777
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.009351s
+Time used: 1.00124
+
+LOG: SAT solveNonLinear - Elapsed time: 1.111820s
+Cost: 1; Total time: 1.09901
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 1 + arg2 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 1 + arg2 <= 0 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 1 + arg2 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 1 + arg2 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 1 + arg2 <= 0 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - arg1 + arg2[0m
+New Graphs: 
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 1 + arg2 <= 0 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 + arg2 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 + arg2 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003919s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.453148s
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 50001 <= arg1 /\ 50001 + arg2 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053884s
+Time used: 0.051958
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 50001 <= arg1 /\ 50001 + arg2 <= arg1 /\ 50001 + 2*arg1 + 3*arg2 <= 0 /\ 50001 <= 99998*arg1 + arg2 /\ 50001 + arg2 <= 0 /\ arg1 + arg2 = 0, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.038802s
+Time used: 0.036618
+Trying to remove transition: <l2, l2, arg2 <= arg3 /\ 1 + arg2 <= 0 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.048993s
+Time used: 0.046614
+Trying to remove transition: <l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 4 + arg3 /\ arg1 + arg2 = 0, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.031967s
+Time used: 0.029906
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004273s
+Time used: 4.00157
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.045134s
+Time used: 4.00157
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.029648s
+Time used: 1.00064
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005107s
+Time used: 4.00025
+
+Proving non-termination of subgraph 1
+Transitions:
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ arg3 = 1, {all remain the same}>
+<l2, end, 1 + arg3 <= arg2 /\ 1 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {all remain the same}>
+<l2, end, arg3 <= 0 /\ 1 + arg3 <= arg2 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {all remain the same}>
+<l2, end, arg3 <= 0 /\ 1 + arg3 <= arg2 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {all remain the same}>
+<l2, end, arg3 <= arg1 /\ 1 + arg3 <= arg2 /\ 1 <= arg3 /\ 5 <= arg1 + arg3 /\ arg1 <= 4 + arg3, {all remain the same}>
+<l2, end, arg3 <= arg1 /\ 1 + arg3 <= arg2 /\ 1 <= arg3 /\ arg1 + arg3 <= 4 /\ arg1 <= 4 + arg3, {all remain the same}>
+<l2, end, arg3 <= arg1 /\ arg3 <= 0 /\ 1 + arg3 <= arg2 /\ arg1 + arg3 <= 4 /\ arg1 <= 4 + arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg3 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg3 /\ 1 <= arg3 /\ arg1 + arg3 <= 4, {all remain the same}>
+<l2, end, arg3 <= 0 /\ 1 + arg1 <= arg3 /\ arg1 + arg3 <= 4, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.102144s
+Time used: 0.10164
+Improving Solution with cost 11 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.187499s
+Time used: 0.18744
+
+LOG: SAT solveNonLinear - Elapsed time: 0.289643s
+Cost: 11; Total time: 0.28908
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: arg2 <= arg3[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 6
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ arg3 = 1, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg3 /\ 1 + arg1 <= arg3 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg3 /\ 1 + arg1 <= arg3 /\ 1 <= arg3 /\ arg1 + arg3 <= 4, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg3 /\ arg3 <= 0 /\ 1 + arg1 <= arg3 /\ arg1 + arg3 <= 4, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ arg3 = 1, {all remain the same}>
+<l2, end, arg2 <= arg3 /\ 1 + arg1 <= arg3 /\ 5 <= arg1 + arg3 /\ 2 <= arg3, {all remain the same}>
+<l2, end, arg2 <= arg3 /\ 1 + arg1 <= arg3 /\ 1 <= arg3 /\ arg1 + arg3 <= 4, {all remain the same}>
+<l2, end, arg2 <= arg3 /\ arg3 <= 0 /\ 1 + arg1 <= arg3 /\ arg1 + arg3 <= 4, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.034892s
+Time used: 0.034547
+Improving Solution with cost 5 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.093285s
+Time used: 0.093269
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.095520s
+Time used: 0.095506
+
+LOG: SAT solveNonLinear - Elapsed time: 0.223696s
+Cost: 3; Total time: 0.223322
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 7 <= arg1[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 2
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 7 <= arg1 /\ arg3 = 1, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg3 /\ 1 + arg1 <= arg3 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 7 <= arg1, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ 7 <= arg1, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ 7 <= arg1, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 7 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 7 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 7 <= arg1 /\ arg3 = 1, {all remain the same}>
+<l2, end, arg2 <= arg3 /\ 1 + arg1 <= arg3 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 7 <= arg1, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.117251s
+Time used: 0.116981
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.154129s
+Time used: 0.15005
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.320925s
+Time used: 0.320856
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001438s
+Time used: 1.00132
+
+LOG: SAT solveNonLinear - Elapsed time: 1.476492s
+Cost: 1; Total time: 1.47222
+[31mFailed at location 2: arg3 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l2: arg3 <= 0[0m
+[36mQuasi-invariant at l2: 5 <= arg1 + arg3[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.047895s
+Remaining time after improvement: 0.995833
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: arg3 <= 0[0m
+[36mQuasi-invariant at l2: 5 <= arg1 + arg3[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 2
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg3 <= arg1 /\ arg2 <= arg3 /\ arg1 <= 4 + arg3 /\ 7 <= arg1, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ arg1 + arg3 <= 4 /\ 7 <= arg1, {arg2 -> -arg1, arg3 -> -arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 7 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, arg2 <= arg3 /\ 5 + arg3 <= arg1 /\ 5 <= arg1 + arg3 /\ 2 <= arg3 /\ 7 <= arg1, {arg1 -> 1 + arg1, arg2 -> -1 - arg1, arg3 -> -1 + arg3, rest remain the same}>
+
+Calling reachability with...
+Transition: <l2, end, true, {all remain the same}>
+Conditions: arg2 <= arg3, 7 <= arg1, arg3 <= 0, 5 <= arg1 + arg3, 
+OPEN EXITS: 
+<l2, end, arg2 <= arg3 /\ arg3 <= 0 /\ 5 <= arg1 + arg3 /\ 7 <= arg1, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l2, 0 <= undef23 /\ 1 <= undef22 /\ arg3 = undef23 /\ 20 + arg2 = 0 /\ arg1 = 20, {all remain the same}>
+Conditions: arg2 <= arg3, arg3 <= 0, 5 <= arg1 + arg3, 7 <= arg1, 
+OPEN EXITS: 
+<l0, l2, arg2 <= arg3 /\ arg3 <= 0 /\ 0 <= undef23 /\ 1 <= undef22 /\ 5 <= arg1 + arg3 /\ arg3 = undef23 /\ 20 + arg2 = 0 /\ arg1 = 20, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

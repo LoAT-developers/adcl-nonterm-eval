@@ -1,0 +1,229 @@
+NO
+
+Initial ITS
+Start location: l5
+   0: l0 -> l1 : p^0'=p^post0, r^0'=r^post0, N^0'=N^post0, q^0'=q^post0, (p^0-p^post0 == 0 /\ -p^0+r^post0 == 0 /\ q^0-q^post0 == 0 /\ N^0-N^post0 == 0), cost: 1
+   1: l0 -> l1 : p^0'=p^post1, r^0'=r^post1, N^0'=N^post1, q^0'=q^post1, (N^0-N^post1 == 0 /\ q^post1-p^0 == 0 /\ r^0-r^post1 == 0 /\ p^0-p^post1 == 0), cost: 1
+   4: l1 -> l2 : p^0'=p^post4, r^0'=r^post4, N^0'=N^post4, q^0'=q^post4, (-N^post4+N^0 == 0 /\ -q^post4+q^0 == 0 /\ -r^post4+r^0 == 0 /\ -p^post4+p^0 == 0), cost: 1
+   2: l2 -> l3 : p^0'=p^post2, r^0'=r^post2, N^0'=N^post2, q^0'=q^post2, (-r^post2+r^0 == 0 /\ -1-r^0+q^0 <= 0 /\ p^0-p^post2 == 0 /\ -N^post2+N^0 == 0 /\ -q^post2+q^0 == 0), cost: 1
+   3: l2 -> l0 : p^0'=p^post3, r^0'=r^post3, N^0'=N^post3, q^0'=q^post3, (0 == 0 /\ -N^post3+N^0 == 0 /\ -q^post3+q^0 == 0 /\ -r^post3+r^0 == 0 /\ 2+r^0-q^0 <= 0), cost: 1
+   5: l4 -> l1 : p^0'=p^post5, r^0'=r^post5, N^0'=N^post5, q^0'=q^post5, (-N^0+q^post5 == 0 /\ p^0-p^post5 == 0 /\ -1+r^post5 == 0 /\ N^0-N^post5 == 0), cost: 1
+   6: l5 -> l4 : p^0'=p^post6, r^0'=r^post6, N^0'=N^post6, q^0'=q^post6, (p^0-p^post6 == 0 /\ N^0-N^post6 == 0 /\ r^0-r^post6 == 0 /\ -q^post6+q^0 == 0), cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: l5
+   0: l0 -> l1 : p^0'=p^post0, r^0'=r^post0, N^0'=N^post0, q^0'=q^post0, (p^0-p^post0 == 0 /\ -p^0+r^post0 == 0 /\ q^0-q^post0 == 0 /\ N^0-N^post0 == 0), cost: 1
+   1: l0 -> l1 : p^0'=p^post1, r^0'=r^post1, N^0'=N^post1, q^0'=q^post1, (N^0-N^post1 == 0 /\ q^post1-p^0 == 0 /\ r^0-r^post1 == 0 /\ p^0-p^post1 == 0), cost: 1
+   4: l1 -> l2 : p^0'=p^post4, r^0'=r^post4, N^0'=N^post4, q^0'=q^post4, (-N^post4+N^0 == 0 /\ -q^post4+q^0 == 0 /\ -r^post4+r^0 == 0 /\ -p^post4+p^0 == 0), cost: 1
+   3: l2 -> l0 : p^0'=p^post3, r^0'=r^post3, N^0'=N^post3, q^0'=q^post3, (0 == 0 /\ -N^post3+N^0 == 0 /\ -q^post3+q^0 == 0 /\ -r^post3+r^0 == 0 /\ 2+r^0-q^0 <= 0), cost: 1
+   5: l4 -> l1 : p^0'=p^post5, r^0'=r^post5, N^0'=N^post5, q^0'=q^post5, (-N^0+q^post5 == 0 /\ p^0-p^post5 == 0 /\ -1+r^post5 == 0 /\ N^0-N^post5 == 0), cost: 1
+   6: l5 -> l4 : p^0'=p^post6, r^0'=r^post6, N^0'=N^post6, q^0'=q^post6, (p^0-p^post6 == 0 /\ N^0-N^post6 == 0 /\ r^0-r^post6 == 0 /\ -q^post6+q^0 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : p^0'=p^post0, r^0'=r^post0, N^0'=N^post0, q^0'=q^post0, (p^0-p^post0 == 0 /\ -p^0+r^post0 == 0 /\ q^0-q^post0 == 0 /\ N^0-N^post0 == 0), cost: 1
+New rule:
+l0 -> l1 : r^0'=p^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : p^0'=p^post1, r^0'=r^post1, N^0'=N^post1, q^0'=q^post1, (N^0-N^post1 == 0 /\ q^post1-p^0 == 0 /\ r^0-r^post1 == 0 /\ p^0-p^post1 == 0), cost: 1
+New rule:
+l0 -> l1 : q^0'=p^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l0 : p^0'=p^post3, r^0'=r^post3, N^0'=N^post3, q^0'=q^post3, (0 == 0 /\ -N^post3+N^0 == 0 /\ -q^post3+q^0 == 0 /\ -r^post3+r^0 == 0 /\ 2+r^0-q^0 <= 0), cost: 1
+New rule:
+l2 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l2 : p^0'=p^post4, r^0'=r^post4, N^0'=N^post4, q^0'=q^post4, (-N^post4+N^0 == 0 /\ -q^post4+q^0 == 0 /\ -r^post4+r^0 == 0 /\ -p^post4+p^0 == 0), cost: 1
+New rule:
+l1 -> l2 : TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l4 -> l1 : p^0'=p^post5, r^0'=r^post5, N^0'=N^post5, q^0'=q^post5, (-N^0+q^post5 == 0 /\ p^0-p^post5 == 0 /\ -1+r^post5 == 0 /\ N^0-N^post5 == 0), cost: 1
+New rule:
+l4 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l5 -> l4 : p^0'=p^post6, r^0'=r^post6, N^0'=N^post6, q^0'=q^post6, (p^0-p^post6 == 0 /\ N^0-N^post6 == 0 /\ r^0-r^post6 == 0 /\ -q^post6+q^0 == 0), cost: 1
+New rule:
+l5 -> l4 : TRUE, cost: 1
+
+Simplified rules
+Start location: l5
+   7: l0 -> l1 : r^0'=p^0, TRUE, cost: 1
+   8: l0 -> l1 : q^0'=p^0, TRUE, cost: 1
+  10: l1 -> l2 : TRUE, cost: 1
+   9: l2 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 1
+  11: l4 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 1
+  12: l5 -> l4 : TRUE, cost: 1
+
+
+Eliminating location l4 by chaining:
+
+Applied chaining
+First rule:
+l5 -> l4 : TRUE, cost: 1
+Second rule:
+l4 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 1
+New rule:
+l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+
+Applied deletion
+Removed the following rules: 11 12
+
+Eliminating location l2 by chaining:
+
+Applied chaining
+First rule:
+l1 -> l2 : TRUE, cost: 1
+Second rule:
+l2 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 1
+New rule:
+l1 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 2
+
+Applied deletion
+Removed the following rules: 9 10
+
+Eliminated locations on linear paths
+Start location: l5
+   7: l0 -> l1 : r^0'=p^0, TRUE, cost: 1
+   8: l0 -> l1 : q^0'=p^0, TRUE, cost: 1
+  14: l1 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 2
+  13: l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+
+
+Eliminating location l0 by chaining:
+
+Applied chaining
+First rule:
+l1 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 2
+Second rule:
+l0 -> l1 : r^0'=p^0, TRUE, cost: 1
+New rule:
+l1 -> l1 : p^0'=p^post3, r^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+
+Applied chaining
+First rule:
+l1 -> l0 : p^0'=p^post3, 2+r^0-q^0 <= 0, cost: 2
+Second rule:
+l0 -> l1 : q^0'=p^0, TRUE, cost: 1
+New rule:
+l1 -> l1 : p^0'=p^post3, q^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+
+Applied deletion
+Removed the following rules: 7 8 14
+
+Eliminated locations on tree-shaped paths
+Start location: l5
+  15: l1 -> l1 : p^0'=p^post3, r^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+  16: l1 -> l1 : p^0'=p^post3, q^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+  13: l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+
+
+Applied acceleration
+Original rule:
+l1 -> l1 : p^0'=p^post3, r^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+New rule:
+l1 -> l1 : p^0'=p^post3, r^0'=p^post3, (-2+q^0-p^post3 >= 0 /\ -1+n >= 0 /\ -2-r^0+q^0 >= 0), cost: 3*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_FFCMig.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : p^0'=p^post3, r^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+New rule:
+l1 -> [6] : (-r^0+p^post3 <= 0 /\ -2-r^0+q^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_EAmjPl.txt
+
+Applied acceleration
+Original rule:
+l1 -> l1 : p^0'=p^post3, q^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+New rule:
+l1 -> l1 : p^0'=p^post3, q^0'=p^post3, (-1+n0 >= 0 /\ -2-r^0+q^0 >= 0 /\ -2-r^0+p^post3 >= 0), cost: 3*n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_CmKdCF.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : p^0'=p^post3, q^0'=p^post3, 2+r^0-q^0 <= 0, cost: 3
+New rule:
+l1 -> [6] : (q^0-p^post3 <= 0 /\ -2-r^0+q^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_oLNoli.txt
+
+Applied deletion
+Removed the following rules: 15 16
+
+Accelerated simple loops
+Start location: l5
+  17: l1 -> l1 : p^0'=p^post3, r^0'=p^post3, (-2+q^0-p^post3 >= 0 /\ -1+n >= 0 /\ -2-r^0+q^0 >= 0), cost: 3*n
+  18: l1 -> [6] : (-r^0+p^post3 <= 0 /\ -2-r^0+q^0 >= 0), cost: NONTERM
+  19: l1 -> l1 : p^0'=p^post3, q^0'=p^post3, (-1+n0 >= 0 /\ -2-r^0+q^0 >= 0 /\ -2-r^0+p^post3 >= 0), cost: 3*n0
+  20: l1 -> [6] : (q^0-p^post3 <= 0 /\ -2-r^0+q^0 >= 0), cost: NONTERM
+  13: l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+
+
+Applied chaining
+First rule:
+l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+Second rule:
+l1 -> l1 : p^0'=p^post3, r^0'=p^post3, (-2+q^0-p^post3 >= 0 /\ -1+n >= 0 /\ -2-r^0+q^0 >= 0), cost: 3*n
+New rule:
+l5 -> l1 : p^0'=p^post3, r^0'=p^post3, q^0'=N^0, (-2+N^0-p^post3 >= 0 /\ -3+N^0 >= 0 /\ -1+n >= 0), cost: 2+3*n
+
+Applied chaining
+First rule:
+l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+Second rule:
+l1 -> [6] : (-r^0+p^post3 <= 0 /\ -2-r^0+q^0 >= 0), cost: NONTERM
+New rule:
+l5 -> [6] : -3+N^0 >= 0, cost: NONTERM
+
+Applied chaining
+First rule:
+l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+Second rule:
+l1 -> l1 : p^0'=p^post3, q^0'=p^post3, (-1+n0 >= 0 /\ -2-r^0+q^0 >= 0 /\ -2-r^0+p^post3 >= 0), cost: 3*n0
+New rule:
+l5 -> l1 : p^0'=p^post3, r^0'=1, q^0'=p^post3, (-3+N^0 >= 0 /\ -3+p^post3 >= 0 /\ -1+n0 >= 0), cost: 2+3*n0
+
+Applied chaining
+First rule:
+l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+Second rule:
+l1 -> [6] : (q^0-p^post3 <= 0 /\ -2-r^0+q^0 >= 0), cost: NONTERM
+New rule:
+l5 -> [6] : -3+N^0 >= 0, cost: NONTERM
+
+Applied deletion
+Removed the following rules: 17 18 19 20
+
+Chained accelerated rules with incoming rules
+Start location: l5
+  13: l5 -> l1 : r^0'=1, q^0'=N^0, TRUE, cost: 2
+  21: l5 -> l1 : p^0'=p^post3, r^0'=p^post3, q^0'=N^0, (-2+N^0-p^post3 >= 0 /\ -3+N^0 >= 0 /\ -1+n >= 0), cost: 2+3*n
+  22: l5 -> [6] : -3+N^0 >= 0, cost: NONTERM
+  23: l5 -> l1 : p^0'=p^post3, r^0'=1, q^0'=p^post3, (-3+N^0 >= 0 /\ -3+p^post3 >= 0 /\ -1+n0 >= 0), cost: 2+3*n0
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l5
+  22: l5 -> [6] : -3+N^0 >= 0, cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 22 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  -3+N^0 >= 0

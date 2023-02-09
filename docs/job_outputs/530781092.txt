@@ -1,0 +1,1438 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l29, true>
+<l1, l2, true>
+<l3, l1, ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)), par{l^0 -> (1 + l^0)}>
+<l3, l4, ((1 + l^0) <= (0 + m^0))>
+<l3, l4, ((1 + m^0) <= (0 + l^0))>
+<l5, l3, true>
+<l6, l5, ((1 + i^0) <= (0 + l^0))>
+<l6, l3, ((0 + l^0) <= (0 + i^0))>
+<l7, l5, (1 <= (0 + r^0))>
+<l7, l5, ((1 + r^0) <= 0)>
+<l7, l6, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0))>
+<l8, l7, true>
+<l9, l10, ((1 + n^0) <= (0 + k^0)), par{i^0 -> (~(1) + i^0)}>
+<l9, l11, ((0 + k^0) <= (0 + n^0)) /\ (undef256 = undef256), par{f^0 -> undef256, k^0 -> (1 + k^0)}>
+<l11, l9, true>
+<l12, l11, (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{c^0 -> undef296, g^0 -> undef299, p^0 -> undef306, r^0 -> undef307, s^0 -> undef308}>
+<l13, l12, (1 <= (0 + r^0))>
+<l13, l12, ((1 + r^0) <= 0)>
+<l13, l8, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0))>
+<l14, l8, ((1 + i^0) <= (0 + l^0))>
+<l14, l13, ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413), par{b^0 -> undef401, f^0 -> undef404, r^0 -> undef413}>
+<l10, l14, true>
+<l15, l10, (undef447 = undef447) /\ (undef444 = 1), par{c^0 -> undef444, g^0 -> undef447, p^0 -> 0, s^0 -> (0 + undef444)}>
+<l16, l15, ((1 + g^0) <= 0) /\ (undef483 = undef483), par{tmp___4^0 -> undef483, tmp___5^0 -> (0 + (~(1) * undef483))}>
+<l16, l15, (0 <= (0 + g^0)) /\ (undef503 = undef503), par{tmp___3^0 -> undef503, tmp___5^0 -> (0 + undef503)}>
+<l17, l16, (undef510 = undef510) /\ (undef518 = undef518), par{g^0 -> undef510, r^0 -> undef518}>
+<l18, l1, ((1 + n^0) <= (0 + i^0))>
+<l18, l19, ((0 + i^0) <= (0 + n^0)), par{i^0 -> (1 + i^0)}>
+<l20, l17, (31 <= (0 + tmp___2^0))>
+<l20, l17, ((1 + tmp___2^0) <= 30)>
+<l20, l17, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0))>
+<l21, l20, true, par{iter^0 -> (1 + iter^0), tmp___2^0 -> (0 + iter^0)}>
+<l22, l3, ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0))>
+<l22, l21, ((1 + l^0) <= (0 + m^0))>
+<l22, l21, ((1 + m^0) <= (0 + l^0))>
+<l23, l22, true>
+<l24, l25, true, par{m^0 -> (1 + m^0)}>
+<l26, l24, ((1 + dd^0) <= ((0 + dd^0) + tmp___1^0))>
+<l26, l24, (((1 + dd^0) + tmp___1^0) <= (0 + dd^0))>
+<l26, l23, (((0 + dd^0) + tmp___1^0) <= (0 + dd^0)) /\ ((0 + dd^0) <= ((0 + dd^0) + tmp___1^0))>
+<l19, l18, true>
+<l27, l23, ((0 + n^0) <= (0 + m^0))>
+<l27, l26, ((0 + m^0) <= (~(1) + n^0)) /\ (undef877 = undef877) /\ (undef878 = undef878) /\ (undef879 = undef879), par{dd^0 -> ((0 + undef877) + undef878), tmp^0 -> undef877, tmp___0^0 -> undef878, tmp___1^0 -> undef879}>
+<l25, l27, true>
+<l4, l25, true>
+<l2, l28, ((1 + n^0) <= (0 + l^0))>
+<l2, l4, ((0 + l^0) <= (0 + n^0)), par{iter^0 -> 0}>
+<l29, l19, true>
+
+Fresh variables:
+undef256, undef296, undef299, undef306, undef307, undef308, undef316, undef401, undef404, undef413, undef444, undef447, undef483, undef503, undef510, undef518, undef877, undef878, undef879, 
+
+Undef variables:
+undef256, undef296, undef299, undef306, undef307, undef308, undef316, undef401, undef404, undef413, undef444, undef447, undef483, undef503, undef510, undef518, undef877, undef878, undef879, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l19, true>
+<l7, l28, (1 <= (0 + r^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((1 + n^0) <= (0 + (1 + l^0))), par{l^0 -> (1 + l^0)}>
+<l7, l25, (1 <= (0 + r^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + (1 + l^0)) <= (0 + n^0)), par{iter^0 -> 0, l^0 -> (1 + l^0)}>
+<l7, l25, (1 <= (0 + r^0)) /\ ((1 + l^0) <= (0 + m^0))>
+<l7, l25, (1 <= (0 + r^0)) /\ ((1 + m^0) <= (0 + l^0))>
+<l7, l28, ((1 + r^0) <= 0) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((1 + n^0) <= (0 + (1 + l^0))), par{l^0 -> (1 + l^0)}>
+<l7, l25, ((1 + r^0) <= 0) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + (1 + l^0)) <= (0 + n^0)), par{iter^0 -> 0, l^0 -> (1 + l^0)}>
+<l7, l25, ((1 + r^0) <= 0) /\ ((1 + l^0) <= (0 + m^0))>
+<l7, l25, ((1 + r^0) <= 0) /\ ((1 + m^0) <= (0 + l^0))>
+<l7, l28, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((1 + i^0) <= (0 + l^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((1 + n^0) <= (0 + (1 + l^0))), par{l^0 -> (1 + l^0)}>
+<l7, l25, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((1 + i^0) <= (0 + l^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + (1 + l^0)) <= (0 + n^0)), par{iter^0 -> 0, l^0 -> (1 + l^0)}>
+<l7, l25, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((1 + i^0) <= (0 + l^0)) /\ ((1 + l^0) <= (0 + m^0))>
+<l7, l25, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((1 + i^0) <= (0 + l^0)) /\ ((1 + m^0) <= (0 + l^0))>
+<l7, l28, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((0 + l^0) <= (0 + i^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((1 + n^0) <= (0 + (1 + l^0))), par{l^0 -> (1 + l^0)}>
+<l7, l25, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((0 + l^0) <= (0 + i^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + (1 + l^0)) <= (0 + n^0)), par{iter^0 -> 0, l^0 -> (1 + l^0)}>
+<l7, l25, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((0 + l^0) <= (0 + i^0)) /\ ((1 + l^0) <= (0 + m^0))>
+<l7, l25, ((0 + r^0) <= 0) /\ (0 <= (0 + r^0)) /\ ((0 + l^0) <= (0 + i^0)) /\ ((1 + m^0) <= (0 + l^0))>
+<l11, l7, ((1 + n^0) <= (0 + k^0)) /\ ((1 + (~(1) + i^0)) <= (0 + l^0)), par{i^0 -> (~(1) + i^0)}>
+<l11, l11, ((1 + n^0) <= (0 + k^0)) /\ ((0 + l^0) <= (0 + (~(1) + i^0))) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{i^0 -> (~(1) + i^0), r^0 -> undef307}>
+<l11, l11, ((1 + n^0) <= (0 + k^0)) /\ ((0 + l^0) <= (0 + (~(1) + i^0))) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{i^0 -> (~(1) + i^0), r^0 -> undef307}>
+<l11, l7, ((1 + n^0) <= (0 + k^0)) /\ ((0 + l^0) <= (0 + (~(1) + i^0))) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{i^0 -> (~(1) + i^0), r^0 -> undef413}>
+<l11, l11, ((0 + k^0) <= (0 + n^0)) /\ (undef256 = undef256), par{k^0 -> (1 + k^0)}>
+<l19, l28, ((1 + n^0) <= (0 + i^0)) /\ ((1 + n^0) <= (0 + l^0))>
+<l19, l25, ((1 + n^0) <= (0 + i^0)) /\ ((0 + l^0) <= (0 + n^0)), par{iter^0 -> 0}>
+<l19, l19, ((0 + i^0) <= (0 + n^0)), par{i^0 -> (1 + i^0)}>
+<l20, l7, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((1 + i^0) <= (0 + l^0)), par{r^0 -> undef518}>
+<l20, l11, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l11, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l7, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{r^0 -> undef413}>
+<l20, l7, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((1 + i^0) <= (0 + l^0)), par{r^0 -> undef518}>
+<l20, l11, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l11, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l7, (31 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{r^0 -> undef413}>
+<l20, l7, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((1 + i^0) <= (0 + l^0)), par{r^0 -> undef518}>
+<l20, l11, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l11, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l7, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{r^0 -> undef413}>
+<l20, l7, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((1 + i^0) <= (0 + l^0)), par{r^0 -> undef518}>
+<l20, l11, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l11, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l7, ((1 + tmp___2^0) <= 30) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{r^0 -> undef413}>
+<l20, l7, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((1 + i^0) <= (0 + l^0)), par{r^0 -> undef518}>
+<l20, l11, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l11, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l7, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ ((1 + undef510) <= 0) /\ (undef483 = undef483) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{r^0 -> undef413}>
+<l20, l7, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((1 + i^0) <= (0 + l^0)), par{r^0 -> undef518}>
+<l20, l11, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ (1 <= (0 + undef413)) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l11, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((1 + undef413) <= 0) /\ (undef308 = undef308) /\ (undef296 = undef296) /\ (undef316 = undef316) /\ (undef307 = undef307) /\ (undef306 = undef306) /\ (undef299 = undef299), par{r^0 -> undef307}>
+<l20, l7, ((0 + tmp___2^0) <= 30) /\ (30 <= (0 + tmp___2^0)) /\ (undef510 = undef510) /\ (undef518 = undef518) /\ (0 <= (0 + undef510)) /\ (undef503 = undef503) /\ (undef447 = undef447) /\ (undef444 = 1) /\ ((0 + l^0) <= (0 + i^0)) /\ (undef404 = undef404) /\ (undef401 = undef401) /\ (undef413 = undef413) /\ ((0 + undef413) <= 0) /\ (0 <= (0 + undef413)), par{r^0 -> undef413}>
+<l25, l28, ((0 + n^0) <= (0 + m^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((1 + n^0) <= (0 + (1 + l^0))), par{l^0 -> (1 + l^0)}>
+<l25, l20, ((0 + n^0) <= (0 + m^0)) /\ ((1 + l^0) <= (0 + m^0)), par{iter^0 -> (1 + iter^0), tmp___2^0 -> (0 + iter^0)}>
+<l25, l20, ((0 + n^0) <= (0 + m^0)) /\ ((1 + m^0) <= (0 + l^0)), par{iter^0 -> (1 + iter^0), tmp___2^0 -> (0 + iter^0)}>
+<l25, l25, ((0 + m^0) <= (~(1) + n^0)) /\ (undef877 = undef877) /\ (undef878 = undef878) /\ (undef879 = undef879) /\ ((1 + ((0 + undef877) + undef878)) <= ((0 + ((0 + undef877) + undef878)) + undef879)), par{m^0 -> (1 + m^0)}>
+<l25, l25, ((0 + m^0) <= (~(1) + n^0)) /\ (undef877 = undef877) /\ (undef878 = undef878) /\ (undef879 = undef879) /\ (((1 + ((0 + undef877) + undef878)) + undef879) <= (0 + ((0 + undef877) + undef878))), par{m^0 -> (1 + m^0)}>
+<l25, l25, ((0 + m^0) <= (~(1) + n^0)) /\ (undef877 = undef877) /\ (undef878 = undef878) /\ (undef879 = undef879) /\ (((0 + ((0 + undef877) + undef878)) + undef879) <= (0 + ((0 + undef877) + undef878))) /\ ((0 + ((0 + undef877) + undef878)) <= ((0 + ((0 + undef877) + undef878)) + undef879)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + m^0) <= (0 + l^0)) /\ ((0 + l^0) <= (0 + m^0)) /\ ((0 + (1 + l^0)) <= (0 + n^0)), par{iter^0 -> 0, l^0 -> (1 + l^0)}>
+<l25, l20, ((0 + m^0) <= (~(1) + n^0)) /\ (undef877 = undef877) /\ (undef878 = undef878) /\ (undef879 = undef879) /\ (((0 + ((0 + undef877) + undef878)) + undef879) <= (0 + ((0 + undef877) + undef878))) /\ ((0 + ((0 + undef877) + undef878)) <= ((0 + ((0 + undef877) + undef878)) + undef879)) /\ ((1 + l^0) <= (0 + m^0)), par{iter^0 -> (1 + iter^0), tmp___2^0 -> (0 + iter^0)}>
+<l25, l20, ((0 + m^0) <= (~(1) + n^0)) /\ (undef877 = undef877) /\ (undef878 = undef878) /\ (undef879 = undef879) /\ (((0 + ((0 + undef877) + undef878)) + undef879) <= (0 + ((0 + undef877) + undef878))) /\ ((0 + ((0 + undef877) + undef878)) <= ((0 + ((0 + undef877) + undef878)) + undef879)) /\ ((1 + m^0) <= (0 + l^0)), par{iter^0 -> (1 + iter^0), tmp___2^0 -> (0 + iter^0)}>
+
+Fresh variables:
+undef256, undef296, undef299, undef306, undef307, undef308, undef316, undef401, undef404, undef413, undef444, undef447, undef483, undef503, undef510, undef518, undef877, undef878, undef879, 
+
+Undef variables:
+undef256, undef296, undef299, undef306, undef307, undef308, undef316, undef401, undef404, undef413, undef444, undef447, undef483, undef503, undef510, undef518, undef877, undef878, undef879, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l19, l19, i^0 <= n^0, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+i^0, n^0
+
+Graph 2:
+Transitions:
+<l7, l25, 1 + l^0 <= n^0 /\ 1 <= r^0 /\ l^0 = m^0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, 1 + l^0 <= n^0 /\ 1 + r^0 <= 0 /\ l^0 = m^0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, 1 + i^0 <= l^0 /\ 1 + l^0 <= n^0 /\ l^0 = m^0 /\ r^0 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ 1 + l^0 <= n^0 /\ l^0 = m^0 /\ r^0 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, l^0 <= i^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l11, l7, i^0 <= l^0 /\ 1 + n^0 <= k^0, {i^0 -> -1 + i^0, rest remain the same}>
+<l11, l11, 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l11, l11, 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l11, l7, 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ undef413 = 0, {i^0 -> -1 + i^0, r^0 -> undef413, rest remain the same}>
+<l11, l11, k^0 <= n^0, {k^0 -> 1 + k^0, rest remain the same}>
+<l20, l7, 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l25, l20, n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, n^0 <= m^0 /\ 1 + m^0 <= l^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l25, 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, 1 + l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ l^0 = m^0 /\ undef879 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l25, l20, 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Variables:
+l^0, m^0, n^0, r^0, i^0, k^0, tmp___2^0, iter^0
+
+Graph 3:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l19, true, {all remain the same}>
+
+Graph 2
+<l19, l25, l^0 <= n^0 /\ 1 + n^0 <= i^0, {iter^0 -> 0, rest remain the same}>
+
+Graph 3
+<l7, l28, n^0 <= l^0 /\ 1 <= r^0 /\ l^0 = m^0, {l^0 -> 1 + l^0, rest remain the same}>
+<l7, l28, n^0 <= l^0 /\ 1 + r^0 <= 0 /\ l^0 = m^0, {l^0 -> 1 + l^0, rest remain the same}>
+<l7, l28, n^0 <= l^0 /\ 1 + i^0 <= l^0 /\ l^0 = m^0 /\ r^0 = 0, {l^0 -> 1 + l^0, rest remain the same}>
+<l7, l28, l^0 <= i^0 /\ n^0 <= l^0 /\ l^0 = m^0 /\ r^0 = 0, {l^0 -> 1 + l^0, rest remain the same}>
+<l19, l28, 1 + n^0 <= i^0 /\ 1 + n^0 <= l^0, {all remain the same}>
+<l25, l28, n^0 <= l^0 /\ n^0 <= m^0 /\ l^0 = m^0, {l^0 -> 1 + l^0, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 7 , 2 )
+( 11 , 2 )
+( 19 , 1 )
+( 20 , 2 )
+( 25 , 2 )
+( 28 , 3 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.00187
+
+Checking conditional termination of SCC {l19}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001389s
+[33mRanking function: [36m-i^0 + n^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 1.3558
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l7: l^0 <= n^0[0m
+[36mInvariant at l11: l^0 <= n^0[0m
+[36mInvariant at l20: l^0 <= n^0[0m
+[36mInvariant at l25: l^0 <= n^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l25, l20, n^0 <= m^0 /\ 1 + m^0 <= l^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, 1 + l^0 <= n^0 /\ 1 <= r^0 /\ l^0 = m^0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, 1 + l^0 <= n^0 /\ 1 + r^0 <= 0 /\ l^0 = m^0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, 1 + i^0 <= l^0 /\ 1 + l^0 <= n^0 /\ l^0 = m^0 /\ r^0 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= i^0 /\ 1 + l^0 <= n^0 /\ l^0 = m^0 /\ r^0 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l7, i^0 <= l^0 /\ l^0 <= n^0 /\ 1 + n^0 <= k^0, {i^0 -> -1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l7, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ undef413 = 0, {i^0 -> -1 + i^0, r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, k^0 <= n^0 /\ l^0 <= n^0, {k^0 -> 1 + k^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l25, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l25, l25, 1 + l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ l^0 = m^0 /\ undef879 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l25, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l25, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 1.11548
+
+Checking conditional termination of SCC {l7, l11, l20, l25}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.064218s
+[33mRanking function: [36m-38 - 35*l^0 - 3*m^0 + 38*n^0[0m
+New Graphs: 
+Transitions:
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l11, l7, i^0 <= l^0 /\ l^0 <= n^0 /\ 1 + n^0 <= k^0, {i^0 -> -1 + i^0, rest remain the same}>
+<l11, l11, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l11, l11, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l11, l7, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ undef413 = 0, {i^0 -> -1 + i^0, r^0 -> undef413, rest remain the same}>
+<l11, l11, k^0 <= n^0 /\ l^0 <= n^0, {k^0 -> 1 + k^0, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Variables:
+i^0, iter^0, k^0, l^0, m^0, n^0, r^0, tmp___2^0
+Checking conditional termination of SCC {l7, l11, l20, l25}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.045330s
+[33mRanking function: [36m-35 + 35*i^0 - 35*l^0[0m
+New Graphs: 
+Transitions:
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l11, l7, i^0 <= l^0 /\ l^0 <= n^0 /\ 1 + n^0 <= k^0, {i^0 -> -1 + i^0, rest remain the same}>
+<l11, l11, k^0 <= n^0 /\ l^0 <= n^0, {k^0 -> 1 + k^0, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Variables:
+i^0, iter^0, k^0, l^0, m^0, n^0, r^0, tmp___2^0
+Checking conditional termination of SCC {l7, l11, l20, l25}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.036526s
+[33mRanking function: [36m2 - k^0 - l^0 + 2*n^0[0m
+New Graphs: 
+Transitions:
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + n^0 <= k^0 /\ 1 <= undef413 /\ 31 <= tmp___2^0 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0 /\ 31 <= tmp___2^0 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + n^0 <= k^0 /\ 1 <= undef413 /\ tmp___2^0 <= 29 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0 /\ tmp___2^0 <= 29 /\ i^0 = l^0 /\ undef444 = 1, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ i^0 = l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ i^0 = l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + n^0 <= k^0 /\ 1 <= undef413 /\ i^0 = l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0 /\ i^0 = l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Variables:
+i^0, iter^0, k^0, l^0, m^0, n^0, r^0, tmp___2^0
+Checking conditional termination of SCC {l7, l20, l25}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.035227s
+[33mRanking function: [36m-34 + i^0 + 34*k^0 - 31*l^0 - 4*n^0[0m
+New Graphs: 
+Transitions:
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Variables:
+i^0, iter^0, l^0, m^0, n^0, r^0, tmp___2^0
+Checking conditional termination of SCC {l7, l20, l25}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.019173s
+[33mRanking function: [36m-m^0 + n^0[0m
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l7, l20, 1 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+Variables:
+i^0, iter^0, l^0, m^0, n^0, r^0, tmp___2^0
+Checking conditional termination of SCC {l7, l20}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023168s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.369937s
+Trying to remove transition: <l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.183316s
+Time used: 0.180126
+Trying to remove transition: <l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.197591s
+Time used: 0.194147
+Trying to remove transition: <l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.184402s
+Time used: 0.180961
+Trying to remove transition: <l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.190705s
+Time used: 0.186797
+Trying to remove transition: <l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.085010s
+Time used: 0.081626
+Trying to remove transition: <l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.088846s
+Time used: 0.085766
+Trying to remove transition: <l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.085195s
+Time used: 0.082133
+Trying to remove transition: <l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.089471s
+Time used: 0.086398
+Trying to remove transition: <l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.094333s
+Time used: 0.091284
+Trying to remove transition: <l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.103713s
+Time used: 0.10058
+Trying to remove transition: <l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.092490s
+Time used: 0.08924
+Trying to remove transition: <l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.096915s
+Time used: 0.093736
+Trying to remove transition: <l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.136748s
+Time used: 0.133615
+Trying to remove transition: <l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.240061s
+Time used: 0.236051
+Trying to remove transition: <l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.123725s
+Time used: 0.119404
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.165135s
+Time used: 0.160973
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.198565s
+Time used: 0.194472
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.138079s
+Time used: 0.133934
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.122059s
+Time used: 0.118085
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.147671s
+Time used: 0.143863
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.126416s
+Time used: 0.122459
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.161747s
+Time used: 0.157998
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.136162s
+Time used: 0.132264
+Trying to remove transition: <l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.184919s
+Time used: 0.181077
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004069s
+Time used: 4.00005
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.023216s
+Time used: 4.00442
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.886429s
+Time used: 1.83712
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.093652s
+Time used: 4.001
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l19, l25, l^0 <= n^0 /\ 1 + n^0 <= i^0, {iter^0 -> 0, rest remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l19, l25, l^0 <= n^0 /\ 1 + n^0 <= i^0, {iter^0 -> 0, rest remain the same}>
+* Postcondition  : 1 <= 0
+Postcodition moved up: 1 <= 0
+
+LOG: Try proving POST
+Postcondition: 1 <= 0
+
+LOG: CALL check - Post:1 <= 0 - Process 2
+* Exit transition: <l0, l19, l^0 <= n^0, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010763s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.010868s
+
+LOG: NarrowEntry size 1
+Narrowing transition: 
+<l19, l19, i^0 <= n^0, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+ENTRIES:
+<l0, l19, 0 <= 0 /\ l^0 <= n^0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l19, l19, 0 <= 0 /\ i^0 <= n^0 /\ l^0 <= n^0, {i^0 -> 1 + i^0, rest remain the same}>
+END GRAPH:
+EXIT: <l19, l25, l^0 <= n^0 /\ 1 + n^0 <= i^0, {iter^0 -> 0, rest remain the same}>
+POST: 1 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.041141s
+Time used: 0.040865
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.008895s
+Time used: 1.00857
+
+LOG: SAT solveNonLinear - Elapsed time: 1.050035s
+Cost: 51; Total time: 1.04943
+[31mFailed at location 19: 1 + n^0 <= i^0[0m
+Before Improving: 
+[36mQuasi-invariant at l19: 1 + n^0 <= i^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004328s
+Remaining time after improvement: 0.997753
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l19: 1 + n^0 <= i^0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:1 + n^0 <= i^0 - Process 3
+* Exit transition: <l0, l19, 0 <= 0 /\ l^0 <= n^0, {all remain the same}>
+* Postcondition  : 1 + n^0 <= i^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010212s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.010334s
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.212894s
+Time used: 0.212554
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.008030s
+Time used: 1.00799
+
+LOG: SAT solveNonLinear - Elapsed time: 1.220923s
+Cost: 51; Total time: 1.22054
+[31mFailed at location 19: 1 + n^0 <= i^0[0m
+Before Improving: 
+[36mQuasi-invariant at l19: 1 + n^0 <= i^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006424s
+Remaining time after improvement: 0.99759
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l19: 1 + n^0 <= i^0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:1 + n^0 <= i^0 - Process 4
+* Exit transition: <l0, l19, 0 <= 0 /\ l^0 <= n^0, {all remain the same}>
+* Postcondition  : 1 + n^0 <= i^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011465s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.011591s
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.000225s
+Time used: 1.00002
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 3.455573s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 2
+Transitions:
+<l7, l25, 1 + l^0 <= n^0 /\ 1 <= r^0 /\ l^0 = m^0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 <= r^0, {all remain the same}>
+<l7, l25, 1 + l^0 <= n^0 /\ 1 + r^0 <= 0 /\ l^0 = m^0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + r^0 <= 0, {all remain the same}>
+<l7, l25, 1 + i^0 <= l^0 /\ 1 + l^0 <= n^0 /\ l^0 = m^0 /\ r^0 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ 1 + l^0 <= n^0 /\ l^0 = m^0 /\ r^0 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {all remain the same}>
+<l7, l25, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ r^0 = 0, {all remain the same}>
+<l11, l7, i^0 <= l^0 /\ l^0 <= n^0 /\ 1 + n^0 <= k^0, {i^0 -> -1 + i^0, rest remain the same}>
+<l11, l11, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 <= undef413, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l11, l11, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ 1 + undef413 <= 0, {i^0 -> -1 + i^0, r^0 -> undef307, rest remain the same}>
+<l11, l7, l^0 <= n^0 /\ 1 + l^0 <= i^0 /\ 1 + n^0 <= k^0 /\ undef413 = 0, {i^0 -> -1 + i^0, r^0 -> undef413, rest remain the same}>
+<l11, l11, k^0 <= n^0 /\ l^0 <= n^0, {k^0 -> 1 + k^0, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 <= undef413 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef413 <= 0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 <= undef413 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l11, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + undef413 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef307, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 <= undef879, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ 1 + undef879 <= 0, {m^0 -> 1 + m^0, rest remain the same}>
+<l25, l25, 1 + l^0 <= n^0 /\ 1 + m^0 <= n^0 /\ l^0 = m^0 /\ undef879 = 0, {iter^0 -> 0, l^0 -> 1 + l^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l25, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+Variables:
+l^0, m^0, n^0, r^0, i^0, k^0, tmp___2^0, iter^0
+
+Checking conditional non-termination of SCC {l7, l11, l20, l25}...
+EXIT TRANSITIONS:
+<l7, end, 1 <= r^0 /\ l^0 = m^0 /\ l^0 = n^0, {all remain the same}>
+<l7, end, r^0 <= 0 /\ l^0 = m^0 /\ l^0 = n^0, {all remain the same}>
+<l25, end, m^0 <= l^0 /\ n^0 <= m^0 /\ l^0 = n^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.000430s
+Time used: 5.0001
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.031605s
+Time used: 5.00044
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.059521s
+Time used: 5.00056
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... NO
+
+Proving non-termination of subgraph 2
+Transitions:
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+Variables:
+i^0, iter^0, l^0, m^0, n^0, r^0, tmp___2^0
+
+Checking conditional non-termination of SCC {l7, l20}...
+EXIT TRANSITIONS:
+<l7, end, m^0 <= l^0 /\ n^0 <= m^0 /\ 1 <= r^0, {all remain the same}>
+<l7, end, m^0 <= l^0 /\ n^0 <= m^0 /\ r^0 <= 0, {all remain the same}>
+<l7, end, 1 + m^0 <= n^0 /\ 1 <= r^0 /\ l^0 = m^0, {all remain the same}>
+<l7, end, r^0 <= 0 /\ 1 + m^0 <= n^0 /\ l^0 = m^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.153971s
+Time used: 4.15363
+
+LOG: SAT solveNonLinear - Elapsed time: 4.153971s
+Cost: 0; Total time: 4.15363
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.168633s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l7: 1 + l^0 <= m^0[0m
+[36mQuasi-invariant at l20: 1 + l^0 <= m^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l7: 4
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 <= r^0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 <= r^0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ 1 + r^0 <= 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l7, l20, l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ 1 + r^0 <= 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l7, l20, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ n^0 <= m^0 /\ 1 + l^0 <= m^0 /\ r^0 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l7, l20, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + m^0 <= l^0 /\ 1 + m^0 <= n^0 /\ r^0 = 0 /\ undef879 = 0, {iter^0 -> 1 + iter^0, tmp___2^0 -> iter^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + undef510 <= 0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 31 <= tmp___2^0 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + l^0 <= m^0 /\ 31 <= tmp___2^0 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + undef510 <= 0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ tmp___2^0 <= 29 /\ undef444 = 1, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + l^0 <= m^0 /\ tmp___2^0 <= 29 /\ undef413 = 0 /\ undef444 = 1, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ 1 + undef510 <= 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 1 + l^0 <= m^0 /\ 1 + undef510 <= 0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= n^0 /\ 0 <= undef510 /\ 1 + i^0 <= l^0 /\ 1 + l^0 <= m^0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef518, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l20, l7, l^0 <= i^0 /\ l^0 <= n^0 /\ 0 <= undef510 /\ 1 + l^0 <= m^0 /\ undef413 = 0 /\ undef444 = 1 /\ tmp___2^0 = 30, {r^0 -> undef413, rest remain the same}>
+
+Calling reachability with...
+Transition: <l25, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l25, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l19, l25, l^0 <= n^0 /\ 1 + n^0 <= i^0, {iter^0 -> 0, rest remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l19, l25, 1 + n^0 <= i^0, {iter^0 -> 0, rest remain the same}> (condsUp: l^0 <= n^0)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l19, true, {all remain the same}>
+Conditions: 1 + n^0 <= i^0, l^0 <= n^0, 
+OPEN EXITS: 
+<l0, l19, l^0 <= n^0 /\ 1 + n^0 <= i^0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

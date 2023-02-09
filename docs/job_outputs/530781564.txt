@@ -1,0 +1,1472 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l8, true>
+<l1, l2, (((0 + (~(1) * x_5^0)) + y_6^0) <= 0) /\ (undef1 = undef1), par{Result_4^0 -> undef1}>
+<l1, l3, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ (undef8 = undef8) /\ ((0 + undef8) <= 0) /\ (0 <= (0 + undef8)), par{tmp_7^0 -> undef8, y_6^0 -> (1 + y_6^0)}>
+<l3, l1, true>
+<l1, l4, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ (undef18 = undef18), par{tmp_7^0 -> undef18}>
+<l4, l5, (undef22 = __disjvr_0^0) /\ (__disjvr_0^0 = undef22), par{__disjvr_0^0 -> undef22}>
+<l5, l6, true, par{x_5^0 -> (1 + x_5^0)}>
+<l6, l1, true>
+<l7, l1, true>
+<l8, l7, true>
+
+Fresh variables:
+undef1, undef8, undef18, undef22, 
+
+Undef variables:
+undef1, undef8, undef18, undef22, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, true>
+<l1, l2, (((0 + (~(1) * x_5^0)) + y_6^0) <= 0) /\ (undef1 = undef1)>
+<l1, l1, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ (undef8 = undef8) /\ ((0 + undef8) <= 0) /\ (0 <= (0 + undef8)), par{y_6^0 -> (1 + y_6^0)}>
+<l1, l1, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ (undef18 = undef18) /\ (undef22 = __disjvr_0^0) /\ (__disjvr_0^0 = undef22), par{__disjvr_0^0 -> undef22, x_5^0 -> (1 + x_5^0)}>
+
+Fresh variables:
+undef1, undef8, undef18, undef22, 
+
+Undef variables:
+undef1, undef8, undef18, undef22, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+x_5^0, y_6^0, __disjvr_0^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, true, {all remain the same}>
+
+Graph 2
+<l1, l2, y_6^0 <= x_5^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+( 2 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.00403
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001347s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007535s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.016817s
+Time used: 0.016625
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007491s
+Time used: 0.006813
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018777s
+Time used: 0.018191
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.040182s
+Time used: 0.040175
+
+LOG: SAT solveNonLinear - Elapsed time: 0.058959s
+Cost: 1; Total time: 0.058366
+[31mFailed at location 1: y_6^0 <= x_5^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: y_6^0 <= x_5^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005871s
+Remaining time after improvement: 0.998181
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: y_6^0 <= x_5^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+New Graphs: 
+Calling Safety with literal y_6^0 <= x_5^0 and entry <l0, l1, true, {all remain the same}>
+
+LOG: CALL check - Post:y_6^0 <= x_5^0 - Process 1
+* Exit transition: <l0, l1, true, {all remain the same}>
+* Postcondition  : y_6^0 <= x_5^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000516s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000591s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: y_6^0 <= x_5^0 , 
+Narrowing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+x_5^0, y_6^0, __disjvr_0^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001287s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007532s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014969s
+Time used: 0.01469
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007665s
+Time used: 0.006968
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001421s
+Time used: 4.00061
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.033787s
+Time used: 4.00068
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005933s
+Time used: 1.00026
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.030718s
+Time used: 0.019914
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.033808s
+Time used: 0.033801
+
+LOG: SAT solveNonLinear - Elapsed time: 0.064526s
+Cost: 1; Total time: 0.053715
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001157s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010949s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015796s
+Time used: 0.015561
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008582s
+Time used: 0.007801
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002011s
+Time used: 4.00118
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.033666s
+Time used: 4.00077
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006787s
+Time used: 1.00008
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.030366s
+Time used: 0.019486
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.036095s
+Time used: 0.036087
+
+LOG: SAT solveNonLinear - Elapsed time: 0.066461s
+Cost: 1; Total time: 0.055573
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - x_5^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001405s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.016705s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014001s
+Time used: 0.013642
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009354s
+Time used: 0.008522
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.010139s
+Time used: 4.00947
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.013149s
+Time used: 4.00075
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006921s
+Time used: 1.00006
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.035053s
+Time used: 0.022014
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.044037s
+Time used: 0.044029
+
+LOG: SAT solveNonLinear - Elapsed time: 0.079090s
+Cost: 1; Total time: 0.066043
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= 1 + y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001531s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.018119s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021177s
+Time used: 0.020495
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010828s
+Time used: 0.009938
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002083s
+Time used: 4.00136
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.049284s
+Time used: 4.01569
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006873s
+Time used: 1.00003
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.032622s
+Time used: 0.021305
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.049210s
+Time used: 0.049203
+
+LOG: SAT solveNonLinear - Elapsed time: 0.081832s
+Cost: 1; Total time: 0.070508
+[33mQuasi-ranking function: [36m50000 + __disjvr_0^0 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001653s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.020442s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.020733s
+Time used: 0.020148
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010429s
+Time used: 0.009541
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002723s
+Time used: 4.00174
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006992s
+Time used: 4.00075
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.007278s
+Time used: 1.00022
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.038078s
+Time used: 0.026668
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.037524s
+Time used: 0.037517
+
+LOG: SAT solveNonLinear - Elapsed time: 0.075602s
+Cost: 1; Total time: 0.064185
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + __disjvr_0^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001841s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.024932s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.023607s
+Time used: 0.023063
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014390s
+Time used: 0.013459
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.016774s
+Time used: 4.01559
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005016s
+Time used: 4.0009
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006087s
+Time used: 1.00007
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.039038s
+Time used: 0.027433
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.047613s
+Time used: 0.047606
+
+LOG: SAT solveNonLinear - Elapsed time: 0.086651s
+Cost: 1; Total time: 0.075039
+[33mQuasi-ranking function: [36m50000 - __disjvr_0^0 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001958s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.022533s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022032s
+Time used: 0.021284
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014692s
+Time used: 0.013588
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.026597s
+Time used: 4.02557
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.033519s
+Time used: 4.00084
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006994s
+Time used: 1.00003
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.040827s
+Time used: 0.029357
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.046886s
+Time used: 0.046879
+
+LOG: SAT solveNonLinear - Elapsed time: 0.087713s
+Cost: 1; Total time: 0.076236
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __disjvr_0^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002035s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.027288s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022122s
+Time used: 0.021368
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015258s
+Time used: 0.014305
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004453s
+Time used: 4.00343
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006285s
+Time used: 4.001
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.007189s
+Time used: 1.00006
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.040073s
+Time used: 0.028335
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.051777s
+Time used: 0.05177
+
+LOG: SAT solveNonLinear - Elapsed time: 0.091850s
+Cost: 1; Total time: 0.080105
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + 2*__disjvr_0^0 - x_5^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002364s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.034467s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.025483s
+Time used: 0.024815
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015365s
+Time used: 0.014362
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.022726s
+Time used: 4.02172
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005375s
+Time used: 4.00161
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.007520s
+Time used: 1.00018
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.044966s
+Time used: 0.032709
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.058895s
+Time used: 0.058888
+
+LOG: SAT solveNonLinear - Elapsed time: 0.103861s
+Cost: 1; Total time: 0.091597
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __disjvr_0^0 - x_5^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002616s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.036553s
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.029464s
+Time used: 0.028748
+Trying to remove transition: <l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017247s
+Time used: 0.016198
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002793s
+Time used: 4.0019
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.014561s
+Time used: 4.00125
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006288s
+Time used: 1.00006
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.045092s
+Time used: 0.033073
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+x_5^0, y_6^0, __disjvr_0^0
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002210s
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, y_6^0 <= x_5^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.002661s
+Time used: 5.00229
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.006521s
+Time used: 5.00128
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.010676s
+Time used: 5.00189
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... NO
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x_5^0, y_6^0
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002749s
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= x_5^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 + __disjvr_0^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 3.143343s
+Time used: 3.14113
+Improving Solution with cost 43 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002174s
+Time used: 1.00216
+
+LOG: SAT solveNonLinear - Elapsed time: 4.145517s
+Cost: 43; Total time: 4.1433
+[31mFailed at location 1: x_5^0 <= __disjvr_0^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: x_5^0 <= __disjvr_0^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.034306s
+Remaining time after improvement: 0.973283
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.054636s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: x_5^0 <= __disjvr_0^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 33
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ __disjvr_0^0 = undef22, {__disjvr_0^0 -> undef22, x_5^0 -> 1 + x_5^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.459720s
+Time used: 0.458569
+Improving Solution with cost 12 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.660446s
+Time used: 0.660434
+
+LOG: SAT solveNonLinear - Elapsed time: 1.120166s
+Cost: 12; Total time: 1.119
+[31mFailed at location 1: __disjvr_0^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: __disjvr_0^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.037997s
+Remaining time after improvement: 0.987591
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.023176s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: __disjvr_0^0 <= 0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 17
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.067949s
+Time used: 0.067419
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001992s
+Time used: 1.00196
+
+LOG: SAT solveNonLinear - Elapsed time: 1.069941s
+Cost: 3; Total time: 1.06938
+[31mFailed at location 1: 0 <= __disjvr_0^0 + x_5^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= __disjvr_0^0 + x_5^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.016624s
+Remaining time after improvement: 0.994136
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.011588s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= __disjvr_0^0 + x_5^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 5
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ y_6^0 <= x_5^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.028385s
+Time used: 0.02806
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.003045s
+Time used: 1.00302
+
+LOG: SAT solveNonLinear - Elapsed time: 1.031430s
+Cost: 2; Total time: 1.03108
+[31mFailed at location 1: 1 + __disjvr_0^0 <= x_5^0 + y_6^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + __disjvr_0^0 <= x_5^0 + y_6^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010392s
+Remaining time after improvement: 0.996089
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.008559s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + __disjvr_0^0 <= x_5^0 + y_6^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 1
+Strengthening exit transition (result): 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + __disjvr_0^0 <= x_5^0 + y_6^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + __disjvr_0^0 <= x_5^0 + y_6^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ undef8 = 0, {y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + __disjvr_0^0 <= x_5^0 + y_6^0 /\ 1 + x_5^0 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ __disjvr_0^0 + x_5^0 + y_6^0 <= 50000 /\ __disjvr_0^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000 + __disjvr_0^0 /\ x_5^0 + y_6^0 <= 50000 + 2*__disjvr_0^0 /\ x_5^0 <= 50000 /\ x_5^0 + y_6^0 <= 50000 /\ y_6^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.004627s
+Time used: 5.00452
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.071437s
+Time used: 5.06683
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.030878s
+Time used: 5.0034
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... YES
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 1 + x_5^0 <= y_6^0, __disjvr_0^0 + x_5^0 <= 50000, 50001 <= __disjvr_0^0 + x_5^0 + y_6^0, 50001 <= __disjvr_0^0 + y_6^0, x_5^0 <= 50000 + __disjvr_0^0, 50001 + __disjvr_0^0 <= y_6^0, 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0, x_5^0 <= 50000, 50001 <= x_5^0 + y_6^0, 50001 <= y_6^0, x_5^0 <= __disjvr_0^0, __disjvr_0^0 <= 0, 0 <= __disjvr_0^0 + x_5^0, 1 + __disjvr_0^0 <= x_5^0 + y_6^0, 
+OPEN EXITS: 
+<l1, end, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + __disjvr_0^0 <= x_5^0 + y_6^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l1, true, {all remain the same}>
+Conditions: __disjvr_0^0 <= 0, x_5^0 <= __disjvr_0^0, 0 <= __disjvr_0^0 + x_5^0, 1 + __disjvr_0^0 <= x_5^0 + y_6^0, 1 + x_5^0 <= y_6^0, 50001 + __disjvr_0^0 <= y_6^0, 50001 <= __disjvr_0^0 + x_5^0 + y_6^0, 50001 <= __disjvr_0^0 + y_6^0, 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0, 50001 <= x_5^0 + y_6^0, 50001 <= y_6^0, __disjvr_0^0 + x_5^0 <= 50000, x_5^0 <= 50000, 
+OPEN EXITS: 
+<l0, l1, __disjvr_0^0 <= 0 /\ x_5^0 <= __disjvr_0^0 /\ 0 <= __disjvr_0^0 + x_5^0 /\ 1 + __disjvr_0^0 <= x_5^0 + y_6^0 /\ 1 + x_5^0 <= y_6^0 /\ 50001 + __disjvr_0^0 <= y_6^0 /\ 50001 <= __disjvr_0^0 + x_5^0 + y_6^0 /\ 50001 <= __disjvr_0^0 + y_6^0 /\ 50001 + 2*__disjvr_0^0 <= x_5^0 + y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 <= y_6^0 /\ __disjvr_0^0 + x_5^0 <= 50000 /\ x_5^0 <= 50000, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

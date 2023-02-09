@@ -1,0 +1,130 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: l4
+   0: l0 -> l1 : j^0'=j^post0, i^0'=i^post0, (-i^post0+i^0 == 0 /\ -j^post0+j^0 == 0 /\ 20-j^0 <= 0), cost: 1
+   1: l0 -> l2 : j^0'=j^post1, i^0'=i^post1, (i^0-i^post1 == 0 /\ j^0-j^post1 == 0 /\ -19+j^0 <= 0), cost: 1
+   2: l2 -> l0 : j^0'=j^post2, i^0'=i^post2, (-2-j^post2+i^post2 == 0 /\ -2-j^0+j^post2 == 0), cost: 1
+   3: l3 -> l2 : j^0'=j^post3, i^0'=i^post3, (-i^post3+i^0 == 0 /\ j^post3 == 0), cost: 1
+   4: l4 -> l3 : j^0'=j^post4, i^0'=i^post4, (j^0-j^post4 == 0 /\ i^0-i^post4 == 0), cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: l4
+   1: l0 -> l2 : j^0'=j^post1, i^0'=i^post1, (i^0-i^post1 == 0 /\ j^0-j^post1 == 0 /\ -19+j^0 <= 0), cost: 1
+   2: l2 -> l0 : j^0'=j^post2, i^0'=i^post2, (-2-j^post2+i^post2 == 0 /\ -2-j^0+j^post2 == 0), cost: 1
+   3: l3 -> l2 : j^0'=j^post3, i^0'=i^post3, (-i^post3+i^0 == 0 /\ j^post3 == 0), cost: 1
+   4: l4 -> l3 : j^0'=j^post4, i^0'=i^post4, (j^0-j^post4 == 0 /\ i^0-i^post4 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l2 : j^0'=j^post1, i^0'=i^post1, (i^0-i^post1 == 0 /\ j^0-j^post1 == 0 /\ -19+j^0 <= 0), cost: 1
+New rule:
+l0 -> l2 : -19+j^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l0 : j^0'=j^post2, i^0'=i^post2, (-2-j^post2+i^post2 == 0 /\ -2-j^0+j^post2 == 0), cost: 1
+New rule:
+l2 -> l0 : j^0'=2+j^0, i^0'=4+j^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l2 : j^0'=j^post3, i^0'=i^post3, (-i^post3+i^0 == 0 /\ j^post3 == 0), cost: 1
+New rule:
+l3 -> l2 : j^0'=0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l4 -> l3 : j^0'=j^post4, i^0'=i^post4, (j^0-j^post4 == 0 /\ i^0-i^post4 == 0), cost: 1
+New rule:
+l4 -> l3 : TRUE, cost: 1
+
+Simplified rules
+Start location: l4
+   5: l0 -> l2 : -19+j^0 <= 0, cost: 1
+   6: l2 -> l0 : j^0'=2+j^0, i^0'=4+j^0, TRUE, cost: 1
+   7: l3 -> l2 : j^0'=0, TRUE, cost: 1
+   8: l4 -> l3 : TRUE, cost: 1
+
+
+Eliminating location l3 by chaining:
+
+Applied chaining
+First rule:
+l4 -> l3 : TRUE, cost: 1
+Second rule:
+l3 -> l2 : j^0'=0, TRUE, cost: 1
+New rule:
+l4 -> l2 : j^0'=0, TRUE, cost: 2
+
+Applied deletion
+Removed the following rules: 7 8
+
+Eliminating location l0 by chaining:
+
+Applied chaining
+First rule:
+l2 -> l0 : j^0'=2+j^0, i^0'=4+j^0, TRUE, cost: 1
+Second rule:
+l0 -> l2 : -19+j^0 <= 0, cost: 1
+New rule:
+l2 -> l2 : j^0'=2+j^0, i^0'=4+j^0, -17+j^0 <= 0, cost: 2
+
+Applied deletion
+Removed the following rules: 5 6
+
+Eliminated locations on linear paths
+Start location: l4
+  10: l2 -> l2 : j^0'=2+j^0, i^0'=4+j^0, -17+j^0 <= 0, cost: 2
+   9: l4 -> l2 : j^0'=0, TRUE, cost: 2
+
+
+Applied acceleration
+Original rule:
+l2 -> l2 : j^0'=2+j^0, i^0'=4+j^0, -17+j^0 <= 0, cost: 2
+New rule:
+l2 -> l2 : j^0'=j^0+2*n, i^0'=2+j^0+2*n, (19-j^0-2*n >= 0 /\ -1+n >= 0), cost: 2*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_LoEnIp.txt
+
+Applied deletion
+Removed the following rules: 10
+
+Accelerated simple loops
+Start location: l4
+  11: l2 -> l2 : j^0'=j^0+2*n, i^0'=2+j^0+2*n, (19-j^0-2*n >= 0 /\ -1+n >= 0), cost: 2*n
+   9: l4 -> l2 : j^0'=0, TRUE, cost: 2
+
+
+Applied chaining
+First rule:
+l4 -> l2 : j^0'=0, TRUE, cost: 2
+Second rule:
+l2 -> l2 : j^0'=j^0+2*n, i^0'=2+j^0+2*n, (19-j^0-2*n >= 0 /\ -1+n >= 0), cost: 2*n
+New rule:
+l4 -> l2 : j^0'=2*n, i^0'=2+2*n, (-9+n <= 0 /\ -1+n >= 0), cost: 2+2*n
+
+Applied deletion
+Removed the following rules: 11
+
+Chained accelerated rules with incoming rules
+Start location: l4
+   9: l4 -> l2 : j^0'=0, TRUE, cost: 2
+  12: l4 -> l2 : j^0'=2*n, i^0'=2+2*n, (-9+n <= 0 /\ -1+n >= 0), cost: 2+2*n
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l4
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

@@ -1,0 +1,172 @@
+NO
+
+Initial ITS
+Start location: l3
+   0: l0 -> l1 : x^0'=x^post0, __const_200^0'=__const_200^post0, __const_400^0'=__const_400^post0, __const_100^0'=__const_100^post0, __const_300^0'=__const_300^post0, (-__const_300^post0+__const_300^0 == 0 /\ 1+__const_100^0-x^post0 <= 0 /\ __const_100^0-__const_100^post0 == 0 /\ -__const_200^post0+__const_200^0 == 0 /\ -x^0-__const_300^0+x^post0 == 0 /\ __const_400^0-__const_400^post0 == 0), cost: 1
+   1: l1 -> l0 : x^0'=x^post1, __const_200^0'=__const_200^post1, __const_400^0'=__const_400^post1, __const_100^0'=__const_100^post1, __const_300^0'=__const_300^post1, (-__const_100^post1+__const_100^0 == 0 /\ -__const_400^post1+__const_400^0 == 0 /\ -__const_300^post1+__const_300^0 == 0 /\ __const_200^0-__const_200^post1 == 0 /\ -x^0+x^post1-__const_400^0 == 0 /\ 1-x^post1+__const_100^0 <= 0), cost: 1
+   2: l2 -> l0 : x^0'=x^post2, __const_200^0'=__const_200^post2, __const_400^0'=__const_400^post2, __const_100^0'=__const_100^post2, __const_300^0'=__const_300^post2, (1+__const_100^0-x^post2 <= 0 /\ -__const_200^post2+__const_200^0 == 0 /\ -__const_300^post2+__const_300^0 == 0 /\ __const_100^0-__const_100^post2 == 0 /\ -x^0-__const_200^0+x^post2 == 0 /\ __const_400^0-__const_400^post2 == 0), cost: 1
+   3: l2 -> l1 : x^0'=x^post3, __const_200^0'=__const_200^post3, __const_400^0'=__const_400^post3, __const_100^0'=__const_100^post3, __const_300^0'=__const_300^post3, (-__const_300^post3+__const_300^0 == 0 /\ __const_200^0-__const_200^post3 == 0 /\ -x^0+x^post3-__const_100^0 == 0 /\ 1-x^post3+__const_100^0 <= 0 /\ __const_400^0-__const_400^post3 == 0 /\ -__const_100^post3+__const_100^0 == 0), cost: 1
+   4: l3 -> l2 : x^0'=x^post4, __const_200^0'=__const_200^post4, __const_400^0'=__const_400^post4, __const_100^0'=__const_100^post4, __const_300^0'=__const_300^post4, (__const_100^0-__const_100^post4 == 0 /\ __const_400^0-__const_400^post4 == 0 /\ -__const_300^post4+__const_300^0 == 0 /\ __const_200^0-__const_200^post4 == 0 /\ x^0-x^post4 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : x^0'=x^post0, __const_200^0'=__const_200^post0, __const_400^0'=__const_400^post0, __const_100^0'=__const_100^post0, __const_300^0'=__const_300^post0, (-__const_300^post0+__const_300^0 == 0 /\ 1+__const_100^0-x^post0 <= 0 /\ __const_100^0-__const_100^post0 == 0 /\ -__const_200^post0+__const_200^0 == 0 /\ -x^0-__const_300^0+x^post0 == 0 /\ __const_400^0-__const_400^post0 == 0), cost: 1
+New rule:
+l0 -> l1 : x^0'=x^0+__const_300^0, 1-x^0+__const_100^0-__const_300^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : x^0'=x^post1, __const_200^0'=__const_200^post1, __const_400^0'=__const_400^post1, __const_100^0'=__const_100^post1, __const_300^0'=__const_300^post1, (-__const_100^post1+__const_100^0 == 0 /\ -__const_400^post1+__const_400^0 == 0 /\ -__const_300^post1+__const_300^0 == 0 /\ __const_200^0-__const_200^post1 == 0 /\ -x^0+x^post1-__const_400^0 == 0 /\ 1-x^post1+__const_100^0 <= 0), cost: 1
+New rule:
+l1 -> l0 : x^0'=x^0+__const_400^0, 1-x^0-__const_400^0+__const_100^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l0 : x^0'=x^post2, __const_200^0'=__const_200^post2, __const_400^0'=__const_400^post2, __const_100^0'=__const_100^post2, __const_300^0'=__const_300^post2, (1+__const_100^0-x^post2 <= 0 /\ -__const_200^post2+__const_200^0 == 0 /\ -__const_300^post2+__const_300^0 == 0 /\ __const_100^0-__const_100^post2 == 0 /\ -x^0-__const_200^0+x^post2 == 0 /\ __const_400^0-__const_400^post2 == 0), cost: 1
+New rule:
+l2 -> l0 : x^0'=x^0+__const_200^0, 1-x^0-__const_200^0+__const_100^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l1 : x^0'=x^post3, __const_200^0'=__const_200^post3, __const_400^0'=__const_400^post3, __const_100^0'=__const_100^post3, __const_300^0'=__const_300^post3, (-__const_300^post3+__const_300^0 == 0 /\ __const_200^0-__const_200^post3 == 0 /\ -x^0+x^post3-__const_100^0 == 0 /\ 1-x^post3+__const_100^0 <= 0 /\ __const_400^0-__const_400^post3 == 0 /\ -__const_100^post3+__const_100^0 == 0), cost: 1
+New rule:
+l2 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l2 : x^0'=x^post4, __const_200^0'=__const_200^post4, __const_400^0'=__const_400^post4, __const_100^0'=__const_100^post4, __const_300^0'=__const_300^post4, (__const_100^0-__const_100^post4 == 0 /\ __const_400^0-__const_400^post4 == 0 /\ -__const_300^post4+__const_300^0 == 0 /\ __const_200^0-__const_200^post4 == 0 /\ x^0-x^post4 == 0), cost: 1
+New rule:
+l3 -> l2 : TRUE, cost: 1
+
+Simplified rules
+Start location: l3
+   5: l0 -> l1 : x^0'=x^0+__const_300^0, 1-x^0+__const_100^0-__const_300^0 <= 0, cost: 1
+   6: l1 -> l0 : x^0'=x^0+__const_400^0, 1-x^0-__const_400^0+__const_100^0 <= 0, cost: 1
+   7: l2 -> l0 : x^0'=x^0+__const_200^0, 1-x^0-__const_200^0+__const_100^0 <= 0, cost: 1
+   8: l2 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 1
+   9: l3 -> l2 : TRUE, cost: 1
+
+
+Eliminating location l2 by chaining:
+
+Applied chaining
+First rule:
+l3 -> l2 : TRUE, cost: 1
+Second rule:
+l2 -> l0 : x^0'=x^0+__const_200^0, 1-x^0-__const_200^0+__const_100^0 <= 0, cost: 1
+New rule:
+l3 -> l0 : x^0'=x^0+__const_200^0, 1-x^0-__const_200^0+__const_100^0 <= 0, cost: 2
+
+Applied chaining
+First rule:
+l3 -> l2 : TRUE, cost: 1
+Second rule:
+l2 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 1
+New rule:
+l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+
+Applied deletion
+Removed the following rules: 7 8 9
+
+Eliminated locations on tree-shaped paths
+Start location: l3
+   5: l0 -> l1 : x^0'=x^0+__const_300^0, 1-x^0+__const_100^0-__const_300^0 <= 0, cost: 1
+   6: l1 -> l0 : x^0'=x^0+__const_400^0, 1-x^0-__const_400^0+__const_100^0 <= 0, cost: 1
+  10: l3 -> l0 : x^0'=x^0+__const_200^0, 1-x^0-__const_200^0+__const_100^0 <= 0, cost: 2
+  11: l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+
+
+Eliminated location l0
+Start location: l3
+  12: l1 -> l1 : x^0'=x^0+__const_400^0+__const_300^0, (1-x^0-__const_400^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_400^0+__const_100^0 <= 0), cost: 2
+  11: l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+  13: l3 -> l1 : x^0'=x^0+__const_200^0+__const_300^0, (1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3
+
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=x^0+__const_400^0+__const_300^0, (1-x^0-__const_400^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_400^0+__const_100^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=x^0+__const_400^0*n+n*__const_300^0, (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+__const_300^0 >= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0 /\ n >= 0), cost: 2*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_hlomlh.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=x^0+__const_400^0+__const_300^0, (1-x^0-__const_400^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_400^0+__const_100^0 <= 0), cost: 2
+New rule:
+l1 -> [4] : (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_hLaOkE.txt
+
+Applied deletion
+Removed the following rules: 12
+
+Accelerated simple loops
+Start location: l3
+  14: l1 -> l1 : x^0'=x^0+__const_400^0*n+n*__const_300^0, (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+__const_300^0 >= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0 /\ n >= 0), cost: 2*n
+  15: l1 -> [4] : (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0), cost: NONTERM
+  11: l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+  13: l3 -> l1 : x^0'=x^0+__const_200^0+__const_300^0, (1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3
+
+
+Applied chaining
+First rule:
+l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+Second rule:
+l1 -> l1 : x^0'=x^0+__const_400^0*n+n*__const_300^0, (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+__const_300^0 >= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0 /\ n >= 0), cost: 2*n
+New rule:
+l3 -> l1 : x^0'=x^0+__const_100^0+__const_400^0*n+n*__const_300^0, (-1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)+__const_300^0 >= 0 /\ -1+x^0+__const_400^0+__const_300^0 >= 0 /\ -1+x^0+__const_400^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n) >= 0 /\ n >= 0 /\ -1+x^0 >= 0), cost: 2+2*n
+
+Applied chaining
+First rule:
+l3 -> l1 : x^0'=x^0+__const_200^0+__const_300^0, (1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3
+Second rule:
+l1 -> l1 : x^0'=x^0+__const_400^0*n+n*__const_300^0, (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+__const_300^0 >= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0 /\ n >= 0), cost: 2*n
+New rule:
+l3 -> l1 : x^0'=x^0+__const_200^0+__const_400^0*n+n*__const_300^0+__const_300^0, (-1+x^0+__const_200^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_200^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_200^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+2*__const_300^0 >= 0 /\ -1+x^0+__const_200^0+__const_400^0-__const_100^0+2*__const_300^0 >= 0 /\ n >= 0 /\ 1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3+2*n
+
+Applied chaining
+First rule:
+l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+Second rule:
+l1 -> [4] : (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0), cost: NONTERM
+New rule:
+l3 -> [4] : (-__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l3 -> l1 : x^0'=x^0+__const_200^0+__const_300^0, (1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3
+Second rule:
+l1 -> [4] : (-1+x^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0-__const_100^0 >= 0), cost: NONTERM
+New rule:
+l3 -> [4] : (-__const_400^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 14 15
+
+Chained accelerated rules with incoming rules
+Start location: l3
+  11: l3 -> l1 : x^0'=x^0+__const_100^0, -1+x^0 >= 0, cost: 2
+  13: l3 -> l1 : x^0'=x^0+__const_200^0+__const_300^0, (1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3
+  16: l3 -> l1 : x^0'=x^0+__const_100^0+__const_400^0*n+n*__const_300^0, (-1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n)+__const_300^0 >= 0 /\ -1+x^0+__const_400^0+__const_300^0 >= 0 /\ -1+x^0+__const_400^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_400^0+__const_300^0*(-1+n) >= 0 /\ n >= 0 /\ -1+x^0 >= 0), cost: 2+2*n
+  17: l3 -> l1 : x^0'=x^0+__const_200^0+__const_400^0*n+n*__const_300^0+__const_300^0, (-1+x^0+__const_200^0+__const_400^0-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_200^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+__const_300^0 >= 0 /\ -1+__const_400^0*(-1+n)+x^0+__const_200^0+__const_400^0+__const_300^0*(-1+n)-__const_100^0+2*__const_300^0 >= 0 /\ -1+x^0+__const_200^0+__const_400^0-__const_100^0+2*__const_300^0 >= 0 /\ n >= 0 /\ 1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: 3+2*n
+  18: l3 -> [4] : (-__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+  19: l3 -> [4] : (-__const_400^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: NONTERM
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l3
+  18: l3 -> [4] : (-__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+  19: l3 -> [4] : (-__const_400^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0-__const_300^0 <= 0 /\ 1-x^0-__const_200^0+__const_100^0 <= 0), cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 18 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  (-__const_400^0-__const_300^0 <= 0 /\ -1+x^0+__const_400^0 >= 0 /\ -1+x^0 >= 0)

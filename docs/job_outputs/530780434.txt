@@ -1,0 +1,165 @@
+MAYBE
+Errors:
+Stacktrace:
+
+  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) Microsoft.Z3.Native/LIB.Z3_fixedpoint_dec_ref (intptr,intptr) [0x00002] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.Native.Z3_fixedpoint_dec_ref (intptr,intptr) [0x00001] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.Fixedpoint/DecRefQueue.DecRef (Microsoft.Z3.Context,intptr) [0x00007] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.IDecRefQueue.Clear (Microsoft.Z3.Context) [0x0002b] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.Context.Dispose () [0x000bd] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Research.T2.MuZ/MuZWrapper.CallSpacer (System.Collections.Generic.Dictionary`2<int, Microsoft.Z3.FuncDecl>,Microsoft.FSharp.Collections.FSharpList`1<System.Tuple`2<Microsoft.Z3.Quantifier, Microsoft.Z3.StringSymbol>>,Microsoft.Z3.BoolExpr) [0x0014d] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.MuZ/MuZWrapper.Microsoft-Research-T2-SafetyInterface-SafetyProver-ErrorLocationReachable () [0x000c5] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Termination.prover<a_REF> (Microsoft.Research.T2.Parameters/parameters,Microsoft.Research.T2.Programs/Program,Microsoft.Research.T2.CTL/CTL_Formula,bool,Microsoft.Research.T2.Utils/SetDictionary`2<Microsoft.Research.T2.CTL/CTL_Formula, System.Tuple`2<int, Microsoft.Research.T2.Formula/formula>>,Microsoft.FSharp.Core.FSharpOption`1<System.Tuple`2<Microsoft.Research.T2.Formula/formula, Microsoft.Research.T2.Formula/formula>>,bool,bool,bool) [0x0037a] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Termination.bottomUp<a_REF> (Microsoft.Research.T2.Parameters/parameters,Microsoft.Research.T2.Programs/Program,Microsoft.Research.T2.CTL/CTL_Formula,bool,int,Microsoft.FSharp.Core.FSharpOption`1<System.Tuple`2<Microsoft.Research.T2.Formula/formula, Microsoft.Research.T2.Formula/formula>>,Microsoft.Research.T2.Utils/SetDictionary`2<Microsoft.Research.T2.CTL/CTL_Formula, System.Tuple`2<int, Microsoft.Research.T2.Formula/formula>>) [0x0029e] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Termination.bottomUpProver (Microsoft.Research.T2.Parameters/parameters,Microsoft.Research.T2.Programs/Program,Microsoft.Research.T2.CTL/CTL_Formula,bool,Microsoft.FSharp.Core.FSharpOption`1<System.Tuple`2<Microsoft.Research.T2.Formula/formula, Microsoft.Research.T2.Formula/formula>>) [0x000c2] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Main.main$cont@113-1 (Microsoft.Research.T2.Arguments/runMode,Microsoft.Research.T2.Parameters/parameters,string,Microsoft.Research.T2.Programs/Program,Microsoft.FSharp.Core.Unit) [0x00071] in <597f4945c11a1123a745038345497f59>:0
+  at Microsoft.Research.T2.Main.main (string[]) [0x00261] in <597f4945c11a1123a745038345497f59>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_int_object (object,intptr,intptr,intptr) [0x00054] in <597f4945c11a1123a745038345497f59>:0
+/proc/self/maps:
+00400000-00aec000 r-xp 00000000 fd:02 39714831                           /export/starexec/sandbox/solver/bin/T2_static
+00ceb000-00cf0000 r-xp 006eb000 fd:02 39714831                           /export/starexec/sandbox/solver/bin/T2_static
+00cf0000-00cf3000 rwxp 006f0000 fd:02 39714831                           /export/starexec/sandbox/solver/bin/T2_static
+00cf3000-00d27000 rwxp 00000000 00:00 0 
+023e1000-038db000 rwxp 00000000 00:00 0                                  [heap]
+40455000-40465000 rwxp 00000000 00:00 0 
+407ed000-40980000 rwxp 00000000 00:00 0 
+2b0af0974000-2b0af0996000 r-xp 00000000 fd:00 659744                     /usr/lib64/ld-2.17.so
+2b0af0996000-2b0af0997000 rwxp 00000000 00:00 0 
+2b0af0997000-2b0af0998000 rwxs 00000000 00:13 23957227                   /dev/shm/mono.52774
+2b0af0998000-2b0af09bb000 rwxp 00000000 00:00 0 
+2b0af09bb000-2b0af09c1000 rwxp 00000000 00:00 0 
+2b0af09c1000-2b0af0a20000 ---p 00000000 00:00 0 
+2b0af0a20000-2b0af0aa0000 rwxp 00000000 00:00 0 
+2b0af0aa0000-2b0af0ab7000 r-xp 00000000 fd:02 39714846                   /export/starexec/sandbox/solver/lib/System.Numerics.dll
+2b0af0ab7000-2b0af0af6000 r-xp 00000000 fd:00 709325                     /usr/lib/mono/gac/Mono.Security/4.0.0.0__0738eb9f132ed756/Mono.Security.dll
+2b0af0af6000-2b0af0b06000 rwxp 00000000 00:00 0 
+2b0af0b06000-2b0af0b07000 ---p 00000000 00:00 0 
+2b0af0b07000-2b0af0b0f000 rwxp 00000000 00:00 0 
+2b0af0b10000-2b0af0b11000 rwxp 00000000 00:00 0 
+2b0af0b12000-2b0af0b16000 rwxp 00000000 00:00 0 
+2b0af0b1f000-2b0af0b45000 rwxp 00000000 00:00 0 
+2b0af0b4c000-2b0af0b5c000 rwxp 00000000 00:00 0 
+2b0af0b95000-2b0af0b96000 r-xp 00021000 fd:00 659744                     /usr/lib64/ld-2.17.so
+2b0af0b96000-2b0af0b97000 rwxp 00022000 fd:00 659744                     /usr/lib64/ld-2.17.so
+2b0af0b97000-2b0af0b98000 rwxp 00000000 00:00 0 
+2b0af0b98000-2b0af0c99000 r-xp 00000000 fd:00 659759                     /usr/lib64/libm-2.17.so
+2b0af0c99000-2b0af0e98000 ---p 00101000 fd:00 659759                     /usr/lib64/libm-2.17.so
+2b0af0e98000-2b0af0e99000 r-xp 00100000 fd:00 659759                     /usr/lib64/libm-2.17.so
+2b0af0e99000-2b0af0e9a000 rwxp 00101000 fd:00 659759                     /usr/lib64/libm-2.17.so
+2b0af0e9a000-2b0af0ea1000 r-xp 00000000 fd:00 661546                     /usr/lib64/librt-2.17.so
+2b0af0ea1000-2b0af10a0000 ---p 00007000 fd:00 661546                     /usr/lib64/librt-2.17.so
+2b0af10a0000-2b0af10a1000 r-xp 00006000 fd:00 661546                     /usr/lib64/librt-2.17.so
+2b0af10a1000-2b0af10a2000 rwxp 00007000 fd:00 661546                     /usr/lib64/librt-2.17.so
+2b0af10a2000-2b0af10a4000 r-xp 00000000 fd:00 659757                     /usr/lib64/libdl-2.17.so
+2b0af10a4000-2b0af12a4000 ---p 00002000 fd:00 659757                     /usr/lib64/libdl-2.17.so
+2b0af12a4000-2b0af12a5000 r-xp 00002000 fd:00 659757                     /usr/lib64/libdl-2.17.so
+2b0af12a5000-2b0af12a6000 rwxp 00003000 fd:00 659757                     /usr/lib64/libdl-2.17.so
+2b0af12a6000-2b0af12bd000 r-xp 00000000 fd:00 659794                     /usr/lib64/libpthread-2.17.so
+2b0af12bd000-2b0af14bc000 ---p 00017000 fd:00 659794                     /usr/lib64/libpthread-2.17.so
+2b0af14bc000-2b0af14bd000 r-xp 00016000 fd:00 659794                     /usr/lib64/libpthread-2.17.so
+2b0af14bd000-2b0af14be000 rwxp 00017000 fd:00 659794                     /usr/lib64/libpthread-2.17.so
+2b0af14be000-2b0af14c2000 rwxp 00000000 00:00 0 
+2b0af14c2000-2b0af14d7000 r-xp 00000000 fd:00 688526                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b0af14d7000-2b0af16d6000 ---p 00015000 fd:00 688526                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b0af16d6000-2b0af16d7000 r-xp 00014000 fd:00 688526                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b0af16d7000-2b0af16d8000 rwxp 00015000 fd:00 688526                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b0af16d8000-2b0af189c000 r-xp 00000000 fd:00 659751                     /usr/lib64/libc-2.17.so
+2b0af189c000-2b0af1a9b000 ---p 001c4000 fd:00 659751                     /usr/lib64/libc-2.17.so
+2b0af1a9b000-2b0af1a9f000 r-xp 001c3000 fd:00 659751                     /usr/lib64/libc-2.17.so
+2b0af1a9f000-2b0af1aa1000 rwxp 001c7000 fd:00 659751                     /usr/lib64/libc-2.17.so
+2b0af1aa1000-2b0af1aa6000 rwxp 00000000 00:00 0 
+2b0af1aa6000-2b0af7fe9000 r-xp 00000000 fd:00 155486                     /usr/lib/locale/locale-archive
+2b0af8000000-2b0af8400000 rwxp 00000000 00:00 0 
+2b0af8400000-2b0af8401000 ---p 00000000 00:00 0 
+2b0af8401000-2b0af9601000 rwxp 00000000 00:00 0 
+2b0af9601000-2b0af99aa000 r-xp 00000000 fd:02 39714848                   /export/starexec/sandbox/solver/lib/mscorlib.dll
+2b0af99ab000-2b0af99b3000 ---p 00000000 00:00 0 
+2b0af99b3000-2b0af99b4000 ---p 00000000 00:00 0 
+2b0af99b4000-2b0af99b5000 rwxp 00000000 00:00 0 
+2b0af99b5000-2b0af99bd000 ---p 00000000 00:00 0 
+2b0af99bd000-2b0af9bb4000 rwxp 00000000 00:00 0 
+2b0af9c00000-2b0af9d00000 rwxp 00000000 00:00 0 
+2b0af9d00000-2b0af9f8b000 r-xp 00000000 fd:02 39714845                   /export/starexec/sandbox/solver/lib/System.dll
+2b0af9f8b000-2b0afaf59000 r-xp 00000000 fd:02 39714847                   /export/starexec/sandbox/solver/lib/libz3.so
+2b0afaf59000-2b0afb159000 ---p 00fce000 fd:02 39714847                   /export/starexec/sandbox/solver/lib/libz3.so
+2b0afb159000-2b0afb181000 r-xp 00fce000 fd:02 39714847                   /export/starexec/sandbox/solver/lib/libz3.so
+2b0afb181000-2b0afb184000 rwxp 00ff6000 fd:02 39714847                   /export/starexec/sandbox/solver/lib/libz3.so
+2b0afb184000-2b0afb186000 rwxp 00000000 00:00 0 
+2b0afb186000-2b0afb26f000 r-xp 00000000 fd:00 660062                     /usr/lib64/libstdc++.so.6.0.19
+2b0afb26f000-2b0afb46f000 ---p 000e9000 fd:00 660062                     /usr/lib64/libstdc++.so.6.0.19
+2b0afb46f000-2b0afb477000 r-xp 000e9000 fd:00 660062                     /usr/lib64/libstdc++.so.6.0.19
+2b0afb477000-2b0afb479000 rwxp 000f1000 fd:00 660062                     /usr/lib64/libstdc++.so.6.0.19
+2b0afb479000-2b0afb48e000 rwxp 00000000 00:00 0 
+2b0afb48e000-2b0afb4b3000 r-xp 00000000 fd:00 661605                     /usr/lib64/libgomp.so.1.0.0
+2b0afb4b3000-2b0afb6b2000 ---p 00025000 fd:00 661605                     /usr/lib64/libgomp.so.1.0.0
+2b0afb6b2000-2b0afb6b3000 r-xp 00024000 fd:00 661605                     /usr/lib64/libgomp.so.1.0.0
+2b0afb6b3000-2b0afb6b4000 rwxp 00025000 fd:00 661605                     /usr/lib64/libgomp.so.1.0.0
+2b0afb6b4000-2b0afb7ab000 r-xp 00000000 fd:02 39714844                   /export/starexec/sandbox/solver/lib/System.Core.dll
+2b0afb7ac000-2b0afb8ac000 rwxp 00000000 00:00 0 
+2b0afc000000-2b0afc021000 rwxp 00000000 00:00 0 
+2b0afc021000-2b0b00000000 ---p 00000000 00:00 0 
+7ffc62c5b000-7ffc62c7c000 rwxp 00000000 00:00 0                          [stack]
+7ffc62cbc000-7ffc62cbe000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+Native stacktrace:
+
+	./T2_static() [0x6778ad]
+	./T2_static() [0x61d740]
+	/export/starexec/sandbox/solver/lib/libz3.so(+0x1f3906) [0x2b0afa17e906]
+	[0x2b85950]
+
+Debug info from gdb:
+
+[New LWP 52778]
+[New LWP 52777]
+[New LWP 52775]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00002b0af12b51d9 in waitpid () from /lib64/libpthread.so.0
+  Id   Target Id         Frame 
+  4    Thread 0x2b0af8600700 (LWP 52775) "SGen worker" 0x00002b0af12b1a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+  3    Thread 0x2b0af9bb3700 (LWP 52777) "Finalizer" 0x00002b0af12b3b3b in do_futex_wait.constprop.1 () from /lib64/libpthread.so.0
+  2    Thread 0x2b0af0b0c780 (LWP 52778) "T2_static" 0x00002b0af0e9ee47 in timer_helper_thread () from /lib64/librt.so.1
+* 1    Thread 0x2b0af09be080 (LWP 52774) "T2_static" 0x00002b0af12b51d9 in waitpid () from /lib64/libpthread.so.0
+
+Thread 4 (Thread 0x2b0af8600700 (LWP 52775)):
+#0  0x00002b0af12b1a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000005a5f73 in thread_func ()
+#2  0x00002b0af12adea5 in start_thread () from /lib64/libpthread.so.0
+#3  0x00002b0af17d6b0d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x2b0af9bb3700 (LWP 52777)):
+#0  0x00002b0af12b3b3b in do_futex_wait.constprop.1 () from /lib64/libpthread.so.0
+#1  0x00002b0af12b3bcf in __new_sem_wait_slow.constprop.0 () from /lib64/libpthread.so.0
+#2  0x00002b0af12b3c6b in sem_wait@@GLIBC_2.2.5 () from /lib64/libpthread.so.0
+#3  0x00000000004aaf0c in finalizer_thread ()
+#4  0x000000000053d1dd in start_wrapper ()
+#5  0x00000000005b9088 in inner_start_thread ()
+#6  0x00002b0af12adea5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00002b0af17d6b0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x2b0af0b0c780 (LWP 52778)):
+#0  0x00002b0af0e9ee47 in timer_helper_thread () from /lib64/librt.so.1
+#1  0x00002b0af12adea5 in start_thread () from /lib64/libpthread.so.0
+#2  0x00002b0af17d6b0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x2b0af09be080 (LWP 52774)):
+#0  0x00002b0af12b51d9 in waitpid () from /lib64/libpthread.so.0
+#1  0x0000000000677957 in mono_handle_native_crash ()
+#2  0x000000000061d740 in altstack_handle_and_restore ()
+#3  0x00002b0afa17e906 in void std::__adjust_heap<__gnu_cxx::__normal_iterator<ref<spacer::model_node>*, std::vector<ref<spacer::model_node>, std::allocator<ref<spacer::model_node> > > >, long, ref<spacer::model_node>, spacer::model_node_ref_gt>(__gnu_cxx::__normal_iterator<ref<spacer::model_node>*, std::vector<ref<spacer::model_node>, std::allocator<ref<spacer::model_node> > > >, long, long, ref<spacer::model_node>, spacer::model_node_ref_gt) () from /export/starexec/sandbox/solver/lib/libz3.so
+#4  0x0000000002b85950 in ?? ()
+#5  0x00000000033652a8 in ?? ()
+#6  0x000000000380e720 in ?? ()
+#7  0x0000000000000000 in ?? ()
+[Inferior 1 (process 52774) detached]
+
+=================================================================
+Got a SIGSEGV while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+/export/starexec/sandbox/solver/bin/starexec_run_default fixed: line 32: 52774 Aborted                 (core dumped) ${T2_BIN} -timeout "$STAREXEC_WALLCLOCK_TIME" $T2_ARGS -try_nonterm true -input_t2 "./theBenchmark.t2"

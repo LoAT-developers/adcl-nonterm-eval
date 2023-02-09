@@ -1,0 +1,312 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l31, true>
+<l1, l2, true>
+<l3, l1, true, par{tmp___3^0 -> 0}>
+<l4, l1, ((0 + bGray^0) <= 0) /\ (0 <= (0 + bGray^0)), par{tmp___3^0 -> 1}>
+<l4, l3, (1 <= (0 + bGray^0))>
+<l4, l3, ((1 + bGray^0) <= 0)>
+<l5, l1, ((0 + bAllDiff^0) <= 0) /\ (0 <= (0 + bAllDiff^0)), par{tmp___3^0 -> 1}>
+<l5, l4, (1 <= (0 + bAllDiff^0))>
+<l5, l4, ((1 + bAllDiff^0) <= 0)>
+<l6, l1, ((0 + bDomain^0) <= 0) /\ (0 <= (0 + bDomain^0)), par{tmp___3^0 -> 1}>
+<l6, l5, (1 <= (0 + bDomain^0))>
+<l6, l5, ((1 + bDomain^0) <= 0)>
+<l7, l8, true>
+<l9, l10, true, par{bGray^0 -> (0 + tmp___2^0), ni^0 -> (1 + ni^0)}>
+<l11, l9, true, par{tmp___2^0 -> 1}>
+<l12, l9, ((0 + nDiff^0) <= 0) /\ (0 <= (0 + nDiff^0)), par{tmp___2^0 -> 0}>
+<l12, l11, (1 <= (0 + nDiff^0))>
+<l12, l11, ((1 + nDiff^0) <= 0)>
+<l13, l9, true, par{tmp___2^0 -> 0}>
+<l13, l12, true>
+<l14, l9, ((0 + bGray^0) <= 0) /\ (0 <= (0 + bGray^0)), par{tmp___2^0 -> 0}>
+<l14, l13, (1 <= (0 + bGray^0))>
+<l14, l13, ((1 + bGray^0) <= 0)>
+<l15, l16, true>
+<l17, l6, ((~(1) + nDim^0) <= (0 + ni^0))>
+<l17, l14, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317), par{nDiff^0 -> undef317}>
+<l18, l19, true, par{bAllDiff^0 -> (0 + tmp___1^0), nj^0 -> (1 + nj^0)}>
+<l20, l21, true>
+<l22, l18, true, par{tmp___1^0 -> 1}>
+<l23, l22, true>
+<l23, l18, true, par{tmp___1^0 -> 0}>
+<l23, l22, true>
+<l24, l18, ((0 + bAllDiff^0) <= 0) /\ (0 <= (0 + bAllDiff^0)), par{tmp___1^0 -> 0}>
+<l24, l23, (1 <= (0 + bAllDiff^0))>
+<l24, l23, ((1 + bAllDiff^0) <= 0)>
+<l25, l20, ((0 + nDim^0) <= (0 + nj^0)), par{ni^0 -> (1 + ni^0)}>
+<l25, l24, ((1 + nj^0) <= (0 + nDim^0))>
+<l21, l10, ((~(1) + nDim^0) <= (0 + ni^0)), par{ni^0 -> 0}>
+<l21, l19, ((1 + ni^0) <= (~(1) + nDim^0)), par{nj^0 -> (1 + ni^0)}>
+<l19, l25, true>
+<l26, l15, true, par{bDomain^0 -> (0 + tmp___0^0), ni^0 -> (1 + ni^0)}>
+<l27, l26, true, par{tmp___0^0 -> 1}>
+<l27, l26, true, par{tmp___0^0 -> 0}>
+<l28, l26, true, par{tmp___0^0 -> 0}>
+<l28, l27, true>
+<l29, l26, ((0 + bDomain^0) <= 0) /\ (0 <= (0 + bDomain^0)), par{tmp___0^0 -> 0}>
+<l29, l28, (1 <= (0 + bDomain^0))>
+<l29, l28, ((1 + bDomain^0) <= 0)>
+<l10, l17, true>
+<l16, l20, ((0 + nDim^0) <= (0 + ni^0)), par{ni^0 -> 0}>
+<l16, l29, ((1 + ni^0) <= (0 + nDim^0))>
+<l8, l15, ((0 + nDim^0) <= (0 + ni^0)), par{ni^0 -> 0}>
+<l8, l7, ((1 + ni^0) <= (0 + nDim^0)), par{ni^0 -> (1 + ni^0)}>
+<l30, l7, (undef685 = undef685), par{bAllDiff^0 -> 1, bDomain^0 -> 1, bGray^0 -> 1, nDim^0 -> (0 + __const_12^0), ni^0 -> 0, tmp^0 -> undef685}>
+<l31, l30, true>
+
+Fresh variables:
+undef317, undef685, 
+
+Undef variables:
+undef317, undef685, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l7, (bAllDiff^0 = 1) /\ (bDomain^0 = 1) /\ (bGray^0 = 1) /\ (nDim^0 = (0 + nDim^0)) /\ (ni^0 = 0) /\ (undef685 = undef685)>
+<l4, l2, ((0 + bGray^0) <= 0) /\ (0 <= (0 + bGray^0))>
+<l4, l2, (1 <= (0 + bGray^0))>
+<l4, l2, ((1 + bGray^0) <= 0)>
+<l7, l15, ((0 + nDim^0) <= (0 + ni^0)), par{ni^0 -> 0}>
+<l7, l7, ((1 + ni^0) <= (0 + nDim^0)), par{ni^0 -> (1 + ni^0)}>
+<l10, l2, ((~(1) + nDim^0) <= (0 + ni^0)) /\ ((0 + bDomain^0) <= 0) /\ (0 <= (0 + bDomain^0))>
+<l10, l2, ((~(1) + nDim^0) <= (0 + ni^0)) /\ (1 <= (0 + bDomain^0)) /\ ((0 + bAllDiff^0) <= 0) /\ (0 <= (0 + bAllDiff^0))>
+<l10, l4, ((~(1) + nDim^0) <= (0 + ni^0)) /\ (1 <= (0 + bDomain^0)) /\ (1 <= (0 + bAllDiff^0))>
+<l10, l4, ((~(1) + nDim^0) <= (0 + ni^0)) /\ (1 <= (0 + bDomain^0)) /\ ((1 + bAllDiff^0) <= 0)>
+<l10, l2, ((~(1) + nDim^0) <= (0 + ni^0)) /\ ((1 + bDomain^0) <= 0) /\ ((0 + bAllDiff^0) <= 0) /\ (0 <= (0 + bAllDiff^0))>
+<l10, l4, ((~(1) + nDim^0) <= (0 + ni^0)) /\ ((1 + bDomain^0) <= 0) /\ (1 <= (0 + bAllDiff^0))>
+<l10, l4, ((~(1) + nDim^0) <= (0 + ni^0)) /\ ((1 + bDomain^0) <= 0) /\ ((1 + bAllDiff^0) <= 0)>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ ((0 + bGray^0) <= 0) /\ (0 <= (0 + bGray^0)), par{bGray^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ (1 <= (0 + bGray^0)), par{bGray^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ (1 <= (0 + bGray^0)) /\ ((0 + undef317) <= 0) /\ (0 <= (0 + undef317)), par{bGray^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ (1 <= (0 + bGray^0)) /\ (1 <= (0 + undef317)), par{bGray^0 -> (0 + 1), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ (1 <= (0 + bGray^0)) /\ ((1 + undef317) <= 0), par{bGray^0 -> (0 + 1), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ ((1 + bGray^0) <= 0), par{bGray^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ ((1 + bGray^0) <= 0) /\ ((0 + undef317) <= 0) /\ (0 <= (0 + undef317)), par{bGray^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ ((1 + bGray^0) <= 0) /\ (1 <= (0 + undef317)), par{bGray^0 -> (0 + 1), ni^0 -> (1 + ni^0)}>
+<l10, l10, ((1 + ni^0) <= (~(1) + nDim^0)) /\ (undef317 = undef317) /\ ((1 + bGray^0) <= 0) /\ ((1 + undef317) <= 0), par{bGray^0 -> (0 + 1), ni^0 -> (1 + ni^0)}>
+<l15, l10, ((0 + nDim^0) <= (0 + ni^0)) /\ ((~(1) + nDim^0) <= (0 + 0)), par{ni^0 -> 0}>
+<l15, l19, ((0 + nDim^0) <= (0 + ni^0)) /\ ((1 + 0) <= (~(1) + nDim^0)), par{ni^0 -> 0, nj^0 -> (1 + 0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ ((0 + bDomain^0) <= 0) /\ (0 <= (0 + bDomain^0)), par{bDomain^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ (1 <= (0 + bDomain^0)), par{bDomain^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ (1 <= (0 + bDomain^0)), par{bDomain^0 -> (0 + 1), ni^0 -> (1 + ni^0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ (1 <= (0 + bDomain^0)), par{bDomain^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ ((1 + bDomain^0) <= 0), par{bDomain^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ ((1 + bDomain^0) <= 0), par{bDomain^0 -> (0 + 1), ni^0 -> (1 + ni^0)}>
+<l15, l15, ((1 + ni^0) <= (0 + nDim^0)) /\ ((1 + bDomain^0) <= 0), par{bDomain^0 -> (0 + 0), ni^0 -> (1 + ni^0)}>
+<l19, l10, ((0 + nDim^0) <= (0 + nj^0)) /\ ((~(1) + nDim^0) <= (0 + (1 + ni^0))), par{ni^0 -> 0}>
+<l19, l19, ((0 + nDim^0) <= (0 + nj^0)) /\ ((1 + (1 + ni^0)) <= (~(1) + nDim^0)), par{ni^0 -> (1 + ni^0), nj^0 -> (1 + (1 + ni^0))}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ ((0 + bAllDiff^0) <= 0) /\ (0 <= (0 + bAllDiff^0)), par{bAllDiff^0 -> (0 + 0), nj^0 -> (1 + nj^0)}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ (1 <= (0 + bAllDiff^0)), par{bAllDiff^0 -> (0 + 1), nj^0 -> (1 + nj^0)}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ (1 <= (0 + bAllDiff^0)), par{bAllDiff^0 -> (0 + 0), nj^0 -> (1 + nj^0)}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ (1 <= (0 + bAllDiff^0)), par{bAllDiff^0 -> (0 + 1), nj^0 -> (1 + nj^0)}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ ((1 + bAllDiff^0) <= 0), par{bAllDiff^0 -> (0 + 1), nj^0 -> (1 + nj^0)}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ ((1 + bAllDiff^0) <= 0), par{bAllDiff^0 -> (0 + 0), nj^0 -> (1 + nj^0)}>
+<l19, l19, ((1 + nj^0) <= (0 + nDim^0)) /\ ((1 + bAllDiff^0) <= 0), par{bAllDiff^0 -> (0 + 1), nj^0 -> (1 + nj^0)}>
+
+Fresh variables:
+undef317, undef685, 
+
+Undef variables:
+undef317, undef685, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l7, l7, 1 + ni^0 <= nDim^0, {ni^0 -> 1 + ni^0, rest remain the same}>
+Variables:
+nDim^0, ni^0
+
+Graph 2:
+Transitions:
+<l15, l15, 1 + ni^0 <= nDim^0 /\ bDomain^0 = 0, {bDomain^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l15, l15, 1 <= bDomain^0 /\ 1 + ni^0 <= nDim^0, {bDomain^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l15, l15, 1 <= bDomain^0 /\ 1 + ni^0 <= nDim^0, {bDomain^0 -> 1, ni^0 -> 1 + ni^0, rest remain the same}>
+<l15, l15, 1 <= bDomain^0 /\ 1 + ni^0 <= nDim^0, {bDomain^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l15, l15, 1 + bDomain^0 <= 0 /\ 1 + ni^0 <= nDim^0, {bDomain^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l15, l15, 1 + bDomain^0 <= 0 /\ 1 + ni^0 <= nDim^0, {bDomain^0 -> 1, ni^0 -> 1 + ni^0, rest remain the same}>
+<l15, l15, 1 + bDomain^0 <= 0 /\ 1 + ni^0 <= nDim^0, {bDomain^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+Variables:
+bDomain^0, nDim^0, ni^0
+
+Graph 3:
+Transitions:
+<l19, l19, nDim^0 <= nj^0 /\ 3 + ni^0 <= nDim^0, {ni^0 -> 1 + ni^0, nj^0 -> 2 + ni^0, rest remain the same}>
+<l19, l19, 1 + nj^0 <= nDim^0 /\ bAllDiff^0 = 0, {bAllDiff^0 -> 0, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 <= bAllDiff^0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 <= bAllDiff^0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 0, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 <= bAllDiff^0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 + bAllDiff^0 <= 0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 + bAllDiff^0 <= 0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 0, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 + bAllDiff^0 <= 0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+Variables:
+nDim^0, ni^0, nj^0, bAllDiff^0
+
+Graph 4:
+Transitions:
+<l10, l10, 2 + ni^0 <= nDim^0 /\ bGray^0 = 0, {bGray^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 <= bGray^0 /\ 2 + ni^0 <= nDim^0, {bGray^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 <= bGray^0 /\ 2 + ni^0 <= nDim^0 /\ undef317 = 0, {bGray^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 <= bGray^0 /\ 1 <= undef317 /\ 2 + ni^0 <= nDim^0, {bGray^0 -> 1, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 <= bGray^0 /\ 1 + undef317 <= 0 /\ 2 + ni^0 <= nDim^0, {bGray^0 -> 1, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 + bGray^0 <= 0 /\ 2 + ni^0 <= nDim^0, {bGray^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 + bGray^0 <= 0 /\ 2 + ni^0 <= nDim^0 /\ undef317 = 0, {bGray^0 -> 0, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 + bGray^0 <= 0 /\ 1 <= undef317 /\ 2 + ni^0 <= nDim^0, {bGray^0 -> 1, ni^0 -> 1 + ni^0, rest remain the same}>
+<l10, l10, 1 + bGray^0 <= 0 /\ 1 + undef317 <= 0 /\ 2 + ni^0 <= nDim^0, {bGray^0 -> 1, ni^0 -> 1 + ni^0, rest remain the same}>
+Variables:
+bGray^0, nDim^0, ni^0
+
+Graph 5:
+Transitions:
+Variables:
+
+Graph 6:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l7, ni^0 = 0 /\ bAllDiff^0 = 1 /\ bDomain^0 = 1 /\ bGray^0 = 1, {all remain the same}>
+
+Graph 2
+<l7, l15, nDim^0 <= ni^0, {ni^0 -> 0, rest remain the same}>
+
+Graph 3
+<l15, l19, nDim^0 <= ni^0 /\ 2 <= nDim^0, {ni^0 -> 0, nj^0 -> 1, rest remain the same}>
+
+Graph 4
+<l15, l10, nDim^0 <= ni^0 /\ nDim^0 <= 1, {ni^0 -> 0, rest remain the same}>
+<l19, l10, nDim^0 <= nj^0 /\ nDim^0 <= 2 + ni^0, {ni^0 -> 0, rest remain the same}>
+
+Graph 5
+<l10, l4, 1 <= bAllDiff^0 /\ 1 <= bDomain^0 /\ nDim^0 <= 1 + ni^0, {all remain the same}>
+<l10, l4, 1 + bAllDiff^0 <= 0 /\ 1 <= bDomain^0 /\ nDim^0 <= 1 + ni^0, {all remain the same}>
+<l10, l4, 1 <= bAllDiff^0 /\ 1 + bDomain^0 <= 0 /\ nDim^0 <= 1 + ni^0, {all remain the same}>
+<l10, l4, 1 + bAllDiff^0 <= 0 /\ 1 + bDomain^0 <= 0 /\ nDim^0 <= 1 + ni^0, {all remain the same}>
+
+Graph 6
+<l4, l2, bGray^0 = 0, {all remain the same}>
+<l4, l2, 1 <= bGray^0, {all remain the same}>
+<l4, l2, 1 + bGray^0 <= 0, {all remain the same}>
+<l10, l2, nDim^0 <= 1 + ni^0 /\ bDomain^0 = 0, {all remain the same}>
+<l10, l2, 1 <= bDomain^0 /\ nDim^0 <= 1 + ni^0 /\ bAllDiff^0 = 0, {all remain the same}>
+<l10, l2, 1 + bDomain^0 <= 0 /\ nDim^0 <= 1 + ni^0 /\ bAllDiff^0 = 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 6 )
+( 4 , 5 )
+( 7 , 1 )
+( 10 , 4 )
+( 15 , 2 )
+( 19 , 3 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001988
+
+Checking conditional termination of SCC {l7}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001131s
+[33mRanking function: [36m-1 + nDim^0 - ni^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.020396
+
+Checking conditional termination of SCC {l15}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004884s
+[33mRanking function: [36m-2 + 2*nDim^0 - 2*ni^0[0m
+New Graphs: 
+Proving termination of subgraph 3
+Checking unfeasibility...
+Time used: 0.532099
+
+Checking conditional termination of SCC {l19}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009526s
+[33mRanking function: [36m-3 + nDim^0 - ni^0[0m
+New Graphs: 
+Transitions:
+<l19, l19, 1 + nj^0 <= nDim^0 /\ bAllDiff^0 = 0, {bAllDiff^0 -> 0, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 <= bAllDiff^0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 <= bAllDiff^0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 0, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 <= bAllDiff^0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 + bAllDiff^0 <= 0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 + bAllDiff^0 <= 0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 0, nj^0 -> 1 + nj^0, rest remain the same}>
+<l19, l19, 1 + bAllDiff^0 <= 0 /\ 1 + nj^0 <= nDim^0, {bAllDiff^0 -> 1, nj^0 -> 1 + nj^0, rest remain the same}>
+Variables:
+bAllDiff^0, nDim^0, nj^0
+Checking conditional termination of SCC {l19}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003574s
+[33mRanking function: [36m-2 + 2*nDim^0 - 2*nj^0[0m
+New Graphs: 
+Proving termination of subgraph 4
+Checking unfeasibility...
+Time used: 0.02726
+
+Checking conditional termination of SCC {l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008219s
+[33mRanking function: [36m-1 + nDim^0 - ni^0[0m
+New Graphs: 
+Proving termination of subgraph 5
+Analyzing SCC {l4}...
+No cycles found.
+
+Proving termination of subgraph 6
+Analyzing SCC {l2}...
+No cycles found.
+
+[32mProgram Terminates[0m

@@ -1,0 +1,1242 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l8, true>
+<l1, l2, ((0 + conditional^0) <= 1)>
+<l1, l3, (2 <= (0 + conditional^0)), par{num^0 -> (1 + num^0)}>
+<l4, l3, ((0 + conditional^0) <= 1), par{IoCreateDevice^0 -> 0, i^0 -> (1 + i^0), status^0 -> 1}>
+<l4, l1, (2 <= (0 + conditional^0)) /\ (undef37 = undef37), par{IoCreateDevice^0 -> 0, Pdo^0 -> 0, conditional^0 -> undef37}>
+<l2, l5, true, par{PPBunlockInits^0 -> 1, num^0 -> 0}>
+<l6, l2, ((0 + DName^0) <= 0)>
+<l6, l4, (1 <= (0 + DName^0)) /\ (undef67 = undef67), par{IoCreateDevice^0 -> 1, conditional^0 -> undef67}>
+<l3, l2, ((0 + Pdolen^0) <= (0 + i^0)), par{status^0 -> 0}>
+<l3, l6, ((1 + i^0) <= (0 + Pdolen^0)) /\ (undef81 = undef81), par{DName^0 -> undef81, PPBlockInits^0 -> 1, status^0 -> 0}>
+<l7, l3, (undef98 = undef98) /\ (undef96 = undef96), par{IoCreateDevice^0 -> 0, PPBlockInits^0 -> 1, PPBunlockInits^0 -> 0, Pdolen^0 -> undef96, i^0 -> undef98, status^0 -> 0}>
+<l8, l7, true>
+
+Fresh variables:
+undef37, undef67, undef81, undef96, undef98, 
+
+Undef variables:
+undef37, undef67, undef81, undef96, undef98, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l3, (Pdolen^0 = undef96) /\ (i^0 = undef98) /\ (undef98 = undef98) /\ (undef96 = undef96)>
+<l3, l5, ((0 + Pdolen^0) <= (0 + i^0)), par{num^0 -> 0}>
+<l3, l5, ((1 + i^0) <= (0 + Pdolen^0)) /\ (undef81 = undef81) /\ ((0 + undef81) <= 0), par{num^0 -> 0}>
+<l3, l3, ((1 + i^0) <= (0 + Pdolen^0)) /\ (undef81 = undef81) /\ (1 <= (0 + undef81)) /\ (undef67 = undef67) /\ ((0 + undef67) <= 1), par{i^0 -> (1 + i^0)}>
+<l3, l5, ((1 + i^0) <= (0 + Pdolen^0)) /\ (undef81 = undef81) /\ (1 <= (0 + undef81)) /\ (undef67 = undef67) /\ (2 <= (0 + undef67)) /\ (undef37 = undef37) /\ ((0 + undef37) <= 1), par{num^0 -> 0}>
+<l3, l3, ((1 + i^0) <= (0 + Pdolen^0)) /\ (undef81 = undef81) /\ (1 <= (0 + undef81)) /\ (undef67 = undef67) /\ (2 <= (0 + undef67)) /\ (undef37 = undef37) /\ (2 <= (0 + undef37)), par{num^0 -> (1 + num^0)}>
+
+Fresh variables:
+undef37, undef67, undef81, undef96, undef98, 
+
+Undef variables:
+undef37, undef67, undef81, undef96, undef98, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l3, Pdolen^0 = undef96 /\ i^0 = undef98, {all remain the same}>
+
+Graph 2
+<l3, l5, Pdolen^0 <= i^0, {num^0 -> 0, rest remain the same}>
+<l3, l5, undef81 <= 0 /\ 1 + i^0 <= Pdolen^0, {num^0 -> 0, rest remain the same}>
+<l3, l5, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef67 /\ undef37 <= 1, {num^0 -> 0, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 1 )
+( 5 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.004849
+
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001607s
+[33mRanking function: [36m-6 + 6*Pdolen^0 - 6*i^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000699s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002826s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007763s
+Time used: 0.007566
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013221s
+Time used: 0.012661
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.020008s
+Time used: 0.019999
+
+LOG: SAT solveNonLinear - Elapsed time: 0.033228s
+Cost: 1; Total time: 0.03266
+[31mFailed at location 3: 1 + Pdolen^0 <= i^0[0m
+Before Improving: 
+[36mQuasi-invariant at l3: 1 + Pdolen^0 <= i^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004512s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001848s
+Remaining time after improvement: 0.996065
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: Pdolen^0 <= i^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+New Graphs: 
+Calling Safety with literal Pdolen^0 <= i^0 and entry <l0, l3, Pdolen^0 = undef96 /\ i^0 = undef98, {all remain the same}>
+
+LOG: CALL check - Post:Pdolen^0 <= i^0 - Process 1
+* Exit transition: <l0, l3, Pdolen^0 = undef96 /\ i^0 = undef98, {all remain the same}>
+* Postcondition  : Pdolen^0 <= i^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000583s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000679s
+INVARIANTS: 
+3: 
+Quasi-INVARIANTS to narrow Graph: 
+3: Pdolen^0 <= i^0 , 
+Narrowing transition: 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001585s
+[33mRanking function: [36m-6 + 6*Pdolen^0 - 6*i^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000712s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002823s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007107s
+Time used: 0.006953
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002406s
+Time used: 4.00156
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007054s
+Time used: 4.00079
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004888s
+Time used: 1.00069
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.019581s
+Time used: 0.012339
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.018142s
+Time used: 0.018134
+
+LOG: SAT solveNonLinear - Elapsed time: 0.037723s
+Cost: 1; Total time: 0.030473
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: i^0 <= 1 + Pdolen^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000836s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003412s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009135s
+Time used: 0.008949
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001923s
+Time used: 4.00092
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006124s
+Time used: 4.00174
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009585s
+Time used: 1.00003
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022050s
+Time used: 0.014646
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.024336s
+Time used: 0.024327
+
+LOG: SAT solveNonLinear - Elapsed time: 0.046385s
+Cost: 1; Total time: 0.038973
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: i^0 <= Pdolen^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + 2*Pdolen^0 - 2*i^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000965s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004476s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010014s
+Time used: 0.009809
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002072s
+Time used: 4.00106
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005051s
+Time used: 4.00065
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005329s
+Time used: 1.00034
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022624s
+Time used: 0.015344
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.014939s
+Time used: 0.014931
+
+LOG: SAT solveNonLinear - Elapsed time: 0.037563s
+Cost: 1; Total time: 0.030275
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: i^0 <= Pdolen^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - Pdolen^0 + i^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001076s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004610s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009897s
+Time used: 0.009686
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004064s
+Time used: 4.00202
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006639s
+Time used: 4.00087
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005283s
+Time used: 1.00007
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.024719s
+Time used: 0.016899
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.020161s
+Time used: 0.020151
+
+LOG: SAT solveNonLinear - Elapsed time: 0.044880s
+Cost: 1; Total time: 0.03705
+[33mQuasi-ranking function: [36m50000 + Pdolen^0 + i^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001213s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005378s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012385s
+Time used: 0.01217
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003397s
+Time used: 4.00244
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007082s
+Time used: 4.00102
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005568s
+Time used: 1.00022
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.024539s
+Time used: 0.016648
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.020963s
+Time used: 0.020954
+
+LOG: SAT solveNonLinear - Elapsed time: 0.045502s
+Cost: 1; Total time: 0.037602
+[33mQuasi-ranking function: [36m50000 - Pdolen^0 - i^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001314s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006826s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011878s
+Time used: 0.011657
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003509s
+Time used: 4.0024
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007399s
+Time used: 4.00109
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005592s
+Time used: 1.0001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.025210s
+Time used: 0.017443
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.019469s
+Time used: 0.019459
+
+LOG: SAT solveNonLinear - Elapsed time: 0.044678s
+Cost: 1; Total time: 0.036902
+[33mQuasi-ranking function: [36m50000 - i^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001439s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007354s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013544s
+Time used: 0.013314
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002687s
+Time used: 4.00175
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006412s
+Time used: 4.00111
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005320s
+Time used: 1.00002
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.025612s
+Time used: 0.017865
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.019554s
+Time used: 0.019545
+
+LOG: SAT solveNonLinear - Elapsed time: 0.045166s
+Cost: 1; Total time: 0.03741
+[33mQuasi-ranking function: [36m50000 + 100004*i^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001549s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008318s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013105s
+Time used: 0.012868
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003721s
+Time used: 4.00264
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006932s
+Time used: 4.00123
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005311s
+Time used: 1.00017
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027768s
+Time used: 0.019926
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.018877s
+Time used: 0.018868
+
+LOG: SAT solveNonLinear - Elapsed time: 0.046645s
+Cost: 1; Total time: 0.038794
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: i^0 <= Pdolen^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + Pdolen^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001645s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010101s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014849s
+Time used: 0.014415
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003362s
+Time used: 4.0023
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007378s
+Time used: 4.00129
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004405s
+Time used: 1.00003
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027706s
+Time used: 0.019887
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.020992s
+Time used: 0.020982
+
+LOG: SAT solveNonLinear - Elapsed time: 0.048698s
+Cost: 1; Total time: 0.040869
+[33mQuasi-ranking function: [36m50000 - Pdolen^0 - num^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001749s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011560s
+Trying to remove transition: <l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014217s
+Time used: 0.013736
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003774s
+Time used: 4.00279
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007711s
+Time used: 4.00137
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004296s
+Time used: 1.00003
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.025830s
+Time used: 0.018185
+
+Proving non-termination of subgraph 1
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ undef67 <= 1, {i^0 -> 1 + i^0, rest remain the same}>
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+
+Checking conditional non-termination of SCC {l3}...
+EXIT TRANSITIONS:
+<l3, end, Pdolen^0 <= i^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.002293s
+Time used: 5.00174
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.007785s
+Time used: 5.00165
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.009171s
+Time used: 5.00011
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... NO
+
+Proving non-termination of subgraph 1
+Transitions:
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+Variables:
+Pdolen^0, i^0, num^0
+
+Checking conditional non-termination of SCC {l3}...
+EXIT TRANSITIONS:
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, Pdolen^0 <= i^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.454697s
+Time used: 1.45303
+Improving Solution with cost 37 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001538s
+Time used: 1.00144
+
+LOG: SAT solveNonLinear - Elapsed time: 2.456235s
+Cost: 37; Total time: 2.45447
+[31mFailed at location 3: 1 + i^0 <= Pdolen^0[0m
+Before Improving: 
+[36mQuasi-invariant at l3: 1 + i^0 <= Pdolen^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.024975s
+Remaining time after improvement: 0.980162
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.042544s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: 1 + i^0 <= Pdolen^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l3: 23
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l3}...
+EXIT TRANSITIONS:
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 + 100004*i^0 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ num^0 <= 50000 + 100004*i^0, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.547781s
+Time used: 0.546605
+Improving Solution with cost 15 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.004897s
+Time used: 1.00478
+
+LOG: SAT solveNonLinear - Elapsed time: 1.552677s
+Cost: 15; Total time: 1.55139
+[31mFailed at location 3: 1 + Pdolen^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l3: 1 + Pdolen^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.017986s
+Remaining time after improvement: 0.987592
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.024290s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: 1 + Pdolen^0 <= 0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l3: 14
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0, {num^0 -> 1 + num^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l3}...
+EXIT TRANSITIONS:
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 <= num^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ i^0 + num^0 <= 50000, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.117980s
+Time used: 0.117439
+Improving Solution with cost 12 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.259120s
+Time used: 0.259065
+Improving Solution with cost 10 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.043851s
+Time used: 1.04374
+
+LOG: SAT solveNonLinear - Elapsed time: 1.420951s
+Cost: 10; Total time: 1.42025
+[31mFailed at location 3: 0 <= 3 + Pdolen^0 + i^0[0m
+Before Improving: 
+[36mQuasi-invariant at l3: 0 <= 3 + Pdolen^0 + i^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.040118s
+Remaining time after improvement: 0.993379
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.013821s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: 0 <= 3 + Pdolen^0 + i^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l3: 4
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 1 <= undef81 /\ 2 <= undef37 /\ 2 <= undef67 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ 0 <= 3 + Pdolen^0 + i^0, {num^0 -> 1 + num^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l3}...
+EXIT TRANSITIONS:
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 + i^0 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 + i^0 /\ Pdolen^0 + num^0 <= 50000 /\ num^0 <= 50000 + Pdolen^0 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ Pdolen^0 + num^0 <= 50000 /\ 2*i^0 + num^0 <= 50000 + 2*Pdolen^0 /\ i^0 + num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+<l3, end, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ Pdolen^0 + i^0 + num^0 <= 50000 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.003522s
+Time used: 5.0029
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.007858s
+Time used: 5.00223
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.009295s
+Time used: 5.00205
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... YES
+Calling reachability with...
+Transition: <l3, end, true, {all remain the same}>
+Conditions: 1 + i^0 <= Pdolen^0, 50001 <= Pdolen^0 + i^0 + num^0, 50001 + i^0 <= Pdolen^0 + num^0, 50001 <= Pdolen^0 + num^0, 50001 + Pdolen^0 + i^0 <= num^0, 50001 + Pdolen^0 <= num^0, 50001 + 2*Pdolen^0 <= 2*i^0 + num^0, 50001 <= i^0 + num^0, 50001 <= num^0, 50001 + 100004*i^0 <= num^0, 1 + Pdolen^0 <= 0, 0 <= 3 + Pdolen^0 + i^0, 
+OPEN EXITS: 
+<l3, end, 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ 0 <= 3 + Pdolen^0 + i^0, {all remain the same}> (condsUp: 1 + Pdolen^0 <= 0)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l3, Pdolen^0 = undef96 /\ i^0 = undef98, {all remain the same}>
+Conditions: 1 + i^0 <= Pdolen^0, 50001 + Pdolen^0 + i^0 <= num^0, 50001 + Pdolen^0 <= num^0, 50001 + 2*Pdolen^0 <= 2*i^0 + num^0, 50001 + i^0 <= Pdolen^0 + num^0, 50001 <= Pdolen^0 + i^0 + num^0, 50001 <= Pdolen^0 + num^0, 50001 <= i^0 + num^0, 50001 + 100004*i^0 <= num^0, 50001 <= num^0, 0 <= 3 + Pdolen^0 + i^0, 1 + Pdolen^0 <= 0, 
+OPEN EXITS: 
+<l0, l3, 1 + Pdolen^0 <= 0 /\ 1 + i^0 <= Pdolen^0 /\ 50001 + Pdolen^0 + i^0 <= num^0 /\ 50001 + Pdolen^0 <= num^0 /\ 50001 + 2*Pdolen^0 <= 2*i^0 + num^0 /\ 50001 + i^0 <= Pdolen^0 + num^0 /\ 50001 <= Pdolen^0 + i^0 + num^0 /\ 50001 <= Pdolen^0 + num^0 /\ 50001 <= i^0 + num^0 /\ 50001 + 100004*i^0 <= num^0 /\ 50001 <= num^0 /\ 0 <= 3 + Pdolen^0 + i^0 /\ Pdolen^0 = undef96 /\ i^0 = undef98, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

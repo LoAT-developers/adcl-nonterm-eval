@@ -1,0 +1,152 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P0, arg1'=arg1P0, (arg1P0-arg1 <= 0 /\ arg2 > 0 /\ arg1P0 > 0 /\ 1+x40 > 0 /\ arg1 > 0 /\ -2+arg2P0 > 0), cost: 1
+   1: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P1, arg1'=arg1P1, (1+x90 > 0 /\ -arg1+arg1P1 <= 0 /\ arg2 > 0 /\ -1+arg2P1 > 0 /\ -1+arg2P1-arg1 <= 0 /\ arg1 > 0 /\ arg1P1 > 0), cost: 1
+   3: f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P3, arg1'=arg1P3, (1+arg1P3 > 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+   2: f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=arg1P2, (arg2P2 > 0 /\ arg2 > 0 /\ -arg1P2 == 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0 /\ x100 > 0), cost: 1
+   5: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=arg1P5, (arg2 > 0 /\ 1+arg2P5 > 0 /\ 1-arg1P5 == 0 /\ -arg1 == 0 /\ 1+arg2P5-arg2 <= 0), cost: 1
+   6: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P6, arg1'=arg1P6, (arg2 > 0 /\ 1+arg2P6 > 0 /\ 1-arg2+arg2P6 <= 0 /\ -arg1P6 == 0 /\ 2-arg1 == 0), cost: 1
+   7: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P7, arg1'=arg1P7, (arg2 > 0 /\ -2+arg2P7 > 0 /\ 2-arg1P7 == 0 /\ -2+arg2P7-arg2 <= 0 /\ 1-arg1 == 0), cost: 1
+   4: f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=arg1P4, (-1+arg1-arg1P4 == 0 /\ -1 < 0 /\ -1+arg1 > 0), cost: 1
+   8: __init -> f1_0_main_Load : arg2'=arg2P8, arg1'=arg1P8, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P0, arg1'=arg1P0, (arg1P0-arg1 <= 0 /\ arg2 > 0 /\ arg1P0 > 0 /\ 1+x40 > 0 /\ arg1 > 0 /\ -2+arg2P0 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P0, arg1'=arg1P0, (arg1P0-arg1 <= 0 /\ arg2 > 0 /\ arg1P0 > 0 /\ -2+arg2P0 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P1, arg1'=arg1P1, (1+x90 > 0 /\ -arg1+arg1P1 <= 0 /\ arg2 > 0 /\ -1+arg2P1 > 0 /\ -1+arg2P1-arg1 <= 0 /\ arg1 > 0 /\ arg1P1 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P1, arg1'=arg1P1, (-arg1+arg1P1 <= 0 /\ arg2 > 0 /\ -1+arg2P1 > 0 /\ -1+arg2P1-arg1 <= 0 /\ arg1P1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=arg1P2, (arg2P2 > 0 /\ arg2 > 0 /\ -arg1P2 == 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0 /\ x100 > 0), cost: 1
+New rule:
+f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=0, (arg2P2 > 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=arg1P4, (-1+arg1-arg1P4 == 0 /\ -1 < 0 /\ -1+arg1 > 0), cost: 1
+New rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=-1+arg1, -1+arg1 > 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=arg1P5, (arg2 > 0 /\ 1+arg2P5 > 0 /\ 1-arg1P5 == 0 /\ -arg1 == 0 /\ 1+arg2P5-arg2 <= 0), cost: 1
+New rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=1, (1+arg2P5 > 0 /\ arg1 == 0 /\ 1+arg2P5-arg2 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P6, arg1'=arg1P6, (arg2 > 0 /\ 1+arg2P6 > 0 /\ 1-arg2+arg2P6 <= 0 /\ -arg1P6 == 0 /\ 2-arg1 == 0), cost: 1
+New rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P6, arg1'=0, (-2+arg1 == 0 /\ 1+arg2P6 > 0 /\ 1-arg2+arg2P6 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P7, arg1'=arg1P7, (arg2 > 0 /\ -2+arg2P7 > 0 /\ 2-arg1P7 == 0 /\ -2+arg2P7-arg2 <= 0 /\ 1-arg1 == 0), cost: 1
+New rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P7, arg1'=2, (-2+arg2P7 > 0 /\ -2+arg2P7-arg2 <= 0 /\ -1+arg1 == 0), cost: 1
+
+Simplified rules
+Start location: __init
+   3: f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P3, arg1'=arg1P3, (1+arg1P3 > 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+   9: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P0, arg1'=arg1P0, (arg1P0-arg1 <= 0 /\ arg2 > 0 /\ arg1P0 > 0 /\ -2+arg2P0 > 0), cost: 1
+  10: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P1, arg1'=arg1P1, (-arg1+arg1P1 <= 0 /\ arg2 > 0 /\ -1+arg2P1 > 0 /\ -1+arg2P1-arg1 <= 0 /\ arg1P1 > 0), cost: 1
+  11: f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=0, (arg2P2 > 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0), cost: 1
+  13: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=1, (1+arg2P5 > 0 /\ arg1 == 0 /\ 1+arg2P5-arg2 <= 0), cost: 1
+  14: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P6, arg1'=0, (-2+arg1 == 0 /\ 1+arg2P6 > 0 /\ 1-arg2+arg2P6 <= 0), cost: 1
+  15: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P7, arg1'=2, (-2+arg2P7 > 0 /\ -2+arg2P7-arg2 <= 0 /\ -1+arg1 == 0), cost: 1
+  12: f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=-1+arg1, -1+arg1 > 0, cost: 1
+   8: __init -> f1_0_main_Load : arg2'=arg2P8, arg1'=arg1P8, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=-1+arg1, -1+arg1 > 0, cost: 1
+New rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=arg1-n5, (-1+n5 >= 0 /\ arg1-n5 > 0), cost: n5
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_ODBhEl.txt
+
+Applied instantiation
+Original rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=arg1-n5, (-1+n5 >= 0 /\ arg1-n5 > 0), cost: n5
+New rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, (-2+arg1 >= 0 /\ 1 > 0), cost: -1+arg1
+
+Applied simplification
+Original rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, (-2+arg1 >= 0 /\ 1 > 0), cost: -1+arg1
+New rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, -2+arg1 >= 0, cost: -1+arg1
+
+Applied deletion
+Removed the following rules: 12
+
+Accelerated simple loops
+Start location: __init
+   3: f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P3, arg1'=arg1P3, (1+arg1P3 > 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+   9: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P0, arg1'=arg1P0, (arg1P0-arg1 <= 0 /\ arg2 > 0 /\ arg1P0 > 0 /\ -2+arg2P0 > 0), cost: 1
+  10: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P1, arg1'=arg1P1, (-arg1+arg1P1 <= 0 /\ arg2 > 0 /\ -1+arg2P1 > 0 /\ -1+arg2P1-arg1 <= 0 /\ arg1P1 > 0), cost: 1
+  11: f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=0, (arg2P2 > 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0), cost: 1
+  13: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=1, (1+arg2P5 > 0 /\ arg1 == 0 /\ 1+arg2P5-arg2 <= 0), cost: 1
+  14: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P6, arg1'=0, (-2+arg1 == 0 /\ 1+arg2P6 > 0 /\ 1-arg2+arg2P6 <= 0), cost: 1
+  15: f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P7, arg1'=2, (-2+arg2P7 > 0 /\ -2+arg2P7-arg2 <= 0 /\ -1+arg1 == 0), cost: 1
+  17: f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, -2+arg1 >= 0, cost: -1+arg1
+   8: __init -> f1_0_main_Load : arg2'=arg2P8, arg1'=arg1P8, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=0, (arg2P2 > 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0), cost: 1
+Second rule:
+f274_0_growReduce_NONNULL -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=1, (1+arg2P5 > 0 /\ arg1 == 0 /\ 1+arg2P5-arg2 <= 0), cost: 1
+New rule:
+f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=1, (1+arg2P5 > 0 /\ arg1 > 0 /\ 1+arg2P5-arg2 <= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 13 14 15
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P3, arg1'=arg1P3, (1+arg1P3 > 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f117_0_createList_LE -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, -2+arg1 >= 0, cost: -1+arg1
+New rule:
+f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, (-2+arg1P3 >= 0 /\ arg2 > 0 /\ arg1 > 0), cost: arg1P3
+
+Applied deletion
+Removed the following rules: 17
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   3: f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P3, arg1'=arg1P3, (1+arg1P3 > 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+   9: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P0, arg1'=arg1P0, (arg1P0-arg1 <= 0 /\ arg2 > 0 /\ arg1P0 > 0 /\ -2+arg2P0 > 0), cost: 1
+  10: f1_0_main_Load -> f182_0_main_InvokeMethod : arg2'=arg2P1, arg1'=arg1P1, (-arg1+arg1P1 <= 0 /\ arg2 > 0 /\ -1+arg2P1 > 0 /\ -1+arg2P1-arg1 <= 0 /\ arg1P1 > 0), cost: 1
+  19: f1_0_main_Load -> f117_0_createList_LE : arg2'=arg2P4, arg1'=1, (-2+arg1P3 >= 0 /\ arg2 > 0 /\ arg1 > 0), cost: arg1P3
+  11: f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P2, arg1'=0, (arg2P2 > 0 /\ arg2P2-arg2 <= 0 /\ arg1 > 0), cost: 1
+  18: f182_0_main_InvokeMethod -> f274_0_growReduce_NONNULL : arg2'=arg2P5, arg1'=1, (1+arg2P5 > 0 /\ arg1 > 0 /\ 1+arg2P5-arg2 <= 0), cost: 2
+   8: __init -> f1_0_main_Load : arg2'=arg2P8, arg1'=arg1P8, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

@@ -1,0 +1,112 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: l2
+   0: l0 -> l1 : x^0'=x^post0, (1-x^0+x^post0 == 0 /\ 1-x^0 <= 0), cost: 1
+   1: l1 -> l0 : x^0'=x^post1, -x^post1+x^0 == 0, cost: 1
+   2: l2 -> l0 : x^0'=x^post2, -x^post2+x^0 == 0, cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : x^0'=x^post0, (1-x^0+x^post0 == 0 /\ 1-x^0 <= 0), cost: 1
+New rule:
+l0 -> l1 : x^0'=-1+x^0, -1+x^0 >= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : x^0'=x^post1, -x^post1+x^0 == 0, cost: 1
+New rule:
+l1 -> l0 : TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l0 : x^0'=x^post2, -x^post2+x^0 == 0, cost: 1
+New rule:
+l2 -> l0 : TRUE, cost: 1
+
+Simplified rules
+Start location: l2
+   3: l0 -> l1 : x^0'=-1+x^0, -1+x^0 >= 0, cost: 1
+   4: l1 -> l0 : TRUE, cost: 1
+   5: l2 -> l0 : TRUE, cost: 1
+
+
+Eliminating location l1 by chaining:
+
+Applied chaining
+First rule:
+l0 -> l1 : x^0'=-1+x^0, -1+x^0 >= 0, cost: 1
+Second rule:
+l1 -> l0 : TRUE, cost: 1
+New rule:
+l0 -> l0 : x^0'=-1+x^0, -1+x^0 >= 0, cost: 2
+
+Applied deletion
+Removed the following rules: 3 4
+
+Eliminated locations on linear paths
+Start location: l2
+   6: l0 -> l0 : x^0'=-1+x^0, -1+x^0 >= 0, cost: 2
+   5: l2 -> l0 : TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+l0 -> l0 : x^0'=-1+x^0, -1+x^0 >= 0, cost: 2
+New rule:
+l0 -> l0 : x^0'=x^0-n, (n >= 0 /\ x^0-n >= 0), cost: 2*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_NjDhDj.txt
+
+Applied instantiation
+Original rule:
+l0 -> l0 : x^0'=x^0-n, (n >= 0 /\ x^0-n >= 0), cost: 2*n
+New rule:
+l0 -> l0 : x^0'=0, (0 >= 0 /\ x^0 >= 0), cost: 2*x^0
+
+Applied simplification
+Original rule:
+l0 -> l0 : x^0'=0, (0 >= 0 /\ x^0 >= 0), cost: 2*x^0
+New rule:
+l0 -> l0 : x^0'=0, x^0 >= 0, cost: 2*x^0
+
+Applied deletion
+Removed the following rules: 6
+
+Accelerated simple loops
+Start location: l2
+   8: l0 -> l0 : x^0'=0, x^0 >= 0, cost: 2*x^0
+   5: l2 -> l0 : TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+l2 -> l0 : TRUE, cost: 1
+Second rule:
+l0 -> l0 : x^0'=0, x^0 >= 0, cost: 2*x^0
+New rule:
+l2 -> l0 : x^0'=0, x^0 >= 0, cost: 1+2*x^0
+
+Applied deletion
+Removed the following rules: 8
+
+Chained accelerated rules with incoming rules
+Start location: l2
+   5: l2 -> l0 : TRUE, cost: 1
+   9: l2 -> l0 : x^0'=0, x^0 >= 0, cost: 1+2*x^0
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l2
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

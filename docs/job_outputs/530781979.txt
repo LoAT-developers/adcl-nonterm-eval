@@ -1,0 +1,131 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l3, true>
+<l1, l2, (undef2 > ~(1)) /\ (arg2 > ~(1)) /\ (undef1 > ~(1)) /\ (arg1 > 0), par{arg1 -> undef1, arg2 -> undef2}>
+<l2, l2, (arg2 > 0), par{arg1 -> (arg2 - 1), arg2 -> arg1}>
+<l3, l1, true, par{arg1 -> undef5, arg2 -> undef6}>
+
+Fresh variables:
+undef1, undef2, undef5, undef6, 
+
+Undef variables:
+undef1, undef2, undef5, undef6, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (arg1 = undef1) /\ (arg2 = undef2) /\ (undef2 > ~(1)) /\ (undef6 > ~(1)) /\ (undef1 > ~(1)) /\ (undef5 > 0)>
+<l2, l2, (arg2 > 0), par{arg1 -> (arg2 - 1), arg2 -> arg1}>
+
+Fresh variables:
+undef1, undef2, undef5, undef6, 
+
+Undef variables:
+undef1, undef2, undef5, undef6, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 <= arg2, {arg1 -> -1 + arg2, arg2 -> arg1, rest remain the same}>
+Variables:
+arg1, arg2
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, 1 <= undef5 /\ 0 <= undef1 /\ 0 <= undef2 /\ 0 <= undef6 /\ arg1 = undef1 /\ arg2 = undef2, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002392
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000530s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001539s
+Trying to remove transition: <l2, l2, 1 <= arg2, {arg1 -> -1 + arg2, arg2 -> arg1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006046s
+Time used: 0.005897
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008328s
+Time used: 0.008071
+
+LOG: SAT solveNonLinear - Elapsed time: 0.008328s
+Cost: 0; Total time: 0.008071
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= arg1[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 <= arg2 /\ 0 <= arg1, {arg1 -> -1 + arg2, arg2 -> arg1, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 <= arg2 /\ 0 <= arg1, {arg1 -> -1 + arg2, arg2 -> arg1, rest remain the same}>
+[33mRanking function: [36marg1 + arg2[0m
+New Graphs: 
+INVARIANTS: 
+2: 0 <= arg1 , 
+Quasi-INVARIANTS to narrow Graph: 
+2: 
+[32mProgram Terminates[0m

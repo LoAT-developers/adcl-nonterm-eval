@@ -1,0 +1,681 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=arg3P0, (arg2 > 0 /\ arg2-arg2P0 == 0 /\ arg1 > 0 /\ 1+arg1P0 > 0 /\ 1-arg3P0 == 0), cost: 1
+   1: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+   2: f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (1+x110 > 0 /\ arg2 > 0 /\ arg2P2 > 0 /\ arg1 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+   5: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg6'=arg6P5, arg3'=arg3P5, (1+arg4P5 > 0 /\ -1+arg1-arg2P5 == 0 /\ 1+arg2 > 0 /\ -arg1P5+arg1 == 0 /\ arg1 > 0 /\ 1-arg6P5+arg3 == 0 /\ arg2-arg5P5 == 0 /\ arg3 > 0 /\ -arg3P5 == 0 /\ -arg2+arg3 < 0), cost: 1
+   9: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ arg1 > 0 /\ 1+arg1P9 > 0), cost: 1
+   4: f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ x170 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+   3: f394_0_createTree_Return -> f1098_0_main_InvokeMethod : arg5'=arg5P3, arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg6'=arg6P3, arg3'=arg3P3, (arg2-arg3P3 == 0 /\ -1+arg2P3-arg1 <= 0 /\ -arg1+arg1P3 <= 0 /\ arg1 > 0 /\ -1+arg2P3 > 0 /\ arg1P3 > 0), cost: 1
+   6: f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, (arg2-arg1 < 0 /\ arg5-arg2P6 == 0 /\ -1+arg2-arg1P6 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ -1 < 0 /\ arg6-arg3P6 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+   7: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg5'=arg5P7, arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg6'=arg6P7, arg3'=arg3P7, (arg2-arg1 < 0 /\ -arg6P7+arg6 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1 > 0 /\ -arg1P7+arg1 == 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ 1-arg3P7+arg3 == 0 /\ arg4-arg4P7 == 0 /\ -1 < 0 /\ arg2-arg2P7 == 0 /\ arg5-arg5P7 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+   8: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg6'=arg6P8, arg3'=arg3P8, (arg2-arg1 < 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1-arg3P8+arg3 == 0 /\ -arg1P8+arg1 == 0 /\ arg1 > 0 /\ arg2-arg2P8 == 0 /\ arg4-arg4P8 == 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ -1 < 0 /\ -arg5P8+arg5 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+  10: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+  11: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg3P11, (-arg3P11+arg2 == 0 /\ 2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ -3+arg1 > 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+  12: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg3P12, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ arg1 > 0 /\ -arg3P12+arg2 == 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+  13: f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg2P13+arg3 == 0 /\ arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0 /\ 1+arg4 > 0), cost: 1
+  14: __init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: __init
+   0: f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=arg3P0, (arg2 > 0 /\ arg2-arg2P0 == 0 /\ arg1 > 0 /\ 1+arg1P0 > 0 /\ 1-arg3P0 == 0), cost: 1
+   1: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+   2: f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (1+x110 > 0 /\ arg2 > 0 /\ arg2P2 > 0 /\ arg1 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+   5: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg6'=arg6P5, arg3'=arg3P5, (1+arg4P5 > 0 /\ -1+arg1-arg2P5 == 0 /\ 1+arg2 > 0 /\ -arg1P5+arg1 == 0 /\ arg1 > 0 /\ 1-arg6P5+arg3 == 0 /\ arg2-arg5P5 == 0 /\ arg3 > 0 /\ -arg3P5 == 0 /\ -arg2+arg3 < 0), cost: 1
+   9: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ arg1 > 0 /\ 1+arg1P9 > 0), cost: 1
+   4: f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ x170 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+   6: f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, (arg2-arg1 < 0 /\ arg5-arg2P6 == 0 /\ -1+arg2-arg1P6 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ -1 < 0 /\ arg6-arg3P6 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+   7: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg5'=arg5P7, arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg6'=arg6P7, arg3'=arg3P7, (arg2-arg1 < 0 /\ -arg6P7+arg6 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1 > 0 /\ -arg1P7+arg1 == 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ 1-arg3P7+arg3 == 0 /\ arg4-arg4P7 == 0 /\ -1 < 0 /\ arg2-arg2P7 == 0 /\ arg5-arg5P7 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+   8: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg6'=arg6P8, arg3'=arg3P8, (arg2-arg1 < 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1-arg3P8+arg3 == 0 /\ -arg1P8+arg1 == 0 /\ arg1 > 0 /\ arg2-arg2P8 == 0 /\ arg4-arg4P8 == 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ -1 < 0 /\ -arg5P8+arg5 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+  10: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+  11: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg3P11, (-arg3P11+arg2 == 0 /\ 2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ -3+arg1 > 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+  12: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg3P12, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ arg1 > 0 /\ -arg3P12+arg2 == 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+  13: f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg2P13+arg3 == 0 /\ arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0 /\ 1+arg4 > 0), cost: 1
+  14: __init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=arg3P0, (arg2 > 0 /\ arg2-arg2P0 == 0 /\ arg1 > 0 /\ 1+arg1P0 > 0 /\ 1-arg3P0 == 0), cost: 1
+New rule:
+f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (1+x110 > 0 /\ arg2 > 0 /\ arg2P2 > 0 /\ arg1 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+New rule:
+f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ x170 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+New rule:
+f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg6'=arg6P5, arg3'=arg3P5, (1+arg4P5 > 0 /\ -1+arg1-arg2P5 == 0 /\ 1+arg2 > 0 /\ -arg1P5+arg1 == 0 /\ arg1 > 0 /\ 1-arg6P5+arg3 == 0 /\ arg2-arg5P5 == 0 /\ arg3 > 0 /\ -arg3P5 == 0 /\ -arg2+arg3 < 0), cost: 1
+New rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, (arg2-arg1 < 0 /\ arg5-arg2P6 == 0 /\ -1+arg2-arg1P6 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ -1 < 0 /\ arg6-arg3P6 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+New rule:
+f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg5, arg4'=arg4P6, arg1'=-1+arg2, arg6'=arg6P6, arg3'=arg6, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg5'=arg5P7, arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg6'=arg6P7, arg3'=arg3P7, (arg2-arg1 < 0 /\ -arg6P7+arg6 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1 > 0 /\ -arg1P7+arg1 == 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ 1-arg3P7+arg3 == 0 /\ arg4-arg4P7 == 0 /\ -1 < 0 /\ arg2-arg2P7 == 0 /\ arg5-arg5P7 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=1+arg3, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg6'=arg6P8, arg3'=arg3P8, (arg2-arg1 < 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1-arg3P8+arg3 == 0 /\ -arg1P8+arg1 == 0 /\ arg1 > 0 /\ arg2-arg2P8 == 0 /\ arg4-arg4P8 == 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0 /\ -1 < 0 /\ -arg5P8+arg5 == 0 /\ -1+arg2-arg1 < 0), cost: 1
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=1+arg3, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ arg1 > 0 /\ 1+arg1P9 > 0), cost: 1
+New rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+New rule:
+f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg3P11, (-arg3P11+arg2 == 0 /\ 2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ -3+arg1 > 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+New rule:
+f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg2, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg3P12, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ arg1 > 0 /\ -arg3P12+arg2 == 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+New rule:
+f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg2, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg2P13+arg3 == 0 /\ arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0 /\ 1+arg4 > 0), cost: 1
+New rule:
+f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+
+Simplified rules
+Start location: __init
+  15: f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+  16: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0), cost: 1
+  17: f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+  19: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  18: f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+  20: f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg5, arg4'=arg4P6, arg1'=-1+arg2, arg6'=arg6P6, arg3'=arg6, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+  21: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=1+arg3, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+  22: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=1+arg3, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  25: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg2, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+  26: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg2, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+  27: f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+  14: __init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=1+arg3, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=n+arg3, (1+arg4-n-arg3 > 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ n >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_AgbAkl.txt
+
+Applied instantiation
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=n+arg3, (1+arg4-n-arg3 > 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ n >= 0), cost: n
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=arg4, (1 > 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 >= 0), cost: arg4-arg3
+
+Applied acceleration
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=1+arg3, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=n0+arg3, (-1+arg6P8 > 0 /\ -1+n0 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ 1-n0+arg4-arg3 > 0), cost: n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_MCIChO.txt
+
+Applied instantiation
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=n0+arg3, (-1+arg6P8 > 0 /\ -1+n0 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ 1-n0+arg4-arg3 > 0), cost: n0
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=arg4, (1 > 0 /\ -1+arg6P8 > 0 /\ -1+arg4-arg3 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0), cost: arg4-arg3
+
+Applied simplification
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=arg4, (1 > 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 >= 0), cost: arg4-arg3
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=arg4, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 >= 0), cost: arg4-arg3
+
+Applied simplification
+Original rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=arg4, (1 > 0 /\ -1+arg6P8 > 0 /\ -1+arg4-arg3 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0), cost: arg4-arg3
+New rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=arg4, (-1+arg6P8 > 0 /\ -1+arg4-arg3 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0), cost: arg4-arg3
+
+Applied deletion
+Removed the following rules: 21 22
+
+Accelerated simple loops
+Start location: __init
+  15: f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+  16: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0), cost: 1
+  17: f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+  19: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  18: f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+  20: f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg5, arg4'=arg4P6, arg1'=-1+arg2, arg6'=arg6P6, arg3'=arg6, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+  30: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=arg4, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 >= 0), cost: arg4-arg3
+  31: f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=arg4, (-1+arg6P8 > 0 /\ -1+arg4-arg3 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0), cost: arg4-arg3
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  25: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg2, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+  26: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg2, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+  27: f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+  14: __init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+Second rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg3'=arg4, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 >= 0), cost: arg4-arg3
+New rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=arg4P5, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1+arg4P5
+
+Applied chaining
+First rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+Second rule:
+f1081_0_createTree_GE -> f1081_0_createTree_GE : arg6'=arg6P8, arg3'=arg4, (-1+arg6P8 > 0 /\ -1+arg4-arg3 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0), cost: arg4-arg3
+New rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=arg6P8, arg3'=arg4P5, (-1+arg6P8 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0 /\ -1+arg4P5 >= 0), cost: 1+arg4P5
+
+Applied deletion
+Removed the following rules: 30 31
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  15: f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+  16: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0), cost: 1
+  17: f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+  19: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+  32: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=arg4P5, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1+arg4P5
+  33: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=arg6P8, arg3'=arg4P5, (-1+arg6P8 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0 /\ -1+arg4P5 >= 0), cost: 1+arg4P5
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  18: f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+  20: f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg5, arg4'=arg4P6, arg1'=-1+arg2, arg6'=arg6P6, arg3'=arg6, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  25: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg2, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+  26: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg2, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+  27: f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+  14: __init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+
+
+Eliminating location f1098_0_main_InvokeMethod by chaining:
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f1098_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 1
+Second rule:
+f1098_0_main_InvokeMethod -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg1P4 > 0 /\ -1+arg3 > 0 /\ arg1 > 0 /\ -arg2+arg1P4 <= 0), cost: 1
+New rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 2
+
+Applied simplification
+Original rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg2P2 > 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 2
+New rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 17 18
+
+Eliminated locations on linear paths
+Start location: __init
+  15: f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+  16: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0), cost: 1
+  34: f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 2
+  19: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+  32: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=arg4P5, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1+arg4P5
+  33: f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=arg6P8, arg3'=arg4P5, (-1+arg6P8 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0 /\ -1+arg4P5 >= 0), cost: 1+arg4P5
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  20: f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg5, arg4'=arg4P6, arg1'=-1+arg2, arg6'=arg6P6, arg3'=arg6, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  25: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg2, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+  26: f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg2, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+  27: f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+  14: __init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f577_0_createTree_GT : arg5'=arg5P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+New rule:
+__init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1+arg1P1-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P1 > 0), cost: 1
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg5'=arg5P14, arg2'=arg2P14, arg4'=arg4P14, arg1'=arg1P14, arg6'=arg6P14, arg3'=arg3P14, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (arg2 > 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0 /\ -arg1+arg1P2 <= 0), cost: 2
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+Applied deletion
+Removed the following rules: 14 15 16 34
+
+Eliminating location f1081_0_createTree_GE by chaining:
+
+Applied chaining
+First rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=0, (1+arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1
+Second rule:
+f1081_0_createTree_GE -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg5, arg4'=arg4P6, arg1'=-1+arg2, arg6'=arg6P6, arg3'=arg6, (1+arg2 > 0 /\ arg4 > 0 /\ -arg2+arg1 > 0 /\ -1+arg6 > 0 /\ arg4-arg3 > 0), cost: 1
+New rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (1+arg4P5 > 0 /\ 1 > 0 /\ arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (1+arg4P5 > 0 /\ 1 > 0 /\ arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+New rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+
+Applied partial deletion
+Original rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=1+arg3, arg3'=arg4P5, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1+arg4P5
+New rule:
+f577_0_createTree_GT -> [10] : (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1+arg4P5
+
+Applied partial deletion
+Original rule:
+f577_0_createTree_GT -> f1081_0_createTree_GE : arg5'=arg2, arg2'=-1+arg1, arg4'=arg4P5, arg6'=arg6P8, arg3'=arg4P5, (-1+arg6P8 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0 /\ -1+arg4P5 >= 0), cost: 1+arg4P5
+New rule:
+f577_0_createTree_GT -> [10] : (-1+arg6P8 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0 /\ -1+arg4P5 >= 0), cost: 1+arg4P5
+
+Applied deletion
+Removed the following rules: 19 20 32 33
+
+Eliminating location f1349_0_dupList_InvokeMethod by chaining:
+
+Applied chaining
+First rule:
+f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P11, arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg6'=arg6P11, arg3'=arg2, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 1+arg4P11 > 0 /\ -5+arg1P11 > 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 1
+Second rule:
+f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+New rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ 1+arg4P11 > 0 /\ -4+arg1P11 > 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ 1+arg4P11 > 0 /\ -4+arg1P11 > 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0 /\ 1+arg2P11 > 0), cost: 2
+New rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0), cost: 2
+
+Applied chaining
+First rule:
+f1152_0_dupList_NONNULL -> f1349_0_dupList_InvokeMethod : arg5'=arg5P12, arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg6'=arg6P12, arg3'=arg2, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -10+arg1P12 > 0 /\ 1-arg1+arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 1
+Second rule:
+f1349_0_dupList_InvokeMethod -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg3, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (arg1P13-arg4 <= 0 /\ -4+arg1 > 0 /\ 4+arg1P13-arg1 <= 0 /\ 1+arg1P13 > 0 /\ -arg2+arg1P13 <= 0), cost: 1
+New rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ -4+arg1P12 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+
+Applied simplification
+Original rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg2P12 > 0 /\ 1+arg4P12 > 0 /\ -arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ -4+arg1P12 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+New rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 25 26 27
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  38: f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+  39: f577_0_createTree_GT -> [10] : (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 1+arg4P5
+  40: f577_0_createTree_GT -> [10] : (-1+arg6P8 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0 /\ -1+arg4P5 >= 0), cost: 1+arg4P5
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  41: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0), cost: 2
+  42: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+  35: __init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Applied pruning (of leafs and parallel rules):
+Start location: __init
+  38: f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  41: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0), cost: 2
+  42: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+  35: __init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Applied simplification
+Original rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg4P5 > 0 /\ arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+New rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+
+Simplified simple loops
+Start location: __init
+  43: f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  41: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0), cost: 2
+  42: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+  35: __init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Applied acceleration
+Original rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2+arg1, arg6'=arg6P6, arg3'=1+arg3, (arg1 > 0 /\ arg2-arg3 > 0 /\ arg3 > 0), cost: 2
+New rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=arg1-2*n5, arg6'=arg6P6, arg3'=n5+arg3, (2+arg1-2*n5 > 0 /\ -1+n5 >= 0 /\ arg3 > 0 /\ 1+arg2-n5-arg3 > 0), cost: 2*n5
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_AIflEm.txt
+
+Applied instantiation
+Original rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=arg1-2*n5, arg6'=arg6P6, arg3'=n5+arg3, (2+arg1-2*n5 > 0 /\ -1+n5 >= 0 /\ arg3 > 0 /\ 1+arg2-n5-arg3 > 0), cost: 2*n5
+New rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2*arg2+arg1+2*arg3, arg6'=arg6P6, arg3'=arg2, (1 > 0 /\ -1+arg2-arg3 >= 0 /\ 2-2*arg2+arg1+2*arg3 > 0 /\ arg3 > 0), cost: 2*arg2-2*arg3
+
+Applied simplification
+Original rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2*arg2+arg1+2*arg3, arg6'=arg6P6, arg3'=arg2, (1 > 0 /\ -1+arg2-arg3 >= 0 /\ 2-2*arg2+arg1+2*arg3 > 0 /\ arg3 > 0), cost: 2*arg2-2*arg3
+New rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2*arg2+arg1+2*arg3, arg6'=arg6P6, arg3'=arg2, (-1+arg2-arg3 >= 0 /\ 2-2*arg2+arg1+2*arg3 > 0 /\ arg3 > 0), cost: 2*arg2-2*arg3
+
+Applied deletion
+Removed the following rules: 43
+
+Applied simplification
+Original rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (2-arg1+arg2P11 <= 0 /\ 2+arg4P11-arg1 <= 0 /\ 4+arg1P13-arg1P11 <= 0 /\ -5+arg1P11 > 0 /\ arg1P13-arg2P11 <= 0 /\ 1+arg1P13 > 0 /\ -arg4P11+arg1P13 <= 0 /\ -2+arg1P11-arg1 <= 0), cost: 2
+New rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-4+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 2
+
+Applied simplification
+Original rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-arg4P12+arg1P13 <= 0 /\ -10+arg1P12 > 0 /\ 1+arg1P13 > 0 /\ 4+arg1P13-arg1P12 <= 0 /\ 1-arg1+arg2P12 <= 0 /\ arg1P13-arg2P12 <= 0 /\ 1+arg4P12-arg1 <= 0), cost: 2
+New rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 1+arg1P13-arg1 <= 0), cost: 2
+
+Simplified simple loops
+Start location: __init
+  45: f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2*arg2+arg1+2*arg3, arg6'=arg6P6, arg3'=arg2, (-1+arg2-arg3 >= 0 /\ 2-2*arg2+arg1+2*arg3 > 0 /\ arg3 > 0), cost: 2*arg2-2*arg3
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  46: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-4+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 2
+  47: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 1+arg1P13-arg1 <= 0), cost: 2
+  35: __init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Accelerated simple loops
+Start location: __init
+  45: f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2*arg2+arg1+2*arg3, arg6'=arg6P6, arg3'=arg2, (-1+arg2-arg3 >= 0 /\ 2-2*arg2+arg1+2*arg3 > 0 /\ arg3 > 0), cost: 2*arg2-2*arg3
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  46: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-4+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 2
+  47: f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 1+arg1P13-arg1 <= 0), cost: 2
+  35: __init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Applied chaining
+First rule:
+__init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+Second rule:
+f577_0_createTree_GT -> f577_0_createTree_GT : arg5'=arg5P6, arg4'=arg4P6, arg1'=-2*arg2+arg1+2*arg3, arg6'=arg6P6, arg3'=arg2, (-1+arg2-arg3 >= 0 /\ 2-2*arg2+arg1+2*arg3 > 0 /\ arg3 > 0), cost: 2*arg2-2*arg3
+New rule:
+__init -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2P14, arg4'=arg4P6, arg1'=2+arg1P0-2*arg2P14, arg6'=arg6P6, arg3'=arg2P14, (4+arg1P0-2*arg2P14 > 0 /\ -2+arg2P14 >= 0), cost: 2*arg2P14
+
+Applied deletion
+Removed the following rules: 45
+
+Applied chaining
+First rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+Second rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-4+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 2
+New rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-5+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 3
+
+Applied chaining
+First rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+Second rule:
+f1152_0_dupList_NONNULL -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 1+arg1P13-arg1 <= 0), cost: 2
+New rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 3
+
+Applied deletion
+Removed the following rules: 46 47
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  49: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-5+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 3
+  50: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 3
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  35: __init -> f577_0_createTree_GT : arg5'=arg5P0, arg2'=arg2P14, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=1, (arg1P14 > 0 /\ arg2P14 > 0 /\ 1+arg1P0 > 0), cost: 2
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+  48: __init -> f577_0_createTree_GT : arg5'=arg5P6, arg2'=arg2P14, arg4'=arg4P6, arg1'=2+arg1P0-2*arg2P14, arg6'=arg6P6, arg3'=arg2P14, (4+arg1P0-2*arg2P14 > 0 /\ -2+arg2P14 >= 0), cost: 2*arg2P14
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  23: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+  49: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-5+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 3
+  50: f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 3
+  24: f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Eliminating location f1152_0_dupList_NONNULL by chaining:
+
+Applied chaining
+First rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P9, arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg6'=arg6P9, arg3'=arg3P9, (1-arg1+arg1P9 <= 0 /\ 1+arg1P9 > 0), cost: 1
+Second rule:
+f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P9 <= 0 /\ 1+arg1P10-arg1P9 <= 0 /\ 1+arg1P10 > 0 /\ 1+arg1P9 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P9 <= 0 /\ 1+arg1P10-arg1P9 <= 0 /\ 1+arg1P10 > 0 /\ 1+arg1P9 > 0), cost: 2
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P9 <= 0 /\ 1+arg1P10-arg1P9 <= 0 /\ 1+arg1P10 > 0), cost: 2
+
+Applied chaining
+First rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (-5+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 3
+Second rule:
+f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ -5+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 1+arg1P10 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 4
+
+Applied simplification
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ -5+arg1 >= 0 /\ 1+arg1P13 > 0 /\ 1+arg1P10 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 4
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ -5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 4
+
+Applied chaining
+First rule:
+f1116_0_dupTree_FieldAccess -> f1152_0_dupList_NONNULL : arg5'=arg5P13, arg2'=arg2P9, arg4'=arg4P13, arg1'=arg1P13, arg6'=arg6P13, arg3'=arg3P13, (1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0), cost: 3
+Second rule:
+f1152_0_dupList_NONNULL -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 1
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ 1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0 /\ 1+arg1P10 > 0), cost: 4
+
+Applied simplification
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ 1+arg1P13 > 0 /\ 2+arg1P13-arg1 <= 0 /\ 1+arg1P10 > 0), cost: 4
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ 2+arg1P13-arg1 <= 0 /\ 1+arg1P10 > 0), cost: 4
+
+Applied deletion
+Removed the following rules: 23 24 49 50
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  51: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P9 <= 0 /\ 1+arg1P10-arg1P9 <= 0 /\ 1+arg1P10 > 0), cost: 2
+  52: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ -5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 4
+  53: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ 2+arg1P13-arg1 <= 0 /\ 1+arg1P10 > 0), cost: 4
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Applied simplification
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1+arg1P9 <= 0 /\ 1+arg1P10-arg1P9 <= 0 /\ 1+arg1P10 > 0), cost: 2
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (2-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ -5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 3+arg1P13-arg1 <= 0), cost: 4
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (-5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 4-arg1+arg1P10 <= 0), cost: 4
+
+Applied simplification
+Original rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (1-arg1P13+arg1P10 <= 0 /\ 2+arg1P13-arg1 <= 0 /\ 1+arg1P10 > 0), cost: 4
+New rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (3-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 4
+
+Simplified simple loops
+Start location: __init
+  54: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (2-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 2
+  55: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (-5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 4-arg1+arg1P10 <= 0), cost: 4
+  56: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (3-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 4
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Accelerated simple loops
+Start location: __init
+  54: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (2-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 2
+  55: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (-5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 4-arg1+arg1P10 <= 0), cost: 4
+  56: f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (3-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 4
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+
+
+Applied chaining
+First rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+Second rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (2-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 2
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 4
+
+Applied chaining
+First rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+Second rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (2-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 2
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 5
+
+Applied chaining
+First rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+Second rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (-5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 4-arg1+arg1P10 <= 0), cost: 4
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 6
+
+Applied chaining
+First rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+Second rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (-5+arg1 >= 0 /\ 1+arg1P10 > 0 /\ 4-arg1+arg1P10 <= 0), cost: 4
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 7
+
+Applied chaining
+First rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+Second rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (3-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 4
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 6
+
+Applied chaining
+First rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+Second rule:
+f1116_0_dupTree_FieldAccess -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, (3-arg1+arg1P10 <= 0 /\ 1+arg1P10 > 0), cost: 4
+New rule:
+__init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 7
+
+Applied deletion
+Removed the following rules: 54 55 56
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  36: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (arg2P14 > 0 /\ 1+arg1P1-arg1P14 <= 0 /\ 1+arg1P1 > 0), cost: 2
+  37: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (-arg1P14+arg1P2 <= 0 /\ arg1P4 > 0 /\ -arg2P2+arg1P4 <= 0 /\ arg2P14 > 0 /\ -1+arg3P2 > 0 /\ arg1P2 > 0), cost: 3
+  57: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 4
+  58: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 5
+  59: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 6
+  60: __init -> f1116_0_dupTree_FieldAccess : arg5'=arg5P10, arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg6'=arg6P10, arg3'=arg3P10, 1+arg1P10 > 0, cost: 7
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

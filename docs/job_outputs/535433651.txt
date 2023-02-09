@@ -1,0 +1,204 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+   1: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=arg1P1, (-1+arg1-arg1P1 == 0 /\ arg1 > 0 /\ -1 < 0), cost: 1
+   2: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=arg1P2, (1-arg1P2 == 0 /\ 1-arg1 == 0), cost: 1
+   4: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1'=arg1P4, (arg1-arg1P4 == 0 /\ arg1 > 0 /\ -1 < 0), cost: 1
+   3: f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=arg1P3, (-arg1P3 == 0 /\ arg1 > 0), cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=arg1P1, (-1+arg1-arg1P1 == 0 /\ arg1 > 0 /\ -1 < 0), cost: 1
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=-1+arg1, arg1 > 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=arg1P2, (1-arg1P2 == 0 /\ 1-arg1 == 0), cost: 1
+New rule:
+f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=1, -1+arg1 == 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=arg1P3, (-arg1P3 == 0 /\ arg1 > 0), cost: 1
+New rule:
+f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1'=arg1P4, (arg1-arg1P4 == 0 /\ arg1 > 0 /\ -1 < 0), cost: 1
+New rule:
+f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1 > 0, cost: 1
+
+Simplified rules
+Start location: __init
+   0: f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+   6: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=-1+arg1, arg1 > 0, cost: 1
+   7: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=1, -1+arg1 == 0, cost: 1
+   9: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1 > 0, cost: 1
+   8: f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=-1+arg1, arg1 > 0, cost: 1
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=arg1-n, (1+arg1-n > 0 /\ -1+n >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_ceidNE.txt
+
+Applied instantiation
+Original rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=arg1-n, (1+arg1-n > 0 /\ -1+n >= 0), cost: n
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (1 > 0 /\ -1+arg1 >= 0), cost: arg1
+
+Applied simplification
+Original rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (1 > 0 /\ -1+arg1 >= 0), cost: arg1
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, -1+arg1 >= 0, cost: arg1
+
+Applied deletion
+Removed the following rules: 6
+
+Accelerated simple loops
+Start location: __init
+   0: f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+   7: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=1, -1+arg1 == 0, cost: 1
+   9: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1 > 0, cost: 1
+  11: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, -1+arg1 >= 0, cost: arg1
+   8: f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+Second rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, -1+arg1 >= 0, cost: arg1
+New rule:
+f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2 > 0 /\ -1+arg1P0 >= 0 /\ arg1 > 0), cost: 1+arg1P0
+
+Applied deletion
+Removed the following rules: 11
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   0: f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+  12: f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2 > 0 /\ -1+arg1P0 >= 0 /\ arg1 > 0), cost: 1+arg1P0
+   7: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=1, -1+arg1 == 0, cost: 1
+   9: f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1 > 0, cost: 1
+   8: f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+New rule:
+__init -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2P5 > 0 /\ arg1P5 > 0 /\ 1+arg1P0 > 0), cost: 2
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2 > 0 /\ -1+arg1P0 >= 0 /\ arg1 > 0), cost: 1+arg1P0
+New rule:
+__init -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2P5 > 0 /\ -1+arg1P0 >= 0 /\ arg1P5 > 0), cost: 2+arg1P0
+
+Applied deletion
+Removed the following rules: 0 5 12
+
+Eliminating location f115_0_nest_InvokeMethod by chaining:
+
+Applied chaining
+First rule:
+f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P2, arg1'=1, -1+arg1 == 0, cost: 1
+Second rule:
+f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 1
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, (1 > 0 /\ -1+arg1 == 0), cost: 2
+
+Applied simplification
+Original rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, (1 > 0 /\ -1+arg1 == 0), cost: 2
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, -1+arg1 == 0, cost: 2
+
+Applied chaining
+First rule:
+f66_0_nest_NE -> f115_0_nest_InvokeMethod : arg2'=arg2P4, arg1 > 0, cost: 1
+Second rule:
+f115_0_nest_InvokeMethod -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 1
+New rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 2
+
+Applied deletion
+Removed the following rules: 7 8 9
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  15: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, -1+arg1 == 0, cost: 2
+  16: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 2
+  13: __init -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2P5 > 0 /\ arg1P5 > 0 /\ 1+arg1P0 > 0), cost: 2
+  14: __init -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2P5 > 0 /\ -1+arg1P0 >= 0 /\ arg1P5 > 0), cost: 2+arg1P0
+
+
+Accelerated simple loops
+Start location: __init
+  15: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, -1+arg1 == 0, cost: 2
+  16: f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 2
+  13: __init -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2P5 > 0 /\ arg1P5 > 0 /\ 1+arg1P0 > 0), cost: 2
+  14: __init -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2P5 > 0 /\ -1+arg1P0 >= 0 /\ arg1P5 > 0), cost: 2+arg1P0
+
+
+Applied chaining
+First rule:
+__init -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2P5 > 0 /\ arg1P5 > 0 /\ 1+arg1P0 > 0), cost: 2
+Second rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, -1+arg1 == 0, cost: 2
+New rule:
+__init -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, 2 > 0, cost: 4
+
+Applied chaining
+First rule:
+__init -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2P5 > 0 /\ arg1P5 > 0 /\ 1+arg1P0 > 0), cost: 2
+Second rule:
+f66_0_nest_NE -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, arg1 > 0, cost: 2
+New rule:
+__init -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, TRUE, cost: 4
+
+Applied deletion
+Removed the following rules: 15 16
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  13: __init -> f66_0_nest_NE : arg2'=arg2P0, arg1'=arg1P0, (arg2P5 > 0 /\ arg1P5 > 0 /\ 1+arg1P0 > 0), cost: 2
+  14: __init -> f66_0_nest_NE : arg2'=arg2P1, arg1'=0, (arg2P5 > 0 /\ -1+arg1P0 >= 0 /\ arg1P5 > 0), cost: 2+arg1P0
+  17: __init -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, 2 > 0, cost: 4
+  18: __init -> f66_0_nest_NE : arg2'=arg2P3, arg1'=0, TRUE, cost: 4
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

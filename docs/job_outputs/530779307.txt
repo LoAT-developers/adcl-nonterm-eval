@@ -1,0 +1,45 @@
+NO
+
+
+Termination: (Ranking Functions Found)
+------------
+f1154_0_Ajouter_LE: < < 2 * arg2 >, < -1 + 2 * arg2 > >
+f1154_0_Ajouter_LE': < < -1 + arg2 >, < arg2 > >
+f1437_0_HeapSort_ArrayAccess: < < arg2 > >
+f809_0_HeapSort_LT: < < 1 + arg1 > >
+
+
+NON-Termination:
+----------------
+SCC:
++--transitions: t3
++--nodes: n_f229_0_main_GE___6
+Closed walk: 1 -> t3
+deterministic: Forced for: arg1P, arg1P
+Reachability checked!
+- Recurrent Set Found:
+{
+	1 + arg2 -arg3P == 0,
+	1 + arg2 -arg2P == 0,
+	-1 + arg1P == 0,
+	arg2 -arg3 == 0,
+	-1 + arg1 == 0,
+	-1 + arg2 >= 0
+}
+Connected Subgraphs where we couldn't prove Termination:
+--------------------------------------------------------
+SCC:
++--transitions: t7
++--nodes: n_f763_0_HeapSort_GE___4
+SCC:
++--transitions: 
++--nodes: n_f229_0_main_GE___7
+SCC:
++--transitions: t14,t15,t16
++--nodes: n_f1783_0_Supprimer_GE___1
+SCC:
++--transitions: 
++--nodes: n_f1783_0_Supprimer_GE___2
+
+
+method 2

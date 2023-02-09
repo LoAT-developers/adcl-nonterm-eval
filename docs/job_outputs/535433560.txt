@@ -1,0 +1,172 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P0 > 0), cost: 1
+   1: f203_0_main_NE -> f239_0_main_LE : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (arg1-arg3P1 == 0 /\ -arg2+arg1 == 0 /\ arg1-arg1P1 == 0 /\ arg1 > 0 /\ -arg2P1+arg1 == 0), cost: 1
+   2: f239_0_main_LE -> f203_0_main_NE : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, (-arg3 == 0 /\ -arg2 == 0 /\ -arg2P2 == 0 /\ -arg1P2+arg1 == 0), cost: 1
+   3: f239_0_main_LE -> f239_0_main_LE : arg2'=arg2P3, arg1'=arg1P3, arg3'=arg3P3, (arg2 > 0 /\ -1+arg2-arg3P3 == 0 /\ arg2-arg3 == 0 /\ -1-arg2P3+arg2 == 0 /\ -1-arg1P3+arg1 == 0), cost: 1
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f203_0_main_NE -> f239_0_main_LE : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (arg1-arg3P1 == 0 /\ -arg2+arg1 == 0 /\ arg1-arg1P1 == 0 /\ arg1 > 0 /\ -arg2P1+arg1 == 0), cost: 1
+New rule:
+f203_0_main_NE -> f239_0_main_LE : arg2'=arg1, arg3'=arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f239_0_main_LE -> f203_0_main_NE : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, (-arg3 == 0 /\ -arg2 == 0 /\ -arg2P2 == 0 /\ -arg1P2+arg1 == 0), cost: 1
+New rule:
+f239_0_main_LE -> f203_0_main_NE : arg2'=0, arg3'=arg3P2, (arg2 == 0 /\ arg3 == 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=arg2P3, arg1'=arg1P3, arg3'=arg3P3, (arg2 > 0 /\ -1+arg2-arg3P3 == 0 /\ arg2-arg3 == 0 /\ -1-arg2P3+arg2 == 0 /\ -1-arg1P3+arg1 == 0), cost: 1
+New rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=-1+arg2, arg1'=-1+arg1, arg3'=-1+arg2, (arg2 > 0 /\ arg2-arg3 == 0), cost: 1
+
+Simplified rules
+Start location: __init
+   0: f1_0_main_Load -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P0 > 0), cost: 1
+   5: f203_0_main_NE -> f239_0_main_LE : arg2'=arg1, arg3'=arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+   6: f239_0_main_LE -> f203_0_main_NE : arg2'=0, arg3'=arg3P2, (arg2 == 0 /\ arg3 == 0), cost: 1
+   7: f239_0_main_LE -> f239_0_main_LE : arg2'=-1+arg2, arg1'=-1+arg1, arg3'=-1+arg2, (arg2 > 0 /\ arg2-arg3 == 0), cost: 1
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=-1+arg2, arg1'=-1+arg1, arg3'=-1+arg2, (arg2 > 0 /\ arg2-arg3 == 0), cost: 1
+New rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=-n+arg2, arg1'=-n+arg1, arg3'=-n+arg2, (1-n+arg2 > 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0 /\ -1+n >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_Ngaapf.txt
+
+Applied instantiation
+Original rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=-n+arg2, arg1'=-n+arg1, arg3'=-n+arg2, (1-n+arg2 > 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0 /\ -1+n >= 0), cost: n
+New rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=0, arg1'=-arg2+arg1, arg3'=0, (1 > 0 /\ -1+arg2 >= 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0), cost: arg2
+
+Applied simplification
+Original rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=0, arg1'=-arg2+arg1, arg3'=0, (1 > 0 /\ -1+arg2 >= 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0), cost: arg2
+New rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=0, arg1'=-arg2+arg1, arg3'=0, (-1+arg2 >= 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0), cost: arg2
+
+Applied deletion
+Removed the following rules: 7
+
+Accelerated simple loops
+Start location: __init
+   0: f1_0_main_Load -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P0 > 0), cost: 1
+   5: f203_0_main_NE -> f239_0_main_LE : arg2'=arg1, arg3'=arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+   6: f239_0_main_LE -> f203_0_main_NE : arg2'=0, arg3'=arg3P2, (arg2 == 0 /\ arg3 == 0), cost: 1
+   9: f239_0_main_LE -> f239_0_main_LE : arg2'=0, arg1'=-arg2+arg1, arg3'=0, (-1+arg2 >= 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0), cost: arg2
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f203_0_main_NE -> f239_0_main_LE : arg2'=arg1, arg3'=arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+Second rule:
+f239_0_main_LE -> f239_0_main_LE : arg2'=0, arg1'=-arg2+arg1, arg3'=0, (-1+arg2 >= 0 /\ arg2-arg3 >= 0 /\ -arg2+arg3 >= 0), cost: arg2
+New rule:
+f203_0_main_NE -> f239_0_main_LE : arg2'=0, arg1'=0, arg3'=0, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 1+arg1
+
+Applied deletion
+Removed the following rules: 9
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   0: f1_0_main_Load -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P0 > 0), cost: 1
+   5: f203_0_main_NE -> f239_0_main_LE : arg2'=arg1, arg3'=arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+  10: f203_0_main_NE -> f239_0_main_LE : arg2'=0, arg1'=0, arg3'=0, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 1+arg1
+   6: f239_0_main_LE -> f203_0_main_NE : arg2'=0, arg3'=arg3P2, (arg2 == 0 /\ arg3 == 0), cost: 1
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P0 > 0), cost: 1
+New rule:
+__init -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2P4 > 0 /\ 1+arg1P0 > 0 /\ arg1P4 > 0 /\ 1+arg2P0 > 0), cost: 2
+
+Applied deletion
+Removed the following rules: 0 4
+
+Eliminated locations on linear paths
+Start location: __init
+   5: f203_0_main_NE -> f239_0_main_LE : arg2'=arg1, arg3'=arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+  10: f203_0_main_NE -> f239_0_main_LE : arg2'=0, arg1'=0, arg3'=0, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 1+arg1
+   6: f239_0_main_LE -> f203_0_main_NE : arg2'=0, arg3'=arg3P2, (arg2 == 0 /\ arg3 == 0), cost: 1
+  11: __init -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2P4 > 0 /\ 1+arg1P0 > 0 /\ arg1P4 > 0 /\ 1+arg2P0 > 0), cost: 2
+
+
+Eliminating location f239_0_main_LE by chaining:
+
+Applied chaining
+First rule:
+f203_0_main_NE -> f239_0_main_LE : arg2'=0, arg1'=0, arg3'=0, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 1+arg1
+Second rule:
+f239_0_main_LE -> f203_0_main_NE : arg2'=0, arg3'=arg3P2, (arg2 == 0 /\ arg3 == 0), cost: 1
+New rule:
+f203_0_main_NE -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, (0 == 0 /\ -arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 2+arg1
+
+Applied simplification
+Original rule:
+f203_0_main_NE -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, (0 == 0 /\ -arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 2+arg1
+New rule:
+f203_0_main_NE -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 2+arg1
+
+Applied deletion
+Removed the following rules: 5 6 10
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  12: f203_0_main_NE -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 2+arg1
+  11: __init -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2P4 > 0 /\ 1+arg1P0 > 0 /\ arg1P4 > 0 /\ 1+arg2P0 > 0), cost: 2
+
+
+Accelerated simple loops
+Start location: __init
+  12: f203_0_main_NE -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 2+arg1
+  11: __init -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2P4 > 0 /\ 1+arg1P0 > 0 /\ arg1P4 > 0 /\ 1+arg2P0 > 0), cost: 2
+
+
+Applied chaining
+First rule:
+__init -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2P4 > 0 /\ 1+arg1P0 > 0 /\ arg1P4 > 0 /\ 1+arg2P0 > 0), cost: 2
+Second rule:
+f203_0_main_NE -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, (-arg2+arg1 == 0 /\ -1+arg1 >= 0), cost: 2+arg1
+New rule:
+__init -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, -1+arg1P0 >= 0, cost: 4+arg1P0
+
+Applied deletion
+Removed the following rules: 12
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  11: __init -> f203_0_main_NE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2P4 > 0 /\ 1+arg1P0 > 0 /\ arg1P4 > 0 /\ 1+arg2P0 > 0), cost: 2
+  13: __init -> f203_0_main_NE : arg2'=0, arg1'=0, arg3'=arg3P2, -1+arg1P0 >= 0, cost: 4+arg1P0
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

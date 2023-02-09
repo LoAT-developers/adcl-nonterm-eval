@@ -1,0 +1,163 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f289_0_appendNewList_Return -> f540_0_random_ArrayAccess : arg5'=arg5P0, arg2'=arg2P0, arg4'=arg4P0, arg1'=arg1P0, arg3'=arg3P0, (-arg4 == 0 /\ arg5-arg4P0 == 0 /\ -3+arg2 > 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P0 > 0 /\ -arg3P0 == 0 /\ -arg2+arg1P0 <= 0), cost: 1
+   2: f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (1+x520 > 0 /\ -arg2+x510 < 0 /\ -3+arg1 > 0 /\ -arg3 == 0 /\ arg1P2 > 0 /\ -arg5P2+arg4 == 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ x510 > 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+   5: f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-arg2+x590 < 0 /\ -3+arg1 > 0 /\ -arg3 == 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg2 > 0 /\ x590 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0), cost: 1
+   1: f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (-3+arg1P1 > 0 /\ arg2-arg2P1 == 0 /\ arg1 > 0 /\ -arg3P1 == 0), cost: 1
+   4: f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1-arg1P4 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+   3: f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ -arg2P3+arg3 == 0 /\ -3+arg2 > 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+   7: f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0 /\ arg1 > 0 /\ arg2-arg2P7 == 0), cost: 1
+   6: f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (1+x410 > 0 /\ arg2 > 0 /\ arg2P6 > 0 /\ -x360+x370 < 0 /\ 1+x370 > 0 /\ 1+x360 > 0 /\ -1-arg1P6+arg1 == 0 /\ -1 < 0 /\ -1+arg1 > 0 /\ -arg2+arg2P6 <= 0), cost: 1
+   8: __init -> f1_0_main_Load : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, TRUE, cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: __init
+   2: f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (1+x520 > 0 /\ -arg2+x510 < 0 /\ -3+arg1 > 0 /\ -arg3 == 0 /\ arg1P2 > 0 /\ -arg5P2+arg4 == 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ x510 > 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+   5: f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-arg2+x590 < 0 /\ -3+arg1 > 0 /\ -arg3 == 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg2 > 0 /\ x590 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0), cost: 1
+   1: f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (-3+arg1P1 > 0 /\ arg2-arg2P1 == 0 /\ arg1 > 0 /\ -arg3P1 == 0), cost: 1
+   4: f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1-arg1P4 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+   3: f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ -arg2P3+arg3 == 0 /\ -3+arg2 > 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+   7: f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0 /\ arg1 > 0 /\ arg2-arg2P7 == 0), cost: 1
+   6: f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (1+x410 > 0 /\ arg2 > 0 /\ arg2P6 > 0 /\ -x360+x370 < 0 /\ 1+x370 > 0 /\ 1+x360 > 0 /\ -1-arg1P6+arg1 == 0 /\ -1 < 0 /\ -1+arg1 > 0 /\ -arg2+arg2P6 <= 0), cost: 1
+   8: __init -> f1_0_main_Load : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (-3+arg1P1 > 0 /\ arg2-arg2P1 == 0 /\ arg1 > 0 /\ -arg3P1 == 0), cost: 1
+New rule:
+f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=0, (-3+arg1P1 > 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg5P2, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (1+x520 > 0 /\ -arg2+x510 < 0 /\ -3+arg1 > 0 /\ -arg3 == 0 /\ arg1P2 > 0 /\ -arg5P2+arg4 == 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ x510 > 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+New rule:
+f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg4, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (arg1P2 > 0 /\ -2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ arg3 == 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ -arg2P3+arg3 == 0 /\ -3+arg2 > 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+New rule:
+f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1-arg1P4 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=1, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1+arg2 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-arg2+x590 < 0 /\ -3+arg1 > 0 /\ -arg3 == 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg2 > 0 /\ x590 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0), cost: 1
+New rule:
+f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0 /\ arg3 == 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (1+x410 > 0 /\ arg2 > 0 /\ arg2P6 > 0 /\ -x360+x370 < 0 /\ 1+x370 > 0 /\ 1+x360 > 0 /\ -1-arg1P6+arg1 == 0 /\ -1 < 0 /\ -1+arg1 > 0 /\ -arg2+arg2P6 <= 0), cost: 1
+New rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=-1+arg1, arg3'=arg3P6, (arg2P6 > 0 /\ -1+arg1 > 0 /\ -arg2+arg2P6 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0 /\ arg1 > 0 /\ arg2-arg2P7 == 0), cost: 1
+New rule:
+f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+  10: f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg4, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (arg1P2 > 0 /\ -2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ arg3 == 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+  13: f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0 /\ arg3 == 0), cost: 1
+   9: f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=0, (-3+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  12: f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=1, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1+arg2 > 0), cost: 1
+  11: f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+  15: f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0), cost: 1
+  14: f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=-1+arg1, arg3'=arg3P6, (arg2P6 > 0 /\ -1+arg1 > 0 /\ -arg2+arg2P6 <= 0), cost: 1
+   8: __init -> f1_0_main_Load : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=-1+arg1, arg3'=arg3P6, (arg2P6 > 0 /\ -1+arg1 > 0 /\ -arg2+arg2P6 <= 0), cost: 1
+New rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=-n0+arg1, arg3'=arg3P6, (arg2P6 > 0 /\ arg2-arg2P6 >= 0 /\ -n0+arg1 > 0 /\ -1+n0 >= 0), cost: n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_dbHEBd.txt
+
+Applied instantiation
+Original rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=-n0+arg1, arg3'=arg3P6, (arg2P6 > 0 /\ arg2-arg2P6 >= 0 /\ -n0+arg1 > 0 /\ -1+n0 >= 0), cost: n0
+New rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (-2+arg1 >= 0 /\ 1 > 0 /\ arg2P6 > 0 /\ arg2-arg2P6 >= 0), cost: -1+arg1
+
+Applied simplification
+Original rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (-2+arg1 >= 0 /\ 1 > 0 /\ arg2P6 > 0 /\ arg2-arg2P6 >= 0), cost: -1+arg1
+New rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (-2+arg1 >= 0 /\ arg2P6 > 0 /\ arg2-arg2P6 >= 0), cost: -1+arg1
+
+Applied deletion
+Removed the following rules: 14
+
+Accelerated simple loops
+Start location: __init
+  10: f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg4, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (arg1P2 > 0 /\ -2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ arg3 == 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+  13: f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0 /\ arg3 == 0), cost: 1
+   9: f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=0, (-3+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  12: f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=1, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1+arg2 > 0), cost: 1
+  11: f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+  15: f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0), cost: 1
+  17: f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (-2+arg1 >= 0 /\ arg2P6 > 0 /\ arg2-arg2P6 >= 0), cost: -1+arg1
+   8: __init -> f1_0_main_Load : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+Second rule:
+f760_0_copy_NONNULL -> f760_0_copy_NONNULL : arg5'=arg5P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1P7-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1P7 > 0), cost: 1
+New rule:
+f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P7, arg2'=arg3, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (-4+arg2 >= 0 /\ 4-arg2+arg4 <= 0 /\ 1+arg1P7-arg2 <= 0 /\ 1+arg1P7 > 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ arg3 > 0), cost: 2
+
+Applied deletion
+Removed the following rules: 15
+
+Applied chaining
+First rule:
+f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0 /\ arg3 == 0), cost: 1
+Second rule:
+f422_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (-2+arg1 >= 0 /\ arg2P6 > 0 /\ arg2-arg2P6 >= 0), cost: -1+arg1
+New rule:
+f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (arg2P6 > 0 /\ -2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ -2+arg1P5 >= 0 /\ arg3 == 0 /\ 3+arg2P6-arg1 <= 0), cost: arg1P5
+
+Applied deletion
+Removed the following rules: 17
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  10: f540_0_random_ArrayAccess -> f673_0_main_InvokeMethod : arg5'=arg4, arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (arg1P2 > 0 /\ -2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ -3+arg2P2 > 0 /\ arg3 == 0 /\ 3+arg1P2-arg1 <= 0), cost: 1
+  13: f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P5, arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (-2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ arg2P5 > 0 /\ 1+arg1P5 > 0 /\ 3+arg2P5-arg1 <= 0 /\ arg3 == 0), cost: 1
+  19: f540_0_random_ArrayAccess -> f422_0_random_ArrayAccess : arg5'=arg5P6, arg2'=arg2P6, arg4'=arg4P6, arg1'=1, arg3'=arg3P6, (arg2P6 > 0 /\ -2+arg2 >= 0 /\ 2+arg4-arg1 <= 0 /\ -2+arg1P5 >= 0 /\ arg3 == 0 /\ 3+arg2P6-arg1 <= 0), cost: arg1P5
+   9: f1_0_main_Load -> f540_0_random_ArrayAccess : arg5'=arg5P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=0, (-3+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  12: f1_0_main_Load -> f422_0_random_ArrayAccess : arg5'=arg5P4, arg2'=arg2P4, arg4'=arg4P4, arg1'=1, arg3'=arg3P4, (arg2P4 > 0 /\ arg2P4-arg1 <= 0 /\ 1+arg2 > 0), cost: 1
+  11: f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P3, arg2'=arg3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (4-arg2+arg4 <= 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ -3+arg1P3 > 0 /\ arg3 > 0 /\ -arg2+arg1P3 <= 0), cost: 1
+  18: f673_0_main_InvokeMethod -> f760_0_copy_NONNULL : arg5'=arg5P7, arg2'=arg3, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (-4+arg2 >= 0 /\ 4-arg2+arg4 <= 0 /\ 1+arg1P7-arg2 <= 0 /\ 1+arg1P7 > 0 /\ arg1 > 0 /\ 2+arg5-arg2 <= 0 /\ arg3 > 0), cost: 2
+   8: __init -> f1_0_main_Load : arg5'=arg5P8, arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

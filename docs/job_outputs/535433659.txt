@@ -1,0 +1,85 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f87_0_flip_LE : arg2'=arg2P0, arg1'=arg1P0, (5+arg2-arg1P0 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 5 > 0 /\ -arg2P0+arg2 == 0), cost: 1
+   1: f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg2P1, arg1'=arg1P1, (-1+arg1-arg2P1 == 0 /\ arg1-arg1P1 == 0 /\ -arg2+arg1 == 0 /\ arg1 > 0 /\ -1 < 0), cost: 1
+   2: f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg2P2, arg1'=arg1P2, (arg2-arg1 > 0 /\ arg2-arg1P2 == 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2-arg2P2 == 0), cost: 1
+   3: f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg2P3, arg1'=arg1P3, (arg2 > 0 /\ arg2-arg1 < 0 /\ arg1-arg2P3 == 0 /\ arg2-arg1P3 == 0 /\ -1+arg1 > 0), cost: 1
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f87_0_flip_LE : arg2'=arg2P0, arg1'=arg1P0, (5+arg2-arg1P0 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 5 > 0 /\ -arg2P0+arg2 == 0), cost: 1
+New rule:
+f1_0_main_Load -> f87_0_flip_LE : arg1'=5+arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg2P1, arg1'=arg1P1, (-1+arg1-arg2P1 == 0 /\ arg1-arg1P1 == 0 /\ -arg2+arg1 == 0 /\ arg1 > 0 /\ -1 < 0), cost: 1
+New rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg2'=-1+arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg2P2, arg1'=arg1P2, (arg2-arg1 > 0 /\ arg2-arg1P2 == 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2-arg2P2 == 0), cost: 1
+New rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg1'=arg2, (arg2-arg1 > 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg2P3, arg1'=arg1P3, (arg2 > 0 /\ arg2-arg1 < 0 /\ arg1-arg2P3 == 0 /\ arg2-arg1P3 == 0 /\ -1+arg1 > 0), cost: 1
+New rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg1, arg1'=arg2, (arg2 > 0 /\ -arg2+arg1 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   5: f1_0_main_Load -> f87_0_flip_LE : arg1'=5+arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+   6: f87_0_flip_LE -> f87_0_flip_LE : arg2'=-1+arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+   7: f87_0_flip_LE -> f87_0_flip_LE : arg1'=arg2, (arg2-arg1 > 0 /\ arg1 > 0), cost: 1
+   8: f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg1, arg1'=arg2, (arg2 > 0 /\ -arg2+arg1 > 0), cost: 1
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, TRUE, cost: 1
+
+
+Accelerated simple loops
+Start location: __init
+   5: f1_0_main_Load -> f87_0_flip_LE : arg1'=5+arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+   6: f87_0_flip_LE -> f87_0_flip_LE : arg2'=-1+arg1, (-arg2+arg1 == 0 /\ arg1 > 0), cost: 1
+   7: f87_0_flip_LE -> f87_0_flip_LE : arg1'=arg2, (arg2-arg1 > 0 /\ arg1 > 0), cost: 1
+   8: f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg1, arg1'=arg2, (arg2 > 0 /\ -arg2+arg1 > 0), cost: 1
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f87_0_flip_LE : arg1'=5+arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f87_0_flip_LE -> f87_0_flip_LE : arg2'=arg1, arg1'=arg2, (arg2 > 0 /\ -arg2+arg1 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f87_0_flip_LE : arg2'=5+arg2, arg1'=arg2, (arg2 > 0 /\ arg1 > 0), cost: 2
+
+Applied deletion
+Removed the following rules: 6 7 8
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   5: f1_0_main_Load -> f87_0_flip_LE : arg1'=5+arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+   9: f1_0_main_Load -> f87_0_flip_LE : arg2'=5+arg2, arg1'=arg2, (arg2 > 0 /\ arg1 > 0), cost: 2
+   4: __init -> f1_0_main_Load : arg2'=arg2P4, arg1'=arg1P4, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

@@ -1,0 +1,520 @@
+NO
+
+Initial ITS
+Start location: l7
+   0: l0 -> l1 : j^0'=j^post0, i^0'=i^post0, (-i^post0+i^0 == 0 /\ j^post0-i^0 == 0), cost: 1
+   1: l1 -> l2 : j^0'=j^post1, i^0'=i^post1, (j^0-j^post1 == 0 /\ -1-i^0+i^post1 == 0), cost: 1
+   7: l2 -> l4 : j^0'=j^post7, i^0'=i^post7, (i^0-i^post7 == 0 /\ j^0-j^post7 == 0), cost: 1
+   2: l3 -> l0 : j^0'=j^post2, i^0'=i^post2, (6-i^0 <= 0 /\ i^0-i^post2 == 0 /\ j^0-j^post2 == 0), cost: 1
+   3: l3 -> l0 : j^0'=j^post3, i^0'=i^post3, (-4+i^0 <= 0 /\ j^0-j^post3 == 0 /\ -i^post3+i^0 == 0), cost: 1
+   4: l3 -> l1 : j^0'=j^post4, i^0'=i^post4, (0 == 0 /\ j^0-j^post4 == 0 /\ -5+i^0 <= 0 /\ 5-i^0 <= 0), cost: 1
+   5: l4 -> l5 : j^0'=j^post5, i^0'=i^post5, (10-i^0 <= 0 /\ j^0-j^post5 == 0 /\ -i^post5+i^0 == 0), cost: 1
+   6: l4 -> l3 : j^0'=j^post6, i^0'=i^post6, (-9+i^0 <= 0 /\ -i^post6+i^0 == 0 /\ j^0-j^post6 == 0), cost: 1
+   8: l6 -> l2 : j^0'=j^post8, i^0'=i^post8, (i^post8 == 0 /\ -j^post8+j^0 == 0), cost: 1
+   9: l7 -> l6 : j^0'=j^post9, i^0'=i^post9, (j^0-j^post9 == 0 /\ -i^post9+i^0 == 0), cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: l7
+   0: l0 -> l1 : j^0'=j^post0, i^0'=i^post0, (-i^post0+i^0 == 0 /\ j^post0-i^0 == 0), cost: 1
+   1: l1 -> l2 : j^0'=j^post1, i^0'=i^post1, (j^0-j^post1 == 0 /\ -1-i^0+i^post1 == 0), cost: 1
+   7: l2 -> l4 : j^0'=j^post7, i^0'=i^post7, (i^0-i^post7 == 0 /\ j^0-j^post7 == 0), cost: 1
+   2: l3 -> l0 : j^0'=j^post2, i^0'=i^post2, (6-i^0 <= 0 /\ i^0-i^post2 == 0 /\ j^0-j^post2 == 0), cost: 1
+   3: l3 -> l0 : j^0'=j^post3, i^0'=i^post3, (-4+i^0 <= 0 /\ j^0-j^post3 == 0 /\ -i^post3+i^0 == 0), cost: 1
+   4: l3 -> l1 : j^0'=j^post4, i^0'=i^post4, (0 == 0 /\ j^0-j^post4 == 0 /\ -5+i^0 <= 0 /\ 5-i^0 <= 0), cost: 1
+   6: l4 -> l3 : j^0'=j^post6, i^0'=i^post6, (-9+i^0 <= 0 /\ -i^post6+i^0 == 0 /\ j^0-j^post6 == 0), cost: 1
+   8: l6 -> l2 : j^0'=j^post8, i^0'=i^post8, (i^post8 == 0 /\ -j^post8+j^0 == 0), cost: 1
+   9: l7 -> l6 : j^0'=j^post9, i^0'=i^post9, (j^0-j^post9 == 0 /\ -i^post9+i^0 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : j^0'=j^post0, i^0'=i^post0, (-i^post0+i^0 == 0 /\ j^post0-i^0 == 0), cost: 1
+New rule:
+l0 -> l1 : j^0'=i^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l2 : j^0'=j^post1, i^0'=i^post1, (j^0-j^post1 == 0 /\ -1-i^0+i^post1 == 0), cost: 1
+New rule:
+l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l0 : j^0'=j^post2, i^0'=i^post2, (6-i^0 <= 0 /\ i^0-i^post2 == 0 /\ j^0-j^post2 == 0), cost: 1
+New rule:
+l3 -> l0 : -6+i^0 >= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l0 : j^0'=j^post3, i^0'=i^post3, (-4+i^0 <= 0 /\ j^0-j^post3 == 0 /\ -i^post3+i^0 == 0), cost: 1
+New rule:
+l3 -> l0 : -4+i^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l1 : j^0'=j^post4, i^0'=i^post4, (0 == 0 /\ j^0-j^post4 == 0 /\ -5+i^0 <= 0 /\ 5-i^0 <= 0), cost: 1
+New rule:
+l3 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l4 -> l3 : j^0'=j^post6, i^0'=i^post6, (-9+i^0 <= 0 /\ -i^post6+i^0 == 0 /\ j^0-j^post6 == 0), cost: 1
+New rule:
+l4 -> l3 : -9+i^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l4 : j^0'=j^post7, i^0'=i^post7, (i^0-i^post7 == 0 /\ j^0-j^post7 == 0), cost: 1
+New rule:
+l2 -> l4 : TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l6 -> l2 : j^0'=j^post8, i^0'=i^post8, (i^post8 == 0 /\ -j^post8+j^0 == 0), cost: 1
+New rule:
+l6 -> l2 : i^0'=0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l7 -> l6 : j^0'=j^post9, i^0'=i^post9, (j^0-j^post9 == 0 /\ -i^post9+i^0 == 0), cost: 1
+New rule:
+l7 -> l6 : TRUE, cost: 1
+
+Simplified rules
+Start location: l7
+  10: l0 -> l1 : j^0'=i^0, TRUE, cost: 1
+  11: l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+  16: l2 -> l4 : TRUE, cost: 1
+  12: l3 -> l0 : -6+i^0 >= 0, cost: 1
+  13: l3 -> l0 : -4+i^0 <= 0, cost: 1
+  14: l3 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 1
+  15: l4 -> l3 : -9+i^0 <= 0, cost: 1
+  17: l6 -> l2 : i^0'=0, TRUE, cost: 1
+  18: l7 -> l6 : TRUE, cost: 1
+
+
+Eliminating location l6 by chaining:
+
+Applied chaining
+First rule:
+l7 -> l6 : TRUE, cost: 1
+Second rule:
+l6 -> l2 : i^0'=0, TRUE, cost: 1
+New rule:
+l7 -> l2 : i^0'=0, TRUE, cost: 2
+
+Applied deletion
+Removed the following rules: 17 18
+
+Eliminating location l4 by chaining:
+
+Applied chaining
+First rule:
+l2 -> l4 : TRUE, cost: 1
+Second rule:
+l4 -> l3 : -9+i^0 <= 0, cost: 1
+New rule:
+l2 -> l3 : -9+i^0 <= 0, cost: 2
+
+Applied deletion
+Removed the following rules: 15 16
+
+Eliminated locations on linear paths
+Start location: l7
+  10: l0 -> l1 : j^0'=i^0, TRUE, cost: 1
+  11: l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+  20: l2 -> l3 : -9+i^0 <= 0, cost: 2
+  12: l3 -> l0 : -6+i^0 >= 0, cost: 1
+  13: l3 -> l0 : -4+i^0 <= 0, cost: 1
+  14: l3 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 1
+  19: l7 -> l2 : i^0'=0, TRUE, cost: 2
+
+
+Eliminating location l3 by chaining:
+
+Applied chaining
+First rule:
+l2 -> l3 : -9+i^0 <= 0, cost: 2
+Second rule:
+l3 -> l0 : -6+i^0 >= 0, cost: 1
+New rule:
+l2 -> l0 : (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 3
+
+Applied chaining
+First rule:
+l2 -> l3 : -9+i^0 <= 0, cost: 2
+Second rule:
+l3 -> l0 : -4+i^0 <= 0, cost: 1
+New rule:
+l2 -> l0 : (-9+i^0 <= 0 /\ -4+i^0 <= 0), cost: 3
+
+Applied simplification
+Original rule:
+l2 -> l0 : (-9+i^0 <= 0 /\ -4+i^0 <= 0), cost: 3
+New rule:
+l2 -> l0 : -4+i^0 <= 0, cost: 3
+
+Applied chaining
+First rule:
+l2 -> l3 : -9+i^0 <= 0, cost: 2
+Second rule:
+l3 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 1
+New rule:
+l2 -> l1 : i^0'=i^post4, (-9+i^0 <= 0 /\ -5+i^0 == 0), cost: 3
+
+Applied simplification
+Original rule:
+l2 -> l1 : i^0'=i^post4, (-9+i^0 <= 0 /\ -5+i^0 == 0), cost: 3
+New rule:
+l2 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 3
+
+Applied deletion
+Removed the following rules: 12 13 14 20
+
+Eliminated locations on tree-shaped paths
+Start location: l7
+  10: l0 -> l1 : j^0'=i^0, TRUE, cost: 1
+  11: l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+  21: l2 -> l0 : (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 3
+  22: l2 -> l0 : -4+i^0 <= 0, cost: 3
+  23: l2 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 3
+  19: l7 -> l2 : i^0'=0, TRUE, cost: 2
+
+
+Eliminating location l0 by chaining:
+
+Applied chaining
+First rule:
+l2 -> l0 : (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 3
+Second rule:
+l0 -> l1 : j^0'=i^0, TRUE, cost: 1
+New rule:
+l2 -> l1 : j^0'=i^0, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 4
+
+Applied chaining
+First rule:
+l2 -> l0 : -4+i^0 <= 0, cost: 3
+Second rule:
+l0 -> l1 : j^0'=i^0, TRUE, cost: 1
+New rule:
+l2 -> l1 : j^0'=i^0, -4+i^0 <= 0, cost: 4
+
+Applied deletion
+Removed the following rules: 10 21 22
+
+Eliminating location l1 by chaining:
+
+Applied chaining
+First rule:
+l2 -> l1 : i^0'=i^post4, -5+i^0 == 0, cost: 3
+Second rule:
+l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+New rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+
+Applied chaining
+First rule:
+l2 -> l1 : j^0'=i^0, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 4
+Second rule:
+l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+New rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 5
+
+Applied chaining
+First rule:
+l2 -> l1 : j^0'=i^0, -4+i^0 <= 0, cost: 4
+Second rule:
+l1 -> l2 : i^0'=1+i^0, TRUE, cost: 1
+New rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, -4+i^0 <= 0, cost: 5
+
+Applied deletion
+Removed the following rules: 11 23 24 25
+
+Eliminated locations on tree-shaped paths
+Start location: l7
+  26: l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+  27: l2 -> l2 : j^0'=i^0, i^0'=1+i^0, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 5
+  28: l2 -> l2 : j^0'=i^0, i^0'=1+i^0, -4+i^0 <= 0, cost: 5
+  19: l7 -> l2 : i^0'=0, TRUE, cost: 2
+
+
+Applied acceleration
+Original rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+New rule:
+l2 -> l2 : i^0'=1+i^post4, (-5+i^0 >= 0 /\ 5-i^0 >= 0 /\ -4+i^post4 >= 0 /\ 4-i^post4 >= 0 /\ -1+n >= 0), cost: 4*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_CBeMJC.txt
+
+Applied nonterm
+Original rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+New rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -5+i^0 >= 0 /\ 5-i^0 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_CpmeFe.txt
+
+Applied acceleration
+Original rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 5
+New rule:
+l2 -> l2 : j^0'=-1+n0+i^0, i^0'=n0+i^0, (-6+i^0 >= 0 /\ 10-n0-i^0 >= 0 /\ -1+n0 >= 0), cost: 5*n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_HCbeBI.txt
+
+Applied instantiation
+Original rule:
+l2 -> l2 : j^0'=-1+n0+i^0, i^0'=n0+i^0, (-6+i^0 >= 0 /\ 10-n0-i^0 >= 0 /\ -1+n0 >= 0), cost: 5*n0
+New rule:
+l2 -> l2 : j^0'=9, i^0'=10, (0 >= 0 /\ -6+i^0 >= 0 /\ 9-i^0 >= 0), cost: 50-5*i^0
+
+Applied acceleration
+Original rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, -4+i^0 <= 0, cost: 5
+New rule:
+l2 -> l2 : j^0'=-1+i^0+n1, i^0'=i^0+n1, (5-i^0-n1 >= 0 /\ -1+n1 >= 0), cost: 5*n1
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_nNNDFd.txt
+
+Applied instantiation
+Original rule:
+l2 -> l2 : j^0'=-1+i^0+n1, i^0'=i^0+n1, (5-i^0-n1 >= 0 /\ -1+n1 >= 0), cost: 5*n1
+New rule:
+l2 -> l2 : j^0'=4, i^0'=5, (0 >= 0 /\ 4-i^0 >= 0), cost: 25-5*i^0
+
+Applied chaining
+First rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, -4+i^0 <= 0, cost: 5
+Second rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+New rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^post4, -4+i^0 == 0, cost: 9
+
+Applied acceleration
+Original rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^post4, -4+i^0 == 0, cost: 9
+New rule:
+l2 -> l2 : j^0'=1+i^post4, i^0'=1+i^post4, (-4+i^0 >= 0 /\ 4-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -3+i^post4 >= 0 /\ -2+n2 >= 0), cost: 9*n2
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_GCEPeD.txt
+
+Applied nonterm
+Original rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^post4, -4+i^0 == 0, cost: 9
+New rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -4+i^0 >= 0 /\ 4-i^0 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_HKAdEI.txt
+
+Applied chaining
+First rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+Second rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -4+i^0 >= 0 /\ 4-i^0 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (0 <= 0 /\ -5+i^0 == 0 /\ 3-i^post4 >= 0 /\ -3+i^post4 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+Second rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, -4+i^0 <= 0, cost: 5
+New rule:
+l2 -> l2 : j^0'=1+i^post4, i^0'=2+i^post4, (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: 9
+
+Applied acceleration
+Original rule:
+l2 -> l2 : j^0'=1+i^post4, i^0'=2+i^post4, (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: 9
+New rule:
+l2 -> l2 : j^0'=1+i^post4, i^0'=2+i^post4, (-5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n3 >= 0 /\ -3+i^post4 >= 0), cost: 9*n3
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_AOhKEo.txt
+
+Applied nonterm
+Original rule:
+l2 -> l2 : j^0'=1+i^post4, i^0'=2+i^post4, (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: 9
+New rule:
+l2 -> [8] : (-2+i^0-i^post4 <= 0 /\ 2-i^0+i^post4 <= 0 /\ -5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_NgJgem.txt
+
+Applied chaining
+First rule:
+l2 -> l2 : j^0'=i^0, i^0'=1+i^0, -4+i^0 <= 0, cost: 5
+Second rule:
+l2 -> [8] : (-2+i^0-i^post4 <= 0 /\ 2-i^0+i^post4 <= 0 /\ -5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -4+i^0 <= 0 /\ -4+i^0 >= 0 /\ 4-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+Second rule:
+l2 -> l2 : j^0'=4, i^0'=5, (0 >= 0 /\ 4-i^0 >= 0), cost: 25-5*i^0
+New rule:
+l2 -> l2 : j^0'=4, i^0'=5, (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: 24-5*i^post4
+
+Applied nonterm
+Original rule:
+l2 -> l2 : j^0'=4, i^0'=5, (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: 24-5*i^post4
+New rule:
+l2 -> [8] : (-5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n7 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_lNCCFF.txt
+
+Applied chaining
+First rule:
+l2 -> l2 : j^0'=4, i^0'=5, (0 >= 0 /\ 4-i^0 >= 0), cost: 25-5*i^0
+Second rule:
+l2 -> [8] : (-5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n7 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (0 >= 0 /\ 4-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n7 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l2 -> l2 : j^0'=4, i^0'=5, (0 >= 0 /\ 4-i^0 >= 0), cost: 25-5*i^0
+Second rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+New rule:
+l2 -> l2 : j^0'=4, i^0'=1+i^post4, -4+i^0 <= 0, cost: 29-5*i^0
+
+Applied acceleration
+Original rule:
+l2 -> l2 : j^0'=4, i^0'=1+i^post4, -4+i^0 <= 0, cost: 29-5*i^0
+New rule:
+l2 -> l2 : j^0'=4, i^0'=1+i^post4, (4-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n8 >= 0), cost: 24*n8-5*n8*i^post4
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_iEmHNb.txt
+
+Applied nonterm
+Original rule:
+l2 -> l2 : j^0'=4, i^0'=1+i^post4, -4+i^0 <= 0, cost: 29-5*i^0
+New rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ 4-i^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_hePaKO.txt
+
+Applied chaining
+First rule:
+l2 -> l2 : i^0'=1+i^post4, -5+i^0 == 0, cost: 4
+Second rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ 4-i^0 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (0 <= 0 /\ -5+i^0 == 0 /\ 3-i^post4 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l2 -> l2 : i^0'=1+i^post4, (-5+i^0 >= 0 /\ 5-i^0 >= 0 /\ -4+i^post4 >= 0 /\ 4-i^post4 >= 0 /\ -1+n >= 0), cost: 4*n
+New rule:
+l2 -> l2 : i^0'=1+i^post4, (-5+i^0 <= 0 /\ -5+i^0 >= 0 /\ -4+i^post4 <= 0 /\ -4+i^post4 >= 0 /\ -1+n >= 0), cost: 4*n
+
+Applied simplification
+Original rule:
+l2 -> l2 : j^0'=9, i^0'=10, (0 >= 0 /\ -6+i^0 >= 0 /\ 9-i^0 >= 0), cost: 50-5*i^0
+New rule:
+l2 -> l2 : j^0'=9, i^0'=10, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 50-5*i^0
+
+Applied simplification
+Original rule:
+l2 -> l2 : j^0'=4, i^0'=5, (0 >= 0 /\ 4-i^0 >= 0), cost: 25-5*i^0
+New rule:
+l2 -> l2 : j^0'=4, i^0'=5, -4+i^0 <= 0, cost: 25-5*i^0
+
+Applied simplification
+Original rule:
+l2 -> [8] : (0 <= 0 /\ -5+i^0 == 0 /\ 3-i^post4 >= 0 /\ -3+i^post4 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (-5+i^0 == 0 /\ -3+i^post4 <= 0 /\ -3+i^post4 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l2 -> [8] : (-2+i^0-i^post4 <= 0 /\ 2-i^0+i^post4 <= 0 /\ -5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (-2+i^0-i^post4 <= 0 /\ -5+i^0 >= 0 /\ 3-i^post4 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -4+i^0 <= 0 /\ -4+i^0 >= 0 /\ 4-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (-4+i^0 >= 0 /\ -1+i^0-i^post4 <= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l2 -> [8] : (-5+i^0 >= 0 /\ 5-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n7 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (-5+i^0 <= 0 /\ -5+i^0 >= 0 /\ -1+n7 >= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l2 -> [8] : (0 >= 0 /\ 4-i^0 >= 0 /\ 3-i^post4 >= 0 /\ -1+n7 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (-4+i^0 <= 0 /\ -1+n7 >= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l2 -> [8] : (0 <= 0 /\ -5+i^0 == 0 /\ 3-i^post4 >= 0), cost: NONTERM
+New rule:
+l2 -> [8] : (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 26 27 28
+
+Accelerated simple loops
+Start location: l7
+  30: l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -5+i^0 >= 0 /\ 5-i^0 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+  33: l2 -> [8] : (1-i^0+i^post4 <= 0 /\ -4+i^0 >= 0 /\ 4-i^0 >= 0 /\ -1+i^0-i^post4 <= 0), cost: NONTERM
+  39: l2 -> [8] : (1-i^0+i^post4 <= 0 /\ 4-i^0 >= 0), cost: NONTERM
+  41: l2 -> l2 : i^0'=1+i^post4, (-5+i^0 <= 0 /\ -5+i^0 >= 0 /\ -4+i^post4 <= 0 /\ -4+i^post4 >= 0 /\ -1+n >= 0), cost: 4*n
+  42: l2 -> l2 : j^0'=9, i^0'=10, (-9+i^0 <= 0 /\ -6+i^0 >= 0), cost: 50-5*i^0
+  43: l2 -> l2 : j^0'=4, i^0'=5, -4+i^0 <= 0, cost: 25-5*i^0
+  44: l2 -> [8] : (-5+i^0 == 0 /\ -3+i^post4 <= 0 /\ -3+i^post4 >= 0), cost: NONTERM
+  45: l2 -> [8] : (-2+i^0-i^post4 <= 0 /\ -5+i^0 >= 0 /\ 3-i^post4 >= 0), cost: NONTERM
+  46: l2 -> [8] : (-4+i^0 >= 0 /\ -1+i^0-i^post4 <= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+  47: l2 -> [8] : (-5+i^0 <= 0 /\ -5+i^0 >= 0 /\ -1+n7 >= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+  48: l2 -> [8] : (-4+i^0 <= 0 /\ -1+n7 >= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+  49: l2 -> [8] : (-5+i^0 == 0 /\ -3+i^post4 <= 0), cost: NONTERM
+  19: l7 -> l2 : i^0'=0, TRUE, cost: 2
+
+
+Applied chaining
+First rule:
+l7 -> l2 : i^0'=0, TRUE, cost: 2
+Second rule:
+l2 -> [8] : (1-i^0+i^post4 <= 0 /\ 4-i^0 >= 0), cost: NONTERM
+New rule:
+l7 -> [8] : 4 >= 0, cost: NONTERM
+
+Applied chaining
+First rule:
+l7 -> l2 : i^0'=0, TRUE, cost: 2
+Second rule:
+l2 -> l2 : j^0'=4, i^0'=5, -4+i^0 <= 0, cost: 25-5*i^0
+New rule:
+l7 -> l2 : j^0'=4, i^0'=5, -4 <= 0, cost: 27
+
+Applied chaining
+First rule:
+l7 -> l2 : i^0'=0, TRUE, cost: 2
+Second rule:
+l2 -> [8] : (-4+i^0 <= 0 /\ -1+n7 >= 0 /\ -3+i^post4 <= 0), cost: NONTERM
+New rule:
+l7 -> [8] : -4 <= 0, cost: NONTERM
+
+Applied deletion
+Removed the following rules: 30 33 39 41 42 43 44 45 46 47 48 49
+
+Chained accelerated rules with incoming rules
+Start location: l7
+  19: l7 -> l2 : i^0'=0, TRUE, cost: 2
+  50: l7 -> [8] : 4 >= 0, cost: NONTERM
+  51: l7 -> l2 : j^0'=4, i^0'=5, -4 <= 0, cost: 27
+  52: l7 -> [8] : -4 <= 0, cost: NONTERM
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l7
+  50: l7 -> [8] : 4 >= 0, cost: NONTERM
+  52: l7 -> [8] : -4 <= 0, cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 50 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  4 >= 0

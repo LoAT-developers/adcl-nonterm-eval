@@ -1,0 +1,381 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l13, true>
+<l1, l2, (undef3 = undef3), par{i6^0 -> undef3}>
+<l1, l3, true, par{ret_f19^0 -> 1}>
+<l3, l4, true, par{tmp^0 -> (0 + ret_f19^0)}>
+<l5, l3, true, par{ret_f19^0 -> (0 + ret28^0)}>
+<l6, l3, ((0 + ret28^0) <= 0) /\ (0 <= (0 + ret28^0)), par{ret_f19^0 -> 0}>
+<l6, l5, (1 <= (0 + ret28^0))>
+<l6, l5, ((1 + ret28^0) <= 0)>
+<l7, l1, true>
+<l7, l4, true>
+<l8, l3, true, par{ret_f19^0 -> (0 + ret17^0)}>
+<l9, l2, ((0 + ret17^0) <= 0) /\ (0 <= (0 + ret17^0)), par{i6^0 -> (~(1) + i6^0)}>
+<l9, l8, (1 <= (0 + ret17^0))>
+<l9, l8, ((1 + ret17^0) <= 0)>
+<l2, l10, true>
+<l11, l9, (undef164 = undef164) /\ (undef161 = 0), par{data16^0 -> (0 + undef164), ret17^0 -> (0 + undef161), ret_f212^0 -> undef161, val10^0 -> undef164}>
+<l10, l6, ((0 + i6^0) <= 0) /\ (0 <= (0 + i6^0)) /\ (undef176 = undef176) /\ (undef173 = 0), par{data18^0 -> (0 + undef176), ret28^0 -> (0 + undef173), ret_f215^0 -> undef173, val13^0 -> undef176}>
+<l10, l11, (1 <= (0 + i6^0))>
+<l10, l11, ((1 + i6^0) <= 0)>
+<l12, l7, true>
+<l13, l12, true>
+
+Fresh variables:
+undef3, undef161, undef164, undef173, undef176, 
+
+Undef variables:
+undef3, undef161, undef164, undef173, undef176, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (undef3 = undef3), par{i6^0 -> undef3}>
+<l0, l4, true>
+<l0, l4, true>
+<l2, l4, ((0 + i6^0) <= 0) /\ (0 <= (0 + i6^0)) /\ (undef176 = undef176) /\ (undef173 = 0) /\ ((0 + (0 + undef173)) <= 0) /\ (0 <= (0 + (0 + undef173)))>
+<l2, l2, (1 <= (0 + i6^0)) /\ (undef164 = undef164) /\ (undef161 = 0) /\ ((0 + (0 + undef161)) <= 0) /\ (0 <= (0 + (0 + undef161))), par{i6^0 -> (~(1) + i6^0)}>
+<l2, l2, ((1 + i6^0) <= 0) /\ (undef164 = undef164) /\ (undef161 = 0) /\ ((0 + (0 + undef161)) <= 0) /\ (0 <= (0 + (0 + undef161))), par{i6^0 -> (~(1) + i6^0)}>
+
+Fresh variables:
+undef3, undef161, undef164, undef173, undef176, 
+
+Undef variables:
+undef3, undef161, undef164, undef173, undef176, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 <= i6^0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Variables:
+i6^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, true, {i6^0 -> undef3, rest remain the same}>
+
+Graph 2
+<l0, l4, true, {all remain the same}>
+<l0, l4, true, {all remain the same}>
+<l2, l4, i6^0 = 0 /\ undef173 = 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 4 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.004401
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002302s
+[33mRanking function: [36m1 + i6^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Variables:
+i6^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000703s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002462s
+Trying to remove transition: <l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006370s
+Time used: 0.006149
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009677s
+Time used: 0.008951
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.024358s
+Time used: 0.024041
+
+LOG: SAT solveNonLinear - Elapsed time: 0.034034s
+Cost: 1; Total time: 0.032992
+[31mFailed at location 2: 0 <= i6^0[0m
+Before Improving: 
+[36mQuasi-invariant at l2: 0 <= i6^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002971s
+Remaining time after improvement: 0.998724
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 0 <= i6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 <= i6^0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+New Graphs: 
+Calling Safety with literal 0 <= i6^0 and entry <l0, l2, true, {i6^0 -> undef3, rest remain the same}>
+
+LOG: CALL check - Post:0 <= i6^0 - Process 1
+* Exit transition: <l0, l2, true, {i6^0 -> undef3, rest remain the same}>
+* Postcondition  : 0 <= i6^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000488s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000587s
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 0 <= i6^0 , 
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= i6^0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Narrowing transition: 
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Variables:
+i6^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000629s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002411s
+Trying to remove transition: <l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004968s
+Time used: 0.004793
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004408s
+Time used: 4.00103
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007591s
+Time used: 4.00094
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006070s
+Time used: 1.0006
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008762s
+Time used: 0.005862
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.013809s
+Time used: 0.013803
+
+LOG: SAT solveNonLinear - Elapsed time: 0.022571s
+Cost: 1; Total time: 0.019665
+[33mQuasi-ranking function: [36m50000 + i6^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Variables:
+i6^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000469s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001647s
+Trying to remove transition: <l2, l2, 50001 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004302s
+Time used: 0.004167
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003124s
+Time used: 4.00109
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007260s
+Time used: 4.00082
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006608s
+Time used: 1.00081
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008490s
+Time used: 0.005432
+
+Proving non-termination of subgraph 1
+Transitions:
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+Variables:
+i6^0
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, 0 <= i6^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006617s
+Time used: 0.006434
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.011521s
+Time used: 0.011514
+
+LOG: SAT solveNonLinear - Elapsed time: 0.018139s
+Cost: 1; Total time: 0.017948
+[31mFailed at location 2: 1 + i6^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l2: 1 + i6^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003054s
+Remaining time after improvement: 0.999121
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.002218s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 1 + i6^0 <= 0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + i6^0 <= 0 /\ undef161 = 0, {i6^0 -> -1 + i6^0, rest remain the same}>
+
+Calling reachability with...
+Transition: <l2, end, true, {all remain the same}>
+Conditions: 1 + i6^0 <= 0, 
+OPEN EXITS: 
+<l2, end, 1 + i6^0 <= 0, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l2, true, {i6^0 -> undef3, rest remain the same}>
+Conditions: 1 + i6^0 <= 0, 
+OPEN EXITS: 
+<l0, l2, 1 + undef3 <= 0, {i6^0 -> undef3, rest remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

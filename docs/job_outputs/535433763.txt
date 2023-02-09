@@ -1,0 +1,114 @@
+NO
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (-arg2P0 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0 /\ arg2-arg3P0 == 0), cost: 1
+   1: f61_0_main_GE -> f61_0_main_GE : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (arg2+x70-arg2P1 == 0 /\ arg3-arg3P1 == 0 /\ 1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ arg1 > 0 /\ arg1P1-arg1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (-arg2P0 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0 /\ arg2-arg3P0 == 0), cost: 1
+New rule:
+f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=0, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f61_0_main_GE -> f61_0_main_GE : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (arg2+x70-arg2P1 == 0 /\ arg3-arg3P1 == 0 /\ 1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ arg1 > 0 /\ arg1P1-arg1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+New rule:
+f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=0, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+   4: f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+New rule:
+f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+n*x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ -arg2-x70*(-1+n)+arg3 > 0 /\ arg1P1 > 0 /\ -1+n >= 0 /\ -arg1P1+arg1 >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_hKbkPj.txt
+
+Applied nonterm
+Original rule:
+f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+New rule:
+f61_0_main_GE -> [3] : (x70 <= 0 /\ 1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ -arg2+arg3 > 0 /\ -arg1P1+arg1 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_JnCdlk.txt
+
+Applied deletion
+Removed the following rules: 4
+
+Accelerated simple loops
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=0, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+   5: f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+n*x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ -arg2-x70*(-1+n)+arg3 > 0 /\ arg1P1 > 0 /\ -1+n >= 0 /\ -arg1P1+arg1 >= 0), cost: n
+   6: f61_0_main_GE -> [3] : (x70 <= 0 /\ 1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ -arg2+arg3 > 0 /\ -arg1P1+arg1 >= 0), cost: NONTERM
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=0, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+Second rule:
+f61_0_main_GE -> f61_0_main_GE : arg2'=arg2+n*x70, arg1'=arg1P1, (1+x70 > 0 /\ 1+arg2 > 0 /\ -arg2-x70*(-1+n)+arg3 > 0 /\ arg1P1 > 0 /\ -1+n >= 0 /\ -arg1P1+arg1 >= 0), cost: n
+New rule:
+f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=n*x70, arg1'=arg1P1, arg3'=arg2, (1+x70 > 0 /\ arg2-x70*(-1+n) > 0 /\ arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ -1+n >= 0), cost: 1+n
+
+Applied chaining
+First rule:
+f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=0, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+Second rule:
+f61_0_main_GE -> [3] : (x70 <= 0 /\ 1+x70 > 0 /\ 1+arg2 > 0 /\ arg1P1 > 0 /\ -arg2+arg3 > 0 /\ -arg1P1+arg1 >= 0), cost: NONTERM
+New rule:
+f1_0_main_ConstantStackPush -> [3] : (arg2 > 0 /\ -1+arg1 >= 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 5 6
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=0, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+   7: f1_0_main_ConstantStackPush -> f61_0_main_GE : arg2'=n*x70, arg1'=arg1P1, arg3'=arg2, (1+x70 > 0 /\ arg2-x70*(-1+n) > 0 /\ arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ -1+n >= 0), cost: 1+n
+   8: f1_0_main_ConstantStackPush -> [3] : (arg2 > 0 /\ -1+arg1 >= 0), cost: NONTERM
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+   8: f1_0_main_ConstantStackPush -> [3] : (arg2 > 0 /\ -1+arg1 >= 0), cost: NONTERM
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+Second rule:
+f1_0_main_ConstantStackPush -> [3] : (arg2 > 0 /\ -1+arg1 >= 0), cost: NONTERM
+New rule:
+__init -> [3] : (-1+arg1P2 >= 0 /\ arg2P2 > 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 2 8
+
+Eliminated locations on linear paths
+Start location: __init
+   9: __init -> [3] : (-1+arg1P2 >= 0 /\ arg2P2 > 0), cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 9 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  (-1+arg1P2 >= 0 /\ arg2P2 > 0)

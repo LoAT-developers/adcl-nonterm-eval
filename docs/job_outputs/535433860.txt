@@ -1,0 +1,214 @@
+NO
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg1P0, (1+arg2 > 0 /\ arg1 > 0 /\ arg2-arg1P0 == 0), cost: 1
+   1: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=arg1P1, (2+arg1-arg1P1 == 0 /\ 3+arg1 > 0 /\ arg1 < 0), cost: 1
+   2: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=arg1P2, (-3+arg1 < 0 /\ arg1 > 0 /\ -2+arg1-arg1P2 == 0), cost: 1
+   3: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P3, arg1'=arg1P3, (-2-arg1P3-arg1 == 0 /\ 1+arg1 < 0 /\ 2+arg1 < 0 /\ arg1 < 0), cost: 1
+   4: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=arg1P4, (-2+arg1 > 0 /\ 2-arg1-arg1P4 == 0), cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg1P0, (1+arg2 > 0 /\ arg1 > 0 /\ arg2-arg1P0 == 0), cost: 1
+New rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=arg1P1, (2+arg1-arg1P1 == 0 /\ 3+arg1 > 0 /\ arg1 < 0), cost: 1
+New rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=2+arg1, (3+arg1 > 0 /\ -arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=arg1P2, (-3+arg1 < 0 /\ arg1 > 0 /\ -2+arg1-arg1P2 == 0), cost: 1
+New rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P3, arg1'=arg1P3, (-2-arg1P3-arg1 == 0 /\ 1+arg1 < 0 /\ 2+arg1 < 0 /\ arg1 < 0), cost: 1
+New rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P3, arg1'=-2-arg1, -2-arg1 > 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=arg1P4, (-2+arg1 > 0 /\ 2-arg1-arg1P4 == 0), cost: 1
+New rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=2-arg1, -2+arg1 > 0, cost: 1
+
+Simplified rules
+Start location: __init
+   6: f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+   7: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=2+arg1, (3+arg1 > 0 /\ -arg1 > 0), cost: 1
+   8: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+   9: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P3, arg1'=-2-arg1, -2-arg1 > 0, cost: 1
+  10: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=2-arg1, -2+arg1 > 0, cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=2+arg1, (3+arg1 > 0 /\ -arg1 > 0), cost: 1
+New rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, -1+arg1 == 0, cost: 2
+
+Applied nonterm
+Original rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, -1+arg1 == 0, cost: 2
+New rule:
+f81_0_loop_EQ -> [3] : (-1+n5 >= 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_mDpAGa.txt
+
+Applied chaining
+First rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=2+arg1, (3+arg1 > 0 /\ -arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> [3] : (-1+n5 >= 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+New rule:
+f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1-arg1 >= 0 /\ -1+n5 >= 0 /\ 3+arg1 > 0 /\ -arg1 > 0), cost: NONTERM
+
+Applied chaining
+First rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=2+arg1, (3+arg1 > 0 /\ -arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+New rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, 1+arg1 == 0, cost: 2
+
+Applied nonterm
+Original rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, 1+arg1 == 0, cost: 2
+New rule:
+f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1-arg1 >= 0 /\ -1+n6 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_JKeFBk.txt
+
+Applied chaining
+First rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1-arg1 >= 0 /\ -1+n6 >= 0), cost: NONTERM
+New rule:
+f81_0_loop_EQ -> [3] : (arg1 > 0 /\ -1+n6 >= 0 /\ 3-arg1 > 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+f81_0_loop_EQ -> [3] : (-1+n5 >= 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+New rule:
+f81_0_loop_EQ -> [3] : (-1+n5 >= 0 /\ -1+arg1 <= 0 /\ -1+arg1 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1-arg1 >= 0 /\ -1+n5 >= 0 /\ 3+arg1 > 0 /\ -arg1 > 0), cost: NONTERM
+New rule:
+f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1+n5 >= 0 /\ -arg1 > 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1-arg1 >= 0 /\ -1+n6 >= 0), cost: NONTERM
+New rule:
+f81_0_loop_EQ -> [3] : (1+arg1 <= 0 /\ 1+arg1 >= 0 /\ -1+n6 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+f81_0_loop_EQ -> [3] : (arg1 > 0 /\ -1+n6 >= 0 /\ 3-arg1 > 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+New rule:
+f81_0_loop_EQ -> [3] : (-1+n6 >= 0 /\ -1+arg1 <= 0 /\ -1+arg1 >= 0), cost: NONTERM
+
+Accelerated simple loops
+Start location: __init
+   6: f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+   7: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P1, arg1'=2+arg1, (3+arg1 > 0 /\ -arg1 > 0), cost: 1
+   8: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+   9: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P3, arg1'=-2-arg1, -2-arg1 > 0, cost: 1
+  10: f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=2-arg1, -2+arg1 > 0, cost: 1
+  15: f81_0_loop_EQ -> [3] : (-1+n5 >= 0 /\ -1+arg1 <= 0 /\ -1+arg1 >= 0), cost: NONTERM
+  16: f81_0_loop_EQ -> [3] : (1+arg1 >= 0 /\ -1+n5 >= 0 /\ -arg1 > 0), cost: NONTERM
+  17: f81_0_loop_EQ -> [3] : (1+arg1 <= 0 /\ 1+arg1 >= 0 /\ -1+n6 >= 0), cost: NONTERM
+  18: f81_0_loop_EQ -> [3] : (-1+n6 >= 0 /\ -1+arg1 <= 0 /\ -1+arg1 >= 0), cost: NONTERM
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg1, (arg1 > 0 /\ 3-arg1 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg2, (arg2 > 0 /\ arg1 > 0 /\ 3-arg2 > 0), cost: 2
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=2-arg1, -2+arg1 > 0, cost: 1
+New rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=2-arg2, (-2+arg2 > 0 /\ arg1 > 0), cost: 2
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> [3] : (-1+n5 >= 0 /\ -1+arg1 <= 0 /\ -1+arg1 >= 0), cost: NONTERM
+New rule:
+f1_0_main_Load -> [3] : (arg1 > 0 /\ -1+arg2 == 0), cost: NONTERM
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f81_0_loop_EQ -> [3] : (-1+n6 >= 0 /\ -1+arg1 <= 0 /\ -1+arg1 >= 0), cost: NONTERM
+New rule:
+f1_0_main_Load -> [3] : (arg1 > 0 /\ -1+arg2 == 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 7 8 9 10 15 16 17 18
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   6: f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P0, arg1'=arg2, (1+arg2 > 0 /\ arg1 > 0), cost: 1
+  19: f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P2, arg1'=-2+arg2, (arg2 > 0 /\ arg1 > 0 /\ 3-arg2 > 0), cost: 2
+  20: f1_0_main_Load -> f81_0_loop_EQ : arg2'=arg2P4, arg1'=2-arg2, (-2+arg2 > 0 /\ arg1 > 0), cost: 2
+  21: f1_0_main_Load -> [3] : (arg1 > 0 /\ -1+arg2 == 0), cost: NONTERM
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  21: f1_0_main_Load -> [3] : (arg1 > 0 /\ -1+arg2 == 0), cost: NONTERM
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> [3] : (arg1 > 0 /\ -1+arg2 == 0), cost: NONTERM
+New rule:
+__init -> [3] : (-1+arg2P5 == 0 /\ arg1P5 > 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 5 21
+
+Eliminated locations on linear paths
+Start location: __init
+  22: __init -> [3] : (-1+arg2P5 == 0 /\ arg1P5 > 0), cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 22 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  (-1+arg2P5 == 0 /\ arg1P5 > 0)

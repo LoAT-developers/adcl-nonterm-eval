@@ -1,0 +1,546 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l7, true>
+<l1, l2, (undef1 <= arg1) /\ ((undef1 - 1) <= arg2) /\ (undef2 <= arg2) /\ (arg1 > 0) /\ (arg2 > ~(1)) /\ (undef1 > 0) /\ (undef2 > ~(1)), par{arg1 -> undef1, arg2 -> undef2, arg3 -> undef3, arg4 -> undef4}>
+<l3, l2, (undef5 <= arg1) /\ (arg1 > 0) /\ (undef5 > 0) /\ (undef6 > ~(1)), par{arg1 -> undef5, arg2 -> undef6, arg3 -> undef7, arg4 -> undef8}>
+<l2, l4, (undef13 > 0) /\ (undef14 > 0) /\ (undef9 <= arg2) /\ (arg1 > 0) /\ (arg2 > ~(1)) /\ (undef9 > ~(1)), par{arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12}>
+<l3, l5, (arg2 > ~(1)) /\ (undef16 > ~(1)) /\ (arg1 > 0), par{arg1 -> 0, arg2 -> undef16, arg3 -> 1, arg4 -> undef18}>
+<l5, l6, (undef21 > ~(1)) /\ (arg2 > arg1) /\ (arg3 > 0), par{arg1 -> arg2, arg2 -> arg1, arg3 -> undef21, arg4 -> (arg3 + 1)}>
+<l6, l5, (0 = arg3), par{arg1 -> (arg2 + 1), arg2 -> arg1, arg3 -> arg4, arg4 -> undef26}>
+<l6, l6, (arg3 > 0), par{arg3 -> (arg3 - 1)}>
+<l4, l4, ((undef31 + 2) <= arg1) /\ (undef35 > 0) /\ (arg1 > 1) /\ (undef31 > ~(1)), par{arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34}>
+<l4, l4, ((undef36 + 2) <= arg1) /\ (undef40 > 0) /\ (arg1 > 2) /\ (undef36 > ~(1)), par{arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39}>
+<l4, l4, (undef41 <= arg1) /\ (undef45 > 0) /\ (arg1 > 2) /\ (undef41 > 0), par{arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44}>
+<l7, l3, true, par{arg1 -> undef46, arg2 -> undef47, arg3 -> undef48, arg4 -> undef49}>
+
+Fresh variables:
+undef1, undef2, undef3, undef4, undef5, undef6, undef7, undef8, undef9, undef10, undef11, undef12, undef13, undef14, undef16, undef18, undef21, undef26, undef31, undef32, undef33, undef34, undef35, undef36, undef37, undef38, undef39, undef40, undef41, undef42, undef43, undef44, undef45, undef46, undef47, undef48, undef49, 
+
+Undef variables:
+undef1, undef2, undef3, undef4, undef5, undef6, undef7, undef8, undef9, undef10, undef11, undef12, undef13, undef14, undef16, undef18, undef21, undef26, undef31, undef32, undef33, undef34, undef35, undef36, undef37, undef38, undef39, undef40, undef41, undef42, undef43, undef44, undef45, undef46, undef47, undef48, undef49, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l4, (undef5 <= undef46) /\ (undef46 > 0) /\ (undef5 > 0) /\ (undef6 > ~(1)) /\ (undef13 > 0) /\ (undef14 > 0) /\ (undef9 <= undef6) /\ (undef5 > 0) /\ (undef6 > ~(1)) /\ (undef9 > ~(1)), par{arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12}>
+<l0, l6, (undef47 > ~(1)) /\ (undef16 > ~(1)) /\ (undef46 > 0) /\ (undef21 > ~(1)) /\ (undef16 > 0) /\ (1 > 0), par{arg1 -> undef16, arg2 -> 0, arg3 -> undef21, arg4 -> (1 + 1)}>
+<l4, l4, ((undef31 + 2) <= arg1) /\ (undef35 > 0) /\ (arg1 > 1) /\ (undef31 > ~(1)), par{arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34}>
+<l4, l4, ((undef36 + 2) <= arg1) /\ (undef40 > 0) /\ (arg1 > 2) /\ (undef36 > ~(1)), par{arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39}>
+<l4, l4, (undef41 <= arg1) /\ (undef45 > 0) /\ (arg1 > 2) /\ (undef41 > 0), par{arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44}>
+<l6, l6, (0 = arg3) /\ (undef21 > ~(1)) /\ (arg1 > (arg2 + 1)) /\ (arg4 > 0), par{arg1 -> arg1, arg2 -> (arg2 + 1), arg3 -> undef21, arg4 -> (arg4 + 1)}>
+<l6, l6, (arg3 > 0), par{arg3 -> (arg3 - 1)}>
+
+Fresh variables:
+undef1, undef2, undef3, undef4, undef5, undef6, undef7, undef8, undef9, undef10, undef11, undef12, undef13, undef14, undef16, undef18, undef21, undef26, undef31, undef32, undef33, undef34, undef35, undef36, undef37, undef38, undef39, undef40, undef41, undef42, undef43, undef44, undef45, undef46, undef47, undef48, undef49, 
+
+Undef variables:
+undef1, undef2, undef3, undef4, undef5, undef6, undef7, undef8, undef9, undef10, undef11, undef12, undef13, undef14, undef16, undef18, undef21, undef26, undef31, undef32, undef33, undef34, undef35, undef36, undef37, undef38, undef39, undef40, undef41, undef42, undef43, undef44, undef45, undef46, undef47, undef48, undef49, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l6, l6, 1 <= arg4 /\ 0 <= undef21 /\ 2 + arg2 <= arg1 /\ arg3 = 0, {arg2 -> 1 + arg2, arg3 -> undef21, arg4 -> 1 + arg4, rest remain the same}>
+<l6, l6, 1 <= arg3, {arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+
+Graph 2:
+Transitions:
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l6, 1 <= undef16 /\ 1 <= undef46 /\ 0 <= undef21 /\ 0 <= undef47, {arg1 -> undef16, arg2 -> 0, arg3 -> undef21, arg4 -> 2, rest remain the same}>
+
+Graph 2
+<l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 0 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 4 , 2 )
+( 6 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.008367
+
+Checking conditional termination of SCC {l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001574s
+[33mRanking function: [36m-2 + 2*arg1 - 2*arg2 + arg4[0m
+New Graphs: 
+Transitions:
+<l6, l6, 1 <= arg3, {arg3 -> -1 + arg3, rest remain the same}>
+Variables:
+arg3
+Checking conditional termination of SCC {l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000514s
+[33mRanking function: [36m-1 + arg3[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.009139
+
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002703s
+[33mRanking function: [36m-12 + 4*arg1[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001762s
+[33mRanking function: [36m-1 + arg1[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000813s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002930s
+Trying to remove transition: <l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008323s
+Time used: 0.008112
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.024355s
+Time used: 0.023687
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.038282s
+Time used: 0.038277
+
+LOG: SAT solveNonLinear - Elapsed time: 0.062637s
+Cost: 1; Total time: 0.061964
+[31mFailed at location 4: arg1 <= 1[0m
+Before Improving: 
+[36mQuasi-invariant at l4: arg1 <= 1[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005984s
+Remaining time after improvement: 0.997712
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: arg1 <= 1[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+New Graphs: 
+Calling Safety with literal arg1 <= 1 and entry <l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 0 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+
+LOG: CALL check - Post:arg1 <= 1 - Process 1
+* Exit transition: <l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 0 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+* Postcondition  : arg1 <= 1
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000875s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001027s
+INVARIANTS: 
+4: 
+Quasi-INVARIANTS to narrow Graph: 
+4: arg1 <= 1 , 
+Narrowing transition: 
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002496s
+[33mRanking function: [36m-12 + 4*arg1[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001891s
+[33mRanking function: [36m-1 + arg1[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000816s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003001s
+Trying to remove transition: <l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008306s
+Time used: 0.008143
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.042329s
+Time used: 0.041626
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.030285s
+Time used: 0.030279
+
+LOG: SAT solveNonLinear - Elapsed time: 0.072614s
+Cost: 1; Total time: 0.071905
+[31mFailed at location 4: arg1 <= 2[0m
+Before Improving: 
+[36mQuasi-invariant at l4: arg1 <= 2[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006251s
+Remaining time after improvement: 0.997586
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: arg1 <= 2[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 + undef31 <= arg1 /\ arg1 = 2, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+New Graphs: 
+Calling Safety with literal arg1 <= 2 and entry <l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 2 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+
+LOG: CALL check - Post:arg1 <= 2 - Process 2
+* Exit transition: <l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 2 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+* Postcondition  : arg1 <= 2
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000746s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000909s
+INVARIANTS: 
+4: 
+Quasi-INVARIANTS to narrow Graph: 
+4: arg1 <= 2 , 
+Narrowing transition: 
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 <= arg1 /\ 2 + undef31 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 + undef31 <= arg1 /\ 3 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002623s
+[33mRanking function: [36m(~(3) / 2) + (1 / 2)*arg1[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000830s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003058s
+Trying to remove transition: <l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008482s
+Time used: 0.008316
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.041357s
+Time used: 0.04075
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005561s
+Time used: 4.00085
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.007650s
+Time used: 1.0001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.051700s
+Time used: 0.015462
+
+Proving non-termination of subgraph 2
+Transitions:
+<l4, l4, 1 <= undef35 /\ 0 <= undef31 /\ 2 + undef31 <= arg1 /\ 3 <= arg1, {arg1 -> undef31, arg2 -> undef32, arg3 -> undef33, arg4 -> undef34, rest remain the same}>
+<l4, l4, 1 <= undef40 /\ 0 <= undef36 /\ 2 + undef36 <= arg1 /\ 3 <= arg1, {arg1 -> undef36, arg2 -> undef37, arg3 -> undef38, arg4 -> undef39, rest remain the same}>
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002360s
+Checking conditional non-termination of SCC {l4}...
+EXIT TRANSITIONS:
+<l4, end, arg1 <= 2, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.001712s
+Time used: 5.00122
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.023965s
+Time used: 5.00218
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.005020s
+Time used: 5.00004
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... NO
+
+Proving non-termination of subgraph 2
+Transitions:
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002430s
+Checking conditional non-termination of SCC {l4}...
+EXIT TRANSITIONS:
+<l4, end, arg1 <= 2, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.150567s
+Time used: 0.150153
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.093502s
+Time used: 0.093497
+
+LOG: SAT solveNonLinear - Elapsed time: 0.244069s
+Cost: 1; Total time: 0.24365
+[31mFailed at location 4: 3 <= arg1[0m
+Before Improving: 
+[36mQuasi-invariant at l4: 3 <= arg1[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023031s
+Remaining time after improvement: 0.996611
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.004966s
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: 3 <= arg1[0m
+Constraint over undef 'arg1 <= undef41' in transition:
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ undef41 <= arg1 /\ 3 <= arg1, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l4: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 <= undef41 /\ 1 <= undef45 /\ 3 <= arg1 /\ arg1 = undef41, {arg1 -> undef41, arg2 -> undef42, arg3 -> undef43, arg4 -> undef44, rest remain the same}>
+
+Calling reachability with...
+Transition: <l4, end, true, {all remain the same}>
+Conditions: 3 <= arg1, 
+OPEN EXITS: 
+<l4, end, 3 <= arg1, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 0 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+Conditions: 3 <= arg1, 
+OPEN EXITS: 
+<l0, l4, 1 <= undef5 /\ 1 <= undef13 /\ 1 <= undef14 /\ 1 <= undef46 /\ undef5 <= undef46 /\ 0 <= undef6 /\ undef9 <= undef6 /\ 3 <= undef9, {arg1 -> undef9, arg2 -> undef10, arg3 -> undef11, arg4 -> undef12, rest remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

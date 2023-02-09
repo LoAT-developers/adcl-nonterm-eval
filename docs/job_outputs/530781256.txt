@@ -1,0 +1,1709 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l8, true>
+<l1, l2, (1 <= (0 + copied^0)) /\ ((0 + olde^0) <= (0 + e^0)) /\ ((0 + n^0) <= (0 + oldn^0))>
+<l1, l3, ((0 + copied^0) <= 0) /\ (1 <= (0 + e^0)) /\ ((0 + n^0) <= (0 + __const_100^0)), par{copied^0 -> 1, e^0 -> (1 + e^0), n^0 -> ((0 + __const_11^0) + n^0), olde^0 -> (0 + e^0), oldn^0 -> (0 + n^0)}>
+<l3, l1, true>
+<l1, l4, ((0 + copied^0) <= 0) /\ (1 <= (0 + e^0)) /\ ((1 + __const_100^0) <= (0 + n^0)), par{copied^0 -> 1, e^0 -> (~(1) + e^0), n^0 -> ((0 + (~(1) * __const_10^0)) + n^0), olde^0 -> (0 + e^0), oldn^0 -> (0 + n^0)}>
+<l4, l1, true>
+<l1, l5, (1 <= (0 + e^0)) /\ ((0 + n^0) <= (0 + __const_100^0)), par{e^0 -> (1 + e^0), n^0 -> ((0 + __const_11^0) + n^0)}>
+<l5, l1, true>
+<l1, l6, (1 <= (0 + e^0)) /\ ((1 + __const_100^0) <= (0 + n^0)), par{e^0 -> (~(1) + e^0), n^0 -> ((0 + (~(1) * __const_10^0)) + n^0)}>
+<l6, l1, true>
+<l7, l1, (undef78 = undef78), par{copied^0 -> 0, e^0 -> 1, n^0 -> undef78}>
+<l8, l7, true>
+
+Fresh variables:
+undef78, 
+
+Undef variables:
+undef78, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, (copied^0 = 0) /\ (e^0 = 1) /\ (n^0 = undef78) /\ (undef78 = undef78)>
+<l1, l2, (1 <= (0 + copied^0)) /\ ((0 + olde^0) <= (0 + e^0)) /\ ((0 + n^0) <= (0 + oldn^0))>
+<l1, l1, ((0 + copied^0) <= 0) /\ (1 <= (0 + e^0)) /\ ((0 + n^0) <= (0 + __const_100^0)), par{copied^0 -> 1, e^0 -> (1 + e^0), n^0 -> ((0 + __const_11^0) + n^0), olde^0 -> (0 + e^0), oldn^0 -> (0 + n^0)}>
+<l1, l1, ((0 + copied^0) <= 0) /\ (1 <= (0 + e^0)) /\ ((1 + __const_100^0) <= (0 + n^0)), par{copied^0 -> 1, e^0 -> (~(1) + e^0), n^0 -> ((0 + (~(1) * __const_10^0)) + n^0), olde^0 -> (0 + e^0), oldn^0 -> (0 + n^0)}>
+<l1, l1, (1 <= (0 + e^0)) /\ ((0 + n^0) <= (0 + __const_100^0)), par{e^0 -> (1 + e^0), n^0 -> ((0 + __const_11^0) + n^0)}>
+<l1, l1, (1 <= (0 + e^0)) /\ ((1 + __const_100^0) <= (0 + n^0)), par{e^0 -> (~(1) + e^0), n^0 -> ((0 + (~(1) * __const_10^0)) + n^0)}>
+
+Fresh variables:
+undef78, 
+
+Undef variables:
+undef78, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, copied^0, e^0, n^0, olde^0, oldn^0, __const_10^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, copied^0 = 0 /\ n^0 = undef78 /\ e^0 = 1, {all remain the same}>
+
+Graph 2
+<l1, l2, 1 <= copied^0 /\ olde^0 <= e^0 /\ n^0 <= oldn^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+( 2 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.025804
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004473s
+[33mRanking function: [36m-copied^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_10^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001486s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007125s
+Trying to remove transition: <l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014892s
+Time used: 0.0146
+Trying to remove transition: <l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010410s
+Time used: 0.00962
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.161823s
+Time used: 0.161041
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.328025s
+Time used: 1.32156
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001204s
+Time used: 1.00123
+
+LOG: SAT solveNonLinear - Elapsed time: 2.329229s
+Cost: 2; Total time: 2.32279
+[31mFailed at location 1: n^0 <= __const_100^0[0m
+[31mFailed at location 1: 1 + __const_11^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: n^0 <= __const_100^0[0m
+[36mQuasi-invariant at l1: 1 + __const_11^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011345s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003968s
+Remaining time after improvement: 0.990521
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: n^0 <= __const_100^0[0m
+[36mQuasi-invariant at l1: __const_11^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001064s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003094s
+Trying to remove transition: <l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008097s
+Time used: 0.007919
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003788s
+Time used: 4.0033
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003650s
+Time used: 4.0001
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.021623s
+Time used: 1.00023
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.048426s
+Time used: 0.026316
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000721s
+Time used: 1.00074
+
+LOG: SAT solveNonLinear - Elapsed time: 1.049146s
+Cost: 1; Total time: 1.02706
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 <= copied^0 + e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000825s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003402s
+Trying to remove transition: <l1, l1, 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009299s
+Time used: 0.009113
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001704s
+Time used: 4.00118
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.019968s
+Time used: 4.00005
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.021747s
+Time used: 1.00007
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.047880s
+Time used: 0.025759
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.020571s
+Time used: 1.0206
+
+LOG: SAT solveNonLinear - Elapsed time: 1.068451s
+Cost: 1; Total time: 1.04636
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 + copied^0 <= e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + __const_100^0 - __const_11^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001065s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004411s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010805s
+Time used: 0.010579
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002326s
+Time used: 4.00172
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.009573s
+Time used: 4.00019
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.021837s
+Time used: 1.00001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.052084s
+Time used: 0.029292
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000893s
+Time used: 1.00091
+
+LOG: SAT solveNonLinear - Elapsed time: 1.052977s
+Cost: 1; Total time: 1.0302
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 <= e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __const_100^0 + __const_11^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001199s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005367s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012238s
+Time used: 0.012001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011592s
+Time used: 4.00235
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.010323s
+Time used: 4.00022
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010644s
+Time used: 1.00002
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.051878s
+Time used: 0.028169
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.005042s
+Time used: 1.00111
+
+LOG: SAT solveNonLinear - Elapsed time: 1.056920s
+Cost: 1; Total time: 1.02928
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= 1 + copied^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0 /\ 0 <= 1 + copied^0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - 2*__const_100^0 + __const_11^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001388s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005775s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014629s
+Time used: 0.014369
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002941s
+Time used: 4.00198
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.010054s
+Time used: 4.00004
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010185s
+Time used: 1.00023
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053432s
+Time used: 0.032236
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.014616s
+Time used: 1.00601
+
+LOG: SAT solveNonLinear - Elapsed time: 1.068047s
+Cost: 1; Total time: 1.03825
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 <= e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0 /\ 0 <= 1 + copied^0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __const_100^0 - __const_11^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001525s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006218s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014683s
+Time used: 0.014415
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002857s
+Time used: 4.00195
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011867s
+Time used: 4.0004
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.011468s
+Time used: 1.00015
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.058311s
+Time used: 0.034607
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.009552s
+Time used: 1.00115
+
+LOG: SAT solveNonLinear - Elapsed time: 1.067863s
+Cost: 1; Total time: 1.03576
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= 1 + e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0 /\ 0 <= 1 + copied^0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + __const_100^0 + __const_11^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001587s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009059s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015153s
+Time used: 0.014715
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003016s
+Time used: 4.00235
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011303s
+Time used: 4.00021
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.017769s
+Time used: 1.00015
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.061901s
+Time used: 0.039833
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001156s
+Time used: 1.00117
+
+LOG: SAT solveNonLinear - Elapsed time: 1.063057s
+Cost: 1; Total time: 1.041
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= 1 + e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 <= 0 /\ 0 <= 1 + copied^0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __const_11^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001669s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007875s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017674s
+Time used: 0.017131
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003314s
+Time used: 4.00253
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.012422s
+Time used: 4.00002
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.018940s
+Time used: 1.00035
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.055580s
+Time used: 0.032621
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.008888s
+Time used: 1.00892
+
+LOG: SAT solveNonLinear - Elapsed time: 1.064468s
+Cost: 1; Total time: 1.04154
+[33mQuasi-ranking function: [36m50000 + __const_100^0 + __const_11^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001779s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008235s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= 1 + copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.016887s
+Time used: 0.016341
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002914s
+Time used: 4.00227
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.010123s
+Time used: 4.00019
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.023389s
+Time used: 1.00026
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.058162s
+Time used: 0.034883
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001515s
+Time used: 1.00137
+
+LOG: SAT solveNonLinear - Elapsed time: 1.059677s
+Cost: 1; Total time: 1.03626
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= copied^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + __const_100^0 - __const_11^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001872s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009590s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018089s
+Time used: 0.017627
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003789s
+Time used: 4.00274
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.010956s
+Time used: 4.00062
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.017690s
+Time used: 1.0001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.058304s
+Time used: 0.034854
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.005814s
+Time used: 1.00134
+
+LOG: SAT solveNonLinear - Elapsed time: 1.064118s
+Cost: 1; Total time: 1.0362
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= 1 + e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + __const_11^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001978s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009657s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018710s
+Time used: 0.018133
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.030047s
+Time used: 4.02905
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.013532s
+Time used: 4.00011
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010543s
+Time used: 1.00003
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.061038s
+Time used: 0.036934
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001562s
+Time used: 1.00141
+
+LOG: SAT solveNonLinear - Elapsed time: 1.062600s
+Cost: 1; Total time: 1.03835
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= 1 + copied^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __const_100^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002072s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010056s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021897s
+Time used: 0.021231
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003731s
+Time used: 4.00269
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.013423s
+Time used: 4.00009
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010641s
+Time used: 1.00002
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.063244s
+Time used: 0.040056
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001541s
+Time used: 1.00154
+
+LOG: SAT solveNonLinear - Elapsed time: 1.064785s
+Cost: 1; Total time: 1.04159
+[33mQuasi-ranking function: [36m50000 + __const_100^0 - e^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002240s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010337s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.020564s
+Time used: 0.020036
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003523s
+Time used: 4.0025
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.013751s
+Time used: 4.00045
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010384s
+Time used: 1.00011
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.064232s
+Time used: 0.039966
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.008689s
+Time used: 1.00868
+
+LOG: SAT solveNonLinear - Elapsed time: 1.072920s
+Cost: 1; Total time: 1.04864
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 + copied^0 <= e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __const_100^0 - __const_11^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002390s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010978s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022234s
+Time used: 0.021529
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003904s
+Time used: 4.00282
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.015679s
+Time used: 4.0001
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010531s
+Time used: 1.00014
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.071878s
+Time used: 0.047737
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001642s
+Time used: 1.00164
+
+LOG: SAT solveNonLinear - Elapsed time: 1.073520s
+Cost: 1; Total time: 1.04938
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= 1 + e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + __const_100^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002533s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011218s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.023546s
+Time used: 0.022852
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.040656s
+Time used: 4.03844
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.580004s
+Time used: 0.569241
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.993483s
+Time used: 0.983564
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.069737s
+Time used: 0.045972
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.940188s
+Time used: 0.940184
+
+LOG: SAT solveNonLinear - Elapsed time: 1.009925s
+Cost: 1; Total time: 0.986156
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 <= e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - __const_100^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002581s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011771s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.023907s
+Time used: 0.0232
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.910750s
+Time used: 0.904486
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.993287s
+Time used: 0.987497
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.999326s
+Time used: 0.988777
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.067838s
+Time used: 0.044482
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.940837s
+Time used: 0.940834
+
+LOG: SAT solveNonLinear - Elapsed time: 1.008674s
+Cost: 1; Total time: 0.985316
+[33mQuasi-ranking function: [36m50000 - __const_11^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002735s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012323s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.026398s
+Time used: 0.02584
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.907933s
+Time used: 0.906965
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.997224s
+Time used: 0.992575
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.000488s
+Time used: 0.989935
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.074275s
+Time used: 0.050934
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.939628s
+Time used: 0.939635
+
+LOG: SAT solveNonLinear - Elapsed time: 1.013903s
+Cost: 1; Total time: 0.990569
+[33mQuasi-ranking function: [36m50000 + __const_11^0 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 + __const_11^0 + n^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002808s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012572s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 + __const_11^0 + n^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.025534s
+Time used: 0.024765
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.878415s
+Time used: 0.875615
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.996575s
+Time used: 0.990903
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.001993s
+Time used: 0.988742
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.068445s
+Time used: 0.045183
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.937675s
+Time used: 0.937683
+
+LOG: SAT solveNonLinear - Elapsed time: 1.006120s
+Cost: 1; Total time: 0.982866
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: 1 + copied^0 <= e^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ copied^0 = 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 + __const_11^0 + n^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - e^0 + n^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 + __const_11^0 + n^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0 /\ 50001 + n^0 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, e^0, n^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002996s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012936s
+Trying to remove transition: <l1, l1, 1 + copied^0 <= e^0 /\ 1 <= copied^0 + e^0 /\ n^0 <= __const_100^0 /\ __const_11^0 <= 0 /\ 0 <= copied^0 /\ 50001 + __const_100^0 + __const_11^0 <= e^0 /\ 50001 + __const_100^0 + __const_11^0 + n^0 <= e^0 /\ 50001 + __const_100^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 + n^0 <= __const_11^0 + e^0 /\ 50001 + __const_100^0 <= e^0 /\ 50001 + __const_100^0 + n^0 <= e^0 /\ 50001 + __const_11^0 <= __const_100^0 + e^0 /\ 50001 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + __const_11^0 + e^0 /\ 50001 <= __const_100^0 + e^0 /\ 50001 + n^0 <= __const_100^0 + e^0 /\ 50001 + __const_11^0 + n^0 <= 2*__const_100^0 + e^0 /\ 50001 + __const_11^0 <= e^0 /\ 50001 + __const_11^0 + n^0 <= e^0 /\ 50001 <= __const_11^0 + e^0 /\ 50001 + n^0 <= __const_11^0 + e^0 /\ 50001 <= e^0 /\ 50001 + n^0 <= e^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027119s
+Time used: 0.026339
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.899572s
+Time used: 0.898598
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.998620s
+Time used: 0.993067
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.998197s
+Time used: 0.988532
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010048s
+Time used: 0.987114
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l1, copied^0 = 0 /\ n^0 = undef78 /\ e^0 = 1, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l1, copied^0 = 0 /\ n^0 = undef78 /\ e^0 = 1, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010193s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.010352s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+<l1, l1, 1 <= e^0 /\ n^0 <= __const_100^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+Variables:
+__const_100^0, __const_11^0, copied^0, e^0, n^0, olde^0, oldn^0, __const_10^0
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, e^0 <= 0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.003644s
+Time used: 5.00358
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.007484s
+Time used: 5.00014
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.999641s
+Time used: 1.97201
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002334s
+Time used: 1.00235
+
+LOG: SAT solveNonLinear - Elapsed time: 3.001975s
+Cost: 2; Total time: 2.97436
+[31mFailed at location 1: 1 + __const_11^0 <= 0[0m
+[31mFailed at location 1: e^0 + n^0 <= 1 + __const_100^0 + __const_11^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + __const_11^0 <= 0[0m
+[36mQuasi-invariant at l1: 1 <= e^0[0m
+[36mQuasi-invariant at l1: e^0 + n^0 <= 1 + __const_100^0 + __const_11^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013541s
+Remaining time after improvement: 0.99342
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + __const_11^0 <= 0[0m
+[36mQuasi-invariant at l1: 1 <= e^0[0m
+[36mQuasi-invariant at l1: e^0 + n^0 <= 1 + __const_100^0 + __const_11^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + __const_11^0 <= 0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ copied^0 <= 0 /\ e^0 + n^0 <= 1 + __const_100^0 + __const_11^0, {copied^0 -> 1, e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0 /\ copied^0 <= 0, {copied^0 -> 1, e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, olde^0 -> e^0, oldn^0 -> n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + __const_11^0 <= 0 /\ 1 <= e^0 /\ n^0 <= __const_100^0 /\ e^0 + n^0 <= 1 + __const_100^0 + __const_11^0, {e^0 -> 1 + e^0, n^0 -> __const_11^0 + n^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 + __const_100^0 <= n^0 /\ 1 <= e^0, {e^0 -> -1 + e^0, n^0 -> -__const_10^0 + n^0, rest remain the same}>
+
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 1 + __const_11^0 <= 0, 1 <= e^0, e^0 + n^0 <= 1 + __const_100^0 + __const_11^0, 
+OPEN EXITS: 
+<l1, end, 1 <= e^0 /\ e^0 + n^0 <= 1 + __const_100^0 + __const_11^0, {all remain the same}> (condsUp: 1 + __const_11^0 <= 0)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l1, copied^0 = 0 /\ n^0 = undef78 /\ e^0 = 1, {all remain the same}>
+Conditions: 1 <= e^0, e^0 + n^0 <= 1 + __const_100^0 + __const_11^0, 1 + __const_11^0 <= 0, 
+OPEN EXITS: 
+<l0, l1, 1 + __const_11^0 <= 0 /\ e^0 + n^0 <= 1 + __const_100^0 + __const_11^0 /\ copied^0 = 0 /\ n^0 = undef78 /\ e^0 = 1, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

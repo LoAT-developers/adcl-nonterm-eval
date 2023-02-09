@@ -1,0 +1,77 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=arg1P0, (1-arg1P0+x20 == 0 /\ 1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+   1: f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2P1, arg1'=arg1P1, (arg2 > 0 /\ arg1-arg1P1 == 0 /\ arg1 > 0 /\ arg2-arg1-arg2P1 == 0), cost: 1
+   2: __init -> f1_0_main_Load : arg2'=arg2P2, arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=arg1P0, (1-arg1P0+x20 == 0 /\ 1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2P1, arg1'=arg1P1, (arg2 > 0 /\ arg1-arg1P1 == 0 /\ arg1 > 0 /\ arg2-arg1-arg2P1 == 0), cost: 1
+New rule:
+f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2-arg1, (arg2 > 0 /\ arg1 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   3: f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+   4: f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2-arg1, (arg2 > 0 /\ arg1 > 0), cost: 1
+   2: __init -> f1_0_main_Load : arg2'=arg2P2, arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2-arg1, (arg2 > 0 /\ arg1 > 0), cost: 1
+New rule:
+f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2-arg1*n, (arg2-(-1+n)*arg1 > 0 /\ arg1 > 0 /\ n >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_fMKcFi.txt
+
+Applied deletion
+Removed the following rules: 4
+
+Accelerated simple loops
+Start location: __init
+   3: f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+   5: f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2-arg1*n, (arg2-(-1+n)*arg1 > 0 /\ arg1 > 0 /\ n >= 0), cost: n
+   2: __init -> f1_0_main_Load : arg2'=arg2P2, arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+Second rule:
+f217_0_quot_LE -> f217_0_quot_LE : arg2'=arg2-arg1*n, (arg2-(-1+n)*arg1 > 0 /\ arg1 > 0 /\ n >= 0), cost: n
+New rule:
+f1_0_main_Load -> f217_0_quot_LE : arg2'=-(1+x20)*n+arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -(-1+n)*(1+x20)+arg2P0 > 0 /\ -1+arg2 > 0 /\ n >= 0 /\ arg2P0 > 0), cost: 1+n
+
+Applied deletion
+Removed the following rules: 5
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   3: f1_0_main_Load -> f217_0_quot_LE : arg2'=arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -1+arg2 > 0 /\ arg2P0 > 0), cost: 1
+   6: f1_0_main_Load -> f217_0_quot_LE : arg2'=-(1+x20)*n+arg2P0, arg1'=1+x20, (1+x20 > 0 /\ arg1 > 0 /\ -(-1+n)*(1+x20)+arg2P0 > 0 /\ -1+arg2 > 0 /\ n >= 0 /\ arg2P0 > 0), cost: 1+n
+   2: __init -> f1_0_main_Load : arg2'=arg2P2, arg1'=arg1P2, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

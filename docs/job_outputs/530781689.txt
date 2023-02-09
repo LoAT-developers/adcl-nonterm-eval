@@ -1,0 +1,228 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l13, true>
+<l1, l2, ((0 + got_SIGHUP^0) <= 0)>
+<l1, l3, (1 <= (0 + got_SIGHUP^0)) /\ (undef12 = undef12), par{___rho_3_^0 -> undef12, a22^0 -> 1, got_SIGHUP^0 -> 0, tt1^0 -> (0 + undef12)}>
+<l4, l5, true>
+<l6, l7, true>
+<l8, l6, (undef44 = undef44), par{___rho_5_^0 -> undef44}>
+<l9, l8, (((1 + curtime^0) + (~(1) * last_copy_time^0)) <= 1000)>
+<l9, l8, (1000 <= ((0 + curtime^0) + (~(1) * last_copy_time^0))), par{wakend^0 -> 1}>
+<l10, l8, (1 <= (0 + wakend^0))>
+<l10, l9, ((0 + wakend^0) <= 0) /\ (undef86 = undef86), par{curtime^0 -> undef86}>
+<l7, l11, true>
+<l11, l7, true>
+<l2, l10, ((0 + wakend^0) <= 0)>
+<l2, l10, (1 <= (0 + wakend^0)) /\ (undef123 = undef123), par{___rho_4_^0 -> undef123, last_copy_time^0 -> (0 + undef123), wakend^0 -> 0}>
+<l3, l2, (1 <= (0 + tt1^0))>
+<l3, l6, ((0 + tt1^0) <= 0)>
+<l12, l1, (undef161 = 1) /\ (undef151 = undef151), par{___rho_2_^0 -> undef151, got_SIGHUP^0 -> (0 + undef151), wakend^0 -> 1}>
+<l13, l12, true>
+
+Fresh variables:
+undef12, undef44, undef86, undef123, undef151, undef161, 
+
+Undef variables:
+undef12, undef44, undef86, undef123, undef151, undef161, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l7, (undef161 = 1) /\ (undef151 = undef151) /\ ((0 + (0 + undef151)) <= 0) /\ (1 <= (0 + 1)) /\ (undef123 = undef123) /\ ((0 + 0) <= 0) /\ (undef86 = undef86) /\ (((1 + undef86) + (~(1) * (0 + undef123))) <= 1000) /\ (undef44 = undef44), par{last_copy_time^0 -> (0 + undef123)}>
+<l0, l7, (undef161 = 1) /\ (undef151 = undef151) /\ ((0 + (0 + undef151)) <= 0) /\ (1 <= (0 + 1)) /\ (undef123 = undef123) /\ ((0 + 0) <= 0) /\ (undef86 = undef86) /\ (1000 <= ((0 + undef86) + (~(1) * (0 + undef123)))) /\ (undef44 = undef44), par{last_copy_time^0 -> (0 + undef123)}>
+<l0, l7, (undef161 = 1) /\ (undef151 = undef151) /\ (1 <= (0 + (0 + undef151))) /\ (undef12 = undef12) /\ (1 <= (0 + (0 + undef12))) /\ (1 <= (0 + 1)) /\ (undef123 = undef123) /\ ((0 + 0) <= 0) /\ (undef86 = undef86) /\ (((1 + undef86) + (~(1) * (0 + undef123))) <= 1000) /\ (undef44 = undef44), par{last_copy_time^0 -> (0 + undef123)}>
+<l0, l7, (undef161 = 1) /\ (undef151 = undef151) /\ (1 <= (0 + (0 + undef151))) /\ (undef12 = undef12) /\ (1 <= (0 + (0 + undef12))) /\ (1 <= (0 + 1)) /\ (undef123 = undef123) /\ ((0 + 0) <= 0) /\ (undef86 = undef86) /\ (1000 <= ((0 + undef86) + (~(1) * (0 + undef123)))) /\ (undef44 = undef44), par{last_copy_time^0 -> (0 + undef123)}>
+<l0, l7, (undef161 = 1) /\ (undef151 = undef151) /\ (1 <= (0 + (0 + undef151))) /\ (undef12 = undef12) /\ ((0 + (0 + undef12)) <= 0)>
+<l7, l7, true>
+
+Fresh variables:
+undef12, undef44, undef86, undef123, undef151, undef161, 
+
+Undef variables:
+undef12, undef44, undef86, undef123, undef151, undef161, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l7, l7, true, {all remain the same}>
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 7 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001827
+
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000486s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000594s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l7, l7, true, {all remain the same}>
+Variables:
+
+Checking conditional non-termination of SCC {l7}...
+> No exit transition to close.
+Calling reachability with...
+Transition: <l7, end, true, {all remain the same}>
+Conditions: 
+Transition: <l7, end, true, {all remain the same}>
+Conditions: 
+Transition: <l7, end, true, {all remain the same}>
+Conditions: 
+Transition: <l7, end, true, {all remain the same}>
+Conditions: 
+Transition: <l7, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l7, end, true, {all remain the same}>
+<l7, end, true, {all remain the same}>
+<l7, end, true, {all remain the same}>
+<l7, end, true, {all remain the same}>
+<l7, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+Conditions: 
+Transition: <l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+<l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+<l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+<l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+<l0, l7, undef151 <= 0 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef151 <= 0 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ undef86 <= 999 + undef123 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, 1 <= undef12 /\ 1 <= undef151 /\ 1000 + undef123 <= undef86 /\ undef161 = 1, {last_copy_time^0 -> undef123, rest remain the same}>
+<l0, l7, undef12 <= 0 /\ 1 <= undef151 /\ undef161 = 1, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

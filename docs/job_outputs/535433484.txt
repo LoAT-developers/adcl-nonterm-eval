@@ -1,0 +1,61 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P0, -3+arg1P0 > 0, cost: 1
+   1: f176_0_iter_NULL -> f176_0_iter_NULL : arg1'=arg1P1, (1+arg1P1 > 0 /\ arg1 > 0 /\ 1+arg1P1-arg1 <= 0), cost: 1
+   2: __init -> f1_0_main_New : arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f176_0_iter_NULL -> f176_0_iter_NULL : arg1'=arg1P1, (1+arg1P1 > 0 /\ arg1 > 0 /\ 1+arg1P1-arg1 <= 0), cost: 1
+New rule:
+f176_0_iter_NULL -> f176_0_iter_NULL : arg1'=arg1P1, (1+arg1P1 > 0 /\ 1+arg1P1-arg1 <= 0), cost: 1
+
+Simplified rules
+Start location: __init
+   0: f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P0, -3+arg1P0 > 0, cost: 1
+   3: f176_0_iter_NULL -> f176_0_iter_NULL : arg1'=arg1P1, (1+arg1P1 > 0 /\ 1+arg1P1-arg1 <= 0), cost: 1
+   2: __init -> f1_0_main_New : arg1'=arg1P2, TRUE, cost: 1
+
+
+Accelerated simple loops
+Start location: __init
+   0: f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P0, -3+arg1P0 > 0, cost: 1
+   3: f176_0_iter_NULL -> f176_0_iter_NULL : arg1'=arg1P1, (1+arg1P1 > 0 /\ 1+arg1P1-arg1 <= 0), cost: 1
+   2: __init -> f1_0_main_New : arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P0, -3+arg1P0 > 0, cost: 1
+Second rule:
+f176_0_iter_NULL -> f176_0_iter_NULL : arg1'=arg1P1, (1+arg1P1 > 0 /\ 1+arg1P1-arg1 <= 0), cost: 1
+New rule:
+f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P1, 1+arg1P1 > 0, cost: 2
+
+Applied deletion
+Removed the following rules: 3
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   0: f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P0, -3+arg1P0 > 0, cost: 1
+   4: f1_0_main_New -> f176_0_iter_NULL : arg1'=arg1P1, 1+arg1P1 > 0, cost: 2
+   2: __init -> f1_0_main_New : arg1'=arg1P2, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

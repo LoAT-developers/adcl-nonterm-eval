@@ -1,0 +1,232 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l18, true>
+<l1, l2, ((0 + nodecount^0) <= (0 + i^0))>
+<l1, l3, ((1 + i^0) <= (0 + nodecount^0)), par{i^0 -> (1 + i^0)}>
+<l4, l5, true, par{i^0 -> (1 + i^0)}>
+<l4, l2, true>
+<l6, l3, ((0 + edgecount^0) <= (0 + i^0)), par{i^0 -> 0}>
+<l6, l4, ((1 + i^0) <= (0 + edgecount^0)) /\ (undef41 = undef41) /\ (undef42 = undef42), par{x^0 -> undef41, y^0 -> undef42}>
+<l7, l8, true, par{j^0 -> (1 + j^0)}>
+<l9, l10, ((0 + edgecount^0) <= (0 + j^0)), par{i^0 -> (1 + i^0)}>
+<l9, l7, ((1 + j^0) <= (0 + edgecount^0)) /\ (undef62 = undef62) /\ (undef63 = undef63), par{x^0 -> undef62, y^0 -> undef63}>
+<l11, l5, ((0 + nodecount^0) <= (0 + i^0)), par{i^0 -> 0}>
+<l11, l8, ((1 + i^0) <= (0 + nodecount^0)), par{j^0 -> 0}>
+<l12, l13, true>
+<l13, l14, true, par{i^0 -> (1 + i^0)}>
+<l14, l15, true>
+<l16, l12, ((1 + source^0) <= (0 + i^0))>
+<l16, l12, ((1 + i^0) <= (0 + source^0))>
+<l16, l13, ((0 + i^0) <= (0 + source^0)) /\ ((0 + source^0) <= (0 + i^0))>
+<l15, l10, ((0 + nodecount^0) <= (0 + i^0)), par{i^0 -> 0}>
+<l15, l16, ((1 + i^0) <= (0 + nodecount^0))>
+<l10, l11, true>
+<l8, l9, true>
+<l5, l6, true>
+<l3, l1, true>
+<l17, l14, true, par{edgecount^0 -> 16, i^0 -> 0, nodecount^0 -> 5, source^0 -> 0}>
+<l18, l17, true>
+
+Fresh variables:
+undef41, undef42, undef62, undef63, 
+
+Undef variables:
+undef41, undef42, undef62, undef63, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l14, (16 = 16) /\ (i^0 = 0) /\ (5 = 5) /\ (0 = 0)>
+<l3, l2, ((0 + 5) <= (0 + i^0))>
+<l3, l3, ((1 + i^0) <= (0 + 5)), par{i^0 -> (1 + i^0)}>
+<l5, l3, ((0 + 16) <= (0 + i^0)), par{i^0 -> 0}>
+<l5, l5, ((1 + i^0) <= (0 + 16)) /\ (undef41 = undef41) /\ (undef42 = undef42), par{i^0 -> (1 + i^0)}>
+<l5, l2, ((1 + i^0) <= (0 + 16)) /\ (undef41 = undef41) /\ (undef42 = undef42)>
+<l8, l5, ((0 + 16) <= (0 + j^0)) /\ ((0 + 5) <= (0 + (1 + i^0))), par{i^0 -> 0}>
+<l8, l8, ((0 + 16) <= (0 + j^0)) /\ ((1 + (1 + i^0)) <= (0 + 5)), par{i^0 -> (1 + i^0), j^0 -> 0}>
+<l8, l8, ((1 + j^0) <= (0 + 16)) /\ (undef62 = undef62) /\ (undef63 = undef63), par{j^0 -> (1 + j^0)}>
+<l14, l8, ((0 + 5) <= (0 + i^0)) /\ ((1 + 0) <= (0 + 5)), par{i^0 -> 0, j^0 -> 0}>
+<l14, l14, ((1 + i^0) <= (0 + 5)) /\ ((1 + 0) <= (0 + i^0)), par{i^0 -> (1 + i^0)}>
+<l14, l14, ((1 + i^0) <= (0 + 5)) /\ ((1 + i^0) <= (0 + 0)), par{i^0 -> (1 + i^0)}>
+<l14, l14, ((1 + i^0) <= (0 + 5)) /\ ((0 + i^0) <= (0 + 0)) /\ ((0 + 0) <= (0 + i^0)), par{i^0 -> (1 + i^0)}>
+
+Fresh variables:
+undef41, undef42, undef62, undef63, 
+
+Undef variables:
+undef41, undef42, undef62, undef63, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l14, l14, 1 <= i^0 /\ i^0 <= 4, {i^0 -> 1 + i^0, rest remain the same}>
+<l14, l14, 1 + i^0 <= 0, {i^0 -> 1 + i^0, rest remain the same}>
+<l14, l14, i^0 = 0, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+i^0
+
+Graph 2:
+Transitions:
+<l8, l8, 16 <= j^0 /\ i^0 <= 3, {i^0 -> 1 + i^0, j^0 -> 0, rest remain the same}>
+<l8, l8, j^0 <= 15, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+i^0, j^0
+
+Graph 3:
+Transitions:
+<l5, l5, i^0 <= 15, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+i^0
+
+Graph 4:
+Transitions:
+<l3, l3, i^0 <= 4, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+i^0
+
+Graph 5:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l14, i^0 = 0, {all remain the same}>
+
+Graph 2
+<l14, l8, 5 <= i^0, {i^0 -> 0, j^0 -> 0, rest remain the same}>
+
+Graph 3
+<l8, l5, 16 <= j^0 /\ 4 <= i^0, {i^0 -> 0, rest remain the same}>
+
+Graph 4
+<l5, l3, 16 <= i^0, {i^0 -> 0, rest remain the same}>
+
+Graph 5
+<l3, l2, 5 <= i^0, {all remain the same}>
+<l5, l2, i^0 <= 15, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 5 )
+( 3 , 4 )
+( 5 , 3 )
+( 8 , 2 )
+( 14 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.004733
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l14: 0 <= i^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, 1 + i^0 <= 0, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 <= i^0 /\ i^0 <= 4, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, i^0 = 0, {i^0 -> 1 + i^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 0.002435
+
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000936s
+[33mRanking function: [36m4 - i^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.012673
+
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001333s
+[33mRanking function: [36m3 - i^0[0m
+New Graphs: 
+Transitions:
+<l8, l8, j^0 <= 15, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000556s
+[33mRanking function: [36m15 - j^0[0m
+New Graphs: 
+Proving termination of subgraph 3
+Checking unfeasibility...
+Time used: 0.001236
+
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000628s
+[33mRanking function: [36m15 - i^0[0m
+New Graphs: 
+Proving termination of subgraph 4
+Checking unfeasibility...
+Time used: 0.001215
+
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000638s
+[33mRanking function: [36m4 - i^0[0m
+New Graphs: 
+Proving termination of subgraph 5
+Analyzing SCC {l2}...
+No cycles found.
+
+[32mProgram Terminates[0m

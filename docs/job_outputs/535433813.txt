@@ -1,0 +1,143 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+   1: f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P1, arg1'=arg1P1, (arg1-arg1P1 == 0 /\ arg1-x70 > 0 /\ arg1-2*x60 == 0 /\ -1+arg1 > 0), cost: 1
+   3: f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P3, arg1'=arg1P3, (3*arg1 > 0 /\ -arg1P3+arg1 == 0 /\ -1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 1
+   2: f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-arg1P2+arg1 > 0 /\ -2*arg1P2+arg1 >= 0 /\ -2+arg1-2*x100 < 0 /\ -1+arg1 > 0 /\ arg1-2*x100 >= 0 /\ arg1-2*x100 == 0 /\ -2-2*arg1P2+arg1 < 0), cost: 1
+   4: f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P4, arg1'=arg1P4, (-1+arg1-2*x140 == 0 /\ 1-arg1P4+3*arg1 == 0 /\ 3*arg1 > 0 /\ -2+arg1-2*x140 < 0 /\ -1+arg1 > 0 /\ arg1-2*x140 >= 0), cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P1, arg1'=arg1P1, (arg1-arg1P1 == 0 /\ arg1-x70 > 0 /\ arg1-2*x60 == 0 /\ -1+arg1 > 0), cost: 1
+New rule:
+f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P1, (arg1-2*x60 == 0 /\ -1+arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-arg1P2+arg1 > 0 /\ -2*arg1P2+arg1 >= 0 /\ -2+arg1-2*x100 < 0 /\ -1+arg1 > 0 /\ arg1-2*x100 >= 0 /\ arg1-2*x100 == 0 /\ -2-2*arg1P2+arg1 < 0), cost: 1
+New rule:
+f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P3, arg1'=arg1P3, (3*arg1 > 0 /\ -arg1P3+arg1 == 0 /\ -1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 1
+New rule:
+f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P3, (-1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P4, arg1'=arg1P4, (-1+arg1-2*x140 == 0 /\ 1-arg1P4+3*arg1 == 0 /\ 3*arg1 > 0 /\ -2+arg1-2*x140 < 0 /\ -1+arg1 > 0 /\ arg1-2*x140 >= 0), cost: 1
+New rule:
+f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   0: f1_0_main_Load -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+   6: f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P1, (arg1-2*x60 == 0 /\ -1+arg1 > 0), cost: 1
+   8: f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P3, (-1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 1
+   7: f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 1
+   9: f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0), cost: 1
+   5: __init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P5, arg1'=arg1P5, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P0 > 0), cost: 1
+New rule:
+__init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+
+Applied deletion
+Removed the following rules: 0 5
+
+Eliminated locations on linear paths
+Start location: __init
+   6: f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P1, (arg1-2*x60 == 0 /\ -1+arg1 > 0), cost: 1
+   8: f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P3, (-1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 1
+   7: f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 1
+   9: f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0), cost: 1
+  10: __init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+
+
+Eliminating location f84_0_main_LE\' by chaining:
+
+Applied chaining
+First rule:
+f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P1, (arg1-2*x60 == 0 /\ -1+arg1 > 0), cost: 1
+Second rule:
+f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 1
+New rule:
+f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (arg1-2*x60 == 0 /\ -2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 2
+
+Applied chaining
+First rule:
+f84_0_main_LE -> f84_0_main_LE\' : arg2'=arg2P3, (-1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 1
+Second rule:
+f84_0_main_LE\' -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0), cost: 1
+New rule:
+f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 2
+
+Applied deletion
+Removed the following rules: 6 7 8 9
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  11: f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (arg1-2*x60 == 0 /\ -2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 2
+  12: f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 2
+  10: __init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+
+
+Accelerated simple loops
+Start location: __init
+  11: f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (arg1-2*x60 == 0 /\ -2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 2
+  12: f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 2
+  10: __init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+
+
+Applied chaining
+First rule:
+__init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+Second rule:
+f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (arg1-2*x60 == 0 /\ -2*arg1P2+arg1 >= 0 /\ -1+arg1 > 0 /\ arg1-2*x100 == 0 /\ 2+2*arg1P2-arg1 > 0), cost: 2
+New rule:
+__init -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-2*arg1P2+2*x60 >= 0 /\ -1+2*x60 > 0 /\ 2+2*arg1P2-2*x60 > 0), cost: 4
+
+Applied chaining
+First rule:
+__init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+Second rule:
+f84_0_main_LE -> f84_0_main_LE : arg2'=arg2P4, arg1'=1+3*arg1, (-1+arg1-2*x140 == 0 /\ -1+arg1 > 0 /\ -1+arg1-2*x120 == 0), cost: 2
+New rule:
+__init -> f84_0_main_LE : arg2'=arg2P4, arg1'=4+6*x140, 2*x140 > 0, cost: 4
+
+Applied deletion
+Removed the following rules: 11 12
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  10: __init -> f84_0_main_LE : arg2'=arg2P0, arg1'=arg1P0, (arg1P5 > 0 /\ 1+arg1P0 > 0 /\ 1+arg2P5 > 0), cost: 2
+  13: __init -> f84_0_main_LE : arg2'=arg2P2, arg1'=arg1P2, (-2*arg1P2+2*x60 >= 0 /\ -1+2*x60 > 0 /\ 2+2*arg1P2-2*x60 > 0), cost: 4
+  14: __init -> f84_0_main_LE : arg2'=arg2P4, arg1'=4+6*x140, 2*x140 > 0, cost: 4
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

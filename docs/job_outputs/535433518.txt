@@ -1,0 +1,255 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, 1-arg1P0 == 0, cost: 1
+   1: f458_0_sort_GE -> f543_0_sort_GE : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (-arg2P1 == 0 /\ arg1-arg1P1 == 0 /\ arg1 > 0 /\ -100+arg1 < 0 /\ 100-arg1-arg3P1 == 0), cost: 1
+   2: f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, (1-arg1P2+arg1 == 0 /\ -arg2+arg3 <= 0), cost: 1
+   3: f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2P3, arg1'=arg1P3, arg3'=arg3P3, (1+arg2 > 0 /\ arg1 > 0 /\ -100+arg2 < 0 /\ 100-arg3P3-arg1 == 0 /\ -arg1P3+arg1 == 0 /\ -arg2+arg3 > 0 /\ 1+arg2-arg2P3 == 0 /\ -99+arg2 < 0 /\ x80-x70 <= 0), cost: 1
+   4: f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, (1+arg2 > 0 /\ arg1 > 0 /\ -100+arg2 < 0 /\ -arg1P4+arg1 == 0 /\ -x120+x130 > 0 /\ 1-arg2P4+arg2 == 0 /\ 100-arg1-arg3P4 == 0 /\ -arg2+arg3 > 0 /\ -99+arg2 < 0), cost: 1
+   5: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P5, arg1'=arg1P5, arg3'=arg3P5, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, 1-arg1P0 == 0, cost: 1
+New rule:
+f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (-arg2P1 == 0 /\ arg1-arg1P1 == 0 /\ arg1 > 0 /\ -100+arg1 < 0 /\ 100-arg1-arg3P1 == 0), cost: 1
+New rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, (1-arg1P2+arg1 == 0 /\ -arg2+arg3 <= 0), cost: 1
+New rule:
+f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2P3, arg1'=arg1P3, arg3'=arg3P3, (1+arg2 > 0 /\ arg1 > 0 /\ -100+arg2 < 0 /\ 100-arg3P3-arg1 == 0 /\ -arg1P3+arg1 == 0 /\ -arg2+arg3 > 0 /\ 1+arg2-arg2P3 == 0 /\ -99+arg2 < 0 /\ x80-x70 <= 0), cost: 1
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=1+arg2, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2 > 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2P4, arg1'=arg1P4, arg3'=arg3P4, (1+arg2 > 0 /\ arg1 > 0 /\ -100+arg2 < 0 /\ -arg1P4+arg1 == 0 /\ -x120+x130 > 0 /\ 1-arg2P4+arg2 == 0 /\ 100-arg1-arg3P4 == 0 /\ -arg2+arg3 > 0 /\ -99+arg2 < 0), cost: 1
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=1+arg2, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2 > 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   6: f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 1
+   7: f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+   8: f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+   9: f543_0_sort_GE -> f543_0_sort_GE : arg2'=1+arg2, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2 > 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 1
+   5: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P5, arg1'=arg1P5, arg3'=arg3P5, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=1+arg2, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2 > 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 1
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2+n, arg3'=100-arg1, (1+arg2 > 0 /\ arg1 > 0 /\ 100-arg2-n > 0 /\ 101-arg2-n-arg1 > 0 /\ -arg2+arg3 > 0 /\ -1+n >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_cjAlnB.txt
+
+Applied instantiation
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2+n, arg3'=100-arg1, (1+arg2 > 0 /\ arg1 > 0 /\ 100-arg2-n > 0 /\ 101-arg2-n-arg1 > 0 /\ -arg2+arg3 > 0 /\ -1+n >= 0), cost: n
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, (1 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 2-arg1 > 0 /\ 98-arg2 >= 0 /\ -arg2+arg3 > 0), cost: 99-arg2
+
+Applied instantiation
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=arg2+n, arg3'=100-arg1, (1+arg2 > 0 /\ arg1 > 0 /\ 100-arg2-n > 0 /\ 101-arg2-n-arg1 > 0 /\ -arg2+arg3 > 0 /\ -1+n >= 0), cost: n
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (1 > 0 /\ 1+arg2 > 0 /\ 99-arg2-arg1 >= 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 100-arg2-arg1
+
+Applied simplification
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, (1 > 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 2-arg1 > 0 /\ 98-arg2 >= 0 /\ -arg2+arg3 > 0), cost: 99-arg2
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, (-98+arg2 <= 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 2-arg1 > 0 /\ -arg2+arg3 > 0), cost: 99-arg2
+
+Applied simplification
+Original rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (1 > 0 /\ 1+arg2 > 0 /\ 99-arg2-arg1 >= 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 100-arg2-arg1
+New rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2-arg1 >= 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 100-arg2-arg1
+
+Applied deletion
+Removed the following rules: 9
+
+Accelerated simple loops
+Start location: __init
+   6: f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 1
+   7: f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+   8: f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+  12: f543_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, (-98+arg2 <= 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 2-arg1 > 0 /\ -arg2+arg3 > 0), cost: 99-arg2
+  13: f543_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2-arg1 >= 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 100-arg2-arg1
+   5: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P5, arg1'=arg1P5, arg3'=arg3P5, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+Second rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, (-98+arg2 <= 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 2-arg1 > 0 /\ -arg2+arg3 > 0), cost: 99-arg2
+New rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, -1+arg1 == 0, cost: 100
+
+Applied chaining
+First rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+Second rule:
+f543_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (1+arg2 > 0 /\ 99-arg2-arg1 >= 0 /\ arg1 > 0 /\ -arg2+arg3 > 0), cost: 100-arg2-arg1
+New rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 101-arg1
+
+Applied deletion
+Removed the following rules: 12 13
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   6: f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 1
+   7: f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+  14: f458_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, -1+arg1 == 0, cost: 100
+  15: f458_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 101-arg1
+   8: f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+   5: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P5, arg1'=arg1P5, arg3'=arg3P5, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_ConstantStackPush : arg2'=arg2P5, arg1'=arg1P5, arg3'=arg3P5, TRUE, cost: 1
+Second rule:
+f1_0_main_ConstantStackPush -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 1
+New rule:
+__init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+
+Applied deletion
+Removed the following rules: 5 6
+
+Eliminated locations on linear paths
+Start location: __init
+   7: f458_0_sort_GE -> f543_0_sort_GE : arg2'=0, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 1
+  14: f458_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, -1+arg1 == 0, cost: 100
+  15: f458_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 101-arg1
+   8: f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+  16: __init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+
+
+Eliminating location f543_0_sort_GE by chaining:
+
+Applied chaining
+First rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=99, arg3'=100-arg1, -1+arg1 == 0, cost: 100
+Second rule:
+f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (1-arg1 <= 0 /\ -1+arg1 == 0), cost: 101
+
+Applied simplification
+Original rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (1-arg1 <= 0 /\ -1+arg1 == 0), cost: 101
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -1+arg1 == 0, cost: 101
+
+Applied chaining
+First rule:
+f458_0_sort_GE -> f543_0_sort_GE : arg2'=100-arg1, arg3'=100-arg1, (arg1 > 0 /\ 100-arg1 > 0), cost: 101-arg1
+Second rule:
+f543_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -arg2+arg3 <= 0, cost: 1
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (0 <= 0 /\ arg1 > 0 /\ 100-arg1 > 0), cost: 102-arg1
+
+Applied simplification
+Original rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (0 <= 0 /\ arg1 > 0 /\ 100-arg1 > 0), cost: 102-arg1
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (arg1 > 0 /\ 100-arg1 > 0), cost: 102-arg1
+
+Applied deletion
+Removed the following rules: 7 8 14 15
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  17: f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -1+arg1 == 0, cost: 101
+  18: f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (arg1 > 0 /\ 100-arg1 > 0), cost: 102-arg1
+  16: __init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+
+
+Applied acceleration
+Original rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, (arg1 > 0 /\ 100-arg1 > 0), cost: 102-arg1
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=arg1+n1, arg3'=arg3P2, (101-arg1-n1 > 0 /\ arg1 > 0 /\ -1+n1 >= 0), cost: -arg1*n1-1/2*n1^2+205/2*n1
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_gLnMgh.txt
+
+Applied instantiation
+Original rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=arg1+n1, arg3'=arg3P2, (101-arg1-n1 > 0 /\ arg1 > 0 /\ -1+n1 >= 0), cost: -arg1*n1-1/2*n1^2+205/2*n1
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (1 > 0 /\ 99-arg1 >= 0 /\ arg1 > 0), cost: 10250-1/2*(-100+arg1)^2-205/2*arg1+arg1*(-100+arg1)
+
+Applied simplification
+Original rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (1 > 0 /\ 99-arg1 >= 0 /\ arg1 > 0), cost: 10250-1/2*(-100+arg1)^2-205/2*arg1+arg1*(-100+arg1)
+New rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (arg1 > 0 /\ -99+arg1 <= 0), cost: 10250-1/2*(-100+arg1)^2-205/2*arg1+arg1*(-100+arg1)
+
+Applied deletion
+Removed the following rules: 18
+
+Accelerated simple loops
+Start location: __init
+  17: f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -1+arg1 == 0, cost: 101
+  20: f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (arg1 > 0 /\ -99+arg1 <= 0), cost: 10250-1/2*(-100+arg1)^2-205/2*arg1+arg1*(-100+arg1)
+  16: __init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+
+
+Applied chaining
+First rule:
+__init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+Second rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=1+arg1, arg3'=arg3P2, -1+arg1 == 0, cost: 101
+New rule:
+__init -> f458_0_sort_GE : arg2'=arg2P2, arg1'=2, arg3'=arg3P2, 0 == 0, cost: 103
+
+Applied chaining
+First rule:
+__init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+Second rule:
+f458_0_sort_GE -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (arg1 > 0 /\ -99+arg1 <= 0), cost: 10250-1/2*(-100+arg1)^2-205/2*arg1+arg1*(-100+arg1)
+New rule:
+__init -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (1 > 0 /\ -98 <= 0), cost: 5150
+
+Applied deletion
+Removed the following rules: 17 20
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  16: __init -> f458_0_sort_GE : arg2'=arg2P0, arg1'=1, arg3'=arg3P0, TRUE, cost: 2
+  21: __init -> f458_0_sort_GE : arg2'=arg2P2, arg1'=2, arg3'=arg3P2, 0 == 0, cost: 103
+  22: __init -> f458_0_sort_GE : arg2'=arg2P2, arg1'=100, arg3'=arg3P2, (1 > 0 /\ -98 <= 0), cost: 5150
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

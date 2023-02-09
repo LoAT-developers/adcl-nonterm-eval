@@ -1,0 +1,360 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l11, true>
+<l1, l2, true>
+<l2, l1, true>
+<l3, l4, true>
+<l5, l3, (1 <= (0 + pIrb^0)) /\ (undef35 = undef35), par{ntStatus^0 -> undef35}>
+<l5, l3, ((0 + pIrb^0) <= 0)>
+<l6, l5, (undef54 = undef54), par{pIrb^0 -> undef54}>
+<l7, l6, ((1 + ResourceIrp^0) <= 0)>
+<l7, l6, (1 <= (0 + ResourceIrp^0))>
+<l7, l3, ((0 + ResourceIrp^0) <= 0) /\ (0 <= (0 + ResourceIrp^0))>
+<l8, l3, ((0 + IsochResourceData^0) <= 0)>
+<l8, l7, (1 <= (0 + IsochResourceData^0)) /\ (undef100 = undef100) /\ (undef93 = undef93) /\ (undef94 = undef94), par{ResourceIrp^0 -> (0 + undef94), StackSize^0 -> undef93, ___rho_99_^0 -> undef94}>
+<l9, l1, ((0 + k4^0) <= 0) /\ (undef110 = 1), par{keR^0 -> 0}>
+<l9, l8, (1 <= (0 + k4^0)) /\ (undef120 = 1), par{k4^0 -> (~(1) + k4^0), keR^0 -> 0}>
+<l4, l9, (undef130 = 1), par{keA^0 -> 0}>
+<l10, l4, true, par{keA^0 -> 0, keR^0 -> 0}>
+<l11, l10, true>
+
+Fresh variables:
+undef35, undef54, undef93, undef94, undef100, undef110, undef120, undef130, 
+
+Undef variables:
+undef35, undef54, undef93, undef94, undef100, undef110, undef120, undef130, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l4, true>
+<l1, l1, true>
+<l4, l1, (undef130 = 1) /\ ((0 + k4^0) <= 0) /\ (undef110 = 1)>
+<l4, l4, (undef130 = 1) /\ (1 <= (0 + k4^0)) /\ (undef120 = 1) /\ ((0 + IsochResourceData^0) <= 0), par{k4^0 -> (~(1) + k4^0)}>
+<l4, l4, (undef130 = 1) /\ (1 <= (0 + k4^0)) /\ (undef120 = 1) /\ (1 <= (0 + IsochResourceData^0)) /\ (undef100 = undef100) /\ (undef93 = undef93) /\ (undef94 = undef94) /\ ((1 + (0 + undef94)) <= 0) /\ (undef54 = undef54) /\ (1 <= (0 + undef54)) /\ (undef35 = undef35), par{k4^0 -> (~(1) + k4^0)}>
+<l4, l4, (undef130 = 1) /\ (1 <= (0 + k4^0)) /\ (undef120 = 1) /\ (1 <= (0 + IsochResourceData^0)) /\ (undef100 = undef100) /\ (undef93 = undef93) /\ (undef94 = undef94) /\ ((1 + (0 + undef94)) <= 0) /\ (undef54 = undef54) /\ ((0 + undef54) <= 0), par{k4^0 -> (~(1) + k4^0)}>
+<l4, l4, (undef130 = 1) /\ (1 <= (0 + k4^0)) /\ (undef120 = 1) /\ (1 <= (0 + IsochResourceData^0)) /\ (undef100 = undef100) /\ (undef93 = undef93) /\ (undef94 = undef94) /\ (1 <= (0 + (0 + undef94))) /\ (undef54 = undef54) /\ (1 <= (0 + undef54)) /\ (undef35 = undef35), par{k4^0 -> (~(1) + k4^0)}>
+<l4, l4, (undef130 = 1) /\ (1 <= (0 + k4^0)) /\ (undef120 = 1) /\ (1 <= (0 + IsochResourceData^0)) /\ (undef100 = undef100) /\ (undef93 = undef93) /\ (undef94 = undef94) /\ (1 <= (0 + (0 + undef94))) /\ (undef54 = undef54) /\ ((0 + undef54) <= 0), par{k4^0 -> (~(1) + k4^0)}>
+<l4, l4, (undef130 = 1) /\ (1 <= (0 + k4^0)) /\ (undef120 = 1) /\ (1 <= (0 + IsochResourceData^0)) /\ (undef100 = undef100) /\ (undef93 = undef93) /\ (undef94 = undef94) /\ ((0 + (0 + undef94)) <= 0) /\ (0 <= (0 + (0 + undef94))), par{k4^0 -> (~(1) + k4^0)}>
+
+Fresh variables:
+undef35, undef54, undef93, undef94, undef100, undef110, undef120, undef130, 
+
+Undef variables:
+undef35, undef54, undef93, undef94, undef100, undef110, undef120, undef130, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l4, l4, 1 <= k4^0 /\ IsochResourceData^0 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef54 /\ 1 + undef94 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 + undef94 <= 0 /\ undef54 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef54 /\ 1 <= undef94 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef94 /\ undef54 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ undef94 = 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+Variables:
+IsochResourceData^0, k4^0
+
+Graph 2:
+Transitions:
+<l1, l1, true, {all remain the same}>
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l4, true, {all remain the same}>
+
+Graph 2
+<l4, l1, k4^0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 2 )
+( 4 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.014102
+
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004723s
+[33mRanking function: [36m-2 + IsochResourceData^0 + k4^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 <= k4^0 /\ IsochResourceData^0 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+Variables:
+IsochResourceData^0, k4^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000860s
+[33mRanking function: [36m-1 + k4^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.000859
+
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l4, l1, k4^0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l4, l1, k4^0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+* Postcondition  : 1 <= 0
+Postcodition moved up: 1 <= 0
+
+LOG: Try proving POST
+Postcondition: 1 <= 0
+
+LOG: CALL check - Post:1 <= 0 - Process 2
+* Exit transition: <l0, l4, undef110 = 1 /\ undef130 = 1, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000437s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000513s
+
+LOG: NarrowEntry size 1
+Narrowing transition: 
+<l4, l4, 1 <= k4^0 /\ IsochResourceData^0 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef54 /\ 1 + undef94 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 + undef94 <= 0 /\ undef54 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef54 /\ 1 <= undef94 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef94 /\ undef54 <= 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ undef94 = 0 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+ENTRIES:
+<l0, l4, 0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l4, l4, 1 <= k4^0 /\ 0 <= 0 /\ IsochResourceData^0 <= 0 /\ undef110 = 1 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef54 /\ 1 + undef94 <= 0 /\ 0 <= 0 /\ undef110 = 1 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 + undef94 <= 0 /\ 0 <= 0 /\ undef54 <= 0 /\ undef110 = 1 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef54 /\ 1 <= undef94 /\ 0 <= 0 /\ undef110 = 1 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 1 <= undef94 /\ 0 <= 0 /\ undef54 <= 0 /\ undef110 = 1 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+<l4, l4, 1 <= IsochResourceData^0 /\ 1 <= k4^0 /\ 0 <= 0 /\ undef94 = 0 /\ undef110 = 1 /\ undef120 = 1 /\ undef130 = 1, {k4^0 -> -1 + k4^0, rest remain the same}>
+END GRAPH:
+EXIT: <l4, l1, k4^0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+POST: 1 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.030232s
+Time used: 0.029911
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.026169s
+Time used: 1.0261
+
+LOG: SAT solveNonLinear - Elapsed time: 1.056401s
+Cost: 51; Total time: 1.05601
+[31mFailed at location 4: 1 + IsochResourceData^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l4: 1 + IsochResourceData^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009973s
+Remaining time after improvement: 0.996831
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: 1 + IsochResourceData^0 <= 0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:1 + IsochResourceData^0 <= 0 - Process 3
+* Exit transition: <l0, l4, 0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+* Postcondition  : 1 + IsochResourceData^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000945s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001037s
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.122268s
+Time used: 0.121718
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000947s
+Time used: 1.00089
+
+LOG: SAT solveNonLinear - Elapsed time: 1.123215s
+Cost: 51; Total time: 1.12261
+[31mFailed at location 4: k4^0 <= IsochResourceData^0[0m
+Before Improving: 
+[36mQuasi-invariant at l4: k4^0 <= IsochResourceData^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.068318s
+Remaining time after improvement: 0.994469
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: k4^0 <= IsochResourceData^0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:k4^0 <= IsochResourceData^0 - Process 4
+* Exit transition: <l0, l4, 0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+* Postcondition  : k4^0 <= IsochResourceData^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001633s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001736s
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.835641s
+Time used: 0.834886
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.165978s
+Time used: 0.165962
+
+LOG: SAT solveNonLinear - Elapsed time: 1.001619s
+Cost: 51; Total time: 1.00085
+[31mFailed at location 4: IsochResourceData^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l4: IsochResourceData^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010966s
+Remaining time after improvement: 0.993529
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: IsochResourceData^0 <= 0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:IsochResourceData^0 <= 0 - Process 5
+* Exit transition: <l0, l4, 0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+* Postcondition  : IsochResourceData^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001740s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001831s
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 3.303234s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 2
+Transitions:
+<l1, l1, true, {all remain the same}>
+Variables:
+
+Checking conditional non-termination of SCC {l1}...
+> No exit transition to close.
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l1, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l4, l1, k4^0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l4, l1, k4^0 <= 0, {all remain the same}> (condsUp: undef110 = 1, undef130 = 1)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l4, true, {all remain the same}>
+Conditions: k4^0 <= 0, undef110 = 1, undef130 = 1, 
+OPEN EXITS: 
+<l0, l4, k4^0 <= 0 /\ undef110 = 1 /\ undef130 = 1, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

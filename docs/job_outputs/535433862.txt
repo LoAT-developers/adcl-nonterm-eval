@@ -1,0 +1,58 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_ConstantStackPush -> f83_0_main_ArrayAccess : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2 > 0 /\ arg1 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0 /\ arg2-arg3P0 == 0 /\ 1+arg2-arg2P0 == 0), cost: 1
+   1: f83_0_main_ArrayAccess -> f83_0_main_ArrayAccess : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (arg3-arg3P1 == 0 /\ 1-arg2P1+arg3 == 0 /\ arg1 > 0 /\ arg1P1 > 0 /\ 1+arg3 > 0 /\ -arg1+arg1P1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_ConstantStackPush -> f83_0_main_ArrayAccess : arg2'=arg2P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg2 > 0 /\ arg1 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0 /\ arg2-arg3P0 == 0 /\ 1+arg2-arg2P0 == 0), cost: 1
+New rule:
+f1_0_main_ConstantStackPush -> f83_0_main_ArrayAccess : arg2'=1+arg2, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f83_0_main_ArrayAccess -> f83_0_main_ArrayAccess : arg2'=arg2P1, arg1'=arg1P1, arg3'=arg3P1, (arg3-arg3P1 == 0 /\ 1-arg2P1+arg3 == 0 /\ arg1 > 0 /\ arg1P1 > 0 /\ 1+arg3 > 0 /\ -arg1+arg1P1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+New rule:
+f83_0_main_ArrayAccess -> f83_0_main_ArrayAccess : arg2'=1+arg3, arg1'=arg1P1, (arg1P1 > 0 /\ 1+arg3 > 0 /\ -arg1+arg1P1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f83_0_main_ArrayAccess : arg2'=1+arg2, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+   4: f83_0_main_ArrayAccess -> f83_0_main_ArrayAccess : arg2'=1+arg3, arg1'=arg1P1, (arg1P1 > 0 /\ 1+arg3 > 0 /\ -arg1+arg1P1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Accelerated simple loops
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f83_0_main_ArrayAccess : arg2'=1+arg2, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+   4: f83_0_main_ArrayAccess -> f83_0_main_ArrayAccess : arg2'=1+arg3, arg1'=arg1P1, (arg1P1 > 0 /\ 1+arg3 > 0 /\ -arg1+arg1P1 <= 0 /\ -arg2+arg3 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Applied deletion
+Removed the following rules: 4
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f83_0_main_ArrayAccess : arg2'=1+arg2, arg1'=arg1P0, arg3'=arg2, (1+arg2 > 0 /\ -arg1+arg1P0 <= 0 /\ arg1P0 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg2'=arg2P2, arg1'=arg1P2, arg3'=arg3P2, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+
