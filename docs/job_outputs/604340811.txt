@@ -1,0 +1,776 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_am -> main_a, main_bm -> main_b}>
+<l1, l2, true>
+<l2, l9, (main_am = main_bm)>
+<l2, l3, not((main_am = main_bm))>
+<l3, l4, (main_am > main_bm)>
+<l3, l6, not((main_am > main_bm))>
+<l4, l5, true, seq{main_bm -> (main_bm + main_b)}>
+<l5, l8, true>
+<l6, l7, true, seq{main_am -> (main_am + main_a)}>
+<l7, l8, true>
+<l8, l2, true>
+<l9, l10, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_am -> main_a, main_bm -> main_b}>
+<l1, l2, true>
+<l2, l9, (main_am = main_bm)>
+<l2, l3, not((main_am = main_bm))>
+<l3, l4, (main_am > main_bm)>
+<l3, l6, not((main_am > main_bm))>
+<l4, l5, true, seq{main_bm -> (main_bm + main_b)}>
+<l5, l8, true>
+<l6, l7, true, seq{main_am -> (main_am + main_a)}>
+<l7, l8, true>
+<l8, l2, true>
+<l9, l10, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+10, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [1 functions]:
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [6 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1>
+main | function | [integer, ()] | <line: 5, col: 1>
+a | local variable | integer | <line: 6, col: 5> | <line: 10, col: 10> <line: 17, col: 21>
+b | local variable | integer | <line: 7, col: 5> | <line: 11, col: 10> <line: 15, col: 21>
+am | local variable | integer | <line: 8, col: 5> | <line: 10, col: 5> <line: 13, col: 12> <line: 14, col: 13> <line: 17, col: 13> <line: 17, col: 18>
+bm | local variable | integer | <line: 9, col: 5> | <line: 11, col: 5> <line: 13, col: 18> <line: 14, col: 18> <line: 15, col: 13> <line: 15, col: 18>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_am = main_a) /\ (main_bm = main_b)>
+<l2, l10, (main_am = main_bm)>
+<l2, l2, (main_am < main_bm) /\ not((main_am > main_bm)), par{main_am -> (main_am + main_a)}>
+<l2, l2, (main_am > main_bm) /\ (main_am > main_bm), par{main_bm -> (main_bm + main_b)}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+10, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_am, main_bm, main_b
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_a = main_am /\ main_b = main_bm, {all remain the same}>
+
+Graph 2
+<l2, l10, main_am = main_bm, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 10 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.004261
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001081s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002505s
+[22629 : 22631]
+[22629 : 22632]
+Successful child: 22631
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[33mRanking function: [36m1 + main_a + main_b + main_am - main_bm[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001629s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004865s
+[22629 : 22636]
+[22629 : 22637]
+Successful child: 22636
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_am <= main_a + main_b + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+New Graphs: 
+[22629 : 22641]
+[22629 : 22642]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_a <= 0 , main_am <= main_a + main_b + main_bm , 
+
+LOG: CALL check - Post:main_b <= main_a - Process 1
+* Exit transition: <l0, l2, main_a = main_am /\ main_b = main_bm, {all remain the same}>
+* Postcondition  : main_b <= main_a
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001485s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001673s
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_a + main_bm <= main_b + main_am , main_b <= main_a , 
+Narrowing transition: 
+<l2, l2, 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: Narrow transition size 4
+Narrowing transition: 
+<l2, l2, 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: Narrow transition size 4
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_am, main_bm, main_b
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004221s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.028309s
+[22629 : 22643]
+[22629 : 22644]
+Successful child: 22643
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001555s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023981s
+[22629 : 22648]
+[22629 : 22649]
+Successful child: 22648
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001200s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009953s
+[33mPiecewise ranking function: [36mmin(0,2*main_a - 2*main_b - 2*main_am + 2*main_bm)[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000734s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003578s
+[22629 : 22653]
+[22629 : 22654]
+Successful child: 22653
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_b <= main_a /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000483s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001852s
+[22629 : 22658]
+[22629 : 22659]
+Successful child: 22658
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+New Graphs: 
+
+LOG: CALL check - Post:main_a <= 0 - Process 2
+* Exit transition: <l0, l2, 1 <= main_a /\ main_a = main_am /\ main_b = main_bm, {all remain the same}>
+* Postcondition  : main_a <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000539s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000577s
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_a <= 0 , 
+[22629 : 22663]
+[22629 : 22664]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_b <= main_a , 
+INVARIANTS: 
+2: main_a + main_bm <= main_b + main_am , 
+Quasi-INVARIANTS to narrow Graph: 
+2: 
+[22629 : 22665]
+[22629 : 22666]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_am <= main_bm , 
+Narrowing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: Narrow transition size 3
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+Narrowing transition: 
+<l2, l2, 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: Narrow transition size 3
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ 1 + main_b + main_am <= main_a + main_bm /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Narrowing transition: 
+<l2, l2, 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: Narrow transition size 3
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a + main_bm <= main_b + main_am /\ 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a + main_bm <= main_b + main_am /\ 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_am, main_bm, main_b
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001630s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.022222s
+[22629 : 22667]
+[22629 : 22668]
+Successful child: 22667
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a + main_bm <= main_b + main_am /\ 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a + main_bm <= main_b + main_am /\ 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a + main_bm <= main_b + main_am /\ 1 <= main_a /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a + main_bm <= main_b + main_am /\ 1 <= main_a /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001422s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008136s
+[22629 : 22672]
+[22629 : 22673]
+Successful child: 22672
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_am <= main_bm, {main_am -> main_a + main_am, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ 1 + main_a <= main_b /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, main_a <= 0 /\ main_a + main_bm <= main_b + main_am /\ main_b <= main_a /\ 1 + main_a + main_b + main_bm <= main_am /\ 1 + main_bm <= main_am, {main_bm -> main_b + main_bm, rest remain the same}>
+Variables:
+main_a, main_b, main_am, main_bm
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000465s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001801s
+[22629 : 22677]
+[22629 : 22678]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.019810s
+Time used: 0.018854
+
+[22629 : 22682]
+[22629 : 22686]
+Successful child: 22682
+
+[32mProgram does NOT terminate[0m

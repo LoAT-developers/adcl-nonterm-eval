@@ -1,0 +1,640 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_i -> ¿functionCall(__VERIFIER_nondet_int), main_w -> 5}>
+<l1, l2, true>
+<l2, l13, (main_i = 0)>
+<l2, l3, not((main_i = 0))>
+<l3, l4, (main_i < ~(main_w))>
+<l3, l6, not((main_i < ~(main_w)))>
+<l4, l5, true, seq{main_i -> (main_i - 1), main_i -> (main_i * ~(1))}>
+<l5, l12, true>
+<l6, l7, (main_i > main_w)>
+<l6, l9, not((main_i > main_w))>
+<l7, l8, true, seq{main_i -> (main_i + 1), main_i -> (main_i * ~(1))}>
+<l8, l11, true>
+<l9, l10, true, seq{main_i -> 0}>
+<l10, l11, true>
+<l11, l12, true>
+<l12, l2, true>
+<l13, l14, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l15, true, seq{main__func_return_ -> 0}>
+<l15, l16, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l16, l1, true, seq{main_i -> varCall_1, main_w -> 5}>
+<l1, l2, true>
+<l2, l13, (main_i = 0)>
+<l2, l3, not((main_i = 0))>
+<l3, l4, (main_i < ~(main_w))>
+<l3, l6, not((main_i < ~(main_w)))>
+<l4, l5, true, seq{main_i -> (main_i - 1), main_i -> (main_i * ~(1))}>
+<l5, l12, true>
+<l6, l7, (main_i > main_w)>
+<l6, l9, not((main_i > main_w))>
+<l7, l8, true, seq{main_i -> (main_i + 1), main_i -> (main_i * ~(1))}>
+<l8, l11, true>
+<l9, l10, true, seq{main_i -> 0}>
+<l10, l11, true>
+<l11, l12, true>
+<l12, l2, true>
+<l13, l14, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+14, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [4 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1> | <line: 8, col: 9>
+main | function | [integer, ()] | <line: 5, col: 1>
+i | local variable | integer | <line: 6, col: 5> | <line: 8, col: 5> <line: 11, col: 12> <line: 12, col: 13> <line: 13, col: 13> <line: 13, col: 17> <line: 14, col: 13> <line: 14, col: 17> <line: 16, col: 17> <line: 17, col: 17> <line: 17, col: 21> <line: 18, col: 17> <line: 18, col: 21> <line: 20, col: 17>
+w | local variable | integer | <line: 7, col: 5> | <line: 9, col: 5> <line: 12, col: 18> <line: 16, col: 21>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = undef2) /\ (5 = 5)>
+<l2, l14, (main_i = 0)>
+<l2, l2, (main_i < 0) /\ (main_i < ~(5)), par{main_i -> ((main_i - 1) * ~(1))}>
+<l2, l2, (main_i < 0) /\ not((main_i < ~(5))) /\ not((main_i > 5)), par{main_i -> 0}>
+<l2, l2, (main_i > 0) /\ not((main_i < ~(5))) /\ (main_i > 5), par{main_i -> ((main_i + 1) * ~(1))}>
+<l2, l2, (main_i > 0) /\ not((main_i < ~(5))) /\ not((main_i > 5)), par{main_i -> 0}>
+
+Fresh variables:
+undef2, 
+
+Undef variables:
+undef2, 
+
+Abstraction variables:
+
+Exit nodes:
+14, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 1 + main_i <= 0 /\ 0 <= 5 + main_i, {main_i -> 0, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+<l2, l2, 1 <= main_i /\ main_i <= 5, {main_i -> 0, rest remain the same}>
+Variables:
+main_i
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = undef2, {all remain the same}>
+
+Graph 2
+<l2, l14, main_i = 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 14 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.00364
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001061s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.042924s
+[25136 : 25138]
+[25136 : 25139]
+Successful child: 25138
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_i <= 0 /\ 0 <= 5 + main_i, {main_i -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_i /\ main_i <= 5, {main_i -> 0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_i <= 0 /\ 0 <= 5 + main_i, {main_i -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_i /\ main_i <= 5, {main_i -> 0, rest remain the same}>
+New Graphs: 
+[25136 : 25143]
+[25136 : 25144]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_i <= 0 , 0 <= main_i , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_i <= 0 /\ 0 <= 5 + main_i, {main_i -> 0, rest remain the same}>
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_i /\ main_i <= 5, {main_i -> 0, rest remain the same}>
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000459s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005490s
+[25136 : 25145]
+[25136 : 25146]
+Successful child: 25145
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+New Graphs: 
+[25136 : 25150]
+[25136 : 25151]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 <= main_i , main_i <= 1 , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001516s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013199s
+[25136 : 25152]
+[25136 : 25153]
+Successful child: 25152
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+New Graphs: 
+[25136 : 25157]
+[25136 : 25158]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_i <= 1 , 0 <= 1 + main_i , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001213s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012012s
+[25136 : 25159]
+[25136 : 25160]
+Successful child: 25159
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+New Graphs: 
+[25136 : 25164]
+[25136 : 25165]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 <= main_i , main_i <= 5 , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001436s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012071s
+[25136 : 25166]
+[25136 : 25167]
+Successful child: 25166
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+New Graphs: 
+[25136 : 25171]
+[25136 : 25172]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_i <= 0 , 0 <= 2 + main_i , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001202s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011911s
+[25136 : 25173]
+[25136 : 25174]
+Successful child: 25173
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+New Graphs: 
+[25136 : 25178]
+[25136 : 25179]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 0 <= 4 + main_i , main_i <= 3 , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000353s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004166s
+[25136 : 25180]
+[25136 : 25181]
+Successful child: 25180
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+New Graphs: 
+[25136 : 25185]
+[25136 : 25186]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 0 <= 5 + main_i , main_i <= 4 , 
+Narrowing transition: 
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 6 + main_i <= 0, {main_i -> 1 - main_i, rest remain the same}>
+<l2, l2, 6 <= main_i, {main_i -> -1 - main_i, rest remain the same}>
+Variables:
+main_i
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001212s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011588s
+[25136 : 25187]
+[25136 : 25188]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004298s
+Time used: 0.004091
+
+[25136 : 25192]
+[25136 : 25196]
+Successful child: 25196
+
+[32mProgram does NOT terminate[0m

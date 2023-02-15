@@ -1,0 +1,266 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_i -> ¿functionCall(__VERIFIER_nondet_int), main_j -> ¿functionCall(__VERIFIER_nondet_int), main_an -> ¿functionCall(__VERIFIER_nondet_int), main_bn -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l1, l2, true>
+<l2, l4, not((main_an >= main_i))>
+<l2, l3, (main_an >= main_i)>
+<l3, l8, (main_bn >= main_j)>
+<l3, l4, not((main_bn >= main_j))>
+<l4, l6, not((main_an >= main_i))>
+<l4, l5, (main_an >= main_i)>
+<l5, l8, (main_bn <= main_j)>
+<l5, l6, not((main_bn <= main_j))>
+<l6, l27, not((main_an <= main_i))>
+<l6, l7, (main_an <= main_i)>
+<l7, l8, (main_bn >= main_j)>
+<l7, l27, not((main_bn >= main_j))>
+<l8, l16, not((main_an >= main_i))>
+<l8, l9, (main_an >= main_i)>
+<l9, l10, (main_bn >= main_j)>
+<l9, l16, not((main_bn >= main_j))>
+<l10, l11, not((¿functionCall(__VERIFIER_nondet_int) = 0))>
+<l10, l13, (¿functionCall(__VERIFIER_nondet_int) = 0)>
+<l11, l12, true, seq{main_j -> (main_j + 1)}>
+<l12, l15, true>
+<l13, l14, true, seq{main_i -> (main_i + 1)}>
+<l14, l15, true>
+<l15, l26, true>
+<l16, l20, not((main_an >= main_i))>
+<l16, l17, (main_an >= main_i)>
+<l17, l18, (main_bn <= main_j)>
+<l17, l20, not((main_bn <= main_j))>
+<l18, l19, true, seq{main_i -> (main_i + 1)}>
+<l19, l25, true>
+<l20, l24, not((main_an <= main_i))>
+<l20, l21, (main_an <= main_i)>
+<l21, l22, (main_bn >= main_j)>
+<l21, l24, not((main_bn >= main_j))>
+<l22, l23, true, seq{main_j -> (main_j + 1)}>
+<l23, l24, true>
+<l24, l25, true>
+<l25, l26, true>
+<l26, l2, true>
+<l27, l28, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l29, true, seq{main__func_return_ -> 0}>
+<l29, l30, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l30, l31, true, seq{main_i -> varCall_1}>
+<l31, l32, true, seq{varCall_2 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l32, l33, true, seq{main_j -> varCall_2}>
+<l33, l34, true, seq{varCall_3 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l34, l35, true, seq{main_an -> varCall_3}>
+<l35, l36, true, seq{varCall_4 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l36, l1, true, seq{main_bn -> varCall_4}>
+<l1, l2, true>
+<l2, l3, (main_an >= main_i)>
+<l2, l4, not((main_an >= main_i))>
+<l3, l8, (main_bn >= main_j)>
+<l3, l4, not((main_bn >= main_j))>
+<l4, l5, (main_an >= main_i)>
+<l4, l6, not((main_an >= main_i))>
+<l5, l8, (main_bn <= main_j)>
+<l5, l6, not((main_bn <= main_j))>
+<l6, l7, (main_an <= main_i)>
+<l6, l27, not((main_an <= main_i))>
+<l7, l8, (main_bn >= main_j)>
+<l7, l27, not((main_bn >= main_j))>
+<l8, l9, (main_an >= main_i)>
+<l8, l16, not((main_an >= main_i))>
+<l9, l10, (main_bn >= main_j)>
+<l9, l16, not((main_bn >= main_j))>
+<l10, l37, true, seq{varCall_5 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l37, l13, (varCall_5 = 0)>
+<l37, l11, (varCall_5 = 1)>
+<l11, l12, true, seq{main_j -> (main_j + 1)}>
+<l12, l15, true>
+<l13, l14, true, seq{main_i -> (main_i + 1)}>
+<l14, l15, true>
+<l15, l26, true>
+<l16, l17, (main_an >= main_i)>
+<l16, l20, not((main_an >= main_i))>
+<l17, l18, (main_bn <= main_j)>
+<l17, l20, not((main_bn <= main_j))>
+<l18, l19, true, seq{main_i -> (main_i + 1)}>
+<l19, l25, true>
+<l20, l21, (main_an <= main_i)>
+<l20, l24, not((main_an <= main_i))>
+<l21, l22, (main_bn >= main_j)>
+<l21, l24, not((main_bn >= main_j))>
+<l22, l23, true, seq{main_j -> (main_j + 1)}>
+<l23, l24, true>
+<l24, l25, true>
+<l25, l26, true>
+<l26, l2, true>
+<l27, l28, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+28, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [6 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 11, col: 1> | <line: 15, col: 6> <line: 16, col: 6> <line: 17, col: 7> <line: 18, col: 7> <line: 21, col: 8>
+main | function | [integer, ()] | <line: 13, col: 1>
+i | local variable | integer | <line: 14, col: 5> | <line: 15, col: 2> <line: 19, col: 16> <line: 19, col: 40> <line: 19, col: 64> <line: 20, col: 13> <line: 24, col: 5> <line: 24, col: 9> <line: 26, col: 21> <line: 27, col: 4> <line: 27, col: 8> <line: 28, col: 21>
+j | local variable | integer | <line: 14, col: 5> | <line: 16, col: 2> <line: 19, col: 27> <line: 19, col: 51> <line: 19, col: 75> <line: 20, col: 24> <line: 22, col: 5> <line: 22, col: 9> <line: 26, col: 32> <line: 28, col: 32> <line: 29, col: 4> <line: 29, col: 8>
+an | local variable | integer | <line: 14, col: 5> | <line: 17, col: 2> <line: 19, col: 10> <line: 19, col: 34> <line: 19, col: 58> <line: 20, col: 7> <line: 26, col: 15> <line: 28, col: 15>
+bn | local variable | integer | <line: 14, col: 5> | <line: 18, col: 2> <line: 19, col: 21> <line: 19, col: 45> <line: 19, col: 69> <line: 20, col: 18> <line: 26, col: 26> <line: 28, col: 26>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = undef6) /\ (main_j = undef7) /\ (main_an = undef8) /\ (main_bn = undef9)>
+<l2, l2, (main_an >= main_i) /\ (main_bn >= main_j) /\ (main_an >= main_i) /\ (main_bn >= main_j) /\ (undef10 = 0), par{main_i -> (main_i + 1)}>
+<l2, l2, (main_an >= main_i) /\ (main_bn >= main_j) /\ (main_an >= main_i) /\ (main_bn >= main_j) /\ (undef10 = 1), par{main_j -> (main_j + 1)}>
+<l2, l2, (main_an >= main_i) /\ not((main_bn >= main_j)) /\ (main_an >= main_i) /\ (main_bn <= main_j) /\ (main_an >= main_i) /\ not((main_bn >= main_j)) /\ (main_an >= main_i) /\ (main_bn <= main_j), par{main_i -> (main_i + 1)}>
+<l2, l2, not((main_an >= main_i)) /\ not((main_an >= main_i)) /\ (main_an <= main_i) /\ (main_bn >= main_j) /\ not((main_an >= main_i)) /\ not((main_an >= main_i)) /\ (main_an <= main_i) /\ (main_bn >= main_j), par{main_j -> (main_j + 1)}>
+<l2, l28, not((main_an >= main_i)) /\ not((main_an >= main_i)) /\ (main_an <= main_i) /\ not((main_bn >= main_j))>
+
+Fresh variables:
+undef6, undef7, undef8, undef9, undef10, 
+
+Undef variables:
+undef6, undef7, undef8, undef9, undef10, 
+
+Abstraction variables:
+
+Exit nodes:
+28, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, main_i <= main_an /\ main_j <= main_bn /\ undef10 = 0, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i <= main_an /\ main_j <= main_bn /\ undef10 = 1, {main_j -> 1 + main_j, rest remain the same}>
+<l2, l2, main_i <= main_an /\ 1 + main_bn <= main_j, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_j <= main_bn /\ 1 + main_an <= main_i, {main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j, main_an, main_bn
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = undef6 /\ main_j = undef7 /\ main_an = undef8 /\ main_bn = undef9, {all remain the same}>
+
+Graph 2
+<l2, l28, 1 + main_an <= main_i /\ 1 + main_bn <= main_j, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 28 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.005777
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001552s
+[33mRanking function: [36m-2*main_i - main_j + 2*main_an + main_bn[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_i <= main_an /\ 1 + main_bn <= main_j, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_j <= main_bn /\ 1 + main_an <= main_i, {main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j, main_an, main_bn
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000896s
+[33mRanking function: [36m-2*main_i + 2*main_an[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_j <= main_bn /\ 1 + main_an <= main_i, {main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j, main_an, main_bn
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000502s
+[33mRanking function: [36m-main_j + main_bn[0m
+New Graphs: 
+Proving termination of subgraph 2
+Analyzing SCC {l28}...
+No cycles found.
+
+[32mProgram Terminates[0m

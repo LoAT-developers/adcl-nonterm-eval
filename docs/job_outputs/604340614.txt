@@ -1,0 +1,285 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_y -> 0, main_m -> ¿functionCall(__VERIFIER_nondet_int), main_x -> main_m}>
+<l1, l2, true>
+<l2, l14, not((main_x >= 0))>
+<l2, l3, (main_x >= 0)>
+<l3, l14, not((main_y >= 0))>
+<l3, l4, (main_y >= 0)>
+<l4, l5, not((¿functionCall(__VERIFIER_nondet_int) = 0))>
+<l4, l12, (¿functionCall(__VERIFIER_nondet_int) = 0)>
+<l5, l6, true>
+<l6, l10, not((main_y <= main_m))>
+<l6, l7, (main_y <= main_m)>
+<l7, l10, (¿functionCall(__VERIFIER_nondet_int) = 0)>
+<l7, l8, not((¿functionCall(__VERIFIER_nondet_int) = 0))>
+<l8, l9, true, seq{main_y -> (main_y + 1)}>
+<l9, l6, true>
+<l10, l11, true, seq{main_x -> (main_x - 1)}>
+<l11, l12, true>
+<l12, l13, true, seq{main_y -> (main_y - 1)}>
+<l13, l2, true>
+<l14, l15, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l16, true, seq{main__func_return_ -> 0, main_y -> 0}>
+<l16, l17, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l17, l1, true, seq{main_m -> varCall_1, main_x -> main_m}>
+<l1, l2, true>
+<l2, l3, (main_x >= 0)>
+<l2, l14, not((main_x >= 0))>
+<l3, l4, (main_y >= 0)>
+<l3, l14, not((main_y >= 0))>
+<l4, l18, true, seq{varCall_2 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l18, l12, (varCall_2 = 0)>
+<l18, l5, (varCall_2 = 1)>
+<l5, l6, true>
+<l6, l7, (main_y <= main_m)>
+<l6, l10, not((main_y <= main_m))>
+<l7, l19, true, seq{varCall_3 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l19, l10, (varCall_3 = 0)>
+<l19, l8, (varCall_3 = 1)>
+<l8, l9, true, seq{main_y -> (main_y + 1)}>
+<l9, l6, true>
+<l10, l11, true, seq{main_x -> (main_x - 1)}>
+<l11, l12, true>
+<l12, l13, true, seq{main_y -> (main_y - 1)}>
+<l13, l2, true>
+<l14, l15, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+15, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [5 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 11, col: 1> | <line: 16, col: 9> <line: 19, col: 7> <line: 20, col: 21>
+main | function | [integer, ()] | <line: 13, col: 1>
+x | local variable | integer | <line: 14, col: 5> | <line: 17, col: 5> <line: 18, col: 9> <line: 23, col: 4> <line: 23, col: 8>
+y | local variable | integer | <line: 14, col: 5> | <line: 15, col: 2> <line: 18, col: 19> <line: 20, col: 11> <line: 21, col: 5> <line: 21, col: 9> <line: 25, col: 3> <line: 25, col: 7>
+m | local variable | integer | <line: 14, col: 5> | <line: 16, col: 5> <line: 17, col: 9> <line: 20, col: 16>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_x = undef4) /\ (main_y = 0) /\ (main_m = undef4)>
+<l2, l2, (main_x >= 0) /\ (main_y >= 0) /\ (undef5 = 0), par{main_y -> (main_y - 1)}>
+<l2, l6, (main_x >= 0) /\ (main_y >= 0) /\ (undef5 = 1)>
+<l2, l15, (main_x >= 0) /\ not((main_y >= 0))>
+<l2, l15, not((main_x >= 0))>
+<l6, l2, (main_y <= main_m) /\ (undef6 = 0), par{main_x -> (main_x - 1), main_y -> (main_y - 1)}>
+<l6, l6, (main_y <= main_m) /\ (undef6 = 1), par{main_y -> (main_y + 1)}>
+<l6, l2, not((main_y <= main_m)), par{main_x -> (main_x - 1), main_y -> (main_y - 1)}>
+
+Fresh variables:
+undef4, undef5, undef6, 
+
+Undef variables:
+undef4, undef5, undef6, 
+
+Abstraction variables:
+
+Exit nodes:
+15, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 0 <= main_x /\ 0 <= main_y /\ undef5 = 0, {main_y -> -1 + main_y, rest remain the same}>
+<l2, l6, 0 <= main_x /\ 0 <= main_y /\ undef5 = 1, {all remain the same}>
+<l6, l2, main_y <= main_m /\ undef6 = 0, {main_x -> -1 + main_x, main_y -> -1 + main_y, rest remain the same}>
+<l6, l6, main_y <= main_m /\ undef6 = 1, {main_y -> 1 + main_y, rest remain the same}>
+<l6, l2, 1 + main_m <= main_y, {main_x -> -1 + main_x, main_y -> -1 + main_y, rest remain the same}>
+Variables:
+main_x, main_y, main_m
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_x = undef4 /\ main_y = 0 /\ main_m = undef4, {all remain the same}>
+
+Graph 2
+<l2, l15, 0 <= main_x /\ 1 + main_y <= 0, {all remain the same}>
+<l2, l15, 1 + main_x <= 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 6 , 1 )
+( 15 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.009028
+
+Checking conditional termination of SCC {l2, l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001190s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006085s
+[27904 : 27906]
+[27904 : 27907]
+Successful child: 27906
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l6, l2, main_y <= main_m /\ 0 <= 1 + main_x /\ undef6 = 0, {main_x -> -1 + main_x, main_y -> -1 + main_y, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l6, l6, main_y <= main_m /\ 0 <= 1 + main_x /\ undef6 = 1, {main_y -> 1 + main_y, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l6, l2, 1 + main_m <= main_y /\ 0 <= 1 + main_x, {main_x -> -1 + main_x, main_y -> -1 + main_y, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l6, l2, main_y <= main_m /\ 0 <= 1 + main_x /\ undef6 = 0, {main_x -> -1 + main_x, main_y -> -1 + main_y, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l6, l6, main_y <= main_m /\ 0 <= 1 + main_x /\ undef6 = 1, {main_y -> 1 + main_y, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l6, l2, 1 + main_m <= main_y /\ 0 <= 1 + main_x, {main_x -> -1 + main_x, main_y -> -1 + main_y, rest remain the same}>
+[33mRanking function: [36m1 + main_x[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_x /\ 0 <= main_y /\ undef5 = 0, {main_y -> -1 + main_y, rest remain the same}>
+Variables:
+main_x, main_y
+Transitions:
+<l6, l6, main_y <= main_m /\ 0 <= 1 + main_x /\ undef6 = 1, {main_y -> 1 + main_y, rest remain the same}>
+Variables:
+main_x, main_y, main_m
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000698s
+[33mRanking function: [36mmain_y[0m
+New Graphs: 
+Transitions:
+<l6, l6, main_y <= main_m /\ 0 <= 1 + main_x /\ undef6 = 1, {main_y -> 1 + main_y, rest remain the same}>
+Variables:
+main_x, main_y, main_m
+Checking conditional termination of SCC {l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000410s
+[33mRanking function: [36m-main_y + main_m[0m
+New Graphs: 
+INVARIANTS: 
+6: 0 <= 1 + main_x , 
+Quasi-INVARIANTS to narrow Graph: 
+6: 
+Proving termination of subgraph 2
+Analyzing SCC {l15}...
+No cycles found.
+
+[32mProgram Terminates[0m

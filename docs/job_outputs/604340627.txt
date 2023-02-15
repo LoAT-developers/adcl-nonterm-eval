@@ -1,0 +1,1474 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_i -> ¿functionCall(__VERIFIER_nondet_int), main_range -> 20, main_up -> 0}>
+<l1, l2, true>
+<l2, l20, not((0 <= main_i))>
+<l2, l3, (0 <= main_i)>
+<l3, l20, not((main_i <= main_range))>
+<l3, l4, (main_i <= main_range)>
+<l4, l5, (main_i = 0)>
+<l4, l7, not((main_i = 0))>
+<l5, l6, true, seq{main_up -> 1}>
+<l6, l7, true>
+<l7, l8, (main_i = main_range)>
+<l7, l10, not((main_i = main_range))>
+<l8, l9, true, seq{main_up -> 0}>
+<l9, l10, true>
+<l10, l11, (main_up = 1)>
+<l10, l13, not((main_up = 1))>
+<l11, l12, true, seq{main_i -> (main_i + 1)}>
+<l12, l13, true>
+<l13, l14, (main_up = 0)>
+<l13, l16, not((main_up = 0))>
+<l14, l15, true, seq{main_i -> (main_i - 1)}>
+<l15, l16, true>
+<l16, l17, (main_i = (main_range - 2))>
+<l16, l19, not((main_i = (main_range - 2)))>
+<l17, l18, true, seq{main_range -> (main_range - 1)}>
+<l18, l19, true>
+<l19, l2, true>
+<l20, l21, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l22, true, seq{main__func_return_ -> 0}>
+<l22, l23, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l23, l1, true, seq{main_i -> varCall_1, main_range -> 20, main_up -> 0}>
+<l1, l2, true>
+<l2, l3, (0 <= main_i)>
+<l2, l20, not((0 <= main_i))>
+<l3, l4, (main_i <= main_range)>
+<l3, l20, not((main_i <= main_range))>
+<l4, l5, (main_i = 0)>
+<l4, l7, not((main_i = 0))>
+<l5, l6, true, seq{main_up -> 1}>
+<l6, l7, true>
+<l7, l8, (main_i = main_range)>
+<l7, l10, not((main_i = main_range))>
+<l8, l9, true, seq{main_up -> 0}>
+<l9, l10, true>
+<l10, l11, (main_up = 1)>
+<l10, l13, not((main_up = 1))>
+<l11, l12, true, seq{main_i -> (main_i + 1)}>
+<l12, l13, true>
+<l13, l14, (main_up = 0)>
+<l13, l16, not((main_up = 0))>
+<l14, l15, true, seq{main_i -> (main_i - 1)}>
+<l15, l16, true>
+<l16, l17, (main_i = (main_range - 2))>
+<l16, l19, not((main_i = (main_range - 2)))>
+<l17, l18, true, seq{main_range -> (main_range - 1)}>
+<l18, l19, true>
+<l19, l2, true>
+<l20, l21, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+21, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [5 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1> | <line: 9, col: 9>
+main | function | [integer, ()] | <line: 5, col: 1>
+i | local variable | integer | <line: 6, col: 5> | <line: 9, col: 5> <line: 13, col: 17> <line: 13, col: 22> <line: 14, col: 13> <line: 17, col: 13> <line: 21, col: 13> <line: 21, col: 17> <line: 24, col: 13> <line: 24, col: 17> <line: 26, col: 13>
+range | local variable | integer | <line: 7, col: 5> | <line: 10, col: 5> <line: 13, col: 27> <line: 17, col: 18> <line: 26, col: 18> <line: 27, col: 13> <line: 27, col: 21>
+up | local variable | integer | <line: 8, col: 5> | <line: 11, col: 5> <line: 15, col: 13> <line: 18, col: 13> <line: 20, col: 13> <line: 23, col: 13>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = undef2) /\ (main_range = 20) /\ (main_up = 0)>
+<l2, l10, (0 <= main_i) /\ (main_i <= main_range) /\ (main_i = 0) /\ (main_i = main_range), par{main_up -> 0}>
+<l2, l10, (0 <= main_i) /\ (main_i <= main_range) /\ (main_i = 0) /\ (main_i < main_range), par{main_up -> 1}>
+<l2, l10, (0 <= main_i) /\ (main_i <= main_range) /\ (main_i > 0) /\ (main_i = main_range), par{main_up -> 0}>
+<l2, l10, (0 <= main_i) /\ (main_i <= main_range) /\ (main_i > 0) /\ (main_i < main_range)>
+<l2, l21, (0 <= main_i) /\ not((main_i <= main_range))>
+<l2, l21, not((0 <= main_i))>
+<l10, l2, (main_up = 1) /\ (main_up > 0) /\ ((main_i + 1) = (main_range - 2)), par{main_i -> (main_i + 1), main_range -> (main_range - 1)}>
+<l10, l2, (main_up = 1) /\ (main_up > 0) /\ ((main_i + 1) < (main_range - 2)), par{main_i -> (main_i + 1)}>
+<l10, l2, (main_up = 1) /\ (main_up > 0) /\ ((main_i + 1) > (main_range - 2)), par{main_i -> (main_i + 1)}>
+<l10, l2, (main_up < 1) /\ (main_up = 0) /\ ((main_i - 1) = (main_range - 2)), par{main_i -> (main_i - 1), main_range -> (main_range - 1)}>
+<l10, l2, (main_up < 1) /\ (main_up = 0) /\ ((main_i - 1) < (main_range - 2)), par{main_i -> (main_i - 1)}>
+<l10, l2, (main_up < 1) /\ (main_up = 0) /\ ((main_i - 1) > (main_range - 2)), par{main_i -> (main_i - 1)}>
+<l10, l2, (main_up < 1) /\ (main_up < 0) /\ (main_i = (main_range - 2)), par{main_range -> (main_range - 1)}>
+<l10, l2, (main_up < 1) /\ (main_up < 0) /\ (main_i < (main_range - 2))>
+<l10, l2, (main_up < 1) /\ (main_up < 0) /\ (main_i > (main_range - 2))>
+<l10, l2, (main_up > 1) /\ (main_up > 0) /\ (main_i = (main_range - 2)), par{main_range -> (main_range - 1)}>
+<l10, l2, (main_up > 1) /\ (main_up > 0) /\ (main_i < (main_range - 2))>
+<l10, l2, (main_up > 1) /\ (main_up > 0) /\ (main_i > (main_range - 2))>
+
+Fresh variables:
+undef2, 
+
+Undef variables:
+undef2, 
+
+Abstraction variables:
+
+Exit nodes:
+21, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l10, main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+<l2, l10, 1 + main_i <= main_range /\ main_i = 0, {main_up -> 1, rest remain the same}>
+<l2, l10, 1 <= main_i /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+<l2, l10, 1 + main_i <= main_range /\ 1 <= main_i, {all remain the same}>
+<l10, l2, main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, main_range <= main_i /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, 1 + main_up <= 0 /\ 2 + main_i = main_range, {main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, 1 + main_up <= 0 /\ 3 + main_i <= main_range, {all remain the same}>
+<l10, l2, 1 + main_up <= 0 /\ main_range <= 1 + main_i, {all remain the same}>
+<l10, l2, 2 <= main_up /\ 2 + main_i = main_range, {main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, 2 <= main_up /\ 3 + main_i <= main_range, {all remain the same}>
+<l10, l2, 2 <= main_up /\ main_range <= 1 + main_i, {all remain the same}>
+Variables:
+main_i, main_range, main_up
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = undef2 /\ main_up = 0 /\ main_range = 20, {all remain the same}>
+
+Graph 2
+<l2, l21, 0 <= main_i /\ 1 + main_range <= main_i, {all remain the same}>
+<l2, l21, 1 + main_i <= 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 10 , 1 )
+( 21 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.030958
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l2: main_up <= 1[0m
+[36mInvariant at l10: main_up <= 1[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l10, l2, 2 <= main_up /\ 2 + main_i = main_range, {main_range -> -1 + main_range, rest remain the same}>
+> It's unfeasible. Removing transition: 
+<l10, l2, 2 <= main_up /\ 3 + main_i <= main_range, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= main_i /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 1 + main_up <= 0 /\ 2 + main_i = main_range, {main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 1 + main_up <= 0 /\ 3 + main_i <= main_range, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 1 + main_up <= 0 /\ main_range <= 1 + main_i, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 2 <= main_up /\ main_range <= 1 + main_i, {all remain the same}>
+Checking unfeasibility...
+Time used: 0.017423
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= main_up[0m
+[36mInvariant at l10: 0 <= main_up[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l10, l2, 1 + main_up <= 0 /\ main_range <= 1 + main_i, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= main_i /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 + main_up <= 0 /\ 2 + main_i = main_range, {main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 + main_up <= 0 /\ 3 + main_i <= main_range, {all remain the same}>
+Checking unfeasibility...
+Time used: 1.04322
+
+Checking conditional termination of SCC {l2, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006590s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.034584s
+[12207 : 12210]
+[12207 : 12211]
+Successful child: 12210
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= main_i /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= main_i /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+[33mRanking function: [36mmain_range[0m
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, 1 <= main_i /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, 1 + main_i <= main_range /\ 1 <= main_i /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, 1 <= main_i /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001908s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.035589s
+[33mPiecewise ranking function: [36mmin(7*main_i - 12*main_range,-12*main_range)[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, 1 <= main_i /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, 1 + main_i <= main_range /\ 1 <= main_i /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, 1 <= main_i /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001662s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.101277s
+[12207 : 12215]
+[12207 : 12216]
+Successful child: 12215
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_up /\ 1 + main_i + main_range <= main_up /\ main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_range + main_up <= 0 /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_range + main_up <= 0 /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_range + main_up <= 0 /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_range + main_up <= 0 /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_range + main_up <= 0 /\ main_range <= main_i /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_i /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_i <= main_range /\ 1 <= main_i /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_i /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+New Graphs: 
+INVARIANTS: 
+2: 0 <= main_up , 
+10: 0 <= 1 + main_i + main_up , 
+Quasi-INVARIANTS to narrow Graph: 
+2: 
+10: 
+
+LOG: CALL check - Post:1 + main_i + main_range <= main_up - Process 1
+* Exit transition: <l0, l2, main_i = undef2 /\ main_up = 0 /\ main_range = 20, {all remain the same}>
+* Postcondition  : 1 + main_i + main_range <= main_up
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000508s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000556s
+INVARIANTS: 
+2: 
+10: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_i + main_range <= main_up , 
+10: main_i + main_range + main_up <= 0 , 
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+Narrowing transition: 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l10, 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l10, 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_range <= main_i /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_range -> -1 + main_range, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_range -> -1 + main_range, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_range -> -1 + main_range, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, rest remain the same}>
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005614s
+[33mRanking function: [36m-27 + 9*main_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003796s
+[33mRanking function: [36mmain_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002143s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.246662s
+[12207 : 12220]
+[12207 : 12221]
+Successful child: 12220
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+New Graphs: 
+
+LOG: CALL check - Post:1 + main_range <= main_i - Process 2
+* Exit transition: <l0, l2, main_up <= main_i + main_range /\ main_i = undef2 /\ main_up = 0 /\ main_range = 20, {all remain the same}>
+* Postcondition  : 1 + main_range <= main_i
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000789s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000847s
+INVARIANTS: 
+2: 
+10: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 0 <= main_i + main_range , 1 + main_range <= main_i , 
+10: 1 + main_range <= main_i + main_up , 1 + main_up <= 0 , 
+Narrowing transition: 
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l10, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l10, l2, 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l10, l2, main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, main_range <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_range -> -1 + main_range, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_range -> -1 + main_range, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_range -> -1 + main_range, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, rest remain the same}>
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005659s
+[33mRanking function: [36m-27 + 9*main_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004315s
+[33mRanking function: [36m(~(1) / 2) + main_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002483s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.224846s
+[12207 : 12225]
+[12207 : 12226]
+Successful child: 12225
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_range <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+New Graphs: 
+
+LOG: CALL check - Post:1 + main_i + main_up <= 0 - Process 3
+* Exit transition: <l0, l2, main_i <= main_range /\ main_up <= main_i + main_range /\ main_i = undef2 /\ main_up = 0 /\ main_range = 20, {all remain the same}>
+* Postcondition  : 1 + main_i + main_up <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000820s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000873s
+INVARIANTS: 
+2: 
+10: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_i + main_up <= 0 , 
+10: 1 + main_up <= 0 , 
+Narrowing transition: 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_range <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l10, l2, main_i + main_up <= main_range /\ main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_i = 0, {main_up -> 1, rest remain the same}>
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ main_up <= 1, {all remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, main_range <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+<l10, l2, main_i + main_up <= main_range /\ main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005560s
+[33mRanking function: [36m-12 + 8*main_range[0m
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_range -> -1 + main_range, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 1, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> 1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_range -> -1 + main_range, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l2, l2, 1 <= 0, {main_i -> -1 + main_i, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004778s
+[33mRanking function: [36mmain_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 + main_i <= main_range /\ main_up <= 1 /\ main_range <= 2 + main_i /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 + main_i <= main_range /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ main_range <= 2 + main_i /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002768s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.236904s
+[12207 : 12230]
+[12207 : 12231]
+Successful child: 12230
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ 1 + main_i = main_range, {main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ main_i = main_range, {main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l10, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ main_up <= 1 /\ 1 + main_i = main_range, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 1 /\ 3 + main_i = main_range, {main_i -> 1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ main_range <= 1 + main_i /\ 0 <= 1 + main_i + main_up /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ main_range <= 1 + main_i /\ 0 <= 1 + main_i + main_up /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0 /\ 1 + main_i = main_range, {main_i -> -1 + main_i, main_range -> -1 + main_range, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l2, main_i + main_up <= main_range /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_range <= main_i /\ 1 + main_range <= main_i + main_up /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l2, main_i + main_up <= main_range /\ main_range <= main_i /\ 1 <= main_i + main_range + main_up /\ 0 <= 1 + main_i + main_up /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ 4 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ 1 + main_i = main_range, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 4 + main_i <= main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 1 + main_i = main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 2 + main_i <= main_range /\ main_up = 0, {main_i -> -1 + main_i, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ 1 + main_i = main_range, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+<l2, l2, main_i + main_up <= main_range /\ 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 1 <= main_i /\ 1 <= main_i + main_range + main_up /\ 1 + main_i = main_range /\ main_up = 1, {main_i -> 1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001481s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013021s
+[33mPiecewise ranking function: [36mmin(main_up,-main_i + main_range)[0m
+New Graphs: 
+Transitions:
+<l2, l2, 0 <= main_i + main_range /\ main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ main_up <= 1 /\ main_i = 0 /\ 1 + main_i = main_range, {main_i -> 1 + main_i, main_up -> 1, rest remain the same}>
+<l2, l2, main_up <= main_i + main_range /\ 0 <= main_i + main_up /\ 0 <= main_up /\ 1 <= main_i /\ 1 <= main_i + main_range /\ main_up <= 1 /\ main_i = main_range, {main_i -> -1 + main_i, main_up -> 0, rest remain the same}>
+Variables:
+main_i, main_range, main_up
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001027s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006090s
+[12207 : 12235]
+[12207 : 12236]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.102438s
+Time used: 4.10011
+
+[12207 : 12240]
+[12207 : 12244]
+Successful child: 12240
+
+[32mProgram does NOT terminate[0m

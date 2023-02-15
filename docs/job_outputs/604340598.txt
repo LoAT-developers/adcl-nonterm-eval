@@ -1,0 +1,254 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_c -> 864}>
+<l1, l2, (main_c <= 10)>
+<l1, l8, not((main_c <= 10))>
+<l2, l3, true, seq{main_i -> 0}>
+<l3, l4, true>
+<l4, l7, not((main_i < 100))>
+<l4, l5, (main_i < 100)>
+<l5, l6, true, seq{main_i -> (main_i + 1)}>
+<l6, l4, true>
+<l7, l29, true>
+<l8, l9, (main_c <= 50)>
+<l8, l15, not((main_c <= 50))>
+<l9, l10, true, seq{main_i -> 0}>
+<l10, l11, true>
+<l11, l14, not((main_i < 101))>
+<l11, l12, (main_i < 101)>
+<l12, l13, true, seq{main_i -> (main_i + 1)}>
+<l13, l11, true>
+<l14, l15, true>
+<l15, l16, (main_c <= 100)>
+<l15, l22, not((main_c <= 100))>
+<l16, l17, true, seq{main_i -> 0}>
+<l17, l18, true>
+<l18, l21, not((main_i < 102))>
+<l18, l19, (main_i < 102)>
+<l19, l20, true, seq{main_i -> (main_i + 1)}>
+<l20, l18, true>
+<l21, l28, true>
+<l22, l23, true, seq{main_i -> 0}>
+<l23, l24, true>
+<l24, l27, not((main_i < 103))>
+<l24, l25, (main_i < 103)>
+<l25, l26, true, seq{main_i -> (main_i + 0)}>
+<l26, l24, true>
+<l27, l28, true>
+<l28, l29, true>
+<l29, l30, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_c -> 864}>
+<l1, l2, (main_c <= 10)>
+<l1, l8, not((main_c <= 10))>
+<l2, l3, true, seq{main_i -> 0}>
+<l3, l4, true>
+<l4, l5, (main_i < 100)>
+<l4, l7, not((main_i < 100))>
+<l5, l6, true, seq{main_i -> (main_i + 1)}>
+<l6, l4, true>
+<l7, l29, true>
+<l8, l9, (main_c <= 50)>
+<l8, l15, not((main_c <= 50))>
+<l9, l10, true, seq{main_i -> 0}>
+<l10, l11, true>
+<l11, l12, (main_i < 101)>
+<l11, l14, not((main_i < 101))>
+<l12, l13, true, seq{main_i -> (main_i + 1)}>
+<l13, l11, true>
+<l14, l15, true>
+<l15, l16, (main_c <= 100)>
+<l15, l22, not((main_c <= 100))>
+<l16, l17, true, seq{main_i -> 0}>
+<l17, l18, true>
+<l18, l19, (main_i < 102)>
+<l18, l21, not((main_i < 102))>
+<l19, l20, true, seq{main_i -> (main_i + 1)}>
+<l20, l18, true>
+<l21, l28, true>
+<l22, l23, true, seq{main_i -> 0}>
+<l23, l24, true>
+<l24, l25, (main_i < 103)>
+<l24, l27, not((main_i < 103))>
+<l25, l26, true, seq{main_i -> (main_i + 0)}>
+<l26, l24, true>
+<l27, l28, true>
+<l28, l29, true>
+<l29, l30, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+30, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [1 functions]:
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [4 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1>
+main | function | [integer, ()] | <line: 5, col: 1>
+c | local variable | integer | <line: 6, col: 5> | <line: 8, col: 5> <line: 10, col: 9> <line: 17, col: 13> <line: 23, col: 13>
+i | local variable | integer | <line: 7, col: 5> | <line: 11, col: 9> <line: 12, col: 16> <line: 13, col: 13> <line: 13, col: 17> <line: 18, col: 13> <line: 19, col: 20> <line: 20, col: 17> <line: 20, col: 21> <line: 24, col: 13> <line: 25, col: 20> <line: 26, col: 17> <line: 26, col: 21> <line: 30, col: 13> <line: 31, col: 20> <line: 32, col: 17> <line: 32, col: 21>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l24, (864 = 864) /\ (main_i = 0) /\ not((864 <= 10)) /\ not((864 <= 50)) /\ not((864 <= 100))>
+<l24, l24, (main_i < 103), par{main_i -> (main_i + 0)}>
+<l24, l30, not((main_i < 103))>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+30, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l24, l24, main_i <= 102, {all remain the same}>
+Variables:
+main_i
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l24, main_i = 0, {all remain the same}>
+
+Graph 2
+<l24, l30, 103 <= main_i, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 24 , 1 )
+( 30 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001191
+
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Calling Safety with literal 103 <= main_i and entry <l24, l24, true, {all remain the same}>
+
+LOG: CALL check - Post:103 <= main_i - Process 1
+* Exit transition: <l24, l24, true, {all remain the same}>
+* Postcondition  : 103 <= main_i
+Postcodition moved up: 103 <= main_i
+
+LOG: Try proving POST
+
+LOG: CALL check - Post:103 <= main_i - Process 2
+* Exit transition: <l0, l24, main_i = 0, {all remain the same}>
+* Postcondition  : 103 <= main_i
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000165s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000208s
+
+LOG: NarrowEntry size 1
+Narrowing transition: 
+<l24, l24, main_i <= 102, {all remain the same}>
+
+LOG: Narrow transition size 1
+ENTRIES:
+<l0, l24, main_i = 0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l24, l24, main_i <= 102, {all remain the same}>
+END GRAPH:
+EXIT: <l24, l24, true, {all remain the same}>
+POST: 103 <= main_i
+
+
+LOG: Try proving POST
+[1369 : 1371]
+[1369 : 1372]
+[1369 : 1373]
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.028184s
+
+[1369 : 1374]
+[1369 : 1378]
+Successful child: 1374
+
+[32mProgram does NOT terminate[0m

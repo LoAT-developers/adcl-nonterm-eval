@@ -1,0 +1,1673 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_x -> ¿functionCall(__VERIFIER_nondet_int), main_y -> ¿functionCall(__VERIFIER_nondet_int), main_z -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l1, l2, true>
+<l2, l5, not((main_x > 0))>
+<l2, l3, (main_x > 0)>
+<l3, l4, true, seq{main_x -> (main_x + main_y), main_y -> (main_y + main_z), main_z -> (main_z + main_x)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l7, true, seq{main__func_return_ -> 0}>
+<l7, l8, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l8, l9, true, seq{main_x -> varCall_1}>
+<l9, l10, true, seq{varCall_2 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l10, l11, true, seq{main_y -> varCall_2}>
+<l11, l12, true, seq{varCall_3 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l12, l1, true, seq{main_z -> varCall_3}>
+<l1, l2, true>
+<l2, l3, (main_x > 0)>
+<l2, l5, not((main_x > 0))>
+<l3, l4, true, seq{main_x -> (main_x + main_y), main_y -> (main_y + main_z), main_z -> (main_z + main_x)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [5 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 8, col: 1> | <line: 13, col: 9> <line: 14, col: 9> <line: 15, col: 9>
+main | function | [integer, ()] | <line: 10, col: 1>
+x | local variable | integer | <line: 12, col: 5> | <line: 13, col: 5> <line: 16, col: 12> <line: 17, col: 9> <line: 17, col: 13> <line: 19, col: 17>
+y | local variable | integer | <line: 12, col: 5> | <line: 14, col: 5> <line: 17, col: 17> <line: 18, col: 9> <line: 18, col: 13>
+z | local variable | integer | <line: 12, col: 5> | <line: 15, col: 5> <line: 18, col: 17> <line: 19, col: 9> <line: 19, col: 13>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_x = undef4) /\ (main_y = undef5) /\ (main_z = undef6)>
+<l2, l2, (main_x > 0), par{main_x -> (main_x + main_y), main_y -> (main_y + main_z), main_z -> (main_z + (main_x + main_y))}>
+<l2, l6, not((main_x > 0))>
+
+Fresh variables:
+undef4, undef5, undef6, 
+
+Undef variables:
+undef4, undef5, undef6, 
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_x = undef4 /\ main_y = undef5 /\ main_z = undef6, {all remain the same}>
+
+Graph 2
+<l2, l6, main_x <= 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 6 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002109
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000445s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001162s
+[31454 : 31456]
+[31454 : 31457]
+Successful child: 31456
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+
+LOG: CALL check - Post:1 + main_x <= 0 - Process 1
+* Exit transition: <l0, l2, main_x = undef4 /\ main_y = undef5 /\ main_z = undef6, {all remain the same}>
+* Postcondition  : 1 + main_x <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000366s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000418s
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_x <= 0 , 
+Narrowing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000396s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001172s
+[31454 : 31461]
+[31454 : 31462]
+Successful child: 31461
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+
+LOG: CALL check - Post:main_x <= 0 - Process 2
+* Exit transition: <l0, l2, 0 <= main_x /\ main_x = undef4 /\ main_y = undef5 /\ main_z = undef6, {all remain the same}>
+* Postcondition  : main_x <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000395s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000452s
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_x <= 0 , 
+Narrowing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000343s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001005s
+[31454 : 31466]
+[31454 : 31467]
+Successful child: 31466
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ main_x + main_z <= 2, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ main_x + main_z <= 2, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[33mRanking function: [36mmain_x[0m
+New Graphs: 
+[31454 : 31471]
+[31454 : 31472]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_x + main_y <= 0 , main_x + main_z <= 2 , 
+Narrowing transition: 
+<l2, l2, 1 <= main_x, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002453s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011082s
+[33mPiecewise ranking function: [36mmin(0,-3 + 3*main_x)[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000648s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002195s
+[31454 : 31473]
+[31454 : 31474]
+Successful child: 31473
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ main_x + main_y + main_z <= 0 /\ 1 <= main_x /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+[31454 : 31478]
+[31454 : 31479]
+[31454 : 31480]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_x + main_y <= 0 , main_x + main_y + main_z <= 0 , 
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000893s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005529s
+[33mPiecewise ranking function: [36mmin(0,-3 + 3*main_x)[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000422s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001444s
+[31454 : 31481]
+[31454 : 31482]
+Successful child: 31481
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y + main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ main_y <= 1 + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y + main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ main_y <= 1 + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[33mRanking function: [36m3*main_x + 2*main_y + main_z[0m
+New Graphs: 
+[31454 : 31486]
+[31454 : 31487]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_x + main_y + main_z <= 0 , main_y <= 1 + main_z , 
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y + main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004136s
+[33mRanking function: [36m-5 + 3*main_x - 3*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001310s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.014725s
+[33mPiecewise ranking function: [36mmin(0,-1 + main_x)[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000483s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001294s
+[31454 : 31488]
+[31454 : 31489]
+Successful child: 31488
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ main_z <= 1 /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+[31454 : 31493]
+[31454 : 31494]
+[31454 : 31495]
+[31454 : 31496]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_x + main_y <= main_z , main_z <= 1 , 
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002778s
+[33mRanking function: [36m-5 + 6*main_x - 6*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001280s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.035585s
+[33mPiecewise ranking function: [36mmin((~(9) / 2) + 7*main_x,(5 / 2))[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000763s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009307s
+[31454 : 31497]
+[31454 : 31498]
+Successful child: 31497
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[33mRanking function: [36m-main_x - main_y + main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000520s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002890s
+[31454 : 31502]
+[31454 : 31503]
+Successful child: 31502
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_z /\ 3 <= main_x + main_z /\ main_x + main_y + main_z = 1, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+[31454 : 31507]
+[31454 : 31508]
+[31454 : 31509]
+[31454 : 31510]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_x <= main_z , 
+[31454 : 31511]
+[31454 : 31512]
+[31454 : 31513]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: main_x + main_y + main_z <= 1 , 
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006861s
+[33mRanking function: [36m8*main_x - 8*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001750s
+[33mRanking function: [36m-8 - 8*main_x - 8*main_y + 8*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000454s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001889s
+[31454 : 31514]
+[31454 : 31515]
+Successful child: 31514
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 2 <= main_z /\ 3 <= main_x + main_z /\ main_x + main_y + main_z = 1, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+[31454 : 31519]
+[31454 : 31520]
+[31454 : 31521]
+[31454 : 31522]
+[31454 : 31523]
+[31454 : 31524]
+[31454 : 31525]
+[31454 : 31526]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 <= main_z , main_x + main_y + main_z <= 1 , 
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010455s
+[33mRanking function: [36m9*main_x - 9*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001716s
+[33mRanking function: [36m-9 - 9*main_x - 9*main_y + 9*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000476s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002048s
+[31454 : 31527]
+[31454 : 31528]
+Successful child: 31527
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ main_x + main_y + main_z = 1, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+New Graphs: 
+[31454 : 31532]
+[31454 : 31533]
+[31454 : 31534]
+[31454 : 31535]
+[31454 : 31536]
+[31454 : 31537]
+[31454 : 31538]
+[31454 : 31539]
+INVARIANTS: 
+2: 
+Quasi-INVARIANTS to narrow Graph: 
+2: 1 + main_y <= main_z , main_x + main_y + main_z <= 1 , 
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y <= 0 /\ main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_x + main_y + main_z <= 0 /\ main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 2 + main_z <= main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x /\ 1 + main_x + main_y <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= main_y /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_x /\ main_z <= main_y /\ main_z <= 0 /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.016323s
+[33mRanking function: [36m9*main_x - 9*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_x + main_y <= 0 /\ 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z /\ 3 <= main_x + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, 1 + main_x + main_y <= main_z /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 2 <= main_x + main_y + main_z /\ 2 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002718s
+[33mRanking function: [36m-9 - 11*main_x - 11*main_y + 11*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+<l2, l2, main_z <= main_x + main_y /\ main_z <= main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001376s
+[33mRanking function: [36m1 + main_y - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_z <= main_x + main_y /\ 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000522s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001994s
+[31454 : 31540]
+[31454 : 31541]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.034436s
+Time used: 0.033712
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.084446s
+Time used: 0.084443
+
+LOG: SAT solveNonLinear - Elapsed time: 0.118882s
+Cost: 1; Total time: 0.118155
+[33mQuasi-ranking function: [36m50000 - main_x - main_y + main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_x <= main_z /\ 1 <= main_x /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 + main_z <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000610s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003081s
+[31454 : 31545]
+[31454 : 31546]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.048961s
+Time used: 0.047287
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.052626s
+Time used: 0.052624
+
+LOG: SAT solveNonLinear - Elapsed time: 0.101587s
+Cost: 1; Total time: 0.099911
+[33mQuasi-ranking function: [36m50000 - main_x[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_x <= main_z /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000604s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007159s
+[31454 : 31709]
+[31454 : 31710]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.046224s
+Time used: 0.04405
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.079992s
+Time used: 0.076561
+
+LOG: SAT solveNonLinear - Elapsed time: 0.126216s
+Cost: 1; Total time: 0.120611
+[33mQuasi-ranking function: [36m50000 + 2*main_x - main_y - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_x <= main_z /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000696s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006588s
+[31454 : 31714]
+[31454 : 31715]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.049220s
+Time used: 0.047717
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.049642s
+Time used: 0.049639
+
+LOG: SAT solveNonLinear - Elapsed time: 0.098862s
+Cost: 1; Total time: 0.097356
+[33mQuasi-ranking function: [36m50000 - 2*main_y + main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_x <= main_z /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000725s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.024412s
+[31454 : 31719]
+[31454 : 31720]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.056497s
+Time used: 0.054637
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.063279s
+Time used: 0.063276
+
+LOG: SAT solveNonLinear - Elapsed time: 0.119775s
+Cost: 1; Total time: 0.117913
+[33mQuasi-ranking function: [36m50000 + main_x + main_y - 2*main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_x <= main_z /\ 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000772s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004218s
+[31454 : 31724]
+[31454 : 31725]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.031142s
+Time used: 0.030247
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.057132s
+Time used: 0.057129
+
+LOG: SAT solveNonLinear - Elapsed time: 0.088274s
+Cost: 1; Total time: 0.087376
+[33mQuasi-ranking function: [36m50000 + main_x - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000781s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.025731s
+[31454 : 31729]
+[31454 : 31730]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.050410s
+Time used: 0.04844
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.044764s
+Time used: 0.044761
+
+LOG: SAT solveNonLinear - Elapsed time: 0.095175s
+Cost: 1; Total time: 0.093201
+[33mQuasi-ranking function: [36m50000 + main_x - main_y[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 + main_y <= main_z /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000862s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.025726s
+[31454 : 31734]
+[31454 : 31735]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053523s
+Time used: 0.051497
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.048334s
+Time used: 0.048332
+
+LOG: SAT solveNonLinear - Elapsed time: 0.101858s
+Cost: 1; Total time: 0.099829
+[33mQuasi-ranking function: [36m50000 + main_y - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000880s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.024734s
+[31454 : 31739]
+[31454 : 31740]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.050311s
+Time used: 0.048274
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.038003s
+Time used: 0.037928
+
+LOG: SAT solveNonLinear - Elapsed time: 0.088314s
+Cost: 1; Total time: 0.086202
+[33mQuasi-ranking function: [36m50000 + main_x - 3*main_y + main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 2 <= main_x + main_y + main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000937s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.015256s
+[31454 : 31744]
+[31454 : 31745]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.030600s
+Time used: 0.029548
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.048225s
+Time used: 0.048222
+
+LOG: SAT solveNonLinear - Elapsed time: 0.078825s
+Cost: 1; Total time: 0.07777
+[33mQuasi-ranking function: [36m50000 - main_x - main_y - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= main_z /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000932s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010523s
+[31454 : 31751]
+[31454 : 31752]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.050194s
+Time used: 0.048036
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.049911s
+Time used: 0.049909
+
+LOG: SAT solveNonLinear - Elapsed time: 0.100105s
+Cost: 1; Total time: 0.097945
+[33mQuasi-ranking function: [36m50000 - main_y[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000972s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.047936s
+[31454 : 31756]
+[31454 : 31757]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.052527s
+Time used: 0.049352
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.061957s
+Time used: 0.061814
+
+LOG: SAT solveNonLinear - Elapsed time: 0.114484s
+Cost: 1; Total time: 0.111166
+[33mQuasi-ranking function: [36m50000 - main_x + main_y - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001488s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.018535s
+[31454 : 31761]
+[31454 : 31762]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053599s
+Time used: 0.051216
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.048689s
+Time used: 0.048616
+
+LOG: SAT solveNonLinear - Elapsed time: 0.102288s
+Cost: 1; Total time: 0.099832
+[33mQuasi-ranking function: [36m50000 - 4*main_x + main_y + main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001316s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.021539s
+[31454 : 31766]
+[31454 : 31767]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.032930s
+Time used: 0.031211
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.048840s
+Time used: 0.048837
+
+LOG: SAT solveNonLinear - Elapsed time: 0.081770s
+Cost: 1; Total time: 0.080048
+[33mQuasi-ranking function: [36m50000 - main_x - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 <= main_x + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001360s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.069089s
+[31454 : 31771]
+[31454 : 31772]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053692s
+Time used: 0.049797
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.069586s
+Time used: 0.069583
+
+LOG: SAT solveNonLinear - Elapsed time: 0.123278s
+Cost: 1; Total time: 0.11938
+[33mQuasi-ranking function: [36m50000 - 2*main_x + main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 <= main_x + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_z <= 2*main_x /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001637s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.025772s
+[31454 : 31776]
+[31454 : 31777]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.052399s
+Time used: 0.048263
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.040090s
+Time used: 0.040087
+
+LOG: SAT solveNonLinear - Elapsed time: 0.092489s
+Cost: 1; Total time: 0.08835
+[33mQuasi-ranking function: [36m50000 - 2*main_x + main_y[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_x + main_y /\ 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 <= main_x + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= 2*main_x /\ 50001 + main_z <= 2*main_x /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001274s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012891s
+[31454 : 31940]
+[31454 : 31941]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.037435s
+Time used: 0.03554
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.072938s
+Time used: 0.072935
+
+LOG: SAT solveNonLinear - Elapsed time: 0.110373s
+Cost: 1; Total time: 0.108475
+[33mQuasi-ranking function: [36m50000 - main_x - main_y[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 <= main_z /\ 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 <= main_x + main_y /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 <= main_x + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= 2*main_x /\ 50001 + main_z <= 2*main_x /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001340s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012012s
+[31454 : 31945]
+[31454 : 31946]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053999s
+Time used: 0.049748
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.062381s
+Time used: 0.062377
+
+LOG: SAT solveNonLinear - Elapsed time: 0.116379s
+Cost: 1; Total time: 0.112125
+[33mQuasi-ranking function: [36m50000 - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 <= main_x + main_y /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 <= main_x + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= 2*main_x /\ 50001 + main_z <= 2*main_x /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 + main_z <= 2*main_y /\ 50001 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001322s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010644s
+[31454 : 31950]
+[31454 : 31951]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.036673s
+Time used: 0.034762
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.055929s
+Time used: 0.055925
+
+LOG: SAT solveNonLinear - Elapsed time: 0.092601s
+Cost: 1; Total time: 0.090687
+[33mQuasi-ranking function: [36m50000 - main_y - main_z[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 + main_x + main_y <= 2*main_z /\ 50001 + main_x <= main_y /\ 50001 + main_x + main_z <= 3*main_y /\ 50001 + main_x <= main_z /\ 50001 <= main_x /\ 50001 + main_y <= main_x + main_z /\ 50001 <= main_x + main_y /\ 50001 + main_z <= main_x + main_y /\ 50001 <= main_x + main_y + main_z /\ 50001 <= main_x + main_z /\ 50001 + 2*main_x <= main_y + main_z /\ 50001 + main_y <= 2*main_x /\ 50001 + main_z <= 2*main_x /\ 50001 + main_y + main_z <= 4*main_x /\ 50001 + main_y <= main_z /\ 50001 <= main_y /\ 50001 <= main_y + main_z /\ 50001 + main_z <= 2*main_y /\ 50001 <= main_z, {main_x -> main_x + main_y, main_y -> main_y + main_z, main_z -> main_x + main_y + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001252s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.021001s
+[31454 : 31955]
+[31454 : 31956]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.071721s
+Time used: 0.063044
+
+[31454 : 31960]
+[31454 : 31964]
+Successful child: 31960
+
+[32mProgram does NOT terminate[0m

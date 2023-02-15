@@ -1,0 +1,188 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_i -> ¿functionCall(__VERIFIER_nondet_int), main_j -> ¿functionCall(__VERIFIER_nondet_int), main_M -> ¿functionCall(__VERIFIER_nondet_int), main_N -> ¿functionCall(__VERIFIER_nondet_int), main_a -> main_i, main_b -> main_j, main_c -> 0}>
+<l1, l2, true>
+<l2, l3, not((main_i < main_M))>
+<l2, l4, (main_i < main_M)>
+<l3, l6, not((main_j < main_N))>
+<l3, l4, (main_j < main_N)>
+<l4, l5, true, seq{main_i -> (main_i + 1), main_j -> (main_j + 1), main_c -> (main_c + 1)}>
+<l5, l2, true>
+<l6, l7, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l8, true, seq{main__func_return_ -> 0}>
+<l8, l9, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l9, l10, true, seq{main_i -> varCall_1}>
+<l10, l11, true, seq{varCall_2 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l11, l12, true, seq{main_j -> varCall_2}>
+<l12, l13, true, seq{varCall_3 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l13, l14, true, seq{main_M -> varCall_3}>
+<l14, l15, true, seq{varCall_4 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l15, l1, true, seq{main_N -> varCall_4, main_a -> main_i, main_b -> main_j, main_c -> 0}>
+<l1, l2, true>
+<l2, l4, (main_i < main_M)>
+<l2, l3, not((main_i < main_M))>
+<l3, l4, (main_j < main_N)>
+<l3, l6, not((main_j < main_N))>
+<l4, l5, true, seq{main_i -> (main_i + 1), main_j -> (main_j + 1), main_c -> (main_c + 1)}>
+<l5, l2, true>
+<l6, l7, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+7, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [9 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 12, col: 1> | <line: 16, col: 6> <line: 17, col: 6> <line: 18, col: 6> <line: 19, col: 6>
+main | function | [integer, ()] | <line: 14, col: 1>
+a | local variable | integer | <line: 15, col: 2> | <line: 20, col: 5>
+b | local variable | integer | <line: 15, col: 2> | <line: 21, col: 5>
+c | local variable | integer | <line: 15, col: 2> | <line: 22, col: 5> <line: 26, col: 6> <line: 26, col: 10>
+i | local variable | integer | <line: 15, col: 2> | <line: 16, col: 2> <line: 20, col: 9> <line: 23, col: 12> <line: 24, col: 6> <line: 24, col: 10>
+j | local variable | integer | <line: 15, col: 2> | <line: 17, col: 2> <line: 21, col: 9> <line: 23, col: 19> <line: 25, col: 6> <line: 25, col: 10>
+M | local variable | integer | <line: 15, col: 2> | <line: 18, col: 2> <line: 23, col: 14>
+N | local variable | integer | <line: 15, col: 2> | <line: 19, col: 2> <line: 23, col: 21>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_c = 0) /\ (main_i = undef5) /\ (main_j = undef6) /\ (main_M = undef7) /\ (main_N = undef8)>
+<l2, l2, (main_i < main_M), par{main_c -> (main_c + 1), main_i -> (main_i + 1), main_j -> (main_j + 1)}>
+<l2, l2, not((main_i < main_M)) /\ (main_j < main_N), par{main_c -> (main_c + 1), main_i -> (main_i + 1), main_j -> (main_j + 1)}>
+<l2, l7, not((main_i < main_M)) /\ not((main_j < main_N))>
+
+Fresh variables:
+undef5, undef6, undef7, undef8, 
+
+Undef variables:
+undef5, undef6, undef7, undef8, 
+
+Abstraction variables:
+
+Exit nodes:
+7, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 + main_i <= main_M, {main_c -> 1 + main_c, main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+<l2, l2, main_M <= main_i /\ 1 + main_j <= main_N, {main_c -> 1 + main_c, main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_c, main_i, main_j, main_M, main_N
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_c = 0 /\ main_i = undef5 /\ main_j = undef6 /\ main_M = undef7 /\ main_N = undef8, {all remain the same}>
+
+Graph 2
+<l2, l7, main_M <= main_i /\ main_N <= main_j, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 7 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.003219
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000729s
+[33mRanking function: [36m-2 - 2*main_i + 2*main_M[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_M <= main_i /\ 1 + main_j <= main_N, {main_c -> 1 + main_c, main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_c, main_i, main_j, main_M, main_N
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000369s
+[33mRanking function: [36m-1 - main_j + main_N[0m
+New Graphs: 
+Proving termination of subgraph 2
+Analyzing SCC {l7}...
+No cycles found.
+
+[32mProgram Terminates[0m

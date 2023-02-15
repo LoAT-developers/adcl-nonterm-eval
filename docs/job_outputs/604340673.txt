@@ -1,0 +1,147 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_x -> 7}>
+<l1, l2, true>
+<l2, l3, true, seq{main_x -> 2}>
+<l3, l2, true>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_x -> 7}>
+<l1, l2, true>
+<l2, l3, true, seq{main_x -> 2}>
+<l3, l2, true>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [1 functions]:
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [3 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 8, col: 1>
+main | function | [integer, ()] | <line: 10, col: 1>
+x | local variable | integer | <line: 12, col: 5> | <line: 13, col: 2> <line: 15, col: 3>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, true>
+<l2, l2, true>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, true, {all remain the same}>
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, true, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.000822
+
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, true, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, true, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000174s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000214s
+Cannot prove unreachability
+
+[11453 : 11455]
+[11453 : 11456]
+Successful child: 11455
+
+[32mProgram does NOT terminate[0m

@@ -1,0 +1,165 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_x -> ¿functionCall(__VERIFIER_nondet_int), main_y -> ¿functionCall(__VERIFIER_nondet_int), main_z -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l1, l2, true>
+<l2, l5, not((main_x > (main_y + main_z)))>
+<l2, l3, (main_x > (main_y + main_z))>
+<l3, l4, true, seq{main_y -> (main_y + 1), main_z -> (main_z + 1)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l7, true, seq{main__func_return_ -> 0}>
+<l7, l8, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l8, l9, true, seq{main_x -> varCall_1}>
+<l9, l10, true, seq{varCall_2 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l10, l11, true, seq{main_y -> varCall_2}>
+<l11, l12, true, seq{varCall_3 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l12, l1, true, seq{main_z -> varCall_3}>
+<l1, l2, true>
+<l2, l3, (main_x > (main_y + main_z))>
+<l2, l5, not((main_x > (main_y + main_z)))>
+<l3, l4, true, seq{main_y -> (main_y + 1), main_z -> (main_z + 1)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [5 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1> | <line: 9, col: 9> <line: 10, col: 9> <line: 11, col: 9>
+main | function | [integer, ()] | <line: 5, col: 1>
+x | local variable | integer | <line: 6, col: 5> | <line: 9, col: 5> <line: 13, col: 12>
+y | local variable | integer | <line: 7, col: 5> | <line: 10, col: 5> <line: 13, col: 16> <line: 14, col: 9> <line: 14, col: 13>
+z | local variable | integer | <line: 8, col: 5> | <line: 11, col: 5> <line: 13, col: 20> <line: 15, col: 9> <line: 15, col: 13>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_x = undef4) /\ (main_y = undef5) /\ (main_z = undef6)>
+<l2, l2, (main_x > (main_y + main_z)), par{main_y -> (main_y + 1), main_z -> (main_z + 1)}>
+<l2, l6, not((main_x > (main_y + main_z)))>
+
+Fresh variables:
+undef4, undef5, undef6, 
+
+Undef variables:
+undef4, undef5, undef6, 
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 + main_y + main_z <= main_x, {main_y -> 1 + main_y, main_z -> 1 + main_z, rest remain the same}>
+Variables:
+main_x, main_y, main_z
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_x = undef4 /\ main_y = undef5 /\ main_z = undef6, {all remain the same}>
+
+Graph 2
+<l2, l6, main_x <= main_y + main_z, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 6 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002239
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000658s
+[33mRanking function: [36m(~(1) / 2) + (1 / 2)*main_x + (~(1) / 2)*main_y + (~(1) / 2)*main_z[0m
+New Graphs: 
+Proving termination of subgraph 2
+Analyzing SCC {l6}...
+No cycles found.
+
+[32mProgram Terminates[0m

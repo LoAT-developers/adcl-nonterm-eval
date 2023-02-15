@@ -1,0 +1,195 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_a -> 5, main_b -> 3, main_i -> 0}>
+<l1, l2, true>
+<l2, l5, not((main_i < 10))>
+<l2, l3, (main_i < 10)>
+<l3, l4, true, seq{main_i -> (main_i + 0)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_a -> 5, main_b -> 3, main_i -> 0}>
+<l1, l2, true>
+<l2, l3, (main_i < 10)>
+<l2, l5, not((main_i < 10))>
+<l3, l4, true, seq{main_i -> (main_i + 0)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [1 functions]:
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [5 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1>
+main | function | [integer, ()] | <line: 5, col: 1>
+a | local variable | integer | <line: 6, col: 5> | <line: 9, col: 5>
+b | local variable | integer | <line: 7, col: 5> | <line: 10, col: 5>
+i | local variable | integer | <line: 8, col: 5> | <line: 11, col: 5> <line: 13, col: 12> <line: 13, col: 22> <line: 13, col: 26>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = 0)>
+<l2, l2, (main_i < 10), par{main_i -> (main_i + 0)}>
+<l2, l6, not((main_i < 10))>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, main_i <= 9, {all remain the same}>
+Variables:
+main_i
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = 0, {all remain the same}>
+
+Graph 2
+<l2, l6, 10 <= main_i, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 6 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.000619
+
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Calling Safety with literal 10 <= main_i and entry <l2, l2, true, {all remain the same}>
+
+LOG: CALL check - Post:10 <= main_i - Process 1
+* Exit transition: <l2, l2, true, {all remain the same}>
+* Postcondition  : 10 <= main_i
+Postcodition moved up: 10 <= main_i
+
+LOG: Try proving POST
+
+LOG: CALL check - Post:10 <= main_i - Process 2
+* Exit transition: <l0, l2, main_i = 0, {all remain the same}>
+* Postcondition  : 10 <= main_i
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000119s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000147s
+
+LOG: NarrowEntry size 1
+Narrowing transition: 
+<l2, l2, main_i <= 9, {all remain the same}>
+
+LOG: Narrow transition size 1
+ENTRIES:
+<l0, l2, main_i = 0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l2, l2, main_i <= 9, {all remain the same}>
+END GRAPH:
+EXIT: <l2, l2, true, {all remain the same}>
+POST: 10 <= main_i
+
+
+LOG: Try proving POST
+[7615 : 7616]
+[7615 : 7617]
+[7615 : 7618]
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.018578s
+
+[7615 : 7620]
+[7615 : 7624]
+Successful child: 7620
+
+[32mProgram does NOT terminate[0m

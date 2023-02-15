@@ -1,0 +1,393 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_j -> 100, main_i -> 0}>
+<l1, l2, true>
+<l2, l5, not((main_i < main_j))>
+<l2, l3, (main_i < main_j)>
+<l3, l4, true, seq{main_j -> (main_j + 1), main_i -> (main_i + 1)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_j -> 100, main_i -> 0}>
+<l1, l2, true>
+<l2, l3, (main_i < main_j)>
+<l2, l5, not((main_i < main_j))>
+<l3, l4, true, seq{main_j -> (main_j + 1), main_i -> (main_i + 1)}>
+<l4, l2, true>
+<l5, l6, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [1 functions]:
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [4 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1>
+main | function | [integer, ()] | <line: 5, col: 1>
+i | local variable | integer | <line: 6, col: 5> | <line: 9, col: 5> <line: 11, col: 12> <line: 13, col: 9> <line: 13, col: 13>
+j | local variable | integer | <line: 7, col: 5> | <line: 8, col: 5> <line: 11, col: 16> <line: 12, col: 9> <line: 12, col: 13>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = 0) /\ (main_j = 100)>
+<l2, l2, (main_i < main_j), par{main_i -> (main_i + 1), main_j -> (main_j + 1)}>
+<l2, l6, not((main_i < main_j))>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+6, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 + main_i <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = 0 /\ main_j = 100, {all remain the same}>
+
+Graph 2
+<l2, l6, main_j <= main_i, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 6 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001966
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000511s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001417s
+[27265 : 27267]
+[27265 : 27268]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003547s
+Time used: 0.003375
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000441s
+Time used: 1.00026
+
+LOG: SAT solveNonLinear - Elapsed time: 1.003988s
+Cost: 1; Total time: 1.00364
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= 1 + main_i[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + main_i <= main_j /\ 0 <= 1 + main_i, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + main_i <= main_j /\ 0 <= 1 + main_i, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - 2*main_i + main_j[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_i <= main_j /\ 0 <= 1 + main_i /\ 50001 + main_j <= 2*main_i, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000319s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001389s
+[27265 : 27272]
+[27265 : 27273]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004388s
+Time used: 0.00408
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000205s
+Time used: 1.00019
+
+LOG: SAT solveNonLinear - Elapsed time: 1.004593s
+Cost: 1; Total time: 1.00427
+[33mQuasi-ranking function: [36m50000 - main_j[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_i <= main_j /\ 0 <= 1 + main_i /\ 50001 + main_j <= 2*main_i /\ 50001 <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000361s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001479s
+[27265 : 27277]
+[27265 : 27278]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015922s
+Time used: 0.014551
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000582s
+Time used: 1.0004
+
+LOG: SAT solveNonLinear - Elapsed time: 1.016504s
+Cost: 1; Total time: 1.01496
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= main_i[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 0 <= main_i /\ 1 + main_i <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 0 <= main_i /\ 1 + main_i <= main_j /\ 50001 + main_j <= 2*main_i /\ 50001 <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - main_i[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_i <= main_j /\ 50001 <= main_i /\ 50001 + main_j <= 2*main_i /\ 50001 <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000360s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001366s
+[27265 : 27282]
+[27265 : 27283]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006812s
+Time used: 0.006315
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000443s
+Time used: 1.00042
+
+LOG: SAT solveNonLinear - Elapsed time: 1.007255s
+Cost: 1; Total time: 1.00674
+[33mQuasi-ranking function: [36m50000 + main_i - 2*main_j[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_i <= main_j /\ 50001 + main_i <= 2*main_j /\ 50001 <= main_i /\ 50001 + main_j <= 2*main_i /\ 50001 <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000413s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001711s
+[27265 : 27287]
+[27265 : 27288]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018933s
+Time used: 0.017229
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000560s
+Time used: 1.00038
+
+LOG: SAT solveNonLinear - Elapsed time: 1.019492s
+Cost: 1; Total time: 1.0176
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= main_i[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 0 <= main_i /\ 1 + main_i <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + main_i <= main_j /\ 50001 + main_i <= 2*main_j /\ 50001 <= main_i /\ 50001 + main_j <= 2*main_i /\ 50001 <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - main_i - main_j[0m
+New Graphs: 
+Transitions:
+<l2, l2, 1 + main_i <= main_j /\ 50001 + main_i <= 2*main_j /\ 50001 <= main_i /\ 50001 <= main_i + main_j /\ 50001 + main_j <= 2*main_i /\ 50001 <= main_j, {main_i -> 1 + main_i, main_j -> 1 + main_j, rest remain the same}>
+Variables:
+main_i, main_j
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000465s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002171s
+[27265 : 27292]
+[27265 : 27293]
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.100992s
+Time used: 4.10041
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, main_i = 0 /\ main_j = 100, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, main_i = 0 /\ main_j = 100, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007285s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.007323s
+Cannot prove unreachability
+
+[27265 : 27458]
+[27265 : 27461]
+Successful child: 27458
+
+[32mProgram does NOT terminate[0m

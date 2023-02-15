@@ -1,0 +1,190 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_i -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l1, l2, true>
+<l2, l7, not((main_i > 5))>
+<l2, l3, (main_i > 5)>
+<l3, l4, not((main_i = 10))>
+<l3, l6, (main_i = 10)>
+<l4, l5, true, seq{main_i -> (main_i - 1)}>
+<l5, l6, true>
+<l6, l2, true>
+<l7, l8, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l9, true, seq{main__func_return_ -> 0}>
+<l9, l10, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l10, l1, true, seq{main_i -> varCall_1}>
+<l1, l2, true>
+<l2, l3, (main_i > 5)>
+<l2, l7, not((main_i > 5))>
+<l3, l6, (main_i = 10)>
+<l3, l4, not((main_i = 10))>
+<l4, l5, true, seq{main_i -> (main_i - 1)}>
+<l5, l6, true>
+<l6, l2, true>
+<l7, l8, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+8, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [3 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1> | <line: 7, col: 9>
+main | function | [integer, ()] | <line: 5, col: 1>
+i | local variable | integer | <line: 6, col: 5> | <line: 7, col: 5> <line: 9, col: 12> <line: 10, col: 13> <line: 11, col: 13> <line: 11, col: 17>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = undef2)>
+<l2, l2, (main_i > 5) /\ (main_i = 10)>
+<l2, l2, (main_i > 5) /\ (main_i < 10), par{main_i -> (main_i - 1)}>
+<l2, l2, (main_i > 5) /\ (main_i > 10), par{main_i -> (main_i - 1)}>
+<l2, l8, not((main_i > 5))>
+
+Fresh variables:
+undef2, 
+
+Undef variables:
+undef2, 
+
+Abstraction variables:
+
+Exit nodes:
+8, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, main_i = 10, {all remain the same}>
+<l2, l2, 6 <= main_i /\ main_i <= 9, {main_i -> -1 + main_i, rest remain the same}>
+<l2, l2, 11 <= main_i, {main_i -> -1 + main_i, rest remain the same}>
+Variables:
+main_i
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = undef2, {all remain the same}>
+
+Graph 2
+<l2, l8, main_i <= 5, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 8 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002327
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000637s
+[33mRanking function: [36m-6 + main_i[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_i = 10, {all remain the same}>
+Variables:
+main_i
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, main_i = undef2, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, main_i = undef2, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000192s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000227s
+Cannot prove unreachability
+
+[3489 : 3491]
+[3489 : 3495]
+Successful child: 3495
+
+[32mProgram does NOT terminate[0m

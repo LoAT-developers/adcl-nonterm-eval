@@ -1,0 +1,226 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+Maximum number of concurrent processes: 900
+*******************************************************************************************
+*********************** UNPROCESSED TRANSITION SYSTEMS PER FUNCTION ***********************
+*******************************************************************************************
+
+
+List of LLVMGraphs + assumeNodes + staticAssertNodes [1] :
+
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
++                                                                  +
+Init Location: 0
+Transitions:
+<l0, l1, true, seq{main__func_return_ -> 0, main_i -> ¿functionCall(__VERIFIER_nondet_int), main_range -> 20}>
+<l1, l2, true>
+<l2, l13, not((0 <= main_i))>
+<l2, l3, (0 <= main_i)>
+<l3, l13, not((main_i <= main_range))>
+<l3, l4, (main_i <= main_range)>
+<l4, l6, not((0 = main_i))>
+<l4, l5, (0 = main_i)>
+<l5, l6, not((main_i = main_range))>
+<l5, l12, (main_i = main_range)>
+<l6, l7, (main_i = main_range)>
+<l6, l9, not((main_i = main_range))>
+<l7, l8, true, seq{main_i -> 0, main_range -> (main_range - 1)}>
+<l8, l11, true>
+<l9, l10, true, seq{main_i -> (main_i + 1)}>
+<l10, l11, true>
+<l11, l12, true>
+<l12, l2, true>
+<l13, l14, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
++ Assume Nodes [0]: ++++++++++++++++++++++++++++++++++++++++++++++++
+       
++ Static Assert Nodes [0]: +++++++++++++++++++++++++++++++++++++++++
+       
++ After preprocess (paralelization): ++++++++++++++++++++++++++++++
+
+Init Location: 0
+Transitions:
+<l0, l15, true, seq{main__func_return_ -> 0}>
+<l15, l16, true, seq{varCall_1 -> ¿functionCall(__VERIFIER_nondet_int)}>
+<l16, l1, true, seq{main_i -> varCall_1, main_range -> 20}>
+<l1, l2, true>
+<l2, l3, (0 <= main_i)>
+<l2, l13, not((0 <= main_i))>
+<l3, l4, (main_i <= main_range)>
+<l3, l13, not((main_i <= main_range))>
+<l4, l5, (0 = main_i)>
+<l4, l6, not((0 = main_i))>
+<l5, l12, (main_i = main_range)>
+<l5, l6, not((main_i = main_range))>
+<l6, l7, (main_i = main_range)>
+<l6, l9, not((main_i = main_range))>
+<l7, l8, true, seq{main_i -> 0, main_range -> (main_range - 1)}>
+<l8, l11, true>
+<l9, l10, true, seq{main_i -> (main_i + 1)}>
+<l10, l11, true>
+<l11, l12, true>
+<l12, l2, true>
+<l13, l14, true, seq{main__func_return_ -> 0}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+14, 
+Accepting locations:
+
+Asserts:
+
++                                                                  +
++++++++++++++++++++++++++++++++ main +++++++++++++++++++++++++++++++
+
+
+Function Return and Parameters Information [2 functions]:
+    function name: __VERIFIER_nondet_int [1 return + 0 parameters]        demangled: __VERIFIER_nondet_int
+        __VERIFIER_nondet_int__func_return_      [function result] : int
+    function name: main [1 return + 0 parameters]        demangled: main
+        main__func_return_      [function result] : int
+
+
+AST Ident Scanner Information [4 idents]:
+__VERIFIER_nondet_int | function | [integer, ()] | <line: 3, col: 1> | <line: 8, col: 9>
+main | function | [integer, ()] | <line: 5, col: 1>
+i | local variable | integer | <line: 6, col: 5> | <line: 8, col: 5> <line: 11, col: 17> <line: 11, col: 22> <line: 12, col: 20> <line: 12, col: 25> <line: 13, col: 17> <line: 14, col: 17> <line: 17, col: 17> <line: 17, col: 21>
+range | local variable | integer | <line: 7, col: 5> | <line: 9, col: 5> <line: 11, col: 27> <line: 12, col: 30> <line: 13, col: 22> <line: 15, col: 17> <line: 15, col: 25>
+
+Main function: main
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (main_i = undef2) /\ (main_range = 20)>
+<l2, l2, (0 <= main_i) /\ (main_i <= main_range) /\ (0 = main_i) /\ (main_i = main_range)>
+<l2, l2, (0 <= main_i) /\ (main_i <= main_range) /\ (0 = main_i) /\ (main_i < main_range) /\ (main_i < main_range), par{main_i -> (main_i + 1)}>
+<l2, l2, (0 <= main_i) /\ (main_i <= main_range) /\ (0 < main_i) /\ (main_i = main_range), par{main_i -> 0, main_range -> (main_range - 1)}>
+<l2, l2, (0 <= main_i) /\ (main_i <= main_range) /\ (0 < main_i) /\ (main_i < main_range), par{main_i -> (main_i + 1)}>
+<l2, l14, (0 <= main_i) /\ not((main_i <= main_range))>
+<l2, l14, not((0 <= main_i))>
+
+Fresh variables:
+undef2, 
+
+Undef variables:
+undef2, 
+
+Abstraction variables:
+
+Exit nodes:
+14, 
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, main_i = 0 /\ main_i = main_range, {all remain the same}>
+<l2, l2, 1 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, 1 <= main_i /\ main_i = main_range, {main_i -> 0, main_range -> -1 + main_range, rest remain the same}>
+<l2, l2, 1 + main_i <= main_range /\ 1 <= main_i, {main_i -> 1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, main_i = undef2 /\ main_range = 20, {all remain the same}>
+
+Graph 2
+<l2, l14, 0 <= main_i /\ 1 + main_range <= main_i, {all remain the same}>
+<l2, l14, 1 + main_i <= 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 14 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.152664
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001249s
+[33mRanking function: [36m-1 + main_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_i = 0 /\ main_i = main_range, {all remain the same}>
+<l2, l2, 1 + main_i <= main_range /\ main_i = 0, {main_i -> 1 + main_i, rest remain the same}>
+<l2, l2, 1 + main_i <= main_range /\ 1 <= main_i, {main_i -> 1 + main_i, rest remain the same}>
+Variables:
+main_i, main_range
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000474s
+[33mRanking function: [36m-main_i + main_range[0m
+New Graphs: 
+Transitions:
+<l2, l2, main_i = 0 /\ main_i = main_range, {all remain the same}>
+Variables:
+main_i, main_range
+> No variable changes in termination graph.
+Checking conditional unfeasibility...
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, main_i = undef2 /\ main_range = 20, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, main_i = undef2 /\ main_range = 20, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000192s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000223s
+Cannot prove unreachability
+
+[6199 : 6201]
+[6199 : 6205]
+Successful child: 6201
+
+[32mProgram does NOT terminate[0m

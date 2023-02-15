@@ -28,7 +28,7 @@
     <h2>Examples</h2>
 
     <p>
-      We evaluated our implementation on all 1222 examples from the category <i>Termination of Integer Transition Systems</i> of the <i><a href="https://github.com/TermCOMP/TPDB">Termination Problems Data Base</a></i>.
+      We evaluated our implementation on all 1222 examples from the category <i>Termination of Integer Transition Systems</i> and all 335 examples from the category <i>Termination of C Integer Programs</i> of the <i><a href="https://github.com/TermCOMP/TPDB">Termination Problems Data Base</a></i>.
     </p>
 
     <h2>StarExec Bundles</h2>
@@ -40,12 +40,20 @@
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=35581">LoAT '22</a>, configuration <code>loat_nonterm_proofout</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a737357a-83c6-4d1e-b144-40e68d621037">T2</a>, configuration <code>default fixed</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=4798c8a9-e698-4029-a052-5ba641e2e0ea">VeryMax</a>, configuration <code>termcomp2019_ITS</code></li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=788f0245-548d-4148-b840-50df112c3f8f">iRankFinder</a>, configuration <code>competition</code></li>
+      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=ca1897a6-b107-48ab-8c94-11f3e009bad4">iRankFinder</a>, configuration <code>competition_its</code> and <code>competition_c</code>, respectively</li>
     </ul>
 
     <h2>Results</h2>
 
-    <a href="table.html">Here</a> we provide a table with the detailed results of our benchmarks.
+    In the following, we provide tables with the detailed results of our benchmarks.
+    <ul>
+      <li>
+        <a href="table.html">Integer Transition Systems</a>
+      </li>
+      <li>
+        <a href="table_c.html">C Integer Programs</a>
+      </li>L
+    </ul>
 
   </body>
 </html>
