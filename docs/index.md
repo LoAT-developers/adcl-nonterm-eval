@@ -52,7 +52,7 @@
       </li>
       <li>
         <a href="table_c.html">C Integer Programs</a>
-      </li>L
+      </li>
     </ul>
 
   </body>
