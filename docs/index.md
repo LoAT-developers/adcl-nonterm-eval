@@ -16,12 +16,13 @@
 
     <p>
       We implemented our contributions in our tool LoAT.
-      For more information about LoAT, we refer to the <a href="https://loat-developers.github.io/LoAT/">general LoAT website</a>.</p>
+      For more information about LoAT, we refer to the <a href="https://loat-developers.github.io/LoAT/">general LoAT website</a>.
+    </p>
 
     <h1>Getting LoAT</h1>
 
-    We provide a <a href="https://github.com/loat-developers/LoAT/releases/tag/adcl-term">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
-    Moreover, you can find the source code of LoAT at <a href="https://github.com/loat-developers/LoAT/tree/adcl-term">GitHub</a>.
+    We provide a <a href="https://github.com/LoAT-developers/LoAT/releases/tag/adcl-nt">pre-compiled binary of LoAT (Linux, 64 bit)</a>.
+    Moreover, you can find the source code of LoAT at <a href="https://github.com/loat-developers/LoAT/tree/adcl-nt">GitHub</a>.
 
     <h1>Evaluation</h1>
 
@@ -36,7 +37,7 @@
     We provide StarExec bundles for all tools used in our evaluation.
 
     <ul>
-      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=???">LoAT ADCL</a>, configuration <code>loat_nonterm_proofout</code></li>
+      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=d7af3eff-e61d-4d54-b895-86d8cf62c3cd">LoAT ADCL</a>, configuration <code>loat_nonterm_proofout</code> and <code>loat_c_nonterm_proofout</code>, respectively</li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?id=35581">LoAT '22</a>, configuration <code>loat_nonterm_proofout</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a737357a-83c6-4d1e-b144-40e68d621037">T2</a>, configuration <code>default fixed</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=4798c8a9-e698-4029-a052-5ba641e2e0ea">VeryMax</a>, configuration <code>termcomp2019_ITS</code></li>
