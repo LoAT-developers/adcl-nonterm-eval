@@ -1,0 +1,233 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l5, true>
+<l1, l2, true, par{x_1^0 -> 1, y_1^0 -> 1}>
+<l2, l3, true, par{x_1^0 -> (1 + x_1^0)}>
+<l3, l2, true>
+<l2, l4, (2 <= 0)>
+<l5, l1, true>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (x_1^0 = 1)>
+<l2, l2, true, par{x_1^0 -> (1 + x_1^0)}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, true, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Variables:
+x_1^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, x_1^0 = 1, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001596
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000521s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000666s
+Trying to remove transition: <l2, l2, true, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002235s
+Time used: 0.002139
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007264s
+Time used: 4.00706
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.026063s
+Time used: 4.02127
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006659s
+Time used: 1.00338
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004544s
+Time used: 0.002193
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000684s
+Time used: 1.00067
+
+LOG: SAT solveNonLinear - Elapsed time: 1.005228s
+Cost: 1; Total time: 1.00286
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l2: 0 <= 1 + x_1^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 0 <= 1 + x_1^0, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 0 <= 1 + x_1^0, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - x_1^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 <= x_1^0, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Variables:
+x_1^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000217s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000625s
+Trying to remove transition: <l2, l2, 50001 <= x_1^0, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.001818s
+Time used: 0.001748
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001322s
+Time used: 4.00116
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006237s
+Time used: 4.00286
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004953s
+Time used: 1.00052
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003931s
+Time used: 4.00138
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, x_1^0 = 1, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, x_1^0 = 1, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003970s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.004001s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l2, l2, true, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Variables:
+x_1^0
+
+Checking conditional non-termination of SCC {l2}...
+> No exit transition to close.
+Calling reachability with...
+Transition: <l2, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l2, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l2, x_1^0 = 1, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l2, x_1^0 = 1, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

@@ -1,0 +1,430 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: c i
+   0: [1] -> [2] : c'=864, T, cost: 1
+   1: [2] -> [4] : -10+c <= 0, cost: 1
+   8: [2] -> [9] : -10+c > 0, cost: 1
+   2: [4] -> [5] : i'=0, T, cost: 1
+   3: [5] -> [6] : -100+i < 0, cost: 1
+   6: [5] -> [8] : -100+i >= 0, cost: 1
+   4: [6] -> [7] : i'=1+i, T, cost: 1
+   5: [7] -> [5] : T, cost: 1
+   7: [8] -> [3] : T, cost: 1
+   9: [9] -> [11] : -50+c <= 0, cost: 1
+  16: [9] -> [10] : -50+c > 0, cost: 1
+  17: [10] -> [17] : -100+c <= 0, cost: 1
+  24: [10] -> [22] : -100+c > 0, cost: 1
+  10: [11] -> [12] : i'=0, T, cost: 1
+  11: [12] -> [13] : -101+i < 0, cost: 1
+  14: [12] -> [15] : -101+i >= 0, cost: 1
+  12: [13] -> [14] : i'=1+i, T, cost: 1
+  13: [14] -> [12] : T, cost: 1
+  15: [15] -> [10] : T, cost: 1
+  31: [16] -> [3] : T, cost: 1
+  18: [17] -> [18] : i'=0, T, cost: 1
+  19: [18] -> [19] : -102+i < 0, cost: 1
+  22: [18] -> [21] : -102+i >= 0, cost: 1
+  20: [19] -> [20] : i'=1+i, T, cost: 1
+  21: [20] -> [18] : T, cost: 1
+  23: [21] -> [16] : T, cost: 1
+  25: [22] -> [23] : i'=0, T, cost: 1
+  26: [23] -> [24] : -103+i < 0, cost: 1
+  29: [23] -> [26] : -103+i >= 0, cost: 1
+  27: [24] -> [25] : i'=i, T, cost: 1
+  28: [25] -> [23] : T, cost: 1
+  30: [26] -> [16] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: c i
+   0: [1] -> [2] : c'=864, T, cost: 1
+   8: [2] -> [9] : -10+c > 0, cost: 1
+  32: [2] -> [5] : i'=0, -10+c <= 0, cost: 1
+  34: [5] -> [3] : -100+i >= 0, cost: 1
+  35: [5] -> [5] : i'=1+i, -100+i < 0, cost: 1
+  16: [9] -> [10] : -50+c > 0, cost: 1
+  36: [9] -> [12] : i'=0, -50+c <= 0, cost: 1
+  37: [10] -> [18] : i'=0, -100+c <= 0, cost: 1
+  38: [10] -> [23] : i'=0, -100+c > 0, cost: 1
+  46: [12] -> [10] : -101+i >= 0, cost: 1
+  47: [12] -> [12] : i'=1+i, -101+i < 0, cost: 1
+  31: [16] -> [3] : T, cost: 1
+  40: [18] -> [16] : -102+i >= 0, cost: 1
+  41: [18] -> [18] : i'=1+i, -102+i < 0, cost: 1
+  43: [23] -> [16] : -103+i >= 0, cost: 1
+  44: [23] -> [23] : i'=i, -103+i < 0, cost: 1
+
+	Eliminating location [4] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[2] -> [4] : -10+c <= 0, cost: 1
+	Second rule:
+	[4] -> [5] : i'=0, T, cost: 1
+	New rule:
+	[2] -> [5] : i'=0, -10+c <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [6] : -100+i < 0, cost: 1
+	Second rule:
+	[6] -> [7] : i'=1+i, T, cost: 1
+	New rule:
+	[5] -> [7] : i'=1+i, -100+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [8] : -100+i >= 0, cost: 1
+	Second rule:
+	[8] -> [3] : T, cost: 1
+	New rule:
+	[5] -> [3] : -100+i >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 7
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [7] : i'=1+i, -100+i < 0, cost: 1
+	Second rule:
+	[7] -> [5] : T, cost: 1
+	New rule:
+	[5] -> [5] : i'=1+i, -100+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 33
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [11] : -50+c <= 0, cost: 1
+	Second rule:
+	[11] -> [12] : i'=0, T, cost: 1
+	New rule:
+	[9] -> [12] : i'=0, -50+c <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 9 10
+	
+	Eliminating location [17] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[10] -> [17] : -100+c <= 0, cost: 1
+	Second rule:
+	[17] -> [18] : i'=0, T, cost: 1
+	New rule:
+	[10] -> [18] : i'=0, -100+c <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 17 18
+	
+	Eliminating location [22] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[10] -> [22] : -100+c > 0, cost: 1
+	Second rule:
+	[22] -> [23] : i'=0, T, cost: 1
+	New rule:
+	[10] -> [23] : i'=0, -100+c > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 24 25
+	
+	Eliminating location [19] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[18] -> [19] : -102+i < 0, cost: 1
+	Second rule:
+	[19] -> [20] : i'=1+i, T, cost: 1
+	New rule:
+	[18] -> [20] : i'=1+i, -102+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 19 20
+	
+	Eliminating location [21] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[18] -> [21] : -102+i >= 0, cost: 1
+	Second rule:
+	[21] -> [16] : T, cost: 1
+	New rule:
+	[18] -> [16] : -102+i >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 22 23
+	
+	Eliminating location [20] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[18] -> [20] : i'=1+i, -102+i < 0, cost: 1
+	Second rule:
+	[20] -> [18] : T, cost: 1
+	New rule:
+	[18] -> [18] : i'=1+i, -102+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 21 39
+	
+	Eliminating location [24] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[23] -> [24] : -103+i < 0, cost: 1
+	Second rule:
+	[24] -> [25] : i'=i, T, cost: 1
+	New rule:
+	[23] -> [25] : i'=i, -103+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 26 27
+	
+	Eliminating location [26] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[23] -> [26] : -103+i >= 0, cost: 1
+	Second rule:
+	[26] -> [16] : T, cost: 1
+	New rule:
+	[23] -> [16] : -103+i >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 29 30
+	
+	Eliminating location [25] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[23] -> [25] : i'=i, -103+i < 0, cost: 1
+	Second rule:
+	[25] -> [23] : T, cost: 1
+	New rule:
+	[23] -> [23] : i'=i, -103+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 28 42
+	
+	Eliminating location [13] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[12] -> [13] : -101+i < 0, cost: 1
+	Second rule:
+	[13] -> [14] : i'=1+i, T, cost: 1
+	New rule:
+	[12] -> [14] : i'=1+i, -101+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 11 12
+	
+	Eliminating location [15] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[12] -> [15] : -101+i >= 0, cost: 1
+	Second rule:
+	[15] -> [10] : T, cost: 1
+	New rule:
+	[12] -> [10] : -101+i >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 14 15
+	
+	Eliminating location [14] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[12] -> [14] : i'=1+i, -101+i < 0, cost: 1
+	Second rule:
+	[14] -> [12] : T, cost: 1
+	New rule:
+	[12] -> [12] : i'=1+i, -101+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 13 45
+
+Simplified Transitions
+
+Start location: [1]
+Program variables: c i
+   0: [1] -> [2] : c'=864, T, cost: 1
+   8: [2] -> [9] : -10+c > 0, cost: 1
+  32: [2] -> [5] : i'=0, -10+c <= 0, cost: 1
+  34: [5] -> [3] : -100+i >= 0, cost: 1
+  35: [5] -> [5] : i'=1+i, -100+i < 0, cost: 1
+  16: [9] -> [10] : -50+c > 0, cost: 1
+  36: [9] -> [12] : i'=0, -50+c <= 0, cost: 1
+  37: [10] -> [18] : i'=0, -100+c <= 0, cost: 1
+  38: [10] -> [23] : i'=0, -100+c > 0, cost: 1
+  46: [12] -> [10] : -101+i >= 0, cost: 1
+  47: [12] -> [12] : i'=1+i, -101+i < 0, cost: 1
+  31: [16] -> [3] : T, cost: 1
+  40: [18] -> [16] : -102+i >= 0, cost: 1
+  41: [18] -> [18] : i'=1+i, -102+i < 0, cost: 1
+  43: [23] -> [16] : -103+i >= 0, cost: 1
+  48: [23] -> [23] : -103+i < 0, cost: 1
+
+	Removed Trivial Updates
+
+	Original rule:
+	[23] -> [23] : i'=i, -103+i < 0, cost: 1
+	New rule:
+	[23] -> [23] : -103+i < 0, cost: 1
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 8
+
+	Trace
+
+	0[T], 8[(-10+c > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 16
+
+	Trace
+
+	0[T], 8[(-10+c > 0)], 16[(-50+c > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Step with 38
+
+	Trace
+
+	0[T], 8[(-10+c > 0)], 16[(-50+c > 0)], 38[(-100+c > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {37[T]}, {}]
+
+Step with 48
+
+	Trace
+
+	0[T], 8[(-10+c > 0)], 16[(-50+c > 0)], 38[(-100+c > 0)], 48[(-103+i < 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {37[T]}, {43[T]}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: c i
+   0: [1] -> [2] : c'=864, T, cost: 1
+   8: [2] -> [9] : -10+c > 0, cost: 1
+  32: [2] -> [5] : i'=0, -10+c <= 0, cost: 1
+  34: [5] -> [3] : -100+i >= 0, cost: 1
+  35: [5] -> [5] : i'=1+i, -100+i < 0, cost: 1
+  16: [9] -> [10] : -50+c > 0, cost: 1
+  36: [9] -> [12] : i'=0, -50+c <= 0, cost: 1
+  37: [10] -> [18] : i'=0, -100+c <= 0, cost: 1
+  38: [10] -> [23] : i'=0, -100+c > 0, cost: 1
+  46: [12] -> [10] : -101+i >= 0, cost: 1
+  47: [12] -> [12] : i'=1+i, -101+i < 0, cost: 1
+  31: [16] -> [3] : T, cost: 1
+  40: [18] -> [16] : -102+i >= 0, cost: 1
+  41: [18] -> [18] : i'=1+i, -102+i < 0, cost: 1
+  43: [23] -> [16] : -103+i >= 0, cost: 1
+  48: [23] -> [23] : -103+i < 0, cost: 1
+  49: [23] -> LoAT_sink : (103-i > 0 /\ -1+n >= 0), cost: NONTERM
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[23] -> [23] : (-103+i < 0), cost: 1
+	New rule:
+	[23] -> LoAT_sink : (103-i > 0 /\ -1+n >= 0), cost: NONTERM
+
+		103-i > 0 [0]: monotonic increase yields 103-i > 0
+		
+		Replacement map: {103-i > 0 -> 103-i > 0}
+
+Step with 49
+
+	Trace
+
+	0[T], 8[(-10+c > 0)], 16[(-50+c > 0)], 38[(-100+c > 0)], 49[(103-i > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {37[T]}, {43[T]}, {49[T]}]
+
+Refute
+
+	Counterexample
+
+	[ c=864 i=0 ] 0 [ c=864 i=0 ] 8 [ c=864 i=0 ] 16 [ c=864 i=0 ] 38 [ c=c i=0 ] 49
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

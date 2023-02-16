@@ -1,0 +1,255 @@
+NO
+
+Initial ITS
+
+Start location: l4
+Program variables: i^0 j^0 ret_pair5^0
+   0: l0 -> l1 : i^0'=i^post1, j^0'=j^post1, ret_pair5^0'=ret_pair5^post1, (0 == 0 /\ -2+j^post1-j^0 == 0 /\ -1-i^0+i^post1 == 0), cost: 1
+   1: l0 -> l2 : i^0'=i^post2, j^0'=j^post2, ret_pair5^0'=ret_pair5^post2, (ret_pair5^0-ret_pair5^post2 == 0 /\ -j^post2+j^0 == 0 /\ i^0-i^post2 == 0), cost: 1
+   2: l1 -> l0 : i^0'=i^post3, j^0'=j^post3, ret_pair5^0'=ret_pair5^post3, (ret_pair5^0-ret_pair5^post3 == 0 /\ -j^post3+j^0 == 0 /\ i^0-i^post3 == 0), cost: 1
+   3: l3 -> l1 : i^0'=i^post4, j^0'=j^post4, ret_pair5^0'=ret_pair5^post4, (j^post4 == 0 /\ ret_pair5^0-ret_pair5^post4 == 0 /\ i^post4 == 0), cost: 1
+   4: l4 -> l3 : i^0'=i^post5, j^0'=j^post5, ret_pair5^0'=ret_pair5^post5, (i^0-i^post5 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l4
+Program variables: i^0 j^0 ret_pair5^0
+   0: l0 -> l1 : i^0'=i^post1, j^0'=j^post1, ret_pair5^0'=ret_pair5^post1, (0 == 0 /\ -2+j^post1-j^0 == 0 /\ -1-i^0+i^post1 == 0), cost: 1
+   1: l0 -> l2 : i^0'=i^post2, j^0'=j^post2, ret_pair5^0'=ret_pair5^post2, (ret_pair5^0-ret_pair5^post2 == 0 /\ -j^post2+j^0 == 0 /\ i^0-i^post2 == 0), cost: 1
+   2: l1 -> l0 : i^0'=i^post3, j^0'=j^post3, ret_pair5^0'=ret_pair5^post3, (ret_pair5^0-ret_pair5^post3 == 0 /\ -j^post3+j^0 == 0 /\ i^0-i^post3 == 0), cost: 1
+   5: l4 -> l1 : i^0'=i^post4, j^0'=j^post4, ret_pair5^0'=ret_pair5^post4, (i^0-i^post5 == 0 /\ j^post4 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0 /\ i^post4 == 0 /\ ret_pair5^post5-ret_pair5^post4 == 0), cost: 1
+
+	Eliminating location l3 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l4 -> l3 : i^0'=i^post5, j^0'=j^post5, ret_pair5^0'=ret_pair5^post5, (i^0-i^post5 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0), cost: 1
+	Second rule:
+	l3 -> l1 : i^0'=i^post4, j^0'=j^post4, ret_pair5^0'=ret_pair5^post4, (j^post4 == 0 /\ ret_pair5^0-ret_pair5^post4 == 0 /\ i^post4 == 0), cost: 1
+	New rule:
+	l4 -> l1 : i^0'=i^post4, j^0'=j^post4, ret_pair5^0'=ret_pair5^post4, (i^0-i^post5 == 0 /\ j^post4 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0 /\ i^post4 == 0 /\ ret_pair5^post5-ret_pair5^post4 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+
+Simplified Transitions
+
+Start location: l4
+Program variables: i^0 j^0 ret_pair5^0
+   6: l0 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, T, cost: 1
+   7: l0 -> l2 : T, cost: 1
+   8: l1 -> l0 : T, cost: 1
+   9: l4 -> l1 : i^0'=0, j^0'=0, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l1 : i^0'=i^post1, j^0'=j^post1, ret_pair5^0'=ret_pair5^post1, (0 == 0 /\ -2+j^post1-j^0 == 0 /\ -1-i^0+i^post1 == 0), cost: 1
+	New rule:
+	l0 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, 0 == 0, cost: 1
+	
+		propagated equality j^post1 = 2+j^0
+		
+		propagated equality i^post1 = 1+i^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, 0 == 0, cost: 1
+	New rule:
+	l0 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l2 : i^0'=i^post2, j^0'=j^post2, ret_pair5^0'=ret_pair5^post2, (ret_pair5^0-ret_pair5^post2 == 0 /\ -j^post2+j^0 == 0 /\ i^0-i^post2 == 0), cost: 1
+	New rule:
+	l0 -> l2 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, 0 == 0, cost: 1
+	
+		propagated equality ret_pair5^post2 = ret_pair5^0
+		
+		propagated equality j^post2 = j^0
+		
+		propagated equality i^post2 = i^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l2 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l2 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l2 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, T, cost: 1
+	New rule:
+	l0 -> l2 : T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l1 -> l0 : i^0'=i^post3, j^0'=j^post3, ret_pair5^0'=ret_pair5^post3, (ret_pair5^0-ret_pair5^post3 == 0 /\ -j^post3+j^0 == 0 /\ i^0-i^post3 == 0), cost: 1
+	New rule:
+	l1 -> l0 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, 0 == 0, cost: 1
+	
+		propagated equality ret_pair5^post3 = ret_pair5^0
+		
+		propagated equality j^post3 = j^0
+		
+		propagated equality i^post3 = i^0
+		
+	Simplified Guard
+
+	Original rule:
+	l1 -> l0 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, 0 == 0, cost: 1
+	New rule:
+	l1 -> l0 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l1 -> l0 : i^0'=i^0, j^0'=j^0, ret_pair5^0'=ret_pair5^0, T, cost: 1
+	New rule:
+	l1 -> l0 : T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l4 -> l1 : i^0'=i^post4, j^0'=j^post4, ret_pair5^0'=ret_pair5^post4, (i^0-i^post5 == 0 /\ j^post4 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0 /\ i^post4 == 0 /\ ret_pair5^post5-ret_pair5^post4 == 0), cost: 1
+	New rule:
+	l4 -> l1 : i^0'=0, j^0'=0, ret_pair5^0'=ret_pair5^post5, (0 == 0 /\ i^0-i^post5 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0), cost: 1
+	
+		propagated equality j^post4 = 0
+		
+		propagated equality i^post4 = 0
+		
+		propagated equality ret_pair5^post4 = ret_pair5^post5
+		
+	Propagated Equalities
+
+	Original rule:
+	l4 -> l1 : i^0'=0, j^0'=0, ret_pair5^0'=ret_pair5^post5, (0 == 0 /\ i^0-i^post5 == 0 /\ j^0-j^post5 == 0 /\ ret_pair5^0-ret_pair5^post5 == 0), cost: 1
+	New rule:
+	l4 -> l1 : i^0'=0, j^0'=0, ret_pair5^0'=ret_pair5^0, 0 == 0, cost: 1
+	
+		propagated equality i^post5 = i^0
+		
+		propagated equality j^post5 = j^0
+		
+		propagated equality ret_pair5^post5 = ret_pair5^0
+		
+	Simplified Guard
+
+	Original rule:
+	l4 -> l1 : i^0'=0, j^0'=0, ret_pair5^0'=ret_pair5^0, 0 == 0, cost: 1
+	New rule:
+	l4 -> l1 : i^0'=0, j^0'=0, ret_pair5^0'=ret_pair5^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l4 -> l1 : i^0'=0, j^0'=0, ret_pair5^0'=ret_pair5^0, T, cost: 1
+	New rule:
+	l4 -> l1 : i^0'=0, j^0'=0, T, cost: 1
+
+Step with 9
+
+	Trace
+
+	9[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 8
+
+	Trace
+
+	9[T], 8[T]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 7
+
+	Trace
+
+	9[T], 8[T], 7[T]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	9[T], 8[T]
+	
+	Blocked
+
+	[{}, {}, {7[T]}]
+
+Step with 6
+
+	Trace
+
+	9[T], 8[T], 6[T]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {}]
+
+Nonterm
+
+Start location: l4
+Program variables: i^0 j^0 ret_pair5^0
+   6: l0 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, T, cost: 1
+   7: l0 -> l2 : T, cost: 1
+   8: l1 -> l0 : T, cost: 1
+  10: l1 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+  11: l1 -> l1 : i^0'=n+i^0, j^0'=2*n+j^0, ret_pair5^0'=ret_pair5^post1, -1+n >= 0, cost: 1
+   9: l4 -> l1 : i^0'=0, j^0'=0, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l1 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, T, cost: 1
+	New rule:
+	l1 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+	Loop Acceleration
+
+	Original rule:
+	l1 -> l1 : i^0'=1+i^0, j^0'=2+j^0, ret_pair5^0'=ret_pair5^post1, T, cost: 1
+	New rule:
+	l1 -> l1 : i^0'=n+i^0, j^0'=2*n+j^0, ret_pair5^0'=ret_pair5^post1, -1+n >= 0, cost: 1
+
+		Replacement map: {}
+
+Step with 10
+
+	Trace
+
+	9[T], 10[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {10[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i^0=0 j^0=0 ret_pair5^0=0 ] 9 [ i^0=i^0 j^0=j^0 ret_pair5^0=0 ] 10
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

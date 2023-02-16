@@ -1,0 +1,1704 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: i range up
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : range'=20, T, cost: 1
+   2: [3] -> [4] : up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+   4: [5] -> [7] : i == 0, cost: 1
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+   8: [6] -> [10] : -range+i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+   5: [7] -> [8] : up'=1, T, cost: 1
+   6: [8] -> [6] : T, cost: 1
+  12: [9] -> [13] : -1+up == 0, cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+   9: [10] -> [11] : up'=0, T, cost: 1
+  10: [11] -> [9] : T, cost: 1
+  16: [12] -> [16] : up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  13: [13] -> [14] : i'=1+i, T, cost: 1
+  14: [14] -> [12] : T, cost: 1
+  20: [15] -> [19] : 2-range+i == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  17: [16] -> [17] : i'=-1+i, T, cost: 1
+  18: [17] -> [15] : T, cost: 1
+  24: [18] -> [4] : T, cost: 1
+  21: [19] -> [20] : range'=-1+range, T, cost: 1
+  22: [20] -> [18] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: i range up
+  27: [1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+  29: [5] -> [6] : up'=1, i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+  31: [6] -> [9] : up'=0, -range+i == 0, cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+  33: [9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  35: [12] -> [15] : i'=-1+i, up == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  37: [15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+  24: [18] -> [4] : T, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : i'=nondet, T, cost: 1
+	Second rule:
+	[2] -> [3] : range'=20, T, cost: 1
+	New rule:
+	[1] -> [3] : i'=nondet, range'=20, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [3] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [3] : i'=nondet, range'=20, T, cost: 1
+	Second rule:
+	[3] -> [4] : up'=0, T, cost: 1
+	New rule:
+	[1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 26
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [7] : i == 0, cost: 1
+	Second rule:
+	[7] -> [8] : up'=1, T, cost: 1
+	New rule:
+	[5] -> [8] : up'=1, i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 5
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [8] : up'=1, i == 0, cost: 1
+	Second rule:
+	[8] -> [6] : T, cost: 1
+	New rule:
+	[5] -> [6] : up'=1, i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 28
+	
+	Eliminating location [10] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [10] : -range+i == 0, cost: 1
+	Second rule:
+	[10] -> [11] : up'=0, T, cost: 1
+	New rule:
+	[6] -> [11] : up'=0, -range+i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 8 9
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [11] : up'=0, -range+i == 0, cost: 1
+	Second rule:
+	[11] -> [9] : T, cost: 1
+	New rule:
+	[6] -> [9] : up'=0, -range+i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 10 30
+	
+	Eliminating location [13] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [13] : -1+up == 0, cost: 1
+	Second rule:
+	[13] -> [14] : i'=1+i, T, cost: 1
+	New rule:
+	[9] -> [14] : i'=1+i, -1+up == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 12 13
+	
+	Eliminating location [14] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [14] : i'=1+i, -1+up == 0, cost: 1
+	Second rule:
+	[14] -> [12] : T, cost: 1
+	New rule:
+	[9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 14 32
+	
+	Eliminating location [16] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[12] -> [16] : up == 0, cost: 1
+	Second rule:
+	[16] -> [17] : i'=-1+i, T, cost: 1
+	New rule:
+	[12] -> [17] : i'=-1+i, up == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 16 17
+	
+	Eliminating location [17] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[12] -> [17] : i'=-1+i, up == 0, cost: 1
+	Second rule:
+	[17] -> [15] : T, cost: 1
+	New rule:
+	[12] -> [15] : i'=-1+i, up == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 18 34
+	
+	Eliminating location [19] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[15] -> [19] : 2-range+i == 0, cost: 1
+	Second rule:
+	[19] -> [20] : range'=-1+range, T, cost: 1
+	New rule:
+	[15] -> [20] : range'=-1+range, 2-range+i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 20 21
+	
+	Eliminating location [20] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[15] -> [20] : range'=-1+range, 2-range+i == 0, cost: 1
+	Second rule:
+	[20] -> [18] : T, cost: 1
+	New rule:
+	[15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 22 36
+
+Step with 27
+
+	Trace
+
+	27[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 25
+
+	Trace
+
+	27[T], 25[(-range+i > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	27[T]
+	
+	Blocked
+
+	[{}, {25[-range+i > 0]}]
+
+Step with 25
+
+	Trace
+
+	27[T], 25[(-i > 0)]
+	
+	Blocked
+
+	[{}, {25[-range+i > 0]}, {}]
+
+Backtrack
+
+	Trace
+
+	27[T]
+	
+	Blocked
+
+	[{}, {25[(-range+i > 0 /\ -i > 0)]}]
+
+Step with 3
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}, {}]
+
+Step with 15
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}, {}, {}]
+
+Step with 35
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}, {}, {19[T]}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}, {}, {19[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}, {}, {19[T]}, {}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i range up
+  27: [1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+  38: [4] -> [4] : i'=i-n, (-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+  29: [5] -> [6] : up'=1, i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+  31: [6] -> [9] : up'=0, -range+i == 0, cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+  33: [9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  35: [12] -> [15] : i'=-1+i, up == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  37: [15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+  24: [18] -> [4] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[4] -> [4] : i'=-1+i, (1-range+i < 0 /\ -range+i < 0 /\ -range+i <= 0 /\ -1+up < 0 /\ up == 0 /\ i > 0 /\ -i <= 0), cost: 1
+	New rule:
+	[4] -> [4] : i'=i-n, (-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+
+		-1+range-i > 0 [0]: monotonic increase yields -1+range-i > 0
+		
+		-up >= 0 [0]: monotonic increase yields -up >= 0
+		
+		1-up > 0 [0]: monotonic increase yields 1-up > 0, dependencies: -up >= 0
+		
+		up >= 0 [0]: monotonic increase yields up >= 0
+		
+		range-i > 0 [0]: monotonic increase yields range-i > 0, dependencies: -1+range-i > 0
+		
+		range-i >= 0 [0]: monotonic increase yields range-i >= 0, dependencies: -1+range-i > 0
+		
+		i > 0 [0]: montonic decrease yields 1+i-n > 0
+		
+		i > 0 [1]: eventual increase yields (1 <= 0 /\ i > 0)
+		
+		i >= 0 [0]: monotonic increase yields i >= 0, dependencies: i > 0
+		
+		Replacement map: {-1+range-i > 0 -> -1+range-i > 0, -up >= 0 -> -up >= 0, 1-up > 0 -> 1-up > 0, up >= 0 -> up >= 0, range-i > 0 -> range-i > 0, range-i >= 0 -> range-i >= 0, i > 0 -> 1+i-n > 0, i >= 0 -> i >= 0}
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {38[T]}]
+
+Step with 3
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}]
+
+Step with 15
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {}]
+
+Step with 35
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {}, {23[2-range+i < 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {}, {35[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {}, {15[-1+up < 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {}, {11[-range+i < 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[i > 0]}]
+
+Step with 29
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {}]
+
+Step with 33
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {15[T]}, {}]
+
+Step with 19
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 3
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 7
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {}, {}, {}, {29[T]}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i range up
+  27: [1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+  38: [4] -> [4] : i'=i-n, (-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+  29: [5] -> [6] : up'=1, i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+  31: [6] -> [9] : up'=0, -range+i == 0, cost: 1
+  39: [6] -> [6] : i'=n2+i, (-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0), cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+  33: [9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  35: [12] -> [15] : i'=-1+i, up == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  37: [15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+  24: [18] -> [4] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[6] -> [6] : i'=1+i, (1+i > 0 /\ -1-i <= 0 /\ 1-range+i <= 0 /\ -range+i < 0 /\ -1+up == 0 /\ up > 0 /\ 3-range+i < 0), cost: 1
+	New rule:
+	[6] -> [6] : i'=n2+i, (-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0), cost: 1
+
+		-1+range-i >= 0 [0]: monotonic increase yields -1+range-i >= 0, dependencies: -3+range-i > 0
+		
+		-1+range-i >= 0 [1]: montonic decrease yields -n2+range-i >= 0
+		
+		-1+range-i >= 0 [2]: eventual increase yields (1 <= 0 /\ -1+range-i >= 0)
+		
+		1+i > 0 [0]: monotonic increase yields 1+i > 0
+		
+		1+i >= 0 [0]: monotonic increase yields 1+i >= 0, dependencies: 1+i > 0
+		
+		1-up >= 0 [0]: monotonic increase yields 1-up >= 0
+		
+		-1+up >= 0 [0]: monotonic increase yields -1+up >= 0
+		
+		up > 0 [0]: monotonic increase yields up > 0, dependencies: -1+up >= 0
+		
+		range-i > 0 [0]: monotonic increase yields range-i > 0, dependencies: -3+range-i > 0
+		
+		range-i > 0 [1]: montonic decrease yields 1-n2+range-i > 0
+		
+		range-i > 0 [2]: eventual increase yields (1 <= 0 /\ range-i > 0)
+		
+		-3+range-i > 0 [0]: montonic decrease yields -2-n2+range-i > 0
+		
+		-3+range-i > 0 [1]: eventual increase yields (1 <= 0 /\ -3+range-i > 0)
+		
+		Replacement map: {-1+range-i >= 0 -> -1+range-i >= 0, 1+i > 0 -> 1+i > 0, 1+i >= 0 -> 1+i >= 0, 1-up >= 0 -> 1-up >= 0, -1+up >= 0 -> -1+up >= 0, up > 0 -> up > 0, range-i > 0 -> range-i > 0, -3+range-i > 0 -> -2-n2+range-i > 0}
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}]
+
+Step with 11
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}]
+
+Step with 33
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}]
+
+Step with 19
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 3
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 7
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {}, {}, {7[i > 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {}, {3[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {23[2-range+i < 0]}]
+
+Step with 37
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 37[(2-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {23[T]}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 38[(-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 37[(2-range+i == 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 38[T]}, {7[T]}, {}, {39[T]}, {}, {}, {23[T]}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Restart
+
+Step with 27
+
+	Trace
+
+	27[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 25
+
+	Trace
+
+	27[T], 25[(-i > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	27[T]
+	
+	Blocked
+
+	[{}, {25[-i > 0]}]
+
+Step with 25
+
+	Trace
+
+	27[T], 25[(-range+i > 0)]
+	
+	Blocked
+
+	[{}, {25[-i > 0]}, {}]
+
+Backtrack
+
+	Trace
+
+	27[T]
+	
+	Blocked
+
+	[{}, {25[(-range+i > 0 /\ -i > 0)]}]
+
+Step with 3
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}]
+
+Step with 29
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {}]
+
+Step with 33
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {}]
+
+Step with 19
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {35[T]}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {35[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {35[T]}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {35[T]}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {35[T]}, {23[2-range+i < 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T]}, {19[up > 0], 35[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {31[T]}, {15[T], 33[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[-range+i < 0], 31[T]}]
+
+Step with 39
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {39[T]}]
+
+Step with 11
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}]
+
+Step with 33
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}]
+
+Step with 19
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {23[2-range+i < 0]}]
+
+Step with 37
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 37[(2-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {23[T]}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 37[(2-range+i == 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {23[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 37[(2-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {23[T]}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {}, {23[T], 37[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {}, {19[up > 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {31[T], 39[T]}, {33[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 39[(-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T]}, {11[-range+i < 0], 31[T], 39[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {}, {11[T], 31[T], 39[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}]
+
+Step with 7
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}, {}, {}]
+
+Step with 15
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}, {}, {33[T]}, {}]
+
+Step with 35
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}, {}, {33[T]}, {19[T]}, {}]
+
+Step with 37
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 37[(2-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}, {}, {33[T]}, {19[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 37[(2-range+i == 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {29[T]}, {}, {33[T]}, {19[T]}, {}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i range up
+  27: [1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+  38: [4] -> [4] : i'=i-n, (-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+  40: [4] -> [4] : i'=-n3+i, range'=-n3+range, (-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+  29: [5] -> [6] : up'=1, i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+  31: [6] -> [9] : up'=0, -range+i == 0, cost: 1
+  39: [6] -> [6] : i'=n2+i, (-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0), cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+  33: [9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  35: [12] -> [15] : i'=-1+i, up == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  37: [15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+  24: [18] -> [4] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[4] -> [4] : i'=-1+i, range'=-1+range, (1-range+i == 0 /\ -range+i < 0 /\ -range+i <= 0 /\ -1+up < 0 /\ up == 0 /\ i > 0 /\ -i <= 0), cost: 1
+	New rule:
+	[4] -> [4] : i'=-n3+i, range'=-n3+range, (-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+
+		-1+range-i >= 0 [0]: monotonic increase yields -1+range-i >= 0
+		
+		1-range+i >= 0 [0]: monotonic increase yields 1-range+i >= 0
+		
+		-up >= 0 [0]: monotonic increase yields -up >= 0
+		
+		1-up > 0 [0]: monotonic increase yields 1-up > 0, dependencies: -up >= 0
+		
+		up >= 0 [0]: monotonic increase yields up >= 0
+		
+		range-i > 0 [0]: monotonic increase yields range-i > 0, dependencies: -1+range-i >= 0
+		
+		range-i >= 0 [0]: monotonic increase yields range-i >= 0, dependencies: -1+range-i >= 0
+		
+		i > 0 [0]: montonic decrease yields 1-n3+i > 0
+		
+		i > 0 [1]: eventual increase yields (1 <= 0 /\ i > 0)
+		
+		i >= 0 [0]: monotonic increase yields i >= 0, dependencies: i > 0
+		
+		Replacement map: {-1+range-i >= 0 -> -1+range-i >= 0, 1-range+i >= 0 -> 1-range+i >= 0, -up >= 0 -> -up >= 0, 1-up > 0 -> 1-up > 0, up >= 0 -> up >= 0, range-i > 0 -> range-i > 0, range-i >= 0 -> range-i >= 0, i > 0 -> 1-n3+i > 0, i >= 0 -> i >= 0}
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {40[T]}]
+
+Step with 3
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}]
+
+Step with 15
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {}]
+
+Step with 35
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {}, {}]
+
+Step with 37
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 37[(2-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 37[(2-range+i == 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)], 37[(2-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {}, {37[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {}, {35[T]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {}, {15[-1+up < 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {}, {11[-range+i < 0]}]
+
+Backtrack
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[i > 0]}]
+
+Step with 29
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}]
+
+Step with 11
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {}]
+
+Step with 33
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {15[T]}, {}]
+
+Step with 19
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {37[T]}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i > 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {37[T]}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 3
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i > 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {37[T]}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 7
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 11[(-range+i < 0)], 33[(-1+up == 0)], 19[(up > 0)], 23[(2-range+i > 0)], 24[T], 3[(-range+i <= 0 /\ -i <= 0)], 7[(i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {15[T]}, {35[T]}, {37[T]}, {}, {}, {29[T]}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i range up
+  27: [1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+  38: [4] -> [4] : i'=i-n, (-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+  40: [4] -> [4] : i'=-n3+i, range'=-n3+range, (-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+  29: [5] -> [6] : up'=1, i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+  31: [6] -> [9] : up'=0, -range+i == 0, cost: 1
+  39: [6] -> [6] : i'=n2+i, (-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0), cost: 1
+  41: [6] -> [6] : i'=n4+i, (1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0), cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+  33: [9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  35: [12] -> [15] : i'=-1+i, up == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  37: [15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+  24: [18] -> [4] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[6] -> [6] : i'=1+i, (1+i > 0 /\ -1-i <= 0 /\ 1-range+i <= 0 /\ -range+i < 0 /\ -1+up == 0 /\ up > 0 /\ 3-range+i > 0), cost: 1
+	New rule:
+	[6] -> [6] : i'=n4+i, (1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0), cost: 1
+
+		-1+range-i >= 0 [0]: montonic decrease yields range-n4-i >= 0
+		
+		-1+range-i >= 0 [1]: eventual increase yields (1 <= 0 /\ -1+range-i >= 0)
+		
+		1+i > 0 [0]: monotonic increase yields 1+i > 0
+		
+		1+i >= 0 [0]: monotonic increase yields 1+i >= 0, dependencies: 1+i > 0
+		
+		1-up >= 0 [0]: monotonic increase yields 1-up >= 0
+		
+		-1+up >= 0 [0]: monotonic increase yields -1+up >= 0
+		
+		up > 0 [0]: monotonic increase yields up > 0, dependencies: -1+up >= 0
+		
+		range-i > 0 [0]: montonic decrease yields 1+range-n4-i > 0
+		
+		range-i > 0 [1]: eventual increase yields (1 <= 0 /\ range-i > 0)
+		
+		3-range+i > 0 [0]: monotonic increase yields 3-range+i > 0
+		
+		Replacement map: {-1+range-i >= 0 -> range-n4-i >= 0, 1+i > 0 -> 1+i > 0, 1+i >= 0 -> 1+i >= 0, 1-up >= 0 -> 1-up >= 0, -1+up >= 0 -> -1+up >= 0, up > 0 -> up > 0, range-i > 0 -> 1+range-n4-i > 0, 3-range+i > 0 -> 3-range+i > 0}
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 41[(1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {41[T]}]
+
+Step with 31
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 41[(1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0)], 31[(-range+i == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {41[T]}, {}]
+
+Step with 15
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 41[(1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0)], 31[(-range+i == 0)], 15[(-1+up < 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {41[T]}, {33[T]}, {}]
+
+Step with 35
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 41[(1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0)], 31[(-range+i == 0)], 15[(-1+up < 0)], 35[(up == 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {41[T]}, {33[T]}, {19[T]}, {}]
+
+Step with 23
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 41[(1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0)], 31[(-range+i == 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i > 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {41[T]}, {33[T]}, {19[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 3[(-range+i <= 0 /\ -i <= 0)], 29[(i == 0)], 41[(1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0)], 31[(-range+i == 0)], 15[(-1+up < 0)], 35[(up == 0)], 23[(2-range+i > 0)], 24[T]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {7[T]}, {}, {41[T]}, {33[T]}, {19[T]}, {}, {}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: i range up
+  27: [1] -> [4] : i'=nondet, range'=20, up'=0, T, cost: 1
+   3: [4] -> [5] : (-range+i <= 0 /\ -i <= 0), cost: 1
+  25: [4] -> [21] : (-range+i > 0 \/ -i > 0), cost: 1
+  38: [4] -> [4] : i'=i-n, (-1+range-i > 0 /\ 1+i-n > 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ -1+n >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+  40: [4] -> [4] : i'=-n3+i, range'=-n3+range, (-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0), cost: 1
+  42: [4] -> LoAT_sink : (-1+range-i <= 0 /\ -1+range-i >= 0 /\ 1+i > 0 /\ 1+i >= 0 /\ range-i >= 0 /\ i >= 0 /\ 3-range+i > 0 /\ -i >= 0), cost: NONTERM
+   7: [5] -> [6] : (i < 0 \/ i > 0), cost: 1
+  29: [5] -> [6] : up'=1, i == 0, cost: 1
+  11: [6] -> [9] : (-range+i < 0 \/ -range+i > 0), cost: 1
+  31: [6] -> [9] : up'=0, -range+i == 0, cost: 1
+  39: [6] -> [6] : i'=n2+i, (-1+range-i >= 0 /\ -2-n2+range-i > 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -1+n2 >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ range-i > 0), cost: 1
+  41: [6] -> [6] : i'=n4+i, (1+i > 0 /\ 1+i >= 0 /\ -1+n4 >= 0 /\ 1+range-n4-i > 0 /\ range-n4-i >= 0 /\ 1-up >= 0 /\ -1+up >= 0 /\ up > 0 /\ 3-range+i > 0), cost: 1
+  15: [9] -> [12] : (-1+up < 0 \/ -1+up > 0), cost: 1
+  33: [9] -> [12] : i'=1+i, -1+up == 0, cost: 1
+  19: [12] -> [15] : (up < 0 \/ up > 0), cost: 1
+  35: [12] -> [15] : i'=-1+i, up == 0, cost: 1
+  23: [15] -> [18] : (2-range+i < 0 \/ 2-range+i > 0), cost: 1
+  37: [15] -> [18] : range'=-1+range, 2-range+i == 0, cost: 1
+  24: [18] -> [4] : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[4] -> [4] : i'=-1+range, up'=0, (-1+range-i >= 0 /\ 1+i > 0 /\ 1+i >= 0 /\ -range+i <= 0 /\ i == 0 /\ 3-range+i > 0 /\ -i <= 0), cost: 1
+	New rule:
+	[4] -> LoAT_sink : (-1+range-i <= 0 /\ -1+range-i >= 0 /\ 1+i > 0 /\ 1+i >= 0 /\ range-i >= 0 /\ i >= 0 /\ 3-range+i > 0 /\ -i >= 0), cost: NONTERM
+
+		-1+range-i >= 0 [0]: monotonic increase yields -1+range-i >= 0
+		
+		1+i > 0 [0]: monotonic increase yields 1+i > 0, dependencies: -1+range-i >= 0
+		
+		1+i >= 0 [0]: monotonic increase yields 1+i >= 0, dependencies: -1+range-i >= 0 1+i > 0
+		
+		range-i >= 0 [0]: monotonic increase yields range-i >= 0
+		
+		i >= 0 [0]: monotonic increase yields i >= 0, dependencies: -1+range-i >= 0 1+i > 0
+		
+		3-range+i > 0 [0]: monotonic increase yields 3-range+i > 0
+		
+		-i >= 0 [0]: montonic decrease yields 1-range >= 0, dependencies: -1+range-i >= 0
+		
+		-i >= 0 [1]: eventual increase yields (-1+range-i <= 0 /\ -i >= 0)
+		
+		Replacement map: {-1+range-i >= 0 -> -1+range-i >= 0, 1+i > 0 -> 1+i > 0, 1+i >= 0 -> 1+i >= 0, range-i >= 0 -> range-i >= 0, i >= 0 -> i >= 0, 3-range+i > 0 -> 3-range+i > 0, -i >= 0 -> (-1+range-i <= 0 /\ -i >= 0)}
+
+Step with 42
+
+	Trace
+
+	27[T], 40[(-1+range-i >= 0 /\ -1+n3 >= 0 /\ 1-n3+i > 0 /\ 1-range+i >= 0 /\ -up >= 0 /\ 1-up > 0 /\ up >= 0 /\ range-i > 0 /\ range-i >= 0 /\ i >= 0)], 42[(-1+range-i <= 0 /\ -1+range-i >= 0 /\ 1+i > 0 /\ 1+i >= 0 /\ range-i >= 0 /\ i >= 0 /\ 3-range+i > 0 /\ -i >= 0)]
+	
+	Blocked
+
+	[{}, {25[T]}, {25[T], 40[T]}, {42[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i=19 range=20 up=0 ] 27 [ i=0 range=1 up=0 ] 40 [ i=i range=range up=up ] 42
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

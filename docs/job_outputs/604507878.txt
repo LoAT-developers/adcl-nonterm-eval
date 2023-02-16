@@ -1,0 +1,205 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_ConstantStackPush -> f68_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, (13-arg1p1 == 0 /\ 17-arg2p1 == 0), cost: 1
+   1: f68_0_main_GE -> f68_0_main_GE : arg1'=arg1p2, arg2'=arg2p2, (1-arg2p2+arg1 == 0 /\ -arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0 /\ 2-arg1p2 == 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1p3, arg2'=arg2p3, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2
+   1: f68_0_main_GE -> f68_0_main_GE : arg1'=arg1p2, arg2'=arg2p2, (1-arg2p2+arg1 == 0 /\ -arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0 /\ 2-arg1p2 == 0), cost: 1
+   3: __init -> f68_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, (13-arg1p1 == 0 /\ 17-arg2p1 == 0), cost: 1
+
+	Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_ConstantStackPush : arg1'=arg1p3, arg2'=arg2p3, T, cost: 1
+	Second rule:
+	f1_0_main_ConstantStackPush -> f68_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, (13-arg1p1 == 0 /\ 17-arg2p1 == 0), cost: 1
+	New rule:
+	__init -> f68_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, (13-arg1p1 == 0 /\ 17-arg2p1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 2
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   4: f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+   5: __init -> f68_0_main_GE : arg1'=13, arg2'=17, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=arg1p2, arg2'=arg2p2, (1-arg2p2+arg1 == 0 /\ -arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0 /\ 2-arg1p2 == 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (0 == 0 /\ -arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	
+		propagated equality arg2p2 = 1+arg1
+		
+		propagated equality arg1p2 = 2
+		
+	Simplified Guard
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (0 == 0 /\ -arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f68_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, (13-arg1p1 == 0 /\ 17-arg2p1 == 0), cost: 1
+	New rule:
+	__init -> f68_0_main_GE : arg1'=13, arg2'=17, 0 == 0, cost: 1
+	
+		propagated equality arg1p1 = 13
+		
+		propagated equality arg2p1 = 17
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f68_0_main_GE : arg1'=13, arg2'=17, 0 == 0, cost: 1
+	New rule:
+	__init -> f68_0_main_GE : arg1'=13, arg2'=17, T, cost: 1
+
+Unrolled Loops
+
+Start location: __init
+Program variables: arg1 arg2
+   4: f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+   6: f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+   5: __init -> f68_0_main_GE : arg1'=13, arg2'=17, T, cost: 1
+
+	Unrolling
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	
+	Simplified Guard
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+
+Step with 5
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 4
+
+	Trace
+
+	5[T], 4[(-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2
+   4: f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+   6: f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+   7: f68_0_main_GE -> LoAT_sink : (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0), cost: NONTERM
+   8: f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+   5: __init -> f68_0_main_GE : arg1'=13, arg2'=17, T, cost: 1
+
+	unrolling
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=1+arg1, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	
+	Certificate of Non-Termination
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> LoAT_sink : (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0), cost: NONTERM
+
+		-arg1+arg2 > 0 [0]: monotonic increase yields -arg1+arg2 > 0
+		
+		arg1 > 0 [0]: monotonic increase yields arg1 > 0
+		
+		2 > 0 [0]: monotonic increase yields 2 > 0
+		
+		-1+arg1 > 0 [0]: monotonic increase yields -1+arg1 > 0
+		
+		-2+arg2 > 0 [0]: monotonic increase yields -2+arg2 > 0
+		
+		Replacement map: {-arg1+arg2 > 0 -> -arg1+arg2 > 0, arg1 > 0 -> arg1 > 0, 2 > 0 -> 2 > 0, -1+arg1 > 0 -> -1+arg1 > 0, -2+arg2 > 0 -> -2+arg2 > 0}
+
+	Loop Acceleration
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0), cost: 1
+
+		-arg1+arg2 > 0 [0]: monotonic increase yields -arg1+arg2 > 0
+		
+		arg1 > 0 [0]: monotonic increase yields arg1 > 0
+		
+		2 > 0 [0]: monotonic increase yields 2 > 0
+		
+		-1+arg1 > 0 [0]: monotonic increase yields -1+arg1 > 0
+		
+		-2+arg2 > 0 [0]: monotonic increase yields -2+arg2 > 0
+		
+		Replacement map: {-arg1+arg2 > 0 -> -arg1+arg2 > 0, arg1 > 0 -> arg1 > 0, 2 > 0 -> 2 > 0, -1+arg1 > 0 -> -1+arg1 > 0, -2+arg2 > 0 -> -2+arg2 > 0}
+
+	Simplified Guard
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0), cost: 1
+	New rule:
+	f68_0_main_GE -> f68_0_main_GE : arg1'=2, arg2'=3, (-arg1+arg2 > 0 /\ arg1 > 0 /\ -1+arg1 > 0 /\ -2+arg2 > 0), cost: 1
+
+Step with 7
+
+	Trace
+
+	5[T], 7[(-arg1+arg2 > 0 /\ arg1 > 0 /\ 2 > 0 /\ -1+arg1 > 0 /\ -1+n >= 0 /\ -2+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=13 arg2=17 ] 5 [ arg1=arg1 arg2=arg2 ] 7
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

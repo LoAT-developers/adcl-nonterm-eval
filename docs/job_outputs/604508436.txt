@@ -1,0 +1,175 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l5, true>
+<l1, l2, true, par{x_1^0 -> 2}>
+<l3, l2, ((0 + y_1^0) <= 0), par{x_1^0 -> (~(1) + x_1^0)}>
+<l3, l2, (1 <= (0 + y_1^0)), par{x_1^0 -> (1 + x_1^0)}>
+<l2, l3, (undef8 = undef8), par{y_1^0 -> undef8}>
+<l2, l4, (2 <= 0)>
+<l5, l1, true>
+
+Fresh variables:
+undef8, 
+
+Undef variables:
+undef8, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (x_1^0 = 2)>
+<l2, l2, (undef8 = undef8) /\ ((0 + undef8) <= 0), par{x_1^0 -> (~(1) + x_1^0)}>
+<l2, l2, (undef8 = undef8) /\ (1 <= (0 + undef8)), par{x_1^0 -> (1 + x_1^0)}>
+
+Fresh variables:
+undef8, 
+
+Undef variables:
+undef8, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, undef8 <= 0, {x_1^0 -> -1 + x_1^0, rest remain the same}>
+<l2, l2, 1 <= undef8, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Variables:
+x_1^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, x_1^0 = 2, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.0026
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001000s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001492s
+Trying to remove transition: <l2, l2, 1 <= undef8, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003149s
+Time used: 0.003051
+Trying to remove transition: <l2, l2, undef8 <= 0, {x_1^0 -> -1 + x_1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003015s
+Time used: 0.002814
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005779s
+Time used: 0.005588
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.083953s
+Time used: 0.083701
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.316817s
+Time used: 0.315694
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007533s
+Time used: 0.004978
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, x_1^0 = 2, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, x_1^0 = 2, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000465s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000497s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l2, l2, undef8 <= 0, {x_1^0 -> -1 + x_1^0, rest remain the same}>
+<l2, l2, 1 <= undef8, {x_1^0 -> 1 + x_1^0, rest remain the same}>
+Variables:
+x_1^0
+
+Checking conditional non-termination of SCC {l2}...
+> No exit transition to close.
+Calling reachability with...
+Transition: <l2, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l2, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l2, x_1^0 = 2, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l2, x_1^0 = 2, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

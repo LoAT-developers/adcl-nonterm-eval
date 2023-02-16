@@ -1,0 +1,386 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : -10+i > 0, cost: 1
+  13: [2] -> [12] : -10+i <= 0, cost: 1
+   2: [3] -> [5] : -25+i == 0, cost: 1
+   5: [3] -> [4] : (-25+i < 0 \/ -25+i > 0), cost: 1
+   6: [4] -> [8] : -30+i <= 0, cost: 1
+   9: [4] -> [10] : -30+i > 0, cost: 1
+   3: [5] -> [6] : i'=30, T, cost: 1
+   4: [6] -> [4] : T, cost: 1
+  12: [7] -> [2] : T, cost: 1
+   7: [8] -> [9] : i'=-1+i, T, cost: 1
+   8: [9] -> [7] : T, cost: 1
+  10: [10] -> [11] : i'=20, T, cost: 1
+  11: [11] -> [7] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : -10+i > 0, cost: 1
+  13: [2] -> [12] : -10+i <= 0, cost: 1
+   5: [3] -> [4] : (-25+i < 0 \/ -25+i > 0), cost: 1
+  15: [3] -> [4] : i'=30, -25+i == 0, cost: 1
+  18: [4] -> [7] : i'=-1+i, -30+i <= 0, cost: 1
+  19: [4] -> [7] : i'=20, -30+i > 0, cost: 1
+  12: [7] -> [2] : T, cost: 1
+
+	Eliminating location [5] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [5] : -25+i == 0, cost: 1
+	Second rule:
+	[5] -> [6] : i'=30, T, cost: 1
+	New rule:
+	[3] -> [6] : i'=30, -25+i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [6] : i'=30, -25+i == 0, cost: 1
+	Second rule:
+	[6] -> [4] : T, cost: 1
+	New rule:
+	[3] -> [4] : i'=30, -25+i == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 14
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [8] : -30+i <= 0, cost: 1
+	Second rule:
+	[8] -> [9] : i'=-1+i, T, cost: 1
+	New rule:
+	[4] -> [9] : i'=-1+i, -30+i <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 7
+	
+	Eliminating location [10] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [10] : -30+i > 0, cost: 1
+	Second rule:
+	[10] -> [11] : i'=20, T, cost: 1
+	New rule:
+	[4] -> [11] : i'=20, -30+i > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 9 10
+	
+	Eliminating location [9] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [9] : i'=-1+i, -30+i <= 0, cost: 1
+	Second rule:
+	[9] -> [7] : T, cost: 1
+	New rule:
+	[4] -> [7] : i'=-1+i, -30+i <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 8 16
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [11] : i'=20, -30+i > 0, cost: 1
+	Second rule:
+	[11] -> [7] : T, cost: 1
+	New rule:
+	[4] -> [7] : i'=20, -30+i > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 11 17
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 13
+
+	Trace
+
+	0[T], 13[(-10+i <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {13[T]}]
+
+Step with 1
+
+	Trace
+
+	0[T], 1[(-10+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {}]
+
+Step with 5
+
+	Trace
+
+	0[T], 1[(-10+i > 0)], 5[(-25+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {}, {}]
+
+Step with 18
+
+	Trace
+
+	0[T], 1[(-10+i > 0)], 5[(-25+i > 0)], 18[(-30+i <= 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {}, {}, {}]
+
+Step with 12
+
+	Trace
+
+	0[T], 1[(-10+i > 0)], 5[(-25+i > 0)], 18[(-30+i <= 0)], 12[T]
+	
+	Blocked
+
+	[{}, {13[T]}, {}, {}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : -10+i > 0, cost: 1
+  13: [2] -> [12] : -10+i <= 0, cost: 1
+  20: [2] -> [2] : i'=-n+i, (30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0), cost: 1
+   5: [3] -> [4] : (-25+i < 0 \/ -25+i > 0), cost: 1
+  15: [3] -> [4] : i'=30, -25+i == 0, cost: 1
+  18: [4] -> [7] : i'=-1+i, -30+i <= 0, cost: 1
+  19: [4] -> [7] : i'=20, -30+i > 0, cost: 1
+  12: [7] -> [2] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[2] -> [2] : i'=-1+i, (-25+i > 0 /\ -30+i <= 0 /\ -10+i > 0), cost: 1
+	New rule:
+	[2] -> [2] : i'=-n+i, (30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0), cost: 1
+
+		-25+i > 0 [0]: montonic decrease yields -24-n+i > 0
+		
+		-25+i > 0 [1]: eventual increase yields (1 <= 0 /\ -25+i > 0)
+		
+		30-i >= 0 [0]: monotonic increase yields 30-i >= 0
+		
+		-10+i > 0 [0]: monotonic increase yields -10+i > 0, dependencies: -25+i > 0
+		
+		Replacement map: {-25+i > 0 -> -24-n+i > 0, 30-i >= 0 -> 30-i >= 0, -10+i > 0 -> -10+i > 0}
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {20[T]}]
+
+Step with 1
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {}]
+
+Step with 5
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 5[(-25+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {}, {}]
+
+Step with 18
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 5[(-25+i > 0)], 18[(-30+i <= 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {}, {}, {}]
+
+Step with 12
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 5[(-25+i > 0)], 18[(-30+i <= 0)], 12[T]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 5[(-25+i > 0)], 18[(-30+i <= 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {}, {}, {12[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 5[(-25+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {}, {18[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {5[-25+i > 0]}]
+
+Step with 15
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 15[(-25+i == 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {5[T]}, {}]
+
+Step with 18
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 15[(-25+i == 0)], 18[(-30+i <= 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {5[T]}, {}, {}]
+
+Step with 12
+
+	Trace
+
+	0[T], 20[(30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0)], 1[(-10+i > 0)], 15[(-25+i == 0)], 18[(-30+i <= 0)], 12[T]
+	
+	Blocked
+
+	[{}, {13[T]}, {13[T], 20[T]}, {5[T]}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Nonterm
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : -10+i > 0, cost: 1
+  13: [2] -> [12] : -10+i <= 0, cost: 1
+  20: [2] -> [2] : i'=-n+i, (30-i >= 0 /\ -10+i > 0 /\ -1+n >= 0 /\ -24-n+i > 0), cost: 1
+  21: [2] -> LoAT_sink : (-26+i >= 0 /\ 30-i >= 0 /\ -10+i > 0 /\ -1+n2 >= 0), cost: NONTERM
+   5: [3] -> [4] : (-25+i < 0 \/ -25+i > 0), cost: 1
+  15: [3] -> [4] : i'=30, -25+i == 0, cost: 1
+  18: [4] -> [7] : i'=-1+i, -30+i <= 0, cost: 1
+  19: [4] -> [7] : i'=20, -30+i > 0, cost: 1
+  12: [7] -> [2] : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[2] -> [2] : i'=29, (-26+i >= 0 /\ 30-i >= 0 /\ -10+i > 0), cost: 1
+	New rule:
+	[2] -> LoAT_sink : (-26+i >= 0 /\ 30-i >= 0 /\ -10+i > 0 /\ -1+n2 >= 0), cost: NONTERM
+
+		-26+i >= 0 [0]: monotonic increase yields -26+i >= 0
+		
+		30-i >= 0 [0]: monotonic increase yields 30-i >= 0
+		
+		-10+i > 0 [0]: monotonic increase yields -10+i > 0
+		
+		Replacement map: {-26+i >= 0 -> -26+i >= 0, 30-i >= 0 -> 30-i >= 0, -10+i > 0 -> -10+i > 0}
+
+Step with 21
+
+	Trace
+
+	0[T], 21[(-26+i >= 0 /\ 30-i >= 0 /\ -10+i > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {13[T]}, {21[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i=26 ] 0 [ i=i ] 21
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

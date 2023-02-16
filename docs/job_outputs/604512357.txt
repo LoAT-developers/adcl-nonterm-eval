@@ -1,0 +1,162 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : i > 0, cost: 1
+   7: [2] -> [7] : i <= 0, cost: 1
+   2: [3] -> [5] : (-5+i < 0 \/ -5+i > 0), cost: 1
+   5: [3] -> [4] : (-5+i <= 0 /\ -5+i >= 0), cost: 1
+   6: [4] -> [2] : T, cost: 1
+   3: [5] -> [6] : i'=-1+i, T, cost: 1
+   4: [6] -> [4] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : i > 0, cost: 1
+   7: [2] -> [7] : i <= 0, cost: 1
+   5: [3] -> [4] : (-5+i <= 0 /\ -5+i >= 0), cost: 1
+   9: [3] -> [4] : i'=-1+i, (-5+i < 0 \/ -5+i > 0), cost: 1
+   6: [4] -> [2] : T, cost: 1
+
+	Eliminating location [5] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [5] : (-5+i < 0 \/ -5+i > 0), cost: 1
+	Second rule:
+	[5] -> [6] : i'=-1+i, T, cost: 1
+	New rule:
+	[3] -> [6] : i'=-1+i, (-5+i < 0 \/ -5+i > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [6] : i'=-1+i, (-5+i < 0 \/ -5+i > 0), cost: 1
+	Second rule:
+	[6] -> [4] : T, cost: 1
+	New rule:
+	[3] -> [4] : i'=-1+i, (-5+i < 0 \/ -5+i > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 8
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 7
+
+	Trace
+
+	0[T], 7[(i <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {7[T]}]
+
+Step with 1
+
+	Trace
+
+	0[T], 1[(i > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {}]
+
+Step with 5
+
+	Trace
+
+	0[T], 1[(i > 0)], 5[(-5+i <= 0 /\ -5+i >= 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {}, {}]
+
+Step with 6
+
+	Trace
+
+	0[T], 1[(i > 0)], 5[(-5+i <= 0 /\ -5+i >= 0)], 6[T]
+	
+	Blocked
+
+	[{}, {7[T]}, {}, {}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : i > 0, cost: 1
+   7: [2] -> [7] : i <= 0, cost: 1
+  10: [2] -> LoAT_sink : (-5+i >= 0 /\ 5-i >= 0 /\ -1+n >= 0 /\ i > 0), cost: NONTERM
+   5: [3] -> [4] : (-5+i <= 0 /\ -5+i >= 0), cost: 1
+   9: [3] -> [4] : i'=-1+i, (-5+i < 0 \/ -5+i > 0), cost: 1
+   6: [4] -> [2] : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[2] -> [2] : (-5+i <= 0 /\ -5+i >= 0 /\ i > 0), cost: 1
+	New rule:
+	[2] -> LoAT_sink : (-5+i >= 0 /\ 5-i >= 0 /\ -1+n >= 0 /\ i > 0), cost: NONTERM
+
+		-5+i >= 0 [0]: monotonic increase yields -5+i >= 0
+		
+		5-i >= 0 [0]: monotonic increase yields 5-i >= 0
+		
+		i > 0 [0]: monotonic increase yields i > 0, dependencies: -5+i >= 0
+		
+		Replacement map: {-5+i >= 0 -> -5+i >= 0, 5-i >= 0 -> 5-i >= 0, i > 0 -> i > 0}
+
+Step with 10
+
+	Trace
+
+	0[T], 10[(-5+i >= 0 /\ 5-i >= 0 /\ -1+n >= 0 /\ i > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {10[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i=5 ] 0 [ i=i ] 10
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

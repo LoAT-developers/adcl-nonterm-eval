@@ -1,0 +1,234 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_Load -> f46_0_loop_EQ : arg1'=arg1p1, arg2'=arg2p1, (-arg1p1+arg2 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+   1: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1p2, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0 /\ 1-arg1-arg1p2 == 0), cost: 1
+   2: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1p3, arg2'=arg2p3, (-1-arg1p3-arg1 == 0 /\ arg1 > 0), cost: 1
+   3: __init -> f1_0_main_Load : arg1'=arg1p4, arg2'=arg2p4, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2
+   1: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1p2, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0 /\ 1-arg1-arg1p2 == 0), cost: 1
+   2: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1p3, arg2'=arg2p3, (-1-arg1p3-arg1 == 0 /\ arg1 > 0), cost: 1
+   4: __init -> f46_0_loop_EQ : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0 /\ -arg1p1+arg2p4 == 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p4, arg2'=arg2p4, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f46_0_loop_EQ : arg1'=arg1p1, arg2'=arg2p1, (-arg1p1+arg2 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	__init -> f46_0_loop_EQ : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0 /\ -arg1p1+arg2p4 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 3
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   5: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0), cost: 1
+   6: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, arg1 > 0, cost: 1
+   7: __init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (1+arg2p4 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1p2, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0 /\ 1-arg1-arg1p2 == 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (0 == 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+	
+		propagated equality arg1p2 = 1-arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (0 == 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1p3, arg2'=arg2p3, (-1-arg1p3-arg1 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, (0 == 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p3 = -1-arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, (0 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, arg1 > 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f46_0_loop_EQ : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0 /\ -arg1p1+arg2p4 == 0), cost: 1
+	New rule:
+	__init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (0 == 0 /\ 1+arg2p4 > 0 /\ arg1p4 > 0), cost: 1
+	
+		propagated equality arg1p1 = arg2p4
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (0 == 0 /\ 1+arg2p4 > 0 /\ arg1p4 > 0), cost: 1
+	New rule:
+	__init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0), cost: 1
+	New rule:
+	__init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (1+arg2p4 > 0), cost: 1
+
+Unrolled Loops
+
+Start location: __init
+Program variables: arg1 arg2
+   5: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0), cost: 1
+   6: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, arg1 > 0, cost: 1
+   8: f46_0_loop_EQ -> f46_0_loop_EQ : arg2'=arg2p21, (1-arg1 < 0 /\ -1-arg1 < 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+   9: f46_0_loop_EQ -> f46_0_loop_EQ : arg2'=arg2p31, (-1-arg1 > 0 /\ arg1 > 0), cost: 1
+   7: __init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (1+arg2p4 > 0), cost: 1
+
+	Unrolling
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1, arg2'=arg2p21, (1-arg1 < 0 /\ -1-arg1 < 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1, arg2'=arg2p21, (1-arg1 < 0 /\ -1-arg1 < 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg2'=arg2p21, (1-arg1 < 0 /\ -1-arg1 < 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+	
+	Unrolling
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, arg1 > 0, cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1, arg2'=arg2p31, (-1-arg1 > 0 /\ arg1 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=arg1, arg2'=arg2p31, (-1-arg1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg2'=arg2p31, (-1-arg1 > 0 /\ arg1 > 0), cost: 1
+
+Step with 7
+
+	Trace
+
+	7[(1+arg2p4 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 6
+
+	Trace
+
+	7[(1+arg2p4 > 0)], 6[(arg1 > 0)]
+	
+	Blocked
+
+	[{}, {5[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 5
+
+	Trace
+
+	7[(1+arg2p4 > 0)], 6[(arg1 > 0)], 5[(-2+arg1 < 0 /\ arg1 < 0)]
+	
+	Blocked
+
+	[{}, {5[T]}, {6[T], 8[T], 9[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2
+   5: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=1-arg1, arg2'=arg2p2, (-2+arg1 < 0 /\ arg1 < 0), cost: 1
+   6: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=-1-arg1, arg2'=arg2p3, arg1 > 0, cost: 1
+   8: f46_0_loop_EQ -> f46_0_loop_EQ : arg2'=arg2p21, (1-arg1 < 0 /\ -1-arg1 < 0 /\ -2+arg1 < 0 /\ arg1 < 0), cost: 1
+   9: f46_0_loop_EQ -> f46_0_loop_EQ : arg2'=arg2p31, (-1-arg1 > 0 /\ arg1 > 0), cost: 1
+  10: f46_0_loop_EQ -> LoAT_sink : (-1+n >= 0 /\ 1+arg1 > 0 /\ arg1 > 0 /\ 3+arg1 > 0), cost: NONTERM
+  11: f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=2*n+arg1, arg2'=arg2p2, (-1+n >= 0 /\ 1+arg1 > 0 /\ arg1 > 0 /\ 3+arg1 > 0), cost: 1
+   7: __init -> f46_0_loop_EQ : arg1'=arg2p4, arg2'=arg2p1, (1+arg2p4 > 0), cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=2+arg1, arg2'=arg2p2, (-3-arg1 < 0 /\ -1-arg1 < 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> LoAT_sink : (-1+n >= 0 /\ 1+arg1 > 0 /\ arg1 > 0 /\ 3+arg1 > 0), cost: NONTERM
+
+		1+arg1 > 0 [0]: monotonic increase yields 1+arg1 > 0
+		
+		arg1 > 0 [0]: monotonic increase yields arg1 > 0, dependencies: 1+arg1 > 0
+		
+		3+arg1 > 0 [0]: monotonic increase yields 3+arg1 > 0, dependencies: 1+arg1 > 0
+		
+		Replacement map: {1+arg1 > 0 -> 1+arg1 > 0, arg1 > 0 -> arg1 > 0, 3+arg1 > 0 -> 3+arg1 > 0}
+
+	Loop Acceleration
+
+	Original rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=2+arg1, arg2'=arg2p2, (-3-arg1 < 0 /\ -1-arg1 < 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f46_0_loop_EQ -> f46_0_loop_EQ : arg1'=2*n+arg1, arg2'=arg2p2, (-1+n >= 0 /\ 1+arg1 > 0 /\ arg1 > 0 /\ 3+arg1 > 0), cost: 1
+
+		1+arg1 > 0 [0]: monotonic increase yields 1+arg1 > 0
+		
+		arg1 > 0 [0]: monotonic increase yields arg1 > 0, dependencies: 1+arg1 > 0
+		
+		3+arg1 > 0 [0]: monotonic increase yields 3+arg1 > 0, dependencies: 1+arg1 > 0
+		
+		Replacement map: {1+arg1 > 0 -> 1+arg1 > 0, arg1 > 0 -> arg1 > 0, 3+arg1 > 0 -> 3+arg1 > 0}
+
+Step with 10
+
+	Trace
+
+	7[(1+arg2p4 > 0)], 10[(-1+n >= 0 /\ 1+arg1 > 0 /\ arg1 > 0 /\ 3+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {5[T]}, {10[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=0 ] 7 [ arg1=arg1 arg2=arg2 ] 10
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

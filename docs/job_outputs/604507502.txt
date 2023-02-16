@@ -1,0 +1,342 @@
+NO
+
+Initial ITS
+
+Start location: l5
+Program variables: n^0 p^0 q^0 r^0
+   0: l0 -> l1 : n^0'=n^post1, p^0'=p^post1, q^0'=q^post1, r^0'=r^post1, (-q^post1+q^0 == 0 /\ r^post1-p^0 == 0 /\ n^0-n^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+   1: l0 -> l1 : n^0'=n^post2, p^0'=p^post2, q^0'=q^post2, r^0'=r^post2, (q^post2-p^0 == 0 /\ -r^post2+r^0 == 0 /\ -p^post2+p^0 == 0 /\ n^0-n^post2 == 0), cost: 1
+   4: l1 -> l2 : n^0'=n^post5, p^0'=p^post5, q^0'=q^post5, r^0'=r^post5, (-r^post5+r^0 == 0 /\ n^0-n^post5 == 0 /\ -p^post5+p^0 == 0 /\ -q^post5+q^0 == 0), cost: 1
+   2: l2 -> l3 : n^0'=n^post3, p^0'=p^post3, q^0'=q^post3, r^0'=r^post3, (-n^post3+n^0 == 0 /\ -p^post3+p^0 == 0 /\ -1+q^0-r^0 <= 0 /\ r^0-r^post3 == 0 /\ q^0-q^post3 == 0), cost: 1
+   3: l2 -> l0 : n^0'=n^post4, p^0'=p^post4, q^0'=q^post4, r^0'=r^post4, (0 == 0 /\ 2-q^0+r^0 <= 0 /\ -r^post4+r^0 == 0 /\ q^0-q^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+   5: l4 -> l1 : n^0'=n^post6, p^0'=p^post6, q^0'=q^post6, r^0'=r^post6, (n^0-n^post6 == 0 /\ -1+r^post6 == 0 /\ -p^post6+p^0 == 0 /\ q^post6-n^0 == 0), cost: 1
+   6: l5 -> l4 : n^0'=n^post7, p^0'=p^post7, q^0'=q^post7, r^0'=r^post7, (q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ n^0-n^post7 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l5
+Program variables: n^0 p^0 q^0 r^0
+   0: l0 -> l1 : n^0'=n^post1, p^0'=p^post1, q^0'=q^post1, r^0'=r^post1, (-q^post1+q^0 == 0 /\ r^post1-p^0 == 0 /\ n^0-n^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+   1: l0 -> l1 : n^0'=n^post2, p^0'=p^post2, q^0'=q^post2, r^0'=r^post2, (q^post2-p^0 == 0 /\ -r^post2+r^0 == 0 /\ -p^post2+p^0 == 0 /\ n^0-n^post2 == 0), cost: 1
+   4: l1 -> l2 : n^0'=n^post5, p^0'=p^post5, q^0'=q^post5, r^0'=r^post5, (-r^post5+r^0 == 0 /\ n^0-n^post5 == 0 /\ -p^post5+p^0 == 0 /\ -q^post5+q^0 == 0), cost: 1
+   2: l2 -> l3 : n^0'=n^post3, p^0'=p^post3, q^0'=q^post3, r^0'=r^post3, (-n^post3+n^0 == 0 /\ -p^post3+p^0 == 0 /\ -1+q^0-r^0 <= 0 /\ r^0-r^post3 == 0 /\ q^0-q^post3 == 0), cost: 1
+   3: l2 -> l0 : n^0'=n^post4, p^0'=p^post4, q^0'=q^post4, r^0'=r^post4, (0 == 0 /\ 2-q^0+r^0 <= 0 /\ -r^post4+r^0 == 0 /\ q^0-q^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+   7: l5 -> l1 : n^0'=n^post6, p^0'=p^post6, q^0'=q^post6, r^0'=r^post6, (-1+r^post6 == 0 /\ -n^post6+n^post7 == 0 /\ p^post7-p^post6 == 0 /\ q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ q^post6-n^post7 == 0 /\ n^0-n^post7 == 0), cost: 1
+
+	Eliminating location l4 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l5 -> l4 : n^0'=n^post7, p^0'=p^post7, q^0'=q^post7, r^0'=r^post7, (q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ n^0-n^post7 == 0), cost: 1
+	Second rule:
+	l4 -> l1 : n^0'=n^post6, p^0'=p^post6, q^0'=q^post6, r^0'=r^post6, (n^0-n^post6 == 0 /\ -1+r^post6 == 0 /\ -p^post6+p^0 == 0 /\ q^post6-n^0 == 0), cost: 1
+	New rule:
+	l5 -> l1 : n^0'=n^post6, p^0'=p^post6, q^0'=q^post6, r^0'=r^post6, (-1+r^post6 == 0 /\ -n^post6+n^post7 == 0 /\ p^post7-p^post6 == 0 /\ q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ q^post6-n^post7 == 0 /\ n^0-n^post7 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 6
+
+Simplified Transitions
+
+Start location: l5
+Program variables: n^0 p^0 q^0 r^0
+   8: l0 -> l1 : r^0'=p^0, T, cost: 1
+   9: l0 -> l1 : q^0'=p^0, T, cost: 1
+  12: l1 -> l2 : T, cost: 1
+  10: l2 -> l3 : -1+q^0-r^0 <= 0, cost: 1
+  11: l2 -> l0 : p^0'=p^post4, 2-q^0+r^0 <= 0, cost: 1
+  13: l5 -> l1 : q^0'=n^0, r^0'=1, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l1 : n^0'=n^post1, p^0'=p^post1, q^0'=q^post1, r^0'=r^post1, (-q^post1+q^0 == 0 /\ r^post1-p^0 == 0 /\ n^0-n^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+	New rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=p^0, 0 == 0, cost: 1
+	
+		propagated equality q^post1 = q^0
+		
+		propagated equality r^post1 = p^0
+		
+		propagated equality n^post1 = n^0
+		
+		propagated equality p^post1 = p^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=p^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=p^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=p^0, T, cost: 1
+	New rule:
+	l0 -> l1 : r^0'=p^0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l1 : n^0'=n^post2, p^0'=p^post2, q^0'=q^post2, r^0'=r^post2, (q^post2-p^0 == 0 /\ -r^post2+r^0 == 0 /\ -p^post2+p^0 == 0 /\ n^0-n^post2 == 0), cost: 1
+	New rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=p^0, r^0'=r^0, 0 == 0, cost: 1
+	
+		propagated equality q^post2 = p^0
+		
+		propagated equality r^post2 = r^0
+		
+		propagated equality p^post2 = p^0
+		
+		propagated equality n^post2 = n^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=p^0, r^0'=r^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=p^0, r^0'=r^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=p^0, r^0'=r^0, T, cost: 1
+	New rule:
+	l0 -> l1 : q^0'=p^0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l3 : n^0'=n^post3, p^0'=p^post3, q^0'=q^post3, r^0'=r^post3, (-n^post3+n^0 == 0 /\ -p^post3+p^0 == 0 /\ -1+q^0-r^0 <= 0 /\ r^0-r^post3 == 0 /\ q^0-q^post3 == 0), cost: 1
+	New rule:
+	l2 -> l3 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, (0 == 0 /\ -1+q^0-r^0 <= 0), cost: 1
+	
+		propagated equality n^post3 = n^0
+		
+		propagated equality p^post3 = p^0
+		
+		propagated equality r^post3 = r^0
+		
+		propagated equality q^post3 = q^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l3 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, (0 == 0 /\ -1+q^0-r^0 <= 0), cost: 1
+	New rule:
+	l2 -> l3 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, -1+q^0-r^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l2 -> l3 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, -1+q^0-r^0 <= 0, cost: 1
+	New rule:
+	l2 -> l3 : -1+q^0-r^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l0 : n^0'=n^post4, p^0'=p^post4, q^0'=q^post4, r^0'=r^post4, (0 == 0 /\ 2-q^0+r^0 <= 0 /\ -r^post4+r^0 == 0 /\ q^0-q^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+	New rule:
+	l2 -> l0 : n^0'=n^0, p^0'=p^post4, q^0'=q^0, r^0'=r^0, (0 == 0 /\ 2-q^0+r^0 <= 0), cost: 1
+	
+		propagated equality r^post4 = r^0
+		
+		propagated equality q^post4 = q^0
+		
+		propagated equality n^post4 = n^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l0 : n^0'=n^0, p^0'=p^post4, q^0'=q^0, r^0'=r^0, (0 == 0 /\ 2-q^0+r^0 <= 0), cost: 1
+	New rule:
+	l2 -> l0 : n^0'=n^0, p^0'=p^post4, q^0'=q^0, r^0'=r^0, 2-q^0+r^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l2 -> l0 : n^0'=n^0, p^0'=p^post4, q^0'=q^0, r^0'=r^0, 2-q^0+r^0 <= 0, cost: 1
+	New rule:
+	l2 -> l0 : p^0'=p^post4, 2-q^0+r^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l1 -> l2 : n^0'=n^post5, p^0'=p^post5, q^0'=q^post5, r^0'=r^post5, (-r^post5+r^0 == 0 /\ n^0-n^post5 == 0 /\ -p^post5+p^0 == 0 /\ -q^post5+q^0 == 0), cost: 1
+	New rule:
+	l1 -> l2 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, 0 == 0, cost: 1
+	
+		propagated equality r^post5 = r^0
+		
+		propagated equality n^post5 = n^0
+		
+		propagated equality p^post5 = p^0
+		
+		propagated equality q^post5 = q^0
+		
+	Simplified Guard
+
+	Original rule:
+	l1 -> l2 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, 0 == 0, cost: 1
+	New rule:
+	l1 -> l2 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l1 -> l2 : n^0'=n^0, p^0'=p^0, q^0'=q^0, r^0'=r^0, T, cost: 1
+	New rule:
+	l1 -> l2 : T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l1 : n^0'=n^post6, p^0'=p^post6, q^0'=q^post6, r^0'=r^post6, (-1+r^post6 == 0 /\ -n^post6+n^post7 == 0 /\ p^post7-p^post6 == 0 /\ q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ q^post6-n^post7 == 0 /\ n^0-n^post7 == 0), cost: 1
+	New rule:
+	l5 -> l1 : n^0'=n^post7, p^0'=p^post7, q^0'=n^post7, r^0'=1, (0 == 0 /\ q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ n^0-n^post7 == 0), cost: 1
+	
+		propagated equality r^post6 = 1
+		
+		propagated equality n^post6 = n^post7
+		
+		propagated equality p^post6 = p^post7
+		
+		propagated equality q^post6 = n^post7
+		
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l1 : n^0'=n^post7, p^0'=p^post7, q^0'=n^post7, r^0'=1, (0 == 0 /\ q^0-q^post7 == 0 /\ -p^post7+p^0 == 0 /\ -r^post7+r^0 == 0 /\ n^0-n^post7 == 0), cost: 1
+	New rule:
+	l5 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=n^0, r^0'=1, 0 == 0, cost: 1
+	
+		propagated equality q^post7 = q^0
+		
+		propagated equality p^post7 = p^0
+		
+		propagated equality r^post7 = r^0
+		
+		propagated equality n^post7 = n^0
+		
+	Simplified Guard
+
+	Original rule:
+	l5 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=n^0, r^0'=1, 0 == 0, cost: 1
+	New rule:
+	l5 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=n^0, r^0'=1, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l5 -> l1 : n^0'=n^0, p^0'=p^0, q^0'=n^0, r^0'=1, T, cost: 1
+	New rule:
+	l5 -> l1 : q^0'=n^0, r^0'=1, T, cost: 1
+
+Step with 13
+
+	Trace
+
+	13[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 12
+
+	Trace
+
+	13[T], 12[T]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 10
+
+	Trace
+
+	13[T], 12[T], 10[(-1+q^0-r^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	13[T], 12[T]
+	
+	Blocked
+
+	[{}, {}, {10[T]}]
+
+Step with 11
+
+	Trace
+
+	13[T], 12[T], 11[(2-q^0+r^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {10[T]}, {}]
+
+Step with 8
+
+	Trace
+
+	13[T], 12[T], 11[(2-q^0+r^0 <= 0)], 8[T]
+	
+	Blocked
+
+	[{}, {}, {10[T]}, {}, {}]
+
+Nonterm
+
+Start location: l5
+Program variables: n^0 p^0 q^0 r^0
+   8: l0 -> l1 : r^0'=p^0, T, cost: 1
+   9: l0 -> l1 : q^0'=p^0, T, cost: 1
+  12: l1 -> l2 : T, cost: 1
+  14: l1 -> LoAT_sink : (-2+q^0-r^0 >= 0 /\ p^post41-r^0 <= 0), cost: NONTERM
+  10: l2 -> l3 : -1+q^0-r^0 <= 0, cost: 1
+  11: l2 -> l0 : p^0'=p^post4, 2-q^0+r^0 <= 0, cost: 1
+  13: l5 -> l1 : q^0'=n^0, r^0'=1, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l1 -> l1 : p^0'=p^post41, r^0'=p^post41, 2-q^0+r^0 <= 0, cost: 1
+	New rule:
+	l1 -> LoAT_sink : (-2+q^0-r^0 >= 0 /\ p^post41-r^0 <= 0), cost: NONTERM
+
+		-2+q^0-r^0 >= 0 [0]: eventual decrease yields (-2+q^0-r^0 >= 0 /\ -2-p^post41+q^0 >= 0)
+		
+		-2+q^0-r^0 >= 0 [1]: eventual increase yields (-2+q^0-r^0 >= 0 /\ p^post41-r^0 <= 0)
+		
+		Replacement map: {-2+q^0-r^0 >= 0 -> (-2+q^0-r^0 >= 0 /\ p^post41-r^0 <= 0)}
+
+Step with 14
+
+	Trace
+
+	13[T], 14[(-2+q^0-r^0 >= 0 /\ p^post41-r^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T]}]
+
+Refute
+
+	Counterexample
+
+	[ n^0=3 p^0=0 q^0=3 r^0=1 ] 13 [ n^0=3 p^0=0 q^0=q^0 r^0=r^0 ] 14
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

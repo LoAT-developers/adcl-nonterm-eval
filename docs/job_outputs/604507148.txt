@@ -1,0 +1,220 @@
+NO
+
+Initial ITS
+
+Start location: l4
+Program variables: p^0
+   0: l0 -> l1 : p^0'=p^post1, -p^post1+p^0 == 0, cost: 1
+   1: l1 -> l0 : p^0'=p^post2, p^0-p^post2 == 0, cost: 1
+   2: l2 -> l0 : p^0'=p^post3, -1+p^post3 == 0, cost: 1
+   3: l2 -> l0 : p^0'=p^post4, p^post4 == 0, cost: 1
+   4: l3 -> l2 : p^0'=p^post5, (-1+p^post5 == 0 /\ p^1 == 0), cost: 1
+   5: l4 -> l3 : p^0'=p^post6, -p^post6+p^0 == 0, cost: 1
+
+Chained Linear Paths
+
+Start location: l4
+Program variables: p^0
+   7: l0 -> l0 : p^0'=p^post2, (-p^post1+p^0 == 0 /\ p^post1-p^post2 == 0), cost: 1
+   2: l2 -> l0 : p^0'=p^post3, -1+p^post3 == 0, cost: 1
+   3: l2 -> l0 : p^0'=p^post4, p^post4 == 0, cost: 1
+   6: l4 -> l2 : p^0'=p^post5, (-1+p^post5 == 0 /\ -p^post6+p^0 == 0 /\ p^1 == 0), cost: 1
+
+	Eliminating location l3 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l4 -> l3 : p^0'=p^post6, -p^post6+p^0 == 0, cost: 1
+	Second rule:
+	l3 -> l2 : p^0'=p^post5, (-1+p^post5 == 0 /\ p^1 == 0), cost: 1
+	New rule:
+	l4 -> l2 : p^0'=p^post5, (-1+p^post5 == 0 /\ -p^post6+p^0 == 0 /\ p^1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 5
+	
+	Eliminating location l1 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l1 : p^0'=p^post1, -p^post1+p^0 == 0, cost: 1
+	Second rule:
+	l1 -> l0 : p^0'=p^post2, p^0-p^post2 == 0, cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^post2, (-p^post1+p^0 == 0 /\ p^post1-p^post2 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l4
+Program variables: p^0
+  11: l0 -> l0 : T, cost: 1
+   8: l2 -> l0 : p^0'=1, T, cost: 1
+   9: l2 -> l0 : p^0'=0, T, cost: 1
+  10: l4 -> l2 : p^0'=1, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l0 : p^0'=p^post3, -1+p^post3 == 0, cost: 1
+	New rule:
+	l2 -> l0 : p^0'=1, 0 == 0, cost: 1
+	
+		propagated equality p^post3 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l0 : p^0'=1, 0 == 0, cost: 1
+	New rule:
+	l2 -> l0 : p^0'=1, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l0 : p^0'=p^post4, p^post4 == 0, cost: 1
+	New rule:
+	l2 -> l0 : p^0'=0, 0 == 0, cost: 1
+	
+		propagated equality p^post4 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l0 : p^0'=0, 0 == 0, cost: 1
+	New rule:
+	l2 -> l0 : p^0'=0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l4 -> l2 : p^0'=p^post5, (-1+p^post5 == 0 /\ -p^post6+p^0 == 0 /\ p^1 == 0), cost: 1
+	New rule:
+	l4 -> l2 : p^0'=1, (0 == 0 /\ -p^post6+p^0 == 0 /\ p^1 == 0), cost: 1
+	
+		propagated equality p^post5 = 1
+		
+	Propagated Equalities
+
+	Original rule:
+	l4 -> l2 : p^0'=1, (0 == 0 /\ -p^post6+p^0 == 0 /\ p^1 == 0), cost: 1
+	New rule:
+	l4 -> l2 : p^0'=1, 0 == 0, cost: 1
+	
+		propagated equality p^post6 = p^0
+		
+		propagated equality p^1 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	l4 -> l2 : p^0'=1, 0 == 0, cost: 1
+	New rule:
+	l4 -> l2 : p^0'=1, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : p^0'=p^post2, (-p^post1+p^0 == 0 /\ p^post1-p^post2 == 0), cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^post1, (0 == 0 /\ -p^post1+p^0 == 0), cost: 1
+	
+		propagated equality p^post2 = p^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : p^0'=p^post1, (0 == 0 /\ -p^post1+p^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^0, 0 == 0, cost: 1
+	
+		propagated equality p^post1 = p^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : p^0'=p^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l0 : p^0'=p^0, T, cost: 1
+	New rule:
+	l0 -> l0 : T, cost: 1
+
+Step with 10
+
+	Trace
+
+	10[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 8
+
+	Trace
+
+	10[T], 8[T]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	10[T], 8[T], 11[T]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Nonterm
+
+Start location: l4
+Program variables: p^0
+  11: l0 -> l0 : T, cost: 1
+  12: l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+   8: l2 -> l0 : p^0'=1, T, cost: 1
+   9: l2 -> l0 : p^0'=0, T, cost: 1
+  10: l4 -> l2 : p^0'=1, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l0 -> l0 : T, cost: 1
+	New rule:
+	l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+Step with 12
+
+	Trace
+
+	10[T], 8[T], 12[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {}, {12[T]}]
+
+Refute
+
+	Counterexample
+
+	[ p^0=1 ] 10 [ p^0=1 ] 8 [ p^0=p^0 ] 12
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

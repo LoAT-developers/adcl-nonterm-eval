@@ -1,0 +1,108 @@
+unknown
+
+Initial ITS
+
+Start location: l2
+Program variables: i^0 tmp10^0 tmp13^0 tmp___011^0 tmp___014^0
+   0: l0 -> l1 : i^0'=i^post1, tmp10^0'=tmp10^post1, tmp13^0'=tmp13^post1, tmp___011^0'=tmp___011^post1, tmp___014^0'=tmp___014^post1, (-1-i^2+i^3 == 0 /\ -1+i^post1-i^4 == 0 /\ -i^4+tmp___014^post1 == 0 /\ -1+i^4-i^3 == 0 /\ tmp13^post1-i^3 == 0 /\ i^1 == 0 /\ -i^2+tmp___011^post1 == 0 /\ -1+i^2-i^1 == 0 /\ -i^1+tmp10^post1 == 0), cost: 1
+   1: l2 -> l0 : i^0'=i^post2, tmp10^0'=tmp10^post2, tmp13^0'=tmp13^post2, tmp___011^0'=tmp___011^post2, tmp___014^0'=tmp___014^post2, (tmp13^0-tmp13^post2 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -tmp10^post2+tmp10^0 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l2
+Program variables: i^0 tmp10^0 tmp13^0 tmp___011^0 tmp___014^0
+   2: l2 -> l1 : i^0'=i^post1, tmp10^0'=tmp10^post1, tmp13^0'=tmp13^post1, tmp___011^0'=tmp___011^post1, tmp___014^0'=tmp___014^post1, (tmp13^0-tmp13^post2 == 0 /\ -1-i^2+i^3 == 0 /\ -1+i^post1-i^4 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -i^4+tmp___014^post1 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -1+i^4-i^3 == 0 /\ tmp13^post1-i^3 == 0 /\ i^1 == 0 /\ -tmp10^post2+tmp10^0 == 0 /\ -i^2+tmp___011^post1 == 0 /\ -1+i^2-i^1 == 0 /\ -i^1+tmp10^post1 == 0), cost: 1
+
+	Eliminating location l0 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l2 -> l0 : i^0'=i^post2, tmp10^0'=tmp10^post2, tmp13^0'=tmp13^post2, tmp___011^0'=tmp___011^post2, tmp___014^0'=tmp___014^post2, (tmp13^0-tmp13^post2 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -tmp10^post2+tmp10^0 == 0), cost: 1
+	Second rule:
+	l0 -> l1 : i^0'=i^post1, tmp10^0'=tmp10^post1, tmp13^0'=tmp13^post1, tmp___011^0'=tmp___011^post1, tmp___014^0'=tmp___014^post1, (-1-i^2+i^3 == 0 /\ -1+i^post1-i^4 == 0 /\ -i^4+tmp___014^post1 == 0 /\ -1+i^4-i^3 == 0 /\ tmp13^post1-i^3 == 0 /\ i^1 == 0 /\ -i^2+tmp___011^post1 == 0 /\ -1+i^2-i^1 == 0 /\ -i^1+tmp10^post1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : i^0'=i^post1, tmp10^0'=tmp10^post1, tmp13^0'=tmp13^post1, tmp___011^0'=tmp___011^post1, tmp___014^0'=tmp___014^post1, (tmp13^0-tmp13^post2 == 0 /\ -1-i^2+i^3 == 0 /\ -1+i^post1-i^4 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -i^4+tmp___014^post1 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -1+i^4-i^3 == 0 /\ tmp13^post1-i^3 == 0 /\ i^1 == 0 /\ -tmp10^post2+tmp10^0 == 0 /\ -i^2+tmp___011^post1 == 0 /\ -1+i^2-i^1 == 0 /\ -i^1+tmp10^post1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l2
+Program variables: i^0 tmp10^0 tmp13^0 tmp___011^0 tmp___014^0
+   3: l2 -> l1 : i^0'=4, tmp10^0'=0, tmp13^0'=2, tmp___011^0'=1, tmp___014^0'=3, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : i^0'=i^post1, tmp10^0'=tmp10^post1, tmp13^0'=tmp13^post1, tmp___011^0'=tmp___011^post1, tmp___014^0'=tmp___014^post1, (tmp13^0-tmp13^post2 == 0 /\ -1-i^2+i^3 == 0 /\ -1+i^post1-i^4 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -i^4+tmp___014^post1 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -1+i^4-i^3 == 0 /\ tmp13^post1-i^3 == 0 /\ i^1 == 0 /\ -tmp10^post2+tmp10^0 == 0 /\ -i^2+tmp___011^post1 == 0 /\ -1+i^2-i^1 == 0 /\ -i^1+tmp10^post1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : i^0'=1+i^4, tmp10^0'=i^1, tmp13^0'=i^3, tmp___011^0'=i^2, tmp___014^0'=i^4, (0 == 0 /\ tmp13^0-tmp13^post2 == 0 /\ -1-i^2+i^3 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -1+i^4-i^3 == 0 /\ i^1 == 0 /\ -tmp10^post2+tmp10^0 == 0 /\ -1+i^2-i^1 == 0), cost: 1
+	
+		propagated equality i^post1 = 1+i^4
+		
+		propagated equality tmp___014^post1 = i^4
+		
+		propagated equality tmp13^post1 = i^3
+		
+		propagated equality tmp___011^post1 = i^2
+		
+		propagated equality tmp10^post1 = i^1
+		
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : i^0'=1+i^4, tmp10^0'=i^1, tmp13^0'=i^3, tmp___011^0'=i^2, tmp___014^0'=i^4, (0 == 0 /\ tmp13^0-tmp13^post2 == 0 /\ -1-i^2+i^3 == 0 /\ tmp___011^0-tmp___011^post2 == 0 /\ i^0-i^post2 == 0 /\ -tmp___014^post2+tmp___014^0 == 0 /\ -1+i^4-i^3 == 0 /\ i^1 == 0 /\ -tmp10^post2+tmp10^0 == 0 /\ -1+i^2-i^1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : i^0'=4, tmp10^0'=0, tmp13^0'=2, tmp___011^0'=1, tmp___014^0'=3, 0 == 0, cost: 1
+	
+		propagated equality tmp13^post2 = tmp13^0
+		
+		propagated equality i^2 = -1+i^3
+		
+		propagated equality tmp___011^post2 = tmp___011^0
+		
+		propagated equality i^post2 = i^0
+		
+		propagated equality tmp___014^post2 = tmp___014^0
+		
+		propagated equality i^3 = -1+i^4
+		
+		propagated equality i^1 = 0
+		
+		propagated equality tmp10^post2 = tmp10^0
+		
+		propagated equality i^4 = 3
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l1 : i^0'=4, tmp10^0'=0, tmp13^0'=2, tmp___011^0'=1, tmp___014^0'=3, 0 == 0, cost: 1
+	New rule:
+	l2 -> l1 : i^0'=4, tmp10^0'=0, tmp13^0'=2, tmp___011^0'=1, tmp___014^0'=3, T, cost: 1
+
+Step with 3
+
+	Trace
+
+	3[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{3[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

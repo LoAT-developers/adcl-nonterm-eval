@@ -1,0 +1,334 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l5, true>
+<l1, l2, true, par{x^0 -> (~(1) + x^0)}>
+<l2, l3, (undef5 = __disjvr_0^0) /\ (__disjvr_0^0 = undef5), par{__disjvr_0^0 -> undef5}>
+<l3, l1, true>
+<l4, l1, true, par{x^0 -> (0 + __const_100^0)}>
+<l5, l4, true>
+
+Fresh variables:
+undef5, 
+
+Undef variables:
+undef5, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, (x^0 = (0 + __const_100^0))>
+<l1, l1, (undef5 = __disjvr_0^0) /\ (__disjvr_0^0 = undef5), par{__disjvr_0^0 -> undef5, x^0 -> (~(1) + x^0)}>
+
+Fresh variables:
+undef5, 
+
+Undef variables:
+undef5, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, __const_100^0 = x^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001504
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000438s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001217s
+Trying to remove transition: <l1, l1, __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003737s
+Time used: 0.003612
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002515s
+Time used: 4.00224
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006394s
+Time used: 4.00068
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004879s
+Time used: 1.00035
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004301s
+Time used: 0.002923
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.004431s
+Time used: 0.004429
+
+LOG: SAT solveNonLinear - Elapsed time: 0.008732s
+Cost: 1; Total time: 0.007352
+[33mQuasi-ranking function: [36m50000 - __disjvr_0^0 + x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 50001 + x^0 <= __disjvr_0^0 /\ __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000278s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000959s
+Trying to remove transition: <l1, l1, 50001 + x^0 <= __disjvr_0^0 /\ __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002588s
+Time used: 0.002507
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001722s
+Time used: 4.00152
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004898s
+Time used: 4.00063
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005138s
+Time used: 1.00045
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004929s
+Time used: 0.003524
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.004725s
+Time used: 0.004724
+
+LOG: SAT solveNonLinear - Elapsed time: 0.009654s
+Cost: 1; Total time: 0.008248
+[33mQuasi-ranking function: [36m50000 + x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 50001 + x^0 <= __disjvr_0^0 /\ 50001 + x^0 <= 0 /\ __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000324s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001177s
+Trying to remove transition: <l1, l1, 50001 + x^0 <= __disjvr_0^0 /\ 50001 + x^0 <= 0 /\ __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002239s
+Time used: 0.002148
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002108s
+Time used: 4.00193
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011731s
+Time used: 4.00871
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003177s
+Time used: 1.00051
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005008s
+Time used: 0.003565
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.005792s
+Time used: 0.005791
+
+LOG: SAT solveNonLinear - Elapsed time: 0.010800s
+Cost: 1; Total time: 0.009356
+[33mQuasi-ranking function: [36m50000 + __disjvr_0^0 + x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 50001 + __disjvr_0^0 + x^0 <= 0 /\ 50001 + x^0 <= __disjvr_0^0 /\ 50001 + x^0 <= 0 /\ __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000363s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001452s
+Trying to remove transition: <l1, l1, 50001 + __disjvr_0^0 + x^0 <= 0 /\ 50001 + x^0 <= __disjvr_0^0 /\ 50001 + x^0 <= 0 /\ __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002848s
+Time used: 0.002748
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001569s
+Time used: 4.00139
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004178s
+Time used: 4.00083
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009396s
+Time used: 1.0006
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005142s
+Time used: 0.003669
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l1, __const_100^0 = x^0, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l1, __const_100^0 = x^0, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000697s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000732s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, __disjvr_0^0 = undef5, {__disjvr_0^0 -> undef5, x^0 -> -1 + x^0, rest remain the same}>
+Variables:
+__disjvr_0^0, x^0
+
+Checking conditional non-termination of SCC {l1}...
+> No exit transition to close.
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000529s
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l1, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l1, __const_100^0 = x^0, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l1, __const_100^0 = x^0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

@@ -1,0 +1,201 @@
+NO
+
+Initial ITS
+
+Start location: l3
+Program variables: __const_1000^0 x^0
+   0: l0 -> l1 : __const_1000^0'=__const_1000^post1, x^0'=x^post1, (1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+   1: l1 -> l0 : __const_1000^0'=__const_1000^post2, x^0'=x^post2, (-x^post2+x^0 == 0 /\ -__const_1000^post2+__const_1000^0 == 0), cost: 1
+   2: l2 -> l0 : __const_1000^0'=__const_1000^post3, x^0'=x^post3, (-__const_1000^post3+__const_1000^0 == 0 /\ x^0-x^post3 == 0), cost: 1
+   3: l3 -> l2 : __const_1000^0'=__const_1000^post4, x^0'=x^post4, (x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l3
+Program variables: __const_1000^0 x^0
+   5: l0 -> l0 : __const_1000^0'=__const_1000^post2, x^0'=x^post2, (1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ __const_1000^post1-__const_1000^post2 == 0 /\ -x^post2+x^post1 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+   4: l3 -> l0 : __const_1000^0'=__const_1000^post3, x^0'=x^post3, (x^post4-x^post3 == 0 /\ x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0 /\ __const_1000^post4-__const_1000^post3 == 0), cost: 1
+
+	Eliminating location l2 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l3 -> l2 : __const_1000^0'=__const_1000^post4, x^0'=x^post4, (x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0), cost: 1
+	Second rule:
+	l2 -> l0 : __const_1000^0'=__const_1000^post3, x^0'=x^post3, (-__const_1000^post3+__const_1000^0 == 0 /\ x^0-x^post3 == 0), cost: 1
+	New rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^post3, x^0'=x^post3, (x^post4-x^post3 == 0 /\ x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0 /\ __const_1000^post4-__const_1000^post3 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location l1 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l1 : __const_1000^0'=__const_1000^post1, x^0'=x^post1, (1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+	Second rule:
+	l1 -> l0 : __const_1000^0'=__const_1000^post2, x^0'=x^post2, (-x^post2+x^0 == 0 /\ -__const_1000^post2+__const_1000^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^post2, x^0'=x^post2, (1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ __const_1000^post1-__const_1000^post2 == 0 /\ -x^post2+x^post1 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l3
+Program variables: __const_1000^0 x^0
+   7: l0 -> l0 : x^0'=x^0-__const_1000^0, 1-x^0+__const_1000^0 <= 0, cost: 1
+   6: l3 -> l0 : T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^post3, x^0'=x^post3, (x^post4-x^post3 == 0 /\ x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0 /\ __const_1000^post4-__const_1000^post3 == 0), cost: 1
+	New rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^post4, x^0'=x^post4, (0 == 0 /\ x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0), cost: 1
+	
+		propagated equality x^post3 = x^post4
+		
+		propagated equality __const_1000^post3 = __const_1000^post4
+		
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^post4, x^0'=x^post4, (0 == 0 /\ x^0-x^post4 == 0 /\ -__const_1000^post4+__const_1000^0 == 0), cost: 1
+	New rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0, 0 == 0, cost: 1
+	
+		propagated equality x^post4 = x^0
+		
+		propagated equality __const_1000^post4 = __const_1000^0
+		
+	Simplified Guard
+
+	Original rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0, 0 == 0, cost: 1
+	New rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l3 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0, T, cost: 1
+	New rule:
+	l3 -> l0 : T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^post2, x^0'=x^post2, (1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ __const_1000^post1-__const_1000^post2 == 0 /\ -x^post2+x^post1 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^post1, x^0'=x^post1, (0 == 0 /\ 1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+	
+		propagated equality __const_1000^post2 = __const_1000^post1
+		
+		propagated equality x^post2 = x^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^post1, x^0'=x^post1, (0 == 0 /\ 1-x^post1 <= 0 /\ -__const_1000^post1+__const_1000^0 == 0 /\ -x^0+x^post1+__const_1000^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0-__const_1000^0, (0 == 0 /\ 1-x^0+__const_1000^0 <= 0), cost: 1
+	
+		propagated equality __const_1000^post1 = __const_1000^0
+		
+		propagated equality x^post1 = x^0-__const_1000^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0-__const_1000^0, (0 == 0 /\ 1-x^0+__const_1000^0 <= 0), cost: 1
+	New rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0-__const_1000^0, 1-x^0+__const_1000^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l0 : __const_1000^0'=__const_1000^0, x^0'=x^0-__const_1000^0, 1-x^0+__const_1000^0 <= 0, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^0-__const_1000^0, 1-x^0+__const_1000^0 <= 0, cost: 1
+
+Step with 6
+
+	Trace
+
+	6[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 7
+
+	Trace
+
+	6[T], 7[(1-x^0+__const_1000^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: l3
+Program variables: __const_1000^0 x^0
+   7: l0 -> l0 : x^0'=x^0-__const_1000^0, 1-x^0+__const_1000^0 <= 0, cost: 1
+   8: l0 -> LoAT_sink : (-1+x^0-__const_1000^0 >= 0 /\ __const_1000^0 <= 0), cost: NONTERM
+   9: l0 -> l0 : x^0'=x^0-n*__const_1000^0, (-1+x^0-__const_1000^0 >= 0 /\ -1-(-1+n)*__const_1000^0+x^0-__const_1000^0 >= 0 /\ -1+n >= 0), cost: 1
+   6: l3 -> l0 : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l0 -> l0 : x^0'=x^0-__const_1000^0, (1-x^0+__const_1000^0 <= 0), cost: 1
+	New rule:
+	l0 -> LoAT_sink : (-1+x^0-__const_1000^0 >= 0 /\ __const_1000^0 <= 0), cost: NONTERM
+
+		-1+x^0-__const_1000^0 >= 0 [0]: eventual decrease yields (-1+x^0-__const_1000^0 >= 0 /\ -1-(-1+n)*__const_1000^0+x^0-__const_1000^0 >= 0)
+		
+		-1+x^0-__const_1000^0 >= 0 [1]: eventual increase yields (-1+x^0-__const_1000^0 >= 0 /\ __const_1000^0 <= 0)
+		
+		Replacement map: {-1+x^0-__const_1000^0 >= 0 -> (-1+x^0-__const_1000^0 >= 0 /\ __const_1000^0 <= 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	l0 -> l0 : x^0'=x^0-__const_1000^0, (1-x^0+__const_1000^0 <= 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^0-n*__const_1000^0, (-1+x^0-__const_1000^0 >= 0 /\ -1-(-1+n)*__const_1000^0+x^0-__const_1000^0 >= 0 /\ -1+n >= 0), cost: 1
+
+		-1+x^0-__const_1000^0 >= 0 [0]: eventual decrease yields (-1+x^0-__const_1000^0 >= 0 /\ -1-(-1+n)*__const_1000^0+x^0-__const_1000^0 >= 0)
+		
+		-1+x^0-__const_1000^0 >= 0 [1]: eventual increase yields (-1+x^0-__const_1000^0 >= 0 /\ __const_1000^0 <= 0)
+		
+		Replacement map: {-1+x^0-__const_1000^0 >= 0 -> (-1+x^0-__const_1000^0 >= 0 /\ -1-(-1+n)*__const_1000^0+x^0-__const_1000^0 >= 0)}
+
+Step with 8
+
+	Trace
+
+	6[T], 8[(-1+x^0-__const_1000^0 >= 0 /\ __const_1000^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T]}]
+
+Refute
+
+	Counterexample
+
+	[ __const_1000^0=-1 x^0=0 ] 6 [ __const_1000^0=-1 x^0=0 ] 8
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

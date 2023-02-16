@@ -1,0 +1,163 @@
+unknown
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1
+   0: f1_0_main_ConstantStackPush -> f80_0_test_LT : arg1'=arg1p1, 9-arg1p1 == 0, cost: 1
+   1: f80_0_test_LT -> f80_0_test_LT : arg1'=arg1p2, (1+arg1 > 0 /\ -1-arg1p2+arg1 == 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1p3, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1
+   1: f80_0_test_LT -> f80_0_test_LT : arg1'=arg1p2, (1+arg1 > 0 /\ -1-arg1p2+arg1 == 0), cost: 1
+   3: __init -> f80_0_test_LT : arg1'=arg1p1, 9-arg1p1 == 0, cost: 1
+
+	Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_ConstantStackPush : arg1'=arg1p3, T, cost: 1
+	Second rule:
+	f1_0_main_ConstantStackPush -> f80_0_test_LT : arg1'=arg1p1, 9-arg1p1 == 0, cost: 1
+	New rule:
+	__init -> f80_0_test_LT : arg1'=arg1p1, 9-arg1p1 == 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 2
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1
+   4: f80_0_test_LT -> f80_0_test_LT : arg1'=-1+arg1, 1+arg1 > 0, cost: 1
+   5: __init -> f80_0_test_LT : arg1'=9, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f80_0_test_LT -> f80_0_test_LT : arg1'=arg1p2, (1+arg1 > 0 /\ -1-arg1p2+arg1 == 0), cost: 1
+	New rule:
+	f80_0_test_LT -> f80_0_test_LT : arg1'=-1+arg1, (0 == 0 /\ 1+arg1 > 0), cost: 1
+	
+		propagated equality arg1p2 = -1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f80_0_test_LT -> f80_0_test_LT : arg1'=-1+arg1, (0 == 0 /\ 1+arg1 > 0), cost: 1
+	New rule:
+	f80_0_test_LT -> f80_0_test_LT : arg1'=-1+arg1, 1+arg1 > 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f80_0_test_LT : arg1'=arg1p1, 9-arg1p1 == 0, cost: 1
+	New rule:
+	__init -> f80_0_test_LT : arg1'=9, 0 == 0, cost: 1
+	
+		propagated equality arg1p1 = 9
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f80_0_test_LT : arg1'=9, 0 == 0, cost: 1
+	New rule:
+	__init -> f80_0_test_LT : arg1'=9, T, cost: 1
+
+Step with 5
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 4
+
+	Trace
+
+	5[T], 4[(1+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1
+   4: f80_0_test_LT -> f80_0_test_LT : arg1'=-1+arg1, 1+arg1 > 0, cost: 1
+   6: f80_0_test_LT -> f80_0_test_LT : arg1'=-n+arg1, (-1+n >= 0 /\ 2-n+arg1 > 0), cost: 1
+   5: __init -> f80_0_test_LT : arg1'=9, T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f80_0_test_LT -> f80_0_test_LT : arg1'=-1+arg1, (1+arg1 > 0), cost: 1
+	New rule:
+	f80_0_test_LT -> f80_0_test_LT : arg1'=-n+arg1, (-1+n >= 0 /\ 2-n+arg1 > 0), cost: 1
+
+		1+arg1 > 0 [0]: montonic decrease yields 2-n+arg1 > 0
+		
+		1+arg1 > 0 [1]: eventual increase yields (1 <= 0 /\ 1+arg1 > 0)
+		
+		Replacement map: {1+arg1 > 0 -> 2-n+arg1 > 0}
+
+	Trace
+
+	5[T], 6[(-1+n >= 0 /\ 2-n+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {4[T], 6[T]}]
+
+Backtrack
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {6[T]}]
+
+Step with 4
+
+	Trace
+
+	5[T], 4[(1+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {6[T]}, {}]
+
+Covered
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{5[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

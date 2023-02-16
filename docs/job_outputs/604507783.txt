@@ -1,0 +1,920 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+   0: f1_0_main_Load -> f229_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ 1+arg2 > 0 /\ -arg3p1 == 0 /\ -arg2p1 == 0 /\ arg1p1-arg1 <= 0 /\ arg1 > 0), cost: 1
+   1: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (arg3-arg2p2 == 0 /\ arg2-x3 < 0 /\ -arg1p2+arg2 == 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+   2: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+x11 > 0 /\ -arg2+x7 > 0 /\ -arg1p3+arg2 == 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+arg3-arg2p3 == 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+   4: f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (-arg2p5 == 0 /\ arg3-x16 <= 0 /\ -arg1p5 == 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+   3: f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (arg2-arg3p4 == 0 /\ -x12+arg1 < 0 /\ 1-arg2p4+arg1 == 0 /\ arg1p4 > 0), cost: 1
+   5: f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (-x20+arg1 >= 0 /\ -1+x20-arg1p6 == 0 /\ arg2-arg2p6 == 0), cost: 1
+   6: f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x24 > 0 /\ 1-arg1p7+arg1 == 0 /\ -x24+arg1 < 0), cost: 1
+  10: f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2p11, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (-x42+arg1 < 0 /\ x42 > 0 /\ arg2-arg2p11 == 0), cost: 1
+   8: f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0 /\ -arg2p9+arg1 == 0 /\ x33 > 0), cost: 1
+  17: f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=arg1p18, arg2'=arg2p18, arg3'=arg3p18, arg4'=arg4p18, arg5'=arg5p18, (1-arg3p18 == 0 /\ 1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0 /\ -arg1p18 == 0), cost: 1
+   7: f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (arg1p8 > 0 /\ -arg2p8+arg1 == 0 /\ arg2-arg3p8 == 0), cost: 1
+   9: f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=arg1p10, arg2'=arg2p10, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg2-x38 < 0 /\ -1-arg1p10+arg2 == 0 /\ arg3-arg2p10 == 0 /\ arg1 > 0), cost: 1
+  11: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p12, arg2'=arg2p12, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ arg2-arg2p12 == 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ -arg1p12+arg1 == 0 /\ x44-x50 > 0), cost: 1
+  13: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p14, arg2'=arg2p14, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (-arg1p14+arg1 == 0 /\ x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ -arg2p14+arg2 == 0 /\ x78-arg1 > 0), cost: 1
+  15: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p16, arg2'=arg2p16, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (-arg1p16+arg1 == 0 /\ x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -arg2p16+arg2 == 0 /\ -x134+arg2 <= 0), cost: 1
+  12: f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1p13, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ -arg1p13+arg1 == 0 /\ arg2-arg2p13 > 0), cost: 1
+  14: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2p15, arg3'=arg3p15, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -arg3p15+arg1 == 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ arg2-arg2p15 == 0 /\ x126-arg1 > 0), cost: 1
+  16: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2p17, arg3'=arg3p17, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -arg3p17+arg1 == 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ arg2-arg2p17 == 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+  18: f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg2p19, arg3'=arg3p19, arg4'=arg4p19, arg5'=arg5p19, (-arg2p19+arg1 == 0 /\ arg2-arg3p19 == 0 /\ arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+  19: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p20, arg2'=arg2p20, arg3'=arg3p20, arg4'=arg4p20, arg5'=arg5p20, (1-arg4p20+2*arg1 == 0 /\ arg3p20 > 0 /\ -arg1p20+arg1 == 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0 /\ arg2-arg2p20 == 0), cost: 1
+  21: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p22, arg2'=arg2p22, arg3'=arg3p22, arg4'=arg4p22, arg5'=arg5p22, (1-arg4p22+2*arg1 == 0 /\ -2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -arg1p22+arg1 == 0 /\ -1+x102-2*arg1 > 0 /\ arg2-arg2p22 == 0), cost: 1
+  22: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p23, arg2'=arg2p23, arg3'=arg3p23, arg4'=arg4p23, arg5'=arg5p23, (arg3p23 > 0 /\ -x116+x117 > 0 /\ -arg1p23+arg1 == 0 /\ 2*arg1 >= 0 /\ 2-arg4p23+2*arg1 == 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0 /\ arg2-arg2p23 == 0), cost: 1
+  20: f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg2p21, arg3'=arg3p21, arg4'=arg4p21, arg5'=arg5p21, (-arg2p21+arg1 == 0 /\ arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -arg3p21+arg2 == 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+  23: f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg1p24, arg2'=arg2p24, arg3'=arg3p24, arg4'=arg4p24, arg5'=arg5p24, (-x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2p24+arg2 == 0 /\ -arg1p24+arg4 == 0 /\ 1-arg3p24+2*arg4 == 0 /\ -arg2+x124 > 0), cost: 1
+  24: __init -> f1_0_main_Load : arg1'=arg1p25, arg2'=arg2p25, arg3'=arg3p25, arg4'=arg4p25, arg5'=arg5p25, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+   1: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (arg3-arg2p2 == 0 /\ arg2-x3 < 0 /\ -arg1p2+arg2 == 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+   2: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+x11 > 0 /\ -arg2+x7 > 0 /\ -arg1p3+arg2 == 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+arg3-arg2p3 == 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+   4: f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (-arg2p5 == 0 /\ arg3-x16 <= 0 /\ -arg1p5 == 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+   3: f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (arg2-arg3p4 == 0 /\ -x12+arg1 < 0 /\ 1-arg2p4+arg1 == 0 /\ arg1p4 > 0), cost: 1
+   5: f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (-x20+arg1 >= 0 /\ -1+x20-arg1p6 == 0 /\ arg2-arg2p6 == 0), cost: 1
+   6: f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x24 > 0 /\ 1-arg1p7+arg1 == 0 /\ -x24+arg1 < 0), cost: 1
+  10: f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2p11, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (-x42+arg1 < 0 /\ x42 > 0 /\ arg2-arg2p11 == 0), cost: 1
+   8: f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0 /\ -arg2p9+arg1 == 0 /\ x33 > 0), cost: 1
+  17: f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=arg1p18, arg2'=arg2p18, arg3'=arg3p18, arg4'=arg4p18, arg5'=arg5p18, (1-arg3p18 == 0 /\ 1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0 /\ -arg1p18 == 0), cost: 1
+   7: f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (arg1p8 > 0 /\ -arg2p8+arg1 == 0 /\ arg2-arg3p8 == 0), cost: 1
+   9: f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=arg1p10, arg2'=arg2p10, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg2-x38 < 0 /\ -1-arg1p10+arg2 == 0 /\ arg3-arg2p10 == 0 /\ arg1 > 0), cost: 1
+  11: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p12, arg2'=arg2p12, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ arg2-arg2p12 == 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ -arg1p12+arg1 == 0 /\ x44-x50 > 0), cost: 1
+  13: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p14, arg2'=arg2p14, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (-arg1p14+arg1 == 0 /\ x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ -arg2p14+arg2 == 0 /\ x78-arg1 > 0), cost: 1
+  15: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p16, arg2'=arg2p16, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (-arg1p16+arg1 == 0 /\ x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -arg2p16+arg2 == 0 /\ -x134+arg2 <= 0), cost: 1
+  12: f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1p13, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ -arg1p13+arg1 == 0 /\ arg2-arg2p13 > 0), cost: 1
+  14: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2p15, arg3'=arg3p15, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -arg3p15+arg1 == 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ arg2-arg2p15 == 0 /\ x126-arg1 > 0), cost: 1
+  16: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2p17, arg3'=arg3p17, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -arg3p17+arg1 == 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ arg2-arg2p17 == 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+  18: f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg2p19, arg3'=arg3p19, arg4'=arg4p19, arg5'=arg5p19, (-arg2p19+arg1 == 0 /\ arg2-arg3p19 == 0 /\ arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+  19: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p20, arg2'=arg2p20, arg3'=arg3p20, arg4'=arg4p20, arg5'=arg5p20, (1-arg4p20+2*arg1 == 0 /\ arg3p20 > 0 /\ -arg1p20+arg1 == 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0 /\ arg2-arg2p20 == 0), cost: 1
+  21: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p22, arg2'=arg2p22, arg3'=arg3p22, arg4'=arg4p22, arg5'=arg5p22, (1-arg4p22+2*arg1 == 0 /\ -2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -arg1p22+arg1 == 0 /\ -1+x102-2*arg1 > 0 /\ arg2-arg2p22 == 0), cost: 1
+  22: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p23, arg2'=arg2p23, arg3'=arg3p23, arg4'=arg4p23, arg5'=arg5p23, (arg3p23 > 0 /\ -x116+x117 > 0 /\ -arg1p23+arg1 == 0 /\ 2*arg1 >= 0 /\ 2-arg4p23+2*arg1 == 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0 /\ arg2-arg2p23 == 0), cost: 1
+  20: f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg2p21, arg3'=arg3p21, arg4'=arg4p21, arg5'=arg5p21, (-arg2p21+arg1 == 0 /\ arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -arg3p21+arg2 == 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+  23: f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg1p24, arg2'=arg2p24, arg3'=arg3p24, arg4'=arg4p24, arg5'=arg5p24, (-x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2p24+arg2 == 0 /\ -arg1p24+arg4 == 0 /\ 1-arg3p24+2*arg4 == 0 /\ -arg2+x124 > 0), cost: 1
+  25: __init -> f229_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ arg1p25 > 0 /\ -arg3p1 == 0 /\ arg1p1-arg1p25 <= 0 /\ -arg2p1 == 0 /\ 1+arg2p25 > 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p25, arg2'=arg2p25, arg3'=arg3p25, arg4'=arg4p25, arg5'=arg5p25, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f229_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ 1+arg2 > 0 /\ -arg3p1 == 0 /\ -arg2p1 == 0 /\ arg1p1-arg1 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ arg1p25 > 0 /\ -arg3p1 == 0 /\ arg1p1-arg1p25 <= 0 /\ -arg2p1 == 0 /\ 1+arg2p25 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 24
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+  26: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (-arg3 <= 0 /\ 1-arg3+arg2 <= 0 /\ arg1 > 0), cost: 1
+  27: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+arg3 > 0 /\ arg1 > 0), cost: 1
+  29: f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (arg3-arg2 <= 0 /\ arg1 > 0), cost: 1
+  28: f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (arg1p4 > 0), cost: 1
+  30: f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, -x20+arg1 >= 0, cost: 1
+  31: f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, T, cost: 1
+  35: f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, T, cost: 1
+  33: f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0), cost: 1
+  42: f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (1+arg1 > 0), cost: 1
+  32: f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg1, arg3'=arg2, arg4'=arg4p8, arg5'=arg5p8, arg1p8 > 0, cost: 1
+  34: f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg1 > 0), cost: 1
+  36: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (arg2 > 0), cost: 1
+  38: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (arg2 > 0), cost: 1
+  40: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, _|_, cost: 1
+  37: f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ -1+arg2-2*x67 >= 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+  39: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0), cost: 1
+  41: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0), cost: 1
+  43: f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (arg1p19 > 0), cost: 1
+  44: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+  46: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (2*arg1 >= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0), cost: 1
+  47: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+  45: f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (arg3 > 0 /\ arg1p21 > 0 /\ arg3-arg1p21 >= 0), cost: 1
+  48: f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (2*arg4 >= 0 /\ arg3 > 0), cost: 1
+  49: __init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (arg3-arg2p2 == 0 /\ arg2-x3 < 0 /\ -arg1p2+arg2 == 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (0 == 0 /\ arg2-x3 < 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg2p2 = arg3
+		
+		propagated equality arg1p2 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (0 == 0 /\ arg2-x3 < 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (arg2-x3 < 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (arg2-x3 < 0 /\ 1+x3 > 0 /\ arg3-x3 >= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (-arg3 <= 0 /\ 1-arg3+arg2 <= 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+x11 > 0 /\ -arg2+x7 > 0 /\ -arg1p3+arg2 == 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+arg3-arg2p3 == 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (0 == 0 /\ 1+x11 > 0 /\ -arg2+x7 > 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p3 = arg2
+		
+		propagated equality arg2p3 = 1+arg3
+		
+	Simplified Guard
+
+	Original rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (0 == 0 /\ 1+x11 > 0 /\ -arg2+x7 > 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+x11 > 0 /\ -arg2+x7 > 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+x11 > 0 /\ -arg2+x7 > 0 /\ arg3-x7 < 0 /\ 1+arg3 > 0 /\ 1+x7 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+arg3 > 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (arg2-arg3p4 == 0 /\ -x12+arg1 < 0 /\ 1-arg2p4+arg1 == 0 /\ arg1p4 > 0), cost: 1
+	New rule:
+	f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (0 == 0 /\ -x12+arg1 < 0 /\ arg1p4 > 0), cost: 1
+	
+		propagated equality arg3p4 = arg2
+		
+		propagated equality arg2p4 = 1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (0 == 0 /\ -x12+arg1 < 0 /\ arg1p4 > 0), cost: 1
+	New rule:
+	f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (-x12+arg1 < 0 /\ arg1p4 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (-x12+arg1 < 0 /\ arg1p4 > 0), cost: 1
+	New rule:
+	f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (arg1p4 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (-arg2p5 == 0 /\ arg3-x16 <= 0 /\ -arg1p5 == 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (0 == 0 /\ arg3-x16 <= 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg2p5 = 0
+		
+		propagated equality arg1p5 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (0 == 0 /\ arg3-x16 <= 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (arg3-x16 <= 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (arg3-x16 <= 0 /\ arg2-x16 >= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (arg3-arg2 <= 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (-x20+arg1 >= 0 /\ -1+x20-arg1p6 == 0 /\ arg2-arg2p6 == 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg2'=arg2, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (0 == 0 /\ -x20+arg1 >= 0), cost: 1
+	
+		propagated equality arg1p6 = -1+x20
+		
+		propagated equality arg2p6 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg2'=arg2, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (0 == 0 /\ -x20+arg1 >= 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg2'=arg2, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, -x20+arg1 >= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg2'=arg2, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, -x20+arg1 >= 0, cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, -x20+arg1 >= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x24 > 0 /\ 1-arg1p7+arg1 == 0 /\ -x24+arg1 < 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (0 == 0 /\ x24 > 0 /\ -x24+arg1 < 0), cost: 1
+	
+		propagated equality arg1p7 = 1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (0 == 0 /\ x24 > 0 /\ -x24+arg1 < 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x24 > 0 /\ -x24+arg1 < 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x24 > 0 /\ -x24+arg1 < 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (arg1p8 > 0 /\ -arg2p8+arg1 == 0 /\ arg2-arg3p8 == 0), cost: 1
+	New rule:
+	f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg1, arg3'=arg2, arg4'=arg4p8, arg5'=arg5p8, (0 == 0 /\ arg1p8 > 0), cost: 1
+	
+		propagated equality arg2p8 = arg1
+		
+		propagated equality arg3p8 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg1, arg3'=arg2, arg4'=arg4p8, arg5'=arg5p8, (0 == 0 /\ arg1p8 > 0), cost: 1
+	New rule:
+	f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg1, arg3'=arg2, arg4'=arg4p8, arg5'=arg5p8, arg1p8 > 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0 /\ -arg2p9+arg1 == 0 /\ x33 > 0), cost: 1
+	New rule:
+	f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (0 == 0 /\ arg1p9 > 0 /\ 1+arg1 > 0 /\ x33 > 0), cost: 1
+	
+		propagated equality arg2p9 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (0 == 0 /\ arg1p9 > 0 /\ 1+arg1 > 0 /\ x33 > 0), cost: 1
+	New rule:
+	f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0 /\ x33 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0 /\ x33 > 0), cost: 1
+	New rule:
+	f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=arg1p10, arg2'=arg2p10, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg2-x38 < 0 /\ -1-arg1p10+arg2 == 0 /\ arg3-arg2p10 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (0 == 0 /\ arg2-x38 < 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p10 = -1+arg2
+		
+		propagated equality arg2p10 = arg3
+		
+	Simplified Guard
+
+	Original rule:
+	f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (0 == 0 /\ arg2-x38 < 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg2-x38 < 0 /\ arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg2-x38 < 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2p11, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (-x42+arg1 < 0 /\ x42 > 0 /\ arg2-arg2p11 == 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (0 == 0 /\ -x42+arg1 < 0 /\ x42 > 0), cost: 1
+	
+		propagated equality arg2p11 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (0 == 0 /\ -x42+arg1 < 0 /\ x42 > 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (-x42+arg1 < 0 /\ x42 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, (-x42+arg1 < 0 /\ x42 > 0), cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg2'=arg2, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, T, cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p12, arg2'=arg2p12, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ arg2-arg2p12 == 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ -arg1p12+arg1 == 0 /\ x44-x50 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (0 == 0 /\ x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ x44-x50 > 0), cost: 1
+	
+		propagated equality arg2p12 = arg2
+		
+		propagated equality arg1p12 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (0 == 0 /\ x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ x44-x50 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ x44-x50 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (x51-arg1 <= 0 /\ -1+arg2-x50 >= 0 /\ x44-x29 > 0 /\ arg2 > 0 /\ -1+arg2-x52 >= 0 /\ -x44+arg2 < 0 /\ arg2-x52 > 0 /\ -1+arg2-x29 >= 0 /\ x44-x50 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (arg2 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1p13, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ -arg1p13+arg1 == 0 /\ arg2-arg2p13 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (0 == 0 /\ -1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	
+		propagated equality arg1p13 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (0 == 0 /\ -1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ x68-arg1 <= 0 /\ x66-x61 > 0 /\ -1+arg2-2*x67 >= 0 /\ -x66+arg2 < 0 /\ x66-x67 > 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ -1+arg2-2*x67 >= 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg1'=arg1, arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ -1+arg2-2*x67 >= 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ -1+arg2-2*x67 >= 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p14, arg2'=arg2p14, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (-arg1p14+arg1 == 0 /\ x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ -arg2p14+arg2 == 0 /\ x78-arg1 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (0 == 0 /\ x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ x78-arg1 > 0), cost: 1
+	
+		propagated equality arg1p14 = arg1
+		
+		propagated equality arg2p14 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (0 == 0 /\ x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ x78-arg1 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ x78-arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (x84-x73 > 0 /\ x83 > 0 /\ arg2 > 0 /\ -1+arg2-x73 >= 0 /\ x78-arg1 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (arg2 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2p15, arg3'=arg3p15, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -arg3p15+arg1 == 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ arg2-arg2p15 == 0 /\ x126-arg1 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (0 == 0 /\ arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ x126-arg1 > 0), cost: 1
+	
+		propagated equality arg3p15 = arg1
+		
+		propagated equality arg2p15 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (0 == 0 /\ arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ x126-arg1 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ x126-arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0 /\ -x125+x127 > 0 /\ x126-arg1 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg2'=arg2, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1p16, arg2'=arg2p16, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (-arg1p16+arg1 == 0 /\ x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -arg2p16+arg2 == 0 /\ -x134+arg2 <= 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (0 == 0 /\ x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -x134+arg2 <= 0), cost: 1
+	
+		propagated equality arg1p16 = arg1
+		
+		propagated equality arg2p16 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (0 == 0 /\ x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -x134+arg2 <= 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -x134+arg2 <= 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (x131-x132 > 0 /\ -x131+arg2 < 0 /\ -1-x134+arg2 >= 0 /\ -1+arg2-x130 >= 0 /\ arg2 > 0 /\ x131-x130 > 0 /\ x135 > 0 /\ -1+arg2-x132 >= 0 /\ x133-arg1 <= 0 /\ -x134+arg2 <= 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (1 <= 0 /\ arg2 > 0), cost: 1
+	
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (1 <= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, _|_, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg1'=arg1, arg2'=arg2, arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (1 <= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (1 <= 0 /\ arg2 > 0), cost: 1
+	
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, (1 <= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, _|_, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2p17, arg3'=arg3p17, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -arg3p17+arg1 == 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ arg2-arg2p17 == 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (0 == 0 /\ -1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+	
+		propagated equality arg3p17 = arg1
+		
+		propagated equality arg2p17 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (0 == 0 /\ -1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ arg2-x140 < 0 /\ x142-arg1 <= 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ -x139+x140 > 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0 /\ -x141+x140 > 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg2'=arg2, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0), cost: 1
+	New rule:
+	f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=arg1p18, arg2'=arg2p18, arg3'=arg3p18, arg4'=arg4p18, arg5'=arg5p18, (1-arg3p18 == 0 /\ 1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0 /\ -arg1p18 == 0), cost: 1
+	New rule:
+	f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (0 == 0 /\ 1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0), cost: 1
+	
+		propagated equality arg3p18 = 1
+		
+		propagated equality arg1p18 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (0 == 0 /\ 1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0), cost: 1
+	New rule:
+	f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (1+arg1 > 0 /\ x74 > 0 /\ -1+arg2-x74 < 0), cost: 1
+	New rule:
+	f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (1+arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg2p19, arg3'=arg3p19, arg4'=arg4p19, arg5'=arg5p19, (-arg2p19+arg1 == 0 /\ arg2-arg3p19 == 0 /\ arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (0 == 0 /\ arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+	
+		propagated equality arg2p19 = arg1
+		
+		propagated equality arg3p19 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (0 == 0 /\ arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (arg3-x79 >= 0 /\ arg1p19 > 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (arg1p19 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p20, arg2'=arg2p20, arg3'=arg3p20, arg4'=arg4p20, arg5'=arg5p20, (1-arg4p20+2*arg1 == 0 /\ arg3p20 > 0 /\ -arg1p20+arg1 == 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0 /\ arg2-arg2p20 == 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (0 == 0 /\ arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+	
+		propagated equality arg4p20 = 1+2*arg1
+		
+		propagated equality arg1p20 = arg1
+		
+		propagated equality arg2p20 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (0 == 0 /\ arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg2p21, arg3'=arg3p21, arg4'=arg4p21, arg5'=arg5p21, (-arg2p21+arg1 == 0 /\ arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -arg3p21+arg2 == 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (0 == 0 /\ arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+	
+		propagated equality arg2p21 = arg1
+		
+		propagated equality arg3p21 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (0 == 0 /\ arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (arg3 > 0 /\ arg1p21 > 0 /\ -x101+arg2 >= 0 /\ -x92+arg4 < 0 /\ arg3-arg1p21 >= 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (arg3 > 0 /\ arg1p21 > 0 /\ arg3-arg1p21 >= 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p22, arg2'=arg2p22, arg3'=arg3p22, arg4'=arg4p22, arg5'=arg5p22, (1-arg4p22+2*arg1 == 0 /\ -2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -arg1p22+arg1 == 0 /\ -1+x102-2*arg1 > 0 /\ arg2-arg2p22 == 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (0 == 0 /\ -2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -1+x102-2*arg1 > 0), cost: 1
+	
+		propagated equality arg4p22 = 1+2*arg1
+		
+		propagated equality arg1p22 = arg1
+		
+		propagated equality arg2p22 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (0 == 0 /\ -2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -1+x102-2*arg1 > 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (-2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -1+x102-2*arg1 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (-2+x102-2*arg1 > 0 /\ 2*arg1 >= 0 /\ x109-x108 <= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0 /\ -1+x102-2*arg1 > 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (2*arg1 >= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (2*arg1 >= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (2*arg1 >= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1p23, arg2'=arg2p23, arg3'=arg3p23, arg4'=arg4p23, arg5'=arg5p23, (arg3p23 > 0 /\ -x116+x117 > 0 /\ -arg1p23+arg1 == 0 /\ 2*arg1 >= 0 /\ 2-arg4p23+2*arg1 == 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0 /\ arg2-arg2p23 == 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (0 == 0 /\ arg3p23 > 0 /\ -x116+x117 > 0 /\ 2*arg1 >= 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	
+		propagated equality arg1p23 = arg1
+		
+		propagated equality arg4p23 = 2+2*arg1
+		
+		propagated equality arg2p23 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (0 == 0 /\ arg3p23 > 0 /\ -x116+x117 > 0 /\ 2*arg1 >= 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ -x116+x117 > 0 /\ 2*arg1 >= 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ -x116+x117 > 0 /\ 2*arg1 >= 0 /\ -2+x110-2*arg1 > 0 /\ -1+x110-2*arg1 > 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg1'=arg1, arg2'=arg2, arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	New rule:
+	f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg1p24, arg2'=arg2p24, arg3'=arg3p24, arg4'=arg4p24, arg5'=arg5p24, (-x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2p24+arg2 == 0 /\ -arg1p24+arg4 == 0 /\ 1-arg3p24+2*arg4 == 0 /\ -arg2+x124 > 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg2'=arg2, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (0 == 0 /\ -x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2+x124 > 0), cost: 1
+	
+		propagated equality arg2p24 = arg2
+		
+		propagated equality arg1p24 = arg4
+		
+		propagated equality arg3p24 = 1+2*arg4
+		
+	Simplified Guard
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg2'=arg2, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (0 == 0 /\ -x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2+x124 > 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg2'=arg2, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (-x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2+x124 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg2'=arg2, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (-x118+arg4 < 0 /\ 2*arg4 >= 0 /\ arg3 > 0 /\ -x118+arg1 < 0 /\ -arg2+x124 > 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg2'=arg2, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (2*arg4 >= 0 /\ arg3 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg2'=arg2, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (2*arg4 >= 0 /\ arg3 > 0), cost: 1
+	New rule:
+	f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (2*arg4 >= 0 /\ arg3 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ arg1p25 > 0 /\ -arg3p1 == 0 /\ arg1p1-arg1p25 <= 0 /\ -arg2p1 == 0 /\ 1+arg2p25 > 0), cost: 1
+	New rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (0 == 0 /\ arg1p1 > 0 /\ arg1p25 > 0 /\ arg1p1-arg1p25 <= 0 /\ 1+arg2p25 > 0), cost: 1
+	
+		propagated equality arg3p1 = 0
+		
+		propagated equality arg2p1 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (0 == 0 /\ arg1p1 > 0 /\ arg1p25 > 0 /\ arg1p1-arg1p25 <= 0 /\ 1+arg2p25 > 0), cost: 1
+	New rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ arg1p25 > 0 /\ arg1p1-arg1p25 <= 0 /\ 1+arg2p25 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ arg1p25 > 0 /\ arg1p1-arg1p25 <= 0 /\ 1+arg2p25 > 0), cost: 1
+	New rule:
+	__init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0), cost: 1
+
+Step with 49
+
+	Trace
+
+	49[(arg1p1 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 29
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 30
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)], 30[(-x20+arg1 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {30[T]}]
+
+Step with 35
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)], 35[T]
+	
+	Blocked
+
+	[{}, {}, {30[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {30[T], 35[T]}]
+
+Step with 31
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)], 31[T]
+	
+	Blocked
+
+	[{}, {}, {30[T], 35[T]}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+  26: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=arg3, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (-arg3 <= 0 /\ 1-arg3+arg2 <= 0 /\ arg1 > 0), cost: 1
+  27: f229_0_main_GE -> f357_0_main_ArrayAccess : arg1'=arg2, arg2'=1+arg3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (1+arg3 > 0 /\ arg1 > 0), cost: 1
+  29: f229_0_main_GE -> f763_0_HeapSort_GE : arg1'=0, arg2'=0, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (arg3-arg2 <= 0 /\ arg1 > 0), cost: 1
+  28: f357_0_main_ArrayAccess -> f229_0_main_GE : arg1'=arg1p4, arg2'=1+arg1, arg3'=arg2, arg4'=arg4p4, arg5'=arg5p4, (arg1p4 > 0), cost: 1
+  30: f763_0_HeapSort_GE -> f809_0_HeapSort_LT : arg1'=-1+x20, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, -x20+arg1 >= 0, cost: 1
+  31: f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, T, cost: 1
+  35: f763_0_HeapSort_GE -> f1154_0_Ajouter_LE : arg1'=arg1p11, arg3'=arg3p11, arg4'=arg4p11, arg5'=arg5p11, T, cost: 1
+  50: f763_0_HeapSort_GE -> LoAT_sink : -1+n >= 0, cost: NONTERM
+  51: f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=n+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, -1+n >= 0, cost: 1
+  33: f809_0_HeapSort_LT -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p9, arg2'=arg1, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, (arg1p9 > 0 /\ 1+arg1 > 0), cost: 1
+  42: f809_0_HeapSort_LT -> f1783_0_Supprimer_GE : arg1'=0, arg2'=arg2p18, arg3'=1, arg4'=arg4p18, arg5'=arg5p18, (1+arg1 > 0), cost: 1
+  32: f1288_0_Supprimer_Return -> f1437_0_HeapSort_ArrayAccess : arg1'=arg1p8, arg2'=arg1, arg3'=arg2, arg4'=arg4p8, arg5'=arg5p8, arg1p8 > 0, cost: 1
+  34: f1437_0_HeapSort_ArrayAccess -> f809_0_HeapSort_LT : arg1'=-1+arg2, arg2'=arg3, arg3'=arg3p10, arg4'=arg4p10, arg5'=arg5p10, (arg1 > 0), cost: 1
+  36: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p12, arg4'=arg4p12, arg5'=arg5p12, (arg2 > 0), cost: 1
+  38: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p14, arg4'=arg4p14, arg5'=arg5p14, (arg2 > 0), cost: 1
+  40: f1154_0_Ajouter_LE -> f1154_0_Ajouter_LE\' : arg3'=arg3p16, arg4'=arg4p16, arg5'=arg5p16, _|_, cost: 1
+  37: f1154_0_Ajouter_LE\' -> f1154_0_Ajouter_LE : arg2'=arg2p13, arg3'=arg3p13, arg4'=arg4p13, arg5'=arg5p13, (-1+arg2-x61 >= 0 /\ -3+arg2-2*arg2p13 < 0 /\ -1+arg2-arg2p13 >= 0 /\ -3+arg2-2*x61 < 0 /\ -1+arg2-x67 >= 0 /\ arg2 > 0 /\ -3+arg2-2*x67 < 0 /\ -1+arg2-2*x67 >= 0 /\ -1+arg2-2*arg2p13 >= 0 /\ -1+arg2-2*x61 >= 0 /\ arg2-arg2p13 > 0), cost: 1
+  39: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p15, arg3'=arg1, arg4'=arg4p15, arg5'=arg5p15, (arg1p15 > 0 /\ arg2 > 0 /\ -3-2*x125+arg2 < 0 /\ -1-x125+arg2 >= 0 /\ -1-2*x125+arg2 >= 0), cost: 1
+  41: f1154_0_Ajouter_LE\' -> f1441_0_Ajouter_ArrayAccess : arg1'=arg1p17, arg3'=arg1, arg4'=arg4p17, arg5'=arg5p17, (-1+arg2-x143 >= 0 /\ arg1p17 > 0 /\ -3+arg2-2*x143 < 0 /\ -1-2*x141+arg2 >= 0 /\ arg2 > 0 /\ -1-2*x139+arg2 >= 0 /\ -1-x139+arg2 >= 0 /\ -3-2*x141+arg2 < 0 /\ -1-x141+arg2 >= 0 /\ -3-2*x139+arg2 < 0 /\ arg2-x143 <= 0 /\ -1+arg2-2*x143 >= 0), cost: 1
+  43: f1783_0_Supprimer_GE -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p19, arg2'=arg1, arg3'=arg2, arg4'=arg4p19, arg5'=arg5p19, (arg1p19 > 0), cost: 1
+  44: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p20, arg4'=1+2*arg1, arg5'=arg5p20, (arg3p20 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p20-2*arg1 <= 0 /\ arg3-arg5p20 < 0), cost: 1
+  46: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p22, arg4'=1+2*arg1, arg5'=arg5p22, (2*arg1 >= 0 /\ arg3p22 > 0 /\ -2+arg5p22-2*arg1 > 0 /\ arg3-arg5p22 < 0), cost: 1
+  47: f1783_0_Supprimer_GE -> f1821_0_Supprimer_ArrayAccess : arg3'=arg3p23, arg4'=2+2*arg1, arg5'=arg5p23, (arg3p23 > 0 /\ 2*arg1 >= 0 /\ -2+arg5p23-2*arg1 > 0 /\ arg3-arg5p23 < 0), cost: 1
+  45: f1821_0_Supprimer_ArrayAccess -> f1792_0_Supprimer_ArrayAccess : arg1'=arg1p21, arg2'=arg1, arg3'=arg2, arg4'=arg4p21, arg5'=arg5p21, (arg3 > 0 /\ arg1p21 > 0 /\ arg3-arg1p21 >= 0), cost: 1
+  48: f1821_0_Supprimer_ArrayAccess -> f1783_0_Supprimer_GE : arg1'=arg4, arg3'=1+2*arg4, arg4'=arg4p24, arg5'=arg5p24, (2*arg4 >= 0 /\ arg3 > 0), cost: 1
+  49: __init -> f229_0_main_GE : arg1'=arg1p1, arg2'=0, arg3'=0, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0), cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, T, cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+	Loop Acceleration
+
+	Original rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=1+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, T, cost: 1
+	New rule:
+	f763_0_HeapSort_GE -> f763_0_HeapSort_GE : arg1'=n+arg1, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, -1+n >= 0, cost: 1
+
+		Replacement map: {}
+
+Step with 50
+
+	Trace
+
+	49[(arg1p1 > 0)], 29[(arg3-arg2 <= 0 /\ arg1 > 0)], 50[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {30[T], 35[T]}, {50[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=0 arg3=0 arg4=0 arg5=0 ] 49 [ arg1=0 arg2=0 arg3=0 arg4=0 arg5=0 ] 29 [ arg1=arg1 arg2=arg2 arg3=arg3 arg4=arg4 arg5=arg5 ] 50
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

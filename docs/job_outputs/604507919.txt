@@ -1,0 +1,143 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f238_0_createIntList_Return -> f376_0_main_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (1+arg1 > 0 /\ arg1p1-arg1 <= 0 /\ 1+arg1p1 > 0), cost: 1
+   2: f376_0_main_FieldAccess -> f376_0_main_FieldAccess : arg1'=arg1p3, arg2'=arg2p3, (x7 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_Load -> f376_0_main_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   3: f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=arg2p4, (1+arg1p4 > 0 /\ 1-arg2p4 == 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   4: f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=arg1p5, arg2'=arg2p5, (-1-arg1p5+arg1 == 0 /\ arg2 > 0 /\ 1-arg2p5+arg2 == 0 /\ arg1 > 0), cost: 1
+   5: __init -> f1_0_main_Load : arg1'=arg1p6, arg2'=arg2p6, T, cost: 1
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f238_0_createIntList_Return -> f376_0_main_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (1+arg1 > 0 /\ arg1p1-arg1 <= 0 /\ 1+arg1p1 > 0), cost: 1
+   6: f376_0_main_FieldAccess -> f376_0_main_FieldAccess : arg1'=arg1p3, arg2'=arg2p3, (arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_Load -> f376_0_main_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   7: f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=1, (1+arg1p4 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   8: f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=-1+arg1, arg2'=1+arg2, (arg2 > 0 /\ arg1 > 0), cost: 1
+   5: __init -> f1_0_main_Load : arg1'=arg1p6, arg2'=arg2p6, T, cost: 1
+
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f376_0_main_FieldAccess -> f376_0_main_FieldAccess : arg1'=arg1p3, arg2'=arg2p3, (x7 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f376_0_main_FieldAccess -> f376_0_main_FieldAccess : arg1'=arg1p3, arg2'=arg2p3, (arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=arg2p4, (1+arg1p4 > 0 /\ 1-arg2p4 == 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=1, (0 == 0 /\ 1+arg1p4 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	
+		propagated equality arg2p4 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=1, (0 == 0 /\ 1+arg1p4 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=1, (1+arg1p4 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=arg1p5, arg2'=arg2p5, (-1-arg1p5+arg1 == 0 /\ arg2 > 0 /\ 1-arg2p5+arg2 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=-1+arg1, arg2'=1+arg2, (0 == 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p5 = -1+arg1
+		
+		propagated equality arg2p5 = 1+arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=-1+arg1, arg2'=1+arg2, (0 == 0 /\ arg2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=-1+arg1, arg2'=1+arg2, (arg2 > 0 /\ arg1 > 0), cost: 1
+
+Step with 5
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 1
+
+	Trace
+
+	5[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 6
+
+	Trace
+
+	5[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 6[(arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f238_0_createIntList_Return -> f376_0_main_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (1+arg1 > 0 /\ arg1p1-arg1 <= 0 /\ 1+arg1p1 > 0), cost: 1
+   6: f376_0_main_FieldAccess -> f376_0_main_FieldAccess : arg1'=arg1p3, arg2'=arg2p3, (arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0), cost: 1
+   9: f376_0_main_FieldAccess -> LoAT_sink : (arg1p3 > 0 /\ -arg1p3+arg1 <= 0 /\ -arg1p3+arg1 >= 0 /\ arg1 > 0), cost: NONTERM
+   1: f1_0_main_Load -> f376_0_main_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   7: f1_0_main_Load -> f491_0_createIntList_LE : arg1'=arg1p4, arg2'=1, (1+arg1p4 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   8: f491_0_createIntList_LE -> f491_0_createIntList_LE : arg1'=-1+arg1, arg2'=1+arg2, (arg2 > 0 /\ arg1 > 0), cost: 1
+   5: __init -> f1_0_main_Load : arg1'=arg1p6, arg2'=arg2p6, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f376_0_main_FieldAccess -> f376_0_main_FieldAccess : arg1'=arg1p3, arg2'=arg2p3, (arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f376_0_main_FieldAccess -> LoAT_sink : (arg1p3 > 0 /\ -arg1p3+arg1 <= 0 /\ -arg1p3+arg1 >= 0 /\ arg1 > 0), cost: NONTERM
+
+		arg1p3 > 0 [0]: monotonic increase yields arg1p3 > 0
+		
+		-arg1p3+arg1 >= 0 [0]: monotonic increase yields -arg1p3+arg1 >= 0
+		
+		arg1 > 0 [0]: montonic decrease yields arg1p3 > 0, dependencies: -arg1p3+arg1 >= 0
+		
+		arg1 > 0 [1]: eventual increase yields (-arg1p3+arg1 <= 0 /\ arg1 > 0)
+		
+		Replacement map: {arg1p3 > 0 -> arg1p3 > 0, -arg1p3+arg1 >= 0 -> -arg1p3+arg1 >= 0, arg1 > 0 -> (-arg1p3+arg1 <= 0 /\ arg1 > 0)}
+
+Step with 9
+
+	Trace
+
+	5[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 9[(arg1p3 > 0 /\ -arg1p3+arg1 <= 0 /\ -arg1p3+arg1 >= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {9[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=0 ] 5 [ arg1=1 arg2=0 ] 1 [ arg1=arg1 arg2=arg2 ] 9
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

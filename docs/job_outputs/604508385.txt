@@ -1,0 +1,488 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l14, true>
+<l1, l2, true>
+<l2, l3, (undef8 = undef8), par{__rho_2_^0 -> undef8}>
+<l4, l5, true>
+<l6, l7, true>
+<l8, l9, true>
+<l7, l6, (3 <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (~(1) + WItemsNum^0)}>
+<l7, l1, ((0 + WItemsNum^0) <= 2), par{WItemsNum^0 -> 1}>
+<l9, l10, true>
+<l10, l9, true>
+<l11, l2, ((1 + __const_5^0) <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l11, l2, ((0 + WItemsNum^0) <= (0 + __const_5^0)), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l12, l11, ((0 + __rho_2_^0) <= 0)>
+<l12, l6, (1 <= (0 + __rho_2_^0))>
+<l3, l11, ((1 + __const_5^0) <= (0 + WItemsNum^0))>
+<l3, l12, ((0 + WItemsNum^0) <= (0 + __const_5^0))>
+<l13, l1, (undef65 = undef65) /\ (undef63 = undef63), par{WItemsNum^0 -> (0 + undef63), __rho_1_^0 -> undef63}>
+<l14, l13, true>
+
+Fresh variables:
+undef8, undef63, undef65, 
+
+Undef variables:
+undef8, undef63, undef65, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (WItemsNum^0 = (0 + undef63)) /\ (undef65 = undef65) /\ (undef63 = undef63)>
+<l2, l2, (undef8 = undef8) /\ ((1 + __const_5^0) <= (0 + WItemsNum^0)) /\ ((1 + __const_5^0) <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l2, l2, (undef8 = undef8) /\ ((0 + WItemsNum^0) <= (0 + __const_5^0)) /\ ((0 + undef8) <= 0) /\ ((0 + WItemsNum^0) <= (0 + __const_5^0)), par{WItemsNum^0 -> (1 + WItemsNum^0)}>
+<l2, l6, (undef8 = undef8) /\ ((0 + WItemsNum^0) <= (0 + __const_5^0)) /\ (1 <= (0 + undef8))>
+<l6, l6, (3 <= (0 + WItemsNum^0)), par{WItemsNum^0 -> (~(1) + WItemsNum^0)}>
+<l6, l2, ((0 + WItemsNum^0) <= 2), par{WItemsNum^0 -> 1}>
+
+Fresh variables:
+undef8, undef63, undef65, 
+
+Undef variables:
+undef8, undef63, undef65, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l2, l2, WItemsNum^0 <= __const_5^0 /\ undef8 <= 0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l2, l6, WItemsNum^0 <= __const_5^0 /\ 1 <= undef8, {all remain the same}>
+<l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+<l6, l2, WItemsNum^0 <= 2, {WItemsNum^0 -> 1, rest remain the same}>
+Variables:
+WItemsNum^0, __const_5^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, WItemsNum^0 = undef63, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 6 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.007954
+
+Checking conditional termination of SCC {l2, l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001211s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007210s
+Trying to remove transition: <l6, l2, WItemsNum^0 <= 2, {WItemsNum^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004386s
+Time used: 0.004227
+Trying to remove transition: <l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021618s
+Time used: 0.021235
+Trying to remove transition: <l2, l2, WItemsNum^0 <= __const_5^0 /\ undef8 <= 0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009321s
+Time used: 0.008896
+Trying to remove transition: <l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005901s
+Time used: 0.005295
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.024339s
+Time used: 0.023653
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.080159s
+Time used: 0.080156
+
+LOG: SAT solveNonLinear - Elapsed time: 0.104498s
+Cost: 1; Total time: 0.103809
+[31mFailed at location 2: 1 + __const_5^0 <= WItemsNum^0[0m
+Before Improving: 
+[36mQuasi-invariant at l2: 1 + __const_5^0 <= WItemsNum^0[0m
+[36mQuasi-invariant at l6: 1 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007545s
+Remaining time after improvement: 0.998439
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 1 + __const_5^0 <= WItemsNum^0[0m
+[36mQuasi-invariant at l6: 1 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, WItemsNum^0 <= __const_5^0 /\ undef8 <= 0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l6, WItemsNum^0 <= __const_5^0 /\ 1 <= undef8, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l6, l2, WItemsNum^0 <= 2, {WItemsNum^0 -> 1, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l2, WItemsNum^0 <= __const_5^0 /\ undef8 <= 0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l2, l6, WItemsNum^0 <= __const_5^0 /\ 1 <= undef8, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l6, l2, WItemsNum^0 <= 2, {WItemsNum^0 -> 1, rest remain the same}>
+New Graphs: 
+Transitions:
+<l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Variables:
+WItemsNum^0, __const_5^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000304s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000815s
+Trying to remove transition: <l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002194s
+Time used: 0.002126
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001482s
+Time used: 4.00131
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003765s
+Time used: 4.00054
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002821s
+Time used: 1.00033
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004806s
+Time used: 0.003288
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.004444s
+Time used: 0.004442
+
+LOG: SAT solveNonLinear - Elapsed time: 0.009250s
+Cost: 1; Total time: 0.00773
+[33mQuasi-ranking function: [36m50000 - WItemsNum^0 + __const_5^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Variables:
+WItemsNum^0, __const_5^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000237s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000847s
+Trying to remove transition: <l2, l2, 50001 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002601s
+Time used: 0.002531
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001776s
+Time used: 4.00162
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003940s
+Time used: 4.00059
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002953s
+Time used: 1.00039
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004868s
+Time used: 0.003405
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.004556s
+Time used: 0.004553
+
+LOG: SAT solveNonLinear - Elapsed time: 0.009423s
+Cost: 1; Total time: 0.007958
+[33mQuasi-ranking function: [36m50000 - WItemsNum^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 <= WItemsNum^0 /\ 50001 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Variables:
+WItemsNum^0, __const_5^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000278s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001000s
+Trying to remove transition: <l2, l2, 50001 <= WItemsNum^0 /\ 50001 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002738s
+Time used: 0.002662
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001754s
+Time used: 4.00158
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004232s
+Time used: 4.00084
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003125s
+Time used: 1.0005
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005299s
+Time used: 0.00382
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.004538s
+Time used: 0.004536
+
+LOG: SAT solveNonLinear - Elapsed time: 0.009837s
+Cost: 1; Total time: 0.008356
+[33mQuasi-ranking function: [36m50000 - WItemsNum^0 - __const_5^0[0m
+New Graphs: 
+Transitions:
+<l2, l2, 50001 <= WItemsNum^0 /\ 50001 + __const_5^0 <= WItemsNum^0 /\ 50001 <= WItemsNum^0 + __const_5^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Variables:
+WItemsNum^0, __const_5^0
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000323s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001157s
+Trying to remove transition: <l2, l2, 50001 <= WItemsNum^0 /\ 50001 + __const_5^0 <= WItemsNum^0 /\ 50001 <= WItemsNum^0 + __const_5^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002945s
+Time used: 0.002859
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001872s
+Time used: 4.0017
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004201s
+Time used: 4.0008
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003252s
+Time used: 1.00063
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004897s
+Time used: 0.003211
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, WItemsNum^0 = undef63, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, WItemsNum^0 = undef63, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000794s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000828s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l2, l2, 1 + __const_5^0 <= WItemsNum^0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l2, l2, WItemsNum^0 <= __const_5^0 /\ undef8 <= 0, {WItemsNum^0 -> 1 + WItemsNum^0, rest remain the same}>
+<l2, l6, WItemsNum^0 <= __const_5^0 /\ 1 <= undef8, {all remain the same}>
+<l6, l6, 3 <= WItemsNum^0, {WItemsNum^0 -> -1 + WItemsNum^0, rest remain the same}>
+<l6, l2, WItemsNum^0 <= 2, {WItemsNum^0 -> 1, rest remain the same}>
+Variables:
+WItemsNum^0, __const_5^0
+
+Checking conditional non-termination of SCC {l2, l6}...
+> No exit transition to close.
+Calling reachability with...
+Transition: <l2, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l2, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l2, WItemsNum^0 = undef63, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l2, WItemsNum^0 = undef63, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

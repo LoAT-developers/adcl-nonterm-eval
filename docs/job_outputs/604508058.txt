@@ -1,0 +1,201 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   0: f1_0_main_ConstantStackPush -> f93_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (2-arg2p1 == 0 /\ 1-arg1p1 == 0 /\ 3-arg3p1 == 0), cost: 1
+   1: f93_0_main_GE -> f93_0_main_GE : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (-arg2p2+arg1 == 0 /\ -5+arg3 < 0 /\ -arg3p2+arg1+arg2 == 0 /\ -arg1p2+arg2 == 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   1: f93_0_main_GE -> f93_0_main_GE : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (-arg2p2+arg1 == 0 /\ -5+arg3 < 0 /\ -arg3p2+arg1+arg2 == 0 /\ -arg1p2+arg2 == 0), cost: 1
+   3: __init -> f93_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (2-arg2p1 == 0 /\ 1-arg1p1 == 0 /\ 3-arg3p1 == 0), cost: 1
+
+	Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_ConstantStackPush : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, T, cost: 1
+	Second rule:
+	f1_0_main_ConstantStackPush -> f93_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (2-arg2p1 == 0 /\ 1-arg1p1 == 0 /\ 3-arg3p1 == 0), cost: 1
+	New rule:
+	__init -> f93_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (2-arg2p1 == 0 /\ 1-arg1p1 == 0 /\ 3-arg3p1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 2
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   4: f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, -5+arg3 < 0, cost: 1
+   5: __init -> f93_0_main_GE : arg1'=1, arg2'=2, arg3'=3, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (-arg2p2+arg1 == 0 /\ -5+arg3 < 0 /\ -arg3p2+arg1+arg2 == 0 /\ -arg1p2+arg2 == 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, (0 == 0 /\ -5+arg3 < 0), cost: 1
+	
+		propagated equality arg2p2 = arg1
+		
+		propagated equality arg3p2 = arg1+arg2
+		
+		propagated equality arg1p2 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, (0 == 0 /\ -5+arg3 < 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, -5+arg3 < 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f93_0_main_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (2-arg2p1 == 0 /\ 1-arg1p1 == 0 /\ 3-arg3p1 == 0), cost: 1
+	New rule:
+	__init -> f93_0_main_GE : arg1'=1, arg2'=2, arg3'=3, 0 == 0, cost: 1
+	
+		propagated equality arg2p1 = 2
+		
+		propagated equality arg1p1 = 1
+		
+		propagated equality arg3p1 = 3
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f93_0_main_GE : arg1'=1, arg2'=2, arg3'=3, 0 == 0, cost: 1
+	New rule:
+	__init -> f93_0_main_GE : arg1'=1, arg2'=2, arg3'=3, T, cost: 1
+
+Unrolled Loops
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   4: f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, -5+arg3 < 0, cost: 1
+   6: f93_0_main_GE -> f93_0_main_GE : arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+   5: __init -> f93_0_main_GE : arg1'=1, arg2'=2, arg3'=3, T, cost: 1
+
+	Unrolling
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, -5+arg3 < 0, cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+
+Step with 5
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 4
+
+	Trace
+
+	5[T], 4[(-5+arg3 < 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   4: f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, -5+arg3 < 0, cost: 1
+   6: f93_0_main_GE -> f93_0_main_GE : arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+   7: f93_0_main_GE -> LoAT_sink : (-arg3+arg1+arg2 <= 0 /\ 5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: NONTERM
+   8: f93_0_main_GE -> f93_0_main_GE : arg3'=arg1+arg2, (5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: 1
+   5: __init -> f93_0_main_GE : arg1'=1, arg2'=2, arg3'=3, T, cost: 1
+
+	unrolling
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg2, arg2'=arg1, arg3'=arg1+arg2, (-5+arg3 < 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+	
+	Certificate of Non-Termination
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+	New rule:
+	f93_0_main_GE -> LoAT_sink : (-arg3+arg1+arg2 <= 0 /\ 5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: NONTERM
+
+		5-arg3 > 0 [0]: eventual decrease yields (5-arg3 > 0 /\ 5-arg1-arg2 > 0)
+		
+		5-arg3 > 0 [1]: eventual increase yields (-arg3+arg1+arg2 <= 0 /\ 5-arg3 > 0)
+		
+		5-arg1-arg2 > 0 [0]: monotonic increase yields 5-arg1-arg2 > 0
+		
+		Replacement map: {5-arg3 > 0 -> (-arg3+arg1+arg2 <= 0 /\ 5-arg3 > 0), 5-arg1-arg2 > 0 -> 5-arg1-arg2 > 0}
+
+	Loop Acceleration
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-5+arg1+arg2 < 0 /\ -5+arg3 < 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-1+n >= 0 /\ 5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: 1
+
+		5-arg3 > 0 [0]: eventual decrease yields (5-arg3 > 0 /\ 5-arg1-arg2 > 0)
+		
+		5-arg3 > 0 [1]: eventual increase yields (-arg3+arg1+arg2 <= 0 /\ 5-arg3 > 0)
+		
+		5-arg1-arg2 > 0 [0]: monotonic increase yields 5-arg1-arg2 > 0
+		
+		Replacement map: {5-arg3 > 0 -> (5-arg3 > 0 /\ 5-arg1-arg2 > 0), 5-arg1-arg2 > 0 -> 5-arg1-arg2 > 0}
+
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (-1+n >= 0 /\ 5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f93_0_main_GE -> f93_0_main_GE : arg1'=arg1, arg2'=arg2, arg3'=arg1+arg2, (5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: 1
+	New rule:
+	f93_0_main_GE -> f93_0_main_GE : arg3'=arg1+arg2, (5-arg3 > 0 /\ 5-arg1-arg2 > 0), cost: 1
+
+Step with 7
+
+	Trace
+
+	5[T], 7[(-arg3+arg1+arg2 <= 0 /\ 5-arg3 > 0 /\ 5-arg1-arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=2 arg3=3 ] 5 [ arg1=arg1 arg2=arg2 arg3=arg3 ] 7
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

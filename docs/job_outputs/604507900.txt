@@ -1,0 +1,457 @@
+unknown
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_Load -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+   1: f142_0_main_LE -> f194_0_main_LE : arg1'=arg1p2, arg2'=arg2p2, (-arg1p2+arg2 == 0 /\ -arg2p2+arg1 == 0 /\ arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+   2: f142_0_main_LE -> f209_0_main_LE : arg1'=arg1p3, arg2'=arg2p3, (arg1 > 0 /\ -arg1+arg2 > 0 /\ -arg1p3+arg1 == 0 /\ -arg2p3+arg2 == 0 /\ arg2 > 0), cost: 1
+   3: f194_0_main_LE -> f142_0_main_LE : arg1'=arg1p4, arg2'=arg2p4, (-arg1p4 == 0 /\ -arg2p4+arg1 == 0 /\ -arg2 == 0), cost: 1
+   4: f194_0_main_LE -> f194_0_main_LE : arg1'=arg1p5, arg2'=arg2p5, (-1-arg2p5+arg2 == 0 /\ arg1-arg1p5 == 0 /\ arg2 > 0), cost: 1
+   5: f209_0_main_LE -> f142_0_main_LE : arg1'=arg1p6, arg2'=arg2p6, (-arg2p6 == 0 /\ -arg1p6+arg1 == 0 /\ -arg2 == 0), cost: 1
+   6: f209_0_main_LE -> f209_0_main_LE : arg1'=arg1p7, arg2'=arg2p7, (-arg1p7+arg1 == 0 /\ -1-arg2p7+arg2 == 0 /\ arg2 > 0), cost: 1
+   7: __init -> f1_0_main_Load : arg1'=arg1p8, arg2'=arg2p8, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2
+   1: f142_0_main_LE -> f194_0_main_LE : arg1'=arg1p2, arg2'=arg2p2, (-arg1p2+arg2 == 0 /\ -arg2p2+arg1 == 0 /\ arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+   2: f142_0_main_LE -> f209_0_main_LE : arg1'=arg1p3, arg2'=arg2p3, (arg1 > 0 /\ -arg1+arg2 > 0 /\ -arg1p3+arg1 == 0 /\ -arg2p3+arg2 == 0 /\ arg2 > 0), cost: 1
+   3: f194_0_main_LE -> f142_0_main_LE : arg1'=arg1p4, arg2'=arg2p4, (-arg1p4 == 0 /\ -arg2p4+arg1 == 0 /\ -arg2 == 0), cost: 1
+   4: f194_0_main_LE -> f194_0_main_LE : arg1'=arg1p5, arg2'=arg2p5, (-1-arg2p5+arg2 == 0 /\ arg1-arg1p5 == 0 /\ arg2 > 0), cost: 1
+   5: f209_0_main_LE -> f142_0_main_LE : arg1'=arg1p6, arg2'=arg2p6, (-arg2p6 == 0 /\ -arg1p6+arg1 == 0 /\ -arg2 == 0), cost: 1
+   6: f209_0_main_LE -> f209_0_main_LE : arg1'=arg1p7, arg2'=arg2p7, (-arg1p7+arg1 == 0 /\ -1-arg2p7+arg2 == 0 /\ arg2 > 0), cost: 1
+   8: __init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p8 > 0 /\ 1+arg1p1 > 0 /\ arg1p8 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p8, arg2'=arg2p8, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+	New rule:
+	__init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p8 > 0 /\ 1+arg1p1 > 0 /\ arg1p8 > 0 /\ 1+arg2p1 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 7
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   9: f142_0_main_LE -> f194_0_main_LE : arg1'=arg2, arg2'=arg1, (arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+  10: f142_0_main_LE -> f209_0_main_LE : (arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+  11: f194_0_main_LE -> f142_0_main_LE : arg1'=0, arg2'=arg1, -arg2 == 0, cost: 1
+  12: f194_0_main_LE -> f194_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+  13: f209_0_main_LE -> f142_0_main_LE : arg2'=0, -arg2 == 0, cost: 1
+  14: f209_0_main_LE -> f209_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+  15: __init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f142_0_main_LE -> f194_0_main_LE : arg1'=arg1p2, arg2'=arg2p2, (-arg1p2+arg2 == 0 /\ -arg2p2+arg1 == 0 /\ arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f142_0_main_LE -> f194_0_main_LE : arg1'=arg2, arg2'=arg1, (0 == 0 /\ arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p2 = arg2
+		
+		propagated equality arg2p2 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f142_0_main_LE -> f194_0_main_LE : arg1'=arg2, arg2'=arg1, (0 == 0 /\ arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f142_0_main_LE -> f194_0_main_LE : arg1'=arg2, arg2'=arg1, (arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f142_0_main_LE -> f209_0_main_LE : arg1'=arg1p3, arg2'=arg2p3, (arg1 > 0 /\ -arg1+arg2 > 0 /\ -arg1p3+arg1 == 0 /\ -arg2p3+arg2 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f142_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=arg2, (0 == 0 /\ arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p3 = arg1
+		
+		propagated equality arg2p3 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f142_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=arg2, (0 == 0 /\ arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f142_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=arg2, (arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f142_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=arg2, (arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f142_0_main_LE -> f209_0_main_LE : (arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f194_0_main_LE -> f142_0_main_LE : arg1'=arg1p4, arg2'=arg2p4, (-arg1p4 == 0 /\ -arg2p4+arg1 == 0 /\ -arg2 == 0), cost: 1
+	New rule:
+	f194_0_main_LE -> f142_0_main_LE : arg1'=0, arg2'=arg1, (0 == 0 /\ -arg2 == 0), cost: 1
+	
+		propagated equality arg1p4 = 0
+		
+		propagated equality arg2p4 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f194_0_main_LE -> f142_0_main_LE : arg1'=0, arg2'=arg1, (0 == 0 /\ -arg2 == 0), cost: 1
+	New rule:
+	f194_0_main_LE -> f142_0_main_LE : arg1'=0, arg2'=arg1, -arg2 == 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f194_0_main_LE -> f194_0_main_LE : arg1'=arg1p5, arg2'=arg2p5, (-1-arg2p5+arg2 == 0 /\ arg1-arg1p5 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f194_0_main_LE -> f194_0_main_LE : arg1'=arg1, arg2'=-1+arg2, (0 == 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p5 = -1+arg2
+		
+		propagated equality arg1p5 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f194_0_main_LE -> f194_0_main_LE : arg1'=arg1, arg2'=-1+arg2, (0 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f194_0_main_LE -> f194_0_main_LE : arg1'=arg1, arg2'=-1+arg2, arg2 > 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f194_0_main_LE -> f194_0_main_LE : arg1'=arg1, arg2'=-1+arg2, arg2 > 0, cost: 1
+	New rule:
+	f194_0_main_LE -> f194_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f209_0_main_LE -> f142_0_main_LE : arg1'=arg1p6, arg2'=arg2p6, (-arg2p6 == 0 /\ -arg1p6+arg1 == 0 /\ -arg2 == 0), cost: 1
+	New rule:
+	f209_0_main_LE -> f142_0_main_LE : arg1'=arg1, arg2'=0, (0 == 0 /\ -arg2 == 0), cost: 1
+	
+		propagated equality arg2p6 = 0
+		
+		propagated equality arg1p6 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f209_0_main_LE -> f142_0_main_LE : arg1'=arg1, arg2'=0, (0 == 0 /\ -arg2 == 0), cost: 1
+	New rule:
+	f209_0_main_LE -> f142_0_main_LE : arg1'=arg1, arg2'=0, -arg2 == 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f209_0_main_LE -> f142_0_main_LE : arg1'=arg1, arg2'=0, -arg2 == 0, cost: 1
+	New rule:
+	f209_0_main_LE -> f142_0_main_LE : arg2'=0, -arg2 == 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f209_0_main_LE -> f209_0_main_LE : arg1'=arg1p7, arg2'=arg2p7, (-arg1p7+arg1 == 0 /\ -1-arg2p7+arg2 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f209_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=-1+arg2, (0 == 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p7 = arg1
+		
+		propagated equality arg2p7 = -1+arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f209_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=-1+arg2, (0 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f209_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=-1+arg2, arg2 > 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f209_0_main_LE -> f209_0_main_LE : arg1'=arg1, arg2'=-1+arg2, arg2 > 0, cost: 1
+	New rule:
+	f209_0_main_LE -> f209_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p8 > 0 /\ 1+arg1p1 > 0 /\ arg1p8 > 0 /\ 1+arg2p1 > 0), cost: 1
+	New rule:
+	__init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+Step with 15
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 9
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 12
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)], 12[(arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T]}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   9: f142_0_main_LE -> f194_0_main_LE : arg1'=arg2, arg2'=arg1, (arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+  10: f142_0_main_LE -> f209_0_main_LE : (arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+  11: f194_0_main_LE -> f142_0_main_LE : arg1'=0, arg2'=arg1, -arg2 == 0, cost: 1
+  12: f194_0_main_LE -> f194_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+  16: f194_0_main_LE -> f194_0_main_LE : arg2'=-n+arg2, (1-n+arg2 > 0 /\ -1+n >= 0), cost: 1
+  13: f209_0_main_LE -> f142_0_main_LE : arg2'=0, -arg2 == 0, cost: 1
+  14: f209_0_main_LE -> f209_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+  15: __init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f194_0_main_LE -> f194_0_main_LE : arg2'=-1+arg2, (arg2 > 0), cost: 1
+	New rule:
+	f194_0_main_LE -> f194_0_main_LE : arg2'=-n+arg2, (1-n+arg2 > 0 /\ -1+n >= 0), cost: 1
+
+		arg2 > 0 [0]: montonic decrease yields 1-n+arg2 > 0
+		
+		arg2 > 0 [1]: eventual increase yields (1 <= 0 /\ arg2 > 0)
+		
+		Replacement map: {arg2 > 0 -> 1-n+arg2 > 0}
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)], 16[(1-n+arg2 > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T]}, {12[T], 16[T]}]
+
+Step with 11
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)], 16[(1-n+arg2 > 0 /\ -1+n >= 0)], 11[(-arg2 == 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T]}, {12[T], 16[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Backtrack
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)], 16[(1-n+arg2 > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T]}, {11[T], 12[T], 16[T]}]
+
+Backtrack
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T], 16[T]}]
+
+Step with 12
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)], 12[(arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T], 16[T]}, {}]
+
+Covered
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 9[(arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {11[T], 12[T], 16[T]}]
+
+Backtrack
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)]
+	
+	Blocked
+
+	[{}, {9[T]}]
+
+Step with 10
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {}]
+
+Step with 14
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)], 14[(arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T]}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   9: f142_0_main_LE -> f194_0_main_LE : arg1'=arg2, arg2'=arg1, (arg1 > 0 /\ -arg1+arg2 <= 0 /\ arg2 > 0), cost: 1
+  10: f142_0_main_LE -> f209_0_main_LE : (arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0), cost: 1
+  11: f194_0_main_LE -> f142_0_main_LE : arg1'=0, arg2'=arg1, -arg2 == 0, cost: 1
+  12: f194_0_main_LE -> f194_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+  16: f194_0_main_LE -> f194_0_main_LE : arg2'=-n+arg2, (1-n+arg2 > 0 /\ -1+n >= 0), cost: 1
+  13: f209_0_main_LE -> f142_0_main_LE : arg2'=0, -arg2 == 0, cost: 1
+  14: f209_0_main_LE -> f209_0_main_LE : arg2'=-1+arg2, arg2 > 0, cost: 1
+  17: f209_0_main_LE -> f209_0_main_LE : arg2'=-n2+arg2, (1-n2+arg2 > 0 /\ -1+n2 >= 0), cost: 1
+  15: __init -> f142_0_main_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f209_0_main_LE -> f209_0_main_LE : arg2'=-1+arg2, (arg2 > 0), cost: 1
+	New rule:
+	f209_0_main_LE -> f209_0_main_LE : arg2'=-n2+arg2, (1-n2+arg2 > 0 /\ -1+n2 >= 0), cost: 1
+
+		arg2 > 0 [0]: montonic decrease yields 1-n2+arg2 > 0
+		
+		arg2 > 0 [1]: eventual increase yields (1 <= 0 /\ arg2 > 0)
+		
+		Replacement map: {arg2 > 0 -> 1-n2+arg2 > 0}
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)], 17[(1-n2+arg2 > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T]}, {14[T], 17[T]}]
+
+Step with 13
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)], 17[(1-n2+arg2 > 0 /\ -1+n2 >= 0)], 13[(-arg2 == 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T]}, {14[T], 17[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Backtrack
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)], 17[(1-n2+arg2 > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T]}, {13[T], 14[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T], 17[T]}]
+
+Step with 14
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)], 14[(arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T], 17[T]}, {}]
+
+Covered
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 10[(arg1 > 0 /\ -arg1+arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T]}, {13[T], 14[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	15[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{15[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

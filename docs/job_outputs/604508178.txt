@@ -1,0 +1,88 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables:
+   0: f35_0_main_Load -> f35_0_main_Load : T, cost: 1
+   1: f1_0_main_ConstantStackPush -> f35_0_main_Load : T, cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables:
+   0: f35_0_main_Load -> f35_0_main_Load : T, cost: 1
+   3: __init -> f35_0_main_Load : T, cost: 1
+
+	Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_ConstantStackPush : T, cost: 1
+	Second rule:
+	f1_0_main_ConstantStackPush -> f35_0_main_Load : T, cost: 1
+	New rule:
+	__init -> f35_0_main_Load : T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+
+Step with 3
+
+	Trace
+
+	3[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 0
+
+	Trace
+
+	3[T], 0[T]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables:
+   0: f35_0_main_Load -> f35_0_main_Load : T, cost: 1
+   4: f35_0_main_Load -> LoAT_sink : -1+n >= 0, cost: NONTERM
+   3: __init -> f35_0_main_Load : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f35_0_main_Load -> f35_0_main_Load : T, cost: 1
+	New rule:
+	f35_0_main_Load -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+Step with 4
+
+	Trace
+
+	3[T], 4[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {4[T]}]
+
+Refute
+
+	Counterexample
+
+	[ ] 3 [ ] 4
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

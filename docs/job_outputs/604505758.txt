@@ -1,0 +1,151 @@
+MAYBE
+Errors:
+Stacktrace:
+
+  at <unknown> <0xffffffff>
+  at (wrapper managed-to-native) Microsoft.Z3.Native/LIB.Z3_fixedpoint_dec_ref (intptr,intptr) [0x00002] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.Native.Z3_fixedpoint_dec_ref (intptr,intptr) [0x00001] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.Fixedpoint/DecRefQueue.DecRef (Microsoft.Z3.Context,intptr) [0x00007] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.IDecRefQueue.Clear (Microsoft.Z3.Context) [0x0002b] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Z3.Context.Dispose () [0x000bd] in <1589d34e42ba4cbeb3351b894afd3b19>:0
+  at Microsoft.Research.T2.MuZ/MuZWrapper.CallSpacer (System.Collections.Generic.Dictionary`2<int, Microsoft.Z3.FuncDecl>,Microsoft.FSharp.Collections.FSharpList`1<System.Tuple`2<Microsoft.Z3.Quantifier, Microsoft.Z3.StringSymbol>>,Microsoft.Z3.BoolExpr) [0x0014d] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.MuZ/MuZWrapper.Microsoft-Research-T2-SafetyInterface-SafetyProver-ErrorLocationReachable () [0x000c5] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Termination.prover<a_REF> (Microsoft.Research.T2.Parameters/parameters,Microsoft.Research.T2.Programs/Program,Microsoft.Research.T2.CTL/CTL_Formula,bool,Microsoft.Research.T2.Utils/SetDictionary`2<Microsoft.Research.T2.CTL/CTL_Formula, System.Tuple`2<int, Microsoft.Research.T2.Formula/formula>>,Microsoft.FSharp.Core.FSharpOption`1<System.Tuple`2<Microsoft.Research.T2.Formula/formula, Microsoft.Research.T2.Formula/formula>>,bool,bool,bool) [0x0037a] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Termination.bottomUp<a_REF> (Microsoft.Research.T2.Parameters/parameters,Microsoft.Research.T2.Programs/Program,Microsoft.Research.T2.CTL/CTL_Formula,bool,int,Microsoft.FSharp.Core.FSharpOption`1<System.Tuple`2<Microsoft.Research.T2.Formula/formula, Microsoft.Research.T2.Formula/formula>>,Microsoft.Research.T2.Utils/SetDictionary`2<Microsoft.Research.T2.CTL/CTL_Formula, System.Tuple`2<int, Microsoft.Research.T2.Formula/formula>>) [0x0029e] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Termination.bottomUpProver (Microsoft.Research.T2.Parameters/parameters,Microsoft.Research.T2.Programs/Program,Microsoft.Research.T2.CTL/CTL_Formula,bool,Microsoft.FSharp.Core.FSharpOption`1<System.Tuple`2<Microsoft.Research.T2.Formula/formula, Microsoft.Research.T2.Formula/formula>>) [0x000c2] in <597f493e96b5f0a0a74503833e497f59>:0
+  at Microsoft.Research.T2.Main.main$cont@113-1 (Microsoft.Research.T2.Arguments/runMode,Microsoft.Research.T2.Parameters/parameters,string,Microsoft.Research.T2.Programs/Program,Microsoft.FSharp.Core.Unit) [0x00071] in <597f4945c11a1123a745038345497f59>:0
+  at Microsoft.Research.T2.Main.main (string[]) [0x00261] in <597f4945c11a1123a745038345497f59>:0
+  at (wrapper runtime-invoke) <Module>.runtime_invoke_int_object (object,intptr,intptr,intptr) [0x00054] in <597f4945c11a1123a745038345497f59>:0
+/proc/self/maps:
+00400000-00aec000 r-xp 00000000 fd:03 50855960                           /export/starexec/sandbox/solver/bin/T2_static
+00ceb000-00cf0000 r-xp 006eb000 fd:03 50855960                           /export/starexec/sandbox/solver/bin/T2_static
+00cf0000-00cf3000 rwxp 006f0000 fd:03 50855960                           /export/starexec/sandbox/solver/bin/T2_static
+00cf3000-00d27000 rwxp 00000000 00:00 0 
+01747000-0707e000 rwxp 00000000 00:00 0                                  [heap]
+4070d000-4071d000 rwxp 00000000 00:00 0 
+410ae000-41211000 rwxp 00000000 00:00 0 
+2ae2e2718000-2ae2e273a000 r-xp 00000000 fd:00 170305                     /usr/lib64/ld-2.17.so
+2ae2e273a000-2ae2e273b000 rwxp 00000000 00:00 0 
+2ae2e273b000-2ae2e273c000 rwxs 00000000 00:13 29603730                   /dev/shm/mono.13153
+2ae2e273c000-2ae2e275e000 rwxp 00000000 00:00 0 
+2ae2e275e000-2ae2e2764000 rwxp 00000000 00:00 0 
+2ae2e2764000-2ae2e27c3000 ---p 00000000 00:00 0 
+2ae2e27c3000-2ae2e2844000 rwxp 00000000 00:00 0 
+2ae2e2844000-2ae2e285b000 r-xp 00000000 fd:03 50856690                   /export/starexec/sandbox/solver/lib/System.Numerics.dll
+2ae2e285b000-2ae2e289a000 r-xp 00000000 fd:00 293391                     /usr/lib/mono/gac/Mono.Security/4.0.0.0__0738eb9f132ed756/Mono.Security.dll
+2ae2e289a000-2ae2e2939000 rwxp 00000000 00:00 0 
+2ae2e2939000-2ae2e293a000 r-xp 00021000 fd:00 170305                     /usr/lib64/ld-2.17.so
+2ae2e293a000-2ae2e293b000 rwxp 00022000 fd:00 170305                     /usr/lib64/ld-2.17.so
+2ae2e293b000-2ae2e293c000 rwxp 00000000 00:00 0 
+2ae2e293c000-2ae2e2a3d000 r-xp 00000000 fd:00 136496                     /usr/lib64/libm-2.17.so
+2ae2e2a3d000-2ae2e2c3c000 ---p 00101000 fd:00 136496                     /usr/lib64/libm-2.17.so
+2ae2e2c3c000-2ae2e2c3d000 r-xp 00100000 fd:00 136496                     /usr/lib64/libm-2.17.so
+2ae2e2c3d000-2ae2e2c3e000 rwxp 00101000 fd:00 136496                     /usr/lib64/libm-2.17.so
+2ae2e2c3e000-2ae2e2c45000 r-xp 00000000 fd:00 136518                     /usr/lib64/librt-2.17.so
+2ae2e2c45000-2ae2e2e44000 ---p 00007000 fd:00 136518                     /usr/lib64/librt-2.17.so
+2ae2e2e44000-2ae2e2e45000 r-xp 00006000 fd:00 136518                     /usr/lib64/librt-2.17.so
+2ae2e2e45000-2ae2e2e46000 rwxp 00007000 fd:00 136518                     /usr/lib64/librt-2.17.so
+2ae2e2e46000-2ae2e2e48000 r-xp 00000000 fd:00 136494                     /usr/lib64/libdl-2.17.so
+2ae2e2e48000-2ae2e3048000 ---p 00002000 fd:00 136494                     /usr/lib64/libdl-2.17.so
+2ae2e3048000-2ae2e3049000 r-xp 00002000 fd:00 136494                     /usr/lib64/libdl-2.17.so
+2ae2e3049000-2ae2e304a000 rwxp 00003000 fd:00 136494                     /usr/lib64/libdl-2.17.so
+2ae2e304a000-2ae2e3061000 r-xp 00000000 fd:00 136514                     /usr/lib64/libpthread-2.17.so
+2ae2e3061000-2ae2e3260000 ---p 00017000 fd:00 136514                     /usr/lib64/libpthread-2.17.so
+2ae2e3260000-2ae2e3261000 r-xp 00016000 fd:00 136514                     /usr/lib64/libpthread-2.17.so
+2ae2e3261000-2ae2e3262000 rwxp 00017000 fd:00 136514                     /usr/lib64/libpthread-2.17.so
+2ae2e3262000-2ae2e3266000 rwxp 00000000 00:00 0 
+2ae2e3266000-2ae2e327b000 r-xp 00000000 fd:00 131093                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ae2e327b000-2ae2e347a000 ---p 00015000 fd:00 131093                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ae2e347a000-2ae2e347b000 r-xp 00014000 fd:00 131093                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ae2e347b000-2ae2e347c000 rwxp 00015000 fd:00 131093                     /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ae2e347c000-2ae2e3640000 r-xp 00000000 fd:00 136488                     /usr/lib64/libc-2.17.so
+2ae2e3640000-2ae2e383f000 ---p 001c4000 fd:00 136488                     /usr/lib64/libc-2.17.so
+2ae2e383f000-2ae2e3843000 r-xp 001c3000 fd:00 136488                     /usr/lib64/libc-2.17.so
+2ae2e3843000-2ae2e3845000 rwxp 001c7000 fd:00 136488                     /usr/lib64/libc-2.17.so
+2ae2e3845000-2ae2e384a000 rwxp 00000000 00:00 0 
+2ae2e384a000-2ae2e9d8c000 r-xp 00000000 fd:00 183828                     /usr/lib/locale/locale-archive
+2ae2e9d8c000-2ae2e9d8d000 ---p 00000000 00:00 0 
+2ae2e9d8d000-2ae2e9f99000 rwxp 00000000 00:00 0 
+2ae2e9f9a000-2ae2e9f9b000 rwxp 00000000 00:00 0 
+2ae2e9fa2000-2ae2e9fa3000 rwxp 00000000 00:00 0 
+2ae2e9fa8000-2ae2e9fc6000 rwxp 00000000 00:00 0 
+2ae2e9fc7000-2ae2e9fc8000 rwxp 00000000 00:00 0 
+2ae2e9fc9000-2ae2e9fca000 rwxp 00000000 00:00 0 
+2ae2e9fca000-2ae2e9fcb000 ---p 00000000 00:00 0 
+2ae2e9fcb000-2ae2e9fd2000 rwxp 00000000 00:00 0 
+2ae2e9fd4000-2ae2e9fd5000 rwxp 00000000 00:00 0 
+2ae2e9fdd000-2ae2e9fde000 rwxp 00000000 00:00 0 
+2ae2e9fe4000-2ae2e9fe7000 rwxp 00000000 00:00 0 
+2ae2e9fe8000-2ae2e9fe9000 rwxp 00000000 00:00 0 
+2ae2e9fee000-2ae2e9ff0000 rwxp 00000000 00:00 0 
+2ae2e9ff1000-2ae2e9ff2000 rwxp 00000000 00:00 0 
+2ae2e9ffb000-2ae2e9ffc000 rwxp 00000000 00:00 0 
+2ae2e9ffe000-2ae2e9fff000 rwxp 00000000 00:00 0 
+2ae2ea000000-2ae2eb400000 rwxp 00000000 00:00 0 
+2ae2eb400000-2ae2eb7a9000 r-xp 00000000 fd:03 50856694                   /export/starexec/sandbox/solver/lib/mscorlib.dll
+2ae2eb7aa000-2ae2eb7b2000 ---p 00000000 00:00 0 
+2ae2eb7b2000-2ae2eb7b3000 ---p 00000000 00:00 0 
+2ae2eb7b3000-2ae2eb7b4000 rwxp 00000000 00:00 0 
+2ae2eb7b4000-2ae2eb7bc000 ---p 00000000 00:00 0 
+2ae2eb7bc000-2ae2eb9b9000 rwxp 00000000 00:00 0 
+2ae2eb9bb000-2ae2eb9bc000 rwxp 00000000 00:00 0 
+2ae2eb9bd000-2ae2eb9d9000 rwxp 00000000 00:00 0 
+2ae2eb9dc000-2ae2eb9de000 rwxp 00000000 00:00 0 
+2ae2eba00000-2ae2ebb00000 rwxp 00000000 00:00 0 
+2ae2ebb00000-2ae2ebd8b000 r-xp 00000000 fd:03 50856693                   /export/starexec/sandbox/solver/lib/System.dll
+2ae2ebd8b000-2ae2ebdb0000 r-xp 00000000 fd:00 137651                     /usr/lib64/libgomp.so.1.0.0
+2ae2ebdb0000-2ae2ebfaf000 ---p 00025000 fd:00 137651                     /usr/lib64/libgomp.so.1.0.0
+2ae2ebfaf000-2ae2ebfb0000 r-xp 00024000 fd:00 137651                     /usr/lib64/libgomp.so.1.0.0
+2ae2ebfb0000-2ae2ebfb1000 rwxp 00025000 fd:00 137651                     /usr/lib64/libgomp.so.1.0.0
+2ae2ebfb1000-2ae2ebfe5000 rwxp 00000000 00:00 0 
+2ae2ec000000-2ae2ec021000 rwxp 00000000 00:00 0 
+2ae2ec021000-2ae2f0000000 ---p 00000000 00:00 0 
+2ae2f0000000-2ae2f0fce000 r-xp 00000000 fd:03 50856691                   /export/starexec/sandbox/solver/lib/libz3.so
+2ae2f0fce000-2ae2f11ce000 ---p 00fce000 fd:03 50856691                   /export/starexec/sandbox/solver/lib/libz3.so
+2ae2f11ce000-2ae2f11f6000 r-xp 00fce000 fd:03 50856691                   /export/starexec/sandbox/solver/lib/libz3.so
+2ae2f11f6000-2ae2f11f9000 rwxp 00ff6000 fd:03 50856691                   /export/starexec/sandbox/solver/lib/libz3.so
+2ae2f11f9000-2ae2f11fb000 rwxp 00000000 00:00 0 
+2ae2f11fb000-2ae2f12e4000 r-xp 00000000 fd:00 136796                     /usr/lib64/libstdc++.so.6.0.19
+2ae2f12e4000-2ae2f14e4000 ---p 000e9000 fd:00 136796                     /usr/lib64/libstdc++.so.6.0.19
+2ae2f14e4000-2ae2f14ec000 r-xp 000e9000 fd:00 136796                     /usr/lib64/libstdc++.so.6.0.19
+2ae2f14ec000-2ae2f14ee000 rwxp 000f1000 fd:00 136796                     /usr/lib64/libstdc++.so.6.0.19
+2ae2f14ee000-2ae2f1503000 rwxp 00000000 00:00 0 
+2ae2f1503000-2ae2f15fa000 r-xp 00000000 fd:03 50856692                   /export/starexec/sandbox/solver/lib/System.Core.dll
+2ae2f15fc000-2ae2f17fc000 rwxp 00000000 00:00 0 
+2ae2f1820000-2ae2f19a0000 rwxp 00000000 00:00 0 
+2ae2f19e4000-2ae2f1ce5000 rwxp 00000000 00:00 0 
+2ae2f1ce8000-2ae2f1e68000 rwxp 00000000 00:00 0 
+7ffc1676f000-7ffc16790000 rwxp 00000000 00:00 0                          [stack]
+7ffc1679f000-7ffc167a1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+Native stacktrace:
+
+
+Unhandled Exception:
+System.NullReferenceException: Object reference not set to an instance of an object
+  at (wrapper managed-to-native) Microsoft.Z3.Native+LIB:Z3_fixedpoint_dec_ref (intptr,intptr)
+  at Microsoft.Z3.Native.Z3_fixedpoint_dec_ref (System.IntPtr a0, System.IntPtr a1) [0x00001] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Z3.Fixedpoint+DecRefQueue.DecRef (Microsoft.Z3.Context ctx, System.IntPtr obj) [0x00007] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Z3.IDecRefQueue.Clear (Microsoft.Z3.Context ctx) [0x0002b] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Z3.Context.Dispose () [0x000bd] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Research.T2.MuZ+MuZWrapper.CallSpacer (System.Collections.Generic.Dictionary`2[TKey,TValue] locationToFuncDecl, Microsoft.FSharp.Collections.FSharpList`1[T] rules, Microsoft.Z3.BoolExpr errorQuery) [0x0014d] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.MuZ+MuZWrapper.Microsoft-Research-T2-SafetyInterface-SafetyProver-ErrorLocationReachable () [0x000c5] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Termination.prover[a] (Microsoft.Research.T2.Parameters+parameters pars, Microsoft.Research.T2.Programs+Program p_orig, Microsoft.Research.T2.CTL+CTL_Formula f, System.Boolean termination_only, Microsoft.Research.T2.Utils+SetDictionary`2[Key,Value] precondMap, Microsoft.FSharp.Core.FSharpOption`1[T] fairness_constraint, System.Boolean existential, System.Boolean findPreconds, System.Boolean next) [0x0037a] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Termination.bottomUp[a] (Microsoft.Research.T2.Parameters+parameters pars, Microsoft.Research.T2.Programs+Program p, Microsoft.Research.T2.CTL+CTL_Formula f, System.Boolean termination_only, System.Int32 nest_level, Microsoft.FSharp.Core.FSharpOption`1[T] fairness_constraint, Microsoft.Research.T2.Utils+SetDictionary`2[Key,Value] propertyMap) [0x0029e] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Termination.bottomUpProver (Microsoft.Research.T2.Parameters+parameters pars, Microsoft.Research.T2.Programs+Program p, Microsoft.Research.T2.CTL+CTL_Formula f, System.Boolean termination_only, Microsoft.FSharp.Core.FSharpOption`1[T] fairness_constraint) [0x00116] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Main.main$cont@113-1 (Microsoft.Research.T2.Arguments+runMode runMode, Microsoft.Research.T2.Parameters+parameters parameters, System.String fairness_constraint_string, Microsoft.Research.T2.Programs+Program p, Microsoft.FSharp.Core.Unit unitVar) [0x00071] in <597f4945c11a1123a745038345497f59>:0 
+  at Microsoft.Research.T2.Main.main (System.String[] arguments) [0x00261] in <597f4945c11a1123a745038345497f59>:0 
+[ERROR] FATAL UNHANDLED EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object
+  at (wrapper managed-to-native) Microsoft.Z3.Native+LIB:Z3_fixedpoint_dec_ref (intptr,intptr)
+  at Microsoft.Z3.Native.Z3_fixedpoint_dec_ref (System.IntPtr a0, System.IntPtr a1) [0x00001] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Z3.Fixedpoint+DecRefQueue.DecRef (Microsoft.Z3.Context ctx, System.IntPtr obj) [0x00007] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Z3.IDecRefQueue.Clear (Microsoft.Z3.Context ctx) [0x0002b] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Z3.Context.Dispose () [0x000bd] in <1589d34e42ba4cbeb3351b894afd3b19>:0 
+  at Microsoft.Research.T2.MuZ+MuZWrapper.CallSpacer (System.Collections.Generic.Dictionary`2[TKey,TValue] locationToFuncDecl, Microsoft.FSharp.Collections.FSharpList`1[T] rules, Microsoft.Z3.BoolExpr errorQuery) [0x0014d] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.MuZ+MuZWrapper.Microsoft-Research-T2-SafetyInterface-SafetyProver-ErrorLocationReachable () [0x000c5] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Termination.prover[a] (Microsoft.Research.T2.Parameters+parameters pars, Microsoft.Research.T2.Programs+Program p_orig, Microsoft.Research.T2.CTL+CTL_Formula f, System.Boolean termination_only, Microsoft.Research.T2.Utils+SetDictionary`2[Key,Value] precondMap, Microsoft.FSharp.Core.FSharpOption`1[T] fairness_constraint, System.Boolean existential, System.Boolean findPreconds, System.Boolean next) [0x0037a] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Termination.bottomUp[a] (Microsoft.Research.T2.Parameters+parameters pars, Microsoft.Research.T2.Programs+Program p, Microsoft.Research.T2.CTL+CTL_Formula f, System.Boolean termination_only, System.Int32 nest_level, Microsoft.FSharp.Core.FSharpOption`1[T] fairness_constraint, Microsoft.Research.T2.Utils+SetDictionary`2[Key,Value] propertyMap) [0x0029e] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Termination.bottomUpProver (Microsoft.Research.T2.Parameters+parameters pars, Microsoft.Research.T2.Programs+Program p, Microsoft.Research.T2.CTL+CTL_Formula f, System.Boolean termination_only, Microsoft.FSharp.Core.FSharpOption`1[T] fairness_constraint) [0x00116] in <597f493e96b5f0a0a74503833e497f59>:0 
+  at Microsoft.Research.T2.Main.main$cont@113-1 (Microsoft.Research.T2.Arguments+runMode runMode, Microsoft.Research.T2.Parameters+parameters parameters, System.String fairness_constraint_string, Microsoft.Research.T2.Programs+Program p, Microsoft.FSharp.Core.Unit unitVar) [0x00071] in <597f4945c11a1123a745038345497f59>:0 
+  at Microsoft.Research.T2.Main.main (System.String[] arguments) [0x00261] in <597f4945c11a1123a745038345497f59>:0 

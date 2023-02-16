@@ -1,0 +1,380 @@
+NO
+
+Initial ITS
+Start location: __init
+   0: f265_0_createMetaList_Return -> f724_0_countMetaList_NULL : arg2'=arg2P0, arg4'=arg4P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg1 > 0 /\ -arg1+arg1P0 <= 0), cost: 1
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (-2+arg1 > 0 /\ 1+arg1P2 > 0 /\ 2+arg1P2-arg1 <= 0), cost: 1
+   3: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0 /\ -1+arg1 > 0), cost: 1
+   4: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: 1
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+   5: f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (1-arg3P5 == 0 /\ 1+arg2 > 0 /\ -arg1P5 == 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+   6: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (1+arg3-arg4P6 == 0 /\ arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0 /\ arg2-arg1P6 == 0 /\ -arg2P6+arg1 == 0), cost: 1
+   7: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (arg4-arg3P7 == 0 /\ -arg3 == 0 /\ arg1-arg2P7 == 0 /\ 1+arg2-arg1P7 == 0), cost: 1
+   8: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, (arg3 > 0 /\ -arg1P8+arg1 == 0 /\ -arg2P8+arg2 == 0 /\ -1+arg3-arg3P8 == 0 /\ arg4-arg4P8 == 0), cost: 1
+   9: __init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: __init
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (-2+arg1 > 0 /\ 1+arg1P2 > 0 /\ 2+arg1P2-arg1 <= 0), cost: 1
+   3: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0 /\ -1+arg1 > 0), cost: 1
+   4: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: 1
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+   5: f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (1-arg3P5 == 0 /\ 1+arg2 > 0 /\ -arg1P5 == 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+   6: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (1+arg3-arg4P6 == 0 /\ arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0 /\ arg2-arg1P6 == 0 /\ -arg2P6+arg1 == 0), cost: 1
+   7: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (arg4-arg3P7 == 0 /\ -arg3 == 0 /\ arg1-arg2P7 == 0 /\ 1+arg2-arg1P7 == 0), cost: 1
+   8: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, (arg3 > 0 /\ -arg1P8+arg1 == 0 /\ -arg2P8+arg2 == 0 /\ -1+arg3-arg3P8 == 0 /\ arg4-arg4P8 == 0), cost: 1
+   9: __init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0 /\ -1+arg1 > 0), cost: 1
+New rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (1-arg3P5 == 0 /\ 1+arg2 > 0 /\ -arg1P5 == 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (1+arg3-arg4P6 == 0 /\ arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0 /\ arg2-arg1P6 == 0 /\ -arg2P6+arg1 == 0), cost: 1
+New rule:
+f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (arg4-arg3P7 == 0 /\ -arg3 == 0 /\ arg1-arg2P7 == 0 /\ 1+arg2-arg1P7 == 0), cost: 1
+New rule:
+f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+
+Applied preprocessing
+Original rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, (arg3 > 0 /\ -arg1P8+arg1 == 0 /\ -arg2P8+arg2 == 0 /\ -1+arg3-arg3P8 == 0 /\ arg4-arg4P8 == 0), cost: 1
+New rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-1+arg3, arg3 > 0, cost: 1
+
+Simplified rules
+Start location: __init
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (-2+arg1 > 0 /\ 1+arg1P2 > 0 /\ 2+arg1P2-arg1 <= 0), cost: 1
+   4: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: 1
+  10: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0), cost: 1
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  11: f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+  12: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+  13: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+  14: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-1+arg3, arg3 > 0, cost: 1
+   9: __init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: 1
+New rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ arg1P4 > 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_LEJAEl.txt
+
+Applied nonterm
+Original rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: 1
+New rule:
+f724_0_countMetaList_NULL -> [6] : (-arg1P4+arg1 <= 0 /\ -arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_OkfDId.txt
+
+Applied simplification
+Original rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ arg1P4 > 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: n0
+New rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: n0
+
+Applied simplification
+Original rule:
+f724_0_countMetaList_NULL -> [6] : (-arg1P4+arg1 <= 0 /\ -arg1P4+arg1 >= 0 /\ -2+arg1 > 0 /\ arg1P4 > 0), cost: NONTERM
+New rule:
+f724_0_countMetaList_NULL -> [6] : (-arg1P4+arg1 <= 0 /\ -arg1P4+arg1 >= 0 /\ -2+arg1 > 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 4
+
+Applied acceleration
+Original rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-1+arg3, arg3 > 0, cost: 1
+New rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-n12+arg3, (n12 >= 0 /\ 1-n12+arg3 > 0), cost: n12
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_OEMdiH.txt
+
+Applied instantiation
+Original rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-n12+arg3, (n12 >= 0 /\ 1-n12+arg3 > 0), cost: n12
+New rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=0, (1 > 0 /\ arg3 >= 0), cost: arg3
+
+Applied simplification
+Original rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=0, (1 > 0 /\ arg3 >= 0), cost: arg3
+New rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=0, arg3 >= 0, cost: arg3
+
+Applied deletion
+Removed the following rules: 14
+
+Accelerated simple loops
+Start location: __init
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (-2+arg1 > 0 /\ 1+arg1P2 > 0 /\ 2+arg1P2-arg1 <= 0), cost: 1
+  10: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0), cost: 1
+  17: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: n0
+  18: f724_0_countMetaList_NULL -> [6] : (-arg1P4+arg1 <= 0 /\ -arg1P4+arg1 >= 0 /\ -2+arg1 > 0), cost: NONTERM
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  11: f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+  12: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+  13: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+  20: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=0, arg3 >= 0, cost: arg3
+   9: __init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (-2+arg1 > 0 /\ 1+arg1P2 > 0 /\ 2+arg1P2-arg1 <= 0), cost: 1
+New rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (1+arg1P2 > 0 /\ arg1 > 0), cost: 2
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (2+arg1P3-arg1 <= 0 /\ 1+arg1P3 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (1+arg1P3 > 0 /\ arg1 > 0), cost: 2
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (-arg1P4+arg1 >= 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: n0
+New rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (arg1 > 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: 1+n0
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+Second rule:
+f724_0_countMetaList_NULL -> [6] : (-arg1P4+arg1 <= 0 /\ -arg1P4+arg1 >= 0 /\ -2+arg1 > 0), cost: NONTERM
+New rule:
+f1_0_main_Load -> [6] : arg1 > 0, cost: NONTERM
+
+Applied deletion
+Removed the following rules: 2 10 17 18
+
+Applied chaining
+First rule:
+f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+Second rule:
+f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=0, arg3 >= 0, cost: arg3
+New rule:
+f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=0, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1+arg3P6
+
+Applied deletion
+Removed the following rules: 20
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  11: f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+  21: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (1+arg1P2 > 0 /\ arg1 > 0), cost: 2
+  22: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (1+arg1P3 > 0 /\ arg1 > 0), cost: 2
+  23: f1_0_main_Load -> f724_0_countMetaList_NULL : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (arg1 > 0 /\ -1+n0 >= 0 /\ -2+arg1P4 > 0), cost: 1+n0
+  24: f1_0_main_Load -> [6] : arg1 > 0, cost: NONTERM
+  12: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+  25: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=0, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1+arg3P6
+  13: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+   9: __init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  11: f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+  24: f1_0_main_Load -> [6] : arg1 > 0, cost: NONTERM
+  12: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+  25: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=0, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1+arg3P6
+  13: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+   9: __init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg2P5 > 0), cost: 1
+New rule:
+__init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> [6] : arg1 > 0, cost: NONTERM
+New rule:
+__init -> [6] : arg1P9 > 0, cost: NONTERM
+
+Applied deletion
+Removed the following rules: 9 11 24
+
+Eliminating location f932_0_createMetaList_LE by chaining:
+
+Applied chaining
+First rule:
+f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=arg3P6, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1
+Second rule:
+f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3P6 == 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3P6 == 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3P6 == 0 /\ arg3 > 0), cost: 2
+
+Applied chaining
+First rule:
+f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg2'=arg1, arg4'=1+arg3, arg1'=arg2, arg3'=0, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 1+arg3P6
+Second rule:
+f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg2'=arg1, arg4'=arg4P7, arg1'=1+arg2, arg3'=arg4, arg3 == 0, cost: 1
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (0 == 0 /\ arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+
+Applied simplification
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (0 == 0 /\ arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+
+Applied deletion
+Removed the following rules: 12 13 25
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  28: f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3P6 == 0 /\ arg3 > 0), cost: 2
+  29: f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+  26: __init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+  27: __init -> [6] : arg1P9 > 0, cost: NONTERM
+
+
+Applied simplification
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3P6 == 0 /\ arg3 > 0), cost: 2
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg2'=arg2, arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+
+Simplified simple loops
+Start location: __init
+  30: f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3 > 0), cost: 2
+  31: f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+  26: __init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+  27: __init -> [6] : arg1P9 > 0, cost: NONTERM
+
+
+Applied acceleration
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ arg3 > 0), cost: 2
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg1+n13, arg3'=arg3+n13, (-1+n13 >= 0 /\ 1+arg2-arg1-n13 > 0 /\ arg3 > 0), cost: 2*n13
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_HHpbkE.txt
+
+Applied instantiation
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg1+n13, arg3'=arg3+n13, (-1+n13 >= 0 /\ 1+arg2-arg1-n13 > 0 /\ arg3 > 0), cost: 2*n13
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1
+
+Applied acceleration
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=1+arg1, arg3'=1+arg3, (arg2-arg1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0), cost: 2+arg3P6
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg1+n14, arg3'=arg3+n14, (1+arg2-arg1-n14 > 0 /\ 1+arg3P6 > 0 /\ -1+n14 >= 0 /\ arg3 > 0), cost: arg3P6*n14+2*n14
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_aLfOBa.txt
+
+Applied instantiation
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg1+n14, arg3'=arg3+n14, (1+arg2-arg1-n14 > 0 /\ 1+arg3P6 > 0 /\ -1+n14 >= 0 /\ arg3 > 0), cost: arg3P6*n14+2*n14
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1+(arg2-arg1)*arg3P6
+
+Applied simplification
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1
+
+Applied simplification
+Original rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1 > 0 /\ 1+arg3P6 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1+(arg2-arg1)*arg3P6
+New rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1+arg3P6 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1+(arg2-arg1)*arg3P6
+
+Applied deletion
+Removed the following rules: 30 31
+
+Accelerated simple loops
+Start location: __init
+  34: f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1
+  35: f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1+arg3P6 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1+(arg2-arg1)*arg3P6
+  26: __init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+  27: __init -> [6] : arg1P9 > 0, cost: NONTERM
+
+
+Applied chaining
+First rule:
+__init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+Second rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1
+New rule:
+__init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P7, arg1'=arg2P5, arg3'=1+arg2P5, -1+arg2P5 >= 0, cost: 2+2*arg2P5
+
+Applied chaining
+First rule:
+__init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+Second rule:
+f693_0_createMetaList_GE -> f693_0_createMetaList_GE : arg4'=arg4P7, arg1'=arg2, arg3'=arg2-arg1+arg3, (1+arg3P6 > 0 /\ arg3 > 0 /\ -1+arg2-arg1 >= 0), cost: 2*arg2-2*arg1+(arg2-arg1)*arg3P6
+New rule:
+__init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P7, arg1'=arg2P5, arg3'=1+arg2P5, (1+arg3P6 > 0 /\ -1+arg2P5 >= 0), cost: 2+2*arg2P5+arg3P6*arg2P5
+
+Applied deletion
+Removed the following rules: 34 35
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  26: __init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P5, arg1'=0, arg3'=1, (1+arg2P9 > 0 /\ 1+arg2P5 > 0 /\ arg1P9 > 0), cost: 2
+  27: __init -> [6] : arg1P9 > 0, cost: NONTERM
+  36: __init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P7, arg1'=arg2P5, arg3'=1+arg2P5, -1+arg2P5 >= 0, cost: 2+2*arg2P5
+  37: __init -> f693_0_createMetaList_GE : arg2'=arg2P5, arg4'=arg4P7, arg1'=arg2P5, arg3'=1+arg2P5, (1+arg3P6 > 0 /\ -1+arg2P5 >= 0), cost: 2+2*arg2P5+arg3P6*arg2P5
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  27: __init -> [6] : arg1P9 > 0, cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 27 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  arg1P9 > 0

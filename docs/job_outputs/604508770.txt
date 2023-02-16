@@ -1,0 +1,418 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l4, true>
+<l1, l2, (undef3 = ((0 + (~(1) * __const_1000^0)) + x^0)) /\ ((1 + __const_200^0) <= (0 + undef3)), par{x^0 -> undef3}>
+<l2, l1, true>
+<l3, l1, true>
+<l4, l3, true>
+
+Fresh variables:
+undef3, 
+
+Undef variables:
+undef3, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, true>
+<l1, l1, (undef3 = ((0 + (~(1) * __const_1000^0)) + x^0)) /\ ((1 + __const_200^0) <= (0 + undef3)), par{x^0 -> undef3}>
+
+Fresh variables:
+undef3, 
+
+Undef variables:
+undef3, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Variables:
+__const_1000^0, __const_200^0, x^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, true, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002083
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000829s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002364s
+Trying to remove transition: <l1, l1, 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004431s
+Time used: 0.004265
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005440s
+Time used: 0.005084
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.007024s
+Time used: 0.007023
+
+LOG: SAT solveNonLinear - Elapsed time: 0.012465s
+Cost: 1; Total time: 0.012107
+[31mFailed at location 1: 1 <= __const_1000^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 <= __const_1000^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001303s
+Remaining time after improvement: 0.999288
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 <= __const_1000^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= __const_1000^0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= __const_1000^0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+[33mRanking function: [36m-__const_1000^0 - __const_200^0 + x^0[0m
+New Graphs: 
+Calling Safety with literal 1 <= __const_1000^0 and entry <l0, l1, true, {all remain the same}>
+
+LOG: CALL check - Post:1 <= __const_1000^0 - Process 1
+* Exit transition: <l0, l1, true, {all remain the same}>
+* Postcondition  : 1 <= __const_1000^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000145s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000173s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 1 <= __const_1000^0 , 
+Narrowing transition: 
+<l1, l1, 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, __const_1000^0 <= 0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Variables:
+__const_1000^0, __const_200^0, x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000316s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001142s
+Trying to remove transition: <l1, l1, __const_1000^0 <= 0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002936s
+Time used: 0.002849
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005722s
+Time used: 0.00544
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.005813s
+Time used: 0.005811
+
+LOG: SAT solveNonLinear - Elapsed time: 0.011534s
+Cost: 1; Total time: 0.011251
+[31mFailed at location 1: x^0 <= __const_1000^0 + __const_200^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: x^0 <= __const_1000^0 + __const_200^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001134s
+Remaining time after improvement: 0.999444
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: x^0 <= __const_1000^0 + __const_200^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, __const_1000^0 <= 0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l1, __const_1000^0 <= 0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+New Graphs: 
+Calling Safety with literal x^0 <= __const_1000^0 + __const_200^0 and entry <l0, l1, __const_1000^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:x^0 <= __const_1000^0 + __const_200^0 - Process 2
+* Exit transition: <l0, l1, __const_1000^0 <= 0, {all remain the same}>
+* Postcondition  : x^0 <= __const_1000^0 + __const_200^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000228s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000263s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: x^0 <= __const_1000^0 + __const_200^0 , 
+Narrowing transition: 
+<l1, l1, __const_1000^0 <= 0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, __const_1000^0 <= 0 /\ 1 + __const_1000^0 + __const_200^0 <= x^0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Variables:
+__const_1000^0, __const_200^0, x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000349s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001292s
+Trying to remove transition: <l1, l1, __const_1000^0 <= 0 /\ 1 + __const_1000^0 + __const_200^0 <= x^0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002766s
+Time used: 0.00267
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005560s
+Time used: 0.005318
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000440s
+Time used: 4.00015
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.001882s
+Time used: 1.00008
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007299s
+Time used: 0.003781
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, __const_1000^0 <= 0 /\ 1 + __const_1000^0 + __const_200^0 <= x^0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+Variables:
+__const_1000^0, __const_200^0, x^0
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000596s
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, 1 <= __const_1000^0, {all remain the same}>
+<l1, end, __const_1000^0 <= 0 /\ x^0 <= __const_1000^0 + __const_200^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010154s
+Time used: 0.01
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.028094s
+Time used: 0.028091
+
+LOG: SAT solveNonLinear - Elapsed time: 0.038248s
+Cost: 2; Total time: 0.038091
+[31mFailed at location 1: 1 + __const_1000^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + __const_1000^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004957s
+Remaining time after improvement: 0.999071
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.001727s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + __const_1000^0 <= 0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 1
+Strengthening exit transition (result): 
+<l1, end, x^0 <= __const_1000^0 + __const_200^0 /\ 1 + __const_1000^0 <= 0, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + __const_1000^0 <= 0 /\ 1 + __const_1000^0 + __const_200^0 <= x^0 /\ 1 + __const_200^0 <= undef3 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, x^0 <= __const_1000^0 + __const_200^0 /\ 1 + __const_1000^0 <= 0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007633s
+Time used: 0.007492
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.013147s
+Time used: 0.013146
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020781s
+Cost: 1; Total time: 0.020638
+[31mFailed at location 1: __const_200^0 <= 1 + __const_1000^0 + x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: __const_200^0 <= 1 + __const_1000^0 + x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004905s
+Remaining time after improvement: 0.998973
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.001692s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: __const_200^0 <= 1 + __const_1000^0 + x^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 + __const_1000^0 <= 0 /\ 1 + __const_1000^0 + __const_200^0 <= x^0 /\ 1 + __const_200^0 <= undef3 /\ __const_200^0 <= 1 + __const_1000^0 + x^0 /\ __const_1000^0 + undef3 = x^0, {x^0 -> undef3, rest remain the same}>
+
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 1 + __const_1000^0 <= 0, __const_200^0 <= 1 + __const_1000^0 + x^0, 
+OPEN EXITS: 
+<l1, end, __const_200^0 <= 1 + __const_1000^0 + x^0, {all remain the same}> (condsUp: 1 + __const_1000^0 <= 0)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l1, true, {all remain the same}>
+Conditions: __const_200^0 <= 1 + __const_1000^0 + x^0, 1 + __const_1000^0 <= 0, 
+OPEN EXITS: 
+<l0, l1, 1 + __const_1000^0 <= 0 /\ __const_200^0 <= 1 + __const_1000^0 + x^0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

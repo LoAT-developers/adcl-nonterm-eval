@@ -1,0 +1,214 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: bob samantha temp
+   0: [1] -> [2] : bob'=13, T, cost: 1
+   1: [2] -> [3] : samantha'=17, T, cost: 1
+   2: [3] -> [4] : -100+samantha+bob < 0, cost: 1
+   7: [3] -> [8] : -100+samantha+bob >= 0, cost: 1
+   3: [4] -> [5] : temp'=bob, T, cost: 1
+   4: [5] -> [6] : bob'=samantha, T, cost: 1
+   5: [6] -> [7] : samantha'=temp, T, cost: 1
+   6: [7] -> [3] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: bob samantha temp
+   8: [1] -> [3] : bob'=13, samantha'=17, T, cost: 1
+   7: [3] -> [8] : -100+samantha+bob >= 0, cost: 1
+  12: [3] -> [3] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : bob'=13, T, cost: 1
+	Second rule:
+	[2] -> [3] : samantha'=17, T, cost: 1
+	New rule:
+	[1] -> [3] : bob'=13, samantha'=17, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [4] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [4] : -100+samantha+bob < 0, cost: 1
+	Second rule:
+	[4] -> [5] : temp'=bob, T, cost: 1
+	New rule:
+	[3] -> [5] : temp'=bob, -100+samantha+bob < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location [5] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [5] : temp'=bob, -100+samantha+bob < 0, cost: 1
+	Second rule:
+	[5] -> [6] : bob'=samantha, T, cost: 1
+	New rule:
+	[3] -> [6] : bob'=samantha, temp'=bob, -100+samantha+bob < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 9
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [6] : bob'=samantha, temp'=bob, -100+samantha+bob < 0, cost: 1
+	Second rule:
+	[6] -> [7] : samantha'=temp, T, cost: 1
+	New rule:
+	[3] -> [7] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 10
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [7] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+	Second rule:
+	[7] -> [3] : T, cost: 1
+	New rule:
+	[3] -> [3] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 11
+
+Unrolled Loops
+
+Start location: [1]
+Program variables: bob samantha temp
+   8: [1] -> [3] : bob'=13, samantha'=17, T, cost: 1
+   7: [3] -> [8] : -100+samantha+bob >= 0, cost: 1
+  12: [3] -> [3] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+  13: [3] -> [3] : temp'=samantha, -100+samantha+bob < 0, cost: 1
+
+	Unrolling
+
+	Original rule:
+	[3] -> [3] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+	New rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, -100+samantha+bob < 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, -100+samantha+bob < 0, cost: 1
+	New rule:
+	[3] -> [3] : temp'=samantha, -100+samantha+bob < 0, cost: 1
+
+Step with 8
+
+	Trace
+
+	8[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 12
+
+	Trace
+
+	8[T], 12[(-100+samantha+bob < 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: bob samantha temp
+   8: [1] -> [3] : bob'=13, samantha'=17, T, cost: 1
+   7: [3] -> [8] : -100+samantha+bob >= 0, cost: 1
+  12: [3] -> [3] : bob'=samantha, samantha'=bob, temp'=bob, -100+samantha+bob < 0, cost: 1
+  13: [3] -> [3] : temp'=samantha, -100+samantha+bob < 0, cost: 1
+  14: [3] -> LoAT_sink : (-1+n >= 0 /\ 100-samantha-bob > 0), cost: NONTERM
+  15: [3] -> [3] : temp'=samantha, (100-samantha-bob > 0), cost: 1
+
+	unrolling
+
+	Original rule:
+	[3] -> [3] : bob'=samantha, samantha'=bob, temp'=bob, (-100+samantha+bob < 0), cost: 1
+	New rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, -100+samantha+bob < 0, cost: 1
+	
+	Certificate of Non-Termination
+
+	Original rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, -100+samantha+bob < 0, cost: 1
+	New rule:
+	[3] -> LoAT_sink : (-1+n >= 0 /\ 100-samantha-bob > 0), cost: NONTERM
+
+		100-samantha-bob > 0 [0]: monotonic increase yields 100-samantha-bob > 0
+		
+		Replacement map: {100-samantha-bob > 0 -> 100-samantha-bob > 0}
+
+	Loop Acceleration
+
+	Original rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, -100+samantha+bob < 0, cost: 1
+	New rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, (-1+n >= 0 /\ 100-samantha-bob > 0), cost: 1
+
+		100-samantha-bob > 0 [0]: monotonic increase yields 100-samantha-bob > 0
+		
+		Replacement map: {100-samantha-bob > 0 -> 100-samantha-bob > 0}
+
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, (-1+n >= 0 /\ 100-samantha-bob > 0), cost: 1
+	New rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, (100-samantha-bob > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	[3] -> [3] : bob'=bob, samantha'=samantha, temp'=samantha, (100-samantha-bob > 0), cost: 1
+	New rule:
+	[3] -> [3] : temp'=samantha, (100-samantha-bob > 0), cost: 1
+
+Step with 14
+
+	Trace
+
+	8[T], 14[(-1+n >= 0 /\ 100-samantha-bob > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {14[T]}]
+
+Refute
+
+	Counterexample
+
+	[ bob=13 samantha=17 temp=0 ] 8 [ bob=bob samantha=samantha temp=0 ] 14
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

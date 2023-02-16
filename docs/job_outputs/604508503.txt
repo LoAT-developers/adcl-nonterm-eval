@@ -1,0 +1,503 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l14, true>
+<l1, l2, ((0 + __const_5^0) <= (0 + i2^0))>
+<l1, l3, ((1 + i2^0) <= (0 + __const_5^0)), par{j3^0 -> 0}>
+<l4, l1, true>
+<l3, l5, true>
+<l2, l6, true>
+<l7, l8, true>
+<l9, l10, true, par{l5^0 -> (1 + l5^0)}>
+<l10, l11, true>
+<l12, l9, true>
+<l12, l2, true>
+<l12, l9, true>
+<l11, l7, ((0 + __const_5^0) <= (0 + l5^0)), par{k4^0 -> (1 + k4^0)}>
+<l11, l12, ((1 + l5^0) <= (0 + __const_5^0))>
+<l8, l3, ((0 + __const_5^0) <= (0 + k4^0)), par{j3^0 -> (1 + j3^0)}>
+<l8, l10, ((1 + k4^0) <= (0 + __const_5^0)), par{l5^0 -> 0}>
+<l5, l4, ((0 + __const_5^0) <= (0 + j3^0)), par{i2^0 -> (1 + i2^0)}>
+<l5, l7, ((1 + j3^0) <= (0 + __const_5^0)), par{k4^0 -> 0}>
+<l13, l4, true, par{i2^0 -> 0, x1^0 -> (0 + __const_400^0)}>
+<l14, l13, true>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l4, (i2^0 = 0)>
+<l4, l6, ((0 + __const_5^0) <= (0 + i2^0))>
+<l4, l4, ((1 + i2^0) <= (0 + __const_5^0)) /\ ((0 + __const_5^0) <= (0 + 0)), par{i2^0 -> (1 + i2^0), j3^0 -> 0}>
+<l4, l7, ((1 + i2^0) <= (0 + __const_5^0)) /\ ((1 + 0) <= (0 + __const_5^0)), par{j3^0 -> 0, k4^0 -> 0}>
+<l7, l4, ((0 + __const_5^0) <= (0 + k4^0)) /\ ((0 + __const_5^0) <= (0 + (1 + j3^0))), par{i2^0 -> (1 + i2^0), j3^0 -> (1 + j3^0)}>
+<l7, l7, ((0 + __const_5^0) <= (0 + k4^0)) /\ ((1 + (1 + j3^0)) <= (0 + __const_5^0)), par{j3^0 -> (1 + j3^0), k4^0 -> 0}>
+<l7, l10, ((1 + k4^0) <= (0 + __const_5^0)), par{l5^0 -> 0}>
+<l10, l7, ((0 + __const_5^0) <= (0 + l5^0)), par{k4^0 -> (1 + k4^0)}>
+<l10, l10, ((1 + l5^0) <= (0 + __const_5^0)), par{l5^0 -> (1 + l5^0)}>
+<l10, l6, ((1 + l5^0) <= (0 + __const_5^0))>
+<l10, l10, ((1 + l5^0) <= (0 + __const_5^0)), par{l5^0 -> (1 + l5^0)}>
+
+Fresh variables:
+
+Undef variables:
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l4, l4, __const_5^0 <= 0 /\ 1 + i2^0 <= __const_5^0, {i2^0 -> 1 + i2^0, j3^0 -> 0, rest remain the same}>
+<l4, l7, 1 <= __const_5^0 /\ 1 + i2^0 <= __const_5^0, {j3^0 -> 0, k4^0 -> 0, rest remain the same}>
+<l7, l4, __const_5^0 <= k4^0 /\ __const_5^0 <= 1 + j3^0, {i2^0 -> 1 + i2^0, j3^0 -> 1 + j3^0, rest remain the same}>
+<l7, l7, __const_5^0 <= k4^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+<l7, l10, 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+<l10, l7, __const_5^0 <= l5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+<l10, l10, 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+<l10, l10, 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Variables:
+__const_5^0, i2^0, j3^0, k4^0, l5^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l4, i2^0 = 0, {all remain the same}>
+
+Graph 2
+<l4, l6, __const_5^0 <= i2^0, {all remain the same}>
+<l10, l6, 1 + l5^0 <= __const_5^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 4 , 1 )
+( 6 , 2 )
+( 7 , 1 )
+( 10 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.033165
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l4: 0 <= i2^0[0m
+[36mInvariant at l7: 0 <= i2^0[0m
+[36mInvariant at l10: 0 <= i2^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l4, l4, __const_5^0 <= 0 /\ 1 + i2^0 <= __const_5^0, {i2^0 -> 1 + i2^0, j3^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l7, 0 <= i2^0 /\ 1 <= __const_5^0 /\ 1 + i2^0 <= __const_5^0, {j3^0 -> 0, k4^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l4, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ __const_5^0 <= 1 + j3^0, {i2^0 -> 1 + i2^0, j3^0 -> 1 + j3^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l7, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l10, 0 <= i2^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 0 <= i2^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 0 <= i2^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 0.016344
+
+Checking conditional termination of SCC {l4, l7, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002513s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011121s
+Trying to remove transition: <l10, l10, 0 <= i2^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014846s
+Time used: 0.01405
+Trying to remove transition: <l10, l10, 0 <= i2^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015494s
+Time used: 0.013718
+Trying to remove transition: <l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014836s
+Time used: 0.013117
+Trying to remove transition: <l7, l10, 0 <= i2^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015278s
+Time used: 0.012824
+Trying to remove transition: <l7, l7, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.058855s
+Time used: 0.0565
+Trying to remove transition: <l7, l4, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ __const_5^0 <= 1 + j3^0, {i2^0 -> 1 + i2^0, j3^0 -> 1 + j3^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015531s
+Time used: 0.012724
+Trying to remove transition: <l4, l7, 0 <= i2^0 /\ 1 <= __const_5^0 /\ 1 + i2^0 <= __const_5^0, {j3^0 -> 0, k4^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014160s
+Time used: 0.011731
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.103825s
+Time used: 0.101391
+
+LOG: SAT solveNonLinear - Elapsed time: 0.103825s
+Cost: 0; Total time: 0.101391
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l7: 1 + i2^0 <= __const_5^0[0m
+[36mInvariant at l10: 1 + i2^0 <= __const_5^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l4, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ __const_5^0 <= 1 + j3^0, {i2^0 -> 1 + i2^0, j3^0 -> 1 + j3^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l7, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l4, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ __const_5^0 <= 1 + j3^0, {i2^0 -> 1 + i2^0, j3^0 -> 1 + j3^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l7, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+[33mRanking function: [36m__const_5^0 - i2^0[0m
+New Graphs: 
+Transitions:
+<l7, l7, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+<l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+<l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Variables:
+__const_5^0, i2^0, j3^0, k4^0, l5^0
+Checking conditional termination of SCC {l7, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001842s
+[33mRanking function: [36m-6 + 3*__const_5^0 - 3*j3^0[0m
+New Graphs: 
+Transitions:
+<l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+<l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+<l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Variables:
+__const_5^0, i2^0, k4^0, l5^0
+Checking conditional termination of SCC {l7, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000954s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005331s
+Trying to remove transition: <l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013020s
+Time used: 0.012482
+Trying to remove transition: <l10, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013049s
+Time used: 0.012107
+Trying to remove transition: <l10, l7, __const_5^0 <= l5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010725s
+Time used: 0.009831
+Trying to remove transition: <l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0, {l5^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009061s
+Time used: 0.007877
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.040837s
+Time used: 0.039654
+
+LOG: SAT solveNonLinear - Elapsed time: 0.040837s
+Cost: 0; Total time: 0.039654
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 0 <= i2^0[0m
+[36mInvariant at l7: 0 <= 1 + __const_5^0[0m
+[36mInvariant at l10: k4^0 <= __const_5^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l7, 0 <= i2^0 /\ 1 <= __const_5^0 /\ 1 + i2^0 <= __const_5^0, {j3^0 -> 0, k4^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l4, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ __const_5^0 <= 1 + j3^0 /\ 0 <= 1 + __const_5^0, {i2^0 -> 1 + i2^0, j3^0 -> 1 + j3^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l7, __const_5^0 <= k4^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 0 <= 1 + __const_5^0 /\ 2 + j3^0 <= __const_5^0, {j3^0 -> 1 + j3^0, k4^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0 /\ 0 <= 1 + __const_5^0, {l5^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l7, __const_5^0 <= l5^0 /\ k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l7, l10, 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + k4^0 <= __const_5^0 /\ 0 <= 1 + __const_5^0, {l5^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l7, __const_5^0 <= l5^0 /\ k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0, {k4^0 -> 1 + k4^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+[33mRanking function: [36m__const_5^0 - k4^0[0m
+New Graphs: 
+Transitions:
+<l10, l10, k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+<l10, l10, k4^0 <= __const_5^0 /\ 0 <= i2^0 /\ 1 + i2^0 <= __const_5^0 /\ 1 + l5^0 <= __const_5^0, {l5^0 -> 1 + l5^0, rest remain the same}>
+Variables:
+__const_5^0, i2^0, k4^0, l5^0
+Checking conditional termination of SCC {l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001203s
+[33mRanking function: [36m-1 + __const_5^0 - l5^0[0m
+New Graphs: 
+INVARIANTS: 
+7: 1 + i2^0 <= __const_5^0 , 
+10: 1 + i2^0 <= __const_5^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+7: 
+10: 
+INVARIANTS: 
+4: 0 <= i2^0 , 
+7: 0 <= 1 + __const_5^0 , 
+10: k4^0 <= __const_5^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+4: 
+7: 
+10: 
+Proving termination of subgraph 2
+Analyzing SCC {l6}...
+No cycles found.
+
+[32mProgram Terminates[0m

@@ -1,0 +1,1939 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l18, true>
+<l1, l2, ((0 + n^0) <= (0 + r^0))>
+<l1, l3, ((1 + r^0) <= (0 + n^0))>
+<l4, l1, true, par{c^0 -> (~(1) + c^0)}>
+<l5, l1, ((0 + f^0) <= 0) /\ (0 <= (0 + f^0))>
+<l5, l4, (1 <= (0 + f^0))>
+<l5, l4, ((1 + f^0) <= 0)>
+<l6, l5, (2 <= (0 + c^0))>
+<l6, l5, ((1 + c^0) <= 1)>
+<l6, l7, ((0 + c^0) <= 1) /\ (1 <= (0 + c^0))>
+<l7, l8, true>
+<l9, l10, (0 <= (0 + s^0))>
+<l9, l7, ((1 + s^0) <= 0)>
+<l11, l9, true, par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l12, l11, (1 <= (0 + f^0))>
+<l12, l11, ((1 + f^0) <= 0)>
+<l12, l11, ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)), par{c^0 -> (~(1) + c^0), f^0 -> 1}>
+<l10, l6, (undef100 = undef100), par{n^0 -> undef100}>
+<l13, l11, (3 <= (0 + d^0))>
+<l13, l11, ((1 + d^0) <= 2)>
+<l13, l12, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0))>
+<l2, l7, ((0 + r^0) <= (0 + n^0))>
+<l2, l13, ((1 + n^0) <= (0 + r^0))>
+<l14, l10, ((0 + s^0) <= 255)>
+<l14, l7, (256 <= (0 + s^0))>
+<l15, l14, true, par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l16, l15, (1 <= (0 + f^0))>
+<l16, l15, ((1 + f^0) <= 0)>
+<l16, l15, ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)), par{c^0 -> (~(1) + c^0), f^0 -> 1}>
+<l3, l15, (2 <= (0 + d^0))>
+<l3, l15, ((1 + d^0) <= 1)>
+<l3, l16, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0))>
+<l17, l10, true, par{c^0 -> 4, d^0 -> 0, f^0 -> 0}>
+<l18, l17, true>
+
+Fresh variables:
+undef100, 
+
+Undef variables:
+undef100, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l10, (c^0 = 4) /\ (d^0 = 0) /\ (f^0 = 0)>
+<l3, l10, (2 <= (0 + d^0)) /\ ((0 + ((0 + c^0) + s^0)) <= 255), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l8, (2 <= (0 + d^0)) /\ (256 <= (0 + ((0 + c^0) + s^0))), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l10, ((1 + d^0) <= 1) /\ ((0 + ((0 + c^0) + s^0)) <= 255), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l8, ((1 + d^0) <= 1) /\ (256 <= (0 + ((0 + c^0) + s^0))), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l10, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0)) /\ (1 <= (0 + f^0)) /\ ((0 + ((0 + c^0) + s^0)) <= 255), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l8, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0)) /\ (1 <= (0 + f^0)) /\ (256 <= (0 + ((0 + c^0) + s^0))), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l10, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0)) /\ ((1 + f^0) <= 0) /\ ((0 + ((0 + c^0) + s^0)) <= 255), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l8, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0)) /\ ((1 + f^0) <= 0) /\ (256 <= (0 + ((0 + c^0) + s^0))), par{d^0 -> 2, s^0 -> ((0 + c^0) + s^0)}>
+<l3, l10, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((0 + ((0 + (~(1) + c^0)) + s^0)) <= 255), par{c^0 -> (~(1) + c^0), d^0 -> 2, f^0 -> 1, s^0 -> ((0 + (~(1) + c^0)) + s^0)}>
+<l3, l8, ((0 + d^0) <= 1) /\ (1 <= (0 + d^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ (256 <= (0 + ((0 + (~(1) + c^0)) + s^0))), par{c^0 -> (~(1) + c^0), d^0 -> 2, f^0 -> 1, s^0 -> ((0 + (~(1) + c^0)) + s^0)}>
+<l10, l8, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((0 + r^0) <= (0 + undef100))>
+<l10, l13, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((1 + undef100) <= (0 + r^0))>
+<l10, l3, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((1 + r^0) <= (0 + undef100))>
+<l10, l8, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ (1 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((0 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l13, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ (1 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((1 + undef100) <= (0 + r^0)), par{c^0 -> (~(1) + c^0)}>
+<l10, l3, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ (1 <= (0 + f^0)) /\ ((1 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l8, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ ((1 + f^0) <= 0) /\ ((0 + undef100) <= (0 + r^0)) /\ ((0 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l13, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ ((1 + f^0) <= 0) /\ ((0 + undef100) <= (0 + r^0)) /\ ((1 + undef100) <= (0 + r^0)), par{c^0 -> (~(1) + c^0)}>
+<l10, l3, (undef100 = undef100) /\ (2 <= (0 + c^0)) /\ ((1 + f^0) <= 0) /\ ((1 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l8, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((0 + r^0) <= (0 + undef100))>
+<l10, l13, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((1 + undef100) <= (0 + r^0))>
+<l10, l3, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((1 + r^0) <= (0 + undef100))>
+<l10, l8, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ (1 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((0 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l13, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ (1 <= (0 + f^0)) /\ ((0 + undef100) <= (0 + r^0)) /\ ((1 + undef100) <= (0 + r^0)), par{c^0 -> (~(1) + c^0)}>
+<l10, l3, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ (1 <= (0 + f^0)) /\ ((1 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l8, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ ((1 + f^0) <= 0) /\ ((0 + undef100) <= (0 + r^0)) /\ ((0 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l13, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ ((1 + f^0) <= 0) /\ ((0 + undef100) <= (0 + r^0)) /\ ((1 + undef100) <= (0 + r^0)), par{c^0 -> (~(1) + c^0)}>
+<l10, l3, (undef100 = undef100) /\ ((1 + c^0) <= 1) /\ ((1 + f^0) <= 0) /\ ((1 + r^0) <= (0 + undef100)), par{c^0 -> (~(1) + c^0)}>
+<l10, l8, (undef100 = undef100) /\ ((0 + c^0) <= 1) /\ (1 <= (0 + c^0))>
+<l13, l10, (3 <= (0 + d^0)) /\ (0 <= (0 + ((0 + (~(1) * c^0)) + s^0))), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l8, (3 <= (0 + d^0)) /\ ((1 + ((0 + (~(1) * c^0)) + s^0)) <= 0), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l10, ((1 + d^0) <= 2) /\ (0 <= (0 + ((0 + (~(1) * c^0)) + s^0))), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l8, ((1 + d^0) <= 2) /\ ((1 + ((0 + (~(1) * c^0)) + s^0)) <= 0), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l10, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0)) /\ (1 <= (0 + f^0)) /\ (0 <= (0 + ((0 + (~(1) * c^0)) + s^0))), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l8, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0)) /\ (1 <= (0 + f^0)) /\ ((1 + ((0 + (~(1) * c^0)) + s^0)) <= 0), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l10, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0)) /\ ((1 + f^0) <= 0) /\ (0 <= (0 + ((0 + (~(1) * c^0)) + s^0))), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l8, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0)) /\ ((1 + f^0) <= 0) /\ ((1 + ((0 + (~(1) * c^0)) + s^0)) <= 0), par{d^0 -> 1, s^0 -> ((0 + (~(1) * c^0)) + s^0)}>
+<l13, l10, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ (0 <= (0 + ((0 + (~(1) * (~(1) + c^0))) + s^0))), par{c^0 -> (~(1) + c^0), d^0 -> 1, f^0 -> 1, s^0 -> ((0 + (~(1) * (~(1) + c^0))) + s^0)}>
+<l13, l8, ((0 + d^0) <= 2) /\ (2 <= (0 + d^0)) /\ ((0 + f^0) <= 0) /\ (0 <= (0 + f^0)) /\ ((1 + ((0 + (~(1) * (~(1) + c^0))) + s^0)) <= 0), par{c^0 -> (~(1) + c^0), d^0 -> 1, f^0 -> 1, s^0 -> ((0 + (~(1) * (~(1) + c^0))) + s^0)}>
+
+Fresh variables:
+undef100, 
+
+Undef variables:
+undef100, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l3, l10, 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 + f^0 <= 0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, c^0 + s^0 <= 256 /\ f^0 = 0 /\ d^0 = 1, {c^0 -> -1 + c^0, d^0 -> 2, f^0 -> 1, s^0 -> -1 + c^0 + s^0, rest remain the same}>
+<l10, l13, 1 + undef100 <= r^0 /\ 2 <= c^0 /\ f^0 = 0, {all remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 2 <= c^0 /\ f^0 = 0, {all remain the same}>
+<l10, l13, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l13, 1 + f^0 <= 0 /\ 1 + undef100 <= r^0 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l3, 1 + f^0 <= 0 /\ 1 + r^0 <= undef100 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ f^0 = 0, {all remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ f^0 = 0, {all remain the same}>
+<l10, l13, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l13, c^0 <= 0 /\ 1 + f^0 <= 0 /\ 1 + undef100 <= r^0, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + f^0 <= 0 /\ 1 + r^0 <= undef100, {c^0 -> -1 + c^0, rest remain the same}>
+<l13, l10, c^0 <= s^0 /\ 3 <= d^0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l10, c^0 <= s^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l10, c^0 <= s^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l10, c^0 <= s^0 /\ 1 + f^0 <= 0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Variables:
+c^0, d^0, s^0, f^0, r^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l10, d^0 = 0 /\ f^0 = 0 /\ c^0 = 4, {all remain the same}>
+
+Graph 2
+<l3, l8, 2 <= d^0 /\ 256 <= c^0 + s^0, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l8, d^0 <= 0 /\ 256 <= c^0 + s^0, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l8, 1 <= f^0 /\ 256 <= c^0 + s^0 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l8, 1 + f^0 <= 0 /\ 256 <= c^0 + s^0 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l8, 257 <= c^0 + s^0 /\ f^0 = 0 /\ d^0 = 1, {c^0 -> -1 + c^0, d^0 -> 2, f^0 -> 1, s^0 -> -1 + c^0 + s^0, rest remain the same}>
+<l10, l8, 2 <= c^0 /\ f^0 = 0 /\ r^0 = undef100, {all remain the same}>
+<l10, l8, 1 <= f^0 /\ 2 <= c^0 /\ r^0 = undef100, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l8, 1 + f^0 <= 0 /\ 2 <= c^0 /\ r^0 = undef100, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l8, c^0 <= 0 /\ f^0 = 0 /\ r^0 = undef100, {all remain the same}>
+<l10, l8, c^0 <= 0 /\ 1 <= f^0 /\ r^0 = undef100, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l8, c^0 <= 0 /\ 1 + f^0 <= 0 /\ r^0 = undef100, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l8, c^0 = 1, {all remain the same}>
+<l13, l8, 1 + s^0 <= c^0 /\ 3 <= d^0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l8, 1 + s^0 <= c^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l8, 1 + s^0 <= c^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l8, 1 + s^0 <= c^0 /\ 1 + f^0 <= 0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l13, l8, 2 + s^0 <= c^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 1 )
+( 8 , 2 )
+( 10 , 1 )
+( 13 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.173316
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l3: 0 <= f^0[0m
+[36mInvariant at l10: 0 <= f^0[0m
+[36mInvariant at l13: 0 <= f^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l10, l3, c^0 <= 0 /\ 1 + f^0 <= 0 /\ 1 + r^0 <= undef100, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l3, l10, 1 + f^0 <= 0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, c^0 + s^0 <= 256 /\ f^0 = 0 /\ d^0 = 1, {c^0 -> -1 + c^0, d^0 -> 2, f^0 -> 1, s^0 -> -1 + c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 2 <= c^0 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 2 <= c^0 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l13, 1 + f^0 <= 0 /\ 1 + undef100 <= r^0 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l3, 1 + f^0 <= 0 /\ 1 + r^0 <= undef100 /\ 2 <= c^0, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l13, c^0 <= 0 /\ 1 + f^0 <= 0 /\ 1 + undef100 <= r^0, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ 3 <= d^0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l13, l10, c^0 <= s^0 /\ 1 + f^0 <= 0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 0.992973
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l10: d^0 <= 2[0m
+[36mInvariant at l13: d^0 <= 2[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ 3 <= d^0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 4.00082
+
+Checking conditional termination of SCC {l3, l10, l13}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.016625s
+[33mRanking function: [36m-7*f^0[0m
+It's unfeasible after collapsing. Removing transition: 
+<l10, l10, 1 <= 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l10, l10, 1 <= 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 2 <= c^0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 2 <= c^0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004671s
+[33mRanking function: [36m-5 + (5 / 2)*c^0[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002557s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.130935s
+Trying to remove transition: <l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.026187s
+Time used: 0.023646
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.733381s
+Time used: 0.72707
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.126519s
+Time used: 0.116165
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.092039s
+Time used: 0.082473
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.182657s
+Time used: 0.172938
+Trying to remove transition: <l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.654495s
+Time used: 0.644478
+Trying to remove transition: <l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.357108s
+Time used: 0.349012
+Trying to remove transition: <l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.243386s
+Time used: 0.234751
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011192s
+Time used: 4.00187
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003070s
+Time used: 4.00016
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005316s
+Time used: 1.00027
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.288575s
+Time used: 0.26841
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001034s
+Time used: 1.00101
+
+LOG: SAT solveNonLinear - Elapsed time: 1.289609s
+Cost: 1; Total time: 1.26942
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: 0 <= 1 + d^0[0m
+[36mInvariant at l10: 0 <= 1 + d^0[0m
+[36mInvariant at l13: 0 <= 1 + f^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, c^0 + s^0 <= 256 /\ f^0 = 0 /\ d^0 = 1, {c^0 -> -1 + c^0, d^0 -> 2, f^0 -> 1, s^0 -> -1 + c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + c^0[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003453s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.349993s
+Trying to remove transition: <l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.045366s
+Time used: 0.041892
+Trying to remove transition: <l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.830085s
+Time used: 0.82211
+Trying to remove transition: <l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.129481s
+Time used: 0.118642
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.109086s
+Time used: 0.097821
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.258312s
+Time used: 0.246971
+Trying to remove transition: <l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.765962s
+Time used: 0.747432
+Trying to remove transition: <l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.414326s
+Time used: 0.404228
+Trying to remove transition: <l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.229541s
+Time used: 0.219874
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.014862s
+Time used: 4.0057
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003404s
+Time used: 4.00027
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.008270s
+Time used: 1.00001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.262422s
+Time used: 0.242147
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001307s
+Time used: 1.00129
+
+LOG: SAT solveNonLinear - Elapsed time: 1.263729s
+Cost: 1; Total time: 1.24343
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l10: 0 <= f^0[0m
+[36mInvariant at l13: 0 <= f^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + c^0 + 2*f^0[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003932s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.689970s
+Trying to remove transition: <l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.041802s
+Time used: 0.038426
+Trying to remove transition: <l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.987087s
+Time used: 0.980264
+Trying to remove transition: <l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.172977s
+Time used: 0.162057
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.119261s
+Time used: 0.107486
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.260350s
+Time used: 0.248581
+Trying to remove transition: <l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.776173s
+Time used: 0.764112
+Trying to remove transition: <l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.412480s
+Time used: 0.402762
+Trying to remove transition: <l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.252043s
+Time used: 0.242871
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.012085s
+Time used: 4.00242
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007748s
+Time used: 4.00012
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004939s
+Time used: 1.00001
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.266624s
+Time used: 0.249243
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001402s
+Time used: 1.00139
+
+LOG: SAT solveNonLinear - Elapsed time: 1.268026s
+Cost: 1; Total time: 1.25063
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l10: 0 <= f^0[0m
+[36mInvariant at l13: 0 <= f^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 <= f^0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 1 <= f^0 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + c^0 - f^0[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004183s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.772704s
+Trying to remove transition: <l10, l3, 1 <= f^0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> -1 + c^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.043518s
+Time used: 0.03856
+Trying to remove transition: <l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.953173s
+Time used: 0.945985
+Trying to remove transition: <l10, l10, 1 <= f^0 /\ 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.140187s
+Time used: 0.128239
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.150159s
+Time used: 0.139505
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.248955s
+Time used: 0.237405
+Trying to remove transition: <l3, l10, 1 <= f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.698465s
+Time used: 0.687433
+Trying to remove transition: <l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.413025s
+Time used: 0.402459
+Trying to remove transition: <l3, l10, 0 <= f^0 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.237649s
+Time used: 0.227578
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.017643s
+Time used: 4.0024
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003270s
+Time used: 4.00016
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005214s
+Time used: 1.00013
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.281000s
+Time used: 0.263044
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001792s
+Time used: 1.00178
+
+LOG: SAT solveNonLinear - Elapsed time: 1.282793s
+Cost: 1; Total time: 1.26482
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: f^0 <= 1[0m
+[36mInvariant at l10: f^0 <= 1[0m
+[36mInvariant at l13: f^0 <= 1[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, c^0 + s^0 <= 256 /\ f^0 = 0 /\ d^0 = 1, {c^0 -> -1 + c^0, d^0 -> 2, f^0 -> 1, s^0 -> -1 + c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1 /\ f^0 <= 1, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ f^0 = 1 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + c^0 + f^0 + r^0[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+<l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004648s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.613304s
+Trying to remove transition: <l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.159707s
+Time used: 0.156038
+Trying to remove transition: <l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 2.915481s
+Time used: 2.90693
+Trying to remove transition: <l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.316603s
+Time used: 0.30024
+Trying to remove transition: <l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.122344s
+Time used: 0.110269
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.262511s
+Time used: 0.250569
+Trying to remove transition: <l3, l10, c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.744701s
+Time used: 1.7326
+Trying to remove transition: <l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.769102s
+Time used: 0.75765
+Trying to remove transition: <l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.243204s
+Time used: 0.232418
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.015352s
+Time used: 4.00266
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003178s
+Time used: 4.00001
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005348s
+Time used: 1.0002
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.232445s
+Time used: 0.212916
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.582159s
+Time used: 0.582151
+
+LOG: SAT solveNonLinear - Elapsed time: 0.814604s
+Cost: 0; Total time: 0.795067
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l3: 3 <= c^0 + 2*f^0[0m
+[36mInvariant at l10: 3 <= c^0 + 2*f^0[0m
+[36mInvariant at l13: 3 <= c^0 + 2*f^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 256 /\ f^0 = 0 /\ d^0 = 1, {c^0 -> -1 + c^0, d^0 -> 2, f^0 -> 1, s^0 -> -1 + c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l13, 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l13, c^0 <= 0 /\ 1 + undef100 <= r^0 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 0 <= f^0 /\ d^0 <= 1 /\ f^0 <= 1 /\ 3 <= c^0 + 2*f^0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= s^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 1 /\ d^0 = 2, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l13, l10, c^0 <= 1 + s^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0 /\ d^0 = 2, {c^0 -> -1 + c^0, d^0 -> 1, f^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1 /\ d^0 = 2, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l10, 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l10, c^0 <= 0 /\ c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l3, c^0 <= 0 /\ 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l10, 1 + undef100 <= r^0 /\ c^0 <= 1 + s^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> ((0 + ~(1)) + 0) + c^0, d^0 -> 1, s^0 -> 1 - c^0 + s^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ d^0 <= 2 /\ 50001 + c^0 <= 0 /\ 50001 + c^0 + f^0 + r^0 <= 0 /\ 50001 + c^0 <= f^0 /\ 50001 + c^0 + 2*f^0 <= 0 /\ f^0 = 1, {c^0 -> -1 + c^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002049s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.117935s
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.733999s
+Time used: 1.73276
+Trying to remove transition: <l3, l10, 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255 /\ d^0 = 1 /\ f^0 = 1, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.061730s
+Time used: 0.055507
+
+LOG: SAT solveNonLinear - Elapsed time: 0.061730s
+Cost: 0; Total time: 0.055507
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: 1 <= f^0[0m
+[36mQuasi-invariant at l10: 1 <= f^0[0m
+[33mRanking function: [36m1 + 253*c^0 - s^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001932s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.045293s
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.519406s
+Time used: 1.51345
+Trying to remove transition: <l3, l10, d^0 <= 0 /\ 0 <= f^0 /\ 0 <= 1 + d^0 /\ f^0 <= 1 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.125668s
+Time used: 0.12127
+
+LOG: SAT solveNonLinear - Elapsed time: 0.125668s
+Cost: 0; Total time: 0.12127
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: d^0 <= 1 + c^0[0m
+[36mQuasi-invariant at l10: 2 <= d^0[0m
+[33mRanking function: [36m254 - d^0 + 2*f^0 - s^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l3, l10, 0 <= f^0 /\ f^0 <= 1 /\ 2 <= d^0 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255, {d^0 -> 2, s^0 -> c^0 + s^0, rest remain the same}>
+<l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+<l10, l3, 1 + r^0 <= undef100 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ d^0 <= 2 /\ f^0 = 0, {all remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3, l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001532s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.018080s
+Trying to remove transition: <l10, l10, c^0 <= s^0 /\ 1 + undef100 <= r^0 /\ d^0 <= 1 /\ 0 <= 1 + d^0 /\ 2 <= c^0 /\ 3 <= c^0 + 2*f^0 /\ f^0 = 0, {d^0 -> 1, s^0 -> -c^0 + s^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.044100s
+Time used: 0.043627
+
+LOG: SAT solveNonLinear - Elapsed time: 0.044100s
+Cost: 0; Total time: 0.043627
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: d^0 <= 1[0m
+[36mQuasi-invariant at l10: d^0 <= 1[0m
+[33mRanking function: [36m-4 + 2*s^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 + r^0 <= undef100 /\ 2 <= c^0 /\ 2 <= d^0 /\ 3 <= c^0 + 2*f^0 /\ c^0 + s^0 <= 255 /\ f^0 = 0, {d^0 -> 2, s^0 -> ((0 + 0) + 0) + c^0 + s^0, rest remain the same}>
+Variables:
+c^0, d^0, f^0, r^0, s^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002516s
+[33mRanking function: [36m85 + (~(1) / 3)*c^0 + (~(1) / 3)*s^0[0m
+New Graphs: 
+INVARIANTS: 
+3: 0 <= 1 + d^0 , 
+10: 0 <= 1 + d^0 , 
+13: 0 <= 1 + f^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+3: 
+10: 
+13: 
+INVARIANTS: 
+10: 0 <= f^0 , 
+13: 0 <= f^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+10: 
+13: 
+INVARIANTS: 
+10: 0 <= f^0 , 
+13: 0 <= f^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+10: 
+13: 
+INVARIANTS: 
+3: f^0 <= 1 , 
+10: f^0 <= 1 , 
+13: f^0 <= 1 , 
+Quasi-INVARIANTS to narrow Graph: 
+3: 
+10: 
+13: 
+INVARIANTS: 
+3: 3 <= c^0 + 2*f^0 , 
+10: 3 <= c^0 + 2*f^0 , 
+13: 3 <= c^0 + 2*f^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+3: 
+10: 
+13: 
+Proving termination of subgraph 2
+Analyzing SCC {l8}...
+No cycles found.
+
+[32mProgram Terminates[0m

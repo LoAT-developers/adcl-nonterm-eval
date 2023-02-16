@@ -1,0 +1,1028 @@
+unknown
+
+Initial ITS
+
+Start location: [1]
+Program variables: c x y
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [3] : y'=nondet1, T, cost: 1
+   2: [3] -> [4] : c'=0, T, cost: 1
+   3: [4] -> [5] : y+x > 0, cost: 1
+  16: [4] -> [15] : y+x <= 0, cost: 1
+   4: [5] -> [7] : x > 0, cost: 1
+   7: [5] -> [9] : x <= 0, cost: 1
+  14: [6] -> [14] : c'=1+c, T, cost: 1
+   5: [7] -> [8] : x'=-1+x, T, cost: 1
+   6: [8] -> [6] : T, cost: 1
+   8: [9] -> [11] : y > 0, cost: 1
+  11: [9] -> [13] : y <= 0, cost: 1
+  13: [10] -> [6] : T, cost: 1
+   9: [11] -> [12] : y'=-1+y, T, cost: 1
+  10: [12] -> [10] : T, cost: 1
+  12: [13] -> [10] : T, cost: 1
+  15: [14] -> [4] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: c x y
+  18: [1] -> [4] : c'=0, x'=nondet, y'=nondet1, T, cost: 1
+   3: [4] -> [5] : y+x > 0, cost: 1
+  16: [4] -> [15] : y+x <= 0, cost: 1
+   7: [5] -> [9] : x <= 0, cost: 1
+  20: [5] -> [6] : x'=-1+x, x > 0, cost: 1
+  21: [6] -> [4] : c'=1+c, T, cost: 1
+  23: [9] -> [10] : y <= 0, cost: 1
+  24: [9] -> [10] : y'=-1+y, y > 0, cost: 1
+  13: [10] -> [6] : T, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : x'=nondet, T, cost: 1
+	Second rule:
+	[2] -> [3] : y'=nondet1, T, cost: 1
+	New rule:
+	[1] -> [3] : x'=nondet, y'=nondet1, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [3] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [3] : x'=nondet, y'=nondet1, T, cost: 1
+	Second rule:
+	[3] -> [4] : c'=0, T, cost: 1
+	New rule:
+	[1] -> [4] : c'=0, x'=nondet, y'=nondet1, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 17
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [7] : x > 0, cost: 1
+	Second rule:
+	[7] -> [8] : x'=-1+x, T, cost: 1
+	New rule:
+	[5] -> [8] : x'=-1+x, x > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 5
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[5] -> [8] : x'=-1+x, x > 0, cost: 1
+	Second rule:
+	[8] -> [6] : T, cost: 1
+	New rule:
+	[5] -> [6] : x'=-1+x, x > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 19
+	
+	Eliminating location [14] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [14] : c'=1+c, T, cost: 1
+	Second rule:
+	[14] -> [4] : T, cost: 1
+	New rule:
+	[6] -> [4] : c'=1+c, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 14 15
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [11] : y > 0, cost: 1
+	Second rule:
+	[11] -> [12] : y'=-1+y, T, cost: 1
+	New rule:
+	[9] -> [12] : y'=-1+y, y > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 8 9
+	
+	Eliminating location [13] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [13] : y <= 0, cost: 1
+	Second rule:
+	[13] -> [10] : T, cost: 1
+	New rule:
+	[9] -> [10] : y <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 11 12
+	
+	Eliminating location [12] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [12] : y'=-1+y, y > 0, cost: 1
+	Second rule:
+	[12] -> [10] : T, cost: 1
+	New rule:
+	[9] -> [10] : y'=-1+y, y > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 10 22
+
+Step with 18
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 16
+
+	Trace
+
+	18[T], 16[(y+x <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {16[T]}]
+
+Step with 3
+
+	Trace
+
+	18[T], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {}, {23[T]}, {}]
+
+Step with 13
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T]}, {}, {23[T]}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T], 21[T]
+	
+	Blocked
+
+	[{}, {16[T]}, {}, {23[T]}, {}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: c x y
+  18: [1] -> [4] : c'=0, x'=nondet, y'=nondet1, T, cost: 1
+   3: [4] -> [5] : y+x > 0, cost: 1
+  16: [4] -> [15] : y+x <= 0, cost: 1
+  25: [4] -> [4] : c'=c+n, y'=-n+y, (1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0), cost: 1
+   7: [5] -> [9] : x <= 0, cost: 1
+  20: [5] -> [6] : x'=-1+x, x > 0, cost: 1
+  21: [6] -> [4] : c'=1+c, T, cost: 1
+  23: [9] -> [10] : y <= 0, cost: 1
+  24: [9] -> [10] : y'=-1+y, y > 0, cost: 1
+  13: [10] -> [6] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[4] -> [4] : c'=1+c, y'=-1+y, (y > 0 /\ y+x > 0 /\ x <= 0), cost: 1
+	New rule:
+	[4] -> [4] : c'=c+n, y'=-n+y, (1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0), cost: 1
+
+		y > 0 [0]: montonic decrease yields 1-n+y > 0
+		
+		y > 0 [1]: eventual increase yields (1 <= 0 /\ y > 0)
+		
+		y+x > 0 [0]: montonic decrease yields 1-n+y+x > 0
+		
+		y+x > 0 [1]: eventual increase yields (1 <= 0 /\ y+x > 0)
+		
+		-x >= 0 [0]: monotonic increase yields -x >= 0
+		
+		Replacement map: {y > 0 -> 1-n+y > 0, y+x > 0 -> 1-n+y+x > 0, -x >= 0 -> -x >= 0}
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {25[T]}]
+
+Step with 16
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 16[(y+x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {25[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}]
+
+Step with 3
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T], 21[T]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {}, {}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {}, {13[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {16[T], 25[T]}, {7[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)]
+	
+	Blocked
+
+	[{}, {16[T]}, {3[T], 16[T], 25[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}]
+
+Step with 3
+
+	Trace
+
+	18[T], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {}, {}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {}, {13[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {7[T]}]
+
+Step with 20
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 20[(x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {7[T]}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 20[(x > 0)], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {7[T]}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: c x y
+  18: [1] -> [4] : c'=0, x'=nondet, y'=nondet1, T, cost: 1
+   3: [4] -> [5] : y+x > 0, cost: 1
+  16: [4] -> [15] : y+x <= 0, cost: 1
+  25: [4] -> [4] : c'=c+n, y'=-n+y, (1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0), cost: 1
+  26: [4] -> [4] : c'=c+n2, x'=-n2+x, (1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0), cost: 1
+   7: [5] -> [9] : x <= 0, cost: 1
+  20: [5] -> [6] : x'=-1+x, x > 0, cost: 1
+  21: [6] -> [4] : c'=1+c, T, cost: 1
+  23: [9] -> [10] : y <= 0, cost: 1
+  24: [9] -> [10] : y'=-1+y, y > 0, cost: 1
+  13: [10] -> [6] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[4] -> [4] : c'=1+c, x'=-1+x, (y+x > 0 /\ x > 0), cost: 1
+	New rule:
+	[4] -> [4] : c'=c+n2, x'=-n2+x, (1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0), cost: 1
+
+		y+x > 0 [0]: montonic decrease yields 1+y-n2+x > 0
+		
+		y+x > 0 [1]: eventual increase yields (1 <= 0 /\ y+x > 0)
+		
+		x > 0 [0]: montonic decrease yields 1-n2+x > 0
+		
+		x > 0 [1]: eventual increase yields (1 <= 0 /\ x > 0)
+		
+		Replacement map: {y+x > 0 -> 1+y-n2+x > 0, x > 0 -> 1-n2+x > 0}
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {26[T]}]
+
+Step with 16
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 16[(y+x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {26[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}]
+
+Step with 3
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {}]
+
+Step with 20
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 20[(x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 20[(x > 0)], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 20[(x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}]
+
+Step with 7
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {}]
+
+Step with 24
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {}, {}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {}, {13[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {20[T]}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {16[T], 26[T]}, {7[T], 20[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}]
+
+Step with 25
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {25[T]}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 16
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 16[(y+x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {25[T], 26[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}]
+
+Step with 3
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {}, {}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {}, {13[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {16[T], 25[T], 26[T]}, {7[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)], 25[(1-n+y+x > 0 /\ -1+n >= 0 /\ 1-n+y > 0 /\ -x >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 26[T]}, {3[T], 16[T], 25[T], 26[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 26[(1-n2+x > 0 /\ 1+y-n2+x > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T]}, {3[T], 16[T], 25[T], 26[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}]
+
+Step with 3
+
+	Trace
+
+	18[T], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {}]
+
+Step with 24
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {}, {}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)], 13[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {}, {}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)], 24[(y > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {}, {13[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {}, {24[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {7[T]}]
+
+Step with 20
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 20[(x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {7[T]}, {}]
+
+Step with 21
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 20[(x > 0)], 21[T]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {7[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	18[T], 3[(y+x > 0)], 20[(x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {7[T]}, {21[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 3[(y+x > 0)]
+	
+	Blocked
+
+	[{}, {16[T], 25[T], 26[T]}, {7[T], 20[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {3[T], 16[T], 25[T], 26[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{18[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

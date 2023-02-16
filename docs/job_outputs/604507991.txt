@@ -1,0 +1,171 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   0: f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (1-arg2p1+arg2 == 0 /\ -arg3p1+arg3 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_Load -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (1+arg2 > 0 /\ arg2-arg3p2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1-arg2p2+arg2 == 0 /\ arg1 > 0), cost: 1
+   2: __init -> f1_0_main_Load : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   0: f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (1-arg2p1+arg2 == 0 /\ -arg3p1+arg3 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   3: __init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (1-arg2p2+arg2p3 == 0 /\ arg1p2 > 0 /\ arg2p3-arg3p2 == 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (1+arg2 > 0 /\ arg2-arg3p2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1-arg2p2+arg2 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (1-arg2p2+arg2p3 == 0 /\ arg1p2 > 0 /\ arg2p3-arg3p2 == 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   4: f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   5: __init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (arg1p2 > 0 /\ 1+arg2p3 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (1-arg2p1+arg2 == 0 /\ -arg3p1+arg3 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, arg3'=arg3, (0 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg2p1 = 1+arg2
+		
+		propagated equality arg3p1 = arg3
+		
+	Simplified Guard
+
+	Original rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, arg3'=arg3, (0 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, arg3'=arg3, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, arg3'=arg3, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (1-arg2p2+arg2p3 == 0 /\ arg1p2 > 0 /\ arg2p3-arg3p2 == 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+	New rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (0 == 0 /\ arg1p2 > 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+	
+		propagated equality arg2p2 = 1+arg2p3
+		
+		propagated equality arg3p2 = arg2p3
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (0 == 0 /\ arg1p2 > 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+	New rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (arg1p2 > 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (arg1p2 > 0 /\ arg1p3 > 0 /\ arg1p2-arg1p3 <= 0 /\ 1+arg2p3 > 0), cost: 1
+	New rule:
+	__init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (arg1p2 > 0 /\ 1+arg2p3 > 0), cost: 1
+
+Step with 5
+
+	Trace
+
+	5[(arg1p2 > 0 /\ 1+arg2p3 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 4
+
+	Trace
+
+	5[(arg1p2 > 0 /\ 1+arg2p3 > 0)], 4[(arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   4: f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   6: f34_0_loop_Inc -> LoAT_sink : (-arg1p1+arg1 <= 0 /\ -arg1p1+arg1 >= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: NONTERM
+   7: f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=arg2+n, (-arg1p1+arg1 >= 0 /\ -1+n >= 0 /\ arg1p1 > 0), cost: 1
+   5: __init -> f34_0_loop_Inc : arg1'=arg1p2, arg2'=1+arg2p3, arg3'=arg2p3, (arg1p2 > 0 /\ 1+arg2p3 > 0), cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f34_0_loop_Inc -> LoAT_sink : (-arg1p1+arg1 <= 0 /\ -arg1p1+arg1 >= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: NONTERM
+
+		-arg1p1+arg1 >= 0 [0]: monotonic increase yields -arg1p1+arg1 >= 0
+		
+		arg1p1 > 0 [0]: monotonic increase yields arg1p1 > 0
+		
+		arg1 > 0 [0]: montonic decrease yields arg1p1 > 0, dependencies: -arg1p1+arg1 >= 0
+		
+		arg1 > 0 [1]: eventual increase yields (-arg1p1+arg1 <= 0 /\ arg1 > 0)
+		
+		Replacement map: {-arg1p1+arg1 >= 0 -> -arg1p1+arg1 >= 0, arg1p1 > 0 -> arg1p1 > 0, arg1 > 0 -> (-arg1p1+arg1 <= 0 /\ arg1 > 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=1+arg2, (arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f34_0_loop_Inc -> f34_0_loop_Inc : arg1'=arg1p1, arg2'=arg2+n, (-arg1p1+arg1 >= 0 /\ -1+n >= 0 /\ arg1p1 > 0), cost: 1
+
+		-arg1p1+arg1 >= 0 [0]: monotonic increase yields -arg1p1+arg1 >= 0
+		
+		arg1p1 > 0 [0]: monotonic increase yields arg1p1 > 0
+		
+		arg1 > 0 [0]: montonic decrease yields arg1p1 > 0, dependencies: -arg1p1+arg1 >= 0
+		
+		arg1 > 0 [1]: eventual increase yields (-arg1p1+arg1 <= 0 /\ arg1 > 0)
+		
+		Replacement map: {-arg1p1+arg1 >= 0 -> -arg1p1+arg1 >= 0, arg1p1 > 0 -> arg1p1 > 0, arg1 > 0 -> arg1p1 > 0}
+
+Step with 6
+
+	Trace
+
+	5[(arg1p2 > 0 /\ 1+arg2p3 > 0)], 6[(-arg1p1+arg1 <= 0 /\ -arg1p1+arg1 >= 0 /\ arg1p1 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {6[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=1 arg3=0 ] 5 [ arg1=arg1 arg2=arg2 arg3=arg3 ] 6
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

@@ -1,0 +1,162 @@
+unknown
+
+Initial ITS
+
+Start location: l2
+Program variables: rt_11^0 st_14^0 x_13^0
+   0: l0 -> l1 : rt_11^0'=rt_11^post1, st_14^0'=st_14^post1, x_13^0'=x_13^post1, (-x_13^0 <= 0 /\ -st_14^post1+st_14^0 == 0 /\ 1+x_13^post1-x_13^0 == 0 /\ -st_14^0+rt_11^post1 == 0), cost: 1
+   1: l0 -> l1 : rt_11^0'=rt_11^post2, st_14^0'=st_14^post2, x_13^0'=x_13^post2, (-st_14^post2+st_14^0 == 0 /\ 1+x_13^0 <= 0 /\ -st_14^0+rt_11^post2 == 0 /\ -x_13^post2+x_13^0 == 0), cost: 1
+   2: l2 -> l0 : rt_11^0'=rt_11^post3, st_14^0'=st_14^post3, x_13^0'=x_13^post3, (rt_11^0-rt_11^post3 == 0 /\ -st_14^post3+st_14^0 == 0 /\ -x_13^post3+x_13^0 == 0), cost: 1
+
+Simplified Transitions
+
+Start location: l2
+Program variables: rt_11^0 st_14^0 x_13^0
+   3: l0 -> l1 : rt_11^0'=st_14^0, x_13^0'=-1+x_13^0, -x_13^0 <= 0, cost: 1
+   4: l0 -> l1 : rt_11^0'=st_14^0, 1+x_13^0 <= 0, cost: 1
+   5: l2 -> l0 : T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l1 : rt_11^0'=rt_11^post1, st_14^0'=st_14^post1, x_13^0'=x_13^post1, (-x_13^0 <= 0 /\ -st_14^post1+st_14^0 == 0 /\ 1+x_13^post1-x_13^0 == 0 /\ -st_14^0+rt_11^post1 == 0), cost: 1
+	New rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=-1+x_13^0, (0 == 0 /\ -x_13^0 <= 0), cost: 1
+	
+		propagated equality st_14^post1 = st_14^0
+		
+		propagated equality x_13^post1 = -1+x_13^0
+		
+		propagated equality rt_11^post1 = st_14^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=-1+x_13^0, (0 == 0 /\ -x_13^0 <= 0), cost: 1
+	New rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=-1+x_13^0, -x_13^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=-1+x_13^0, -x_13^0 <= 0, cost: 1
+	New rule:
+	l0 -> l1 : rt_11^0'=st_14^0, x_13^0'=-1+x_13^0, -x_13^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l1 : rt_11^0'=rt_11^post2, st_14^0'=st_14^post2, x_13^0'=x_13^post2, (-st_14^post2+st_14^0 == 0 /\ 1+x_13^0 <= 0 /\ -st_14^0+rt_11^post2 == 0 /\ -x_13^post2+x_13^0 == 0), cost: 1
+	New rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=x_13^0, (0 == 0 /\ 1+x_13^0 <= 0), cost: 1
+	
+		propagated equality st_14^post2 = st_14^0
+		
+		propagated equality rt_11^post2 = st_14^0
+		
+		propagated equality x_13^post2 = x_13^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=x_13^0, (0 == 0 /\ 1+x_13^0 <= 0), cost: 1
+	New rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=x_13^0, 1+x_13^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l1 : rt_11^0'=st_14^0, st_14^0'=st_14^0, x_13^0'=x_13^0, 1+x_13^0 <= 0, cost: 1
+	New rule:
+	l0 -> l1 : rt_11^0'=st_14^0, 1+x_13^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l0 : rt_11^0'=rt_11^post3, st_14^0'=st_14^post3, x_13^0'=x_13^post3, (rt_11^0-rt_11^post3 == 0 /\ -st_14^post3+st_14^0 == 0 /\ -x_13^post3+x_13^0 == 0), cost: 1
+	New rule:
+	l2 -> l0 : rt_11^0'=rt_11^0, st_14^0'=st_14^0, x_13^0'=x_13^0, 0 == 0, cost: 1
+	
+		propagated equality rt_11^post3 = rt_11^0
+		
+		propagated equality st_14^post3 = st_14^0
+		
+		propagated equality x_13^post3 = x_13^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l0 : rt_11^0'=rt_11^0, st_14^0'=st_14^0, x_13^0'=x_13^0, 0 == 0, cost: 1
+	New rule:
+	l2 -> l0 : rt_11^0'=rt_11^0, st_14^0'=st_14^0, x_13^0'=x_13^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l2 -> l0 : rt_11^0'=rt_11^0, st_14^0'=st_14^0, x_13^0'=x_13^0, T, cost: 1
+	New rule:
+	l2 -> l0 : T, cost: 1
+
+Step with 5
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 3
+
+	Trace
+
+	5[T], 3[(-x_13^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {3[T]}]
+
+Step with 4
+
+	Trace
+
+	5[T], 4[(1+x_13^0 <= 0)]
+	
+	Blocked
+
+	[{}, {3[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	5[T]
+	
+	Blocked
+
+	[{}, {3[T], 4[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{5[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

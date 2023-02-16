@@ -1,0 +1,278 @@
+NO
+
+Initial ITS
+
+Start location: l5
+Program variables: p^0 y_1^0
+   0: l0 -> l1 : p^0'=p^post1, y_1^0'=y_1^post1, (y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+   1: l1 -> l0 : p^0'=p^post2, y_1^0'=y_1^post2, (-y_1^post2+y_1^0 == 0 /\ p^0-p^post2 == 0), cost: 1
+   2: l2 -> l3 : p^0'=p^post3, y_1^0'=y_1^post3, (p^post3 == 0 /\ y_1^0-y_1^post3 == 0), cost: 1
+   3: l3 -> l4 : p^0'=p^post4, y_1^0'=y_1^post4, (-p^post4+p^0 == 0 /\ 1-y_1^0 <= 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+   5: l3 -> l0 : p^0'=p^post6, y_1^0'=y_1^post6, (1+p^post6 == 0 /\ y_1^0-y_1^post6 == 0 /\ y_1^0 <= 0), cost: 1
+   4: l4 -> l3 : p^0'=p^post5, y_1^0'=y_1^post5, (p^0-p^post5 == 0 /\ -y_1^post5+y_1^0 == 0), cost: 1
+   6: l5 -> l2 : p^0'=p^post7, y_1^0'=y_1^post7, (-p^post7+p^0 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l5
+Program variables: p^0 y_1^0
+   9: l0 -> l0 : p^0'=p^post2, y_1^0'=y_1^post2, (p^post1-p^post2 == 0 /\ y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0 /\ -y_1^post2+y_1^post1 == 0), cost: 1
+   5: l3 -> l0 : p^0'=p^post6, y_1^0'=y_1^post6, (1+p^post6 == 0 /\ y_1^0-y_1^post6 == 0 /\ y_1^0 <= 0), cost: 1
+   8: l3 -> l3 : p^0'=p^post5, y_1^0'=y_1^post5, (-p^post4+p^0 == 0 /\ -y_1^post5+y_1^post4 == 0 /\ 1-y_1^0 <= 0 /\ p^post4-p^post5 == 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+   7: l5 -> l3 : p^0'=p^post3, y_1^0'=y_1^post3, (-p^post7+p^0 == 0 /\ p^post3 == 0 /\ y_1^post7-y_1^post3 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+
+	Eliminating location l2 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l5 -> l2 : p^0'=p^post7, y_1^0'=y_1^post7, (-p^post7+p^0 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+	Second rule:
+	l2 -> l3 : p^0'=p^post3, y_1^0'=y_1^post3, (p^post3 == 0 /\ y_1^0-y_1^post3 == 0), cost: 1
+	New rule:
+	l5 -> l3 : p^0'=p^post3, y_1^0'=y_1^post3, (-p^post7+p^0 == 0 /\ p^post3 == 0 /\ y_1^post7-y_1^post3 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 6
+	
+	Eliminating location l4 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l3 -> l4 : p^0'=p^post4, y_1^0'=y_1^post4, (-p^post4+p^0 == 0 /\ 1-y_1^0 <= 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+	Second rule:
+	l4 -> l3 : p^0'=p^post5, y_1^0'=y_1^post5, (p^0-p^post5 == 0 /\ -y_1^post5+y_1^0 == 0), cost: 1
+	New rule:
+	l3 -> l3 : p^0'=p^post5, y_1^0'=y_1^post5, (-p^post4+p^0 == 0 /\ -y_1^post5+y_1^post4 == 0 /\ 1-y_1^0 <= 0 /\ p^post4-p^post5 == 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+	
+	Eliminating location l1 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l1 : p^0'=p^post1, y_1^0'=y_1^post1, (y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+	Second rule:
+	l1 -> l0 : p^0'=p^post2, y_1^0'=y_1^post2, (-y_1^post2+y_1^0 == 0 /\ p^0-p^post2 == 0), cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^post2, y_1^0'=y_1^post2, (p^post1-p^post2 == 0 /\ y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0 /\ -y_1^post2+y_1^post1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l5
+Program variables: p^0 y_1^0
+  13: l0 -> l0 : T, cost: 1
+  10: l3 -> l0 : p^0'=-1, y_1^0 <= 0, cost: 1
+  12: l3 -> l3 : y_1^0'=-1+y_1^0, 1-y_1^0 <= 0, cost: 1
+  11: l5 -> l3 : p^0'=0, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : p^0'=p^post6, y_1^0'=y_1^post6, (1+p^post6 == 0 /\ y_1^0-y_1^post6 == 0 /\ y_1^0 <= 0), cost: 1
+	New rule:
+	l3 -> l0 : p^0'=-1, y_1^0'=y_1^0, (0 == 0 /\ y_1^0 <= 0), cost: 1
+	
+		propagated equality p^post6 = -1
+		
+		propagated equality y_1^post6 = y_1^0
+		
+	Simplified Guard
+
+	Original rule:
+	l3 -> l0 : p^0'=-1, y_1^0'=y_1^0, (0 == 0 /\ y_1^0 <= 0), cost: 1
+	New rule:
+	l3 -> l0 : p^0'=-1, y_1^0'=y_1^0, y_1^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l3 -> l0 : p^0'=-1, y_1^0'=y_1^0, y_1^0 <= 0, cost: 1
+	New rule:
+	l3 -> l0 : p^0'=-1, y_1^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l3 : p^0'=p^post3, y_1^0'=y_1^post3, (-p^post7+p^0 == 0 /\ p^post3 == 0 /\ y_1^post7-y_1^post3 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+	New rule:
+	l5 -> l3 : p^0'=0, y_1^0'=y_1^post7, (0 == 0 /\ -p^post7+p^0 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+	
+		propagated equality p^post3 = 0
+		
+		propagated equality y_1^post3 = y_1^post7
+		
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l3 : p^0'=0, y_1^0'=y_1^post7, (0 == 0 /\ -p^post7+p^0 == 0 /\ y_1^0-y_1^post7 == 0), cost: 1
+	New rule:
+	l5 -> l3 : p^0'=0, y_1^0'=y_1^0, 0 == 0, cost: 1
+	
+		propagated equality p^post7 = p^0
+		
+		propagated equality y_1^post7 = y_1^0
+		
+	Simplified Guard
+
+	Original rule:
+	l5 -> l3 : p^0'=0, y_1^0'=y_1^0, 0 == 0, cost: 1
+	New rule:
+	l5 -> l3 : p^0'=0, y_1^0'=y_1^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l5 -> l3 : p^0'=0, y_1^0'=y_1^0, T, cost: 1
+	New rule:
+	l5 -> l3 : p^0'=0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l3 : p^0'=p^post5, y_1^0'=y_1^post5, (-p^post4+p^0 == 0 /\ -y_1^post5+y_1^post4 == 0 /\ 1-y_1^0 <= 0 /\ p^post4-p^post5 == 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+	New rule:
+	l3 -> l3 : p^0'=p^post4, y_1^0'=y_1^post4, (0 == 0 /\ -p^post4+p^0 == 0 /\ 1-y_1^0 <= 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+	
+		propagated equality y_1^post5 = y_1^post4
+		
+		propagated equality p^post5 = p^post4
+		
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l3 : p^0'=p^post4, y_1^0'=y_1^post4, (0 == 0 /\ -p^post4+p^0 == 0 /\ 1-y_1^0 <= 0 /\ 1-y_1^0+y_1^post4 == 0), cost: 1
+	New rule:
+	l3 -> l3 : p^0'=p^0, y_1^0'=-1+y_1^0, (0 == 0 /\ 1-y_1^0 <= 0), cost: 1
+	
+		propagated equality p^post4 = p^0
+		
+		propagated equality y_1^post4 = -1+y_1^0
+		
+	Simplified Guard
+
+	Original rule:
+	l3 -> l3 : p^0'=p^0, y_1^0'=-1+y_1^0, (0 == 0 /\ 1-y_1^0 <= 0), cost: 1
+	New rule:
+	l3 -> l3 : p^0'=p^0, y_1^0'=-1+y_1^0, 1-y_1^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l3 -> l3 : p^0'=p^0, y_1^0'=-1+y_1^0, 1-y_1^0 <= 0, cost: 1
+	New rule:
+	l3 -> l3 : y_1^0'=-1+y_1^0, 1-y_1^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : p^0'=p^post2, y_1^0'=y_1^post2, (p^post1-p^post2 == 0 /\ y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0 /\ -y_1^post2+y_1^post1 == 0), cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^post1, y_1^0'=y_1^post1, (0 == 0 /\ y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+	
+		propagated equality p^post2 = p^post1
+		
+		propagated equality y_1^post2 = y_1^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : p^0'=p^post1, y_1^0'=y_1^post1, (0 == 0 /\ y_1^0-y_1^post1 == 0 /\ -p^post1+p^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^0, y_1^0'=y_1^0, 0 == 0, cost: 1
+	
+		propagated equality y_1^post1 = y_1^0
+		
+		propagated equality p^post1 = p^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : p^0'=p^0, y_1^0'=y_1^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : p^0'=p^0, y_1^0'=y_1^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l0 : p^0'=p^0, y_1^0'=y_1^0, T, cost: 1
+	New rule:
+	l0 -> l0 : T, cost: 1
+
+Step with 11
+
+	Trace
+
+	11[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 10
+
+	Trace
+
+	11[T], 10[(y_1^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	11[T], 10[(y_1^0 <= 0)], 13[T]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Nonterm
+
+Start location: l5
+Program variables: p^0 y_1^0
+  13: l0 -> l0 : T, cost: 1
+  14: l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+  10: l3 -> l0 : p^0'=-1, y_1^0 <= 0, cost: 1
+  12: l3 -> l3 : y_1^0'=-1+y_1^0, 1-y_1^0 <= 0, cost: 1
+  11: l5 -> l3 : p^0'=0, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l0 -> l0 : T, cost: 1
+	New rule:
+	l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+Step with 14
+
+	Trace
+
+	11[T], 10[(y_1^0 <= 0)], 14[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {}, {14[T]}]
+
+Refute
+
+	Counterexample
+
+	[ p^0=0 y_1^0=0 ] 11 [ p^0=-1 y_1^0=0 ] 10 [ p^0=p^0 y_1^0=0 ] 14
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

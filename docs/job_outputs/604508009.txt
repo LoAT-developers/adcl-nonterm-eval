@@ -1,0 +1,261 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   0: f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ 2-arg3p1 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1-arg3p2 == 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+   2: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, (arg2p3 > 0 /\ arg3-arg3p3 == 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+   3: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, (arg2p4 > 0 /\ arg3-arg3p4 == 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+   4: __init -> f1_0_main_ConstantStackPush : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, T, cost: 1
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   5: f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=2, (arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   6: f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=1, (arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+   7: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+   8: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, (arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+   4: __init -> f1_0_main_ConstantStackPush : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, (arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ 2-arg3p1 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=2, (0 == 0 /\ arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg3p1 = 2
+		
+	Simplified Guard
+
+	Original rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=2, (0 == 0 /\ arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=2, (arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, (arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1-arg3p2 == 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=1, (0 == 0 /\ arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg3p2 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=1, (0 == 0 /\ arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=1, (arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, (arg2p3 > 0 /\ arg3-arg3p3 == 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3, (0 == 0 /\ arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg3p3 = arg3
+		
+	Simplified Guard
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3, (0 == 0 /\ arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, (arg2p4 > 0 /\ arg3-arg3p4 == 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3, (0 == 0 /\ arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg3p4 = arg3
+		
+	Simplified Guard
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3, (0 == 0 /\ arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3, (arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3, (arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, (arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+
+Step with 4
+
+	Trace
+
+	4[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 5
+
+	Trace
+
+	4[T], 5[(arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 7
+
+	Trace
+
+	4[T], 5[(arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0)], 7[(arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2 arg3
+   5: f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p1, arg2'=arg2p1, arg3'=2, (arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0), cost: 1
+   6: f1_0_main_ConstantStackPush -> f151_0_main_InvokeMethod : arg1'=arg1p2, arg2'=arg2p2, arg3'=1, (arg2p2 > 0 /\ 1-arg2 == 0 /\ arg1p2-arg1 <= 0 /\ arg1p2 > 0 /\ arg2p2-arg1 <= 0 /\ arg1 > 0), cost: 1
+   7: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+   8: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p4, arg2'=arg2p4, (arg2p4 > 0 /\ -arg2+arg1p4 <= 0 /\ arg2p4-arg2 <= 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ arg2p4-arg1 <= 0 /\ arg1p4 > 0 /\ arg1 > 0), cost: 1
+   9: f151_0_main_InvokeMethod -> LoAT_sink : (arg2p3 > 0 /\ -arg2p3+arg2 <= 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg2-arg1p3 >= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg1p3+arg1 <= 0 /\ -arg1p3+arg1 >= 0 /\ arg1 > 0), cost: NONTERM
+  10: f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg2p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ -arg2p3+arg1 >= 0), cost: 1
+   4: __init -> f1_0_main_ConstantStackPush : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> LoAT_sink : (arg2p3 > 0 /\ -arg2p3+arg2 <= 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg2-arg1p3 >= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg1p3+arg1 <= 0 /\ -arg1p3+arg1 >= 0 /\ arg1 > 0), cost: NONTERM
+
+		arg2p3 > 0 [0]: monotonic increase yields arg2p3 > 0
+		
+		-arg2p3+arg2 >= 0 [0]: monotonic increase yields -arg2p3+arg2 >= 0
+		
+		arg2 > 0 [0]: montonic decrease yields arg2p3 > 0, dependencies: -arg2p3+arg2 >= 0
+		
+		arg2 > 0 [1]: eventual increase yields (-arg2p3+arg2 <= 0 /\ arg2 > 0)
+		
+		arg2-arg1p3 >= 0 [0]: montonic decrease yields arg2p3-arg1p3 >= 0, dependencies: -arg2p3+arg2 >= 0
+		
+		arg2-arg1p3 >= 0 [1]: eventual increase yields (-arg2p3+arg2 <= 0 /\ arg2-arg1p3 >= 0)
+		
+		-arg2p3+arg1 >= 0 [0]: montonic decrease yields -arg2p3+arg1p3 >= 0, dependencies: -arg1p3+arg1 >= 0
+		
+		-arg2p3+arg1 >= 0 [1]: eventual decrease yields (-arg2p3+arg1 >= 0 /\ -arg2p3+arg1p3 >= 0)
+		
+		-arg2p3+arg1 >= 0 [2]: eventual increase yields (-arg2p3+arg1 >= 0 /\ -arg1p3+arg1 <= 0)
+		
+		arg1p3 > 0 [0]: monotonic increase yields arg1p3 > 0
+		
+		-arg1p3+arg1 >= 0 [0]: monotonic increase yields -arg1p3+arg1 >= 0
+		
+		arg1 > 0 [0]: montonic decrease yields arg1p3 > 0, dependencies: arg2p3 > 0 -arg2p3+arg1 >= 0
+		
+		arg1 > 0 [1]: eventual increase yields (-arg1p3+arg1 <= 0 /\ arg1 > 0)
+		
+		Replacement map: {arg2p3 > 0 -> arg2p3 > 0, -arg2p3+arg2 >= 0 -> -arg2p3+arg2 >= 0, arg2 > 0 -> (-arg2p3+arg2 <= 0 /\ arg2 > 0), arg2-arg1p3 >= 0 -> (-arg2p3+arg2 <= 0 /\ arg2-arg1p3 >= 0), -arg2p3+arg1 >= 0 -> (-arg2p3+arg1 >= 0 /\ -arg1p3+arg1 <= 0), arg1p3 > 0 -> arg1p3 > 0, -arg1p3+arg1 >= 0 -> -arg1p3+arg1 >= 0, arg1 > 0 -> (-arg1p3+arg1 <= 0 /\ arg1 > 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg1p3-arg1 <= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg2+arg1p3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2p3-arg1p3 >= 0 /\ -1+n >= 0 /\ arg1p3 > 0 /\ -arg2p3+arg1p3 >= 0 /\ -arg1p3+arg1 >= 0), cost: 1
+
+		arg2p3 > 0 [0]: monotonic increase yields arg2p3 > 0
+		
+		-arg2p3+arg2 >= 0 [0]: monotonic increase yields -arg2p3+arg2 >= 0
+		
+		arg2 > 0 [0]: montonic decrease yields arg2p3 > 0, dependencies: -arg2p3+arg2 >= 0
+		
+		arg2 > 0 [1]: eventual increase yields (-arg2p3+arg2 <= 0 /\ arg2 > 0)
+		
+		arg2-arg1p3 >= 0 [0]: montonic decrease yields arg2p3-arg1p3 >= 0, dependencies: -arg2p3+arg2 >= 0
+		
+		arg2-arg1p3 >= 0 [1]: eventual increase yields (-arg2p3+arg2 <= 0 /\ arg2-arg1p3 >= 0)
+		
+		-arg2p3+arg1 >= 0 [0]: montonic decrease yields -arg2p3+arg1p3 >= 0, dependencies: -arg1p3+arg1 >= 0
+		
+		-arg2p3+arg1 >= 0 [1]: eventual decrease yields (-arg2p3+arg1 >= 0 /\ -arg2p3+arg1p3 >= 0)
+		
+		-arg2p3+arg1 >= 0 [2]: eventual increase yields (-arg2p3+arg1 >= 0 /\ -arg1p3+arg1 <= 0)
+		
+		arg1p3 > 0 [0]: monotonic increase yields arg1p3 > 0
+		
+		-arg1p3+arg1 >= 0 [0]: monotonic increase yields -arg1p3+arg1 >= 0
+		
+		arg1 > 0 [0]: montonic decrease yields arg1p3 > 0, dependencies: arg2p3 > 0 -arg2p3+arg1 >= 0
+		
+		arg1 > 0 [1]: eventual increase yields (-arg1p3+arg1 <= 0 /\ arg1 > 0)
+		
+		Replacement map: {arg2p3 > 0 -> arg2p3 > 0, -arg2p3+arg2 >= 0 -> -arg2p3+arg2 >= 0, arg2 > 0 -> arg2p3 > 0, arg2-arg1p3 >= 0 -> arg2p3-arg1p3 >= 0, -arg2p3+arg1 >= 0 -> -arg2p3+arg1p3 >= 0, arg1p3 > 0 -> arg1p3 > 0, -arg1p3+arg1 >= 0 -> -arg1p3+arg1 >= 0, arg1 > 0 -> arg1p3 > 0}
+
+	made implied equalities explicit
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2p3-arg1p3 >= 0 /\ -1+n >= 0 /\ arg1p3 > 0 /\ -arg2p3+arg1p3 >= 0 /\ -arg1p3+arg1 >= 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2p3-arg1p3 >= 0 /\ -1+n >= 0 /\ arg1p3 > 0 /\ -arg2p3+arg1p3 >= 0 /\ -arg2p3+arg1p3 == 0 /\ -arg1p3+arg1 >= 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg1p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ arg2p3-arg1p3 >= 0 /\ -1+n >= 0 /\ arg1p3 > 0 /\ -arg2p3+arg1p3 >= 0 /\ -arg2p3+arg1p3 == 0 /\ -arg1p3+arg1 >= 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg2p3, arg2'=arg2p3, (0 >= 0 /\ 0 == 0 /\ arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ -1+n >= 0 /\ -arg2p3+arg1 >= 0), cost: 1
+	
+		propagated equality arg1p3 = arg2p3
+		
+	Simplified Guard
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg2p3, arg2'=arg2p3, (0 >= 0 /\ 0 == 0 /\ arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ -1+n >= 0 /\ -arg2p3+arg1 >= 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg2p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ -1+n >= 0 /\ -arg2p3+arg1 >= 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg2p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ -1+n >= 0 /\ -arg2p3+arg1 >= 0), cost: 1
+	New rule:
+	f151_0_main_InvokeMethod -> f151_0_main_InvokeMethod : arg1'=arg2p3, arg2'=arg2p3, (arg2p3 > 0 /\ -arg2p3+arg2 >= 0 /\ -arg2p3+arg1 >= 0), cost: 1
+
+Step with 9
+
+	Trace
+
+	4[T], 5[(arg2p1-arg1 <= 0 /\ arg2p1 > 0 /\ 2-arg2 == 0 /\ arg1p1-arg1 <= 0 /\ arg1p1 > 0 /\ arg1 > 0)], 9[(arg2p3 > 0 /\ -arg2p3+arg2 <= 0 /\ -arg2p3+arg2 >= 0 /\ arg2 > 0 /\ arg2-arg1p3 >= 0 /\ -arg2p3+arg1 >= 0 /\ arg1p3 > 0 /\ -arg1p3+arg1 <= 0 /\ -arg1p3+arg1 >= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {9[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=2 arg3=0 ] 4 [ arg1=1 arg2=1 arg3=2 ] 5 [ arg1=arg1 arg2=arg2 arg3=arg3 ] 9
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

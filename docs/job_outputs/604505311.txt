@@ -1,0 +1,252 @@
+NO
+
+Initial ITS
+Start location: l4
+   0: l0 -> l2 : wnt^0'=wnt^post0, c0^0'=c0^post0, deltaext_new^0'=deltaext_new^post0, __disjvr_0^0'=__disjvr_0^post0, deltaext^0'=deltaext^post0, (-deltaext^post0+deltaext^0 == 0 /\ wnt^0-wnt^post0 == 0 /\ __disjvr_0^0-__disjvr_0^post0 == 0 /\ -c0^post0+c0^0 == 0 /\ -__disjvr_0^0+__disjvr_0^post0 == 0 /\ deltaext_new^0-deltaext_new^post0 == 0), cost: 1
+   1: l2 -> l1 : wnt^0'=wnt^post1, c0^0'=c0^post1, deltaext_new^0'=deltaext_new^post1, __disjvr_0^0'=__disjvr_0^post1, deltaext^0'=deltaext^post1, (-__disjvr_0^post1+__disjvr_0^0 == 0 /\ -deltaext_new^post1+deltaext_new^0 == 0 /\ c0^0-c0^post1 == 0 /\ -deltaext_new^0+deltaext^post1 == 0 /\ wnt^0-wnt^post1 == 0), cost: 1
+   2: l1 -> l0 : wnt^0'=wnt^post2, c0^0'=c0^post2, deltaext_new^0'=deltaext_new^post2, __disjvr_0^0'=__disjvr_0^post2, deltaext^0'=deltaext^post2, (wnt^0-wnt^post2 == 0 /\ -c0^post2+c0^0 == 0 /\ -deltaext^post2+deltaext^0 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0 /\ deltaext_new^post2-deltaext^0 == 0), cost: 1
+   3: l1 -> l0 : wnt^0'=wnt^post3, c0^0'=c0^post3, deltaext_new^0'=deltaext_new^post3, __disjvr_0^0'=__disjvr_0^post3, deltaext^0'=deltaext^post3, (1-deltaext^0+deltaext_new^post3 == 0 /\ wnt^0-wnt^post3 == 0 /\ -deltaext^post3+deltaext^0 == 0 /\ c0^0-c0^post3 == 0 /\ 2+wnt^0+c0^0-2*deltaext^0 <= 0 /\ -__disjvr_0^post3+__disjvr_0^0 == 0), cost: 1
+   4: l1 -> l0 : wnt^0'=wnt^post4, c0^0'=c0^post4, deltaext_new^0'=deltaext_new^post4, __disjvr_0^0'=__disjvr_0^post4, deltaext^0'=deltaext^post4, (__disjvr_0^0-__disjvr_0^post4 == 0 /\ 1-wnt^0-c0^0+2*deltaext^0 <= 0 /\ -deltaext^post4+deltaext^0 == 0 /\ c0^0-c0^post4 == 0 /\ wnt^0-wnt^post4 == 0 /\ -1+deltaext_new^post4-deltaext^0 == 0), cost: 1
+   5: l3 -> l1 : wnt^0'=wnt^post5, c0^0'=c0^post5, deltaext_new^0'=deltaext_new^post5, __disjvr_0^0'=__disjvr_0^post5, deltaext^0'=deltaext^post5, (-3+wnt^0 <= 0 /\ deltaext^0-deltaext^post5 == 0 /\ -deltaext^0 <= 0 /\ wnt^0-wnt^post5 == 0 /\ -3+deltaext^0 <= 0 /\ -2+c0^post5 == 0 /\ -wnt^0 <= 0 /\ -deltaext_new^post5+deltaext_new^0 == 0 /\ -__disjvr_0^post5+__disjvr_0^0 == 0), cost: 1
+   6: l4 -> l3 : wnt^0'=wnt^post6, c0^0'=c0^post6, deltaext_new^0'=deltaext_new^post6, __disjvr_0^0'=__disjvr_0^post6, deltaext^0'=deltaext^post6, (-deltaext^post6+deltaext^0 == 0 /\ deltaext_new^0-deltaext_new^post6 == 0 /\ wnt^0-wnt^post6 == 0 /\ -__disjvr_0^post6+__disjvr_0^0 == 0 /\ c0^0-c0^post6 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l2 : wnt^0'=wnt^post0, c0^0'=c0^post0, deltaext_new^0'=deltaext_new^post0, __disjvr_0^0'=__disjvr_0^post0, deltaext^0'=deltaext^post0, (-deltaext^post0+deltaext^0 == 0 /\ wnt^0-wnt^post0 == 0 /\ __disjvr_0^0-__disjvr_0^post0 == 0 /\ -c0^post0+c0^0 == 0 /\ -__disjvr_0^0+__disjvr_0^post0 == 0 /\ deltaext_new^0-deltaext_new^post0 == 0), cost: 1
+New rule:
+l0 -> l2 : 0 == 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l1 : wnt^0'=wnt^post1, c0^0'=c0^post1, deltaext_new^0'=deltaext_new^post1, __disjvr_0^0'=__disjvr_0^post1, deltaext^0'=deltaext^post1, (-__disjvr_0^post1+__disjvr_0^0 == 0 /\ -deltaext_new^post1+deltaext_new^0 == 0 /\ c0^0-c0^post1 == 0 /\ -deltaext_new^0+deltaext^post1 == 0 /\ wnt^0-wnt^post1 == 0), cost: 1
+New rule:
+l2 -> l1 : deltaext^0'=deltaext_new^0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : wnt^0'=wnt^post2, c0^0'=c0^post2, deltaext_new^0'=deltaext_new^post2, __disjvr_0^0'=__disjvr_0^post2, deltaext^0'=deltaext^post2, (wnt^0-wnt^post2 == 0 /\ -c0^post2+c0^0 == 0 /\ -deltaext^post2+deltaext^0 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0 /\ deltaext_new^post2-deltaext^0 == 0), cost: 1
+New rule:
+l1 -> l0 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : wnt^0'=wnt^post3, c0^0'=c0^post3, deltaext_new^0'=deltaext_new^post3, __disjvr_0^0'=__disjvr_0^post3, deltaext^0'=deltaext^post3, (1-deltaext^0+deltaext_new^post3 == 0 /\ wnt^0-wnt^post3 == 0 /\ -deltaext^post3+deltaext^0 == 0 /\ c0^0-c0^post3 == 0 /\ 2+wnt^0+c0^0-2*deltaext^0 <= 0 /\ -__disjvr_0^post3+__disjvr_0^0 == 0), cost: 1
+New rule:
+l1 -> l0 : deltaext_new^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : wnt^0'=wnt^post4, c0^0'=c0^post4, deltaext_new^0'=deltaext_new^post4, __disjvr_0^0'=__disjvr_0^post4, deltaext^0'=deltaext^post4, (__disjvr_0^0-__disjvr_0^post4 == 0 /\ 1-wnt^0-c0^0+2*deltaext^0 <= 0 /\ -deltaext^post4+deltaext^0 == 0 /\ c0^0-c0^post4 == 0 /\ wnt^0-wnt^post4 == 0 /\ -1+deltaext_new^post4-deltaext^0 == 0), cost: 1
+New rule:
+l1 -> l0 : deltaext_new^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l1 : wnt^0'=wnt^post5, c0^0'=c0^post5, deltaext_new^0'=deltaext_new^post5, __disjvr_0^0'=__disjvr_0^post5, deltaext^0'=deltaext^post5, (-3+wnt^0 <= 0 /\ deltaext^0-deltaext^post5 == 0 /\ -deltaext^0 <= 0 /\ wnt^0-wnt^post5 == 0 /\ -3+deltaext^0 <= 0 /\ -2+c0^post5 == 0 /\ -wnt^0 <= 0 /\ -deltaext_new^post5+deltaext_new^0 == 0 /\ -__disjvr_0^post5+__disjvr_0^0 == 0), cost: 1
+New rule:
+l3 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l4 -> l3 : wnt^0'=wnt^post6, c0^0'=c0^post6, deltaext_new^0'=deltaext_new^post6, __disjvr_0^0'=__disjvr_0^post6, deltaext^0'=deltaext^post6, (-deltaext^post6+deltaext^0 == 0 /\ deltaext_new^0-deltaext_new^post6 == 0 /\ wnt^0-wnt^post6 == 0 /\ -__disjvr_0^post6+__disjvr_0^0 == 0 /\ c0^0-c0^post6 == 0), cost: 1
+New rule:
+l4 -> l3 : TRUE, cost: 1
+
+Simplified rules
+Start location: l4
+   7: l0 -> l2 : 0 == 0, cost: 1
+   8: l2 -> l1 : deltaext^0'=deltaext_new^0, TRUE, cost: 1
+   9: l1 -> l0 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 1
+  10: l1 -> l0 : deltaext_new^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 1
+  11: l1 -> l0 : deltaext_new^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 1
+  12: l3 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 1
+  13: l4 -> l3 : TRUE, cost: 1
+
+
+Eliminating location l3 by chaining:
+
+Applied chaining
+First rule:
+l4 -> l3 : TRUE, cost: 1
+Second rule:
+l3 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 1
+New rule:
+l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 12 13
+
+Eliminating location l2 by chaining:
+
+Applied chaining
+First rule:
+l0 -> l2 : 0 == 0, cost: 1
+Second rule:
+l2 -> l1 : deltaext^0'=deltaext_new^0, TRUE, cost: 1
+New rule:
+l0 -> l1 : deltaext^0'=deltaext_new^0, 0 == 0, cost: 2
+
+Applied deletion
+Removed the following rules: 7 8
+
+Eliminated locations on linear paths
+Start location: l4
+  15: l0 -> l1 : deltaext^0'=deltaext_new^0, 0 == 0, cost: 2
+   9: l1 -> l0 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 1
+  10: l1 -> l0 : deltaext_new^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 1
+  11: l1 -> l0 : deltaext_new^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 1
+  14: l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+
+
+Eliminating location l0 by chaining:
+
+Applied chaining
+First rule:
+l1 -> l0 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 1
+Second rule:
+l0 -> l1 : deltaext^0'=deltaext_new^0, 0 == 0, cost: 2
+New rule:
+l1 -> l1 : deltaext_new^0'=deltaext^0, deltaext^0'=deltaext^0, (0 == 0 /\ wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+
+Applied simplification
+Original rule:
+l1 -> l1 : deltaext_new^0'=deltaext^0, deltaext^0'=deltaext^0, (0 == 0 /\ wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+New rule:
+l1 -> l1 : deltaext_new^0'=deltaext^0, deltaext^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+
+Applied chaining
+First rule:
+l1 -> l0 : deltaext_new^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 1
+Second rule:
+l0 -> l1 : deltaext^0'=deltaext_new^0, 0 == 0, cost: 2
+New rule:
+l1 -> l1 : deltaext_new^0'=-1+deltaext^0, deltaext^0'=-1+deltaext^0, (0 == 0 /\ 2+wnt^0+c0^0-2*deltaext^0 <= 0), cost: 3
+
+Applied simplification
+Original rule:
+l1 -> l1 : deltaext_new^0'=-1+deltaext^0, deltaext^0'=-1+deltaext^0, (0 == 0 /\ 2+wnt^0+c0^0-2*deltaext^0 <= 0), cost: 3
+New rule:
+l1 -> l1 : deltaext_new^0'=-1+deltaext^0, deltaext^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 3
+
+Applied chaining
+First rule:
+l1 -> l0 : deltaext_new^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 1
+Second rule:
+l0 -> l1 : deltaext^0'=deltaext_new^0, 0 == 0, cost: 2
+New rule:
+l1 -> l1 : deltaext_new^0'=1+deltaext^0, deltaext^0'=1+deltaext^0, (0 == 0 /\ 1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+
+Applied simplification
+Original rule:
+l1 -> l1 : deltaext_new^0'=1+deltaext^0, deltaext^0'=1+deltaext^0, (0 == 0 /\ 1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+New rule:
+l1 -> l1 : deltaext_new^0'=1+deltaext^0, deltaext^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 3
+
+Applied deletion
+Removed the following rules: 9 10 11 15
+
+Eliminated locations on tree-shaped paths
+Start location: l4
+  16: l1 -> l1 : deltaext_new^0'=deltaext^0, deltaext^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+  17: l1 -> l1 : deltaext_new^0'=-1+deltaext^0, deltaext^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 3
+  18: l1 -> l1 : deltaext_new^0'=1+deltaext^0, deltaext^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 3
+  14: l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+
+
+Applied simplification
+Original rule:
+l1 -> l1 : deltaext_new^0'=deltaext^0, deltaext^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+New rule:
+l1 -> l1 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+
+Simplified simple loops
+Start location: l4
+  17: l1 -> l1 : deltaext_new^0'=-1+deltaext^0, deltaext^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 3
+  18: l1 -> l1 : deltaext_new^0'=1+deltaext^0, deltaext^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 3
+  19: l1 -> l1 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+  14: l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+
+
+Applied acceleration
+Original rule:
+l1 -> l1 : deltaext_new^0'=-1+deltaext^0, deltaext^0'=-1+deltaext^0, 2+wnt^0+c0^0-2*deltaext^0 <= 0, cost: 3
+New rule:
+l1 -> l1 : deltaext_new^0'=-n+deltaext^0, deltaext^0'=-n+deltaext^0, (-1+n >= 0 /\ -wnt^0-c0^0-2*n+2*deltaext^0 >= 0), cost: 3*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_HAEeEp.txt
+
+Applied acceleration
+Original rule:
+l1 -> l1 : deltaext_new^0'=1+deltaext^0, deltaext^0'=1+deltaext^0, 1-wnt^0-c0^0+2*deltaext^0 <= 0, cost: 3
+New rule:
+l1 -> l1 : deltaext_new^0'=n0+deltaext^0, deltaext^0'=n0+deltaext^0, (1+wnt^0+c0^0-2*n0-2*deltaext^0 >= 0 /\ -1+n0 >= 0), cost: 3*n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_CeajoF.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : deltaext_new^0'=deltaext^0, (wnt^0+c0^0-2*deltaext^0 <= 0 /\ -1-wnt^0-c0^0+2*deltaext^0 <= 0), cost: 3
+New rule:
+l1 -> [5] : (-wnt^0-c0^0+2*deltaext^0 >= 0 /\ -1+n1 >= 0 /\ 1+wnt^0+c0^0-2*deltaext^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_lIhegn.txt
+
+Applied deletion
+Removed the following rules: 17 18 19
+
+Accelerated simple loops
+Start location: l4
+  20: l1 -> l1 : deltaext_new^0'=-n+deltaext^0, deltaext^0'=-n+deltaext^0, (-1+n >= 0 /\ -wnt^0-c0^0-2*n+2*deltaext^0 >= 0), cost: 3*n
+  21: l1 -> l1 : deltaext_new^0'=n0+deltaext^0, deltaext^0'=n0+deltaext^0, (1+wnt^0+c0^0-2*n0-2*deltaext^0 >= 0 /\ -1+n0 >= 0), cost: 3*n0
+  22: l1 -> [5] : (-wnt^0-c0^0+2*deltaext^0 >= 0 /\ -1+n1 >= 0 /\ 1+wnt^0+c0^0-2*deltaext^0 >= 0), cost: NONTERM
+  14: l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+
+
+Applied chaining
+First rule:
+l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+Second rule:
+l1 -> l1 : deltaext_new^0'=-n+deltaext^0, deltaext^0'=-n+deltaext^0, (-1+n >= 0 /\ -wnt^0-c0^0-2*n+2*deltaext^0 >= 0), cost: 3*n
+New rule:
+l4 -> l1 : c0^0'=2, deltaext_new^0'=-n+deltaext^0, deltaext^0'=-n+deltaext^0, (wnt^0 >= 0 /\ -1+n >= 0 /\ -3+deltaext^0 <= 0 /\ -2-wnt^0-2*n+2*deltaext^0 >= 0), cost: 2+3*n
+
+Applied chaining
+First rule:
+l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+Second rule:
+l1 -> l1 : deltaext_new^0'=n0+deltaext^0, deltaext^0'=n0+deltaext^0, (1+wnt^0+c0^0-2*n0-2*deltaext^0 >= 0 /\ -1+n0 >= 0), cost: 3*n0
+New rule:
+l4 -> l1 : c0^0'=2, deltaext_new^0'=n0+deltaext^0, deltaext^0'=n0+deltaext^0, (wnt^0 >= 0 /\ 3+wnt^0-2*n0-2*deltaext^0 >= 0 /\ -3+wnt^0 <= 0 /\ deltaext^0 >= 0 /\ -1+n0 >= 0), cost: 2+3*n0
+
+Applied chaining
+First rule:
+l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+Second rule:
+l1 -> [5] : (-wnt^0-c0^0+2*deltaext^0 >= 0 /\ -1+n1 >= 0 /\ 1+wnt^0+c0^0-2*deltaext^0 >= 0), cost: NONTERM
+New rule:
+l4 -> [5] : (wnt^0 >= 0 /\ -2-wnt^0+2*deltaext^0 >= 0 /\ -3+wnt^0 <= 0 /\ 3+wnt^0-2*deltaext^0 >= 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 20 21 22
+
+Chained accelerated rules with incoming rules
+Start location: l4
+  14: l4 -> l1 : c0^0'=2, (wnt^0 >= 0 /\ -3+wnt^0 <= 0 /\ -3+deltaext^0 <= 0 /\ deltaext^0 >= 0), cost: 2
+  23: l4 -> l1 : c0^0'=2, deltaext_new^0'=-n+deltaext^0, deltaext^0'=-n+deltaext^0, (wnt^0 >= 0 /\ -1+n >= 0 /\ -3+deltaext^0 <= 0 /\ -2-wnt^0-2*n+2*deltaext^0 >= 0), cost: 2+3*n
+  24: l4 -> l1 : c0^0'=2, deltaext_new^0'=n0+deltaext^0, deltaext^0'=n0+deltaext^0, (wnt^0 >= 0 /\ 3+wnt^0-2*n0-2*deltaext^0 >= 0 /\ -3+wnt^0 <= 0 /\ deltaext^0 >= 0 /\ -1+n0 >= 0), cost: 2+3*n0
+  25: l4 -> [5] : (wnt^0 >= 0 /\ -2-wnt^0+2*deltaext^0 >= 0 /\ -3+wnt^0 <= 0 /\ 3+wnt^0-2*deltaext^0 >= 0), cost: NONTERM
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l4
+  25: l4 -> [5] : (wnt^0 >= 0 /\ -2-wnt^0+2*deltaext^0 >= 0 /\ -3+wnt^0 <= 0 /\ 3+wnt^0-2*deltaext^0 >= 0), cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 25 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  (wnt^0 >= 0 /\ -2-wnt^0+2*deltaext^0 >= 0 /\ -3+wnt^0 <= 0 /\ 3+wnt^0-2*deltaext^0 >= 0)

@@ -1,0 +1,187 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P0, arg2'=arg2P0, arg7'=arg7P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=arg3P0, (arg1P0 > 0 /\ -arg7P0 == 0 /\ -arg4P0 == 0 /\ -arg5P0 == 0 /\ -arg2 == 0 /\ arg1 > 0 /\ -arg2P0 == 0 /\ -arg6P0 == 0 /\ -arg3P0 == 0 /\ arg1P0-arg1 <= 0), cost: 1
+   1: f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P1, arg2'=arg2P1, arg7'=arg7P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1-arg5P1 == 0 /\ -arg4P1 == 0 /\ arg1P1 > 0 /\ 1-arg6P1 == 0 /\ arg1P1-arg1 <= 0 /\ -arg3P1 == 0 /\ arg1 > 0 /\ 1+arg2P1 > 0 /\ 1-arg2 == 0 /\ 1-arg7P1 == 0), cost: 1
+   2: f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P2, arg2'=arg2P2, arg7'=arg7P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (2-arg5P2 == 0 /\ 1+arg2P2 > 0 /\ 2-arg7P2 == 0 /\ 1+arg4P2 > 0 /\ -arg3P2 == 0 /\ arg1P2 > 0 /\ arg1 > 0 /\ arg1P2-arg1 <= 0 /\ 2-arg6P2 == 0 /\ 2-arg2 == 0), cost: 1
+   3: f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P3, arg2'=arg2P3, arg7'=arg7P3, arg4'=arg4P3, arg1'=arg1P3, arg6'=arg6P3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ -arg4P3-arg3P3+x140 == 0 /\ arg2-arg7P3 == 0 /\ 3-arg6P3 == 0 /\ 1+arg2P3 > 0 /\ arg1 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ -arg5P3+arg2 == 0 /\ 1+x140 > 0), cost: 1
+   4: f671_0_main_LT -> f671_0_main_LT : arg5'=arg5P4, arg2'=arg2P4, arg7'=arg7P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (1+arg5 > 0 /\ 1+arg2-arg2P4 == 0 /\ 9-arg2-arg4P4 == 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg5-arg5P4 == 0 /\ arg1 > 0 /\ arg1P4 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 >= 0 /\ -arg1+arg1P4 <= 0 /\ -arg7P4+arg5 == 0 /\ arg6-arg6P4 == 0 /\ 1-arg3P4+arg2 == 0), cost: 1
+   5: f671_0_main_LT -> f671_0_main_LT : arg5'=arg5P5, arg2'=arg2P5, arg7'=arg7P5, arg4'=arg4P5, arg1'=arg1P5, arg6'=arg6P5, arg3'=arg3P5, (1+arg5 > 0 /\ arg5-arg7P5 == 0 /\ 9-arg4P5-arg2-x270 == 0 /\ 1+arg2+x270 >= 0 /\ 1+arg2+x270-arg3P5 == 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ 1+arg2+x270-arg2P5 == 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ -arg1+arg1P5 <= 0 /\ arg1 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 < 0 /\ arg1P5 > 0 /\ arg5-arg5P5 == 0 /\ 1-arg6P5+arg6 == 0 /\ 1+x270 > 0), cost: 1
+   6: __init -> f1_0_main_Load : arg5'=arg5P6, arg2'=arg2P6, arg7'=arg7P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P0, arg2'=arg2P0, arg7'=arg7P0, arg4'=arg4P0, arg1'=arg1P0, arg6'=arg6P0, arg3'=arg3P0, (arg1P0 > 0 /\ -arg7P0 == 0 /\ -arg4P0 == 0 /\ -arg5P0 == 0 /\ -arg2 == 0 /\ arg1 > 0 /\ -arg2P0 == 0 /\ -arg6P0 == 0 /\ -arg3P0 == 0 /\ arg1P0-arg1 <= 0), cost: 1
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=0, arg2'=0, arg7'=0, arg4'=0, arg1'=arg1P0, arg6'=0, arg3'=0, (arg1P0 > 0 /\ arg2 == 0 /\ arg1P0-arg1 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P1, arg2'=arg2P1, arg7'=arg7P1, arg4'=arg4P1, arg1'=arg1P1, arg6'=arg6P1, arg3'=arg3P1, (1-arg5P1 == 0 /\ -arg4P1 == 0 /\ arg1P1 > 0 /\ 1-arg6P1 == 0 /\ arg1P1-arg1 <= 0 /\ -arg3P1 == 0 /\ arg1 > 0 /\ 1+arg2P1 > 0 /\ 1-arg2 == 0 /\ 1-arg7P1 == 0), cost: 1
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=1, arg2'=arg2P1, arg7'=1, arg4'=0, arg1'=arg1P1, arg6'=1, arg3'=0, (arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ 1+arg2P1 > 0 /\ -1+arg2 == 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P2, arg2'=arg2P2, arg7'=arg7P2, arg4'=arg4P2, arg1'=arg1P2, arg6'=arg6P2, arg3'=arg3P2, (2-arg5P2 == 0 /\ 1+arg2P2 > 0 /\ 2-arg7P2 == 0 /\ 1+arg4P2 > 0 /\ -arg3P2 == 0 /\ arg1P2 > 0 /\ arg1 > 0 /\ arg1P2-arg1 <= 0 /\ 2-arg6P2 == 0 /\ 2-arg2 == 0), cost: 1
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=arg2P2, arg7'=2, arg4'=arg4P2, arg1'=arg1P2, arg6'=2, arg3'=0, (1+arg2P2 > 0 /\ -2+arg2 == 0 /\ 1+arg4P2 > 0 /\ arg1P2 > 0 /\ arg1P2-arg1 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg5P3, arg2'=arg2P3, arg7'=arg7P3, arg4'=arg4P3, arg1'=arg1P3, arg6'=arg6P3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ -arg4P3-arg3P3+x140 == 0 /\ arg2-arg7P3 == 0 /\ 3-arg6P3 == 0 /\ 1+arg2P3 > 0 /\ arg1 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ -arg5P3+arg2 == 0 /\ 1+x140 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg5'=arg5P4, arg2'=arg2P4, arg7'=arg7P4, arg4'=arg4P4, arg1'=arg1P4, arg6'=arg6P4, arg3'=arg3P4, (1+arg5 > 0 /\ 1+arg2-arg2P4 == 0 /\ 9-arg2-arg4P4 == 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg5-arg5P4 == 0 /\ arg1 > 0 /\ arg1P4 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 >= 0 /\ -arg1+arg1P4 <= 0 /\ -arg7P4+arg5 == 0 /\ arg6-arg6P4 == 0 /\ 1-arg3P4+arg2 == 0), cost: 1
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=1+arg2, arg7'=arg5, arg4'=9-arg2, arg1'=arg1P4, arg3'=1+arg2, (1+arg5 > 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 >= 0 /\ -arg1+arg1P4 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg5'=arg5P5, arg2'=arg2P5, arg7'=arg7P5, arg4'=arg4P5, arg1'=arg1P5, arg6'=arg6P5, arg3'=arg3P5, (1+arg5 > 0 /\ arg5-arg7P5 == 0 /\ 9-arg4P5-arg2-x270 == 0 /\ 1+arg2+x270 >= 0 /\ 1+arg2+x270-arg3P5 == 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ 1+arg2+x270-arg2P5 == 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ -arg1+arg1P5 <= 0 /\ arg1 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 < 0 /\ arg1P5 > 0 /\ arg5-arg5P5 == 0 /\ 1-arg6P5+arg6 == 0 /\ 1+x270 > 0), cost: 1
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=1+arg2+x270, arg7'=arg5, arg4'=9-arg2-x270, arg1'=arg1P5, arg6'=1+arg6, arg3'=1+arg2+x270, (arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ -arg1+arg1P5 <= 0 /\ arg2-arg3 == 0 /\ arg1P5 > 0 /\ 1+x270 > 0 /\ arg5-arg6 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+   7: f1_0_main_Load -> f671_0_main_LT : arg5'=0, arg2'=0, arg7'=0, arg4'=0, arg1'=arg1P0, arg6'=0, arg3'=0, (arg1P0 > 0 /\ arg2 == 0 /\ arg1P0-arg1 <= 0), cost: 1
+   8: f1_0_main_Load -> f671_0_main_LT : arg5'=1, arg2'=arg2P1, arg7'=1, arg4'=0, arg1'=arg1P1, arg6'=1, arg3'=0, (arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ 1+arg2P1 > 0 /\ -1+arg2 == 0), cost: 1
+   9: f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=arg2P2, arg7'=2, arg4'=arg4P2, arg1'=arg1P2, arg6'=2, arg3'=0, (1+arg2P2 > 0 /\ -2+arg2 == 0 /\ 1+arg4P2 > 0 /\ arg1P2 > 0 /\ arg1P2-arg1 <= 0), cost: 1
+  10: f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+  11: f671_0_main_LT -> f671_0_main_LT : arg2'=1+arg2, arg7'=arg5, arg4'=9-arg2, arg1'=arg1P4, arg3'=1+arg2, (1+arg5 > 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 >= 0 /\ -arg1+arg1P4 <= 0), cost: 1
+  12: f671_0_main_LT -> f671_0_main_LT : arg2'=1+arg2+x270, arg7'=arg5, arg4'=9-arg2-x270, arg1'=arg1P5, arg6'=1+arg6, arg3'=1+arg2+x270, (arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ -arg1+arg1P5 <= 0 /\ arg2-arg3 == 0 /\ arg1P5 > 0 /\ 1+x270 > 0 /\ arg5-arg6 > 0), cost: 1
+   6: __init -> f1_0_main_Load : arg5'=arg5P6, arg2'=arg2P6, arg7'=arg7P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=1+arg2, arg7'=arg5, arg4'=9-arg2, arg1'=arg1P4, arg3'=1+arg2, (1+arg5 > 0 /\ arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 == 0 /\ -arg5+arg6 >= 0 /\ -arg1+arg1P4 <= 0), cost: 1
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg2+n, arg7'=arg5, arg4'=10-arg2-n, arg1'=arg1P4, arg3'=arg2+n, (-arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ -1+n >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 11-arg2-n > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_fDdEOA.txt
+
+Applied instantiation
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg2+n, arg7'=arg5, arg4'=10-arg2-n, arg1'=arg1P4, arg3'=arg2+n, (-arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ -1+n >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 11-arg2-n > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: n
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P4, arg3'=10, (1 > 0 /\ -arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ 9-arg2 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: 10-arg2
+
+Applied acceleration
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=1+arg2+x270, arg7'=arg5, arg4'=9-arg2-x270, arg1'=arg1P5, arg6'=1+arg6, arg3'=1+arg2+x270, (arg5-arg7 == 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ -arg1+arg1P5 <= 0 /\ arg2-arg3 == 0 /\ arg1P5 > 0 /\ 1+x270 > 0 /\ arg5-arg6 > 0), cost: 1
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg2+x270*n0+n0, arg7'=arg5, arg4'=10-arg2-x270-(-1+n0)*x270-n0, arg1'=arg1P5, arg6'=arg6+n0, arg3'=arg2+x270+(-1+n0)*x270+n0, (-1+n0 >= 0 /\ -arg5+arg7 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg2-x270*(-2+n0)-x270-n0 > 0 /\ 1+x270 > 0 /\ -arg2+arg3 >= 0 /\ 1+arg5-arg6-n0 > 0), cost: n0
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_gAMMJe.txt
+
+Applied instantiation
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg2+x270*n0+n0, arg7'=arg5, arg4'=10-arg2-x270-(-1+n0)*x270-n0, arg1'=arg1P5, arg6'=arg6+n0, arg3'=arg2+x270+(-1+n0)*x270+n0, (-1+n0 >= 0 /\ -arg5+arg7 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg2-x270*(-2+n0)-x270-n0 > 0 /\ 1+x270 > 0 /\ -arg2+arg3 >= 0 /\ 1+arg5-arg6-n0 > 0), cost: n0
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P5, arg6'=10-arg2+arg6, arg3'=10, (1 > 0 /\ -arg5+arg7 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 9-arg2 >= 0 /\ -9+arg5+arg2-arg6 > 0 /\ -arg2+arg3 >= 0), cost: 10-arg2
+
+Applied instantiation
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg2+x270*n0+n0, arg7'=arg5, arg4'=10-arg2-x270-(-1+n0)*x270-n0, arg1'=arg1P5, arg6'=arg6+n0, arg3'=arg2+x270+(-1+n0)*x270+n0, (-1+n0 >= 0 /\ -arg5+arg7 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg2-x270*(-2+n0)-x270-n0 > 0 /\ 1+x270 > 0 /\ -arg2+arg3 >= 0 /\ 1+arg5-arg6-n0 > 0), cost: n0
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg5+arg2-arg6, arg7'=arg5, arg4'=10-arg5-arg2+arg6, arg1'=arg1P5, arg6'=arg5, arg3'=arg5+arg2-arg6, (1 > 0 /\ -arg5+arg7 >= 0 /\ -1+arg5-arg6 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg5-arg2+arg6 > 0 /\ -arg2+arg3 >= 0), cost: arg5-arg6
+
+Applied simplification
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P4, arg3'=10, (1 > 0 /\ -arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ 9-arg2 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: 10-arg2
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P4, arg3'=10, (-arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: 10-arg2
+
+Applied simplification
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P5, arg6'=10-arg2+arg6, arg3'=10, (1 > 0 /\ -arg5+arg7 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 9-arg2 >= 0 /\ -9+arg5+arg2-arg6 > 0 /\ -arg2+arg3 >= 0), cost: 10-arg2
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P5, arg6'=10-arg2+arg6, arg3'=10, (-arg5+arg7 >= 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ -9+arg5+arg2-arg6 > 0 /\ -arg2+arg3 >= 0), cost: 10-arg2
+
+Applied simplification
+Original rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg5+arg2-arg6, arg7'=arg5, arg4'=10-arg5-arg2+arg6, arg1'=arg1P5, arg6'=arg5, arg3'=arg5+arg2-arg6, (1 > 0 /\ -arg5+arg7 >= 0 /\ -1+arg5-arg6 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg5-arg2+arg6 > 0 /\ -arg2+arg3 >= 0), cost: arg5-arg6
+New rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg5+arg2-arg6, arg7'=arg5, arg4'=10-arg5-arg2+arg6, arg1'=arg1P5, arg6'=arg5, arg3'=arg5+arg2-arg6, (-arg5+arg7 >= 0 /\ -1+arg5-arg6 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg5-arg2+arg6 > 0 /\ -arg2+arg3 >= 0), cost: arg5-arg6
+
+Applied deletion
+Removed the following rules: 11 12
+
+Accelerated simple loops
+Start location: __init
+   7: f1_0_main_Load -> f671_0_main_LT : arg5'=0, arg2'=0, arg7'=0, arg4'=0, arg1'=arg1P0, arg6'=0, arg3'=0, (arg1P0 > 0 /\ arg2 == 0 /\ arg1P0-arg1 <= 0), cost: 1
+   8: f1_0_main_Load -> f671_0_main_LT : arg5'=1, arg2'=arg2P1, arg7'=1, arg4'=0, arg1'=arg1P1, arg6'=1, arg3'=0, (arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ 1+arg2P1 > 0 /\ -1+arg2 == 0), cost: 1
+   9: f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=arg2P2, arg7'=2, arg4'=arg4P2, arg1'=arg1P2, arg6'=2, arg3'=0, (1+arg2P2 > 0 /\ -2+arg2 == 0 /\ 1+arg4P2 > 0 /\ arg1P2 > 0 /\ arg1P2-arg1 <= 0), cost: 1
+  10: f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+  16: f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P4, arg3'=10, (-arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: 10-arg2
+  17: f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P5, arg6'=10-arg2+arg6, arg3'=10, (-arg5+arg7 >= 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ -9+arg5+arg2-arg6 > 0 /\ -arg2+arg3 >= 0), cost: 10-arg2
+  18: f671_0_main_LT -> f671_0_main_LT : arg2'=arg5+arg2-arg6, arg7'=arg5, arg4'=10-arg5-arg2+arg6, arg1'=arg1P5, arg6'=arg5, arg3'=arg5+arg2-arg6, (-arg5+arg7 >= 0 /\ -1+arg5-arg6 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg5-arg2+arg6 > 0 /\ -arg2+arg3 >= 0), cost: arg5-arg6
+   6: __init -> f1_0_main_Load : arg5'=arg5P6, arg2'=arg2P6, arg7'=arg7P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=arg2P2, arg7'=2, arg4'=arg4P2, arg1'=arg1P2, arg6'=2, arg3'=0, (1+arg2P2 > 0 /\ -2+arg2 == 0 /\ 1+arg4P2 > 0 /\ arg1P2 > 0 /\ arg1P2-arg1 <= 0), cost: 1
+Second rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P4, arg3'=10, (-arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: 10-arg2
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=10, arg7'=2, arg4'=0, arg1'=arg1P4, arg6'=2, arg3'=10, (-2+arg2 == 0 /\ arg1P4 > 0 /\ -arg1+arg1P4 <= 0), cost: 11
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+Second rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P4, arg3'=10, (-arg5+arg7 >= 0 /\ 1+arg5 > 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ arg1P4 > 0 /\ arg2-arg3 >= 0 /\ -arg5+arg6 >= 0 /\ -arg2+arg3 >= 0 /\ arg1-arg1P4 >= 0), cost: 10-arg2
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=10, arg7'=arg2, arg4'=0, arg1'=arg1P4, arg6'=3, arg3'=10, (-3+arg2 == 0 /\ arg1P4 > 0 /\ -arg1+arg1P4 <= 0), cost: 11-arg3P3
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+Second rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=10, arg7'=arg5, arg4'=0, arg1'=arg1P5, arg6'=10-arg2+arg6, arg3'=10, (-arg5+arg7 >= 0 /\ -9+arg2 <= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ -9+arg5+arg2-arg6 > 0 /\ -arg2+arg3 >= 0), cost: 10-arg2
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=10, arg7'=arg2, arg4'=0, arg1'=arg1P5, arg6'=13-arg3P3, arg3'=10, (-12+arg2+arg3P3 > 0 /\ 1+arg3P3 > 0 /\ -9+arg3P3 <= 0 /\ -arg1+arg1P5 <= 0 /\ arg1P5 > 0), cost: 11-arg3P3
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+Second rule:
+f671_0_main_LT -> f671_0_main_LT : arg2'=arg5+arg2-arg6, arg7'=arg5, arg4'=10-arg5-arg2+arg6, arg1'=arg1P5, arg6'=arg5, arg3'=arg5+arg2-arg6, (-arg5+arg7 >= 0 /\ -1+arg5-arg6 >= 0 /\ arg5-arg7 >= 0 /\ 1+arg2 > 0 /\ arg4 > 0 /\ 1+arg6 > 0 /\ arg2-arg3 >= 0 /\ arg1P5 > 0 /\ arg1-arg1P5 >= 0 /\ 11-arg5-arg2+arg6 > 0 /\ -arg2+arg3 >= 0), cost: arg5-arg6
+New rule:
+f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=-3+arg2+arg3P3, arg7'=arg2, arg4'=13-arg2-arg3P3, arg1'=arg1P5, arg6'=arg2, arg3'=-3+arg2+arg3P3, (-4+arg2 >= 0 /\ 14-arg2-arg3P3 > 0 /\ 1+arg3P3 > 0 /\ -arg1+arg1P5 <= 0 /\ arg1P5 > 0), cost: -2+arg2
+
+Applied deletion
+Removed the following rules: 16 17 18
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   7: f1_0_main_Load -> f671_0_main_LT : arg5'=0, arg2'=0, arg7'=0, arg4'=0, arg1'=arg1P0, arg6'=0, arg3'=0, (arg1P0 > 0 /\ arg2 == 0 /\ arg1P0-arg1 <= 0), cost: 1
+   8: f1_0_main_Load -> f671_0_main_LT : arg5'=1, arg2'=arg2P1, arg7'=1, arg4'=0, arg1'=arg1P1, arg6'=1, arg3'=0, (arg1P1 > 0 /\ arg1P1-arg1 <= 0 /\ 1+arg2P1 > 0 /\ -1+arg2 == 0), cost: 1
+   9: f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=arg2P2, arg7'=2, arg4'=arg4P2, arg1'=arg1P2, arg6'=2, arg3'=0, (1+arg2P2 > 0 /\ -2+arg2 == 0 /\ 1+arg4P2 > 0 /\ arg1P2 > 0 /\ arg1P2-arg1 <= 0), cost: 1
+  10: f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=arg2P3, arg7'=arg2, arg4'=-arg3P3+x140, arg1'=arg1P3, arg6'=3, arg3'=arg3P3, (1+arg3P3 > 0 /\ -2+arg2 > 0 /\ 1+arg2P3 > 0 /\ arg1-arg1P3 >= 0 /\ arg1P3 > 0 /\ 1+x140 > 0), cost: 1
+  19: f1_0_main_Load -> f671_0_main_LT : arg5'=2, arg2'=10, arg7'=2, arg4'=0, arg1'=arg1P4, arg6'=2, arg3'=10, (-2+arg2 == 0 /\ arg1P4 > 0 /\ -arg1+arg1P4 <= 0), cost: 11
+  20: f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=10, arg7'=arg2, arg4'=0, arg1'=arg1P4, arg6'=3, arg3'=10, (-3+arg2 == 0 /\ arg1P4 > 0 /\ -arg1+arg1P4 <= 0), cost: 11-arg3P3
+  21: f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=10, arg7'=arg2, arg4'=0, arg1'=arg1P5, arg6'=13-arg3P3, arg3'=10, (-12+arg2+arg3P3 > 0 /\ 1+arg3P3 > 0 /\ -9+arg3P3 <= 0 /\ -arg1+arg1P5 <= 0 /\ arg1P5 > 0), cost: 11-arg3P3
+  22: f1_0_main_Load -> f671_0_main_LT : arg5'=arg2, arg2'=-3+arg2+arg3P3, arg7'=arg2, arg4'=13-arg2-arg3P3, arg1'=arg1P5, arg6'=arg2, arg3'=-3+arg2+arg3P3, (-4+arg2 >= 0 /\ 14-arg2-arg3P3 > 0 /\ 1+arg3P3 > 0 /\ -arg1+arg1P5 <= 0 /\ arg1P5 > 0), cost: -2+arg2
+   6: __init -> f1_0_main_Load : arg5'=arg5P6, arg2'=arg2P6, arg7'=arg7P6, arg4'=arg4P6, arg1'=arg1P6, arg6'=arg6P6, arg3'=arg3P6, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

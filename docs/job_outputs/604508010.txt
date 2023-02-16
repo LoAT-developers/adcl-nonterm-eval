@@ -1,0 +1,243 @@
+unknown
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f161_0_createList_Return -> f227_0_isCyclic_NONNULL : arg1'=arg1p1, arg2'=arg2p1, (1+arg1 > 0 /\ arg1p1-arg1 <= 0 /\ 1+arg1p1 > 0), cost: 1
+   2: f227_0_isCyclic_NONNULL -> f331_0_isCyclic_NULL : arg1'=arg1p3, arg2'=arg2p3, (1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_Load -> f227_0_isCyclic_NONNULL : arg1'=arg1p2, arg2'=arg2p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   4: f1_0_main_Load -> f201_0_createList_LE : arg1'=arg1p5, arg2'=arg2p5, (1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   3: f331_0_isCyclic_NULL -> f331_0_isCyclic_NULL : arg1'=arg1p4, arg2'=arg2p4, (1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0), cost: 1
+   5: f201_0_createList_LE -> f201_0_createList_LE : arg1'=arg1p6, arg2'=arg2p6, (-1-arg1p6+arg1 == 0 /\ arg1 > 0), cost: 1
+   6: __init -> f1_0_main_Load : arg1'=arg1p7, arg2'=arg2p7, T, cost: 1
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f161_0_createList_Return -> f227_0_isCyclic_NONNULL : arg1'=arg1p1, arg2'=arg2p1, (1+arg1 > 0 /\ arg1p1-arg1 <= 0 /\ 1+arg1p1 > 0), cost: 1
+   2: f227_0_isCyclic_NONNULL -> f331_0_isCyclic_NULL : arg1'=arg1p3, arg2'=arg2p3, (1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_Load -> f227_0_isCyclic_NONNULL : arg1'=arg1p2, arg2'=arg2p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   4: f1_0_main_Load -> f201_0_createList_LE : arg1'=arg1p5, arg2'=arg2p5, (1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   3: f331_0_isCyclic_NULL -> f331_0_isCyclic_NULL : arg1'=arg1p4, arg2'=arg2p4, (1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0), cost: 1
+   7: f201_0_createList_LE -> f201_0_createList_LE : arg1'=-1+arg1, arg2'=arg2p6, arg1 > 0, cost: 1
+   6: __init -> f1_0_main_Load : arg1'=arg1p7, arg2'=arg2p7, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f201_0_createList_LE -> f201_0_createList_LE : arg1'=arg1p6, arg2'=arg2p6, (-1-arg1p6+arg1 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f201_0_createList_LE -> f201_0_createList_LE : arg1'=-1+arg1, arg2'=arg2p6, (0 == 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p6 = -1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f201_0_createList_LE -> f201_0_createList_LE : arg1'=-1+arg1, arg2'=arg2p6, (0 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f201_0_createList_LE -> f201_0_createList_LE : arg1'=-1+arg1, arg2'=arg2p6, arg1 > 0, cost: 1
+
+Step with 6
+
+	Trace
+
+	6[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 1
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 2
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Step with 3
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0)], 3[(1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 3
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0)], 3[(1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0)], 3[(1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0)], 3[(1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}, {3[T]}]
+
+Backtrack
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {3[T]}]
+
+Backtrack
+
+	Trace
+
+	6[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}]
+
+Backtrack
+
+	Trace
+
+	6[T]
+	
+	Blocked
+
+	[{}, {1[T]}]
+
+Step with 4
+
+	Trace
+
+	6[T], 4[(1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	6[T], 4[(1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0)], 7[(arg1 > 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f161_0_createList_Return -> f227_0_isCyclic_NONNULL : arg1'=arg1p1, arg2'=arg2p1, (1+arg1 > 0 /\ arg1p1-arg1 <= 0 /\ 1+arg1p1 > 0), cost: 1
+   2: f227_0_isCyclic_NONNULL -> f331_0_isCyclic_NULL : arg1'=arg1p3, arg2'=arg2p3, (1+arg2p3 > 0 /\ arg1p3-arg1 <= 0 /\ arg1p3 > 0 /\ 1+arg2p3-arg1 <= 0 /\ arg1 > 0), cost: 1
+   1: f1_0_main_Load -> f227_0_isCyclic_NONNULL : arg1'=arg1p2, arg2'=arg2p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   4: f1_0_main_Load -> f201_0_createList_LE : arg1'=arg1p5, arg2'=arg2p5, (1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   3: f331_0_isCyclic_NULL -> f331_0_isCyclic_NULL : arg1'=arg1p4, arg2'=arg2p4, (1+arg2p4 > 0 /\ -1-arg1p4+arg1 >= 0 /\ -3-arg2p4+arg2 >= 0 /\ -2+arg2 > 0 /\ 1+arg1p4 > 0 /\ arg1 > 0), cost: 1
+   7: f201_0_createList_LE -> f201_0_createList_LE : arg1'=-1+arg1, arg2'=arg2p6, arg1 > 0, cost: 1
+   8: f201_0_createList_LE -> f201_0_createList_LE : arg1'=-n+arg1, arg2'=arg2p6, (-1+n >= 0 /\ 1-n+arg1 > 0), cost: 1
+   6: __init -> f1_0_main_Load : arg1'=arg1p7, arg2'=arg2p7, T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f201_0_createList_LE -> f201_0_createList_LE : arg1'=-1+arg1, arg2'=arg2p6, (arg1 > 0), cost: 1
+	New rule:
+	f201_0_createList_LE -> f201_0_createList_LE : arg1'=-n+arg1, arg2'=arg2p6, (-1+n >= 0 /\ 1-n+arg1 > 0), cost: 1
+
+		arg1 > 0 [0]: montonic decrease yields 1-n+arg1 > 0
+		
+		arg1 > 0 [1]: eventual increase yields (1 <= 0 /\ arg1 > 0)
+		
+		Replacement map: {arg1 > 0 -> 1-n+arg1 > 0}
+
+	Trace
+
+	6[T], 4[(1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0)], 8[(-1+n >= 0 /\ 1-n+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[T], 4[(1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {8[T]}]
+
+Step with 7
+
+	Trace
+
+	6[T], 4[(1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0)], 7[(arg1 > 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {8[T]}, {}]
+
+Covered
+
+	Trace
+
+	6[T], 4[(1+arg1p5 > 0 /\ arg1 > 0 /\ 1+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[T]
+	
+	Blocked
+
+	[{}, {1[T], 4[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{6[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

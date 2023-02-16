@@ -1,0 +1,462 @@
+unknown
+
+Initial ITS
+
+Start location: [1]
+Program variables: c flag x y
+   0: [1] -> [2] : flag'=1, T, cost: 1
+   1: [2] -> [3] : c'=0, T, cost: 1
+   2: [3] -> [4] : x'=nondet, T, cost: 1
+   3: [4] -> [5] : y'=nondet1, T, cost: 1
+   4: [5] -> [6] : (flag < 0 \/ flag > 0), cost: 1
+  12: [5] -> [12] : (flag <= 0 /\ flag >= 0), cost: 1
+   5: [6] -> [8] : -y+x >= 0, cost: 1
+   8: [6] -> [7] : -y+x < 0, cost: 1
+   9: [7] -> [10] : x'=1+x, T, cost: 1
+   6: [8] -> [9] : flag'=0, T, cost: 1
+   7: [9] -> [7] : T, cost: 1
+  10: [10] -> [11] : c'=1+c, T, cost: 1
+  11: [11] -> [5] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: c flag x y
+  15: [1] -> [5] : c'=0, flag'=1, x'=nondet, y'=nondet1, T, cost: 1
+   4: [5] -> [6] : (flag < 0 \/ flag > 0), cost: 1
+  12: [5] -> [12] : (flag <= 0 /\ flag >= 0), cost: 1
+   8: [6] -> [7] : -y+x < 0, cost: 1
+  17: [6] -> [7] : flag'=0, -y+x >= 0, cost: 1
+  19: [7] -> [5] : c'=1+c, x'=1+x, T, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : flag'=1, T, cost: 1
+	Second rule:
+	[2] -> [3] : c'=0, T, cost: 1
+	New rule:
+	[1] -> [3] : c'=0, flag'=1, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [3] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [3] : c'=0, flag'=1, T, cost: 1
+	Second rule:
+	[3] -> [4] : x'=nondet, T, cost: 1
+	New rule:
+	[1] -> [4] : c'=0, flag'=1, x'=nondet, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 13
+	
+	Eliminating location [4] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [4] : c'=0, flag'=1, x'=nondet, T, cost: 1
+	Second rule:
+	[4] -> [5] : y'=nondet1, T, cost: 1
+	New rule:
+	[1] -> [5] : c'=0, flag'=1, x'=nondet, y'=nondet1, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 14
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [8] : -y+x >= 0, cost: 1
+	Second rule:
+	[8] -> [9] : flag'=0, T, cost: 1
+	New rule:
+	[6] -> [9] : flag'=0, -y+x >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 6
+	
+	Eliminating location [9] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [9] : flag'=0, -y+x >= 0, cost: 1
+	Second rule:
+	[9] -> [7] : T, cost: 1
+	New rule:
+	[6] -> [7] : flag'=0, -y+x >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 7 16
+	
+	Eliminating location [10] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[7] -> [10] : x'=1+x, T, cost: 1
+	Second rule:
+	[10] -> [11] : c'=1+c, T, cost: 1
+	New rule:
+	[7] -> [11] : c'=1+c, x'=1+x, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 9 10
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[7] -> [11] : c'=1+c, x'=1+x, T, cost: 1
+	Second rule:
+	[11] -> [5] : T, cost: 1
+	New rule:
+	[7] -> [5] : c'=1+c, x'=1+x, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 11 18
+
+Step with 15
+
+	Trace
+
+	15[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 4
+
+	Trace
+
+	15[T], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {}]
+
+Step with 8
+
+	Trace
+
+	15[T], 4[(flag > 0)], 8[(-y+x < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {}, {}]
+
+Step with 19
+
+	Trace
+
+	15[T], 4[(flag > 0)], 8[(-y+x < 0)], 19[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: c flag x y
+  15: [1] -> [5] : c'=0, flag'=1, x'=nondet, y'=nondet1, T, cost: 1
+   4: [5] -> [6] : (flag < 0 \/ flag > 0), cost: 1
+  12: [5] -> [12] : (flag <= 0 /\ flag >= 0), cost: 1
+  20: [5] -> [5] : c'=c+n, x'=n+x, (1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0), cost: 1
+   8: [6] -> [7] : -y+x < 0, cost: 1
+  17: [6] -> [7] : flag'=0, -y+x >= 0, cost: 1
+  19: [7] -> [5] : c'=1+c, x'=1+x, T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[5] -> [5] : c'=1+c, x'=1+x, (flag > 0 /\ -y+x < 0), cost: 1
+	New rule:
+	[5] -> [5] : c'=c+n, x'=n+x, (1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0), cost: 1
+
+		flag > 0 [0]: monotonic increase yields flag > 0
+		
+		y-x > 0 [0]: montonic decrease yields 1-n+y-x > 0
+		
+		y-x > 0 [1]: eventual increase yields (1 <= 0 /\ y-x > 0)
+		
+		Replacement map: {flag > 0 -> flag > 0, y-x > 0 -> 1-n+y-x > 0}
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {20[T]}]
+
+Step with 4
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}]
+
+Step with 8
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 8[(-y+x < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}, {}]
+
+Step with 19
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 8[(-y+x < 0)], 19[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 8[(-y+x < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}, {19[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T]}]
+
+Step with 17
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 17[(-y+x >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T]}, {}]
+
+Step with 19
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 17[(-y+x >= 0)], 19[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T]}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 12
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 17[(-y+x >= 0)], 19[T], 12[(flag <= 0 /\ flag >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T]}, {}, {4[T], 20[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 17[(-y+x >= 0)], 19[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T]}, {}, {4[T], 12[T], 20[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)], 17[(-y+x >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T]}, {19[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {8[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T], 20[(1-n+y-x > 0 /\ flag > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {4[flag > 0], 12[T], 20[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}]
+
+Step with 4
+
+	Trace
+
+	15[T], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {}]
+
+Step with 17
+
+	Trace
+
+	15[T], 4[(flag > 0)], 17[(-y+x >= 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {}, {}]
+
+Step with 19
+
+	Trace
+
+	15[T], 4[(flag > 0)], 17[(-y+x >= 0)], 19[T]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	15[T], 4[(flag > 0)], 17[(-y+x >= 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {}, {19[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {17[T]}]
+
+Step with 8
+
+	Trace
+
+	15[T], 4[(flag > 0)], 8[(-y+x < 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {17[T]}, {}]
+
+Step with 19
+
+	Trace
+
+	15[T], 4[(flag > 0)], 8[(-y+x < 0)], 19[T]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {17[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	15[T], 4[(flag > 0)], 8[(-y+x < 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {17[T]}, {19[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T], 4[(flag > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 20[T]}, {8[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	15[T]
+	
+	Blocked
+
+	[{}, {4[flag > 0], 12[T], 20[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{15[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

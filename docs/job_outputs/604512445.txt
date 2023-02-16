@@ -1,0 +1,67 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [2] : T, cost: 1
+   2: [2] -> [3] : _|_, cost: 1
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 1
+
+	Trace
+
+	0[T], 1[T]
+	
+	Blocked
+
+	[{}, {2[T]}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: i
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [2] : T, cost: 1
+   2: [2] -> [3] : _|_, cost: 1
+   3: [2] -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[2] -> [2] : T, cost: 1
+	New rule:
+	[2] -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+Step with 3
+
+	Trace
+
+	0[T], 3[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {2[T]}, {3[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i=0 ] 0 [ i=i ] 3
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

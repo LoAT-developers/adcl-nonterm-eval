@@ -1,0 +1,729 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l24, true>
+<l1, l2, (1 <= (0 + b_arp^0))>
+<l1, l2, ((0 + b_arp^0) <= 0), par{b_configured^0 -> 1}>
+<l3, l1, true>
+<l4, l5, true, par{k^0 -> (1 + k^0)}>
+<l6, l4, ((0 + seq^0) <= (1 + N^0))>
+<l7, l6, (1 <= (0 + pos^0)), par{i^0 -> (~(1) + i^0), pos^0 -> 0}>
+<l7, l6, ((0 + pos^0) <= 0) /\ ((0 + b_arp^0) <= 0), par{pos^0 -> (1 + pos^0)}>
+<l8, l6, ((0 + i^0) <= 0) /\ (undef79 = (1 + seq^0)) /\ (undef80 = undef80) /\ (0 <= (0 + undef80)), par{i^0 -> (3 + undef79), pos^0 -> 0, seq^0 -> undef79, z^0 -> undef80}>
+<l8, l7, (1 <= (0 + i^0))>
+<l9, l6, (1 <= (0 + z^0)), par{z^0 -> (~(1) + z^0)}>
+<l9, l8, ((0 + z^0) <= 0)>
+<l10, l4, (1 <= (0 + b_ip^0))>
+<l10, l9, ((0 + b_ip^0) <= 0) /\ (undef122 = undef122) /\ (0 <= (0 + undef122)) /\ ((0 + undef122) <= 1), par{b_arp^0 -> undef122}>
+<l11, l4, ((1 + b_probe^0) <= 1)>
+<l11, l10, (1 <= (0 + b_probe^0))>
+<l12, l11, (1 <= (0 + pos^0)), par{i^0 -> (~(1) + i^0), pos^0 -> 0}>
+<l12, l11, ((0 + pos^0) <= 0) /\ ((0 + b_probe^0) <= 0), par{pos^0 -> (1 + pos^0)}>
+<l13, l11, ((0 + i^0) <= 0) /\ (undef179 = (1 + seq^0)) /\ (undef180 = undef180) /\ (0 <= (0 + undef180)), par{i^0 -> (3 + undef179), pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180}>
+<l13, l12, (1 <= (0 + i^0))>
+<l14, l11, (1 <= (0 + z^0)), par{z^0 -> (~(1) + z^0)}>
+<l14, l13, ((0 + z^0) <= 0)>
+<l15, l3, ((1 + N^0) <= (0 + k^0))>
+<l15, l14, ((0 + k^0) <= (0 + N^0)) /\ (undef225 = undef225) /\ (0 <= (0 + undef225)) /\ ((0 + undef225) <= 1), par{b_probe^0 -> undef225}>
+<l16, l3, (1 <= (0 + b_arp^0))>
+<l16, l15, ((0 + b_arp^0) <= 0)>
+<l5, l16, true>
+<l17, l5, (1 <= (0 + pos^0)), par{i^0 -> (~(1) + i^0), pos^0 -> 0}>
+<l17, l5, ((0 + pos^0) <= 0) /\ ((0 + b_ip^0) <= 0), par{pos^0 -> (1 + pos^0)}>
+<l18, l5, ((0 + i^0) <= 0) /\ (undef289 = (1 + seq^0)) /\ (undef290 = undef290) /\ (0 <= (0 + undef290)), par{i^0 -> (3 + undef289), pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290}>
+<l18, l17, (1 <= (0 + i^0))>
+<l19, l5, (1 <= (0 + z^0)), par{z^0 -> (~(1) + z^0)}>
+<l19, l18, ((0 + z^0) <= 0)>
+<l20, l2, (undef329 = 1) /\ (undef330 = undef330) /\ (0 <= (0 + undef330)) /\ (undef321 = undef321) /\ (0 <= (0 + undef321)), par{N^0 -> undef321, b_arp^0 -> 0, b_configured^0 -> 0, b_ip^0 -> 0, b_probe^0 -> 0, i^0 -> (3 + undef329), k^0 -> 0, pos^0 -> 0, seq^0 -> undef329, z^0 -> undef330}>
+<l21, l22, true>
+<l23, l21, (1 <= (0 + b_configured^0))>
+<l23, l21, ((1 + b_configured^0) <= 0)>
+<l23, l19, ((0 + b_configured^0) <= 0) /\ (0 <= (0 + b_configured^0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1), par{b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0}>
+<l2, l23, true>
+<l24, l20, true>
+
+Fresh variables:
+undef79, undef80, undef122, undef179, undef180, undef225, undef289, undef290, undef321, undef329, undef330, undef364, 
+
+Undef variables:
+undef79, undef80, undef122, undef179, undef180, undef225, undef289, undef290, undef321, undef329, undef330, undef364, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l5, (N^0 = undef321) /\ (b_arp^0 = 0) /\ (b_configured^0 = 0) /\ (b_probe^0 = 0) /\ (i^0 = (3 + undef329)) /\ (k^0 = 0) /\ (pos^0 = 0) /\ (seq^0 = undef329) /\ (z^0 = undef330) /\ (undef329 = 1) /\ (undef330 = undef330) /\ (0 <= (0 + undef330)) /\ (undef321 = undef321) /\ (0 <= (0 + undef321)) /\ ((0 + 0) <= 0) /\ (0 <= (0 + 0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1) /\ (1 <= (0 + z^0)), par{b_ip^0 -> undef364, z^0 -> (~(1) + z^0)}>
+<l0, l5, (N^0 = undef321) /\ (b_arp^0 = 0) /\ (b_configured^0 = 0) /\ (b_probe^0 = 0) /\ (i^0 = (3 + undef329)) /\ (k^0 = 0) /\ (pos^0 = 0) /\ (seq^0 = undef329) /\ (z^0 = undef330) /\ (undef329 = 1) /\ (undef330 = undef330) /\ (0 <= (0 + undef330)) /\ (undef321 = undef321) /\ (0 <= (0 + undef321)) /\ ((0 + 0) <= 0) /\ (0 <= (0 + 0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ ((0 + pos^0) <= 0) /\ ((0 + undef364) <= 0), par{b_ip^0 -> undef364, pos^0 -> (1 + pos^0)}>
+<l5, l22, (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_configured^0))>
+<l5, l22, (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_arp^0)) /\ ((1 + b_configured^0) <= 0)>
+<l5, l5, (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_arp^0)) /\ ((0 + b_configured^0) <= 0) /\ (0 <= (0 + b_configured^0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1) /\ (1 <= (0 + z^0)), par{b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> (~(1) + z^0)}>
+<l5, l5, (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_arp^0)) /\ ((0 + b_configured^0) <= 0) /\ (0 <= (0 + b_configured^0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1) /\ ((0 + z^0) <= 0) /\ ((0 + i^0) <= 0) /\ (undef289 = (1 + seq^0)) /\ (undef290 = undef290) /\ (0 <= (0 + undef290)), par{b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> (3 + undef289), k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290}>
+<l5, l5, (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_arp^0)) /\ ((0 + b_configured^0) <= 0) /\ (0 <= (0 + b_configured^0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ (1 <= (0 + pos^0)), par{b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> (~(1) + i^0), k^0 -> 0, pos^0 -> 0}>
+<l5, l5, (1 <= (0 + b_arp^0)) /\ (1 <= (0 + b_arp^0)) /\ ((0 + b_configured^0) <= 0) /\ (0 <= (0 + b_configured^0)) /\ (undef364 = undef364) /\ (0 <= (0 + undef364)) /\ ((0 + undef364) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ ((0 + pos^0) <= 0) /\ ((0 + undef364) <= 0), par{b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> (1 + pos^0)}>
+<l5, l22, ((0 + b_arp^0) <= 0) /\ ((1 + N^0) <= (0 + k^0)) /\ ((0 + b_arp^0) <= 0) /\ (1 <= (0 + 1)), par{b_configured^0 -> 1}>
+<l5, l11, ((0 + b_arp^0) <= 0) /\ ((0 + k^0) <= (0 + N^0)) /\ (undef225 = undef225) /\ (0 <= (0 + undef225)) /\ ((0 + undef225) <= 1) /\ (1 <= (0 + z^0)), par{b_probe^0 -> undef225, z^0 -> (~(1) + z^0)}>
+<l5, l11, ((0 + b_arp^0) <= 0) /\ ((0 + k^0) <= (0 + N^0)) /\ (undef225 = undef225) /\ (0 <= (0 + undef225)) /\ ((0 + undef225) <= 1) /\ ((0 + z^0) <= 0) /\ ((0 + i^0) <= 0) /\ (undef179 = (1 + seq^0)) /\ (undef180 = undef180) /\ (0 <= (0 + undef180)), par{b_probe^0 -> undef225, i^0 -> (3 + undef179), pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180}>
+<l5, l11, ((0 + b_arp^0) <= 0) /\ ((0 + k^0) <= (0 + N^0)) /\ (undef225 = undef225) /\ (0 <= (0 + undef225)) /\ ((0 + undef225) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ (1 <= (0 + pos^0)), par{b_probe^0 -> undef225, i^0 -> (~(1) + i^0), pos^0 -> 0}>
+<l5, l11, ((0 + b_arp^0) <= 0) /\ ((0 + k^0) <= (0 + N^0)) /\ (undef225 = undef225) /\ (0 <= (0 + undef225)) /\ ((0 + undef225) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ ((0 + pos^0) <= 0) /\ ((0 + undef225) <= 0), par{b_probe^0 -> undef225, pos^0 -> (1 + pos^0)}>
+<l11, l5, ((1 + b_probe^0) <= 1), par{k^0 -> (1 + k^0)}>
+<l11, l5, (1 <= (0 + b_probe^0)) /\ (1 <= (0 + b_ip^0)), par{k^0 -> (1 + k^0)}>
+<l11, l5, (1 <= (0 + b_probe^0)) /\ ((0 + b_ip^0) <= 0) /\ (undef122 = undef122) /\ (0 <= (0 + undef122)) /\ ((0 + undef122) <= 1) /\ (1 <= (0 + z^0)) /\ ((0 + seq^0) <= (1 + N^0)), par{b_arp^0 -> undef122, k^0 -> (1 + k^0), z^0 -> (~(1) + z^0)}>
+<l11, l5, (1 <= (0 + b_probe^0)) /\ ((0 + b_ip^0) <= 0) /\ (undef122 = undef122) /\ (0 <= (0 + undef122)) /\ ((0 + undef122) <= 1) /\ ((0 + z^0) <= 0) /\ ((0 + i^0) <= 0) /\ (undef79 = (1 + seq^0)) /\ (undef80 = undef80) /\ (0 <= (0 + undef80)) /\ ((0 + undef79) <= (1 + N^0)), par{b_arp^0 -> undef122, i^0 -> (3 + undef79), k^0 -> (1 + k^0), pos^0 -> 0, seq^0 -> undef79, z^0 -> undef80}>
+<l11, l5, (1 <= (0 + b_probe^0)) /\ ((0 + b_ip^0) <= 0) /\ (undef122 = undef122) /\ (0 <= (0 + undef122)) /\ ((0 + undef122) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ (1 <= (0 + pos^0)) /\ ((0 + seq^0) <= (1 + N^0)), par{b_arp^0 -> undef122, i^0 -> (~(1) + i^0), k^0 -> (1 + k^0), pos^0 -> 0}>
+<l11, l5, (1 <= (0 + b_probe^0)) /\ ((0 + b_ip^0) <= 0) /\ (undef122 = undef122) /\ (0 <= (0 + undef122)) /\ ((0 + undef122) <= 1) /\ ((0 + z^0) <= 0) /\ (1 <= (0 + i^0)) /\ ((0 + pos^0) <= 0) /\ ((0 + undef122) <= 0) /\ ((0 + seq^0) <= (1 + N^0)), par{b_arp^0 -> undef122, k^0 -> (1 + k^0), pos^0 -> (1 + pos^0)}>
+
+Fresh variables:
+undef79, undef80, undef122, undef179, undef180, undef225, undef289, undef290, undef321, undef329, undef330, undef364, 
+
+Undef variables:
+undef79, undef80, undef122, undef179, undef180, undef225, undef289, undef290, undef321, undef329, undef330, undef364, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l5, l5, 1 <= b_arp^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+<l5, l11, 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ 0 <= undef225 /\ undef225 <= 1, {b_probe^0 -> undef225, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l11, k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 0 <= undef225 /\ undef225 <= 1 /\ 1 + seq^0 = undef179, {b_probe^0 -> undef225, i^0 -> 3 + undef179, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l11, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef225 /\ undef225 <= 1, {b_probe^0 -> undef225, i^0 -> -1 + i^0, pos^0 -> 0, rest remain the same}>
+<l5, l11, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, pos^0 -> 1 + pos^0, rest remain the same}>
+<l11, l5, b_probe^0 <= 0, {k^0 -> 1 + k^0, rest remain the same}>
+<l11, l5, 1 <= b_ip^0 /\ 1 <= b_probe^0, {k^0 -> 1 + k^0, rest remain the same}>
+<l11, l5, 1 <= b_probe^0 /\ 1 <= z^0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1, {b_arp^0 -> undef122, k^0 -> 1 + k^0, z^0 -> -1 + z^0, rest remain the same}>
+<l11, l5, 1 <= b_probe^0 /\ b_ip^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef80 /\ 0 <= undef122 /\ undef79 <= 1 + N^0 /\ undef122 <= 1 /\ 1 + seq^0 = undef79, {b_arp^0 -> undef122, i^0 -> 3 + undef79, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef79, z^0 -> undef80, rest remain the same}>
+<l11, l5, 1 <= b_probe^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1, {b_arp^0 -> undef122, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l11, l5, 1 <= b_probe^0 /\ 1 <= i^0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0, {b_arp^0 -> undef122, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, rest remain the same}>
+Variables:
+b_arp^0, b_configured^0, b_ip^0, z^0, i^0, seq^0, pos^0, N^0, b_probe^0, k^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l5, 1 <= z^0 /\ 0 <= undef321 /\ 0 <= undef330 /\ 0 <= undef364 /\ undef364 <= 1 /\ N^0 = undef321 /\ b_arp^0 = 0 /\ b_configured^0 = 0 /\ b_probe^0 = 0 /\ k^0 = 0 /\ pos^0 = 0 /\ seq^0 = undef329 /\ z^0 = undef330 /\ undef329 = 1 /\ i^0 = 3 + undef329, {b_ip^0 -> undef364, z^0 -> -1 + z^0, rest remain the same}>
+<l0, l5, 1 <= i^0 /\ z^0 <= 0 /\ 0 <= undef321 /\ 0 <= undef330 /\ N^0 = undef321 /\ b_arp^0 = 0 /\ b_configured^0 = 0 /\ b_probe^0 = 0 /\ k^0 = 0 /\ pos^0 = 0 /\ seq^0 = undef329 /\ z^0 = undef330 /\ undef364 = 0 /\ undef329 = 1 /\ i^0 = 3 + undef329, {b_ip^0 -> undef364, pos^0 -> 1 + pos^0, rest remain the same}>
+
+Graph 2
+<l5, l22, 1 <= b_arp^0 /\ 1 <= b_configured^0, {all remain the same}>
+<l5, l22, 1 <= b_arp^0 /\ 1 + b_configured^0 <= 0, {all remain the same}>
+<l5, l22, 1 + N^0 <= k^0 /\ b_arp^0 <= 0, {b_configured^0 -> 1, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 5 , 1 )
+( 11 , 1 )
+( 22 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 4.00111
+
+Checking conditional termination of SCC {l5, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012624s
+[33mRanking function: [36m7*N^0 - 7*seq^0[0m
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> 2 + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -2 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, z^0 -> -1 + z^0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+It's unfeasible after collapsing. Removing transition: 
+<l5, l5, 1 <= 0, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 2 + pos^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l5, l5, 1 <= b_arp^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+<l5, l5, 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ 2 <= z^0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> -2 + z^0, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= undef180 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef122 /\ undef179 <= 1 + N^0 /\ undef122 <= 1 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> -1 + undef180, rest remain the same}>
+<l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ undef179 <= 1 + N^0 /\ 0 <= 2 + undef179 /\ 1 + seq^0 = undef179 /\ undef122 = 0 /\ undef180 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 1, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ 2 <= i^0 /\ undef122 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 1, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Variables:
+N^0, b_arp^0, b_configured^0, b_ip^0, b_probe^0, i^0, k^0, pos^0, seq^0, z^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.014136s
+[33mRanking function: [36m6*N^0 - 6*seq^0[0m
+New Graphs: 
+Transitions:
+<l5, l5, 1 <= b_arp^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+<l5, l5, 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ 2 <= z^0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> -2 + z^0, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ 2 <= i^0 /\ undef122 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 1, rest remain the same}>
+<l5, l5, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Variables:
+N^0, b_arp^0, b_configured^0, b_ip^0, b_probe^0, i^0, k^0, pos^0, seq^0, z^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007489s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.295458s
+Trying to remove transition: <l5, l5, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.063597s
+Time used: 1.0478
+Trying to remove transition: <l5, l5, 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ 2 <= i^0 /\ undef122 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 2.162563s
+Time used: 2.15989
+Trying to remove transition: <l5, l5, 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.587564s
+Time used: 1.58373
+Trying to remove transition: <l5, l5, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.214157s
+Time used: 1.21064
+Trying to remove transition: <l5, l5, 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.593312s
+Time used: 0.590162
+Trying to remove transition: <l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.489553s
+Time used: 0.486088
+Trying to remove transition: <l5, l5, 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006209s
+Time used: 4.00285
+Trying to remove transition: <l5, l5, 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 3.524127s
+Time used: 3.51955
+Trying to remove transition: <l5, l5, k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ 2 <= z^0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> -2 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.458962s
+Time used: 1.45427
+Trying to remove transition: <l5, l5, 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.737878s
+Time used: 0.734321
+Trying to remove transition: <l5, l5, 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.582334s
+Time used: 0.579362
+Trying to remove transition: <l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.919321s
+Time used: 0.916635
+Trying to remove transition: <l5, l5, 1 <= b_arp^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.066226s
+Time used: 1.06285
+Trying to remove transition: <l5, l5, 1 <= b_arp^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.199050s
+Time used: 0.195604
+Trying to remove transition: <l5, l5, 1 <= b_arp^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.606016s
+Time used: 0.60274
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005420s
+Time used: 4.0027
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007535s
+Time used: 4.00137
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.017986s
+Time used: 1.00005
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 2.437039s
+Time used: 2.40489
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002388s
+Time used: 1.00238
+
+LOG: SAT solveNonLinear - Elapsed time: 3.439427s
+Cost: 1; Total time: 3.40727
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l5: 1 <= b_configured^0 + seq^0[0m
+[36mInvariant at l11: 1 <= b_configured^0 + seq^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l11, 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ 0 <= undef225 /\ undef225 <= 1, {b_probe^0 -> undef225, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l11, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 0 <= undef225 /\ undef225 <= 1 /\ 1 + seq^0 = undef179, {b_probe^0 -> undef225, i^0 -> 3 + undef179, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l11, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef225 /\ undef225 <= 1, {b_probe^0 -> undef225, i^0 -> -1 + i^0, pos^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l11, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, pos^0 -> 1 + pos^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l5, 1 <= b_configured^0 + seq^0 /\ b_probe^0 <= 0, {k^0 -> 1 + k^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= b_probe^0, {k^0 -> 1 + k^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_probe^0 /\ 1 <= z^0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1, {b_arp^0 -> undef122, k^0 -> 1 + k^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_probe^0 /\ b_ip^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef80 /\ 0 <= undef122 /\ undef79 <= 1 + N^0 /\ undef122 <= 1 /\ 1 + seq^0 = undef79, {b_arp^0 -> undef122, i^0 -> 3 + undef79, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef79, z^0 -> undef80, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_probe^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1, {b_arp^0 -> undef122, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_probe^0 /\ 1 <= i^0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0, {b_arp^0 -> undef122, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ 2 <= z^0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> -2 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ 2 <= i^0 /\ undef122 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + N^0 - seq^0[0m
+New Graphs: 
+Transitions:
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ 2 <= z^0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> -2 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ 2 <= i^0 /\ undef122 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 1, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Variables:
+N^0, b_arp^0, b_configured^0, b_ip^0, b_probe^0, i^0, k^0, pos^0, seq^0, z^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010958s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.871179s
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 2.089926s
+Time used: 2.08724
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ z^0 <= 0 /\ seq^0 <= 1 + N^0 /\ 2 <= i^0 /\ undef122 = 0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.380309s
+Time used: 0.376206
+
+LOG: SAT solveNonLinear - Elapsed time: 0.380309s
+Cost: 0; Total time: 0.376206
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l5: seq^0 <= 1 + N^0[0m
+[33mRanking function: [36m50003 + 50005*N^0 + i^0 - 50005*seq^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ 2 <= z^0 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> -2 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ 0 <= undef122 /\ seq^0 <= 1 + N^0 /\ undef122 <= 1 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, i^0 -> -1 + i^0, k^0 -> 1 + k^0, pos^0 -> 0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Variables:
+N^0, b_arp^0, b_configured^0, b_ip^0, b_probe^0, i^0, k^0, pos^0, seq^0, z^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010459s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.799831s
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.803859s
+Time used: 1.80133
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 2.303244s
+Time used: 2.29927
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.919835s
+Time used: 1.91545
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.931720s
+Time used: 0.927691
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.732571s
+Time used: 0.728507
+Trying to remove transition: <l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ b_ip^0 <= 0 /\ pos^0 <= 0 /\ seq^0 <= 1 + N^0 /\ undef122 = 0 /\ z^0 = 1 /\ undef225 = 1, {b_arp^0 -> undef122, b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> 1 + pos^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.459735s
+Time used: 0.456112
+
+LOG: SAT solveNonLinear - Elapsed time: 0.459735s
+Cost: 0; Total time: 0.456112
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l5: seq^0 <= 1 + N^0[0m
+[33mRanking function: [36mz^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, z^0 -> -1 + z^0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef290 /\ 0 <= undef364 /\ undef364 <= 1 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef289 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> 3 + undef289, k^0 -> 0, pos^0 -> 0, seq^0 -> undef289, z^0 -> undef290, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ z^0 <= 0 /\ 0 <= undef364 /\ undef364 <= 1 /\ b_configured^0 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, i^0 -> -1 + i^0, k^0 -> 0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_arp^0 /\ 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ b_configured^0 = 0 /\ undef364 = 0, {b_arp^0 -> 0, b_ip^0 -> undef364, b_probe^0 -> 0, k^0 -> 0, pos^0 -> 1 + pos^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Variables:
+N^0, b_arp^0, b_configured^0, b_ip^0, b_probe^0, i^0, k^0, pos^0, seq^0, z^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.014788s
+[33mRanking function: [36m-6 + 6*b_arp^0[0m
+New Graphs: 
+Transitions:
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= z^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, k^0 -> 1 + k^0, z^0 -> ((0 + ~(1)) + 0) + z^0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ i^0 <= 0 /\ z^0 <= 0 /\ 0 <= undef180 /\ 50001 + N^0 <= seq^0 /\ 1 + seq^0 = undef179 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + 3) + 0) + undef179, k^0 -> 1 + k^0, pos^0 -> 0, seq^0 -> undef179, z^0 -> undef180, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= b_ip^0 /\ 1 <= i^0 /\ 1 <= pos^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ z^0 <= 0 /\ undef225 = 1, {b_probe^0 -> undef225, i^0 -> ((0 + ~(1)) + 0) + i^0, k^0 -> 1 + k^0, pos^0 -> 0, rest remain the same}>
+<l5, l5, 1 <= b_configured^0 + seq^0 /\ 1 <= i^0 /\ k^0 <= N^0 /\ b_arp^0 <= 0 /\ pos^0 <= 0 /\ z^0 <= 0 /\ undef225 = 0, {b_probe^0 -> undef225, k^0 -> 1 + k^0, pos^0 -> ((0 + 1) + 0) + pos^0, rest remain the same}>
+Variables:
+N^0, b_arp^0, b_configured^0, b_ip^0, b_probe^0, i^0, k^0, pos^0, seq^0, z^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009829s
+[33mRanking function: [36mN^0 - k^0[0m
+New Graphs: 
+INVARIANTS: 
+5: 1 <= b_configured^0 + seq^0 , 
+11: 1 <= b_configured^0 + seq^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+5: 
+11: 
+Proving termination of subgraph 2
+Analyzing SCC {l22}...
+No cycles found.
+
+[32mProgram Terminates[0m

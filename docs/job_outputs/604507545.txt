@@ -1,0 +1,252 @@
+NO
+
+Initial ITS
+
+Start location: l3
+Program variables: x^0 y^0 z^0
+   0: l0 -> l1 : x^0'=x^post1, y^0'=y^post1, z^0'=z^post1, (-y^post1+y^0 == 0 /\ -z^post1+z^0 == 0 /\ 1-x^0 <= 0 /\ x^0-x^post1 == 0), cost: 1
+   1: l1 -> l0 : x^0'=x^post2, y^0'=y^post2, z^0'=z^post2, (-z^post2+z^0 == 0 /\ 1+y^post2-y^0 == 0 /\ x^post2-z^0 == 0), cost: 1
+   2: l1 -> l0 : x^0'=x^post3, y^0'=y^post3, z^0'=z^post3, (1-x^0+x^post3 == 0 /\ -z^post3+z^0 == 0 /\ -y^post3+y^0 == 0), cost: 1
+   3: l2 -> l0 : x^0'=x^post4, y^0'=y^post4, z^0'=z^post4, (-y^post4+y^0 == 0 /\ -z^post4+z^0 == 0 /\ x^0-x^post4 == 0), cost: 1
+   4: l3 -> l2 : x^0'=x^post5, y^0'=y^post5, z^0'=z^post5, (y^0-y^post5 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l3
+Program variables: x^0 y^0 z^0
+   0: l0 -> l1 : x^0'=x^post1, y^0'=y^post1, z^0'=z^post1, (-y^post1+y^0 == 0 /\ -z^post1+z^0 == 0 /\ 1-x^0 <= 0 /\ x^0-x^post1 == 0), cost: 1
+   1: l1 -> l0 : x^0'=x^post2, y^0'=y^post2, z^0'=z^post2, (-z^post2+z^0 == 0 /\ 1+y^post2-y^0 == 0 /\ x^post2-z^0 == 0), cost: 1
+   2: l1 -> l0 : x^0'=x^post3, y^0'=y^post3, z^0'=z^post3, (1-x^0+x^post3 == 0 /\ -z^post3+z^0 == 0 /\ -y^post3+y^0 == 0), cost: 1
+   5: l3 -> l0 : x^0'=x^post4, y^0'=y^post4, z^0'=z^post4, (x^post5-x^post4 == 0 /\ y^0-y^post5 == 0 /\ z^post5-z^post4 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0 /\ -y^post4+y^post5 == 0), cost: 1
+
+	Eliminating location l2 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l3 -> l2 : x^0'=x^post5, y^0'=y^post5, z^0'=z^post5, (y^0-y^post5 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0), cost: 1
+	Second rule:
+	l2 -> l0 : x^0'=x^post4, y^0'=y^post4, z^0'=z^post4, (-y^post4+y^0 == 0 /\ -z^post4+z^0 == 0 /\ x^0-x^post4 == 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^post4, y^0'=y^post4, z^0'=z^post4, (x^post5-x^post4 == 0 /\ y^0-y^post5 == 0 /\ z^post5-z^post4 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0 /\ -y^post4+y^post5 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+
+Simplified Transitions
+
+Start location: l3
+Program variables: x^0 y^0 z^0
+   6: l0 -> l1 : 1-x^0 <= 0, cost: 1
+   7: l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, T, cost: 1
+   8: l1 -> l0 : x^0'=-1+x^0, T, cost: 1
+   9: l3 -> l0 : T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l1 : x^0'=x^post1, y^0'=y^post1, z^0'=z^post1, (-y^post1+y^0 == 0 /\ -z^post1+z^0 == 0 /\ 1-x^0 <= 0 /\ x^0-x^post1 == 0), cost: 1
+	New rule:
+	l0 -> l1 : x^0'=x^0, y^0'=y^0, z^0'=z^0, (0 == 0 /\ 1-x^0 <= 0), cost: 1
+	
+		propagated equality y^post1 = y^0
+		
+		propagated equality z^post1 = z^0
+		
+		propagated equality x^post1 = x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l1 : x^0'=x^0, y^0'=y^0, z^0'=z^0, (0 == 0 /\ 1-x^0 <= 0), cost: 1
+	New rule:
+	l0 -> l1 : x^0'=x^0, y^0'=y^0, z^0'=z^0, 1-x^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l1 : x^0'=x^0, y^0'=y^0, z^0'=z^0, 1-x^0 <= 0, cost: 1
+	New rule:
+	l0 -> l1 : 1-x^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l1 -> l0 : x^0'=x^post2, y^0'=y^post2, z^0'=z^post2, (-z^post2+z^0 == 0 /\ 1+y^post2-y^0 == 0 /\ x^post2-z^0 == 0), cost: 1
+	New rule:
+	l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, z^0'=z^0, 0 == 0, cost: 1
+	
+		propagated equality z^post2 = z^0
+		
+		propagated equality y^post2 = -1+y^0
+		
+		propagated equality x^post2 = z^0
+		
+	Simplified Guard
+
+	Original rule:
+	l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, z^0'=z^0, 0 == 0, cost: 1
+	New rule:
+	l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, z^0'=z^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, z^0'=z^0, T, cost: 1
+	New rule:
+	l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l1 -> l0 : x^0'=x^post3, y^0'=y^post3, z^0'=z^post3, (1-x^0+x^post3 == 0 /\ -z^post3+z^0 == 0 /\ -y^post3+y^0 == 0), cost: 1
+	New rule:
+	l1 -> l0 : x^0'=-1+x^0, y^0'=y^0, z^0'=z^0, 0 == 0, cost: 1
+	
+		propagated equality x^post3 = -1+x^0
+		
+		propagated equality z^post3 = z^0
+		
+		propagated equality y^post3 = y^0
+		
+	Simplified Guard
+
+	Original rule:
+	l1 -> l0 : x^0'=-1+x^0, y^0'=y^0, z^0'=z^0, 0 == 0, cost: 1
+	New rule:
+	l1 -> l0 : x^0'=-1+x^0, y^0'=y^0, z^0'=z^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l1 -> l0 : x^0'=-1+x^0, y^0'=y^0, z^0'=z^0, T, cost: 1
+	New rule:
+	l1 -> l0 : x^0'=-1+x^0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : x^0'=x^post4, y^0'=y^post4, z^0'=z^post4, (x^post5-x^post4 == 0 /\ y^0-y^post5 == 0 /\ z^post5-z^post4 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0 /\ -y^post4+y^post5 == 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^post5, y^0'=y^post5, z^0'=z^post5, (0 == 0 /\ y^0-y^post5 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0), cost: 1
+	
+		propagated equality x^post4 = x^post5
+		
+		propagated equality z^post4 = z^post5
+		
+		propagated equality y^post4 = y^post5
+		
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : x^0'=x^post5, y^0'=y^post5, z^0'=z^post5, (0 == 0 /\ y^0-y^post5 == 0 /\ -z^post5+z^0 == 0 /\ -x^post5+x^0 == 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^0, y^0'=y^0, z^0'=z^0, 0 == 0, cost: 1
+	
+		propagated equality y^post5 = y^0
+		
+		propagated equality z^post5 = z^0
+		
+		propagated equality x^post5 = x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l3 -> l0 : x^0'=x^0, y^0'=y^0, z^0'=z^0, 0 == 0, cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^0, y^0'=y^0, z^0'=z^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l3 -> l0 : x^0'=x^0, y^0'=y^0, z^0'=z^0, T, cost: 1
+	New rule:
+	l3 -> l0 : T, cost: 1
+
+Step with 9
+
+	Trace
+
+	9[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 6
+
+	Trace
+
+	9[T], 6[(1-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 7
+
+	Trace
+
+	9[T], 6[(1-x^0 <= 0)], 7[T]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Nonterm
+
+Start location: l3
+Program variables: x^0 y^0 z^0
+   6: l0 -> l1 : 1-x^0 <= 0, cost: 1
+  10: l0 -> LoAT_sink : (x^0-z^0 <= 0 /\ -1+x^0 >= 0), cost: NONTERM
+  11: l0 -> l0 : x^0'=z^0, y^0'=y^0-n, (-1+x^0 >= 0 /\ -1+n >= 0 /\ -1+z^0 >= 0), cost: 1
+   7: l1 -> l0 : x^0'=z^0, y^0'=-1+y^0, T, cost: 1
+   8: l1 -> l0 : x^0'=-1+x^0, T, cost: 1
+   9: l3 -> l0 : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l0 -> l0 : x^0'=z^0, y^0'=-1+y^0, 1-x^0 <= 0, cost: 1
+	New rule:
+	l0 -> LoAT_sink : (x^0-z^0 <= 0 /\ -1+x^0 >= 0), cost: NONTERM
+
+		-1+x^0 >= 0 [0]: eventual decrease yields (-1+x^0 >= 0 /\ -1+z^0 >= 0)
+		
+		-1+x^0 >= 0 [1]: eventual increase yields (x^0-z^0 <= 0 /\ -1+x^0 >= 0)
+		
+		Replacement map: {-1+x^0 >= 0 -> (x^0-z^0 <= 0 /\ -1+x^0 >= 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	l0 -> l0 : x^0'=z^0, y^0'=-1+y^0, 1-x^0 <= 0, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=z^0, y^0'=y^0-n, (-1+x^0 >= 0 /\ -1+n >= 0 /\ -1+z^0 >= 0), cost: 1
+
+		-1+x^0 >= 0 [0]: eventual decrease yields (-1+x^0 >= 0 /\ -1+z^0 >= 0)
+		
+		-1+x^0 >= 0 [1]: eventual increase yields (x^0-z^0 <= 0 /\ -1+x^0 >= 0)
+		
+		Replacement map: {-1+x^0 >= 0 -> (-1+x^0 >= 0 /\ -1+z^0 >= 0)}
+
+Step with 10
+
+	Trace
+
+	9[T], 10[(x^0-z^0 <= 0 /\ -1+x^0 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {10[T]}]
+
+Refute
+
+	Counterexample
+
+	[ x^0=1 y^0=0 z^0=1 ] 9 [ x^0=1 y^0=0 z^0=1 ] 10
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

@@ -1,0 +1,78 @@
+NO
+
+Initial ITS
+Start location: __init
+   0: f31_0_main_Load -> f31_0_main_Load : TRUE, cost: 1
+   1: f1_0_main_ConstantStackPush -> f31_0_main_Load : TRUE, cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : TRUE, cost: 1
+
+
+Applied nonterm
+Original rule:
+f31_0_main_Load -> f31_0_main_Load : TRUE, cost: 1
+New rule:
+f31_0_main_Load -> [3] : n >= 0, cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_gmGnEf.txt
+
+Applied deletion
+Removed the following rules: 0
+
+Accelerated simple loops
+Start location: __init
+   3: f31_0_main_Load -> [3] : n >= 0, cost: NONTERM
+   1: f1_0_main_ConstantStackPush -> f31_0_main_Load : TRUE, cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_ConstantStackPush -> f31_0_main_Load : TRUE, cost: 1
+Second rule:
+f31_0_main_Load -> [3] : n >= 0, cost: NONTERM
+New rule:
+f1_0_main_ConstantStackPush -> [3] : TRUE, cost: NONTERM
+
+Applied deletion
+Removed the following rules: 3
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   1: f1_0_main_ConstantStackPush -> f31_0_main_Load : TRUE, cost: 1
+   4: f1_0_main_ConstantStackPush -> [3] : TRUE, cost: NONTERM
+   2: __init -> f1_0_main_ConstantStackPush : TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+   4: f1_0_main_ConstantStackPush -> [3] : TRUE, cost: NONTERM
+   2: __init -> f1_0_main_ConstantStackPush : TRUE, cost: 1
+
+
+Eliminating location f1_0_main_ConstantStackPush by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_ConstantStackPush : TRUE, cost: 1
+Second rule:
+f1_0_main_ConstantStackPush -> [3] : TRUE, cost: NONTERM
+New rule:
+__init -> [3] : TRUE, cost: NONTERM
+
+Applied deletion
+Removed the following rules: 2 4
+
+Eliminated locations on linear paths
+Start location: __init
+   5: __init -> [3] : TRUE, cost: NONTERM
+
+
+Computing asymptotic complexity
+Proved nontermination of rule 5 via SMT.
+
+Proved the following lower bound
+Complexity:  Nonterm
+Cpx degree: Nonterm
+
+Solved cost: NONTERM
+Rule cost:   NONTERM
+Rule guard:  TRUE

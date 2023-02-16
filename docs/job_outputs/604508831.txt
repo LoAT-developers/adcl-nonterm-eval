@@ -1,0 +1,350 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l4, true>
+<l1, l2, (undef1 = (1000 + x^0)) /\ (1 <= (0 + undef1)), par{x^0 -> undef1}>
+<l2, l1, true>
+<l3, l1, true>
+<l4, l3, true>
+
+Fresh variables:
+undef1, 
+
+Undef variables:
+undef1, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, true>
+<l1, l1, (undef1 = (1000 + x^0)) /\ (1 <= (0 + undef1)), par{x^0 -> undef1}>
+
+Fresh variables:
+undef1, 
+
+Undef variables:
+undef1, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, 1 <= undef1 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Variables:
+x^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, true, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001322
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000537s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001726s
+Trying to remove transition: <l1, l1, 1 <= undef1 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003336s
+Time used: 0.003164
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 3.492164s
+Time used: 3.49184
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.235095s
+Time used: 0.235086
+
+LOG: SAT solveNonLinear - Elapsed time: 3.727259s
+Cost: 1; Total time: 3.72692
+[31mFailed at location 1: 1000 + x^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1000 + x^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007873s
+Remaining time after improvement: 0.998563
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1000 + x^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 <= undef1 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 1 <= undef1 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+New Graphs: 
+Calling Safety with literal 1000 + x^0 <= 0 and entry <l0, l1, true, {all remain the same}>
+
+LOG: CALL check - Post:1000 + x^0 <= 0 - Process 1
+* Exit transition: <l0, l1, true, {all remain the same}>
+* Postcondition  : 1000 + x^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000907s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000934s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 1000 + x^0 <= 0 , 
+Narrowing transition: 
+<l1, l1, 1 <= undef1 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 1 <= undef1 /\ 0 <= 999 + x^0 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Variables:
+x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000291s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000959s
+Trying to remove transition: <l1, l1, 1 <= undef1 /\ 0 <= 999 + x^0 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.001758s
+Time used: 0.001677
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002232s
+Time used: 4.00207
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006260s
+Time used: 4.00063
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.007526s
+Time used: 1.00055
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004504s
+Time used: 0.002676
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.004630s
+Time used: 0.004628
+
+LOG: SAT solveNonLinear - Elapsed time: 0.009134s
+Cost: 1; Total time: 0.007304
+[33mQuasi-ranking function: [36m50000 - x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 1 <= undef1 /\ 50001 <= x^0 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Variables:
+x^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000298s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001097s
+Trying to remove transition: <l1, l1, 1 <= undef1 /\ 50001 <= x^0 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.001944s
+Time used: 0.00186
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001899s
+Time used: 4.00174
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004827s
+Time used: 4.00082
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.015652s
+Time used: 1.00055
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004002s
+Time used: 0.002257
+
+Proving non-termination of subgraph 1
+Transitions:
+<l1, l1, 1 <= undef1 /\ 0 <= 999 + x^0 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+Variables:
+x^0
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000505s
+Checking conditional non-termination of SCC {l1}...
+EXIT TRANSITIONS:
+<l1, end, 1000 + x^0 <= 0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005787s
+Time used: 0.005659
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008455s
+Time used: 0.008453
+
+LOG: SAT solveNonLinear - Elapsed time: 0.014242s
+Cost: 1; Total time: 0.014112
+[31mFailed at location 1: 1 <= x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 <= x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003181s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001130s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000669s
+Remaining time after improvement: 0.997348
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.001217s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= 499 + x^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l1: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 1 <= undef1 /\ 0 <= 499 + x^0 /\ 1000 + x^0 = undef1, {x^0 -> undef1, rest remain the same}>
+
+Calling reachability with...
+Transition: <l1, end, true, {all remain the same}>
+Conditions: 0 <= 499 + x^0, 
+OPEN EXITS: 
+<l1, end, 0 <= 499 + x^0, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l1, true, {all remain the same}>
+Conditions: 0 <= 499 + x^0, 
+OPEN EXITS: 
+<l0, l1, 0 <= 499 + x^0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

@@ -1,0 +1,543 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l30, true>
+<l1, l2, true>
+<l3, l4, ((1 + n8^0) <= (0 + j10^0)), par{i9^0 -> (~(1) + i9^0)}>
+<l3, l5, ((0 + j10^0) <= (0 + n8^0)) /\ (undef38 = undef38), par{j10^0 -> (1 + j10^0), w12^0 -> undef38}>
+<l6, l7, ((1 + i9^0) <= 0) /\ (undef50 = 0), par{chkerr^0 -> (0 + undef50), ret_ludcmp14^0 -> undef50}>
+<l6, l5, (0 <= (0 + i9^0)) /\ (undef64 = undef64), par{j10^0 -> (1 + i9^0), w12^0 -> undef64}>
+<l8, l9, true>
+<l10, l11, ((0 + i9^0) <= (0 + j10^0)), par{i9^0 -> (1 + i9^0)}>
+<l10, l12, ((1 + j10^0) <= (0 + i9^0)) /\ (undef103 = undef103), par{j10^0 -> (1 + j10^0), w12^0 -> undef103}>
+<l13, l14, true>
+<l15, l4, ((1 + n8^0) <= (0 + i9^0)), par{i9^0 -> (~(1) + n8^0)}>
+<l15, l12, ((0 + i9^0) <= (0 + n8^0)) /\ (undef142 = undef142), par{j10^0 -> 0, w12^0 -> undef142}>
+<l16, l17, true>
+<l17, l13, ((1 + i9^0) <= (0 + k11^0)), par{j10^0 -> (1 + j10^0)}>
+<l17, l16, ((0 + k11^0) <= (0 + i9^0)) /\ (undef181 = undef181), par{k11^0 -> (1 + k11^0), w12^0 -> undef181}>
+<l14, l18, ((1 + n8^0) <= (0 + j10^0)), par{i9^0 -> (1 + i9^0)}>
+<l14, l16, ((0 + j10^0) <= (0 + n8^0)) /\ (undef207 = undef207), par{k11^0 -> 0, w12^0 -> undef207}>
+<l11, l15, true>
+<l19, l1, true, par{j10^0 -> (1 + j10^0)}>
+<l9, l19, ((0 + i9^0) <= (0 + k11^0))>
+<l9, l8, ((1 + k11^0) <= (0 + i9^0)) /\ (undef259 = undef259), par{k11^0 -> (1 + k11^0), w12^0 -> undef259}>
+<l20, l8, true, par{k11^0 -> 0}>
+<l12, l10, true>
+<l21, l19, ((0 + i9^0) <= 0) /\ (0 <= (0 + i9^0))>
+<l21, l20, (1 <= (0 + i9^0))>
+<l21, l20, ((1 + i9^0) <= 0)>
+<l2, l13, ((1 + n8^0) <= (0 + j10^0)), par{j10^0 -> (1 + i9^0)}>
+<l2, l21, ((0 + j10^0) <= (0 + n8^0)) /\ (undef350 = undef350), par{w12^0 -> undef350}>
+<l22, l11, ((0 + n8^0) <= (0 + i9^0)), par{i9^0 -> 1}>
+<l22, l1, ((1 + i9^0) <= (0 + n8^0)), par{j10^0 -> (1 + i9^0)}>
+<l4, l6, true>
+<l23, l24, (undef403 = undef403), par{j^0 -> (1 + j^0), w^0 -> undef403}>
+<l25, l23, ((1 + j^0) <= (0 + i^0))>
+<l25, l23, ((1 + i^0) <= (0 + j^0))>
+<l25, l23, ((0 + i^0) <= (0 + j^0)) /\ ((0 + j^0) <= (0 + i^0))>
+<l5, l3, true>
+<l26, l27, ((1 + n^0) <= (0 + j^0)), par{i^0 -> (1 + i^0)}>
+<l26, l25, ((0 + j^0) <= (0 + n^0))>
+<l28, l18, ((1 + n^0) <= (0 + i^0)), par{i9^0 -> 0, n8^0 -> (0 + n^0), nmax7^0 -> (0 + nmax^0)}>
+<l28, l24, ((0 + i^0) <= (0 + n^0)), par{j^0 -> 0, w^0 -> 0}>
+<l27, l28, true>
+<l24, l26, true>
+<l18, l22, true>
+<l29, l27, true, par{i^0 -> 0, n^0 -> 5, nmax^0 -> 50}>
+<l30, l29, true>
+
+Fresh variables:
+undef38, undef50, undef64, undef103, undef142, undef181, undef207, undef259, undef350, undef403, 
+
+Undef variables:
+undef38, undef50, undef64, undef103, undef142, undef181, undef207, undef259, undef350, undef403, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l24, (i^0 = 0) /\ (5 = 5) /\ (50 = 50) /\ ((0 + 0) <= (0 + 5)), par{j^0 -> 0}>
+<l1, l7, ((1 + n8^0) <= (0 + j10^0)) /\ ((1 + n8^0) <= (0 + (1 + i9^0))) /\ ((0 + n8^0) <= (0 + (1 + i9^0))) /\ ((1 + n8^0) <= (0 + 1)) /\ ((1 + (~(1) + n8^0)) <= 0) /\ (undef50 = 0), par{i9^0 -> (~(1) + n8^0), j10^0 -> (1 + i9^0)}>
+<l1, l12, ((1 + n8^0) <= (0 + j10^0)) /\ ((1 + n8^0) <= (0 + (1 + i9^0))) /\ ((0 + n8^0) <= (0 + (1 + i9^0))) /\ ((0 + 1) <= (0 + n8^0)) /\ (undef142 = undef142), par{i9^0 -> 1, j10^0 -> 0}>
+<l1, l16, ((1 + n8^0) <= (0 + j10^0)) /\ ((0 + (1 + i9^0)) <= (0 + n8^0)) /\ (undef207 = undef207), par{j10^0 -> (1 + i9^0), k11^0 -> 0}>
+<l1, l1, ((0 + j10^0) <= (0 + n8^0)) /\ (undef350 = undef350) /\ ((0 + i9^0) <= 0) /\ (0 <= (0 + i9^0)), par{j10^0 -> (1 + j10^0)}>
+<l1, l8, ((0 + j10^0) <= (0 + n8^0)) /\ (undef350 = undef350) /\ (1 <= (0 + i9^0)), par{k11^0 -> 0}>
+<l1, l8, ((0 + j10^0) <= (0 + n8^0)) /\ (undef350 = undef350) /\ ((1 + i9^0) <= 0), par{k11^0 -> 0}>
+<l5, l7, ((1 + n8^0) <= (0 + j10^0)) /\ ((1 + (~(1) + i9^0)) <= 0) /\ (undef50 = 0), par{i9^0 -> (~(1) + i9^0)}>
+<l5, l5, ((1 + n8^0) <= (0 + j10^0)) /\ (0 <= (0 + (~(1) + i9^0))) /\ (undef64 = undef64), par{i9^0 -> (~(1) + i9^0), j10^0 -> (1 + (~(1) + i9^0))}>
+<l5, l5, ((0 + j10^0) <= (0 + n8^0)) /\ (undef38 = undef38), par{j10^0 -> (1 + j10^0)}>
+<l8, l1, ((0 + i9^0) <= (0 + k11^0)), par{j10^0 -> (1 + j10^0)}>
+<l8, l8, ((1 + k11^0) <= (0 + i9^0)) /\ (undef259 = undef259), par{k11^0 -> (1 + k11^0)}>
+<l12, l7, ((0 + i9^0) <= (0 + j10^0)) /\ ((1 + n8^0) <= (0 + (1 + i9^0))) /\ ((1 + (~(1) + n8^0)) <= 0) /\ (undef50 = 0), par{i9^0 -> (~(1) + n8^0)}>
+<l12, l5, ((0 + i9^0) <= (0 + j10^0)) /\ ((1 + n8^0) <= (0 + (1 + i9^0))) /\ (0 <= (0 + (~(1) + n8^0))) /\ (undef64 = undef64), par{i9^0 -> (~(1) + n8^0), j10^0 -> (1 + (~(1) + n8^0))}>
+<l12, l12, ((0 + i9^0) <= (0 + j10^0)) /\ ((0 + (1 + i9^0)) <= (0 + n8^0)) /\ (undef142 = undef142), par{i9^0 -> (1 + i9^0), j10^0 -> 0}>
+<l12, l12, ((1 + j10^0) <= (0 + i9^0)) /\ (undef103 = undef103), par{j10^0 -> (1 + j10^0)}>
+<l16, l7, ((1 + i9^0) <= (0 + k11^0)) /\ ((1 + n8^0) <= (0 + (1 + j10^0))) /\ ((0 + n8^0) <= (0 + (1 + i9^0))) /\ ((1 + n8^0) <= (0 + 1)) /\ ((1 + (~(1) + n8^0)) <= 0) /\ (undef50 = 0), par{i9^0 -> (~(1) + n8^0), j10^0 -> (1 + j10^0)}>
+<l16, l12, ((1 + i9^0) <= (0 + k11^0)) /\ ((1 + n8^0) <= (0 + (1 + j10^0))) /\ ((0 + n8^0) <= (0 + (1 + i9^0))) /\ ((0 + 1) <= (0 + n8^0)) /\ (undef142 = undef142), par{i9^0 -> 1, j10^0 -> 0}>
+<l16, l1, ((1 + i9^0) <= (0 + k11^0)) /\ ((1 + n8^0) <= (0 + (1 + j10^0))) /\ ((1 + (1 + i9^0)) <= (0 + n8^0)), par{i9^0 -> (1 + i9^0), j10^0 -> (1 + (1 + i9^0))}>
+<l16, l16, ((1 + i9^0) <= (0 + k11^0)) /\ ((0 + (1 + j10^0)) <= (0 + n8^0)) /\ (undef207 = undef207), par{j10^0 -> (1 + j10^0), k11^0 -> 0}>
+<l16, l16, ((0 + k11^0) <= (0 + i9^0)) /\ (undef181 = undef181), par{k11^0 -> (1 + k11^0)}>
+<l24, l1, ((1 + 5) <= (0 + j^0)) /\ ((1 + 5) <= (0 + (1 + i^0))) /\ ((1 + 0) <= (0 + (0 + 5))), par{i9^0 -> 0, i^0 -> (1 + i^0), j10^0 -> (1 + 0), n8^0 -> (0 + 5)}>
+<l24, l24, ((1 + 5) <= (0 + j^0)) /\ ((0 + (1 + i^0)) <= (0 + 5)), par{i^0 -> (1 + i^0), j^0 -> 0}>
+<l24, l24, ((0 + j^0) <= (0 + 5)) /\ ((1 + j^0) <= (0 + i^0)) /\ (undef403 = undef403), par{j^0 -> (1 + j^0)}>
+<l24, l24, ((0 + j^0) <= (0 + 5)) /\ ((1 + i^0) <= (0 + j^0)) /\ (undef403 = undef403), par{j^0 -> (1 + j^0)}>
+<l24, l24, ((0 + j^0) <= (0 + 5)) /\ ((0 + i^0) <= (0 + j^0)) /\ ((0 + j^0) <= (0 + i^0)) /\ (undef403 = undef403), par{j^0 -> (1 + j^0)}>
+
+Fresh variables:
+undef38, undef50, undef64, undef103, undef142, undef181, undef207, undef259, undef350, undef403, 
+
+Undef variables:
+undef38, undef50, undef64, undef103, undef142, undef181, undef207, undef259, undef350, undef403, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l24, l24, 6 <= j^0 /\ i^0 <= 4, {i^0 -> 1 + i^0, j^0 -> 0, rest remain the same}>
+<l24, l24, 1 + j^0 <= i^0 /\ j^0 <= 5, {j^0 -> 1 + j^0, rest remain the same}>
+<l24, l24, 1 + i^0 <= j^0 /\ j^0 <= 5, {j^0 -> 1 + j^0, rest remain the same}>
+<l24, l24, j^0 <= 5 /\ i^0 = j^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+i^0, j^0
+
+Graph 2:
+Transitions:
+<l1, l16, 1 + i9^0 <= n8^0 /\ 1 + n8^0 <= j10^0, {j10^0 -> 1 + i9^0, k11^0 -> 0, rest remain the same}>
+<l1, l1, j10^0 <= n8^0 /\ i9^0 = 0, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+<l1, l8, 1 + i9^0 <= 0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+<l8, l1, i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l8, l8, 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+<l16, l1, 1 + i9^0 <= k11^0 /\ n8^0 <= j10^0 /\ 2 + i9^0 <= n8^0, {i9^0 -> 1 + i9^0, j10^0 -> 2 + i9^0, rest remain the same}>
+<l16, l16, 1 + i9^0 <= k11^0 /\ 1 + j10^0 <= n8^0, {j10^0 -> 1 + j10^0, k11^0 -> 0, rest remain the same}>
+<l16, l16, k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, n8^0, k11^0
+
+Graph 3:
+Transitions:
+<l12, l12, 1 + i9^0 <= n8^0 /\ i9^0 <= j10^0, {i9^0 -> 1 + i9^0, j10^0 -> 0, rest remain the same}>
+<l12, l12, 1 + j10^0 <= i9^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+Variables:
+i9^0, j10^0, n8^0
+
+Graph 4:
+Transitions:
+<l5, l5, 1 <= i9^0 /\ 1 + n8^0 <= j10^0, {i9^0 -> -1 + i9^0, j10^0 -> i9^0, rest remain the same}>
+<l5, l5, j10^0 <= n8^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+Variables:
+i9^0, j10^0, n8^0
+
+Graph 5:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l24, i^0 = 0, {j^0 -> 0, rest remain the same}>
+
+Graph 2
+<l24, l1, 5 <= i^0 /\ 6 <= j^0, {i9^0 -> 0, i^0 -> 1 + i^0, j10^0 -> 1, n8^0 -> 5, rest remain the same}>
+
+Graph 3
+<l1, l12, 1 + n8^0 <= j10^0 /\ 1 <= n8^0 /\ n8^0 <= i9^0, {i9^0 -> 1, j10^0 -> 0, rest remain the same}>
+<l16, l12, 1 + i9^0 <= k11^0 /\ 1 <= n8^0 /\ n8^0 <= j10^0 /\ n8^0 <= 1 + i9^0, {i9^0 -> 1, j10^0 -> 0, rest remain the same}>
+
+Graph 4
+<l12, l5, 1 <= n8^0 /\ i9^0 <= j10^0 /\ n8^0 <= i9^0, {i9^0 -> -1 + n8^0, j10^0 -> n8^0, rest remain the same}>
+
+Graph 5
+<l1, l7, 1 + n8^0 <= j10^0 /\ n8^0 <= i9^0 /\ n8^0 <= 0 /\ undef50 = 0, {i9^0 -> -1 + n8^0, j10^0 -> 1 + i9^0, rest remain the same}>
+<l5, l7, 1 + n8^0 <= j10^0 /\ i9^0 <= 0 /\ undef50 = 0, {i9^0 -> -1 + i9^0, rest remain the same}>
+<l12, l7, i9^0 <= j10^0 /\ n8^0 <= i9^0 /\ n8^0 <= 0 /\ undef50 = 0, {i9^0 -> -1 + n8^0, rest remain the same}>
+<l16, l7, 1 + i9^0 <= k11^0 /\ n8^0 <= j10^0 /\ n8^0 <= 0 /\ n8^0 <= 1 + i9^0 /\ undef50 = 0, {i9^0 -> -1 + n8^0, j10^0 -> 1 + j10^0, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 2 )
+( 5 , 4 )
+( 7 , 5 )
+( 8 , 2 )
+( 12 , 3 )
+( 16 , 2 )
+( 24 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.010858
+
+Checking conditional termination of SCC {l24}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001329s
+[33mRanking function: [36m44 - 11*i^0[0m
+New Graphs: 
+Transitions:
+<l24, l24, 1 + j^0 <= i^0 /\ j^0 <= 5, {j^0 -> 1 + j^0, rest remain the same}>
+<l24, l24, 1 + i^0 <= j^0 /\ j^0 <= 5, {j^0 -> 1 + j^0, rest remain the same}>
+<l24, l24, j^0 <= 5 /\ i^0 = j^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+i^0, j^0
+Checking conditional termination of SCC {l24}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000748s
+[33mRanking function: [36m49 - 11*i^0 - j^0[0m
+New Graphs: 
+Transitions:
+<l24, l24, 1 + j^0 <= i^0 /\ j^0 <= 5, {j^0 -> 1 + j^0, rest remain the same}>
+<l24, l24, j^0 <= 5 /\ i^0 = j^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+i^0, j^0
+Checking conditional termination of SCC {l24}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000590s
+[33mRanking function: [36m65 - 12*i^0 - j^0[0m
+New Graphs: 
+Transitions:
+<l24, l24, 1 + j^0 <= i^0 /\ j^0 <= 5, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+i^0, j^0
+Checking conditional termination of SCC {l24}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000413s
+[33mRanking function: [36m-1 + i^0 - j^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.040232
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l1: 0 <= i9^0[0m
+[36mInvariant at l8: 1 <= i9^0[0m
+[36mInvariant at l16: 0 <= i9^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l8, 1 + i9^0 <= 0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l16, 1 + i9^0 <= n8^0 /\ 1 + n8^0 <= j10^0 /\ 0 <= i9^0, {j10^0 -> 1 + i9^0, k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, j10^0 <= n8^0 /\ i9^0 = 0, {j10^0 -> 1 + j10^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l8, l1, 1 <= i9^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l8, l8, 1 <= i9^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l16, l1, 1 + i9^0 <= k11^0 /\ 0 <= i9^0 /\ n8^0 <= j10^0 /\ 2 + i9^0 <= n8^0, {i9^0 -> 1 + i9^0, j10^0 -> 2 + i9^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l16, l16, 1 + i9^0 <= k11^0 /\ 1 + j10^0 <= n8^0 /\ 0 <= i9^0, {j10^0 -> 1 + j10^0, k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l16, l16, 0 <= i9^0 /\ k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 4.00034
+
+Checking conditional termination of SCC {l1, l8, l16}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007159s
+[33mRanking function: [36m-6 - 3*i9^0 + 3*n8^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, j10^0 <= n8^0 /\ i9^0 = 0, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+<l8, l1, 1 <= i9^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l8, l8, 1 <= i9^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Transitions:
+<l16, l16, 1 + i9^0 <= k11^0 /\ 1 + j10^0 <= n8^0 /\ 0 <= i9^0, {j10^0 -> 1 + j10^0, k11^0 -> 0, rest remain the same}>
+<l16, l16, 0 <= i9^0 /\ k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Checking conditional termination of SCC {l1, l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001612s
+[33mRanking function: [36m-3*i9^0 - j10^0 + n8^0[0m
+New Graphs: 
+Transitions:
+<l16, l16, 1 + i9^0 <= k11^0 /\ 1 + j10^0 <= n8^0 /\ 0 <= i9^0, {j10^0 -> 1 + j10^0, k11^0 -> 0, rest remain the same}>
+<l16, l16, 0 <= i9^0 /\ k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Transitions:
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+<l8, l1, 1 <= i9^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l8, l8, 1 <= i9^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Checking conditional termination of SCC {l16}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000818s
+[33mRanking function: [36m-j10^0 + n8^0[0m
+New Graphs: 
+Transitions:
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+<l8, l1, 1 <= i9^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l8, l8, 1 <= i9^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Transitions:
+<l16, l16, 0 <= i9^0 /\ k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, k11^0
+Checking conditional termination of SCC {l1, l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000878s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003520s
+Trying to remove transition: <l8, l8, 1 <= i9^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008255s
+Time used: 0.007997
+Trying to remove transition: <l8, l1, 1 <= i9^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007011s
+Time used: 0.006567
+Trying to remove transition: <l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0, {k11^0 -> 0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007085s
+Time used: 0.006564
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.067317s
+Time used: 0.066558
+
+LOG: SAT solveNonLinear - Elapsed time: 0.067317s
+Cost: 0; Total time: 0.066558
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l1: j10^0 <= 1 + i9^0 + n8^0[0m
+[36mInvariant at l8: 1 + j10^0 <= i9^0 + n8^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l16, 1 + i9^0 <= n8^0 /\ 1 + n8^0 <= j10^0 /\ 0 <= i9^0 /\ j10^0 <= 1 + i9^0 + n8^0, {j10^0 -> 1 + i9^0, k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, j10^0 <= n8^0 /\ j10^0 <= 1 + i9^0 + n8^0 /\ i9^0 = 0, {j10^0 -> 1 + j10^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0 /\ j10^0 <= 1 + i9^0 + n8^0, {k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l8, l1, 1 <= i9^0 /\ 1 + j10^0 <= i9^0 + n8^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l8, l8, 1 <= i9^0 /\ 1 + j10^0 <= i9^0 + n8^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l8, 1 <= i9^0 /\ j10^0 <= n8^0 /\ j10^0 <= 1 + i9^0 + n8^0, {k11^0 -> 0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l8, l1, 1 <= i9^0 /\ 1 + j10^0 <= i9^0 + n8^0 /\ i9^0 <= k11^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l8, l8, 1 <= i9^0 /\ 1 + j10^0 <= i9^0 + n8^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+[33mRanking function: [36mi9^0 - j10^0 + n8^0[0m
+New Graphs: 
+Transitions:
+<l16, l16, 0 <= i9^0 /\ k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, k11^0
+Transitions:
+<l8, l8, 1 <= i9^0 /\ 1 + j10^0 <= i9^0 + n8^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Checking conditional termination of SCC {l16}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000569s
+[33mRanking function: [36mi9^0 - k11^0[0m
+New Graphs: 
+Transitions:
+<l8, l8, 1 <= i9^0 /\ 1 + j10^0 <= i9^0 + n8^0 /\ 1 + k11^0 <= i9^0, {k11^0 -> 1 + k11^0, rest remain the same}>
+Variables:
+i9^0, j10^0, k11^0, n8^0
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000657s
+[33mRanking function: [36m-1 + i9^0 - k11^0[0m
+New Graphs: 
+INVARIANTS: 
+1: j10^0 <= 1 + i9^0 + n8^0 , 
+8: 1 + j10^0 <= i9^0 + n8^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+1: 
+8: 
+Proving termination of subgraph 3
+Checking unfeasibility...
+Time used: 0.002798
+
+Checking conditional termination of SCC {l12}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000969s
+[33mRanking function: [36m-2*i9^0 + 2*n8^0[0m
+New Graphs: 
+Transitions:
+<l12, l12, 1 + j10^0 <= i9^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+Variables:
+i9^0, j10^0
+Checking conditional termination of SCC {l12}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000625s
+[33mRanking function: [36m-1 + i9^0 - j10^0[0m
+New Graphs: 
+Proving termination of subgraph 4
+Checking unfeasibility...
+Time used: 0.003166
+
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000982s
+[33mRanking function: [36m-1 + i9^0[0m
+New Graphs: 
+Transitions:
+<l5, l5, j10^0 <= n8^0, {j10^0 -> 1 + j10^0, rest remain the same}>
+Variables:
+j10^0, n8^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000628s
+[33mRanking function: [36m-j10^0 + n8^0[0m
+New Graphs: 
+Proving termination of subgraph 5
+Analyzing SCC {l7}...
+No cycles found.
+
+[32mProgram Terminates[0m

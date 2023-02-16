@@ -1,0 +1,113 @@
+unknown
+
+Initial ITS
+
+Start location: l2
+Program variables: cnt_58^0 devext_7^0 i_12^0 irp_11^0 loop_count_14^0 loop_max_13^0 lt_46^0 npackets_10^0 npacketsold_9^0 request_8^0 result_4^0
+   0: l0 -> l1 : cnt_58^0'=cnt_58^post1, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=lt_46^post1, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ cnt_58^0-cnt_58^post1 == 0 /\ -cnt_58^0+lt_46^post1 == 0), cost: 1
+   1: l2 -> l0 : cnt_58^0'=cnt_58^post2, devext_7^0'=devext_7^post2, i_12^0'=i_12^post2, irp_11^0'=irp_11^post2, loop_count_14^0'=loop_count_14^post2, loop_max_13^0'=loop_max_13^post2, lt_46^0'=lt_46^post2, npackets_10^0'=npackets_10^post2, npacketsold_9^0'=npacketsold_9^post2, request_8^0'=request_8^post2, result_4^0'=result_4^post2, (loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l2
+Program variables: cnt_58^0 devext_7^0 i_12^0 irp_11^0 loop_count_14^0 loop_max_13^0 lt_46^0 npackets_10^0 npacketsold_9^0 request_8^0 result_4^0
+   2: l2 -> l1 : cnt_58^0'=cnt_58^post1, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=lt_46^post1, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ cnt_58^post2-cnt_58^post1 == 0 /\ loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -cnt_58^post2+lt_46^post1 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+
+	Eliminating location l0 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l2 -> l0 : cnt_58^0'=cnt_58^post2, devext_7^0'=devext_7^post2, i_12^0'=i_12^post2, irp_11^0'=irp_11^post2, loop_count_14^0'=loop_count_14^post2, loop_max_13^0'=loop_max_13^post2, lt_46^0'=lt_46^post2, npackets_10^0'=npackets_10^post2, npacketsold_9^0'=npacketsold_9^post2, request_8^0'=request_8^post2, result_4^0'=result_4^post2, (loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+	Second rule:
+	l0 -> l1 : cnt_58^0'=cnt_58^post1, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=lt_46^post1, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ cnt_58^0-cnt_58^post1 == 0 /\ -cnt_58^0+lt_46^post1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^post1, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=lt_46^post1, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ cnt_58^post2-cnt_58^post1 == 0 /\ loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -cnt_58^post2+lt_46^post1 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l2
+Program variables: cnt_58^0 devext_7^0 i_12^0 irp_11^0 loop_count_14^0 loop_max_13^0 lt_46^0 npackets_10^0 npacketsold_9^0 request_8^0 result_4^0
+   3: l2 -> l1 : devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^0, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^post1, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=lt_46^post1, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ cnt_58^post2-cnt_58^post1 == 0 /\ loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -cnt_58^post2+lt_46^post1 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+	New rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^post2, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^post2, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+	
+		propagated equality cnt_58^post1 = cnt_58^post2
+		
+		propagated equality lt_46^post1 = cnt_58^post2
+		
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^post2, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^post2, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, (0 == 0 /\ loop_max_13^0-loop_max_13^post2 == 0 /\ -devext_7^post2+devext_7^0 == 0 /\ -cnt_58^post2+cnt_58^0 == 0 /\ -npackets_10^post2+npackets_10^0 == 0 /\ request_8^0-request_8^post2 == 0 /\ -irp_11^post2+irp_11^0 == 0 /\ i_12^0-i_12^post2 == 0 /\ -lt_46^post2+lt_46^0 == 0 /\ -npacketsold_9^post2+npacketsold_9^0 == 0 /\ -result_4^post2+result_4^0 == 0 /\ -loop_count_14^post2+loop_count_14^0 == 0), cost: 1
+	New rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^0, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^0, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, 0 == 0, cost: 1
+	
+		propagated equality loop_max_13^post2 = loop_max_13^0
+		
+		propagated equality devext_7^post2 = devext_7^0
+		
+		propagated equality cnt_58^post2 = cnt_58^0
+		
+		propagated equality npackets_10^post2 = npackets_10^0
+		
+		propagated equality request_8^post2 = request_8^0
+		
+		propagated equality irp_11^post2 = irp_11^0
+		
+		propagated equality i_12^post2 = i_12^0
+		
+		propagated equality lt_46^post2 = lt_46^0
+		
+		propagated equality npacketsold_9^post2 = npacketsold_9^0
+		
+		propagated equality result_4^post2 = result_4^0
+		
+		propagated equality loop_count_14^post2 = loop_count_14^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^0, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^0, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, 0 == 0, cost: 1
+	New rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^0, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^0, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l2 -> l1 : cnt_58^0'=cnt_58^0, devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^0, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, T, cost: 1
+	New rule:
+	l2 -> l1 : devext_7^0'=devext_7^post1, i_12^0'=i_12^post1, irp_11^0'=irp_11^post1, loop_count_14^0'=loop_count_14^post1, loop_max_13^0'=loop_max_13^post1, lt_46^0'=cnt_58^0, npackets_10^0'=npackets_10^post1, npacketsold_9^0'=npacketsold_9^post1, request_8^0'=request_8^post1, result_4^0'=result_4^post1, T, cost: 1
+
+Step with 3
+
+	Trace
+
+	3[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{3[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

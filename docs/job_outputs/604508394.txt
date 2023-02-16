@@ -1,0 +1,4117 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l5, true>
+<l1, l2, ((0 + y^0) <= (0 + x^0)), par{x^0 -> ((0 + x^0) + (~(1) * z^0)), y^0 -> ((0 + y^0) + (~(2) * z^0)), z^0 -> (~(1) + z^0)}>
+<l2, l1, true>
+<l1, l3, ((0 + y^0) <= (0 + x^0)) /\ (undef7 = (1 + x^0)), par{x^0 -> undef7, y^0 -> ((0 + undef7) + y^0)}>
+<l3, l1, true>
+<l4, l1, true>
+<l5, l4, true>
+
+Fresh variables:
+undef7, 
+
+Undef variables:
+undef7, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, true>
+<l1, l1, ((0 + y^0) <= (0 + x^0)), par{x^0 -> ((0 + x^0) + (~(1) * z^0)), y^0 -> ((0 + y^0) + (~(2) * z^0)), z^0 -> (~(1) + z^0)}>
+<l1, l1, ((0 + y^0) <= (0 + x^0)) /\ (undef7 = (1 + x^0)), par{x^0 -> undef7, y^0 -> ((0 + undef7) + y^0)}>
+
+Fresh variables:
+undef7, 
+
+Undef variables:
+undef7, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, true, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.003051
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000753s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002112s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004417s
+Time used: 0.004301
+Trying to remove transition: <l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006702s
+Time used: 0.006341
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014970s
+Time used: 0.014422
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.018321s
+Time used: 0.018319
+
+LOG: SAT solveNonLinear - Elapsed time: 0.033291s
+Cost: 1; Total time: 0.032741
+[31mFailed at location 1: 1 + x^0 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + x^0 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003289s
+Remaining time after improvement: 0.999087
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + x^0 <= y^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+New Graphs: 
+Calling Safety with literal 1 + x^0 <= y^0 and entry <l0, l1, true, {all remain the same}>
+
+LOG: CALL check - Post:1 + x^0 <= y^0 - Process 1
+* Exit transition: <l0, l1, true, {all remain the same}>
+* Postcondition  : 1 + x^0 <= y^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000236s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000263s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 1 + x^0 <= y^0 , 
+Narrowing transition: 
+<l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000550s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001850s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003788s
+Time used: 0.003687
+Trying to remove transition: <l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006172s
+Time used: 0.005782
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.008468s
+Time used: 4.00785
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.075792s
+Time used: 0.065602
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000735s
+Time used: 1.00072
+
+LOG: SAT solveNonLinear - Elapsed time: 1.076527s
+Cost: 2; Total time: 1.06632
+[31mFailed at location 1: 0 <= x^0[0m
+[31mFailed at location 1: 1 + x^0 + z^0 <= y^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[36mQuasi-invariant at l1: 1 + x^0 + z^0 <= y^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012768s
+Remaining time after improvement: 0.997677
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[36mQuasi-invariant at l1: 1 + x^0 + z^0 <= y^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 + z^0 <= y^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 + z^0 <= y^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 + z^0 <= y^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 + z^0 <= y^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36mx^0 - y^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 + z^0 <= y^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000378s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001450s
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 + z^0 <= y^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004327s
+Time used: 0.004224
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009509s
+Time used: 0.009082
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.010944s
+Time used: 0.010942
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020453s
+Cost: 1; Total time: 0.020024
+[31mFailed at location 1: 0 <= y^0 + z^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= y^0 + z^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002609s
+Remaining time after improvement: 0.998946
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= y^0 + z^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 + z^0 <= y^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 + z^0 <= y^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 + z^0 <= y^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m21*x^0 - 21*y^0[0m
+New Graphs: 
+Calling Safety with literal 0 <= x^0 and entry <l0, l1, y^0 <= x^0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= x^0 - Process 2
+* Exit transition: <l0, l1, y^0 <= x^0, {all remain the same}>
+* Postcondition  : 0 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000283s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000311s
+Calling Safety with literal 1 + x^0 + z^0 <= y^0 and entry <l0, l1, y^0 <= x^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + x^0 + z^0 <= y^0 - Process 3
+* Exit transition: <l0, l1, y^0 <= x^0, {all remain the same}>
+* Postcondition  : 1 + x^0 + z^0 <= y^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000285s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000319s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= x^0 , 1 + x^0 + z^0 <= y^0 , 
+Calling Safety with literal 0 <= y^0 + z^0 and entry <l0, l1, y^0 <= x^0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= y^0 + z^0 - Process 4
+* Exit transition: <l0, l1, y^0 <= x^0, {all remain the same}>
+* Postcondition  : 0 <= y^0 + z^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000285s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000317s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= y^0 + z^0 , 
+Narrowing transition: 
+<l1, l1, y^0 <= x^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 3
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001671s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.030913s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012739s
+Time used: 0.011744
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021417s
+Time used: 0.019763
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017744s
+Time used: 0.015443
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017963s
+Time used: 0.015389
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017017s
+Time used: 0.01447
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.026001s
+Time used: 0.023401
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.088432s
+Time used: 0.085452
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.131640s
+Time used: 0.131638
+
+LOG: SAT solveNonLinear - Elapsed time: 0.220072s
+Cost: 3; Total time: 0.21709
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + z^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.045941s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004425s
+Remaining time after improvement: 0.990996
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: z^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m-x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002202s
+[33mRanking function: [36mx^0 - y^0 + z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001376s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.019414s
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021113s
+Time used: 0.020244
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013306s
+Time used: 0.011659
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013596s
+Time used: 0.012045
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011545s
+Time used: 0.01026
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.031859s
+Time used: 0.030192
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.082437s
+Time used: 0.082435
+
+LOG: SAT solveNonLinear - Elapsed time: 0.114295s
+Cost: 1; Total time: 0.112627
+[31mFailed at location 1: 0 <= x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.014417s
+Remaining time after improvement: 0.996716
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001164s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010595s
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015140s
+Time used: 0.014552
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011253s
+Time used: 0.010075
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009151s
+Time used: 0.00824
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053211s
+Time used: 0.051961
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.056584s
+Time used: 0.056581
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.070808s
+Time used: 0.070806
+
+LOG: SAT solveNonLinear - Elapsed time: 0.180603s
+Cost: 2; Total time: 0.179348
+[31mFailed at location 1: 0 <= 9 + x^0 + 2*z^0[0m
+[31mFailed at location 1: 0 <= 9 + x^0 + 2*z^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= 9 + x^0 + 2*z^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.015933s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004522s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004180s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004081s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004123s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004067s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004069s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004095s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004065s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004067s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004097s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004061s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004062s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004089s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004078s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004078s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004079s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004110s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004108s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004091s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004097s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004086s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004086s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004112s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004106s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004099s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004107s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004090s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004093s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004106s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004084s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004117s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004108s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004113s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004104s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004114s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004109s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004120s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004123s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004114s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004111s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004111s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004142s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004109s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004115s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004120s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004115s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004105s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004131s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004118s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004122s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004116s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004135s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004141s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004142s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004122s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004135s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004114s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004122s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004123s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004123s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004120s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004124s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004125s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004126s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004144s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004144s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004134s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004140s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004135s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004138s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004147s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004146s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004139s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004147s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004156s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004146s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004142s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004149s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004160s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004168s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004163s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004138s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004152s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004152s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004158s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004168s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004156s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004161s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004171s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004174s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004182s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004134s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004146s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004143s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004143s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004136s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004129s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004133s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004139s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004137s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004146s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004128s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004151s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004126s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004126s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004123s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004126s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004136s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004136s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004132s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004138s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004154s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004131s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004139s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004152s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004136s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004137s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004148s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004150s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004129s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004159s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004165s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004130s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004147s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004132s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004151s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004136s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004166s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004175s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004155s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004158s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004167s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004175s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004141s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004153s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004155s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004158s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004158s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004173s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004161s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004153s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004170s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004162s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004145s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004144s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004167s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004144s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004173s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004154s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004137s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004144s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004151s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004163s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004151s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004159s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004156s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004166s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004138s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004154s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004170s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004146s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004162s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004168s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004163s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004156s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004158s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004180s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004157s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004170s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004166s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004172s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004153s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004170s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004160s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004158s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004170s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004185s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004175s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004166s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004174s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004180s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004177s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004174s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004183s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004187s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004177s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004165s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004184s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004180s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004180s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004182s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004175s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004187s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004176s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004186s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004188s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004173s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004181s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004179s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004202s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004191s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004185s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004190s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004185s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004187s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004186s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004202s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004188s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004184s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004203s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004181s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004197s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004200s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004195s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004184s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004200s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004189s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004187s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004187s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004208s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004206s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004199s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004197s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004192s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004192s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004207s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004207s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004249s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004206s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004221s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004221s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004224s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004209s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004222s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004213s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004223s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004222s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004221s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004207s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004210s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004212s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004226s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004218s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004225s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004215s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004216s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004209s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004217s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004231s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004219s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004222s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004212s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004204s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004416s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004226s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004232s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004229s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004232s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004237s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004260s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004226s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004230s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004214s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004220s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004211s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003299s
+Remaining time after improvement: -1e-06
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= 275 + x^0 + 2*z^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m547 + 4*x^0 - 5*y^0 + z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000499s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002289s
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004456s
+Time used: 0.004345
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.041240s
+Time used: 0.040721
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000411s
+Time used: 1.00039
+
+LOG: SAT solveNonLinear - Elapsed time: 1.041651s
+Cost: 3; Total time: 1.04111
+[31mFailed at location 1: 1 <= x^0[0m
+[31mFailed at location 1: 1 <= x^0[0m
+[31mFailed at location 1: 1 <= x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 <= x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006541s
+Remaining time after improvement: 0.998153
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 <= x^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 0 <= 275 + x^0 + 2*z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 0 <= 275 + x^0 + 2*z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m178*x^0 - 178*y^0 + 2*z^0[0m
+New Graphs: 
+Calling Safety with literal z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= 0 - Process 5
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {all remain the same}>
+* Postcondition  : z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000683s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000725s
+Calling Safety with literal z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= 0 - Process 6
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {all remain the same}>
+* Postcondition  : z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000676s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000712s
+Calling Safety with literal z^0 <= 0 and entry <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= 0 - Process 7
+* Exit transition: <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+* Postcondition  : z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000674s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000706s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: z^0 <= 0 , 
+Calling Safety with literal 0 <= x^0 and entry <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= x^0 - Process 8
+* Exit transition: <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+* Postcondition  : 0 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000651s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000687s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= x^0 , 
+Calling Safety with literal 0 <= 275 + x^0 + 2*z^0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= 275 + x^0 + 2*z^0 - Process 9
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {all remain the same}>
+* Postcondition  : 0 <= 275 + x^0 + 2*z^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000685s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000727s
+Calling Safety with literal 0 <= 275 + x^0 + 2*z^0 and entry <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= 275 + x^0 + 2*z^0 - Process 10
+* Exit transition: <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+* Postcondition  : 0 <= 275 + x^0 + 2*z^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000694s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000731s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= 275 + x^0 + 2*z^0 , 
+Calling Safety with literal 1 <= x^0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {all remain the same}>
+
+LOG: CALL check - Post:1 <= x^0 - Process 11
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {all remain the same}>
+* Postcondition  : 1 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000695s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000744s
+Calling Safety with literal 1 <= x^0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:1 <= x^0 - Process 12
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {all remain the same}>
+* Postcondition  : 1 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000691s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000727s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 1 <= x^0 , 
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 4
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 4
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 4
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 4
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 4
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 4
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005308s
+[33mRanking function: [36mz^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003361s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.108175s
+[33mPiecewise ranking function: [36mmin((556 / 3),(278 / 3) + (~(278) / 3)*x^0)[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002406s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.047896s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018652s
+Time used: 0.017156
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022986s
+Time used: 0.021049
+
+LOG: SAT solveNonLinear - Elapsed time: 0.022986s
+Cost: 0; Total time: 0.021049
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[33mRanking function: [36mx^0 - 2*y^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002131s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.031155s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014306s
+Time used: 0.013214
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027856s
+Time used: 0.026345
+
+LOG: SAT solveNonLinear - Elapsed time: 0.027856s
+Cost: 0; Total time: 0.026345
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 <= x^0[0m
+[33mRanking function: [36m-x^0 - 2*z^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001486s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011449s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009773s
+Time used: 0.009212
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014519s
+Time used: 0.013656
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013638s
+Time used: 0.01236
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012322s
+Time used: 0.011104
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.062752s
+Time used: 0.061108
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.119612s
+Time used: 0.11961
+
+LOG: SAT solveNonLinear - Elapsed time: 0.182365s
+Cost: 3; Total time: 0.180718
+[31mFailed at location 1: z^0 <= 0[0m
+[31mFailed at location 1: z^0 <= 0[0m
+[31mFailed at location 1: z^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: z^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023850s
+Remaining time after improvement: 0.99494
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: z^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m-x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000978s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003216s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008982s
+Time used: 0.00884
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007773s
+Time used: 0.007143
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.032164s
+Time used: 0.031244
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.049887s
+Time used: 0.049885
+
+LOG: SAT solveNonLinear - Elapsed time: 0.082051s
+Cost: 1; Total time: 0.081129
+[31mFailed at location 1: 0 <= x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.011094s
+Remaining time after improvement: 0.996516
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000447s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001646s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005603s
+Time used: 0.005507
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021887s
+Time used: 0.021291
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.022522s
+Time used: 0.022521
+
+LOG: SAT solveNonLinear - Elapsed time: 0.044409s
+Cost: 3; Total time: 0.043812
+[31mFailed at location 1: 0 <= 1 + x^0 + z^0[0m
+[31mFailed at location 1: 0 <= 1 + x^0 + z^0[0m
+[31mFailed at location 1: 0 <= 1 + x^0 + z^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= 1 + x^0 + z^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006335s
+Remaining time after improvement: 0.997622
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= 1 + x^0 + z^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 0 <= 1 + x^0 + z^0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+[33mRanking function: [36m1 + z^0[0m
+New Graphs: 
+Calling Safety with literal z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= 0 - Process 13
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000915s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000964s
+Calling Safety with literal z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= 0 - Process 14
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000924s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000964s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: z^0 <= 0 , 
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= x^0 , 
+Calling Safety with literal 0 <= 1 + x^0 + z^0 and entry <l0, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= 1 + x^0 + z^0 - Process 15
+* Exit transition: <l0, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {all remain the same}>
+* Postcondition  : 0 <= 1 + x^0 + z^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000941s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000991s
+Calling Safety with literal 0 <= 1 + x^0 + z^0 and entry <l0, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= 1 + x^0 + z^0 - Process 16
+* Exit transition: <l0, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {all remain the same}>
+* Postcondition  : 0 <= 1 + x^0 + z^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000930s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000975s
+Calling Safety with literal 0 <= 1 + x^0 + z^0 and entry <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:0 <= 1 + x^0 + z^0 - Process 17
+* Exit transition: <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+* Postcondition  : 0 <= 1 + x^0 + z^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000907s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000944s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= 1 + x^0 + z^0 , 
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 3
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 3
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 3
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 3
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004459s
+[33mRanking function: [36m-1 + z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002340s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.019589s
+[33mPiecewise ranking function: [36mmin(-273*x^0,1)[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001963s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.041688s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011823s
+Time used: 0.010806
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017222s
+Time used: 0.015931
+
+LOG: SAT solveNonLinear - Elapsed time: 0.017222s
+Cost: 0; Total time: 0.015931
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[33mRanking function: [36m-y^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001806s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.022369s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010506s
+Time used: 0.009768
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.020721s
+Time used: 0.019724
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020721s
+Cost: 0; Total time: 0.019724
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + z^0 <= 0[0m
+[33mRanking function: [36m-x^0 - z^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001443s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008467s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008314s
+Time used: 0.007853
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014273s
+Time used: 0.013575
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011760s
+Time used: 0.01076
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.057008s
+Time used: 0.055752
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.087896s
+Time used: 0.087884
+
+LOG: SAT solveNonLinear - Elapsed time: 0.144904s
+Cost: 3; Total time: 0.143636
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + z^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.015863s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004077s
+Remaining time after improvement: 0.990607
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: z^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002054s
+[33mRanking function: [36m-1 - x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000424s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001714s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007389s
+Time used: 0.007299
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014192s
+Time used: 0.013654
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.015382s
+Time used: 0.01538
+
+LOG: SAT solveNonLinear - Elapsed time: 0.029574s
+Cost: 1; Total time: 0.029034
+[31mFailed at location 1: 0 <= x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005007s
+Remaining time after improvement: 0.997508
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+New Graphs: 
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: z^0 <= 0 , 
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 0 <= x^0 , 
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 2
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ 276 + x^0 + 2*z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + y^0 + z^0 <= 0 /\ 2 + x^0 + z^0 <= 0 /\ x^0 = 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003564s
+[33mRanking function: [36m-1 + z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001721s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.021014s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010782s
+Time used: 0.010081
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014470s
+Time used: 0.013524
+
+LOG: SAT solveNonLinear - Elapsed time: 0.014470s
+Cost: 0; Total time: 0.013524
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[33mRanking function: [36mx^0 - 2*y^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001486s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008489s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008409s
+Time used: 0.007939
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014381s
+Time used: 0.013677
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011827s
+Time used: 0.010817
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.043582s
+Time used: 0.042365
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001071s
+Time used: 1.00105
+
+LOG: SAT solveNonLinear - Elapsed time: 1.044652s
+Cost: 3; Total time: 1.04342
+[31mFailed at location 1: z^0 <= 0[0m
+[31mFailed at location 1: z^0 <= 0[0m
+[31mFailed at location 1: z^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: z^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.017185s
+Remaining time after improvement: 0.996697
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: z^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m2 - x^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000451s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001803s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007542s
+Time used: 0.007454
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014625s
+Time used: 0.014158
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000875s
+Time used: 1.00086
+
+LOG: SAT solveNonLinear - Elapsed time: 1.015500s
+Cost: 3; Total time: 1.01502
+[31mFailed at location 1: 1 + z^0 <= x^0[0m
+[31mFailed at location 1: 1 + z^0 <= x^0[0m
+[31mFailed at location 1: 1 + z^0 <= x^0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + z^0 <= x^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006604s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001619s
+Remaining time after improvement: 0.995033
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: z^0 <= x^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ z^0 <= x^0 /\ z^0 <= 0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+[33mRanking function: [36m-x^0[0m
+New Graphs: 
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: z^0 <= 0 , 
+Calling Safety with literal z^0 <= x^0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= x^0 - Process 18
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : z^0 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001118s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001171s
+Calling Safety with literal z^0 <= x^0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= x^0 - Process 19
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : z^0 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001139s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001184s
+Calling Safety with literal z^0 <= x^0 and entry <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+
+LOG: CALL check - Post:z^0 <= x^0 - Process 20
+* Exit transition: <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {all remain the same}>
+* Postcondition  : z^0 <= x^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001095s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001132s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: z^0 <= x^0 , 
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 2
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006860s
+[33mRanking function: [36m-1 + z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002791s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.062029s
+[33mPiecewise ranking function: [36mmin(-9*x^0 + 9*z^0,7 + 9*z^0)[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001963s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.098744s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.021405s
+Time used: 0.020504
+Trying to remove transition: <l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015337s
+Time used: 0.013745
+
+LOG: SAT solveNonLinear - Elapsed time: 0.015337s
+Cost: 0; Total time: 0.013745
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 0 <= x^0[0m
+[33mRanking function: [36mx^0 - y^0 + z^0
+[33mRanking function and negation of Quasi-Invariant applied[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001317s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.009117s
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015461s
+Time used: 0.015307
+Trying to remove transition: <l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017183s
+Time used: 0.016444
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.064263s
+Time used: 0.063274
+Improving Solution with cost 5 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001071s
+Time used: 1.00106
+
+LOG: SAT solveNonLinear - Elapsed time: 1.065334s
+Cost: 5; Total time: 1.06433
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+[31mFailed at location 1: 1 + z^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l1: 1 + z^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.018982s
+Remaining time after improvement: 0.995717
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l1: 1 + z^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + z^0 <= 0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + z^0 <= 0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+[33mRanking function: [36m2 - x^0[0m
+New Graphs: 
+Calling Safety with literal 1 + z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + z^0 <= 0 - Process 21
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : 1 + z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001219s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001272s
+Calling Safety with literal 1 + z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + z^0 <= 0 - Process 22
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : 1 + z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001233s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001284s
+Calling Safety with literal 1 + z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + z^0 <= 0 - Process 23
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : 1 + z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001216s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001262s
+Calling Safety with literal 1 + z^0 <= 0 and entry <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + z^0 <= 0 - Process 24
+* Exit transition: <l0, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {all remain the same}>
+* Postcondition  : 1 + z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001212s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001257s
+Calling Safety with literal 1 + z^0 <= 0 and entry <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + z^0 <= 0 - Process 25
+* Exit transition: <l0, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {all remain the same}>
+* Postcondition  : 1 + z^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001216s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001252s
+INVARIANTS: 
+1: 
+Quasi-INVARIANTS to narrow Graph: 
+1: 1 + z^0 <= 0 , 
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l1, l1, y^0 <= x^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 0 <= z^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 0 <= z^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007027s
+[33mRanking function: [36m-1 + z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, y^0 <= x^0 /\ 0 <= z^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0, {x^0 -> x^0 - z^0, y^0 -> y^0 - 2*z^0, z^0 -> -1 + z^0, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 0 <= z^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004285s
+[33mRanking function: [36mz^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ 0 <= y^0 + z^0 /\ 1 + x^0 <= z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ 1 + x^0 <= z^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, y^0 <= x^0 /\ 0 <= z^0 /\ 1 + x^0 <= 0 /\ 1 + x^0 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004122s
+[33mRanking function: [36m-5*x^0 + 5*z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ z^0 <= x^0 /\ 1 + y^0 + z^0 <= 0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002735s
+[33mRanking function: [36m-1 - 6*y^0 - 6*z^0[0m
+New Graphs: 
+Transitions:
+<l1, l1, 0 <= x^0 /\ y^0 <= x^0 /\ y^0 <= x^0 + z^0 /\ z^0 <= x^0 /\ 0 <= y^0 + z^0 /\ 1 <= z^0 /\ 1 + x^0 = undef7, {x^0 -> undef7, y^0 -> y^0 + undef7, rest remain the same}>
+Variables:
+x^0, y^0, z^0
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001736s
+[33mRanking function: [36mx^0 - y^0[0m
+New Graphs: 
+[32mProgram Terminates[0m

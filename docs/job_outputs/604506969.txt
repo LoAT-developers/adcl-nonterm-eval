@@ -1,0 +1,253 @@
+NO
+
+Initial ITS
+
+Start location: l5
+Program variables: __disjvr_0^0 x^0 y^0
+   0: l0 -> l1 : __disjvr_0^0'=__disjvr_0^post1, x^0'=x^post1, y^0'=y^post1, (-x^post1+x^0 == 0 /\ -y^post1+y^0 == 0 /\ __disjvr_0^0-__disjvr_0^post1 == 0), cost: 1
+   1: l1 -> l3 : __disjvr_0^0'=__disjvr_0^post2, x^0'=x^post2, y^0'=y^post2, (__disjvr_0^0-__disjvr_0^post2 == 0 /\ -y^post2+y^0 == 0 /\ 1-x^0 <= 0 /\ -x^post2+x^0 == 0), cost: 1
+   2: l3 -> l4 : __disjvr_0^0'=__disjvr_0^post3, x^0'=x^post3, y^0'=y^post3, (-__disjvr_0^0+__disjvr_0^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post3 == 0 /\ -y^post3+y^0 == 0 /\ -x^post3+x^0 == 0), cost: 1
+   3: l4 -> l2 : __disjvr_0^0'=__disjvr_0^post4, x^0'=x^post4, y^0'=y^post4, (-y^post4+y^0 == 0 /\ x^post4-x^0-y^0 == 0 /\ __disjvr_0^0-__disjvr_0^post4 == 0), cost: 1
+   4: l2 -> l1 : __disjvr_0^0'=__disjvr_0^post5, x^0'=x^post5, y^0'=y^post5, (x^0-x^post5 == 0 /\ -y^post5+y^0 == 0 /\ -__disjvr_0^post5+__disjvr_0^0 == 0), cost: 1
+   5: l5 -> l0 : __disjvr_0^0'=__disjvr_0^post6, x^0'=x^post6, y^0'=y^post6, (-__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ x^0-x^post6 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l5
+Program variables: __disjvr_0^0 x^0 y^0
+   9: l1 -> l1 : __disjvr_0^0'=__disjvr_0^post5, x^0'=x^post5, y^0'=y^post5, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post5+y^post4 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ x^post4-x^post5 == 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ -__disjvr_0^post5+__disjvr_0^post4 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+   6: l5 -> l1 : __disjvr_0^0'=__disjvr_0^post1, x^0'=x^post1, y^0'=y^post1, (-__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ y^post6-y^post1 == 0 /\ -x^post1+x^post6 == 0 /\ x^0-x^post6 == 0 /\ __disjvr_0^post6-__disjvr_0^post1 == 0), cost: 1
+
+	Eliminating location l0 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l5 -> l0 : __disjvr_0^0'=__disjvr_0^post6, x^0'=x^post6, y^0'=y^post6, (-__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ x^0-x^post6 == 0), cost: 1
+	Second rule:
+	l0 -> l1 : __disjvr_0^0'=__disjvr_0^post1, x^0'=x^post1, y^0'=y^post1, (-x^post1+x^0 == 0 /\ -y^post1+y^0 == 0 /\ __disjvr_0^0-__disjvr_0^post1 == 0), cost: 1
+	New rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^post1, x^0'=x^post1, y^0'=y^post1, (-__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ y^post6-y^post1 == 0 /\ -x^post1+x^post6 == 0 /\ x^0-x^post6 == 0 /\ __disjvr_0^post6-__disjvr_0^post1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 5
+	
+	Eliminating location l3 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l1 -> l3 : __disjvr_0^0'=__disjvr_0^post2, x^0'=x^post2, y^0'=y^post2, (__disjvr_0^0-__disjvr_0^post2 == 0 /\ -y^post2+y^0 == 0 /\ 1-x^0 <= 0 /\ -x^post2+x^0 == 0), cost: 1
+	Second rule:
+	l3 -> l4 : __disjvr_0^0'=__disjvr_0^post3, x^0'=x^post3, y^0'=y^post3, (-__disjvr_0^0+__disjvr_0^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post3 == 0 /\ -y^post3+y^0 == 0 /\ -x^post3+x^0 == 0), cost: 1
+	New rule:
+	l1 -> l4 : __disjvr_0^0'=__disjvr_0^post3, x^0'=x^post3, y^0'=y^post3, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -y^post2+y^0 == 0 /\ 1-x^0 <= 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+	
+	Eliminating location l4 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l1 -> l4 : __disjvr_0^0'=__disjvr_0^post3, x^0'=x^post3, y^0'=y^post3, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -y^post2+y^0 == 0 /\ 1-x^0 <= 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	Second rule:
+	l4 -> l2 : __disjvr_0^0'=__disjvr_0^post4, x^0'=x^post4, y^0'=y^post4, (-y^post4+y^0 == 0 /\ x^post4-x^0-y^0 == 0 /\ __disjvr_0^0-__disjvr_0^post4 == 0), cost: 1
+	New rule:
+	l1 -> l2 : __disjvr_0^0'=__disjvr_0^post4, x^0'=x^post4, y^0'=y^post4, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 7
+	
+	Eliminating location l2 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l1 -> l2 : __disjvr_0^0'=__disjvr_0^post4, x^0'=x^post4, y^0'=y^post4, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	Second rule:
+	l2 -> l1 : __disjvr_0^0'=__disjvr_0^post5, x^0'=x^post5, y^0'=y^post5, (x^0-x^post5 == 0 /\ -y^post5+y^0 == 0 /\ -__disjvr_0^post5+__disjvr_0^0 == 0), cost: 1
+	New rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^post5, x^0'=x^post5, y^0'=y^post5, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post5+y^post4 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ x^post4-x^post5 == 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ -__disjvr_0^post5+__disjvr_0^post4 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 8
+
+Simplified Transitions
+
+Start location: l5
+Program variables: x^0 y^0
+  11: l1 -> l1 : x^0'=x^0+y^0, 1-x^0 <= 0, cost: 1
+  10: l5 -> l1 : T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^post1, x^0'=x^post1, y^0'=y^post1, (-__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ y^post6-y^post1 == 0 /\ -x^post1+x^post6 == 0 /\ x^0-x^post6 == 0 /\ __disjvr_0^post6-__disjvr_0^post1 == 0), cost: 1
+	New rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^post6, x^0'=x^post6, y^0'=y^post6, (0 == 0 /\ -__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ x^0-x^post6 == 0), cost: 1
+	
+		propagated equality y^post1 = y^post6
+		
+		propagated equality x^post1 = x^post6
+		
+		propagated equality __disjvr_0^post1 = __disjvr_0^post6
+		
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^post6, x^0'=x^post6, y^0'=y^post6, (0 == 0 /\ -__disjvr_0^post6+__disjvr_0^0 == 0 /\ -y^post6+y^0 == 0 /\ x^0-x^post6 == 0), cost: 1
+	New rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0, y^0'=y^0, 0 == 0, cost: 1
+	
+		propagated equality __disjvr_0^post6 = __disjvr_0^0
+		
+		propagated equality y^post6 = y^0
+		
+		propagated equality x^post6 = x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0, y^0'=y^0, 0 == 0, cost: 1
+	New rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0, y^0'=y^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l5 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0, y^0'=y^0, T, cost: 1
+	New rule:
+	l5 -> l1 : T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^post5, x^0'=x^post5, y^0'=y^post5, (x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post5+y^post4 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ x^post4-x^post5 == 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ -__disjvr_0^post5+__disjvr_0^post4 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	New rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^post4, x^0'=x^post4, y^0'=y^post4, (0 == 0 /\ x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	
+		propagated equality y^post5 = y^post4
+		
+		propagated equality x^post5 = x^post4
+		
+		propagated equality __disjvr_0^post5 = __disjvr_0^post4
+		
+	Propagated Equalities
+
+	Original rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^post4, x^0'=x^post4, y^0'=y^post4, (0 == 0 /\ x^post2-x^post3 == 0 /\ y^post2-y^post3 == 0 /\ __disjvr_0^0-__disjvr_0^post2 == 0 /\ -__disjvr_0^post4+__disjvr_0^post3 == 0 /\ -y^post2+y^0 == 0 /\ -y^post4+y^post3 == 0 /\ 1-x^0 <= 0 /\ -__disjvr_0^post2+__disjvr_0^post3 == 0 /\ x^post4-x^post3-y^post3 == 0 /\ __disjvr_0^post2-__disjvr_0^post3 == 0 /\ -x^post2+x^0 == 0), cost: 1
+	New rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0+y^0, y^0'=y^0, (0 == 0 /\ 1-x^0 <= 0), cost: 1
+	
+		propagated equality x^post2 = x^post3
+		
+		propagated equality y^post2 = y^post3
+		
+		propagated equality __disjvr_0^post2 = __disjvr_0^0
+		
+		propagated equality __disjvr_0^post3 = __disjvr_0^post4
+		
+		propagated equality y^post3 = y^0
+		
+		propagated equality y^post4 = y^0
+		
+		propagated equality __disjvr_0^post4 = __disjvr_0^0
+		
+		propagated equality x^post3 = x^post4-y^0
+		
+		propagated equality x^post4 = x^0+y^0
+		
+	Simplified Guard
+
+	Original rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0+y^0, y^0'=y^0, (0 == 0 /\ 1-x^0 <= 0), cost: 1
+	New rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0+y^0, y^0'=y^0, 1-x^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l1 -> l1 : __disjvr_0^0'=__disjvr_0^0, x^0'=x^0+y^0, y^0'=y^0, 1-x^0 <= 0, cost: 1
+	New rule:
+	l1 -> l1 : x^0'=x^0+y^0, 1-x^0 <= 0, cost: 1
+
+Step with 10
+
+	Trace
+
+	10[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 11
+
+	Trace
+
+	10[T], 11[(1-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: l5
+Program variables: x^0 y^0
+  11: l1 -> l1 : x^0'=x^0+y^0, 1-x^0 <= 0, cost: 1
+  12: l1 -> LoAT_sink : (-1+x^0 >= 0 /\ -y^0 <= 0), cost: NONTERM
+  13: l1 -> l1 : x^0'=x^0+n*y^0, (-1+x^0+(-1+n)*y^0 >= 0 /\ -1+n >= 0 /\ -1+x^0 >= 0), cost: 1
+  10: l5 -> l1 : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l1 -> l1 : x^0'=x^0+y^0, (1-x^0 <= 0), cost: 1
+	New rule:
+	l1 -> LoAT_sink : (-1+x^0 >= 0 /\ -y^0 <= 0), cost: NONTERM
+
+		-1+x^0 >= 0 [0]: eventual decrease yields (-1+x^0+(-1+n)*y^0 >= 0 /\ -1+x^0 >= 0)
+		
+		-1+x^0 >= 0 [1]: eventual increase yields (-1+x^0 >= 0 /\ -y^0 <= 0)
+		
+		Replacement map: {-1+x^0 >= 0 -> (-1+x^0 >= 0 /\ -y^0 <= 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	l1 -> l1 : x^0'=x^0+y^0, (1-x^0 <= 0), cost: 1
+	New rule:
+	l1 -> l1 : x^0'=x^0+n*y^0, (-1+x^0+(-1+n)*y^0 >= 0 /\ -1+n >= 0 /\ -1+x^0 >= 0), cost: 1
+
+		-1+x^0 >= 0 [0]: eventual decrease yields (-1+x^0+(-1+n)*y^0 >= 0 /\ -1+x^0 >= 0)
+		
+		-1+x^0 >= 0 [1]: eventual increase yields (-1+x^0 >= 0 /\ -y^0 <= 0)
+		
+		Replacement map: {-1+x^0 >= 0 -> (-1+x^0+(-1+n)*y^0 >= 0 /\ -1+x^0 >= 0)}
+
+Step with 12
+
+	Trace
+
+	10[T], 12[(-1+x^0 >= 0 /\ -y^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {12[T]}]
+
+Refute
+
+	Counterexample
+
+	[ x^0=1 y^0=0 ] 10 [ x^0=1 y^0=0 ] 12
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

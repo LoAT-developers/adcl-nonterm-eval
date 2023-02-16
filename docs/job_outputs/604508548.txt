@@ -1,0 +1,986 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l20, true>
+<l1, l2, ((1 + y8^0) <= (0 + x7^0))>
+<l1, l2, ((1 + x7^0) <= (0 + y8^0))>
+<l1, l3, ((0 + x7^0) <= (0 + y8^0)) /\ ((0 + y8^0) <= (0 + x7^0)), par{ret_foo10^0 -> (0 + x7^0)}>
+<l4, l5, true>
+<l6, l4, ((0 + i^0) <= 4)>
+<l6, l4, (5 <= (0 + i^0))>
+<l7, l6, (undef127 = (0 + ret_foo18^0)), par{k^0 -> (0 + undef127), tmp___1^0 -> undef127}>
+<l8, l9, ((0 + x15^0) <= 0)>
+<l8, l9, (1 <= (0 + x15^0)), par{y16^0 -> ((0 + x15^0) + y16^0)}>
+<l10, l7, ((1 + x15^0) <= (0 + i17^0)), par{ret_foo18^0 -> (0 + y16^0)}>
+<l10, l8, ((0 + i17^0) <= (0 + x15^0))>
+<l2, l11, true>
+<l12, l9, ((1 + y16^0) <= (0 + x15^0))>
+<l12, l9, ((1 + x15^0) <= (0 + y16^0))>
+<l12, l7, ((0 + x15^0) <= (0 + y16^0)) /\ ((0 + y16^0) <= (0 + x15^0)), par{ret_foo18^0 -> (0 + x15^0)}>
+<l13, l12, (undef297 = (0 + ret_foo14^0)), par{i17^0 -> 0, j^0 -> (0 + undef297), tmp___0^0 -> undef297, x15^0 -> 3, y16^0 -> (0 + (~(1) * __const_6^0))}>
+<l14, l15, true>
+<l16, l14, ((0 + x11^0) <= 0)>
+<l16, l14, (1 <= (0 + x11^0)), par{y12^0 -> ((0 + x11^0) + y12^0)}>
+<l15, l13, ((1 + x11^0) <= (0 + i13^0)), par{ret_foo14^0 -> (0 + y12^0)}>
+<l15, l16, ((0 + i13^0) <= (0 + x11^0))>
+<l17, l14, ((1 + y12^0) <= (0 + x11^0))>
+<l17, l14, ((1 + x11^0) <= (0 + y12^0))>
+<l17, l13, ((0 + x11^0) <= (0 + y12^0)) /\ ((0 + y12^0) <= (0 + x11^0)), par{ret_foo14^0 -> (0 + x11^0)}>
+<l9, l10, true>
+<l3, l17, (undef486 = (0 + ret_foo10^0)), par{i13^0 -> 0, i^0 -> (0 + undef486), tmp^0 -> undef486, x11^0 -> ~(3), y12^0 -> 4}>
+<l18, l2, ((0 + x7^0) <= 0)>
+<l18, l2, (1 <= (0 + x7^0)), par{y8^0 -> ((0 + x7^0) + y8^0)}>
+<l11, l3, ((1 + x7^0) <= (0 + i9^0)), par{ret_foo10^0 -> (0 + y8^0)}>
+<l11, l18, ((0 + i9^0) <= (0 + x7^0))>
+<l19, l1, true, par{i9^0 -> 0, x7^0 -> 3, y8^0 -> 3}>
+<l20, l19, true>
+
+Fresh variables:
+undef127, undef297, undef486, 
+
+Undef variables:
+undef127, undef297, undef486, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l14, (0 = 0) /\ (3 = 3) /\ (y8^0 = 3) /\ ((0 + 3) <= (0 + 3)) /\ ((0 + 3) <= (0 + 3)) /\ (undef486 = (0 + (0 + 3))) /\ ((1 + ~(3)) <= (0 + 4)), par{i13^0 -> 0, i^0 -> (0 + undef486), x11^0 -> ~(3), y12^0 -> 4}>
+<l9, l5, ((1 + x15^0) <= (0 + i17^0)) /\ (undef127 = (0 + (0 + y16^0))) /\ ((0 + i^0) <= 4)>
+<l9, l5, ((1 + x15^0) <= (0 + i17^0)) /\ (undef127 = (0 + (0 + y16^0))) /\ (5 <= (0 + i^0))>
+<l9, l9, ((0 + i17^0) <= (0 + x15^0)) /\ ((0 + x15^0) <= 0)>
+<l9, l9, ((0 + i17^0) <= (0 + x15^0)) /\ (1 <= (0 + x15^0)), par{y16^0 -> ((0 + x15^0) + y16^0)}>
+<l14, l9, ((1 + x11^0) <= (0 + i13^0)) /\ (undef297 = (0 + (0 + y12^0))) /\ ((1 + (0 + (~(1) * __const_6^0))) <= (0 + 3)), par{i17^0 -> 0, x15^0 -> 3, y16^0 -> (0 + (~(1) * __const_6^0))}>
+<l14, l9, ((1 + x11^0) <= (0 + i13^0)) /\ (undef297 = (0 + (0 + y12^0))) /\ ((1 + 3) <= (0 + (0 + (~(1) * __const_6^0)))), par{i17^0 -> 0, x15^0 -> 3, y16^0 -> (0 + (~(1) * __const_6^0))}>
+<l14, l5, ((1 + x11^0) <= (0 + i13^0)) /\ (undef297 = (0 + (0 + y12^0))) /\ ((0 + 3) <= (0 + (0 + (~(1) * __const_6^0)))) /\ ((0 + (0 + (~(1) * __const_6^0))) <= (0 + 3)) /\ (undef127 = (0 + (0 + 3))) /\ ((0 + i^0) <= 4), par{i17^0 -> 0, x15^0 -> 3, y16^0 -> (0 + (~(1) * __const_6^0))}>
+<l14, l5, ((1 + x11^0) <= (0 + i13^0)) /\ (undef297 = (0 + (0 + y12^0))) /\ ((0 + 3) <= (0 + (0 + (~(1) * __const_6^0)))) /\ ((0 + (0 + (~(1) * __const_6^0))) <= (0 + 3)) /\ (undef127 = (0 + (0 + 3))) /\ (5 <= (0 + i^0)), par{i17^0 -> 0, x15^0 -> 3, y16^0 -> (0 + (~(1) * __const_6^0))}>
+<l14, l14, ((0 + i13^0) <= (0 + x11^0)) /\ ((0 + x11^0) <= 0)>
+<l14, l14, ((0 + i13^0) <= (0 + x11^0)) /\ (1 <= (0 + x11^0)), par{y12^0 -> ((0 + x11^0) + y12^0)}>
+
+Fresh variables:
+undef127, undef297, undef486, 
+
+Undef variables:
+undef127, undef297, undef486, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l14, l14, i13^0 <= x11^0 /\ x11^0 <= 0, {all remain the same}>
+<l14, l14, 1 <= x11^0 /\ i13^0 <= x11^0, {y12^0 -> x11^0 + y12^0, rest remain the same}>
+Variables:
+i13^0, x11^0, y12^0
+
+Graph 2:
+Transitions:
+<l9, l9, i17^0 <= x15^0 /\ x15^0 <= 0, {all remain the same}>
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+
+Graph 3:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l14, y8^0 = 3 /\ undef486 = 3, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+
+Graph 2
+<l14, l9, 1 + x11^0 <= i13^0 /\ 0 <= 2 + __const_6^0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+<l14, l9, 1 + x11^0 <= i13^0 /\ 4 + __const_6^0 <= 0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+
+Graph 3
+<l9, l5, 1 + x15^0 <= i17^0 /\ i^0 <= 4 /\ y16^0 = undef127, {all remain the same}>
+<l9, l5, 1 + x15^0 <= i17^0 /\ 5 <= i^0 /\ y16^0 = undef127, {all remain the same}>
+<l14, l5, 1 + x11^0 <= i13^0 /\ i^0 <= 4 /\ y12^0 = undef297 /\ 3 + __const_6^0 = 0 /\ undef127 = 3, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+<l14, l5, 1 + x11^0 <= i13^0 /\ 5 <= i^0 /\ y12^0 = undef297 /\ 3 + __const_6^0 = 0 /\ undef127 = 3, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 5 , 3 )
+( 9 , 2 )
+( 14 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002612
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l14: 1 + x11^0 <= 0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, 1 <= x11^0 /\ i13^0 <= x11^0, {y12^0 -> x11^0 + y12^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + x11^0 <= 0 /\ i13^0 <= x11^0, {all remain the same}>
+Checking unfeasibility...
+Time used: 0.001342
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l14: 0 <= i13^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, 1 + x11^0 <= 0 /\ i13^0 <= x11^0, {all remain the same}>
+Checking unfeasibility...
+Time used: 2.4e-05
+
+Analyzing SCC {l14}...
+No cycles found.
+
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.002523
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l9: 1 <= x15^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l9, l9, i17^0 <= x15^0 /\ x15^0 <= 0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 0.001305
+
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000383s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000962s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003415s
+Time used: 0.003342
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005041s
+Time used: 0.004822
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000627s
+Time used: 4.00028
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005969s
+Time used: 1.00034
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007784s
+Time used: 0.005276
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008215s
+Time used: 0.008213
+
+LOG: SAT solveNonLinear - Elapsed time: 0.015999s
+Cost: 1; Total time: 0.013489
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 0 <= 1 + i17^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000350s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001350s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004343s
+Time used: 0.00425
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006713s
+Time used: 0.006421
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000755s
+Time used: 4.00037
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.011232s
+Time used: 1.00033
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008114s
+Time used: 0.005311
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.007729s
+Time used: 0.007727
+
+LOG: SAT solveNonLinear - Elapsed time: 0.015843s
+Cost: 1; Total time: 0.013038
+[33mQuasi-ranking function: [36m50000 + i17^0 + 50001*x15^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000411s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002142s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004008s
+Time used: 0.003911
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006672s
+Time used: 0.006395
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000900s
+Time used: 4.00052
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.010863s
+Time used: 1.0004
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008974s
+Time used: 0.005985
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.005969s
+Time used: 0.005967
+
+LOG: SAT solveNonLinear - Elapsed time: 0.014943s
+Cost: 1; Total time: 0.011952
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 0 <= 1 + i17^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - i17^0 + 50004*x15^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000473s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001790s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004914s
+Time used: 0.00481
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006656s
+Time used: 0.006363
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000947s
+Time used: 4.00055
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009222s
+Time used: 1.0005
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009846s
+Time used: 0.006817
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008079s
+Time used: 0.008077
+
+LOG: SAT solveNonLinear - Elapsed time: 0.017925s
+Cost: 1; Total time: 0.014894
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 0 <= 1 + i17^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + i17^0 - x15^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000534s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002591s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005532s
+Time used: 0.005425
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007116s
+Time used: 0.006774
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001738s
+Time used: 4.00135
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.015164s
+Time used: 1.00038
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010047s
+Time used: 0.00708
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.009922s
+Time used: 0.009919
+
+LOG: SAT solveNonLinear - Elapsed time: 0.019969s
+Cost: 1; Total time: 0.016999
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 1 <= x15^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - i17^0 - x15^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000584s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003211s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005359s
+Time used: 0.005247
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007317s
+Time used: 0.006948
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001179s
+Time used: 4.00074
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009906s
+Time used: 1.0004
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010423s
+Time used: 0.007299
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008872s
+Time used: 0.008869
+
+LOG: SAT solveNonLinear - Elapsed time: 0.019295s
+Cost: 1; Total time: 0.016168
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 1 <= x15^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - x15^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000620s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003656s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006116s
+Time used: 0.006002
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008498s
+Time used: 0.00811
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001339s
+Time used: 4.00067
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.008146s
+Time used: 1.00057
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011537s
+Time used: 0.008338
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.006913s
+Time used: 0.006905
+
+LOG: SAT solveNonLinear - Elapsed time: 0.018450s
+Cost: 1; Total time: 0.015243
+[33mQuasi-ranking function: [36m50000 + x15^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000677s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004359s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006399s
+Time used: 0.006271
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007769s
+Time used: 0.007371
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001535s
+Time used: 4.00111
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009632s
+Time used: 1.00053
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011635s
+Time used: 0.00848
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008519s
+Time used: 0.00851
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020154s
+Cost: 1; Total time: 0.01699
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 1 <= x15^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + i17^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + i17^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000722s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004980s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + i17^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006517s
+Time used: 0.006377
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008191s
+Time used: 0.007789
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001176s
+Time used: 4.00068
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006385s
+Time used: 1.00056
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012020s
+Time used: 0.008815
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.009488s
+Time used: 0.00948
+
+LOG: SAT solveNonLinear - Elapsed time: 0.021508s
+Cost: 1; Total time: 0.018295
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 0 <= i17^0 + x15^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= i17^0 + x15^0 /\ 0 <= 1 + i17^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= i17^0 + x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + i17^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - i17^0 - y16^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= i17^0 + x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + i17^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000793s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004579s
+Trying to remove transition: <l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0 /\ 0 <= i17^0 + x15^0 /\ 0 <= 1 + i17^0 /\ 50001 + i17^0 <= x15^0 + y16^0 /\ 50001 + i17^0 + 50001*x15^0 <= y16^0 /\ 50001 + i17^0 <= y16^0 /\ 50001 <= i17^0 + x15^0 + y16^0 /\ 50001 + 50004*x15^0 <= i17^0 + y16^0 /\ 50001 <= i17^0 + y16^0 /\ 50001 + x15^0 <= y16^0 /\ 50001 <= x15^0 + y16^0 /\ 50001 <= y16^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006856s
+Time used: 0.006642
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009317s
+Time used: 0.008897
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001192s
+Time used: 4.00079
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009037s
+Time used: 1.00048
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011152s
+Time used: 0.008
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l14, l9, 1 + x11^0 <= i13^0 /\ 0 <= 2 + __const_6^0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l14, l9, 1 + x11^0 <= i13^0 /\ 0 <= 2 + __const_6^0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+* Postcondition  : 1 <= 0
+Postcodition moved up: 1 <= 0
+
+LOG: Try proving POST
+Postcondition: 1 <= 0
+
+LOG: CALL check - Post:1 <= 0 - Process 2
+* Exit transition: <l0, l14, 0 <= 2 + __const_6^0 /\ y8^0 = 3 /\ undef486 = 3 /\ undef297 = 4, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000800s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000853s
+
+LOG: NarrowEntry size 1
+ENTRIES:
+<l0, l14, 0 <= 0 /\ 0 <= 2 + __const_6^0 /\ y8^0 = 3 /\ undef486 = 3 /\ undef297 = 4, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+END ENTRIES:
+GRAPH:
+END GRAPH:
+EXIT: <l14, l9, 1 + x11^0 <= i13^0 /\ 0 <= 2 + __const_6^0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+POST: 1 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002554s
+Time used: 0.002492
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003600s
+Time used: 0.003518
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004987s
+Time used: 0.004875
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.017999s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 2
+Transitions:
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+Variables:
+i17^0, x15^0, y16^0
+
+Checking conditional non-termination of SCC {l9}...
+EXIT TRANSITIONS:
+<l9, end, 1 + x15^0 <= i17^0 /\ 1 <= x15^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005202s
+Time used: 0.005134
+
+LOG: SAT solveNonLinear - Elapsed time: 0.005202s
+Cost: 0; Total time: 0.005134
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l9: i17^0 <= x15^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l9: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 <= x15^0 /\ i17^0 <= x15^0, {y16^0 -> x15^0 + y16^0, rest remain the same}>
+
+Calling reachability with...
+Transition: <l9, end, true, {all remain the same}>
+Conditions: i17^0 <= x15^0, 
+Transition: <l9, end, true, {all remain the same}>
+Conditions: i17^0 <= x15^0, 
+OPEN EXITS: 
+<l9, end, true, {all remain the same}> (condsUp: i17^0 <= x15^0)
+<l9, end, true, {all remain the same}> (condsUp: i17^0 <= x15^0)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l14, l9, 1 + x11^0 <= i13^0 /\ 0 <= 2 + __const_6^0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+Conditions: i17^0 <= x15^0, 
+Transition: <l14, l9, 1 + x11^0 <= i13^0 /\ 4 + __const_6^0 <= 0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+Conditions: i17^0 <= x15^0, 
+Transition: <l14, l9, 1 + x11^0 <= i13^0 /\ 0 <= 2 + __const_6^0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+Conditions: i17^0 <= x15^0, 
+Transition: <l14, l9, 1 + x11^0 <= i13^0 /\ 4 + __const_6^0 <= 0 /\ y12^0 = undef297, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}>
+Conditions: i17^0 <= x15^0, 
+OPEN EXITS: 
+<l14, l9, true, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}> (condsUp: 1 + x11^0 <= i13^0, 0 <= 2 + __const_6^0, y12^0 = undef297, 0 <= 1)
+<l14, l9, true, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}> (condsUp: 1 + x11^0 <= i13^0, 4 + __const_6^0 <= 0, y12^0 = undef297, 0 <= 1)
+<l14, l9, true, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}> (condsUp: 1 + x11^0 <= i13^0, 0 <= 2 + __const_6^0, y12^0 = undef297, 0 <= 1)
+<l14, l9, true, {i17^0 -> 0, x15^0 -> 3, y16^0 -> -__const_6^0, rest remain the same}> (condsUp: 1 + x11^0 <= i13^0, 4 + __const_6^0 <= 0, y12^0 = undef297, 0 <= 1)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l14, y8^0 = 3 /\ undef486 = 3, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+Conditions: 1 + x11^0 <= i13^0, 0 <= 2 + __const_6^0, y12^0 = undef297, 0 <= 1, 
+Transition: <l0, l14, y8^0 = 3 /\ undef486 = 3, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+Conditions: 1 + x11^0 <= i13^0, 4 + __const_6^0 <= 0, y12^0 = undef297, 0 <= 1, 
+Transition: <l0, l14, y8^0 = 3 /\ undef486 = 3, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+Conditions: 1 + x11^0 <= i13^0, 0 <= 2 + __const_6^0, y12^0 = undef297, 0 <= 1, 
+Transition: <l0, l14, y8^0 = 3 /\ undef486 = 3, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+Conditions: 1 + x11^0 <= i13^0, 4 + __const_6^0 <= 0, y12^0 = undef297, 0 <= 1, 
+OPEN EXITS: 
+<l0, l14, 0 <= 2 + __const_6^0 /\ y8^0 = 3 /\ undef486 = 3 /\ undef297 = 4, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+<l0, l14, 4 + __const_6^0 <= 0 /\ y8^0 = 3 /\ undef486 = 3 /\ undef297 = 4, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+<l0, l14, 0 <= 2 + __const_6^0 /\ y8^0 = 3 /\ undef486 = 3 /\ undef297 = 4, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+<l0, l14, 4 + __const_6^0 <= 0 /\ y8^0 = 3 /\ undef486 = 3 /\ undef297 = 4, {i13^0 -> 0, i^0 -> undef486, x11^0 -> -3, y12^0 -> 4, rest remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

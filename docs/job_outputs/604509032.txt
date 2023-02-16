@@ -1,0 +1,908 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l4, true>
+<l1, l2, (arg1 > 0) /\ (arg2 > ~(1)), par{arg3 -> undef3, arg4 -> undef4}>
+<l2, l3, (arg1 > 0) /\ (arg2 > ~(1)) /\ ((arg2 - (5 * undef9)) >= 0) /\ ((arg2 - (5 * undef9)) < 5) /\ ((arg2 - (4 * undef10)) >= 0) /\ ((arg2 - (4 * undef10)) < 4) /\ ((arg2 - (5 * undef11)) >= 0) /\ ((arg2 - (5 * undef11)) < 5) /\ ((arg2 - (4 * undef12)) < 4) /\ ((arg2 - (4 * undef12)) >= 0), par{arg1 -> arg2, arg2 -> (arg2 - (5 * undef9)), arg3 -> (arg2 - (4 * undef10)), arg4 -> ((arg2 + (arg2 - (5 * undef11))) + ((3 * arg2) - (12 * undef12)))}>
+<l3, l3, (arg4 > ~(1)) /\ (arg2 < arg1), par{arg1 -> (arg1 - 1), arg4 -> (((arg1 - 1) + arg2) + (3 * arg3))}>
+<l3, l3, (arg3 < arg2) /\ (arg4 > ~(1)) /\ (arg2 >= arg1), par{arg1 -> (arg1 + 1), arg2 -> (arg2 - 2), arg4 -> (((arg1 + 1) + (arg2 - 2)) + (3 * arg3))}>
+<l3, l3, (arg4 > ~(1)) /\ (arg3 >= arg2) /\ (arg2 >= arg1), par{arg1 -> (arg1 + 1), arg2 -> (arg2 + 1), arg3 -> (arg3 - 1), arg4 -> (((arg1 + 1) + (arg2 + 1)) + ((3 * arg3) - 3))}>
+<l4, l1, true, par{arg1 -> undef25, arg2 -> undef26, arg3 -> undef27, arg4 -> undef28}>
+
+Fresh variables:
+undef3, undef4, undef9, undef10, undef11, undef12, undef25, undef26, undef27, undef28, 
+
+Undef variables:
+undef3, undef4, undef9, undef10, undef11, undef12, undef25, undef26, undef27, undef28, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l3, (arg1 = undef26) /\ (arg2 = (undef26 - (5 * undef9))) /\ (arg3 = (undef26 - (4 * undef10))) /\ (arg4 = ((undef26 + (undef26 - (5 * undef11))) + ((3 * undef26) - (12 * undef12)))) /\ (undef25 > 0) /\ (undef26 > ~(1)) /\ (undef25 > 0) /\ (undef26 > ~(1)) /\ ((undef26 - (5 * undef9)) >= 0) /\ ((undef26 - (5 * undef9)) < 5) /\ ((undef26 - (4 * undef10)) >= 0) /\ ((undef26 - (4 * undef10)) < 4) /\ ((undef26 - (5 * undef11)) >= 0) /\ ((undef26 - (5 * undef11)) < 5) /\ ((undef26 - (4 * undef12)) < 4) /\ ((undef26 - (4 * undef12)) >= 0)>
+<l3, l3, (arg4 > ~(1)) /\ (arg2 < arg1), par{arg1 -> (arg1 - 1), arg4 -> (((arg1 - 1) + arg2) + (3 * arg3))}>
+<l3, l3, (arg3 < arg2) /\ (arg4 > ~(1)) /\ (arg2 >= arg1), par{arg1 -> (arg1 + 1), arg2 -> (arg2 - 2), arg4 -> (((arg1 + 1) + (arg2 - 2)) + (3 * arg3))}>
+<l3, l3, (arg4 > ~(1)) /\ (arg3 >= arg2) /\ (arg2 >= arg1), par{arg1 -> (arg1 + 1), arg2 -> (arg2 + 1), arg3 -> (arg3 - 1), arg4 -> (((arg1 + 1) + (arg2 + 1)) + ((3 * arg3) - 3))}>
+
+Fresh variables:
+undef3, undef4, undef9, undef10, undef11, undef12, undef25, undef26, undef27, undef28, 
+
+Undef variables:
+undef3, undef4, undef9, undef10, undef11, undef12, undef25, undef26, undef27, undef28, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l3, l3, 0 <= arg4 /\ 1 + arg2 <= arg1, {arg1 -> -1 + arg1, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+<l3, l3, arg1 <= arg2 /\ 0 <= arg4 /\ 1 + arg3 <= arg2, {arg1 -> 1 + arg1, arg2 -> -2 + arg2, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+<l3, l3, arg1 <= arg2 /\ arg2 <= arg3 /\ 0 <= arg4, {arg1 -> 1 + arg1, arg2 -> 1 + arg2, arg3 -> -1 + arg3, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l3, 5*undef9 <= undef26 /\ 4*undef10 <= undef26 /\ 5*undef11 <= undef26 /\ 4*undef12 <= undef26 /\ 0 <= undef26 /\ 1 <= undef25 /\ undef26 <= 3 + 4*undef10 /\ undef26 <= 3 + 4*undef12 /\ undef26 <= 4 + 5*undef9 /\ undef26 <= 4 + 5*undef11 /\ arg1 = undef26 /\ arg2 + 5*undef9 = undef26 /\ arg3 + 4*undef10 = undef26 /\ arg4 + 5*undef11 + 12*undef12 = 5*undef26, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.023268
+
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001329s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.024530s
+Trying to remove transition: <l3, l3, arg1 <= arg2 /\ arg2 <= arg3 /\ 0 <= arg4, {arg1 -> 1 + arg1, arg2 -> 1 + arg2, arg3 -> -1 + arg3, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.333682s
+Time used: 0.333311
+Trying to remove transition: <l3, l3, arg1 <= arg2 /\ 0 <= arg4 /\ 1 + arg3 <= arg2, {arg1 -> 1 + arg1, arg2 -> -2 + arg2, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005120s
+Time used: 4.00038
+Trying to remove transition: <l3, l3, 0 <= arg4 /\ 1 + arg2 <= arg1, {arg1 -> -1 + arg1, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.072635s
+Time used: 0.063022
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001765s
+Time used: 4.00016
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.593180s
+Time used: 0.582177
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001087s
+Time used: 1.00107
+
+LOG: SAT solveNonLinear - Elapsed time: 1.594267s
+Cost: 2; Total time: 1.58325
+[31mFailed at location 3: arg3 <= 0[0m
+[31mFailed at location 3: arg4 <= arg1 + arg2 + arg3[0m
+Before Improving: 
+[36mQuasi-invariant at l3: arg3 <= 0[0m
+[36mQuasi-invariant at l3: arg4 <= arg1 + arg2 + arg3[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006187s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002797s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002472s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003071s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002672s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003768s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004344s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005953s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002479s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004780s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.066631s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004325s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.015637s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003668s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008022s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003567s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.020591s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003672s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.017977s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002650s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003555s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.056991s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003762s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023494s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002629s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003561s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023411s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002602s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003552s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023415s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002652s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003606s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023480s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002633s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003568s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023423s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002622s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003579s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023421s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002636s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003584s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023418s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002614s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003581s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023431s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002619s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003602s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.023388s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002637s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003579s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012199s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002601s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003572s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012233s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002598s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003595s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012179s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002600s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003564s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012193s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002602s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003580s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012197s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002596s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003588s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012202s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002598s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003586s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012214s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002618s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003590s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012262s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002609s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003604s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012213s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002606s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003606s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012224s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002633s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003608s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012233s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002603s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003593s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012235s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002613s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003592s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012199s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002612s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003603s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012212s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002618s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003626s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012218s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002622s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003603s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012218s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002617s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003606s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012199s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002613s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003616s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012498s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002626s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003615s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012512s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002626s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003606s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012538s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002660s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003626s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012510s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002646s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003659s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012492s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002635s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003617s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012535s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002642s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003635s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012525s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002630s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003634s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012509s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002626s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003626s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012495s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002632s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003628s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012522s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002650s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003625s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012524s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002629s
+Quasi-invariant improved
+Remaining time after improvement: -4.2e-05
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l3: arg3 <= 52[0m
+[36mQuasi-invariant at l3: arg4 <= 104 + arg1 + arg2 + arg3[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 0 <= arg4 /\ 1 + arg2 <= arg1 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> -1 + arg1, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, arg1 <= arg2 /\ 0 <= arg4 /\ 1 + arg3 <= arg2 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> 1 + arg1, arg2 -> -2 + arg2, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, arg1 <= arg2 /\ arg2 <= arg3 /\ 0 <= arg4 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> 1 + arg1, arg2 -> 1 + arg2, arg3 -> -1 + arg3, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, 0 <= arg4 /\ 1 + arg2 <= arg1 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> -1 + arg1, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, arg1 <= arg2 /\ 0 <= arg4 /\ 1 + arg3 <= arg2 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> 1 + arg1, arg2 -> -2 + arg2, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l3, l3, arg1 <= arg2 /\ arg2 <= arg3 /\ 0 <= arg4 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> 1 + arg1, arg2 -> 1 + arg2, arg3 -> -1 + arg3, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+[33mRanking function: [36m310 + arg1 + arg2 + 3*arg3[0m
+New Graphs: 
+Transitions:
+<l3, l3, 0 <= arg4 /\ 1 + arg2 <= arg1 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> -1 + arg1, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+<l3, l3, arg1 <= arg2 /\ 0 <= arg4 /\ 1 + arg3 <= arg2 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> 1 + arg1, arg2 -> -2 + arg2, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001154s
+[33mRanking function: [36m104 + 2*arg2 + arg3[0m
+New Graphs: 
+Transitions:
+<l3, l3, 0 <= arg4 /\ 1 + arg2 <= arg1 /\ arg3 <= 52 /\ arg4 <= 104 + arg1 + arg2 + arg3, {arg1 -> -1 + arg1, arg4 -> -1 + arg1 + arg2 + 3*arg3, rest remain the same}>
+Variables:
+arg1, arg2, arg3, arg4
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000674s
+[33mRanking function: [36m-1 + arg1 - arg2[0m
+New Graphs: 
+Calling Safety with literal arg3 <= 52 and entry <l0, l3, 5*undef9 <= undef26 /\ 4*undef10 <= undef26 /\ 5*undef11 <= undef26 /\ 4*undef12 <= undef26 /\ 0 <= undef26 /\ 1 <= undef25 /\ undef26 <= 3 + 4*undef10 /\ undef26 <= 3 + 4*undef12 /\ undef26 <= 4 + 5*undef9 /\ undef26 <= 4 + 5*undef11 /\ arg1 = undef26 /\ arg2 + 5*undef9 = undef26 /\ arg3 + 4*undef10 = undef26 /\ arg4 + 5*undef11 + 12*undef12 = 5*undef26, {all remain the same}>
+
+LOG: CALL check - Post:arg3 <= 52 - Process 1
+* Exit transition: <l0, l3, 5*undef9 <= undef26 /\ 4*undef10 <= undef26 /\ 5*undef11 <= undef26 /\ 4*undef12 <= undef26 /\ 0 <= undef26 /\ 1 <= undef25 /\ undef26 <= 3 + 4*undef10 /\ undef26 <= 3 + 4*undef12 /\ undef26 <= 4 + 5*undef9 /\ undef26 <= 4 + 5*undef11 /\ arg1 = undef26 /\ arg2 + 5*undef9 = undef26 /\ arg3 + 4*undef10 = undef26 /\ arg4 + 5*undef11 + 12*undef12 = 5*undef26, {all remain the same}>
+* Postcondition  : arg3 <= 52
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000238s
+[32m> Postcondition implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000330s
+Calling Safety with literal arg4 <= 104 + arg1 + arg2 + arg3 and entry <l0, l3, 5*undef9 <= undef26 /\ 4*undef10 <= undef26 /\ 5*undef11 <= undef26 /\ 4*undef12 <= undef26 /\ 0 <= undef26 /\ 1 <= undef25 /\ undef26 <= 3 + 4*undef10 /\ undef26 <= 3 + 4*undef12 /\ undef26 <= 4 + 5*undef9 /\ undef26 <= 4 + 5*undef11 /\ arg3 <= 52 /\ arg1 = undef26 /\ arg2 + 5*undef9 = undef26 /\ arg3 + 4*undef10 = undef26 /\ arg4 + 5*undef11 + 12*undef12 = 5*undef26, {all remain the same}>
+
+LOG: CALL check - Post:arg4 <= 104 + arg1 + arg2 + arg3 - Process 2
+* Exit transition: <l0, l3, 5*undef9 <= undef26 /\ 4*undef10 <= undef26 /\ 5*undef11 <= undef26 /\ 4*undef12 <= undef26 /\ 0 <= undef26 /\ 1 <= undef25 /\ undef26 <= 3 + 4*undef10 /\ undef26 <= 3 + 4*undef12 /\ undef26 <= 4 + 5*undef9 /\ undef26 <= 4 + 5*undef11 /\ arg3 <= 52 /\ arg1 = undef26 /\ arg2 + 5*undef9 = undef26 /\ arg3 + 4*undef10 = undef26 /\ arg4 + 5*undef11 + 12*undef12 = 5*undef26, {all remain the same}>
+* Postcondition  : arg4 <= 104 + arg1 + arg2 + arg3
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000257s
+[32m> Postcondition implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000360s
+INVARIANTS: 
+3: arg3 <= 52 , arg4 <= 104 + arg1 + arg2 + arg3 , 
+Quasi-INVARIANTS to narrow Graph: 
+3: 
+[32mProgram Terminates[0m

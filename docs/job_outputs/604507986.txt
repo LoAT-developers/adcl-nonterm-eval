@@ -1,0 +1,178 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_Load -> f49_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (-arg1p1+arg2 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+   1: f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p2, arg2'=arg2p2, (5-arg1p2 == 0 /\ 5-arg1 == 0), cost: 1
+   2: f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p3, arg2'=arg2p3, (-1-arg1p3+arg1 == 0 /\ arg1 > 0 /\ -5+arg1 < 0), cost: 1
+   3: f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p4, arg2'=arg2p4, (-5+arg1 > 0 /\ -1-arg1p4+arg1 == 0), cost: 1
+   4: __init -> f1_0_main_Load : arg1'=arg1p5, arg2'=arg2p5, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2
+   1: f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p2, arg2'=arg2p2, (5-arg1p2 == 0 /\ 5-arg1 == 0), cost: 1
+   2: f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p3, arg2'=arg2p3, (-1-arg1p3+arg1 == 0 /\ arg1 > 0 /\ -5+arg1 < 0), cost: 1
+   3: f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p4, arg2'=arg2p4, (-5+arg1 > 0 /\ -1-arg1p4+arg1 == 0), cost: 1
+   5: __init -> f49_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (arg2p5-arg1p1 == 0 /\ arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p5, arg2'=arg2p5, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f49_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (-arg1p1+arg2 == 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	__init -> f49_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (arg2p5-arg1p1 == 0 /\ arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 4
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   6: f49_0_loop_LE -> f49_0_loop_LE : arg1'=5, arg2'=arg2p2, 5-arg1 == 0, cost: 1
+   7: f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p3, (arg1 > 0 /\ -5+arg1 < 0), cost: 1
+   8: f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p4, -5+arg1 > 0, cost: 1
+   9: __init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (1+arg2p5 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p2, arg2'=arg2p2, (5-arg1p2 == 0 /\ 5-arg1 == 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=5, arg2'=arg2p2, (0 == 0 /\ 5-arg1 == 0), cost: 1
+	
+		propagated equality arg1p2 = 5
+		
+	Simplified Guard
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=5, arg2'=arg2p2, (0 == 0 /\ 5-arg1 == 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=5, arg2'=arg2p2, 5-arg1 == 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p3, arg2'=arg2p3, (-1-arg1p3+arg1 == 0 /\ arg1 > 0 /\ -5+arg1 < 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p3, (0 == 0 /\ arg1 > 0 /\ -5+arg1 < 0), cost: 1
+	
+		propagated equality arg1p3 = -1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p3, (0 == 0 /\ arg1 > 0 /\ -5+arg1 < 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p3, (arg1 > 0 /\ -5+arg1 < 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=arg1p4, arg2'=arg2p4, (-5+arg1 > 0 /\ -1-arg1p4+arg1 == 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p4, (0 == 0 /\ -5+arg1 > 0), cost: 1
+	
+		propagated equality arg1p4 = -1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p4, (0 == 0 /\ -5+arg1 > 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p4, -5+arg1 > 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f49_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (arg2p5-arg1p1 == 0 /\ arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+	New rule:
+	__init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (0 == 0 /\ arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+	
+		propagated equality arg1p1 = arg2p5
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (0 == 0 /\ arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+	New rule:
+	__init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (arg1p5 > 0 /\ 1+arg2p5 > 0), cost: 1
+	New rule:
+	__init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (1+arg2p5 > 0), cost: 1
+
+Step with 9
+
+	Trace
+
+	9[(1+arg2p5 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 6
+
+	Trace
+
+	9[(1+arg2p5 > 0)], 6[(5-arg1 == 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2
+   6: f49_0_loop_LE -> f49_0_loop_LE : arg1'=5, arg2'=arg2p2, 5-arg1 == 0, cost: 1
+   7: f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p3, (arg1 > 0 /\ -5+arg1 < 0), cost: 1
+   8: f49_0_loop_LE -> f49_0_loop_LE : arg1'=-1+arg1, arg2'=arg2p4, -5+arg1 > 0, cost: 1
+  10: f49_0_loop_LE -> LoAT_sink : (-1+n >= 0 /\ -5+arg1 >= 0 /\ 5-arg1 >= 0), cost: NONTERM
+   9: __init -> f49_0_loop_LE : arg1'=arg2p5, arg2'=arg2p1, (1+arg2p5 > 0), cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f49_0_loop_LE -> f49_0_loop_LE : arg1'=5, arg2'=arg2p2, (5-arg1 == 0), cost: 1
+	New rule:
+	f49_0_loop_LE -> LoAT_sink : (-1+n >= 0 /\ -5+arg1 >= 0 /\ 5-arg1 >= 0), cost: NONTERM
+
+		-5+arg1 >= 0 [0]: monotonic increase yields -5+arg1 >= 0
+		
+		5-arg1 >= 0 [0]: monotonic increase yields 5-arg1 >= 0
+		
+		Replacement map: {-5+arg1 >= 0 -> -5+arg1 >= 0, 5-arg1 >= 0 -> 5-arg1 >= 0}
+
+Step with 10
+
+	Trace
+
+	9[(1+arg2p5 > 0)], 10[(-1+n >= 0 /\ -5+arg1 >= 0 /\ 5-arg1 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {10[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=5 arg2=0 ] 9 [ arg1=arg1 arg2=arg2 ] 10
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

@@ -1,0 +1,437 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [3] : x >= 0, cost: 1
+  24: [2] -> [21] : x < 0, cost: 1
+   2: [3] -> [5] : (nondet1 < 0 \/ nondet1 > 0), cost: 1
+   5: [3] -> [7] : (nondet1 <= 0 /\ nondet1 >= 0), cost: 1
+  23: [4] -> [2] : T, cost: 1
+   3: [5] -> [6] : x'=1+x, T, cost: 1
+   4: [6] -> [4] : T, cost: 1
+   6: [7] -> [9] : (nondet2 < 0 \/ nondet2 > 0), cost: 1
+   9: [7] -> [11] : (nondet2 <= 0 /\ nondet2 >= 0), cost: 1
+  22: [8] -> [4] : T, cost: 1
+   7: [9] -> [10] : x'=2+x, T, cost: 1
+   8: [10] -> [8] : T, cost: 1
+  10: [11] -> [13] : (nondet3 < 0 \/ nondet3 > 0), cost: 1
+  13: [11] -> [15] : (nondet3 <= 0 /\ nondet3 >= 0), cost: 1
+  21: [12] -> [8] : T, cost: 1
+  11: [13] -> [14] : x'=3+x, T, cost: 1
+  12: [14] -> [12] : T, cost: 1
+  14: [15] -> [17] : (nondet4 < 0 \/ nondet4 > 0), cost: 1
+  17: [15] -> [19] : (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+  20: [16] -> [12] : T, cost: 1
+  15: [17] -> [18] : x'=4+x, T, cost: 1
+  16: [18] -> [16] : T, cost: 1
+  18: [19] -> [20] : x'=-1, T, cost: 1
+  19: [20] -> [16] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [3] : x >= 0, cost: 1
+  24: [2] -> [21] : x < 0, cost: 1
+   5: [3] -> [7] : (nondet1 <= 0 /\ nondet1 >= 0), cost: 1
+  26: [3] -> [4] : x'=1+x, (nondet1 < 0 \/ nondet1 > 0), cost: 1
+  23: [4] -> [2] : T, cost: 1
+   9: [7] -> [11] : (nondet2 <= 0 /\ nondet2 >= 0), cost: 1
+  28: [7] -> [8] : x'=2+x, (nondet2 < 0 \/ nondet2 > 0), cost: 1
+  22: [8] -> [4] : T, cost: 1
+  13: [11] -> [15] : (nondet3 <= 0 /\ nondet3 >= 0), cost: 1
+  30: [11] -> [12] : x'=3+x, (nondet3 < 0 \/ nondet3 > 0), cost: 1
+  21: [12] -> [8] : T, cost: 1
+  33: [15] -> [16] : x'=4+x, (nondet4 < 0 \/ nondet4 > 0), cost: 1
+  34: [15] -> [16] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+  20: [16] -> [12] : T, cost: 1
+
+	Eliminating location [5] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [5] : (nondet1 < 0 \/ nondet1 > 0), cost: 1
+	Second rule:
+	[5] -> [6] : x'=1+x, T, cost: 1
+	New rule:
+	[3] -> [6] : x'=1+x, (nondet1 < 0 \/ nondet1 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [6] : x'=1+x, (nondet1 < 0 \/ nondet1 > 0), cost: 1
+	Second rule:
+	[6] -> [4] : T, cost: 1
+	New rule:
+	[3] -> [4] : x'=1+x, (nondet1 < 0 \/ nondet1 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 25
+	
+	Eliminating location [9] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[7] -> [9] : (nondet2 < 0 \/ nondet2 > 0), cost: 1
+	Second rule:
+	[9] -> [10] : x'=2+x, T, cost: 1
+	New rule:
+	[7] -> [10] : x'=2+x, (nondet2 < 0 \/ nondet2 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 7
+	
+	Eliminating location [10] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[7] -> [10] : x'=2+x, (nondet2 < 0 \/ nondet2 > 0), cost: 1
+	Second rule:
+	[10] -> [8] : T, cost: 1
+	New rule:
+	[7] -> [8] : x'=2+x, (nondet2 < 0 \/ nondet2 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 8 27
+	
+	Eliminating location [13] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[11] -> [13] : (nondet3 < 0 \/ nondet3 > 0), cost: 1
+	Second rule:
+	[13] -> [14] : x'=3+x, T, cost: 1
+	New rule:
+	[11] -> [14] : x'=3+x, (nondet3 < 0 \/ nondet3 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 10 11
+	
+	Eliminating location [14] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[11] -> [14] : x'=3+x, (nondet3 < 0 \/ nondet3 > 0), cost: 1
+	Second rule:
+	[14] -> [12] : T, cost: 1
+	New rule:
+	[11] -> [12] : x'=3+x, (nondet3 < 0 \/ nondet3 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 12 29
+	
+	Eliminating location [17] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[15] -> [17] : (nondet4 < 0 \/ nondet4 > 0), cost: 1
+	Second rule:
+	[17] -> [18] : x'=4+x, T, cost: 1
+	New rule:
+	[15] -> [18] : x'=4+x, (nondet4 < 0 \/ nondet4 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 14 15
+	
+	Eliminating location [19] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[15] -> [19] : (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+	Second rule:
+	[19] -> [20] : x'=-1, T, cost: 1
+	New rule:
+	[15] -> [20] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 17 18
+	
+	Eliminating location [18] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[15] -> [18] : x'=4+x, (nondet4 < 0 \/ nondet4 > 0), cost: 1
+	Second rule:
+	[18] -> [16] : T, cost: 1
+	New rule:
+	[15] -> [16] : x'=4+x, (nondet4 < 0 \/ nondet4 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 16 31
+	
+	Eliminating location [20] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[15] -> [20] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+	Second rule:
+	[20] -> [16] : T, cost: 1
+	New rule:
+	[15] -> [16] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 19 32
+
+Simplified Transitions
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [3] : x >= 0, cost: 1
+  24: [2] -> [21] : x < 0, cost: 1
+  26: [3] -> [4] : x'=1+x, (nondet1 < 0 \/ nondet1 > 0), cost: 1
+  35: [3] -> [7] : T, cost: 1
+  23: [4] -> [2] : T, cost: 1
+  28: [7] -> [8] : x'=2+x, (nondet2 < 0 \/ nondet2 > 0), cost: 1
+  36: [7] -> [11] : T, cost: 1
+  22: [8] -> [4] : T, cost: 1
+  30: [11] -> [12] : x'=3+x, (nondet3 < 0 \/ nondet3 > 0), cost: 1
+  37: [11] -> [15] : T, cost: 1
+  21: [12] -> [8] : T, cost: 1
+  33: [15] -> [16] : x'=4+x, (nondet4 < 0 \/ nondet4 > 0), cost: 1
+  38: [15] -> [16] : x'=-1, T, cost: 1
+  20: [16] -> [12] : T, cost: 1
+
+	made implied equalities explicit
+
+	Original rule:
+	[3] -> [7] : (nondet1 <= 0 /\ nondet1 >= 0), cost: 1
+	New rule:
+	[3] -> [7] : (nondet1 <= 0 /\ nondet1 >= 0 /\ nondet1 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	[3] -> [7] : (nondet1 <= 0 /\ nondet1 >= 0 /\ nondet1 == 0), cost: 1
+	New rule:
+	[3] -> [7] : (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	
+		propagated equality nondet1 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	[3] -> [7] : (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	New rule:
+	[3] -> [7] : T, cost: 1
+	
+	made implied equalities explicit
+
+	Original rule:
+	[7] -> [11] : (nondet2 <= 0 /\ nondet2 >= 0), cost: 1
+	New rule:
+	[7] -> [11] : (nondet2 <= 0 /\ nondet2 >= 0 /\ nondet2 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	[7] -> [11] : (nondet2 <= 0 /\ nondet2 >= 0 /\ nondet2 == 0), cost: 1
+	New rule:
+	[7] -> [11] : (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	
+		propagated equality nondet2 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	[7] -> [11] : (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	New rule:
+	[7] -> [11] : T, cost: 1
+	
+	made implied equalities explicit
+
+	Original rule:
+	[11] -> [15] : (nondet3 <= 0 /\ nondet3 >= 0), cost: 1
+	New rule:
+	[11] -> [15] : (nondet3 <= 0 /\ nondet3 >= 0 /\ nondet3 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	[11] -> [15] : (nondet3 <= 0 /\ nondet3 >= 0 /\ nondet3 == 0), cost: 1
+	New rule:
+	[11] -> [15] : (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	
+		propagated equality nondet3 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	[11] -> [15] : (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	New rule:
+	[11] -> [15] : T, cost: 1
+	
+	made implied equalities explicit
+
+	Original rule:
+	[15] -> [16] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0), cost: 1
+	New rule:
+	[15] -> [16] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0 /\ nondet4 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	[15] -> [16] : x'=-1, (nondet4 <= 0 /\ nondet4 >= 0 /\ nondet4 == 0), cost: 1
+	New rule:
+	[15] -> [16] : x'=-1, (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	
+		propagated equality nondet4 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	[15] -> [16] : x'=-1, (0 <= 0 /\ 0 >= 0 /\ 0 == 0), cost: 1
+	New rule:
+	[15] -> [16] : x'=-1, T, cost: 1
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 24
+
+	Trace
+
+	0[T], 24[(x < 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {24[T]}]
+
+Step with 1
+
+	Trace
+
+	0[T], 1[(x >= 0)]
+	
+	Blocked
+
+	[{}, {24[T]}, {}]
+
+Step with 26
+
+	Trace
+
+	0[T], 1[(x >= 0)], 26[(nondet1 > 0)]
+	
+	Blocked
+
+	[{}, {24[T]}, {}, {}]
+
+Step with 23
+
+	Trace
+
+	0[T], 1[(x >= 0)], 26[(nondet1 > 0)], 23[T]
+	
+	Blocked
+
+	[{}, {24[T]}, {}, {}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [3] : x >= 0, cost: 1
+  24: [2] -> [21] : x < 0, cost: 1
+  39: [2] -> LoAT_sink : (-1+n >= 0 /\ x >= 0), cost: NONTERM
+  40: [2] -> [2] : x'=n+x, (-1+n >= 0 /\ x >= 0), cost: 1
+  26: [3] -> [4] : x'=1+x, (nondet1 < 0 \/ nondet1 > 0), cost: 1
+  35: [3] -> [7] : T, cost: 1
+  23: [4] -> [2] : T, cost: 1
+  28: [7] -> [8] : x'=2+x, (nondet2 < 0 \/ nondet2 > 0), cost: 1
+  36: [7] -> [11] : T, cost: 1
+  22: [8] -> [4] : T, cost: 1
+  30: [11] -> [12] : x'=3+x, (nondet3 < 0 \/ nondet3 > 0), cost: 1
+  37: [11] -> [15] : T, cost: 1
+  21: [12] -> [8] : T, cost: 1
+  33: [15] -> [16] : x'=4+x, (nondet4 < 0 \/ nondet4 > 0), cost: 1
+  38: [15] -> [16] : x'=-1, T, cost: 1
+  20: [16] -> [12] : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[2] -> [2] : x'=1+x, (x >= 0), cost: 1
+	New rule:
+	[2] -> LoAT_sink : (-1+n >= 0 /\ x >= 0), cost: NONTERM
+
+		x >= 0 [0]: monotonic increase yields x >= 0
+		
+		Replacement map: {x >= 0 -> x >= 0}
+
+	Loop Acceleration
+
+	Original rule:
+	[2] -> [2] : x'=1+x, (x >= 0), cost: 1
+	New rule:
+	[2] -> [2] : x'=n+x, (-1+n >= 0 /\ x >= 0), cost: 1
+
+		x >= 0 [0]: monotonic increase yields x >= 0
+		
+		Replacement map: {x >= 0 -> x >= 0}
+
+Step with 39
+
+	Trace
+
+	0[T], 39[(-1+n >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {24[T]}, {39[T]}]
+
+Refute
+
+	Counterexample
+
+	[ x=0 ] 0 [ x=x ] 39
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

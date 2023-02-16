@@ -1,0 +1,404 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l16, true>
+<l1, l2, (arg1 > 0) /\ (arg2 > ~(1)), par{arg1 -> arg2, arg2 -> undef2, arg3 -> undef3}>
+<l2, l3, true, par{arg2 -> arg1, arg3 -> arg1}>
+<l3, l2, (arg1 > 0) /\ (arg2 > 99) /\ (arg2 = arg3), par{arg1 -> (arg1 - 1), arg2 -> undef8, arg3 -> undef9}>
+<l3, l3, (arg2 > 0) /\ (arg2 < 100) /\ (arg2 = arg3), par{arg2 -> (arg2 + 1), arg3 -> (arg2 + 1)}>
+<l3, l4, (arg2 > 0) /\ (arg2 < 100) /\ (arg2 = arg3), par{arg1 -> arg2, arg3 -> arg2}>
+<l4, l4, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l4, l5, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l5, l5, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l5, l6, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l6, l6, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l6, l7, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l7, l7, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l7, l8, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l8, l8, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l8, l9, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l9, l9, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l9, l10, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l10, l10, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l10, l11, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l11, l11, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l11, l12, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l12, l12, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l12, l13, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l13, l13, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l13, l14, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l14, l14, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l14, l15, (0 = arg2) /\ (0 = arg3), par{arg2 -> undef80, arg3 -> undef81}>
+<l15, l15, (arg1 > 0), par{arg1 -> (arg1 - 1), arg2 -> undef83, arg3 -> undef84}>
+<l16, l1, true, par{arg1 -> undef85, arg2 -> undef86, arg3 -> undef87}>
+
+Fresh variables:
+undef2, undef3, undef8, undef9, undef80, undef81, undef83, undef84, undef85, undef86, undef87, 
+
+Undef variables:
+undef2, undef3, undef8, undef9, undef80, undef81, undef83, undef84, undef85, undef86, undef87, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l3, (arg1 = undef86) /\ (arg2 = undef86) /\ (arg3 = undef86) /\ (undef85 > 0) /\ (undef86 > ~(1))>
+<l3, l3, (arg1 > 0) /\ (arg2 > 99) /\ (arg2 = arg3), par{arg1 -> (arg1 - 1), arg2 -> (arg1 - 1), arg3 -> (arg1 - 1)}>
+<l3, l3, (arg2 > 0) /\ (arg2 < 100) /\ (arg2 = arg3), par{arg2 -> (arg2 + 1), arg3 -> (arg2 + 1)}>
+<l3, l4, (arg2 > 0) /\ (arg2 < 100) /\ (arg2 = arg3), par{arg1 -> arg2, arg3 -> arg2}>
+<l4, l4, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l4, l5, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l5, l5, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l5, l6, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l6, l6, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l6, l7, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l7, l7, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l7, l8, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l8, l8, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l8, l9, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l9, l9, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l9, l10, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l10, l10, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l10, l11, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l11, l11, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l11, l12, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l12, l12, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l12, l13, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l13, l13, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l13, l14, (0 = arg2) /\ (0 = arg3), par{arg2 -> arg1, arg3 -> arg1}>
+<l14, l14, (arg2 > 0) /\ (arg2 = arg3), par{arg2 -> (arg2 - 1), arg3 -> (arg2 - 1)}>
+<l14, l15, (0 = arg2) /\ (0 = arg3), par{arg2 -> undef80, arg3 -> undef81}>
+<l15, l15, (arg1 > 0), par{arg1 -> (arg1 - 1), arg2 -> undef83, arg3 -> undef84}>
+
+Fresh variables:
+undef2, undef3, undef8, undef9, undef80, undef81, undef83, undef84, undef85, undef86, undef87, 
+
+Undef variables:
+undef2, undef3, undef8, undef9, undef80, undef81, undef83, undef84, undef85, undef86, undef87, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l3, l3, 1 <= arg1 /\ 100 <= arg2 /\ arg2 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg1, arg3 -> -1 + arg1, rest remain the same}>
+<l3, l3, 1 <= arg2 /\ arg2 <= 99 /\ arg2 = arg3, {arg2 -> 1 + arg2, arg3 -> 1 + arg2, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+
+Graph 2:
+Transitions:
+<l4, l4, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 3:
+Transitions:
+<l5, l5, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 4:
+Transitions:
+<l6, l6, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 5:
+Transitions:
+<l7, l7, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 6:
+Transitions:
+<l8, l8, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 7:
+Transitions:
+<l9, l9, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 8:
+Transitions:
+<l10, l10, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 9:
+Transitions:
+<l11, l11, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 10:
+Transitions:
+<l12, l12, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 11:
+Transitions:
+<l13, l13, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 12:
+Transitions:
+<l14, l14, 1 <= arg2 /\ arg2 = arg3, {arg2 -> -1 + arg2, arg3 -> -1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+
+Graph 13:
+Transitions:
+<l15, l15, 1 <= arg1, {arg1 -> -1 + arg1, arg2 -> undef83, arg3 -> undef84, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l3, 0 <= undef86 /\ 1 <= undef85 /\ arg1 = undef86 /\ arg2 = undef86 /\ arg3 = undef86, {all remain the same}>
+
+Graph 2
+<l3, l4, 1 <= arg2 /\ arg2 <= 99 /\ arg2 = arg3, {arg1 -> arg2, arg3 -> arg2, rest remain the same}>
+
+Graph 3
+<l4, l5, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 4
+<l5, l6, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 5
+<l6, l7, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 6
+<l7, l8, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 7
+<l8, l9, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 8
+<l9, l10, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 9
+<l10, l11, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 10
+<l11, l12, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 11
+<l12, l13, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 12
+<l13, l14, arg2 = 0 /\ arg3 = 0, {arg2 -> arg1, arg3 -> arg1, rest remain the same}>
+
+Graph 13
+<l14, l15, arg2 = 0 /\ arg3 = 0, {arg2 -> undef80, arg3 -> undef81, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 1 )
+( 4 , 2 )
+( 5 , 3 )
+( 6 , 4 )
+( 7 , 5 )
+( 8 , 6 )
+( 9 , 7 )
+( 10 , 8 )
+( 11 , 9 )
+( 12 , 10 )
+( 13 , 11 )
+( 14 , 12 )
+( 15 , 13 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.004243
+
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000793s
+[33mRanking function: [36m-297 + 297*arg1 + arg2 - arg3[0m
+New Graphs: 
+Transitions:
+<l3, l3, 1 <= arg2 /\ arg2 <= 99 /\ arg2 = arg3, {arg2 -> 1 + arg2, arg3 -> 1 + arg2, rest remain the same}>
+Variables:
+arg2, arg3
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000356s
+[33mRanking function: [36m99 - arg2[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.001223
+
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000364s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 3
+Checking unfeasibility...
+Time used: 0.000939
+
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000376s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 4
+Checking unfeasibility...
+Time used: 0.000938
+
+Checking conditional termination of SCC {l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000382s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 5
+Checking unfeasibility...
+Time used: 0.000944
+
+Checking conditional termination of SCC {l7}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000384s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 6
+Checking unfeasibility...
+Time used: 0.000935
+
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000389s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 7
+Checking unfeasibility...
+Time used: 0.000948
+
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000394s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 8
+Checking unfeasibility...
+Time used: 0.000949
+
+Checking conditional termination of SCC {l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000412s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 9
+Checking unfeasibility...
+Time used: 0.000939
+
+Checking conditional termination of SCC {l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000415s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 10
+Checking unfeasibility...
+Time used: 0.000951
+
+Checking conditional termination of SCC {l12}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000417s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 11
+Checking unfeasibility...
+Time used: 0.000945
+
+Checking conditional termination of SCC {l13}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000427s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 12
+Checking unfeasibility...
+Time used: 0.000948
+
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000431s
+[33mRanking function: [36m-1 + arg2[0m
+New Graphs: 
+Proving termination of subgraph 13
+Checking unfeasibility...
+Time used: 0.000985
+
+Checking conditional termination of SCC {l15}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000422s
+[33mRanking function: [36m-1 + arg1[0m
+New Graphs: 
+[32mProgram Terminates[0m

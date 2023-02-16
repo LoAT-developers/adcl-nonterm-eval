@@ -1,0 +1,345 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l19, true>
+<l1, l2, ((0 + __const_100^0) <= (0 + i^0)), par{j^0 -> (~(2) + i^0)}>
+<l1, l3, ((1 + i^0) <= (0 + __const_100^0)), par{i^0 -> (1 + i^0)}>
+<l4, l5, true>
+<l3, l1, true>
+<l6, l7, true>
+<l8, l6, true, par{j10^0 -> (1 + j10^0)}>
+<l9, l8, true>
+<l9, l6, true>
+<l9, l8, true>
+<l10, l4, (undef78 = (0 + j10^0)), par{j^0 -> (0 + undef78), ret_check12^0 -> undef78}>
+<l10, l9, true>
+<l11, l12, true>
+<l13, l7, true, par{j10^0 -> (0 + j^0)}>
+<l14, l13, true>
+<l14, l4, true>
+<l14, l13, true>
+<l15, l11, true>
+<l16, l15, true, par{j6^0 -> (1 + j6^0)}>
+<l7, l10, true>
+<l17, l16, true>
+<l17, l15, true>
+<l17, l16, true>
+<l12, l14, (undef183 = (0 + j6^0)) /\ (undef184 = undef184), par{j^0 -> (0 + undef183), ret_check8^0 -> undef183, tmp^0 -> undef184}>
+<l12, l17, true>
+<l2, l11, ((1 + i^0) <= 0), par{j6^0 -> (0 + j^0)}>
+<l2, l5, (0 <= (0 + i^0))>
+<l18, l3, true, par{i^0 -> 0}>
+<l19, l18, true>
+
+Fresh variables:
+undef78, undef183, undef184, 
+
+Undef variables:
+undef78, undef183, undef184, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l3, (i^0 = 0)>
+<l3, l11, ((0 + __const_100^0) <= (0 + i^0)) /\ ((1 + i^0) <= 0), par{j6^0 -> (0 + (~(2) + i^0))}>
+<l3, l5, ((0 + __const_100^0) <= (0 + i^0)) /\ (0 <= (0 + i^0))>
+<l3, l3, ((1 + i^0) <= (0 + __const_100^0)), par{i^0 -> (1 + i^0)}>
+<l7, l5, (undef78 = (0 + j10^0))>
+<l7, l7, true, par{j10^0 -> (1 + j10^0)}>
+<l7, l7, true>
+<l7, l7, true, par{j10^0 -> (1 + j10^0)}>
+<l11, l7, (undef183 = (0 + j6^0)) /\ (undef184 = undef184), par{j10^0 -> (0 + (0 + undef183))}>
+<l11, l5, (undef183 = (0 + j6^0)) /\ (undef184 = undef184)>
+<l11, l7, (undef183 = (0 + j6^0)) /\ (undef184 = undef184), par{j10^0 -> (0 + (0 + undef183))}>
+<l11, l11, true, par{j6^0 -> (1 + j6^0)}>
+<l11, l11, true>
+<l11, l11, true, par{j6^0 -> (1 + j6^0)}>
+
+Fresh variables:
+undef78, undef183, undef184, 
+
+Undef variables:
+undef78, undef183, undef184, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l3, l3, 1 + i^0 <= __const_100^0, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+__const_100^0, i^0
+
+Graph 2:
+Transitions:
+<l11, l11, true, {j6^0 -> 1 + j6^0, rest remain the same}>
+<l11, l11, true, {all remain the same}>
+<l11, l11, true, {j6^0 -> 1 + j6^0, rest remain the same}>
+Variables:
+j6^0
+
+Graph 3:
+Transitions:
+<l7, l7, true, {j10^0 -> 1 + j10^0, rest remain the same}>
+<l7, l7, true, {all remain the same}>
+<l7, l7, true, {j10^0 -> 1 + j10^0, rest remain the same}>
+Variables:
+j10^0
+
+Graph 4:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l3, i^0 = 0, {all remain the same}>
+
+Graph 2
+<l3, l11, __const_100^0 <= i^0 /\ 1 + i^0 <= 0, {j6^0 -> -2 + i^0, rest remain the same}>
+
+Graph 3
+<l11, l7, j6^0 = undef183, {j10^0 -> undef183, rest remain the same}>
+<l11, l7, j6^0 = undef183, {j10^0 -> undef183, rest remain the same}>
+
+Graph 4
+<l3, l5, __const_100^0 <= i^0 /\ 0 <= i^0, {all remain the same}>
+<l7, l5, j10^0 = undef78, {all remain the same}>
+<l11, l5, j6^0 = undef183, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 1 )
+( 5 , 4 )
+( 7 , 3 )
+( 11 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001178
+
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000563s
+[33mRanking function: [36m-1 + __const_100^0 - i^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.002608
+
+Checking conditional termination of SCC {l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000440s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000770s
+Trying to remove transition: <l11, l11, true, {j6^0 -> 1 + j6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002941s
+Time used: 0.002859
+Trying to remove transition: <l11, l11, true, {j6^0 -> 1 + j6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002555s
+Time used: 0.002344
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001637s
+Time used: 4.00111
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006873s
+Time used: 4.00163
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004858s
+Time used: 1.00082
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013283s
+Time used: 0.00594
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000987s
+Time used: 1.00096
+
+LOG: SAT solveNonLinear - Elapsed time: 1.014269s
+Cost: 1; Total time: 1.0069
+[33mQuasi-ranking function: [36m50000 - j6^0[0m
+New Graphs: 
+Transitions:
+<l11, l11, 50001 <= j6^0, {j6^0 -> 1 + j6^0, rest remain the same}>
+<l11, l11, true, {all remain the same}>
+<l11, l11, 50001 <= j6^0, {j6^0 -> 1 + j6^0, rest remain the same}>
+Variables:
+j6^0
+Checking conditional termination of SCC {l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000347s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001564s
+Trying to remove transition: <l11, l11, 50001 <= j6^0, {j6^0 -> 1 + j6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003743s
+Time used: 0.003664
+Trying to remove transition: <l11, l11, 50001 <= j6^0, {j6^0 -> 1 + j6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003980s
+Time used: 0.003641
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002905s
+Time used: 4.00228
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.008725s
+Time used: 4.00252
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006317s
+Time used: 1.00116
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011401s
+Time used: 4.0045
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l3, l11, __const_100^0 <= i^0 /\ 1 + i^0 <= 0, {j6^0 -> -2 + i^0, rest remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l3, l11, __const_100^0 <= i^0 /\ 1 + i^0 <= 0, {j6^0 -> -2 + i^0, rest remain the same}>
+* Postcondition  : 1 <= 0
+Postcodition moved up: 1 <= 0
+
+LOG: Try proving POST
+Postcondition: 1 <= 0
+
+LOG: CALL check - Post:1 <= 0 - Process 2
+* Exit transition: <l0, l3, i^0 = 0, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000250s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000281s
+
+LOG: NarrowEntry size 1
+Narrowing transition: 
+<l3, l3, 1 + i^0 <= __const_100^0, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+ENTRIES:
+<l0, l3, 0 <= 0 /\ i^0 = 0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l3, l3, 0 <= 0 /\ 1 + i^0 <= __const_100^0, {i^0 -> 1 + i^0, rest remain the same}>
+END GRAPH:
+EXIT: <l3, l11, __const_100^0 <= i^0 /\ 1 + i^0 <= 0, {j6^0 -> -2 + i^0, rest remain the same}>
+POST: 1 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002913s
+Time used: 0.002854
+
+LOG: SAT solveNonLinear - Elapsed time: 0.002913s
+Cost: 0; Total time: 0.002854
+[33mPostcondition implied by a set of invariant(s):[0m
+[36mInvariant at l3: 0 <= i^0[0m
+
+LOG: Postcondition implied
+[32m> Postcondition implied![0m
+
+LOG: RETURN check - Elapsed time: 0.014467s
+It is unreachable
+Location 11 unreachable!
+> It's unfeasible. Removing transition: 
+<l11, l7, j6^0 = undef183, {j10^0 -> undef183, rest remain the same}>
+> It's unfeasible. Removing transition: 
+<l11, l7, j6^0 = undef183, {j10^0 -> undef183, rest remain the same}>
+Location 7 unreachable!
+> It's unfeasible. Removing transition: 
+<l7, l5, j10^0 = undef78, {all remain the same}>
+> It's unfeasible. Removing transition: 
+<l11, l5, j6^0 = undef183, {all remain the same}>
+Proving termination of subgraph 4
+Analyzing SCC {l5}...
+No cycles found.
+
+[32mProgram Terminates[0m

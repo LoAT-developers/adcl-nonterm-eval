@@ -1,0 +1,89 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=arg1P0, 9-arg1P0 == 0, cost: 1
+   1: f51_0_test_LE -> f51_0_test_LE : arg1'=arg1P1, (-1-arg1P1+arg1 == 0 /\ arg1 > 0), cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=arg1P0, 9-arg1P0 == 0, cost: 1
+New rule:
+f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=9, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=arg1P1, (-1-arg1P1+arg1 == 0 /\ arg1 > 0), cost: 1
+New rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=-1+arg1, arg1 > 0, cost: 1
+
+Simplified rules
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=9, TRUE, cost: 1
+   4: f51_0_test_LE -> f51_0_test_LE : arg1'=-1+arg1, arg1 > 0, cost: 1
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=-1+arg1, arg1 > 0, cost: 1
+New rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=arg1-n, (n >= 0 /\ 1+arg1-n > 0), cost: n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_LLkPHC.txt
+
+Applied instantiation
+Original rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=arg1-n, (n >= 0 /\ 1+arg1-n > 0), cost: n
+New rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=0, (1 > 0 /\ arg1 >= 0), cost: arg1
+
+Applied simplification
+Original rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=0, (1 > 0 /\ arg1 >= 0), cost: arg1
+New rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=0, arg1 >= 0, cost: arg1
+
+Applied deletion
+Removed the following rules: 4
+
+Accelerated simple loops
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=9, TRUE, cost: 1
+   6: f51_0_test_LE -> f51_0_test_LE : arg1'=0, arg1 >= 0, cost: arg1
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1P2, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=9, TRUE, cost: 1
+Second rule:
+f51_0_test_LE -> f51_0_test_LE : arg1'=0, arg1 >= 0, cost: arg1
+New rule:
+f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=0, 9 >= 0, cost: 10
+
+Applied deletion
+Removed the following rules: 6
+
+Chained accelerated rules with incoming rules
+Start location: __init
+   3: f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=9, TRUE, cost: 1
+   7: f1_0_main_ConstantStackPush -> f51_0_test_LE : arg1'=0, 9 >= 0, cost: 10
+   2: __init -> f1_0_main_ConstantStackPush : arg1'=arg1P2, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

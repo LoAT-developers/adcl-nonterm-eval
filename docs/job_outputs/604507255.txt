@@ -1,0 +1,223 @@
+NO
+
+Initial ITS
+
+Start location: l4
+Program variables: x^0
+   0: l0 -> l1 : x^0'=x^post1, 1+x^post1-x^0 == 0, cost: 1
+   2: l0 -> l2 : x^0'=x^post3, (1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0), cost: 1
+   1: l1 -> l0 : x^0'=x^post2, -x^post2+x^0 == 0, cost: 1
+   3: l2 -> l0 : x^0'=x^post4, -x^post4+x^0 == 0, cost: 1
+   4: l3 -> l0 : x^0'=x^post5, -x^post5+x^0 == 0, cost: 1
+   5: l4 -> l3 : x^0'=x^post6, -x^post6+x^0 == 0, cost: 1
+
+Chained Linear Paths
+
+Start location: l4
+Program variables: x^0
+   7: l0 -> l0 : x^0'=x^post2, (x^post1-x^post2 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+   8: l0 -> l0 : x^0'=x^post4, (1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0 /\ x^post3-x^post4 == 0), cost: 1
+   6: l4 -> l0 : x^0'=x^post5, (-x^post6+x^0 == 0 /\ x^post6-x^post5 == 0), cost: 1
+
+	Eliminating location l3 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l4 -> l3 : x^0'=x^post6, -x^post6+x^0 == 0, cost: 1
+	Second rule:
+	l3 -> l0 : x^0'=x^post5, -x^post5+x^0 == 0, cost: 1
+	New rule:
+	l4 -> l0 : x^0'=x^post5, (-x^post6+x^0 == 0 /\ x^post6-x^post5 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 5
+	
+	Eliminating location l1 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l1 : x^0'=x^post1, 1+x^post1-x^0 == 0, cost: 1
+	Second rule:
+	l1 -> l0 : x^0'=x^post2, -x^post2+x^0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^post2, (x^post1-x^post2 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location l2 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l2 : x^0'=x^post3, (1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0), cost: 1
+	Second rule:
+	l2 -> l0 : x^0'=x^post4, -x^post4+x^0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^post4, (1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0 /\ x^post3-x^post4 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+
+Simplified Transitions
+
+Start location: l4
+Program variables: x^0
+  10: l0 -> l0 : x^0'=-1+x^0, T, cost: 1
+  11: l0 -> l0 : x^0'=-1+x^0, 2-x^0 <= 0, cost: 1
+   9: l4 -> l0 : T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l4 -> l0 : x^0'=x^post5, (-x^post6+x^0 == 0 /\ x^post6-x^post5 == 0), cost: 1
+	New rule:
+	l4 -> l0 : x^0'=x^post6, (0 == 0 /\ -x^post6+x^0 == 0), cost: 1
+	
+		propagated equality x^post5 = x^post6
+		
+	Propagated Equalities
+
+	Original rule:
+	l4 -> l0 : x^0'=x^post6, (0 == 0 /\ -x^post6+x^0 == 0), cost: 1
+	New rule:
+	l4 -> l0 : x^0'=x^0, 0 == 0, cost: 1
+	
+		propagated equality x^post6 = x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l4 -> l0 : x^0'=x^0, 0 == 0, cost: 1
+	New rule:
+	l4 -> l0 : x^0'=x^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l4 -> l0 : x^0'=x^0, T, cost: 1
+	New rule:
+	l4 -> l0 : T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : x^0'=x^post2, (x^post1-x^post2 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^post1, (0 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	
+		propagated equality x^post2 = x^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : x^0'=x^post1, (0 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-1+x^0, 0 == 0, cost: 1
+	
+		propagated equality x^post1 = -1+x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : x^0'=-1+x^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-1+x^0, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : x^0'=x^post4, (1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0 /\ x^post3-x^post4 == 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^post3, (0 == 0 /\ 1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0), cost: 1
+	
+		propagated equality x^post4 = x^post3
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : x^0'=x^post3, (0 == 0 /\ 1+x^post3-x^0 == 0 /\ 1-x^post3 <= 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-1+x^0, (0 == 0 /\ 2-x^0 <= 0), cost: 1
+	
+		propagated equality x^post3 = -1+x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : x^0'=-1+x^0, (0 == 0 /\ 2-x^0 <= 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-1+x^0, 2-x^0 <= 0, cost: 1
+
+Step with 9
+
+	Trace
+
+	9[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 10
+
+	Trace
+
+	9[T], 10[T]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Nonterm
+
+Start location: l4
+Program variables: x^0
+  10: l0 -> l0 : x^0'=-1+x^0, T, cost: 1
+  11: l0 -> l0 : x^0'=-1+x^0, 2-x^0 <= 0, cost: 1
+  12: l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+  13: l0 -> l0 : x^0'=-n+x^0, -1+n >= 0, cost: 1
+   9: l4 -> l0 : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l0 -> l0 : x^0'=-1+x^0, T, cost: 1
+	New rule:
+	l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+	Loop Acceleration
+
+	Original rule:
+	l0 -> l0 : x^0'=-1+x^0, T, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-n+x^0, -1+n >= 0, cost: 1
+
+		Replacement map: {}
+
+Step with 12
+
+	Trace
+
+	9[T], 12[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {12[T]}]
+
+Refute
+
+	Counterexample
+
+	[ x^0=0 ] 9 [ x^0=0 ] 12
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

@@ -1,0 +1,225 @@
+unknown
+
+Initial ITS
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [4] : x > 0, cost: 1
+   7: [2] -> [3] : x <= 0, cost: 1
+   2: [4] -> [5] : (x < 0 \/ x > 0), cost: 1
+   5: [4] -> [7] : (x <= 0 /\ x >= 0), cost: 1
+   3: [5] -> [6] : x'=-1+x, T, cost: 1
+   4: [6] -> [4] : T, cost: 1
+   6: [7] -> [3] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [4] : x > 0, cost: 1
+   7: [2] -> [3] : x <= 0, cost: 1
+   9: [4] -> [3] : (x <= 0 /\ x >= 0), cost: 1
+  10: [4] -> [4] : x'=-1+x, (x < 0 \/ x > 0), cost: 1
+
+	Eliminating location [5] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [5] : (x < 0 \/ x > 0), cost: 1
+	Second rule:
+	[5] -> [6] : x'=-1+x, T, cost: 1
+	New rule:
+	[4] -> [6] : x'=-1+x, (x < 0 \/ x > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [7] : (x <= 0 /\ x >= 0), cost: 1
+	Second rule:
+	[7] -> [3] : T, cost: 1
+	New rule:
+	[4] -> [3] : (x <= 0 /\ x >= 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 6
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [6] : x'=-1+x, (x < 0 \/ x > 0), cost: 1
+	Second rule:
+	[6] -> [4] : T, cost: 1
+	New rule:
+	[4] -> [4] : x'=-1+x, (x < 0 \/ x > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 8
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 1
+
+	Trace
+
+	0[T], 1[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 10
+
+	Trace
+
+	0[T], 1[(x > 0)], 10[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T]}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [4] : x > 0, cost: 1
+   7: [2] -> [3] : x <= 0, cost: 1
+   9: [4] -> [3] : (x <= 0 /\ x >= 0), cost: 1
+  10: [4] -> [4] : x'=-1+x, (x < 0 \/ x > 0), cost: 1
+  11: [4] -> [4] : x'=-n+x, (-1+n >= 0 /\ 1-n+x > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[4] -> [4] : x'=-1+x, (x > 0), cost: 1
+	New rule:
+	[4] -> [4] : x'=-n+x, (-1+n >= 0 /\ 1-n+x > 0), cost: 1
+
+		x > 0 [0]: montonic decrease yields 1-n+x > 0
+		
+		x > 0 [1]: eventual increase yields (1 <= 0 /\ x > 0)
+		
+		Replacement map: {x > 0 -> 1-n+x > 0}
+
+	Trace
+
+	0[T], 1[(x > 0)], 11[(-1+n >= 0 /\ 1-n+x > 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T]}, {10[x > 0], 11[T]}]
+
+Step with 9
+
+	Trace
+
+	0[T], 1[(x > 0)], 11[(-1+n >= 0 /\ 1-n+x > 0)], 9[(x <= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T]}, {10[x > 0], 11[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T], 1[(x > 0)], 11[(-1+n >= 0 /\ 1-n+x > 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T]}, {9[T], 10[x > 0], 11[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T], 1[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T], 11[T]}]
+
+Step with 10
+
+	Trace
+
+	0[T], 1[(x > 0)], 10[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T], 11[T]}, {}]
+
+Covered
+
+	Trace
+
+	0[T], 1[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {9[T], 10[x > 0], 11[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {1[T]}]
+
+Step with 7
+
+	Trace
+
+	0[T], 7[(x <= 0)]
+	
+	Blocked
+
+	[{}, {1[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {1[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{0[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

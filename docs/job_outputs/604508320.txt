@@ -1,0 +1,1429 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l7, true>
+<l1, l2, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0))>
+<l2, l3, ((1 + b_7^0) <= 0)>
+<l2, l3, (1 <= (0 + b_7^0))>
+<l3, l4, true, par{b_7^0 -> 0, y_6^0 -> (1 + y_6^0)}>
+<l1, l5, (((0 + (~(1) * x_5^0)) + y_6^0) <= 0) /\ (undef17 = undef17), par{Result_4^0 -> undef17}>
+<l6, l4, true, par{b_7^0 -> 0}>
+<l4, l1, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ ((0 + b_7^0) <= 0) /\ (0 <= (0 + b_7^0)), par{b_7^0 -> 1, x_5^0 -> (1 + x_5^0)}>
+<l4, l5, (((0 + (~(1) * x_5^0)) + y_6^0) <= 0) /\ (undef29 = undef29), par{Result_4^0 -> undef29}>
+<l7, l6, true>
+
+Fresh variables:
+undef17, undef29, 
+
+Undef variables:
+undef17, undef29, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l4, (b_7^0 = 0)>
+<l4, l4, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ ((0 + b_7^0) <= 0) /\ (0 <= (0 + b_7^0)) /\ (0 <= ((~(1) + (~(1) * (1 + x_5^0))) + y_6^0)) /\ (1 <= (0 + 1)), par{b_7^0 -> 0, x_5^0 -> (1 + x_5^0), y_6^0 -> (1 + y_6^0)}>
+<l4, l5, (0 <= ((~(1) + (~(1) * x_5^0)) + y_6^0)) /\ ((0 + b_7^0) <= 0) /\ (0 <= (0 + b_7^0)) /\ (((0 + (~(1) * (1 + x_5^0))) + y_6^0) <= 0) /\ (undef17 = undef17), par{b_7^0 -> 1, x_5^0 -> (1 + x_5^0)}>
+<l4, l5, (((0 + (~(1) * x_5^0)) + y_6^0) <= 0) /\ (undef29 = undef29)>
+
+Fresh variables:
+undef17, undef29, 
+
+Undef variables:
+undef17, undef29, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l4, l4, 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l4, b_7^0 = 0, {all remain the same}>
+
+Graph 2
+<l4, l5, b_7^0 = 0 /\ 1 + x_5^0 = y_6^0, {b_7^0 -> 1, x_5^0 -> 1 + x_5^0, rest remain the same}>
+<l4, l5, y_6^0 <= x_5^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 4 , 1 )
+( 5 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002092
+
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000581s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001874s
+Trying to remove transition: <l4, l4, 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005032s
+Time used: 0.004897
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004747s
+Time used: 0.004394
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.006846s
+Time used: 0.006844
+
+LOG: SAT solveNonLinear - Elapsed time: 0.011593s
+Cost: 1; Total time: 0.011238
+[31mFailed at location 4: y_6^0 <= 1 + b_7^0 + x_5^0[0m
+Before Improving: 
+[36mQuasi-invariant at l4: y_6^0 <= 1 + b_7^0 + x_5^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001053s
+Remaining time after improvement: 0.999556
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: y_6^0 <= 1 + b_7^0 + x_5^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l4, l4, 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+New Graphs: 
+Calling Safety with literal y_6^0 <= 1 + b_7^0 + x_5^0 and entry <l0, l4, b_7^0 = 0, {all remain the same}>
+
+LOG: CALL check - Post:y_6^0 <= 1 + b_7^0 + x_5^0 - Process 1
+* Exit transition: <l0, l4, b_7^0 = 0, {all remain the same}>
+* Postcondition  : y_6^0 <= 1 + b_7^0 + x_5^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000214s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.000250s
+INVARIANTS: 
+4: 
+Quasi-INVARIANTS to narrow Graph: 
+4: y_6^0 <= 1 + b_7^0 + x_5^0 , 
+Narrowing transition: 
+<l4, l4, 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000309s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001096s
+Trying to remove transition: <l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003653s
+Time used: 0.003573
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001267s
+Time used: 4.00101
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004030s
+Time used: 4.00056
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002900s
+Time used: 1.00032
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007339s
+Time used: 0.004728
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.009475s
+Time used: 0.009472
+
+LOG: SAT solveNonLinear - Elapsed time: 0.016813s
+Cost: 1; Total time: 0.0142
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 1 + x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - 2*x_5^0 + y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000380s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001386s
+Trying to remove transition: <l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004822s
+Time used: 0.004723
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001405s
+Time used: 4.00112
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003724s
+Time used: 4.00045
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002666s
+Time used: 1.00024
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007835s
+Time used: 0.005128
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008119s
+Time used: 0.008116
+
+LOG: SAT solveNonLinear - Elapsed time: 0.015954s
+Cost: 1; Total time: 0.013244
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 1 + x_5^0 <= b_7^0 + y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + b_7^0 - 3*x_5^0 + 2*y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000468s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001931s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004803s
+Time used: 0.004694
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001205s
+Time used: 4.00086
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.013035s
+Time used: 4.00952
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002698s
+Time used: 1.00027
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008669s
+Time used: 0.006034
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.007675s
+Time used: 0.007674
+
+LOG: SAT solveNonLinear - Elapsed time: 0.016344s
+Cost: 1; Total time: 0.013708
+[33mQuasi-ranking function: [36m50000 - b_7^0 - 3*x_5^0 + 2*y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000523s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002145s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005620s
+Time used: 0.005508
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001131s
+Time used: 4.00077
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004089s
+Time used: 4.00058
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003206s
+Time used: 1.00038
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008868s
+Time used: 0.006335
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.007588s
+Time used: 0.007586
+
+LOG: SAT solveNonLinear - Elapsed time: 0.016456s
+Cost: 1; Total time: 0.013921
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 1 + x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + b_7^0 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000570s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002130s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005862s
+Time used: 0.005744
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000939s
+Time used: 4.00061
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004306s
+Time used: 4.00067
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002827s
+Time used: 1.00039
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009720s
+Time used: 0.007181
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008426s
+Time used: 0.008423
+
+LOG: SAT solveNonLinear - Elapsed time: 0.018146s
+Cost: 1; Total time: 0.015604
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 0 <= b_7^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + b_7^0 - x_5^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000636s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002419s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006721s
+Time used: 0.006596
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001112s
+Time used: 4.00076
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004299s
+Time used: 4.00066
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.008969s
+Time used: 1.00039
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009392s
+Time used: 0.006843
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008373s
+Time used: 0.00837
+
+LOG: SAT solveNonLinear - Elapsed time: 0.017765s
+Cost: 1; Total time: 0.015213
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 1 + x_5^0 <= b_7^0 + y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - b_7^0 - x_5^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000664s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002580s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006983s
+Time used: 0.006856
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002291s
+Time used: 4.00189
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003754s
+Time used: 4.00054
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009036s
+Time used: 1.00046
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009756s
+Time used: 0.007277
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008193s
+Time used: 0.008191
+
+LOG: SAT solveNonLinear - Elapsed time: 0.017948s
+Cost: 1; Total time: 0.015468
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 0 <= b_7^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + b_7^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000707s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002713s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006385s
+Time used: 0.006258
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002247s
+Time used: 4.00184
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004465s
+Time used: 4.00101
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003144s
+Time used: 1.00066
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011861s
+Time used: 0.009163
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008551s
+Time used: 0.008549
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020412s
+Cost: 1; Total time: 0.017712
+[33mQuasi-ranking function: [36m50000 + b_7^0 + x_5^0 - 2*y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000774s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003159s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007108s
+Time used: 0.006958
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.008197s
+Time used: 4.00103
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.008368s
+Time used: 4.00078
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003323s
+Time used: 1.00037
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011760s
+Time used: 0.008739
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.009147s
+Time used: 0.009145
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020908s
+Cost: 1; Total time: 0.017884
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: b_7^0 + x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - b_7^0 + x_5^0 - 2*y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000840s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003373s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008129s
+Time used: 0.00799
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.009821s
+Time used: 4.00199
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004218s
+Time used: 4.00074
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003082s
+Time used: 1.00051
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011356s
+Time used: 0.008565
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.009782s
+Time used: 0.009779
+
+LOG: SAT solveNonLinear - Elapsed time: 0.021138s
+Cost: 1; Total time: 0.018344
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 1 + b_7^0 + x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 + x_5^0 - 2*y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000862s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003456s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007588s
+Time used: 0.007444
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004155s
+Time used: 4.00206
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004060s
+Time used: 4.00088
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003172s
+Time used: 1.0007
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012593s
+Time used: 0.009899
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.007774s
+Time used: 0.007753
+
+LOG: SAT solveNonLinear - Elapsed time: 0.020368s
+Cost: 1; Total time: 0.017652
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: b_7^0 + x_5^0 <= 1 + y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - x_5^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000912s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003714s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008722s
+Time used: 0.008565
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002587s
+Time used: 4.00215
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007366s
+Time used: 4.00091
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003399s
+Time used: 1.0009
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013030s
+Time used: 0.010294
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.010679s
+Time used: 0.010661
+
+LOG: SAT solveNonLinear - Elapsed time: 0.023709s
+Cost: 1; Total time: 0.020955
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: b_7^0 + x_5^0 <= 1 + y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000920s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004512s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009543s
+Time used: 0.009183
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002683s
+Time used: 4.00224
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011711s
+Time used: 4.00122
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003541s
+Time used: 1.00103
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012427s
+Time used: 0.009707
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.010279s
+Time used: 0.010277
+
+LOG: SAT solveNonLinear - Elapsed time: 0.022706s
+Cost: 1; Total time: 0.019984
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 1 + b_7^0 + x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - b_7^0 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000991s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004894s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009984s
+Time used: 0.009692
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003065s
+Time used: 4.00262
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011610s
+Time used: 4.00131
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003584s
+Time used: 1.00111
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013480s
+Time used: 0.010605
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008658s
+Time used: 0.008655
+
+LOG: SAT solveNonLinear - Elapsed time: 0.022137s
+Cost: 1; Total time: 0.01926
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: b_7^0 + x_5^0 <= y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - b_7^0 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 <= b_7^0 + y_6^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001047s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004964s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 <= b_7^0 + y_6^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008871s
+Time used: 0.008578
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001818s
+Time used: 4.00139
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011748s
+Time used: 4.00135
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.003543s
+Time used: 1.00076
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014144s
+Time used: 0.011606
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.009473s
+Time used: 0.00947
+
+LOG: SAT solveNonLinear - Elapsed time: 0.023617s
+Cost: 1; Total time: 0.021076
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: x_5^0 <= 1 + b_7^0 + y_6^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 <= b_7^0 + y_6^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - y_6^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 <= b_7^0 + y_6^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ 50001 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001059s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005648s
+Trying to remove transition: <l4, l4, 1 + x_5^0 <= b_7^0 + y_6^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ 50001 + b_7^0 + x_5^0 <= 2*y_6^0 /\ 50001 + b_7^0 <= x_5^0 /\ 50001 + b_7^0 <= x_5^0 + y_6^0 /\ 50001 + b_7^0 + 2*y_6^0 <= 3*x_5^0 /\ 50001 + b_7^0 <= y_6^0 /\ 50001 + x_5^0 <= b_7^0 + 2*y_6^0 /\ 50001 <= b_7^0 + x_5^0 /\ 50001 <= b_7^0 + x_5^0 + y_6^0 /\ 50001 + 2*y_6^0 <= b_7^0 + 3*x_5^0 /\ 50001 <= b_7^0 + y_6^0 /\ 50001 + x_5^0 <= 2*y_6^0 /\ 50001 <= x_5^0 /\ 50001 <= x_5^0 + y_6^0 /\ 50001 + y_6^0 <= 2*x_5^0 /\ 50001 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009953s
+Time used: 0.009625
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002581s
+Time used: 4.00214
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004742s
+Time used: 4.0011
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.004094s
+Time used: 1.00096
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.011453s
+Time used: 0.008822
+
+Proving non-termination of subgraph 1
+Transitions:
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+Variables:
+b_7^0, x_5^0, y_6^0
+
+Checking conditional non-termination of SCC {l4}...
+EXIT TRANSITIONS:
+<l4, end, 1 <= b_7^0 /\ y_6^0 <= 1 + b_7^0 + x_5^0 /\ y_6^0 <= 1 + x_5^0, {all remain the same}>
+<l4, end, b_7^0 <= 0 /\ y_6^0 <= 1 + b_7^0 + x_5^0 /\ y_6^0 <= 1 + x_5^0, {all remain the same}>
+<l4, end, 1 <= b_7^0 /\ y_6^0 <= 1 + b_7^0 + x_5^0 /\ 2 + x_5^0 <= y_6^0, {all remain the same}>
+<l4, end, 1 + b_7^0 <= 0 /\ y_6^0 <= 1 + x_5^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0, {all remain the same}>
+<l4, end, 1 <= b_7^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0, {all remain the same}>
+<l4, end, 1 + b_7^0 <= 0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015944s
+Time used: 0.015795
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.019123s
+Time used: 0.019121
+
+LOG: SAT solveNonLinear - Elapsed time: 0.035067s
+Cost: 3; Total time: 0.034916
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: b_7^0 <= 0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l4: 3
+Strengthening exit transition (result): 
+<l4, end, b_7^0 <= 0 /\ y_6^0 <= 1 + b_7^0 + x_5^0 /\ y_6^0 <= 1 + x_5^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l4, end, 1 + b_7^0 <= 0 /\ y_6^0 <= 1 + x_5^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0, {all remain the same}>
+Strengthening exit transition (result): 
+<l4, end, 1 + b_7^0 <= 0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l4}...
+EXIT TRANSITIONS:
+<l4, end, b_7^0 <= 0 /\ y_6^0 <= 1 + b_7^0 + x_5^0 /\ y_6^0 <= 1 + x_5^0, {all remain the same}>
+<l4, end, 1 + b_7^0 <= 0 /\ y_6^0 <= 1 + x_5^0 /\ 2 + b_7^0 + x_5^0 <= y_6^0, {all remain the same}>
+<l4, end, 1 + b_7^0 <= 0 /\ 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006582s
+Time used: 0.006467
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.005267s
+Time used: 0.005265
+
+LOG: SAT solveNonLinear - Elapsed time: 0.011850s
+Cost: 1; Total time: 0.011732
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: 0 <= b_7^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l4: 2
+Strengthening exit transition (result): 
+<l4, end, y_6^0 <= 1 + b_7^0 + x_5^0 /\ y_6^0 <= 1 + x_5^0 /\ b_7^0 = 0, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+Checking conditional non-termination of SCC {l4}...
+EXIT TRANSITIONS:
+<l4, end, y_6^0 <= 1 + b_7^0 + x_5^0 /\ y_6^0 <= 1 + x_5^0 /\ b_7^0 = 0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.010195s
+Time used: 0.010076
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.003488s
+Time used: 0.003485
+
+LOG: SAT solveNonLinear - Elapsed time: 0.013683s
+Cost: 1; Total time: 0.013561
+[31mFailed at location 4: 2 + b_7^0 + x_5^0 <= y_6^0[0m
+Before Improving: 
+[36mQuasi-invariant at l4: 2 + b_7^0 + x_5^0 <= y_6^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000960s
+Remaining time after improvement: 0.999495
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l4: 2 + b_7^0 + x_5^0 <= y_6^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l4: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ 2 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {b_7^0 -> 0, x_5^0 -> 1 + x_5^0, y_6^0 -> 1 + y_6^0, rest remain the same}>
+
+Calling reachability with...
+Transition: <l4, end, true, {all remain the same}>
+Conditions: b_7^0 <= 0, 0 <= b_7^0, 2 + b_7^0 + x_5^0 <= y_6^0, 
+OPEN EXITS: 
+<l4, end, 2 + b_7^0 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l4, b_7^0 = 0, {all remain the same}>
+Conditions: 2 + b_7^0 + x_5^0 <= y_6^0, b_7^0 = 0, 
+OPEN EXITS: 
+<l0, l4, 2 + b_7^0 + x_5^0 <= y_6^0 /\ b_7^0 = 0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

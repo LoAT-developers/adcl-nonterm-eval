@@ -1,0 +1,204 @@
+unknown
+
+Initial ITS
+
+Start location: l3
+Program variables: x^0
+   0: l0 -> l1 : x^0'=x^post1, (1-x^post1 <= 0 /\ 1+x^post1-x^0 == 0), cost: 1
+   1: l1 -> l0 : x^0'=x^post2, -x^post2+x^0 == 0, cost: 1
+   2: l2 -> l0 : x^0'=x^post3, (-x^post3+x^0 == 0 /\ 1-x^0 <= 0), cost: 1
+   3: l3 -> l2 : x^0'=x^post4, -x^post4+x^0 == 0, cost: 1
+
+Chained Linear Paths
+
+Start location: l3
+Program variables: x^0
+   5: l0 -> l0 : x^0'=x^post2, (1-x^post1 <= 0 /\ x^post1-x^post2 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+   4: l3 -> l0 : x^0'=x^post3, (1-x^post4 <= 0 /\ -x^post4+x^0 == 0 /\ -x^post3+x^post4 == 0), cost: 1
+
+	Eliminating location l2 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l3 -> l2 : x^0'=x^post4, -x^post4+x^0 == 0, cost: 1
+	Second rule:
+	l2 -> l0 : x^0'=x^post3, (-x^post3+x^0 == 0 /\ 1-x^0 <= 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^post3, (1-x^post4 <= 0 /\ -x^post4+x^0 == 0 /\ -x^post3+x^post4 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location l1 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l1 : x^0'=x^post1, (1-x^post1 <= 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	Second rule:
+	l1 -> l0 : x^0'=x^post2, -x^post2+x^0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^post2, (1-x^post1 <= 0 /\ x^post1-x^post2 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l3
+Program variables: x^0
+   7: l0 -> l0 : x^0'=-1+x^0, 2-x^0 <= 0, cost: 1
+   6: l3 -> l0 : 1-x^0 <= 0, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : x^0'=x^post3, (1-x^post4 <= 0 /\ -x^post4+x^0 == 0 /\ -x^post3+x^post4 == 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^post4, (0 == 0 /\ 1-x^post4 <= 0 /\ -x^post4+x^0 == 0), cost: 1
+	
+		propagated equality x^post3 = x^post4
+		
+	Propagated Equalities
+
+	Original rule:
+	l3 -> l0 : x^0'=x^post4, (0 == 0 /\ 1-x^post4 <= 0 /\ -x^post4+x^0 == 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^0, (0 == 0 /\ 1-x^0 <= 0), cost: 1
+	
+		propagated equality x^post4 = x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l3 -> l0 : x^0'=x^0, (0 == 0 /\ 1-x^0 <= 0), cost: 1
+	New rule:
+	l3 -> l0 : x^0'=x^0, 1-x^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l3 -> l0 : x^0'=x^0, 1-x^0 <= 0, cost: 1
+	New rule:
+	l3 -> l0 : 1-x^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : x^0'=x^post2, (1-x^post1 <= 0 /\ x^post1-x^post2 == 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=x^post1, (0 == 0 /\ 1-x^post1 <= 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	
+		propagated equality x^post2 = x^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : x^0'=x^post1, (0 == 0 /\ 1-x^post1 <= 0 /\ 1+x^post1-x^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-1+x^0, (0 == 0 /\ 2-x^0 <= 0), cost: 1
+	
+		propagated equality x^post1 = -1+x^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : x^0'=-1+x^0, (0 == 0 /\ 2-x^0 <= 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-1+x^0, 2-x^0 <= 0, cost: 1
+
+Step with 6
+
+	Trace
+
+	6[(1-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 7
+
+	Trace
+
+	6[(1-x^0 <= 0)], 7[(2-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Accelerate
+
+Start location: l3
+Program variables: x^0
+   7: l0 -> l0 : x^0'=-1+x^0, 2-x^0 <= 0, cost: 1
+   8: l0 -> l0 : x^0'=-n+x^0, (-1+n >= 0 /\ -1-n+x^0 >= 0), cost: 1
+   6: l3 -> l0 : 1-x^0 <= 0, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	l0 -> l0 : x^0'=-1+x^0, (2-x^0 <= 0), cost: 1
+	New rule:
+	l0 -> l0 : x^0'=-n+x^0, (-1+n >= 0 /\ -1-n+x^0 >= 0), cost: 1
+
+		-2+x^0 >= 0 [0]: montonic decrease yields -1-n+x^0 >= 0
+		
+		-2+x^0 >= 0 [1]: eventual increase yields (-2+x^0 >= 0 /\ 1 <= 0)
+		
+		Replacement map: {-2+x^0 >= 0 -> -1-n+x^0 >= 0}
+
+	Trace
+
+	6[(1-x^0 <= 0)], 8[(-1+n >= 0 /\ -1-n+x^0 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {8[T]}]
+
+Step with 7
+
+	Trace
+
+	6[(1-x^0 <= 0)], 7[(2-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {8[T]}, {}]
+
+Covered
+
+	Trace
+
+	6[(1-x^0 <= 0)]
+	
+	Blocked
+
+	[{}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{6[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

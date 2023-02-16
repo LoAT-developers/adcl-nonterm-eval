@@ -1,0 +1,107 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=7, T, cost: 1
+   1: [2] -> [3] : T, cost: 1
+   4: [2] -> [5] : _|_, cost: 1
+   2: [3] -> [4] : x'=2, T, cost: 1
+   3: [4] -> [2] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=7, T, cost: 1
+   4: [2] -> [5] : _|_, cost: 1
+   6: [2] -> [2] : x'=2, T, cost: 1
+
+	Eliminating location [3] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[2] -> [3] : T, cost: 1
+	Second rule:
+	[3] -> [4] : x'=2, T, cost: 1
+	New rule:
+	[2] -> [4] : x'=2, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+	
+	Eliminating location [4] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[2] -> [4] : x'=2, T, cost: 1
+	Second rule:
+	[4] -> [2] : T, cost: 1
+	New rule:
+	[2] -> [2] : x'=2, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 5
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 6
+
+	Trace
+
+	0[T], 6[T]
+	
+	Blocked
+
+	[{}, {4[T]}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=7, T, cost: 1
+   4: [2] -> [5] : _|_, cost: 1
+   6: [2] -> [2] : x'=2, T, cost: 1
+   7: [2] -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[2] -> [2] : x'=2, T, cost: 1
+	New rule:
+	[2] -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+Step with 7
+
+	Trace
+
+	0[T], 7[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {4[T]}, {7[T]}]
+
+Refute
+
+	Counterexample
+
+	[ x=7 ] 0 [ x=x ] 7
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

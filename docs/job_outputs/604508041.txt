@@ -1,0 +1,229 @@
+unknown
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5 arg6
+   0: f1_0_main_New -> f83_0_doSum_NONNULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, arg6'=arg6p1, -3+arg1p1 > 0, cost: 1
+   1: f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, arg6'=arg6p2, (arg1p2-arg1 <= 0 /\ 1-arg4p2 == 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ 1-arg3p2 == 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ 1-arg2p2 == 0 /\ arg1 > 0), cost: 1
+   2: f160_0_factorial_GT -> f83_0_doSum_NONNULL : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, arg6'=arg6p3, (-1-arg1p3+arg1 >= 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 < 0 /\ arg6-arg1p3 >= 0 /\ 2+arg5-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1p3 > 0 /\ 1+arg6 > 0 /\ arg1 > 0), cost: 1
+   3: f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, arg6'=arg6p4, (arg3-arg4 == 0 /\ 1+arg3-arg3p4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ arg3*arg2-arg2p4 == 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ arg5-arg5p4 == 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1-arg4p4+arg3 == 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+   4: __init -> f1_0_main_New : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, arg6'=arg6p5, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5 arg6
+   1: f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, arg6'=arg6p2, (arg1p2-arg1 <= 0 /\ 1-arg4p2 == 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ 1-arg3p2 == 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ 1-arg2p2 == 0 /\ arg1 > 0), cost: 1
+   2: f160_0_factorial_GT -> f83_0_doSum_NONNULL : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, arg6'=arg6p3, (-1-arg1p3+arg1 >= 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 < 0 /\ arg6-arg1p3 >= 0 /\ 2+arg5-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1p3 > 0 /\ 1+arg6 > 0 /\ arg1 > 0), cost: 1
+   3: f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, arg6'=arg6p4, (arg3-arg4 == 0 /\ 1+arg3-arg3p4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ arg3*arg2-arg2p4 == 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ arg5-arg5p4 == 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1-arg4p4+arg3 == 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+   5: __init -> f83_0_doSum_NONNULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, arg6'=arg6p1, -3+arg1p1 > 0, cost: 1
+
+	Eliminating location f1_0_main_New by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_New : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, arg6'=arg6p5, T, cost: 1
+	Second rule:
+	f1_0_main_New -> f83_0_doSum_NONNULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, arg6'=arg6p1, -3+arg1p1 > 0, cost: 1
+	New rule:
+	__init -> f83_0_doSum_NONNULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, arg6'=arg6p1, -3+arg1p1 > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 4
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5 arg6
+   6: f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=1, arg3'=1, arg4'=1, arg5'=arg5p2, arg6'=arg6p2, (arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0), cost: 1
+   2: f160_0_factorial_GT -> f83_0_doSum_NONNULL : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, arg6'=arg6p3, (-1-arg1p3+arg1 >= 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 < 0 /\ arg6-arg1p3 >= 0 /\ 2+arg5-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1p3 > 0 /\ 1+arg6 > 0 /\ arg1 > 0), cost: 1
+   7: f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg3*arg2, arg3'=1+arg3, arg4'=1+arg3, arg6'=arg6p4, (arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+   5: __init -> f83_0_doSum_NONNULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, arg6'=arg6p1, -3+arg1p1 > 0, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, arg6'=arg6p2, (arg1p2-arg1 <= 0 /\ 1-arg4p2 == 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ 1-arg3p2 == 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ 1-arg2p2 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=1, arg3'=1, arg4'=1, arg5'=arg5p2, arg6'=arg6p2, (0 == 0 /\ arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg4p2 = 1
+		
+		propagated equality arg3p2 = 1
+		
+		propagated equality arg2p2 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=1, arg3'=1, arg4'=1, arg5'=arg5p2, arg6'=arg6p2, (0 == 0 /\ arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f83_0_doSum_NONNULL -> f160_0_factorial_GT : arg1'=arg1p2, arg2'=1, arg3'=1, arg4'=1, arg5'=arg5p2, arg6'=arg6p2, (arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, arg6'=arg6p4, (arg3-arg4 == 0 /\ 1+arg3-arg3p4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ arg3*arg2-arg2p4 == 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ arg5-arg5p4 == 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1-arg4p4+arg3 == 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg3*arg2, arg3'=1+arg3, arg4'=1+arg3, arg5'=arg5, arg6'=arg6p4, (0 == 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg3p4 = 1+arg3
+		
+		propagated equality arg2p4 = arg3*arg2
+		
+		propagated equality arg5p4 = arg5
+		
+		propagated equality arg4p4 = 1+arg3
+		
+	Simplified Guard
+
+	Original rule:
+	f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg3*arg2, arg3'=1+arg3, arg4'=1+arg3, arg5'=arg5, arg6'=arg6p4, (0 == 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg3*arg2, arg3'=1+arg3, arg4'=1+arg3, arg5'=arg5, arg6'=arg6p4, (arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg3*arg2, arg3'=1+arg3, arg4'=1+arg3, arg5'=arg5, arg6'=arg6p4, (arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f160_0_factorial_GT -> f160_0_factorial_GT : arg1'=arg1p4, arg2'=arg3*arg2, arg3'=1+arg3, arg4'=1+arg3, arg6'=arg6p4, (arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0), cost: 1
+
+Step with 5
+
+	Trace
+
+	5[(-3+arg1p1 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 6
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 2
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)], 2[(-1-arg1p3+arg1 >= 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 < 0 /\ arg6-arg1p3 >= 0 /\ 2+arg5-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1p3 > 0 /\ 1+arg6 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Backtrack
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}]
+
+Step with 7
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)], 7[(arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 7
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)], 7[(arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0)], 7[(arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)], 7[(arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}, {7[T]}]
+
+Step with 2
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)], 7[(arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0)], 2[(-1-arg1p3+arg1 >= 0 /\ arg3-arg4 == 0 /\ -arg3+arg5 < 0 /\ arg6-arg1p3 >= 0 /\ 2+arg5-arg1 <= 0 /\ arg2 > 0 /\ 1+arg1p3 > 0 /\ 1+arg6 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}, {7[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Backtrack
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)], 7[(arg3-arg4 == 0 /\ -arg3+arg5 >= 0 /\ arg3 > 0 /\ 2+arg5-arg1 <= 0 /\ arg1p4 > 0 /\ 1+arg6p4 > 0 /\ arg1p4-arg1 <= 0 /\ arg2 > 0 /\ 1+arg6p4-arg1 <= 0 /\ 1+arg6 > 0 /\ -arg6+arg6p4 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T]}, {2[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	5[(-3+arg1p1 > 0)], 6[(arg1p2-arg1 <= 0 /\ 1+arg6p2-arg1 <= 0 /\ 2+arg5p2-arg1 <= 0 /\ arg1p2 > 0 /\ 1+arg6p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {2[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	5[(-3+arg1p1 > 0)]
+	
+	Blocked
+
+	[{}, {6[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{5[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

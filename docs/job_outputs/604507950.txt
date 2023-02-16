@@ -1,0 +1,343 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+   0: f1_0_main_Load -> f221_0_generate_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (-1+arg2-arg3p1 == 0 /\ arg1p1 > 0 /\ -arg4p1 == 0 /\ 1+arg2 > 0 /\ arg2-arg5p1 == 0 /\ -arg2p1 == 0 /\ arg1p1-arg1 <= 0 /\ arg1 > 0), cost: 1
+   1: f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (1+arg5 > 0 /\ arg5-arg5p2 == 0 /\ -1-arg3p2+arg5 == 0 /\ arg1p2-arg1 <= 0 /\ 1-arg2p2+arg2 == 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+   2: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (arg4 > 0 /\ 1-arg1p3 == 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+   3: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (1-arg2p4 == 0 /\ -arg2+arg3 <= 0 /\ 1-arg1p4 == 0 /\ arg1 > 0), cost: 1
+   4: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1-arg1p5 == 0 /\ x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+   5: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ 1-arg2p6 == 0 /\ x34-arg2 < 0 /\ 1-arg1p6 == 0 /\ -arg1 == 0), cost: 1
+   6: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x28-x27 > 0 /\ 1+arg2 > 0 /\ -arg2p7 == 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ -arg1p7 == 0 /\ 1-arg1 == 0), cost: 1
+   7: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (-arg2+x37 < 0 /\ 2-arg2p8 == 0 /\ 1+arg2 > 0 /\ -arg1p8 == 0 /\ 1-arg1 == 0), cost: 1
+   8: __init -> f1_0_main_Load : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+   1: f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (1+arg5 > 0 /\ arg5-arg5p2 == 0 /\ -1-arg3p2+arg5 == 0 /\ arg1p2-arg1 <= 0 /\ 1-arg2p2+arg2 == 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+   2: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (arg4 > 0 /\ 1-arg1p3 == 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+   3: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (1-arg2p4 == 0 /\ -arg2+arg3 <= 0 /\ 1-arg1p4 == 0 /\ arg1 > 0), cost: 1
+   4: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1-arg1p5 == 0 /\ x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+   5: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ 1-arg2p6 == 0 /\ x34-arg2 < 0 /\ 1-arg1p6 == 0 /\ -arg1 == 0), cost: 1
+   6: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x28-x27 > 0 /\ 1+arg2 > 0 /\ -arg2p7 == 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ -arg1p7 == 0 /\ 1-arg1 == 0), cost: 1
+   7: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (-arg2+x37 < 0 /\ 2-arg2p8 == 0 /\ 1+arg2 > 0 /\ -arg1p8 == 0 /\ 1-arg1 == 0), cost: 1
+   9: __init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ -arg4p1 == 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ -arg2p1 == 0 /\ -arg5p1+arg2p9 == 0 /\ arg1p1-arg1p9 <= 0 /\ -1+arg2p9-arg3p1 == 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, arg5'=arg5p9, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f221_0_generate_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (-1+arg2-arg3p1 == 0 /\ arg1p1 > 0 /\ -arg4p1 == 0 /\ 1+arg2 > 0 /\ arg2-arg5p1 == 0 /\ -arg2p1 == 0 /\ arg1p1-arg1 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ -arg4p1 == 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ -arg2p1 == 0 /\ -arg5p1+arg2p9 == 0 /\ arg1p1-arg1p9 <= 0 /\ -1+arg2p9-arg3p1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 8
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+  10: f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, (1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+  11: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (arg4 > 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+  12: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (-arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+  13: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1+arg2 > 0 /\ 2-arg2p5 <= 0 /\ 2-arg2 <= 0 /\ -arg1 == 0), cost: 1
+  14: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ -arg1 == 0), cost: 1
+  15: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (1+arg2 > 0 /\ 2-arg2 <= 0 /\ 1-arg1 == 0), cost: 1
+  16: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+  17: __init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (arg1p1 > 0 /\ 1+arg2p9 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, arg5'=arg5p2, (1+arg5 > 0 /\ arg5-arg5p2 == 0 /\ -1-arg3p2+arg5 == 0 /\ arg1p2-arg1 <= 0 /\ 1-arg2p2+arg2 == 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, arg5'=arg5, (0 == 0 /\ 1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg5p2 = arg5
+		
+		propagated equality arg3p2 = -1+arg5
+		
+		propagated equality arg2p2 = 1+arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, arg5'=arg5, (0 == 0 /\ 1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, arg5'=arg5, (1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, arg5'=arg5, (1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, (1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (arg4 > 0 /\ 1-arg1p3 == 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (0 == 0 /\ arg4 > 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p3 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (0 == 0 /\ arg4 > 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (arg4 > 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (1-arg2p4 == 0 /\ -arg2+arg3 <= 0 /\ 1-arg1p4 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (0 == 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg2p4 = 1
+		
+		propagated equality arg1p4 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (0 == 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (-arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1-arg1p5 == 0 /\ x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (0 == 0 /\ x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+	
+		propagated equality arg1p5 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (0 == 0 /\ x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (x23 > 0 /\ 1+arg2 > 0 /\ x23-arg2p5 < 0 /\ x23-arg2 < 0 /\ -arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1+arg2 > 0 /\ 2-arg2p5 <= 0 /\ 2-arg2 <= 0 /\ -arg1 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ 1-arg2p6 == 0 /\ x34-arg2 < 0 /\ 1-arg1p6 == 0 /\ -arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (0 == 0 /\ 1+arg2 > 0 /\ x34-arg2 < 0 /\ -arg1 == 0), cost: 1
+	
+		propagated equality arg2p6 = 1
+		
+		propagated equality arg1p6 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (0 == 0 /\ 1+arg2 > 0 /\ x34-arg2 < 0 /\ -arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ x34-arg2 < 0 /\ -arg1 == 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ x34-arg2 < 0 /\ -arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ -arg1 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x28-x27 > 0 /\ 1+arg2 > 0 /\ -arg2p7 == 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ -arg1p7 == 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (0 == 0 /\ x28-x27 > 0 /\ 1+arg2 > 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ 1-arg1 == 0), cost: 1
+	
+		propagated equality arg2p7 = 0
+		
+		propagated equality arg1p7 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (0 == 0 /\ x28-x27 > 0 /\ 1+arg2 > 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x28-x27 > 0 /\ 1+arg2 > 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ 1-arg1 == 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (x28-x27 > 0 /\ 1+arg2 > 0 /\ x29-x27 > 0 /\ -arg2+x27 < 0 /\ x27 > 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (1+arg2 > 0 /\ 2-arg2 <= 0 /\ 1-arg1 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (-arg2+x37 < 0 /\ 2-arg2p8 == 0 /\ 1+arg2 > 0 /\ -arg1p8 == 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (0 == 0 /\ -arg2+x37 < 0 /\ 1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+	
+		propagated equality arg2p8 = 2
+		
+		propagated equality arg1p8 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (0 == 0 /\ -arg2+x37 < 0 /\ 1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (-arg2+x37 < 0 /\ 1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (-arg2+x37 < 0 /\ 1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, arg5'=arg5p1, (arg1p1 > 0 /\ -arg4p1 == 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ -arg2p1 == 0 /\ -arg5p1+arg2p9 == 0 /\ arg1p1-arg1p9 <= 0 /\ -1+arg2p9-arg3p1 == 0), cost: 1
+	New rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (0 == 0 /\ arg1p1 > 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ arg1p1-arg1p9 <= 0), cost: 1
+	
+		propagated equality arg4p1 = 0
+		
+		propagated equality arg2p1 = 0
+		
+		propagated equality arg5p1 = arg2p9
+		
+		propagated equality arg3p1 = -1+arg2p9
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (0 == 0 /\ arg1p1 > 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ arg1p1-arg1p9 <= 0), cost: 1
+	New rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (arg1p1 > 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ arg1p1-arg1p9 <= 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (arg1p1 > 0 /\ arg1p9 > 0 /\ 1+arg2p9 > 0 /\ arg1p1-arg1p9 <= 0), cost: 1
+	New rule:
+	__init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (arg1p1 > 0 /\ 1+arg2p9 > 0), cost: 1
+
+Step with 17
+
+	Trace
+
+	17[(arg1p1 > 0 /\ 1+arg2p9 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 12
+
+	Trace
+
+	17[(arg1p1 > 0 /\ 1+arg2p9 > 0)], 12[(-arg2+arg3 <= 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {11[T]}, {}]
+
+Step with 16
+
+	Trace
+
+	17[(arg1p1 > 0 /\ 1+arg2p9 > 0)], 12[(-arg2+arg3 <= 0 /\ arg1 > 0)], 16[(1+arg2 > 0 /\ 1-arg1 == 0)]
+	
+	Blocked
+
+	[{}, {11[T]}, {13[T], 14[T], 15[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 13
+
+	Trace
+
+	17[(arg1p1 > 0 /\ 1+arg2p9 > 0)], 12[(-arg2+arg3 <= 0 /\ arg1 > 0)], 16[(1+arg2 > 0 /\ 1-arg1 == 0)], 13[(1+arg2 > 0 /\ 2-arg2p5 <= 0 /\ 2-arg2 <= 0 /\ -arg1 == 0)]
+	
+	Blocked
+
+	[{}, {11[T]}, {13[T], 14[T], 15[T]}, {16[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4 arg5
+  10: f221_0_generate_GE -> f221_0_generate_GE : arg1'=arg1p2, arg2'=1+arg2, arg3'=-1+arg5, arg4'=arg4p2, (1+arg5 > 0 /\ arg1p2-arg1 <= 0 /\ -arg2+arg3 > 0 /\ arg1p2 > 0 /\ arg1 > 0), cost: 1
+  11: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, arg5'=arg5p3, (arg4 > 0 /\ -arg4+arg2p3 > 0 /\ -arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+  12: f221_0_generate_GE -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p4, arg4'=arg4p4, arg5'=arg5p4, (-arg2+arg3 <= 0 /\ arg1 > 0), cost: 1
+  13: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1+arg2 > 0 /\ 2-arg2p5 <= 0 /\ 2-arg2 <= 0 /\ -arg1 == 0), cost: 1
+  14: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=1, arg3'=arg3p6, arg4'=arg4p6, arg5'=arg5p6, (1+arg2 > 0 /\ -arg1 == 0), cost: 1
+  15: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=0, arg3'=arg3p7, arg4'=arg4p7, arg5'=arg5p7, (1+arg2 > 0 /\ 2-arg2 <= 0 /\ 1-arg1 == 0), cost: 1
+  16: f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=0, arg2'=2, arg3'=arg3p8, arg4'=arg4p8, arg5'=arg5p8, (1+arg2 > 0 /\ 1-arg1 == 0), cost: 1
+  18: f348_0_duplicate_EQ -> LoAT_sink : (-1+n >= 0 /\ -2+arg2p5 >= 0 /\ 1+arg2 > 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+  17: __init -> f221_0_generate_GE : arg1'=arg1p1, arg2'=0, arg3'=-1+arg2p9, arg4'=0, arg5'=arg2p9, (arg1p1 > 0 /\ 1+arg2p9 > 0), cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f348_0_duplicate_EQ -> f348_0_duplicate_EQ : arg1'=1, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, arg5'=arg5p5, (1+arg2 > 0 /\ 2-arg2p5 <= 0 /\ 1-arg1 == 0), cost: 1
+	New rule:
+	f348_0_duplicate_EQ -> LoAT_sink : (-1+n >= 0 /\ -2+arg2p5 >= 0 /\ 1+arg2 > 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0), cost: NONTERM
+
+		-2+arg2p5 >= 0 [0]: monotonic increase yields -2+arg2p5 >= 0
+		
+		1+arg2 > 0 [0]: monotonic increase yields 1+arg2 > 0, dependencies: -2+arg2p5 >= 0
+		
+		1-arg1 >= 0 [0]: monotonic increase yields 1-arg1 >= 0
+		
+		-1+arg1 >= 0 [0]: monotonic increase yields -1+arg1 >= 0
+		
+		Replacement map: {-2+arg2p5 >= 0 -> -2+arg2p5 >= 0, 1+arg2 > 0 -> 1+arg2 > 0, 1-arg1 >= 0 -> 1-arg1 >= 0, -1+arg1 >= 0 -> -1+arg1 >= 0}
+
+Step with 18
+
+	Trace
+
+	17[(arg1p1 > 0 /\ 1+arg2p9 > 0)], 12[(-arg2+arg3 <= 0 /\ arg1 > 0)], 18[(-1+n >= 0 /\ -2+arg2p5 >= 0 /\ 1+arg2 > 0 /\ 1-arg1 >= 0 /\ -1+arg1 >= 0)]
+	
+	Blocked
+
+	[{}, {11[T]}, {13[T], 14[T], 15[T]}, {18[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=0 arg3=-1 arg4=0 arg5=0 ] 17 [ arg1=1 arg2=1 arg3=0 arg4=0 arg5=0 ] 12 [ arg1=arg1 arg2=arg2 arg3=arg3 arg4=arg4 arg5=arg5 ] 18
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

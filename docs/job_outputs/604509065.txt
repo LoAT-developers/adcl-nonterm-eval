@@ -1,0 +1,489 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l4, true>
+<l1, l2, (arg1 > 0) /\ (arg2 > ~(1)), par{arg1 -> arg2, arg3 -> arg2, arg4 -> undef4}>
+<l2, l2, (arg1 >= arg2) /\ (arg1 > 1) /\ (arg2 > 4) /\ (arg1 = arg3), par{arg1 -> (arg1 - 1), arg2 -> (arg2 - 1), arg3 -> (arg1 - 1), arg4 -> undef8}>
+<l2, l3, (arg1 < arg2) /\ (arg2 > 1) /\ ((arg1 + 1) >= (2 * arg2)) /\ (arg1 > 0) /\ (arg1 = arg3), par{arg3 -> (arg1 + 1), arg4 -> (arg2 + 1)}>
+<l2, l3, (arg1 < arg2) /\ (arg2 > 1) /\ ((arg1 + 1) < (2 * arg2)) /\ (arg1 > 0) /\ (arg1 = arg3), par{arg3 -> (arg1 + 1), arg4 -> (arg2 - 1)}>
+<l3, l2, (arg1 > 0) /\ (arg2 > 1) /\ (arg3 > 1) /\ (arg4 > 0) /\ (arg2 > arg1) /\ (arg2 >= arg3) /\ (arg1 <= arg4), par{arg1 -> arg3, arg2 -> arg4, arg4 -> undef20}>
+<l2, l2, (arg1 > 0) /\ (arg1 >= arg2) /\ (arg2 < 5) /\ (((arg1 - 1) - (arg2 + 1)) <= 2) /\ (arg2 > ~(1)) /\ (arg1 = arg3), par{arg1 -> (arg1 - 1), arg2 -> (arg2 + 2), arg3 -> (arg1 - 1), arg4 -> undef24}>
+<l2, l2, (arg1 > 0) /\ (arg1 >= arg2) /\ (arg2 < 5) /\ (((arg1 - 1) - (arg2 + 1)) > 2) /\ (arg2 > ~(1)) /\ (arg1 = arg3), par{arg2 -> (arg2 + 1), arg3 -> arg1, arg4 -> undef28}>
+<l4, l1, true, par{arg1 -> undef29, arg2 -> undef30, arg3 -> undef31, arg4 -> undef32}>
+
+Fresh variables:
+undef4, undef8, undef20, undef24, undef28, undef29, undef30, undef31, undef32, 
+
+Undef variables:
+undef4, undef8, undef20, undef24, undef28, undef29, undef30, undef31, undef32, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (arg1 = undef30) /\ (arg2 = undef30) /\ (arg3 = undef30) /\ (undef29 > 0) /\ (undef30 > ~(1))>
+<l2, l2, (arg1 >= arg2) /\ (arg1 > 1) /\ (arg2 > 4) /\ (arg1 = arg3), par{arg1 -> (arg1 - 1), arg2 -> (arg2 - 1), arg3 -> (arg1 - 1)}>
+<l2, l2, (arg1 < arg2) /\ (arg2 > 1) /\ ((arg1 + 1) < (2 * arg2)) /\ (arg1 > 0) /\ (arg1 = arg3) /\ (arg1 > 0) /\ (arg2 > 1) /\ ((arg1 + 1) > 1) /\ ((arg2 - 1) > 0) /\ (arg2 > arg1) /\ (arg2 >= (arg1 + 1)) /\ (arg1 <= (arg2 - 1)), par{arg1 -> (arg1 + 1), arg2 -> (arg2 - 1), arg3 -> (arg1 + 1)}>
+<l2, l2, (arg1 > 0) /\ (arg1 >= arg2) /\ (arg2 < 5) /\ (((arg1 - 1) - (arg2 + 1)) <= 2) /\ (arg2 > ~(1)) /\ (arg1 = arg3), par{arg1 -> (arg1 - 1), arg2 -> (arg2 + 2), arg3 -> (arg1 - 1)}>
+<l2, l2, (arg1 > 0) /\ (arg1 >= arg2) /\ (arg2 < 5) /\ (((arg1 - 1) - (arg2 + 1)) > 2) /\ (arg2 > ~(1)) /\ (arg1 = arg3), par{arg2 -> (arg2 + 1), arg3 -> arg1}>
+
+Fresh variables:
+undef4, undef8, undef20, undef24, undef28, undef29, undef30, undef31, undef32, 
+
+Undef variables:
+undef4, undef8, undef20, undef24, undef28, undef29, undef30, undef31, undef32, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, arg2 <= arg1 /\ 2 <= arg1 /\ 5 <= arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+<l2, l2, 0 <= arg2 /\ 1 <= arg1 /\ 5 + arg2 <= arg1 /\ arg2 <= 4 /\ arg1 = arg3, {arg2 -> 1 + arg2, arg3 -> arg1, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, 0 <= undef30 /\ 1 <= undef29 /\ arg1 = undef30 /\ arg2 = undef30 /\ arg3 = undef30, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.013692
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l2: arg3 <= 1 + arg2[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 0 <= arg2 /\ 1 <= arg1 /\ 5 + arg2 <= arg1 /\ arg2 <= 4 /\ arg1 = arg3, {arg2 -> 1 + arg2, arg3 -> arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+Checking unfeasibility...
+Time used: 0.051101
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001355s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.180616s
+Trying to remove transition: <l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.000450s
+Time used: 4.00004
+Trying to remove transition: <l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.521990s
+Time used: 0.512767
+Trying to remove transition: <l2, l2, arg2 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001463s
+Time used: 4.00002
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011077s
+Time used: 4.00005
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.011959s
+Time used: 4.00009
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.013371s
+Time used: 1.00007
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.036070s
+Time used: 4.00007
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l2, 0 <= undef30 /\ 1 <= undef29 /\ arg1 = undef30 /\ arg2 = undef30 /\ arg3 = undef30, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l2, 0 <= undef30 /\ 1 <= undef29 /\ arg1 = undef30 /\ arg2 = undef30 /\ arg3 = undef30, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.012650s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.012720s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l2, l2, arg2 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+Variables:
+arg1, arg2, arg3
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg2 <= arg1 /\ 1 + arg3 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg3 <= arg1 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg3 <= arg1 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg3 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 0 <= arg2 /\ 1 + arg3 <= arg1 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg3 <= arg1 /\ 1 + arg2 <= 0 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ arg2 <= arg1 /\ 0 <= arg2 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg1 <= 0 /\ arg2 <= arg1 /\ 1 + arg2 <= 0 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 0 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg3 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg3 <= arg1 /\ arg1 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg3 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = 1, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg3 <= arg1 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg3 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg3 <= arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = 1, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.303842s
+Time used: 0.303391
+Improving Solution with cost 40 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000431s
+Time used: 1.00043
+
+LOG: SAT solveNonLinear - Elapsed time: 1.304273s
+Cost: 40; Total time: 1.30382
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: arg1 <= arg3[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 12
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ arg2 <= arg1 /\ 0 <= arg2 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ arg2 <= arg1 /\ 1 + arg2 <= 0 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg1 /\ 0 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = 1, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg1 <= 0 /\ arg2 <= arg1 /\ 0 <= arg2 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg1 <= 0 /\ arg2 <= arg1 /\ 1 + arg2 <= 0 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 0 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2, {all remain the same}>
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ 1 + arg2 <= 0 /\ arg1 <= 1 /\ 2*arg2 <= 1 + arg1 /\ arg3 <= 1 + arg2, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = arg3, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4 /\ arg1 = 1, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ 2*arg2 <= 1 + arg1 /\ arg2 <= 1 /\ arg3 <= 1 + arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ arg2 <= 4, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg2 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.082926s
+Time used: 0.0826
+Improving Solution with cost 15 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.705598s
+Time used: 0.705594
+Improving Solution with cost 14 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000560s
+Time used: 1.00055
+
+LOG: SAT solveNonLinear - Elapsed time: 1.789084s
+Cost: 14; Total time: 1.78875
+[31mFailed at location 2: 8 + arg3 <= 2*arg1 + arg2[0m
+Before Improving: 
+[36mQuasi-invariant at l2: 8 + arg3 <= 2*arg1 + arg2[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.017532s
+Remaining time after improvement: 0.99642
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: 8 + arg3 <= 2*arg1 + arg2[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 12
+Strengthening exit transition (result): 
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {all remain the same}>
+Strengthening exit transition (result): 
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg2 <= arg1 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg1 /\ 2 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2, {all remain the same}>
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {all remain the same}>
+<l2, end, 1 + arg1 <= arg2 /\ 1 + arg1 <= arg3 /\ arg1 <= 1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013568s
+Time used: 0.01337
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.021748s
+Time used: 0.021741
+
+LOG: SAT solveNonLinear - Elapsed time: 0.035315s
+Cost: 1; Total time: 0.035111
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: arg3 <= arg1[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 3
+Strengthening exit transition (result): 
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+Checking conditional non-termination of SCC {l2}...
+EXIT TRANSITIONS:
+<l2, end, arg1 <= 0 /\ 1 + arg1 <= arg2 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007729s
+Time used: 0.007671
+
+LOG: SAT solveNonLinear - Elapsed time: 0.007729s
+Cost: 0; Total time: 0.007671
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l2: arg2 <= 1 + arg1 + arg3[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l2: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ arg2 <= 1 + arg1 + arg3 /\ arg3 <= 1 + arg2 /\ 2 <= arg1 /\ 5 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> -1 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + arg1 <= arg2 /\ 1 <= arg1 /\ arg2 <= 1 + arg1 + arg3 /\ arg3 <= 1 + arg2 /\ 2 + arg1 <= 2*arg2 /\ 2 <= arg2 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> 1 + arg1, arg2 -> -1 + arg2, arg3 -> 1 + arg1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, arg2 <= arg1 /\ 0 <= arg2 /\ 1 <= arg1 /\ arg2 <= 1 + arg1 + arg3 /\ arg3 <= 1 + arg2 /\ arg1 <= 4 + arg2 /\ arg2 <= 4 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {arg1 -> -1 + arg1, arg2 -> 2 + arg2, arg3 -> -1 + arg1, rest remain the same}>
+
+Calling reachability with...
+Transition: <l2, end, true, {all remain the same}>
+Conditions: arg1 <= arg3, 8 + arg3 <= 2*arg1 + arg2, arg3 <= arg1, arg2 <= 1 + arg1 + arg3, 
+OPEN EXITS: 
+<l2, end, arg2 <= 1 + arg1 + arg3 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l2, 0 <= undef30 /\ 1 <= undef29 /\ arg1 = undef30 /\ arg2 = undef30 /\ arg3 = undef30, {all remain the same}>
+Conditions: arg2 <= 1 + arg1 + arg3, 8 + arg3 <= 2*arg1 + arg2, arg1 = arg3, 
+OPEN EXITS: 
+<l0, l2, 0 <= undef30 /\ 1 <= undef29 /\ arg2 <= 1 + arg1 + arg3 /\ 8 + arg3 <= 2*arg1 + arg2 /\ arg1 = arg3 /\ arg1 = undef30 /\ arg2 = undef30 /\ arg3 = undef30, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

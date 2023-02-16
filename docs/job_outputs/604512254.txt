@@ -1,0 +1,419 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: i j
+   0: [1] -> [2] : j'=100, T, cost: 1
+   1: [2] -> [3] : i'=0, T, cost: 1
+   2: [3] -> [4] : i-j < 0, cost: 1
+  12: [3] -> [12] : i-j >= 0, cost: 1
+   3: [4] -> [6] : 51-j < 0, cost: 1
+   7: [4] -> [9] : 51-j >= 0, cost: 1
+  11: [5] -> [3] : T, cost: 1
+   4: [6] -> [7] : i'=1+i, T, cost: 1
+   5: [7] -> [8] : j'=-1+j, T, cost: 1
+   6: [8] -> [5] : T, cost: 1
+   8: [9] -> [10] : i'=-1+i, T, cost: 1
+   9: [10] -> [11] : j'=1+j, T, cost: 1
+  10: [11] -> [5] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: i j
+  13: [1] -> [3] : i'=0, j'=100, T, cost: 1
+   2: [3] -> [4] : i-j < 0, cost: 1
+  12: [3] -> [12] : i-j >= 0, cost: 1
+  18: [4] -> [5] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+  19: [4] -> [5] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+  11: [5] -> [3] : T, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : j'=100, T, cost: 1
+	Second rule:
+	[2] -> [3] : i'=0, T, cost: 1
+	New rule:
+	[1] -> [3] : i'=0, j'=100, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [6] : 51-j < 0, cost: 1
+	Second rule:
+	[6] -> [7] : i'=1+i, T, cost: 1
+	New rule:
+	[4] -> [7] : i'=1+i, 51-j < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+	
+	Eliminating location [9] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [9] : 51-j >= 0, cost: 1
+	Second rule:
+	[9] -> [10] : i'=-1+i, T, cost: 1
+	New rule:
+	[4] -> [10] : i'=-1+i, 51-j >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 7 8
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [7] : i'=1+i, 51-j < 0, cost: 1
+	Second rule:
+	[7] -> [8] : j'=-1+j, T, cost: 1
+	New rule:
+	[4] -> [8] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 14
+	
+	Eliminating location [10] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [10] : i'=-1+i, 51-j >= 0, cost: 1
+	Second rule:
+	[10] -> [11] : j'=1+j, T, cost: 1
+	New rule:
+	[4] -> [11] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 9 15
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [8] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+	Second rule:
+	[8] -> [5] : T, cost: 1
+	New rule:
+	[4] -> [5] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 16
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [11] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+	Second rule:
+	[11] -> [5] : T, cost: 1
+	New rule:
+	[4] -> [5] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 10 17
+
+Step with 13
+
+	Trace
+
+	13[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 2
+
+	Trace
+
+	13[T], 2[(i-j < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {}]
+
+Step with 18
+
+	Trace
+
+	13[T], 2[(i-j < 0)], 18[(51-j < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	13[T], 2[(i-j < 0)], 18[(51-j < 0)], 11[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i j
+  13: [1] -> [3] : i'=0, j'=100, T, cost: 1
+   2: [3] -> [4] : i-j < 0, cost: 1
+  12: [3] -> [12] : i-j >= 0, cost: 1
+  20: [3] -> [3] : i'=i+n, j'=j-n, (2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0), cost: 1
+  18: [4] -> [5] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+  19: [4] -> [5] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+  11: [5] -> [3] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[3] -> [3] : i'=1+i, j'=-1+j, (51-j < 0 /\ i-j < 0), cost: 1
+	New rule:
+	[3] -> [3] : i'=i+n, j'=j-n, (2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0), cost: 1
+
+		-i+j > 0 [0]: montonic decrease yields 2-i+j-2*n > 0
+		
+		-i+j > 0 [1]: eventual increase yields (-i+j > 0 /\ 2 <= 0)
+		
+		-51+j > 0 [0]: montonic decrease yields -50+j-n > 0
+		
+		-51+j > 0 [1]: eventual increase yields (1 <= 0 /\ -51+j > 0)
+		
+		Replacement map: {-i+j > 0 -> 2-i+j-2*n > 0, -51+j > 0 -> -50+j-n > 0}
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {20[T]}]
+
+Step with 2
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}]
+
+Step with 18
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)], 18[(51-j < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}, {}]
+
+Step with 11
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)], 18[(51-j < 0)], 11[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)], 18[(51-j < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {}, {11[T]}]
+
+Backtrack
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {18[T]}]
+
+Step with 19
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)], 19[(51-j >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {18[T]}, {}]
+
+Step with 11
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 2[(i-j < 0)], 19[(51-j >= 0)], 11[T]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {18[T]}, {}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i j
+  13: [1] -> [3] : i'=0, j'=100, T, cost: 1
+   2: [3] -> [4] : i-j < 0, cost: 1
+  12: [3] -> [12] : i-j >= 0, cost: 1
+  20: [3] -> [3] : i'=i+n, j'=j-n, (2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0), cost: 1
+  21: [3] -> [3] : i'=i-n2, j'=j+n2, (52-j-n2 >= 0 /\ -i+j > 0 /\ -1+n2 >= 0), cost: 1
+  18: [4] -> [5] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+  19: [4] -> [5] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+  11: [5] -> [3] : T, cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[3] -> [3] : i'=-1+i, j'=1+j, (51-j >= 0 /\ i-j < 0), cost: 1
+	New rule:
+	[3] -> [3] : i'=i-n2, j'=j+n2, (52-j-n2 >= 0 /\ -i+j > 0 /\ -1+n2 >= 0), cost: 1
+
+		51-j >= 0 [0]: montonic decrease yields 52-j-n2 >= 0
+		
+		51-j >= 0 [1]: eventual increase yields (51-j >= 0 /\ 1 <= 0)
+		
+		-i+j > 0 [0]: monotonic increase yields -i+j > 0
+		
+		Replacement map: {51-j >= 0 -> 52-j-n2 >= 0, -i+j > 0 -> -i+j > 0}
+
+	Trace
+
+	13[T], 20[(2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0)], 21[(52-j-n2 >= 0 /\ -i+j > 0 /\ -1+n2 >= 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {12[T], 20[T]}, {21[T]}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i j
+  13: [1] -> [3] : i'=0, j'=100, T, cost: 1
+   2: [3] -> [4] : i-j < 0, cost: 1
+  12: [3] -> [12] : i-j >= 0, cost: 1
+  20: [3] -> [3] : i'=i+n, j'=j-n, (2-i+j-2*n > 0 /\ -1+n >= 0 /\ -50+j-n > 0), cost: 1
+  21: [3] -> [3] : i'=i-n2, j'=j+n2, (52-j-n2 >= 0 /\ -i+j > 0 /\ -1+n2 >= 0), cost: 1
+  22: [3] -> LoAT_sink : (-1+n1 >= 0 /\ n1-n2 <= 0 /\ 2*n1-2*n2 <= 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ -i-2*n1+j > 0 /\ 52+n1-j-n2 >= 0 /\ 2-i-2*n1+j > 0), cost: NONTERM
+  23: [3] -> [3] : i'=n3*n1+i-n3*n2, j'=-n3*n1+n3*n2+j, (-1+n1 >= 0 /\ -1+n3 >= 0 /\ -50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0 /\ 52+n1-j-n2 >= 0 /\ -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0), cost: 1
+  18: [4] -> [5] : i'=1+i, j'=-1+j, 51-j < 0, cost: 1
+  19: [4] -> [5] : i'=-1+i, j'=1+j, 51-j >= 0, cost: 1
+  11: [5] -> [3] : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[3] -> [3] : i'=i+n1-n2, j'=-n1+j+n2, (-1+n1 >= 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ -i-2*n1+j > 0 /\ 52+n1-j-n2 >= 0 /\ 2-i-2*n1+j > 0), cost: 1
+	New rule:
+	[3] -> LoAT_sink : (-1+n1 >= 0 /\ n1-n2 <= 0 /\ 2*n1-2*n2 <= 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ -i-2*n1+j > 0 /\ 52+n1-j-n2 >= 0 /\ 2-i-2*n1+j > 0), cost: NONTERM
+
+		-1+n1 >= 0 [0]: monotonic increase yields -1+n1 >= 0
+		
+		-50-n1+j > 0 [0]: eventual decrease yields (-50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0)
+		
+		-50-n1+j > 0 [1]: eventual increase yields (n1-n2 <= 0 /\ -50-n1+j > 0)
+		
+		-1+n2 >= 0 [0]: monotonic increase yields -1+n2 >= 0
+		
+		-i-2*n1+j > 0 [0]: montonic decrease yields -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0, dependencies: -1+n1 >= 0 -50-n1+j > 0 52+n1-j-n2 >= 0
+		
+		-i-2*n1+j > 0 [1]: eventual decrease yields (-i-2*n1+j > 0 /\ -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0)
+		
+		-i-2*n1+j > 0 [2]: eventual increase yields (2*n1-2*n2 <= 0 /\ -i-2*n1+j > 0)
+		
+		52+n1-j-n2 >= 0 [0]: monotonic increase yields 52+n1-j-n2 >= 0, dependencies: -1+n1 >= 0 -50-n1+j > 0
+		
+		2-i-2*n1+j > 0 [0]: montonic decrease yields 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0, dependencies: -i-2*n1+j > 0
+		
+		2-i-2*n1+j > 0 [1]: eventual increase yields (2*n1-2*n2 <= 0 /\ 2-i-2*n1+j > 0)
+		
+		Replacement map: {-1+n1 >= 0 -> -1+n1 >= 0, -50-n1+j > 0 -> (n1-n2 <= 0 /\ -50-n1+j > 0), -1+n2 >= 0 -> -1+n2 >= 0, -i-2*n1+j > 0 -> (2*n1-2*n2 <= 0 /\ -i-2*n1+j > 0), 52+n1-j-n2 >= 0 -> 52+n1-j-n2 >= 0, 2-i-2*n1+j > 0 -> (2*n1-2*n2 <= 0 /\ 2-i-2*n1+j > 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	[3] -> [3] : i'=i+n1-n2, j'=-n1+j+n2, (-1+n1 >= 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ -i-2*n1+j > 0 /\ 52+n1-j-n2 >= 0 /\ 2-i-2*n1+j > 0), cost: 1
+	New rule:
+	[3] -> [3] : i'=n3*n1+i-n3*n2, j'=-n3*n1+n3*n2+j, (-1+n1 >= 0 /\ -1+n3 >= 0 /\ -50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0 /\ 52+n1-j-n2 >= 0 /\ -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0), cost: 1
+
+		-1+n1 >= 0 [0]: monotonic increase yields -1+n1 >= 0
+		
+		-50-n1+j > 0 [0]: eventual decrease yields (-50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0)
+		
+		-50-n1+j > 0 [1]: eventual increase yields (n1-n2 <= 0 /\ -50-n1+j > 0)
+		
+		-1+n2 >= 0 [0]: monotonic increase yields -1+n2 >= 0
+		
+		-i-2*n1+j > 0 [0]: montonic decrease yields -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0, dependencies: -1+n1 >= 0 -50-n1+j > 0 52+n1-j-n2 >= 0
+		
+		-i-2*n1+j > 0 [1]: eventual decrease yields (-i-2*n1+j > 0 /\ -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0)
+		
+		-i-2*n1+j > 0 [2]: eventual increase yields (2*n1-2*n2 <= 0 /\ -i-2*n1+j > 0)
+		
+		52+n1-j-n2 >= 0 [0]: monotonic increase yields 52+n1-j-n2 >= 0, dependencies: -1+n1 >= 0 -50-n1+j > 0
+		
+		2-i-2*n1+j > 0 [0]: montonic decrease yields 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0, dependencies: -i-2*n1+j > 0
+		
+		2-i-2*n1+j > 0 [1]: eventual increase yields (2*n1-2*n2 <= 0 /\ 2-i-2*n1+j > 0)
+		
+		Replacement map: {-1+n1 >= 0 -> -1+n1 >= 0, -50-n1+j > 0 -> (-50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0), -1+n2 >= 0 -> -1+n2 >= 0, -i-2*n1+j > 0 -> -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0, 52+n1-j-n2 >= 0 -> 52+n1-j-n2 >= 0, 2-i-2*n1+j > 0 -> 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0}
+
+	Trace
+
+	13[T], 23[(-1+n1 >= 0 /\ -1+n3 >= 0 /\ -50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0 /\ 52+n1-j-n2 >= 0 /\ -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {23[T]}]
+
+Step with 22
+
+	Trace
+
+	13[T], 23[(-1+n1 >= 0 /\ -1+n3 >= 0 /\ -50+(-1+n3)*n2-n1+j-(-1+n3)*n1 > 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ 2-i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0 /\ 52+n1-j-n2 >= 0 /\ -i+2*(-1+n3)*n2-2*n1+j-2*(-1+n3)*n1 > 0)], 22[(-1+n1 >= 0 /\ n1-n2 <= 0 /\ 2*n1-2*n2 <= 0 /\ -50-n1+j > 0 /\ -1+n2 >= 0 /\ -i-2*n1+j > 0 /\ 52+n1-j-n2 >= 0 /\ 2-i-2*n1+j > 0)]
+	
+	Blocked
+
+	[{}, {12[T]}, {23[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i=0 j=100 ] 13 [ i=48 j=52 ] 23 [ i=i j=j ] 22
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

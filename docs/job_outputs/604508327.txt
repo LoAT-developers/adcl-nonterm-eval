@@ -1,0 +1,180 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l13, true>
+<l1, l2, true>
+<l3, l4, true>
+<l5, l6, ((~(1) + N6^0) <= (0 + j7^0))>
+<l5, l7, ((1 + j7^0) <= (~(1) + N6^0)), par{j7^0 -> (1 + j7^0)}>
+<l8, l9, true>
+<l10, l8, true, par{i8^0 -> (1 + i8^0)}>
+<l11, l10, true, par{min9^0 -> (0 + i8^0)}>
+<l11, l10, true>
+<l9, l3, ((0 + N6^0) <= (0 + i8^0)) /\ (undef71 = undef71), par{j7^0 -> (1 + j7^0), t10^0 -> undef71}>
+<l9, l11, ((1 + i8^0) <= (0 + N6^0))>
+<l7, l5, true>
+<l4, l7, ((~(1) + N6^0) <= (0 + j7^0)), par{j7^0 -> 0}>
+<l4, l8, ((1 + j7^0) <= (~(1) + N6^0)), par{i8^0 -> (1 + j7^0), min9^0 -> (0 + j7^0)}>
+<l2, l3, ((0 + N^0) <= (0 + i^0)), par{N6^0 -> (0 + N^0), j7^0 -> 0}>
+<l2, l1, ((1 + i^0) <= (0 + N^0)), par{i^0 -> (1 + i^0)}>
+<l12, l1, (undef128 = undef128), par{i^0 -> 0, tmp^0 -> undef128}>
+<l13, l12, true>
+
+Fresh variables:
+undef71, undef128, 
+
+Undef variables:
+undef71, undef128, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l1, (i^0 = 0) /\ (undef128 = undef128)>
+<l1, l7, ((0 + N^0) <= (0 + i^0)) /\ ((~(1) + (0 + N^0)) <= (0 + 0)), par{N6^0 -> (0 + N^0), j7^0 -> 0}>
+<l1, l8, ((0 + N^0) <= (0 + i^0)) /\ ((1 + 0) <= (~(1) + (0 + N^0))), par{N6^0 -> (0 + N^0), i8^0 -> (1 + 0), j7^0 -> 0}>
+<l1, l1, ((1 + i^0) <= (0 + N^0)), par{i^0 -> (1 + i^0)}>
+<l7, l6, ((~(1) + N6^0) <= (0 + j7^0))>
+<l7, l7, ((1 + j7^0) <= (~(1) + N6^0)), par{j7^0 -> (1 + j7^0)}>
+<l8, l7, ((0 + N6^0) <= (0 + i8^0)) /\ (undef71 = undef71) /\ ((~(1) + N6^0) <= (0 + (1 + j7^0))), par{j7^0 -> 0}>
+<l8, l8, ((0 + N6^0) <= (0 + i8^0)) /\ (undef71 = undef71) /\ ((1 + (1 + j7^0)) <= (~(1) + N6^0)), par{i8^0 -> (1 + (1 + j7^0)), j7^0 -> (1 + j7^0)}>
+<l8, l8, ((1 + i8^0) <= (0 + N6^0)), par{i8^0 -> (1 + i8^0)}>
+<l8, l8, ((1 + i8^0) <= (0 + N6^0)), par{i8^0 -> (1 + i8^0)}>
+
+Fresh variables:
+undef71, undef128, 
+
+Undef variables:
+undef71, undef128, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l1, l1, 1 + i^0 <= N^0, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+N^0, i^0
+
+Graph 2:
+Transitions:
+<l8, l8, N6^0 <= i8^0 /\ 3 + j7^0 <= N6^0, {i8^0 -> 2 + j7^0, j7^0 -> 1 + j7^0, rest remain the same}>
+<l8, l8, 1 + i8^0 <= N6^0, {i8^0 -> 1 + i8^0, rest remain the same}>
+<l8, l8, 1 + i8^0 <= N6^0, {i8^0 -> 1 + i8^0, rest remain the same}>
+Variables:
+N6^0, i8^0, j7^0
+
+Graph 3:
+Transitions:
+<l7, l7, 2 + j7^0 <= N6^0, {j7^0 -> 1 + j7^0, rest remain the same}>
+Variables:
+N6^0, j7^0
+
+Graph 4:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l1, i^0 = 0, {all remain the same}>
+
+Graph 2
+<l1, l8, N^0 <= i^0 /\ 2 <= N^0, {N6^0 -> N^0, i8^0 -> 1, j7^0 -> 0, rest remain the same}>
+
+Graph 3
+<l1, l7, N^0 <= 1 /\ N^0 <= i^0, {N6^0 -> N^0, j7^0 -> 0, rest remain the same}>
+<l8, l7, N6^0 <= i8^0 /\ N6^0 <= 2 + j7^0, {j7^0 -> 0, rest remain the same}>
+
+Graph 4
+<l7, l6, N6^0 <= 1 + j7^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 1 , 1 )
+( 6 , 4 )
+( 7 , 3 )
+( 8 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001244
+
+Checking conditional termination of SCC {l1}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000537s
+[33mRanking function: [36m-1 + N^0 - i^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.046917
+
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001024s
+[33mRanking function: [36m1 + N6^0 - j7^0[0m
+New Graphs: 
+Transitions:
+<l8, l8, 1 + i8^0 <= N6^0, {i8^0 -> 1 + i8^0, rest remain the same}>
+<l8, l8, 1 + i8^0 <= N6^0, {i8^0 -> 1 + i8^0, rest remain the same}>
+Variables:
+N6^0, i8^0
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000591s
+[33mRanking function: [36m-1 + N6^0 - i8^0[0m
+New Graphs: 
+Proving termination of subgraph 3
+Checking unfeasibility...
+Time used: 0.000884
+
+Checking conditional termination of SCC {l7}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000344s
+[33mRanking function: [36m-2 + N6^0 - j7^0[0m
+New Graphs: 
+Proving termination of subgraph 4
+Analyzing SCC {l6}...
+No cycles found.
+
+[32mProgram Terminates[0m

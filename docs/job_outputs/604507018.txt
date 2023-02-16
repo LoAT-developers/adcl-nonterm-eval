@@ -1,0 +1,86 @@
+unknown
+
+Initial ITS
+
+Start location: l2
+Program variables: tmp^0 x^0
+   0: l0 -> l1 : tmp^0'=tmp^post1, x^0'=x^post1, (0 == 0 /\ -tmp^post1+x^post1 == 0), cost: 1
+   1: l2 -> l0 : tmp^0'=tmp^post2, x^0'=x^post2, (-x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l2
+Program variables: tmp^0 x^0
+   2: l2 -> l1 : tmp^0'=tmp^post1, x^0'=x^post1, (0 == 0 /\ -x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0 /\ -tmp^post1+x^post1 == 0), cost: 1
+
+	Eliminating location l0 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l2 -> l0 : tmp^0'=tmp^post2, x^0'=x^post2, (-x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0), cost: 1
+	Second rule:
+	l0 -> l1 : tmp^0'=tmp^post1, x^0'=x^post1, (0 == 0 /\ -tmp^post1+x^post1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : tmp^0'=tmp^post1, x^0'=x^post1, (0 == 0 /\ -x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0 /\ -tmp^post1+x^post1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l2
+Program variables: tmp^0 x^0
+   3: l2 -> l1 : tmp^0'=x^post1, x^0'=x^post1, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : tmp^0'=tmp^post1, x^0'=x^post1, (0 == 0 /\ -x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0 /\ -tmp^post1+x^post1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : tmp^0'=x^post1, x^0'=x^post1, (0 == 0 /\ -x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0), cost: 1
+	
+		propagated equality tmp^post1 = x^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : tmp^0'=x^post1, x^0'=x^post1, (0 == 0 /\ -x^post2+x^0 == 0 /\ tmp^0-tmp^post2 == 0), cost: 1
+	New rule:
+	l2 -> l1 : tmp^0'=x^post1, x^0'=x^post1, 0 == 0, cost: 1
+	
+		propagated equality x^post2 = x^0
+		
+		propagated equality tmp^post2 = tmp^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l1 : tmp^0'=x^post1, x^0'=x^post1, 0 == 0, cost: 1
+	New rule:
+	l2 -> l1 : tmp^0'=x^post1, x^0'=x^post1, T, cost: 1
+
+Step with 3
+
+	Trace
+
+	3[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{3[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

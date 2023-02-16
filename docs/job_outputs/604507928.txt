@@ -1,0 +1,1107 @@
+unknown
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_Load -> f54_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (-arg1p1+arg2 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ -arg2p1+arg2 == 0), cost: 1
+   1: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p2, arg2'=arg2p2, (-arg1+arg2 >= 0 /\ -1-arg2p2+arg2 == 0 /\ -1+arg1-arg1p2 == 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   2: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p3, arg2'=arg2p3, (-4-arg1+arg2 <= 0 /\ -1-arg2p3+arg2 == 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ 2-arg1p3+arg1 == 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+   3: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p4, arg2'=arg2p4, (-4-arg1+arg2 > 0 /\ 1-arg1p4+arg1 == 0 /\ -arg2p4+arg2 == 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+   4: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p5, arg2'=arg2p5, (1+arg1-arg1p5 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ 1-arg2p5+arg2 == 0 /\ arg2 > 0), cost: 1
+   5: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p6, arg2'=arg2p6, (-1-arg1p6+arg1 == 0 /\ 1-arg2p6+arg2 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+   6: __init -> f1_0_main_Load : arg1'=arg1p7, arg2'=arg2p7, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2
+   1: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p2, arg2'=arg2p2, (-arg1+arg2 >= 0 /\ -1-arg2p2+arg2 == 0 /\ -1+arg1-arg1p2 == 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   2: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p3, arg2'=arg2p3, (-4-arg1+arg2 <= 0 /\ -1-arg2p3+arg2 == 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ 2-arg1p3+arg1 == 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+   3: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p4, arg2'=arg2p4, (-4-arg1+arg2 > 0 /\ 1-arg1p4+arg1 == 0 /\ -arg2p4+arg2 == 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+   4: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p5, arg2'=arg2p5, (1+arg1-arg1p5 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ 1-arg2p5+arg2 == 0 /\ arg2 > 0), cost: 1
+   5: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p6, arg2'=arg2p6, (-1-arg1p6+arg1 == 0 /\ 1-arg2p6+arg2 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+   7: __init -> f54_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (arg1p7 > 0 /\ arg2p7-arg2p1 == 0 /\ -arg1p1+arg2p7 == 0 /\ 1+arg2p7 > 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p7, arg2'=arg2p7, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f54_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (-arg1p1+arg2 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ -arg2p1+arg2 == 0), cost: 1
+	New rule:
+	__init -> f54_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (arg1p7 > 0 /\ arg2p7-arg2p1 == 0 /\ -arg1p1+arg2p7 == 0 /\ 1+arg2p7 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 6
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p2, arg2'=arg2p2, (-arg1+arg2 >= 0 /\ -1-arg2p2+arg2 == 0 /\ -1+arg1-arg1p2 == 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (0 == 0 /\ -arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+	
+		propagated equality arg2p2 = -1+arg2
+		
+		propagated equality arg1p2 = -1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (0 == 0 /\ -arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p3, arg2'=arg2p3, (-4-arg1+arg2 <= 0 /\ -1-arg2p3+arg2 == 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ 2-arg1p3+arg1 == 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (0 == 0 /\ -4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p3 = -1+arg2
+		
+		propagated equality arg1p3 = 2+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (0 == 0 /\ -4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p4, arg2'=arg2p4, (-4-arg1+arg2 > 0 /\ 1-arg1p4+arg1 == 0 /\ -arg2p4+arg2 == 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=arg2, (0 == 0 /\ -4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p4 = 1+arg1
+		
+		propagated equality arg2p4 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=arg2, (0 == 0 /\ -4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=arg2, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=arg2, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p5, arg2'=arg2p5, (1+arg1-arg1p5 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ 1-arg2p5+arg2 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (0 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p5 = 1+arg1
+		
+		propagated equality arg2p5 = 1+arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (0 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1p6, arg2'=arg2p6, (-1-arg1p6+arg1 == 0 /\ 1-arg2p6+arg2 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (0 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p6 = -1+arg1
+		
+		propagated equality arg2p6 = 1+arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (0 == 0 /\ -1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	__init -> f54_0_loop_LE : arg1'=arg1p1, arg2'=arg2p1, (arg1p7 > 0 /\ arg2p7-arg2p1 == 0 /\ -arg1p1+arg2p7 == 0 /\ 1+arg2p7 > 0), cost: 1
+	New rule:
+	__init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (0 == 0 /\ arg1p7 > 0 /\ 1+arg2p7 > 0), cost: 1
+	
+		propagated equality arg2p1 = arg2p7
+		
+		propagated equality arg1p1 = arg2p7
+		
+	Simplified Guard
+
+	Original rule:
+	__init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (0 == 0 /\ arg1p7 > 0 /\ 1+arg2p7 > 0), cost: 1
+	New rule:
+	__init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (arg1p7 > 0 /\ 1+arg2p7 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (arg1p7 > 0 /\ 1+arg2p7 > 0), cost: 1
+	New rule:
+	__init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+Step with 13
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 8
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 8[(-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  14: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+
+		-arg1+arg2 >= 0 [0]: monotonic increase yields -arg1+arg2 >= 0
+		
+		arg2 > 0 [0]: monotonic increase yields arg2 > 0, dependencies: -arg1+arg2 >= 0 -4+arg1 > 0
+		
+		arg2 > 0 [1]: montonic decrease yields 1-n+arg2 > 0
+		
+		arg2 > 0 [2]: eventual increase yields (1 <= 0 /\ arg2 > 0)
+		
+		-4+arg1 > 0 [0]: montonic decrease yields -3-n+arg1 > 0
+		
+		-4+arg1 > 0 [1]: eventual increase yields (1 <= 0 /\ -4+arg1 > 0)
+		
+		Replacement map: {-arg1+arg2 >= 0 -> -arg1+arg2 >= 0, arg2 > 0 -> arg2 > 0, -4+arg1 > 0 -> -3-n+arg1 > 0}
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 14[T]}]
+
+Step with 9
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 9[(-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 14[T]}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  14: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+  15: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1+2*n2, arg2'=-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1+2*n2, arg2'=-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0), cost: 1
+
+		-arg1+arg2 >= 0 [0]: montonic decrease yields 3-arg1-3*n2+arg2 >= 0
+		
+		-arg1+arg2 >= 0 [1]: eventual increase yields (3 <= 0 /\ -arg1+arg2 >= 0)
+		
+		4+arg1-arg2 >= 0 [0]: monotonic increase yields 4+arg1-arg2 >= 0
+		
+		1+arg1 > 0 [0]: monotonic increase yields 1+arg1 > 0
+		
+		5-arg1 > 0 [0]: montonic decrease yields 7-arg1-2*n2 > 0
+		
+		5-arg1 > 0 [1]: eventual increase yields (2 <= 0 /\ 5-arg1 > 0)
+		
+		arg2 > 0 [0]: montonic decrease yields 1-n2+arg2 > 0
+		
+		arg2 > 0 [1]: eventual increase yields (1 <= 0 /\ arg2 > 0)
+		
+		Replacement map: {-arg1+arg2 >= 0 -> 3-arg1-3*n2+arg2 >= 0, 4+arg1-arg2 >= 0 -> 4+arg1-arg2 >= 0, 1+arg1 > 0 -> 1+arg1 > 0, 5-arg1 > 0 -> 7-arg1-2*n2 > 0, arg2 > 0 -> 1-n2+arg2 > 0}
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 14[T]}, {9[T], 15[T]}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  14: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+  15: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1+2*n2, arg2'=-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0), cost: 1
+  16: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n1*n3+2*n3*n2+arg1, arg2'=-n1*n3-n3*n2+arg2, (7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n1+arg1+2*n2, arg2'=-n1-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 7+n1-arg1-2*n2 > 0 /\ -3-n1+arg1 > 0 /\ 1-n1+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 1-n1-n2+arg2 > 0 /\ -1+n2 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n1*n3+2*n3*n2+arg1, arg2'=-n1*n3-n3*n2+arg2, (7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0), cost: 1
+
+		3-arg1-3*n2+arg2 >= 0 [0]: montonic decrease yields 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0, dependencies: 7+n1-arg1-2*n2 > 0 -3-n1+arg1 > 0 -arg1+arg2 >= 0
+		
+		3-arg1-3*n2+arg2 >= 0 [1]: eventual decrease yields (3-arg1-3*n2+arg2 >= 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0)
+		
+		3-arg1-3*n2+arg2 >= 0 [2]: eventual increase yields (3-arg1-3*n2+arg2 >= 0 /\ 3*n2 <= 0)
+		
+		7+n1-arg1-2*n2 > 0 [0]: eventual decrease yields (7+n1-arg1-2*n2 > 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0)
+		
+		7+n1-arg1-2*n2 > 0 [1]: eventual increase yields (7+n1-arg1-2*n2 > 0 /\ -n1+2*n2 <= 0)
+		
+		-3-n1+arg1 > 0 [0]: eventual decrease yields (-3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0)
+		
+		-3-n1+arg1 > 0 [1]: eventual increase yields (n1-2*n2 <= 0 /\ -3-n1+arg1 > 0)
+		
+		1-n1+arg1 > 0 [0]: montonic decrease yields 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0, dependencies: -3-n1+arg1 > 0
+		
+		1-n1+arg1 > 0 [1]: eventual increase yields (n1-2*n2 <= 0 /\ 1-n1+arg1 > 0)
+		
+		-arg1+arg2 >= 0 [0]: montonic decrease yields -arg1-3*n2*(-1+n3)+arg2 >= 0, dependencies: -1+n2 >= 0
+		
+		-arg1+arg2 >= 0 [1]: eventual decrease yields (-arg1+arg2 >= 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0)
+		
+		-arg1+arg2 >= 0 [2]: eventual increase yields (3*n2 <= 0 /\ -arg1+arg2 >= 0)
+		
+		-1+n1 >= 0 [0]: monotonic increase yields -1+n1 >= 0
+		
+		4+arg1-arg2 >= 0 [0]: monotonic increase yields 4+arg1-arg2 >= 0, dependencies: -1+n2 >= 0
+		
+		4+arg1-arg2 >= 0 [1]: eventual decrease yields (4+arg1+3*n2*(-1+n3)-arg2 >= 0 /\ 4+arg1-arg2 >= 0)
+		
+		4+arg1-arg2 >= 0 [2]: eventual increase yields (-3*n2 <= 0 /\ 4+arg1-arg2 >= 0)
+		
+		1-n1-n2+arg2 > 0 [0]: montonic decrease yields 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0, dependencies: 3-arg1-3*n2+arg2 >= 0 -3-n1+arg1 > 0 -arg1+arg2 >= 0
+		
+		1-n1-n2+arg2 > 0 [1]: eventual increase yields (n1+n2 <= 0 /\ 1-n1-n2+arg2 > 0)
+		
+		-1+n2 >= 0 [0]: monotonic increase yields -1+n2 >= 0
+		
+		arg2 > 0 [0]: monotonic increase yields arg2 > 0, dependencies: 3-arg1-3*n2+arg2 >= 0 -3-n1+arg1 > 0 -arg1+arg2 >= 0
+		
+		Replacement map: {3-arg1-3*n2+arg2 >= 0 -> 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0, 7+n1-arg1-2*n2 > 0 -> (7+n1-arg1-2*n2 > 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0), -3-n1+arg1 > 0 -> (-3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0), 1-n1+arg1 > 0 -> 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0, -arg1+arg2 >= 0 -> -arg1-3*n2*(-1+n3)+arg2 >= 0, -1+n1 >= 0 -> -1+n1 >= 0, 4+arg1-arg2 >= 0 -> 4+arg1-arg2 >= 0, 1-n1-n2+arg2 > 0 -> 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0, -1+n2 >= 0 -> -1+n2 >= 0, arg2 > 0 -> arg2 > 0}
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {16[T]}]
+
+Step with 12
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)], 12[(-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 10[T], 11[T], 16[T]}, {}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  14: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+  15: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1+2*n2, arg2'=-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0), cost: 1
+  16: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n1*n3+2*n3*n2+arg1, arg2'=-n1*n3-n3*n2+arg2, (7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0), cost: 1
+  17: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1-n4, arg2'=n4+arg2, (2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1-n4, arg2'=n4+arg2, (2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0), cost: 1
+
+		-1+2*arg1-arg2 > 0 [0]: montonic decrease yields 2+2*arg1-3*n4-arg2 > 0, dependencies: arg1-arg2 > 0 -1+arg1 > 0
+		
+		-1+2*arg1-arg2 > 0 [1]: eventual decrease yields (-1+2*arg1-arg2 > 0 /\ 2+2*arg1-3*n4-arg2 > 0)
+		
+		-1+2*arg1-arg2 > 0 [2]: eventual increase yields (-1+2*arg1-arg2 > 0 /\ 3 <= 0)
+		
+		arg1-arg2 > 0 [0]: montonic decrease yields 2+arg1-2*n4-arg2 > 0
+		
+		arg1-arg2 > 0 [1]: eventual increase yields (arg1-arg2 > 0 /\ 2 <= 0)
+		
+		-1+arg1 > 0 [0]: montonic decrease yields arg1-n4 > 0
+		
+		-1+arg1 > 0 [1]: eventual increase yields (1 <= 0 /\ -1+arg1 > 0)
+		
+		arg2 > 0 [0]: monotonic increase yields arg2 > 0
+		
+		Replacement map: {-1+2*arg1-arg2 > 0 -> 2+2*arg1-3*n4-arg2 > 0, arg1-arg2 > 0 -> 2+arg1-2*n4-arg2 > 0, -1+arg1 > 0 -> arg1-n4 > 0, arg2 > 0 -> arg2 > 0}
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)], 17[(2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 10[T], 11[T], 16[T]}, {12[T], 17[T]}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  14: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+  15: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1+2*n2, arg2'=-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0), cost: 1
+  16: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n1*n3+2*n3*n2+arg1, arg2'=-n1*n3-n3*n2+arg2, (7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0), cost: 1
+  17: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1-n4, arg2'=n4+arg2, (2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0), cost: 1
+  18: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2*n5*n31*n22-n5*n31*n11+arg1-n5*n4, arg2'=-n5*n31*n22-n5*n31*n11+n5*n4+arg2, (-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n31*n11+arg1-n4+2*n31*n22, arg2'=-n31*n11+n4-n31*n22+arg2, (-1+n31 >= 0 /\ -n31*n11-n31*n22+arg2 > 0 /\ -n31*n11+arg1-n4+2*n31*n22 > 0 /\ 3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 1-n11-(-1+n31)*n11-n22-(-1+n31)*n22+arg2 > 0 /\ -1+n11 >= 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ -3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 /\ 1-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2*n5*n31*n22-n5*n31*n11+arg1-n5*n4, arg2'=-n5*n31*n22-n5*n31*n11+n5*n4+arg2, (-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0), cost: 1
+
+		-1+n31 >= 0 [0]: monotonic increase yields -1+n31 >= 0
+		
+		-n31*n11-n31*n22+arg2 > 0 [0]: montonic decrease yields -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0, dependencies: 3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 -1+n22 >= 0 -3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0
+		
+		-n31*n11-n31*n22+arg2 > 0 [1]: eventual decrease yields (-n31*n11-n31*n22+arg2 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0)
+		
+		-n31*n11-n31*n22+arg2 > 0 [2]: eventual increase yields (-n31*n11-n31*n22+arg2 > 0 /\ n31*n11-n4+n31*n22 <= 0)
+		
+		-n31*n11+arg1-n4+2*n31*n22 > 0 [0]: montonic decrease yields 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0, dependencies: -n31*n11-n31*n22+arg2 > 0 -1+n4 >= 0 2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0
+		
+		-n31*n11+arg1-n4+2*n31*n22 > 0 [1]: eventual decrease yields (-n31*n11+arg1-n4+2*n31*n22 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0)
+		
+		-n31*n11+arg1-n4+2*n31*n22 > 0 [2]: eventual increase yields (n31*n11+n4-2*n31*n22 <= 0 /\ -n31*n11+arg1-n4+2*n31*n22 > 0)
+		
+		3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 [0]: montonic decrease yields 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0, dependencies: 7+n11-arg1-2*n22 > 0 -3-n11+arg1 > 0 -arg1-3*(-1+n31)*n22+arg2 >= 0
+		
+		3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 [1]: eventual decrease yields (3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0)
+		
+		3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 [2]: eventual increase yields (3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 /\ -2*n4+3*n31*n22 <= 0)
+		
+		-1+n22 >= 0 [0]: monotonic increase yields -1+n22 >= 0
+		
+		-1+n4 >= 0 [0]: monotonic increase yields -1+n4 >= 0
+		
+		4+arg1-arg2 >= 0 [0]: monotonic increase yields 4+arg1-arg2 >= 0, dependencies: 2+arg1-2*n4+3*n31*n22-arg2 > 0
+		
+		4+arg1-arg2 >= 0 [1]: eventual decrease yields (4+arg1-arg2 >= 0 /\ 4+3*n31*(-1+n5)*n22+arg1-2*(-1+n5)*n4-arg2 >= 0)
+		
+		4+arg1-arg2 >= 0 [2]: eventual increase yields (2*n4-3*n31*n22 <= 0 /\ 4+arg1-arg2 >= 0)
+		
+		7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 [0]: monotonic increase yields 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0, dependencies: -1+n4 >= 0 -1+n11 >= 0 -3-n11+arg1 > 0
+		
+		7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 [1]: montonic decrease yields 7-2*n31*(-1+n5)*n22+n11+(-1+n31)*n11+n31*(-1+n5)*n11-arg1-2*n22-2*(-1+n31)*n22+(-1+n5)*n4 > 0, dependencies: -1+n31 >= 0 3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 -1+n22 >= 0 4+arg1-arg2 >= 0 7+n11-arg1-2*n22 > 0 2+arg1-2*n4+3*n31*n22-arg2 > 0 -1+n11 >= 0
+		
+		7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 [2]: eventual decrease yields (7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7-2*n31*(-1+n5)*n22+n11+(-1+n31)*n11+n31*(-1+n5)*n11-arg1-2*n22-2*(-1+n31)*n22+(-1+n5)*n4 > 0)
+		
+		7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 [3]: eventual increase yields (7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ -n31*n11-n4+2*n31*n22 <= 0)
+		
+		7+n11-arg1-2*n22 > 0 [0]: monotonic increase yields 7+n11-arg1-2*n22 > 0, dependencies: -1+n4 >= 0 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 -1+n11 >= 0 -3-n11+arg1 > 0
+		
+		7+n11-arg1-2*n22 > 0 [1]: eventual decrease yields (7+n11-arg1-2*n22 > 0 /\ 7-2*n31*(-1+n5)*n22+n11+n31*(-1+n5)*n11-arg1-2*n22+(-1+n5)*n4 > 0)
+		
+		7+n11-arg1-2*n22 > 0 [2]: eventual increase yields (7+n11-arg1-2*n22 > 0 /\ -n31*n11-n4+2*n31*n22 <= 0)
+		
+		2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 [0]: montonic decrease yields 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0, dependencies: -n31*n11-n31*n22+arg2 > 0 -1+n4 >= 0 2+arg1-2*n4+3*n31*n22-arg2 > 0
+		
+		2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 [1]: eventual decrease yields (2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0)
+		
+		2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 [2]: eventual increase yields (2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 /\ n31*n11+3*n4-5*n31*n22 <= 0)
+		
+		2+arg1-2*n4+3*n31*n22-arg2 > 0 [0]: eventual decrease yields (2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0)
+		
+		2+arg1-2*n4+3*n31*n22-arg2 > 0 [1]: eventual increase yields (2*n4-3*n31*n22 <= 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0)
+		
+		1-n11-(-1+n31)*n11-n22-(-1+n31)*n22+arg2 > 0 [0]: montonic decrease yields 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0, dependencies: -n31*n11-n31*n22+arg2 > 0
+		
+		1-n11-(-1+n31)*n11-n22-(-1+n31)*n22+arg2 > 0 [1]: eventual increase yields (n31*n11-n4+n31*n22 <= 0 /\ 1-n11-(-1+n31)*n11-n22-(-1+n31)*n22+arg2 > 0)
+		
+		-1+n11 >= 0 [0]: monotonic increase yields -1+n11 >= 0
+		
+		-3-n11+arg1 > 0 [0]: eventual decrease yields (-3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -3-n11+arg1 > 0)
+		
+		-3-n11+arg1 > 0 [1]: eventual increase yields (n31*n11+n4-2*n31*n22 <= 0 /\ -3-n11+arg1 > 0)
+		
+		-arg1-3*(-1+n31)*n22+arg2 >= 0 [0]: montonic decrease yields -3*n31*(-1+n5)*n22-arg1-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0, dependencies: 3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 -1+n22 >= 0
+		
+		-arg1-3*(-1+n31)*n22+arg2 >= 0 [1]: eventual increase yields (-2*n4+3*n31*n22 <= 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0)
+		
+		-3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 [0]: montonic decrease yields -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0, dependencies: -1+n4 >= 0 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 -1+n11 >= 0 -3-n11+arg1 > 0
+		
+		-3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 [1]: eventual increase yields (n31*n11+n4-2*n31*n22 <= 0 /\ -3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0)
+		
+		1-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 [0]: montonic decrease yields 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0, dependencies: -3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0
+		
+		1-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 [1]: eventual increase yields (n31*n11+n4-2*n31*n22 <= 0 /\ 1-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0)
+		
+		arg2 > 0 [0]: monotonic increase yields arg2 > 0, dependencies: -n31*n11-n31*n22+arg2 > 0 -1+n4 >= 0
+		
+		Replacement map: {-1+n31 >= 0 -> -1+n31 >= 0, -n31*n11-n31*n22+arg2 > 0 -> -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0, -n31*n11+arg1-n4+2*n31*n22 > 0 -> 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0, 3-arg1-3*n22-3*(-1+n31)*n22+arg2 >= 0 -> 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0, -1+n22 >= 0 -> -1+n22 >= 0, -1+n4 >= 0 -> -1+n4 >= 0, 4+arg1-arg2 >= 0 -> 4+arg1-arg2 >= 0, 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 -> 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0, 7+n11-arg1-2*n22 > 0 -> 7+n11-arg1-2*n22 > 0, 2-n31*n11+2*arg1-3*n4+5*n31*n22-arg2 > 0 -> 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0, 2+arg1-2*n4+3*n31*n22-arg2 > 0 -> (2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0), 1-n11-(-1+n31)*n11-n22-(-1+n31)*n22+arg2 > 0 -> 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0, -1+n11 >= 0 -> -1+n11 >= 0, -3-n11+arg1 > 0 -> (-3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -3-n11+arg1 > 0), -arg1-3*(-1+n31)*n22+arg2 >= 0 -> (-2*n4+3*n31*n22 <= 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0), -3-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 -> -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0, 1-n11-(-1+n31)*n11+arg1+2*(-1+n31)*n22 > 0 -> 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0, arg2 > 0 -> arg2 > 0}
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {18[T]}]
+
+Step with 9
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)], 9[(-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 18[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 18[T]}]
+
+Step with 15
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {15[T]}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 12
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)], 12[(-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 15[T], 16[T], 17[T], 18[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 15[T], 16[T], 17[T], 18[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 18[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {18[T]}]
+
+Step with 14
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T]}]
+
+Step with 15
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T]}, {15[T]}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T], 15[T]}]
+
+Step with 16
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T], 15[T]}, {16[T]}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T], 15[T], 16[T]}]
+
+Step with 18
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 18[(-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T], 15[T], 16[T], 17[T]}, {18[T]}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T], 15[T], 16[T], 17[T], 18[T]}]
+
+Step with 8
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 8[(-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {14[T], 15[T], 16[T], 17[T], 18[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {8[T], 14[T], 15[T], 16[T], 17[T], 18[T]}]
+
+Step with 9
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)], 9[(-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {8[T], 14[T], 15[T], 16[T], 17[T], 18[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 14[(-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 18[T]}, {8[T], 9[T], 14[T], 15[T], 16[T], 17[T], 18[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 14[T], 18[T]}]
+
+Step with 9
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 9[(-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {12[T], 14[T], 18[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 12[T], 14[T], 18[T]}]
+
+Step with 15
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {15[T]}]
+
+Step with 17
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)], 17[(2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {15[T], 16[T]}, {17[T]}]
+
+Accelerate
+
+Start location: __init
+Program variables: arg1 arg2
+   8: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=-1+arg2, (-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0), cost: 1
+   9: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2+arg1, arg2'=-1+arg2, (-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  10: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, (-4-arg1+arg2 > 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0), cost: 1
+  11: f54_0_loop_LE -> f54_0_loop_LE : arg1'=1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 >= 0 /\ arg2 > 0), cost: 1
+  12: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-1+arg1, arg2'=1+arg2, (-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0), cost: 1
+  14: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n+arg1, arg2'=-n+arg2, (-3-n+arg1 > 0 /\ -arg1+arg2 >= 0 /\ -1+n >= 0 /\ arg2 > 0), cost: 1
+  15: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1+2*n2, arg2'=-n2+arg2, (3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0), cost: 1
+  16: f54_0_loop_LE -> f54_0_loop_LE : arg1'=-n1*n3+2*n3*n2+arg1, arg2'=-n1*n3-n3*n2+arg2, (7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0), cost: 1
+  17: f54_0_loop_LE -> f54_0_loop_LE : arg1'=arg1-n4, arg2'=n4+arg2, (2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0), cost: 1
+  18: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2*n5*n31*n22-n5*n31*n11+arg1-n5*n4, arg2'=-n5*n31*n22-n5*n31*n11+n5*n4+arg2, (-1+n31 >= 0 /\ -1+n5 >= 0 /\ -1+n22 >= 0 /\ -1+n4 >= 0 /\ 4+arg1-arg2 >= 0 /\ -3+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ -3+2*n31*(-1+n5)*n22-n11-n31*(-1+n5)*n11+arg1-(-1+n5)*n4 > 0 /\ -n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11-n31*n22+(-1+n5)*n4+arg2 > 0 /\ 7+n11+(-1+n31)*n11-arg1-2*n22-2*(-1+n31)*n22 > 0 /\ 7+n11-arg1-2*n22 > 0 /\ 1+2*n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11+arg1+2*(-1+n31)*n22-(-1+n5)*n4 > 0 /\ 2+arg1-2*n4+3*n31*n22-arg2 > 0 /\ 3-3*n31*(-1+n5)*n22-arg1-3*n22-3*(-1+n31)*n22+2*(-1+n5)*n4+arg2 >= 0 /\ 2+5*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+2*arg1-3*n4+5*n31*n22-3*(-1+n5)*n4-arg2 > 0 /\ -1+n11 >= 0 /\ 1-n31*(-1+n5)*n22-n11-(-1+n31)*n11-n31*(-1+n5)*n11-n22-(-1+n31)*n22+(-1+n5)*n4+arg2 > 0 /\ 2*n31*(-1+n5)*n22-n31*n11-n31*(-1+n5)*n11+arg1-n4+2*n31*n22-(-1+n5)*n4 > 0 /\ -2*n4+3*n31*n22 <= 0 /\ 2+3*n31*(-1+n5)*n22+arg1-2*n4+3*n31*n22-2*(-1+n5)*n4-arg2 > 0 /\ -3-n11+arg1 > 0 /\ -arg1-3*(-1+n31)*n22+arg2 >= 0 /\ arg2 > 0), cost: 1
+  19: f54_0_loop_LE -> f54_0_loop_LE : arg1'=2*n26*n8+arg1-n8*n4, arg2'=-n26*n8+n8*n4+arg2, (-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0), cost: 1
+  13: __init -> f54_0_loop_LE : arg1'=arg2p7, arg2'=arg2p7, (1+arg2p7 > 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2*n26+arg1-n4, arg2'=-n26+n4+arg2, (-1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 7-2*n26-arg1 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0), cost: 1
+	New rule:
+	f54_0_loop_LE -> f54_0_loop_LE : arg1'=2*n26*n8+arg1-n8*n4, arg2'=-n26*n8+n8*n4+arg2, (-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0), cost: 1
+
+		-1+n26 >= 0 [0]: monotonic increase yields -1+n26 >= 0
+		
+		1-n26+arg2 > 0 [0]: monotonic increase yields 1-n26+arg2 > 0, dependencies: -1+n4 >= 0 -n26+arg2 > 0 1+arg1 > 0 3-3*n26-arg1+arg2 >= 0
+		
+		1-n26+arg2 > 0 [1]: montonic decrease yields 1-n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0, dependencies: -n26+arg2 > 0
+		
+		1-n26+arg2 > 0 [2]: eventual decrease yields (1-n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ 1-n26+arg2 > 0)
+		
+		1-n26+arg2 > 0 [3]: eventual increase yields (1-n26+arg2 > 0 /\ n26-n4 <= 0)
+		
+		-1+n4 >= 0 [0]: monotonic increase yields -1+n4 >= 0
+		
+		2+3*n26+arg1-2*n4-arg2 > 0 [0]: eventual decrease yields (2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0)
+		
+		2+3*n26+arg1-2*n4-arg2 > 0 [1]: eventual increase yields (-3*n26+2*n4 <= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0)
+		
+		-n26+arg2 > 0 [0]: eventual decrease yields (-n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -n26+arg2 > 0)
+		
+		-n26+arg2 > 0 [1]: eventual increase yields (-n26+arg2 > 0 /\ n26-n4 <= 0)
+		
+		7-2*n26-arg1 > 0 [0]: montonic decrease yields 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0, dependencies: -1+n26 >= 0 2+3*n26+arg1-2*n4-arg2 > 0 3-3*n26-arg1+arg2 >= 0
+		
+		7-2*n26-arg1 > 0 [1]: eventual decrease yields (7-2*n26-arg1 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0)
+		
+		7-2*n26-arg1 > 0 [2]: eventual increase yields (2*n26-n4 <= 0 /\ 7-2*n26-arg1 > 0)
+		
+		4+arg1-arg2 >= 0 [0]: monotonic increase yields 4+arg1-arg2 >= 0, dependencies: 2+3*n26+arg1-2*n4-arg2 > 0
+		
+		2+5*n26+2*arg1-3*n4-arg2 > 0 [0]: monotonic increase yields 2+5*n26+2*arg1-3*n4-arg2 > 0, dependencies: -1+n26 >= 0 2+3*n26+arg1-2*n4-arg2 > 0 -n26+arg2 > 0 3-3*n26-arg1+arg2 >= 0
+		
+		2+5*n26+2*arg1-3*n4-arg2 > 0 [1]: montonic decrease yields 2+5*n26+5*(-1+n8)*n26+2*arg1-3*n4-3*(-1+n8)*n4-arg2 > 0, dependencies: -1+n4 >= 0 2+3*n26+arg1-2*n4-arg2 > 0 -n26+arg2 > 0
+		
+		2+5*n26+2*arg1-3*n4-arg2 > 0 [2]: eventual increase yields (2+5*n26+2*arg1-3*n4-arg2 > 0 /\ -5*n26+3*n4 <= 0)
+		
+		1+arg1 > 0 [0]: monotonic increase yields 1+arg1 > 0, dependencies: -1+n26 >= 0 2+3*n26+arg1-2*n4-arg2 > 0 -n26+arg2 > 0
+		
+		2*n26+arg1-n4 > 0 [0]: monotonic increase yields 2*n26+arg1-n4 > 0, dependencies: -1+n26 >= 0 1-n26+arg2 > 0 2+3*n26+arg1-2*n4-arg2 > 0
+		
+		3-3*n26-arg1+arg2 >= 0 [0]: eventual decrease yields (3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ 3-3*n26-arg1+arg2 >= 0)
+		
+		3-3*n26-arg1+arg2 >= 0 [1]: eventual increase yields (3*n26-2*n4 <= 0 /\ 3-3*n26-arg1+arg2 >= 0)
+		
+		Replacement map: {-1+n26 >= 0 -> -1+n26 >= 0, 1-n26+arg2 > 0 -> 1-n26+arg2 > 0, -1+n4 >= 0 -> -1+n4 >= 0, 2+3*n26+arg1-2*n4-arg2 > 0 -> (2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0), -n26+arg2 > 0 -> (-n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -n26+arg2 > 0), 7-2*n26-arg1 > 0 -> 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0, 4+arg1-arg2 >= 0 -> 4+arg1-arg2 >= 0, 2+5*n26+2*arg1-3*n4-arg2 > 0 -> 2+5*n26+2*arg1-3*n4-arg2 > 0, 1+arg1 > 0 -> 1+arg1 > 0, 2*n26+arg1-n4 > 0 -> 2*n26+arg1-n4 > 0, 3-3*n26-arg1+arg2 >= 0 -> (3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ 3-3*n26-arg1+arg2 >= 0)}
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {19[T]}]
+
+Step with 9
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)], 9[(-4-arg1+arg2 <= 0 /\ -arg1+arg2 >= 0 /\ 1+arg1 > 0 /\ -5+arg1 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 19[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 19[T]}]
+
+Step with 12
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)], 12[(-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 19[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 19[T]}]
+
+Step with 15
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 19[T]}, {15[T]}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 12
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)], 12[(-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 19[T]}, {8[T], 9[T], 10[T], 11[T], 15[T], 16[T], 17[T], 18[T], 19[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 19[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 15[T], 16[T], 17[T], 18[T], 19[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 19[T]}]
+
+Step with 17
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)], 17[(2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 16[T], 19[T]}, {17[T]}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 19[(-1+n8 >= 0 /\ 3-3*n26-3*(-1+n8)*n26-arg1+2*(-1+n8)*n4+arg2 >= 0 /\ -n26-(-1+n8)*n26+(-1+n8)*n4+arg2 > 0 /\ -1+n26 >= 0 /\ 1-n26+arg2 > 0 /\ 2+3*n26+3*(-1+n8)*n26+arg1-2*n4-2*(-1+n8)*n4-arg2 > 0 /\ -1+n4 >= 0 /\ 2+3*n26+arg1-2*n4-arg2 > 0 /\ -n26+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 2+5*n26+2*arg1-3*n4-arg2 > 0 /\ 1+arg1 > 0 /\ 2*n26+arg1-n4 > 0 /\ 7-2*n26-2*(-1+n8)*n26-arg1+(-1+n8)*n4 > 0 /\ 3-3*n26-arg1+arg2 >= 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 16[T], 17[T], 19[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 18[T], 19[T]}]
+
+Step with 8
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 8[(-arg1+arg2 >= 0 /\ arg2 > 0 /\ -4+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}]
+
+Step with 15
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}, {15[T]}]
+
+Step with 17
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)], 17[(2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}, {15[T], 16[T]}, {17[T]}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}, {15[T], 16[T], 17[T]}]
+
+Step with 12
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)], 12[(-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}, {8[T], 9[T], 10[T], 11[T], 15[T], 16[T], 17[T], 18[T], 19[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 15[(3-arg1-3*n2+arg2 >= 0 /\ 1-n2+arg2 > 0 /\ 4+arg1-arg2 >= 0 /\ 1+arg1 > 0 /\ -1+n2 >= 0 /\ 7-arg1-2*n2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 17[T], 18[T], 19[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 15[T], 16[T], 17[T], 18[T], 19[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 17[T], 18[T], 19[T]}]
+
+Step with 16
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 17[T], 18[T], 19[T]}, {16[T]}]
+
+Step with 17
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)], 17[(2+2*arg1-3*n4-arg2 > 0 /\ -1+n4 >= 0 /\ arg1-n4 > 0 /\ 2+arg1-2*n4-arg2 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 17[T], 18[T], 19[T]}, {16[T]}, {17[T]}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 17[T], 18[T], 19[T]}, {16[T], 17[T]}]
+
+Step with 12
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)], 12[(-1+arg1 > 0 /\ -arg1+arg2 < 0 /\ 1-2*arg1+arg2 < 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 17[T], 18[T], 19[T]}, {8[T], 9[T], 10[T], 11[T], 16[T], 17[T], 18[T], 19[T]}, {}]
+
+Covered
+
+	Trace
+
+	13[(1+arg2p7 > 0)], 16[(7+n1-arg1-2*n2 > 0 /\ 1-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1-n1*(-1+n3)+arg1+2*n2*(-1+n3) > 0 /\ -3-n1+arg1 > 0 /\ -1+n1 >= 0 /\ 4+arg1-arg2 >= 0 /\ 7+n1+n1*(-1+n3)-arg1-2*n2*(-1+n3)-2*n2 > 0 /\ -arg1-3*n2*(-1+n3)+arg2 >= 0 /\ -1+n2 >= 0 /\ 1-n1-n1*(-1+n3)-n2*(-1+n3)-n2+arg2 > 0 /\ 3-arg1-3*n2*(-1+n3)-3*n2+arg2 >= 0 /\ arg2 > 0 /\ -1+n3 >= 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 17[T], 18[T], 19[T]}, {8[T], 9[T], 10[T], 11[T], 12[T], 16[T], 17[T], 18[T], 19[T]}]
+
+Backtrack
+
+	Trace
+
+	13[(1+arg2p7 > 0)]
+	
+	Blocked
+
+	[{}, {8[T], 9[T], 10[T], 11[T], 12[T], 14[T], 15[T], 16[T], 17[T], 18[T], 19[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{13[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

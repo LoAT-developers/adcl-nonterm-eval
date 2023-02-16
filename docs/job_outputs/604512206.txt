@@ -1,0 +1,457 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: i w
+   0: [1] -> [2] : i'=nondet, T, cost: 1
+   1: [2] -> [3] : w'=5, T, cost: 1
+   2: [3] -> [4] : (i < 0 \/ i > 0), cost: 1
+  17: [3] -> [16] : (i <= 0 /\ i >= 0), cost: 1
+   3: [4] -> [6] : w+i < 0, cost: 1
+   7: [4] -> [9] : w+i >= 0, cost: 1
+  16: [5] -> [3] : T, cost: 1
+   4: [6] -> [7] : i'=-1+i, T, cost: 1
+   5: [7] -> [8] : i'=-i, T, cost: 1
+   6: [8] -> [5] : T, cost: 1
+   8: [9] -> [11] : -w+i > 0, cost: 1
+  12: [9] -> [14] : -w+i <= 0, cost: 1
+  15: [10] -> [5] : T, cost: 1
+   9: [11] -> [12] : i'=1+i, T, cost: 1
+  10: [12] -> [13] : i'=-i, T, cost: 1
+  11: [13] -> [10] : T, cost: 1
+  13: [14] -> [15] : i'=0, T, cost: 1
+  14: [15] -> [10] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: i w
+  18: [1] -> [3] : i'=nondet, w'=5, T, cost: 1
+   2: [3] -> [4] : (i < 0 \/ i > 0), cost: 1
+  17: [3] -> [16] : (i <= 0 /\ i >= 0), cost: 1
+   7: [4] -> [9] : w+i >= 0, cost: 1
+  21: [4] -> [5] : i'=1-i, w+i < 0, cost: 1
+  16: [5] -> [3] : T, cost: 1
+  25: [9] -> [10] : i'=0, -w+i <= 0, cost: 1
+  26: [9] -> [10] : i'=-1-i, -w+i > 0, cost: 1
+  15: [10] -> [5] : T, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : i'=nondet, T, cost: 1
+	Second rule:
+	[2] -> [3] : w'=5, T, cost: 1
+	New rule:
+	[1] -> [3] : i'=nondet, w'=5, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [6] : w+i < 0, cost: 1
+	Second rule:
+	[6] -> [7] : i'=-1+i, T, cost: 1
+	New rule:
+	[4] -> [7] : i'=-1+i, w+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [7] : i'=-1+i, w+i < 0, cost: 1
+	Second rule:
+	[7] -> [8] : i'=-i, T, cost: 1
+	New rule:
+	[4] -> [8] : i'=1-i, w+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 19
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[4] -> [8] : i'=1-i, w+i < 0, cost: 1
+	Second rule:
+	[8] -> [5] : T, cost: 1
+	New rule:
+	[4] -> [5] : i'=1-i, w+i < 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 20
+	
+	Eliminating location [11] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [11] : -w+i > 0, cost: 1
+	Second rule:
+	[11] -> [12] : i'=1+i, T, cost: 1
+	New rule:
+	[9] -> [12] : i'=1+i, -w+i > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 8 9
+	
+	Eliminating location [14] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [14] : -w+i <= 0, cost: 1
+	Second rule:
+	[14] -> [15] : i'=0, T, cost: 1
+	New rule:
+	[9] -> [15] : i'=0, -w+i <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 12 13
+	
+	Eliminating location [12] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [12] : i'=1+i, -w+i > 0, cost: 1
+	Second rule:
+	[12] -> [13] : i'=-i, T, cost: 1
+	New rule:
+	[9] -> [13] : i'=-1-i, -w+i > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 10 22
+	
+	Eliminating location [15] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [15] : i'=0, -w+i <= 0, cost: 1
+	Second rule:
+	[15] -> [10] : T, cost: 1
+	New rule:
+	[9] -> [10] : i'=0, -w+i <= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 14 23
+	
+	Eliminating location [13] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[9] -> [13] : i'=-1-i, -w+i > 0, cost: 1
+	Second rule:
+	[13] -> [10] : T, cost: 1
+	New rule:
+	[9] -> [10] : i'=-1-i, -w+i > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 11 24
+
+Step with 18
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 17
+
+	Trace
+
+	18[T], 17[(i <= 0 /\ i >= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	18[T]
+	
+	Blocked
+
+	[{}, {17[T]}]
+
+Step with 2
+
+	Trace
+
+	18[T], 2[(i > 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}]
+
+Step with 25
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {}]
+
+Step with 15
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)], 15[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {}, {}]
+
+Step with 16
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)], 15[T], 16[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 17
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)], 15[T], 16[T], 17[(i <= 0 /\ i >= 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {}, {}, {2[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)], 15[T], 16[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {}, {}, {2[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)], 15[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {}, {16[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 25[(-w+i <= 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {}, {15[T]}]
+
+Backtrack
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}]
+
+Step with 26
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 26[(-w+i > 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}, {}]
+
+Step with 15
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 26[(-w+i > 0)], 15[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}, {}, {}]
+
+Step with 16
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 26[(-w+i > 0)], 15[T], 16[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 2
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 26[(-w+i > 0)], 15[T], 16[T], 2[(i < 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}, {}, {}, {17[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 21
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 26[(-w+i > 0)], 15[T], 16[T], 2[(i < 0)], 21[(w+i < 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}, {}, {}, {17[T]}, {7[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 16
+
+	Trace
+
+	18[T], 2[(i > 0)], 7[(w+i >= 0)], 26[(-w+i > 0)], 15[T], 16[T], 2[(i < 0)], 21[(w+i < 0)], 16[T]
+	
+	Blocked
+
+	[{}, {17[T]}, {}, {25[T]}, {}, {}, {17[T]}, {7[T]}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Nonterm
+
+Start location: [1]
+Program variables: i w
+  18: [1] -> [3] : i'=nondet, w'=5, T, cost: 1
+   2: [3] -> [4] : (i < 0 \/ i > 0), cost: 1
+  17: [3] -> [16] : (i <= 0 /\ i >= 0), cost: 1
+  27: [3] -> LoAT_sink : (w+i >= 0 /\ 1+i > 0 /\ 1-w+i > 0 /\ -w+i > 0 /\ -1+n >= 0 /\ i > 0), cost: NONTERM
+  28: [3] -> [3] : i'=2*n+i, (w+i >= 0 /\ 1+i > 0 /\ 1-w+i > 0 /\ -w+i > 0 /\ -1+n >= 0 /\ i > 0), cost: 1
+   7: [4] -> [9] : w+i >= 0, cost: 1
+  21: [4] -> [5] : i'=1-i, w+i < 0, cost: 1
+  16: [5] -> [3] : T, cost: 1
+  25: [9] -> [10] : i'=0, -w+i <= 0, cost: 1
+  26: [9] -> [10] : i'=-1-i, -w+i > 0, cost: 1
+  15: [10] -> [5] : T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[3] -> [3] : i'=2+i, (-1+w-i < 0 /\ w+i >= 0 /\ -1-i < 0 /\ -w+i > 0 /\ i > 0), cost: 1
+	New rule:
+	[3] -> LoAT_sink : (w+i >= 0 /\ 1+i > 0 /\ 1-w+i > 0 /\ -w+i > 0 /\ -1+n >= 0 /\ i > 0), cost: NONTERM
+
+		w+i >= 0 [0]: monotonic increase yields w+i >= 0
+		
+		1+i > 0 [0]: monotonic increase yields 1+i > 0
+		
+		1-w+i > 0 [0]: monotonic increase yields 1-w+i > 0
+		
+		-w+i > 0 [0]: monotonic increase yields -w+i > 0, dependencies: 1-w+i > 0
+		
+		i > 0 [0]: monotonic increase yields i > 0, dependencies: 1+i > 0
+		
+		Replacement map: {w+i >= 0 -> w+i >= 0, 1+i > 0 -> 1+i > 0, 1-w+i > 0 -> 1-w+i > 0, -w+i > 0 -> -w+i > 0, i > 0 -> i > 0}
+
+	Loop Acceleration
+
+	Original rule:
+	[3] -> [3] : i'=2+i, (-1+w-i < 0 /\ w+i >= 0 /\ -1-i < 0 /\ -w+i > 0 /\ i > 0), cost: 1
+	New rule:
+	[3] -> [3] : i'=2*n+i, (w+i >= 0 /\ 1+i > 0 /\ 1-w+i > 0 /\ -w+i > 0 /\ -1+n >= 0 /\ i > 0), cost: 1
+
+		w+i >= 0 [0]: monotonic increase yields w+i >= 0
+		
+		1+i > 0 [0]: monotonic increase yields 1+i > 0
+		
+		1-w+i > 0 [0]: monotonic increase yields 1-w+i > 0
+		
+		-w+i > 0 [0]: monotonic increase yields -w+i > 0, dependencies: 1-w+i > 0
+		
+		i > 0 [0]: monotonic increase yields i > 0, dependencies: 1+i > 0
+		
+		Replacement map: {w+i >= 0 -> w+i >= 0, 1+i > 0 -> 1+i > 0, 1-w+i > 0 -> 1-w+i > 0, -w+i > 0 -> -w+i > 0, i > 0 -> i > 0}
+
+Step with 27
+
+	Trace
+
+	18[T], 27[(w+i >= 0 /\ 1+i > 0 /\ 1-w+i > 0 /\ -w+i > 0 /\ -1+n >= 0 /\ i > 0)]
+	
+	Blocked
+
+	[{}, {17[T]}, {27[T]}]
+
+Refute
+
+	Counterexample
+
+	[ i=6 w=5 ] 18 [ i=i w=w ] 27
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

@@ -1,0 +1,221 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l17, true>
+<l1, l2, true>
+<l3, l4, true>
+<l5, l6, true>
+<l7, l8, (20 <= (0 + Index15^0)), par{Inner14^0 -> (1 + Inner14^0)}>
+<l7, l9, ((1 + Index15^0) <= 20), par{Index15^0 -> (1 + Index15^0)}>
+<l10, l11, (20 <= (0 + Inner14^0)), par{Outer13^0 -> (1 + Outer13^0)}>
+<l10, l9, ((1 + Inner14^0) <= 20), par{Index15^0 -> 0}>
+<l12, l13, (20 <= (0 + Outer13^0))>
+<l12, l8, ((1 + Outer13^0) <= 20), par{Inner14^0 -> 0}>
+<l14, l15, true>
+<l11, l12, true>
+<l15, l5, (20 <= (0 + InnerIndex9^0)), par{OuterIndex8^0 -> (1 + OuterIndex8^0)}>
+<l15, l14, ((1 + InnerIndex9^0) <= 20) /\ (undef128 = undef128), par{InnerIndex9^0 -> (1 + InnerIndex9^0), Seed^0 -> undef128, ret_RandomInteger17^0 -> (0 + undef128)}>
+<l6, l11, (20 <= (0 + OuterIndex8^0)), par{Outer13^0 -> 0}>
+<l6, l14, ((1 + OuterIndex8^0) <= 20), par{InnerIndex9^0 -> 0}>
+<l8, l10, true>
+<l9, l7, true>
+<l4, l1, (20 <= (0 + InnerIndex6^0)), par{OuterIndex5^0 -> (1 + OuterIndex5^0)}>
+<l4, l3, ((1 + InnerIndex6^0) <= 20) /\ (undef188 = undef188), par{InnerIndex6^0 -> (1 + InnerIndex6^0), Seed^0 -> undef188, ret_RandomInteger16^0 -> (0 + undef188)}>
+<l2, l5, (20 <= (0 + OuterIndex5^0)), par{OuterIndex8^0 -> 0}>
+<l2, l3, ((1 + OuterIndex5^0) <= 20), par{InnerIndex6^0 -> 0}>
+<l16, l1, true, par{OuterIndex5^0 -> 0, Seed^0 -> 0}>
+<l17, l16, true>
+
+Fresh variables:
+undef128, undef188, 
+
+Undef variables:
+undef128, undef188, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l3, (OuterIndex5^0 = 0) /\ ((1 + 0) <= 20), par{InnerIndex6^0 -> 0}>
+<l3, l14, (20 <= (0 + InnerIndex6^0)) /\ (20 <= (0 + (1 + OuterIndex5^0))) /\ ((1 + 0) <= 20), par{InnerIndex9^0 -> 0, OuterIndex5^0 -> (1 + OuterIndex5^0), OuterIndex8^0 -> 0}>
+<l3, l3, (20 <= (0 + InnerIndex6^0)) /\ ((1 + (1 + OuterIndex5^0)) <= 20), par{InnerIndex6^0 -> 0, OuterIndex5^0 -> (1 + OuterIndex5^0)}>
+<l3, l3, ((1 + InnerIndex6^0) <= 20) /\ (undef188 = undef188), par{InnerIndex6^0 -> (1 + InnerIndex6^0)}>
+<l9, l13, (20 <= (0 + Index15^0)) /\ (20 <= (0 + (1 + Inner14^0))) /\ (20 <= (0 + (1 + Outer13^0))), par{Inner14^0 -> (1 + Inner14^0), Outer13^0 -> (1 + Outer13^0)}>
+<l9, l9, (20 <= (0 + Index15^0)) /\ (20 <= (0 + (1 + Inner14^0))) /\ ((1 + (1 + Outer13^0)) <= 20) /\ ((1 + 0) <= 20), par{Index15^0 -> 0, Inner14^0 -> 0, Outer13^0 -> (1 + Outer13^0)}>
+<l9, l9, (20 <= (0 + Index15^0)) /\ ((1 + (1 + Inner14^0)) <= 20), par{Index15^0 -> 0, Inner14^0 -> (1 + Inner14^0)}>
+<l9, l9, ((1 + Index15^0) <= 20), par{Index15^0 -> (1 + Index15^0)}>
+<l14, l9, (20 <= (0 + InnerIndex9^0)) /\ (20 <= (0 + (1 + OuterIndex8^0))) /\ ((1 + 0) <= 20) /\ ((1 + 0) <= 20), par{Index15^0 -> 0, Inner14^0 -> 0, Outer13^0 -> 0, OuterIndex8^0 -> (1 + OuterIndex8^0)}>
+<l14, l14, (20 <= (0 + InnerIndex9^0)) /\ ((1 + (1 + OuterIndex8^0)) <= 20), par{InnerIndex9^0 -> 0, OuterIndex8^0 -> (1 + OuterIndex8^0)}>
+<l14, l14, ((1 + InnerIndex9^0) <= 20) /\ (undef128 = undef128), par{InnerIndex9^0 -> (1 + InnerIndex9^0)}>
+
+Fresh variables:
+undef128, undef188, 
+
+Undef variables:
+undef128, undef188, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l3, l3, 20 <= InnerIndex6^0 /\ OuterIndex5^0 <= 18, {InnerIndex6^0 -> 0, OuterIndex5^0 -> 1 + OuterIndex5^0, rest remain the same}>
+<l3, l3, InnerIndex6^0 <= 19, {InnerIndex6^0 -> 1 + InnerIndex6^0, rest remain the same}>
+Variables:
+InnerIndex6^0, OuterIndex5^0
+
+Graph 2:
+Transitions:
+<l14, l14, 20 <= InnerIndex9^0 /\ OuterIndex8^0 <= 18, {InnerIndex9^0 -> 0, OuterIndex8^0 -> 1 + OuterIndex8^0, rest remain the same}>
+<l14, l14, InnerIndex9^0 <= 19, {InnerIndex9^0 -> 1 + InnerIndex9^0, rest remain the same}>
+Variables:
+InnerIndex9^0, OuterIndex8^0
+
+Graph 3:
+Transitions:
+<l9, l9, 20 <= Index15^0 /\ 19 <= Inner14^0 /\ Outer13^0 <= 18, {Index15^0 -> 0, Inner14^0 -> 0, Outer13^0 -> 1 + Outer13^0, rest remain the same}>
+<l9, l9, 20 <= Index15^0 /\ Inner14^0 <= 18, {Index15^0 -> 0, Inner14^0 -> 1 + Inner14^0, rest remain the same}>
+<l9, l9, Index15^0 <= 19, {Index15^0 -> 1 + Index15^0, rest remain the same}>
+Variables:
+Index15^0, Inner14^0, Outer13^0
+
+Graph 4:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l3, OuterIndex5^0 = 0, {InnerIndex6^0 -> 0, rest remain the same}>
+
+Graph 2
+<l3, l14, 20 <= InnerIndex6^0 /\ 19 <= OuterIndex5^0, {InnerIndex9^0 -> 0, OuterIndex5^0 -> 1 + OuterIndex5^0, OuterIndex8^0 -> 0, rest remain the same}>
+
+Graph 3
+<l14, l9, 20 <= InnerIndex9^0 /\ 19 <= OuterIndex8^0, {Index15^0 -> 0, Inner14^0 -> 0, Outer13^0 -> 0, OuterIndex8^0 -> 1 + OuterIndex8^0, rest remain the same}>
+
+Graph 4
+<l9, l13, 20 <= Index15^0 /\ 19 <= Inner14^0 /\ 19 <= Outer13^0, {Inner14^0 -> 1 + Inner14^0, Outer13^0 -> 1 + Outer13^0, rest remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 1 )
+( 9 , 3 )
+( 13 , 4 )
+( 14 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.008404
+
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000739s
+[33mRanking function: [36m18 - OuterIndex5^0[0m
+New Graphs: 
+Transitions:
+<l3, l3, InnerIndex6^0 <= 19, {InnerIndex6^0 -> 1 + InnerIndex6^0, rest remain the same}>
+Variables:
+InnerIndex6^0
+Checking conditional termination of SCC {l3}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000270s
+[33mRanking function: [36m19 - InnerIndex6^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.006544
+
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000737s
+[33mRanking function: [36m18 - OuterIndex8^0[0m
+New Graphs: 
+Transitions:
+<l14, l14, InnerIndex9^0 <= 19, {InnerIndex9^0 -> 1 + InnerIndex9^0, rest remain the same}>
+Variables:
+InnerIndex9^0
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000275s
+[33mRanking function: [36m19 - InnerIndex9^0[0m
+New Graphs: 
+Proving termination of subgraph 3
+Checking unfeasibility...
+Time used: 0.24197
+
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001878s
+[33mRanking function: [36m18 - Outer13^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, 20 <= Index15^0 /\ Inner14^0 <= 18, {Index15^0 -> 0, Inner14^0 -> 1 + Inner14^0, rest remain the same}>
+<l9, l9, Index15^0 <= 19, {Index15^0 -> 1 + Index15^0, rest remain the same}>
+Variables:
+Index15^0, Inner14^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000540s
+[33mRanking function: [36m18 - Inner14^0[0m
+New Graphs: 
+Transitions:
+<l9, l9, Index15^0 <= 19, {Index15^0 -> 1 + Index15^0, rest remain the same}>
+Variables:
+Index15^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000306s
+[33mRanking function: [36m19 - Index15^0[0m
+New Graphs: 
+Proving termination of subgraph 4
+Analyzing SCC {l13}...
+No cycles found.
+
+[32mProgram Terminates[0m

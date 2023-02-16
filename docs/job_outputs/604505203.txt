@@ -1,0 +1,550 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: l3
+   0: l0 -> l1 : m^0'=m^post0, id^0'=id^post0, x^0'=x^post0, (-x^post0 <= 0 /\ -1-m^0+x^post0 <= 0 /\ -1-x^0+x^post0 == 0 /\ id^0-id^post0 == 0 /\ -m^0+x^0 <= 0 /\ m^0-m^post0 == 0), cost: 1
+   1: l0 -> l1 : m^0'=m^post1, id^0'=id^post1, x^0'=x^post1, (-x^post1 <= 0 /\ 1-x^0 <= 0 /\ -1-m^0+x^post1 <= 0 /\ id^0-id^post1 == 0 /\ m^0-m^post1 == 0 /\ 1+m^0-x^0 <= 0 /\ x^post1 == 0), cost: 1
+   2: l1 -> l0 : m^0'=m^post2, id^0'=id^post2, x^0'=x^post2, (x^0-x^post2 == 0 /\ 1+id^0-x^0 <= 0 /\ m^0-m^post2 == 0 /\ -id^post2+id^0 == 0), cost: 1
+   3: l1 -> l0 : m^0'=m^post3, id^0'=id^post3, x^0'=x^post3, (-id^post3+id^0 == 0 /\ -m^post3+m^0 == 0 /\ -x^post3+x^0 == 0 /\ 1-id^0+x^0 <= 0), cost: 1
+   4: l2 -> l1 : m^0'=m^post4, id^0'=id^post4, x^0'=x^post4, (-1-id^0+x^post4 == 0 /\ -id^post4+id^0 == 0 /\ -m^0+id^0 <= 0 /\ 1-m^0 <= 0 /\ -x^post4 <= 0 /\ -m^post4+m^0 == 0 /\ -1-m^0+x^post4 <= 0 /\ 1-id^0 <= 0), cost: 1
+   5: l3 -> l2 : m^0'=m^post5, id^0'=id^post5, x^0'=x^post5, (-id^post5+id^0 == 0 /\ -x^post5+x^0 == 0 /\ -m^post5+m^0 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : m^0'=m^post0, id^0'=id^post0, x^0'=x^post0, (-x^post0 <= 0 /\ -1-m^0+x^post0 <= 0 /\ -1-x^0+x^post0 == 0 /\ id^0-id^post0 == 0 /\ -m^0+x^0 <= 0 /\ m^0-m^post0 == 0), cost: 1
+New rule:
+l0 -> l1 : x^0'=1+x^0, (1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : m^0'=m^post1, id^0'=id^post1, x^0'=x^post1, (-x^post1 <= 0 /\ 1-x^0 <= 0 /\ -1-m^0+x^post1 <= 0 /\ id^0-id^post1 == 0 /\ m^0-m^post1 == 0 /\ 1+m^0-x^0 <= 0 /\ x^post1 == 0), cost: 1
+New rule:
+l0 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : m^0'=m^post2, id^0'=id^post2, x^0'=x^post2, (x^0-x^post2 == 0 /\ 1+id^0-x^0 <= 0 /\ m^0-m^post2 == 0 /\ -id^post2+id^0 == 0), cost: 1
+New rule:
+l1 -> l0 : 1+id^0-x^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : m^0'=m^post3, id^0'=id^post3, x^0'=x^post3, (-id^post3+id^0 == 0 /\ -m^post3+m^0 == 0 /\ -x^post3+x^0 == 0 /\ 1-id^0+x^0 <= 0), cost: 1
+New rule:
+l1 -> l0 : 1-id^0+x^0 <= 0, cost: 1
+
+Applied preprocessing
+Original rule:
+l2 -> l1 : m^0'=m^post4, id^0'=id^post4, x^0'=x^post4, (-1-id^0+x^post4 == 0 /\ -id^post4+id^0 == 0 /\ -m^0+id^0 <= 0 /\ 1-m^0 <= 0 /\ -x^post4 <= 0 /\ -m^post4+m^0 == 0 /\ -1-m^0+x^post4 <= 0 /\ 1-id^0 <= 0), cost: 1
+New rule:
+l2 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l2 : m^0'=m^post5, id^0'=id^post5, x^0'=x^post5, (-id^post5+id^0 == 0 /\ -x^post5+x^0 == 0 /\ -m^post5+m^0 == 0), cost: 1
+New rule:
+l3 -> l2 : TRUE, cost: 1
+
+Simplified rules
+Start location: l3
+   6: l0 -> l1 : x^0'=1+x^0, (1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 1
+   7: l0 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 1
+   8: l1 -> l0 : 1+id^0-x^0 <= 0, cost: 1
+   9: l1 -> l0 : 1-id^0+x^0 <= 0, cost: 1
+  10: l2 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 1
+  11: l3 -> l2 : TRUE, cost: 1
+
+
+Eliminating location l2 by chaining:
+
+Applied chaining
+First rule:
+l3 -> l2 : TRUE, cost: 1
+Second rule:
+l2 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 1
+New rule:
+l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 10 11
+
+Eliminated locations on linear paths
+Start location: l3
+   6: l0 -> l1 : x^0'=1+x^0, (1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 1
+   7: l0 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 1
+   8: l1 -> l0 : 1+id^0-x^0 <= 0, cost: 1
+   9: l1 -> l0 : 1-id^0+x^0 <= 0, cost: 1
+  12: l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+
+
+Eliminating location l0 by chaining:
+
+Applied chaining
+First rule:
+l1 -> l0 : 1+id^0-x^0 <= 0, cost: 1
+Second rule:
+l0 -> l1 : x^0'=1+x^0, (1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 1
+New rule:
+l1 -> l1 : x^0'=1+x^0, (1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+
+Applied chaining
+First rule:
+l1 -> l0 : 1+id^0-x^0 <= 0, cost: 1
+Second rule:
+l0 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 1
+New rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+
+Applied chaining
+First rule:
+l1 -> l0 : 1-id^0+x^0 <= 0, cost: 1
+Second rule:
+l0 -> l1 : x^0'=1+x^0, (1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 1
+New rule:
+l1 -> l1 : x^0'=1+x^0, (1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+
+Applied chaining
+First rule:
+l1 -> l0 : 1-id^0+x^0 <= 0, cost: 1
+Second rule:
+l0 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 1
+New rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 6 7 8 9
+
+Eliminated locations on tree-shaped paths
+Start location: l3
+  13: l1 -> l1 : x^0'=1+x^0, (1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+  14: l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+  15: l1 -> l1 : x^0'=1+x^0, (1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+  16: l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+  12: l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=1+x^0, (1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=x^0+n, (1+m^0-x^0-n >= 0 /\ 1+x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ n >= 0), cost: 2*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_ejJOFg.txt
+
+Applied instantiation
+Original rule:
+l1 -> l1 : x^0'=x^0+n, (1+m^0-x^0-n >= 0 /\ 1+x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ n >= 0), cost: 2*n
+New rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=1+x^0, (1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=n1+x^0, (n1 >= 0 /\ -n1+id^0-x^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-n1-x^0 >= 0), cost: 2*n1
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_ePBkFH.txt
+
+Applied instantiation
+Original rule:
+l1 -> l1 : x^0'=n1+x^0, (n1 >= 0 /\ -n1+id^0-x^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-n1-x^0 >= 0), cost: 2*n1
+New rule:
+l1 -> l1 : x^0'=id^0, (0 >= 0 /\ id^0-x^0 >= 0 /\ 1+m^0-id^0 >= 0 /\ 1+x^0 >= 0), cost: 2*id^0-2*x^0
+
+Applied instantiation
+Original rule:
+l1 -> l1 : x^0'=n1+x^0, (n1 >= 0 /\ -n1+id^0-x^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-n1-x^0 >= 0), cost: 2*n1
+New rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=1+x^0, (1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=1, (m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 4
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=1, (m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 4
+New rule:
+l1 -> l1 : x^0'=1, (m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+n3 >= 0 /\ -m^0 >= 0 /\ -1+id^0-x^0 >= 0), cost: 4*n3
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_EkPMDL.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=1, (m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 4
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_PmObpN.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+x^0, (1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+Second rule:
+l1 -> [4] : (m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ x^0 <= 0 /\ -m^0+x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+x^0, (1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=0, (2-id^0+x^0 <= 0 /\ m^0-x^0 == 0 /\ x^0 >= 0), cost: 4
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=0, (2-id^0+x^0 <= 0 /\ m^0-x^0 == 0 /\ x^0 >= 0), cost: 4
+New rule:
+l1 -> l1 : x^0'=0, (-2+id^0-x^0 >= 0 /\ -m^0 >= 0 /\ -1+n4 >= 0 /\ m^0-x^0 >= 0 /\ x^0 >= 0), cost: 4*n4
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_eIpBMI.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=0, (2-id^0+x^0 <= 0 /\ m^0-x^0 == 0 /\ x^0 >= 0), cost: 4
+New rule:
+l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0-x^0 >= 0 /\ x^0 <= 0 /\ x^0 >= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_IAHNoi.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0-x^0 >= 0 /\ x^0 <= 0 /\ x^0 >= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ -2+id^0 >= 0 /\ m^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ -m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=1+x^0, (1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=1, (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 4
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=1, (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 4
+New rule:
+l1 -> l1 : x^0'=1, (-1-id^0 >= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -m^0 >= 0 /\ -1+n6 >= 0), cost: 4*n6
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_GEnEpM.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=1, (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 4
+New rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_glklae.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+x^0, (1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+Second rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ x^0 <= 0 /\ -m^0+x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+x^0, (1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ -m^0+x^0 <= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ m^0-x^0 == 0 /\ x^0 >= 0), cost: 4
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ m^0-x^0 == 0 /\ x^0 >= 0), cost: 4
+New rule:
+l1 -> l1 : x^0'=0, (-1-id^0 >= 0 /\ -1+n7 >= 0 /\ -m^0 >= 0 /\ m^0-x^0 >= 0 /\ x^0 >= 0), cost: 4*n7
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_MaANOj.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ m^0-x^0 == 0 /\ x^0 >= 0), cost: 4
+New rule:
+l1 -> [4] : (m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0 /\ x^0 >= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_NmKCge.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> [4] : (m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0 /\ x^0 >= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ -1-id^0 >= 0 /\ m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ -m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+New rule:
+l1 -> l1 : x^0'=1+m^0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 4+2*m^0
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=1+m^0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 4+2*m^0
+New rule:
+l1 -> l1 : x^0'=1+m^0, (m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+n8 >= 0 /\ -1+id^0-x^0 >= 0), cost: 2*m^0*n8+4*n8
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_ebjBag.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=1+m^0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 4+2*m^0
+New rule:
+l1 -> [4] : (-1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_hGmkGO.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+Second rule:
+l1 -> [4] : (-1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+Second rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=0, (m^0 >= 0 /\ 2+m^0-id^0 <= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0), cost: 4+2*m^0-2*x^0
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=0, (m^0 >= 0 /\ 2+m^0-id^0 <= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0), cost: 4+2*m^0-2*x^0
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1+n9 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_jePCPL.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> [4] : (m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1+n9 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (1 >= 0 /\ m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0 /\ -1+n9 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+New rule:
+l1 -> l1 : x^0'=1+m^0, (1+id^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 4+2*m^0
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=1+m^0, (1+id^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 4+2*m^0
+New rule:
+l1 -> l1 : x^0'=1+m^0, (-1-id^0 >= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+n10 >= 0), cost: 4*n10+2*m^0*n10
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_kOcAAF.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=1+m^0, (1+id^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 4+2*m^0
+New rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ -1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_eLclFF.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+Second rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ -1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ -1-id^0 >= 0 /\ m^0 >= 0 /\ 1+m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: NONTERM
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+Second rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : x^0'=0, (m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 4+2*m^0-2*x^0
+
+Applied acceleration
+Original rule:
+l1 -> l1 : x^0'=0, (m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 4+2*m^0-2*x^0
+New rule:
+l1 -> l1 : x^0'=0, (-1-id^0 >= 0 /\ m^0 >= 0 /\ -1+n11 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 4*n11+2*m^0*n11
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_olbCLG.txt
+
+Applied nonterm
+Original rule:
+l1 -> l1 : x^0'=0, (m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 4+2*m^0-2*x^0
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0), cost: NONTERM
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_OdkBme.txt
+
+Applied chaining
+First rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+Second rule:
+l1 -> [4] : (m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (0 <= 0 /\ 1 >= 0 /\ -1-id^0 >= 0 /\ m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+New rule:
+l1 -> l1 : x^0'=1+m^0, (1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+
+Applied simplification
+Original rule:
+l1 -> l1 : x^0'=id^0, (0 >= 0 /\ id^0-x^0 >= 0 /\ 1+m^0-id^0 >= 0 /\ 1+x^0 >= 0), cost: 2*id^0-2*x^0
+New rule:
+l1 -> l1 : x^0'=id^0, (id^0-x^0 >= 0 /\ 1+m^0-id^0 >= 0 /\ 1+x^0 >= 0), cost: 2*id^0-2*x^0
+
+Applied simplification
+Original rule:
+l1 -> l1 : x^0'=1+m^0, (0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+New rule:
+l1 -> l1 : x^0'=1+m^0, (1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+
+Applied simplification
+Original rule:
+l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+x^0 >= 0 /\ x^0 <= 0 /\ -m^0+x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0 >= 0 /\ x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ -2+id^0 >= 0 /\ m^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ -m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (m^0 <= 0 /\ m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (1+id^0 <= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ 1+x^0 >= 0 /\ x^0 <= 0 /\ -m^0+x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ -1-id^0 >= 0 /\ m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ -m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (1+id^0 <= 0 /\ m^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (-1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (-1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 >= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (1 >= 0 /\ m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0 /\ -1+n9 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0 /\ -1+n9 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (-1-id^0 >= 0 /\ -1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (1+id^0 <= 0 /\ -1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (0 <= 0 /\ 0 >= 0 /\ -1-id^0 >= 0 /\ m^0 >= 0 /\ 1+m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (m^0 >= 0 /\ 1+x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0), cost: NONTERM
+
+Applied simplification
+Original rule:
+l1 -> [4] : (0 <= 0 /\ 1 >= 0 /\ -1-id^0 >= 0 /\ m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+New rule:
+l1 -> [4] : (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+
+Applied deletion
+Removed the following rules: 13 15
+
+Accelerated simple loops
+Start location: l3
+  14: l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+  16: l1 -> l1 : x^0'=0, (1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+  20: l1 -> [4] : (m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+  22: l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0-x^0 >= 0 /\ x^0 <= 0 /\ x^0 >= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+  26: l1 -> [4] : (m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0 /\ x^0 >= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+  30: l1 -> [4] : (m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1+n9 >= 0), cost: NONTERM
+  36: l1 -> l1 : x^0'=1+m^0, (1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+  37: l1 -> l1 : x^0'=id^0, (id^0-x^0 >= 0 /\ 1+m^0-id^0 >= 0 /\ 1+x^0 >= 0), cost: 2*id^0-2*x^0
+  38: l1 -> l1 : x^0'=1+m^0, (1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-m^0+id^0 >= 0), cost: 2+2*m^0-2*x^0
+  39: l1 -> [4] : (-2+id^0-x^0 >= 0 /\ m^0 >= 0 /\ x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+  40: l1 -> [4] : (m^0 <= 0 /\ m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+  41: l1 -> [4] : (1+id^0 <= 0 /\ m^0 >= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 <= 0), cost: NONTERM
+  42: l1 -> [4] : (m^0 >= 0 /\ 1+id^0-x^0 <= 0 /\ x^0 <= 0 /\ -m^0+x^0 >= 0), cost: NONTERM
+  43: l1 -> [4] : (1+id^0 <= 0 /\ m^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+  44: l1 -> [4] : (-1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 >= 0 /\ -1+id^0-x^0 >= 0), cost: NONTERM
+  45: l1 -> [4] : (m^0 >= 0 /\ -2-m^0+id^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0), cost: NONTERM
+  46: l1 -> [4] : (m^0 >= 0 /\ 1-id^0+x^0 <= 0 /\ 1+m^0-x^0 <= 0 /\ -1+n9 >= 0), cost: NONTERM
+  47: l1 -> [4] : (1+id^0 <= 0 /\ -1-m^0+x^0 <= 0 /\ -1-m^0+x^0 >= 0 /\ -1+x^0 >= 0), cost: NONTERM
+  48: l1 -> [4] : (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: NONTERM
+  49: l1 -> [4] : (m^0 >= 0 /\ 1+x^0 >= 0 /\ -1-id^0+x^0 >= 0 /\ x^0 <= 0), cost: NONTERM
+  50: l1 -> [4] : (1+id^0 <= 0 /\ m^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: NONTERM
+  12: l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+
+
+Applied chaining
+First rule:
+l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=0, (1+id^0-x^0 <= 0 /\ 1+m^0 >= 0 /\ -1+x^0 >= 0 /\ 1+m^0-x^0 <= 0), cost: 2
+New rule:
+l3 -> l1 : x^0'=0, (m^0-id^0 == 0 /\ -1+id^0 >= 0), cost: 4
+
+Applied chaining
+First rule:
+l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+Second rule:
+l1 -> l1 : x^0'=1+m^0, (1+x^0 >= 0 /\ 1+m^0-x^0 >= 0 /\ -1-id^0+x^0 >= 0), cost: 2+2*m^0-2*x^0
+New rule:
+l3 -> l1 : x^0'=1+m^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2+2*m^0-2*id^0
+
+Applied deletion
+Removed the following rules: 14 16 20 22 26 30 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+
+Chained accelerated rules with incoming rules
+Start location: l3
+  12: l3 -> l1 : x^0'=1+id^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2
+  51: l3 -> l1 : x^0'=0, (m^0-id^0 == 0 /\ -1+id^0 >= 0), cost: 4
+  52: l3 -> l1 : x^0'=1+m^0, (-m^0+id^0 <= 0 /\ -1+id^0 >= 0), cost: 2+2*m^0-2*id^0
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l3
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

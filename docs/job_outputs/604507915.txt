@@ -1,0 +1,615 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (arg1 > 0 /\ 1+arg1p1 > 0 /\ -arg2p1+x5 > 0 /\ 1+x4 > 0 /\ -1+arg2 > 0 /\ 1+x5 > 0), cost: 1
+   1: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (1+x10 > 0 /\ -1+arg2p2 < 0 /\ arg1 > 0 /\ 1+arg1p2 > 0 /\ -1+arg2 > 0), cost: 1
+  12: f1_0_main_Load -> f196_0_create_LE : arg1'=arg1p13, arg2'=arg2p13, (arg1 > 0 /\ 1+x34 > 0 /\ 1+x33 > 0 /\ -1+x33-arg1p13 == 0 /\ -1+arg2 > 0), cost: 1
+   2: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1p3, arg2'=arg2p3, (arg1-arg1p3 == 0 /\ -arg2p3 == 0 /\ arg2 > 0), cost: 1
+   3: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1p4, arg2'=arg2p4, (-arg1p4+arg1 == 0 /\ 1-arg2p4 == 0), cost: 1
+   4: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p5, arg2'=arg2p5, (x29 > 0 /\ -arg2p5+arg2 == 0 /\ arg1-x36 >= 0 /\ arg1-2*x25 == 0 /\ x29-arg2 < 0 /\ arg1-arg1p5 == 0 /\ arg2 > 0), cost: 1
+   6: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p7, arg2'=arg2p7, (-arg2p7+arg2 == 0 /\ arg1-arg1p7 == 0 /\ -1+arg1-2*x44 == 0 /\ -x46+arg1 >= 0 /\ x45 > 0 /\ x45-arg2 < 0 /\ arg2 > 0), cost: 1
+   8: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p9, arg2'=arg2p9, (-arg1p9+arg1 == 0 /\ arg1-x56 >= 0 /\ x55-arg2 < 0 /\ -arg2p9+arg2 == 0 /\ -1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+  10: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p11, arg2'=arg2p11, (arg1-arg1p11 == 0 /\ x65-arg2 < 0 /\ arg1-2*x64 == 0 /\ arg1-x66 >= 0 /\ -arg2p11+arg2 == 0 /\ arg2 > 0), cost: 1
+   5: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=arg2p6, (-arg2p6 == 0 /\ arg1-arg1p6 >= 0 /\ arg1-2*arg1p6 >= 0 /\ x41 > 0 /\ -2+arg1-2*arg1p6 < 0 /\ x41-arg2 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+   7: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=arg2p8, (x51 > 0 /\ arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ -2+arg1-2*x50 < 0 /\ x51-arg2 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ 1-arg2p8 == 0 /\ arg2 > 0), cost: 1
+   9: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=arg2p10, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ 1-arg2p10 == 0 /\ x61-arg2 < 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+  11: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=arg2p12, (-2+arg1-2*arg1p12 < 0 /\ 1-arg2p12 == 0 /\ x71-arg2 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+  13: f196_0_create_LE -> f196_0_create_LE : arg1'=arg1p14, arg2'=arg2p14, (arg1 > 0 /\ -1-arg1p14+arg1 == 0), cost: 1
+  14: __init -> f1_0_main_Load : arg1'=arg1p15, arg2'=arg2p15, T, cost: 1
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+  15: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0), cost: 1
+  16: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (-1+arg2p2 < 0 /\ arg1 > 0 /\ 1+arg1p2 > 0 /\ -1+arg2 > 0), cost: 1
+  27: f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (arg1 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+  17: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=0, arg2 > 0, cost: 1
+  18: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=1, T, cost: 1
+  19: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x25 == 0 /\ 2-arg2 <= 0 /\ arg2 > 0), cost: 1
+  21: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (2-arg2 <= 0 /\ -1+arg1-2*x44 == 0 /\ arg2 > 0), cost: 1
+  23: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (-1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+  25: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x64 == 0 /\ arg2 > 0), cost: 1
+  20: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (arg1-arg1p6 >= 0 /\ 2-arg2 <= 0 /\ arg1-2*arg1p6 >= 0 /\ -2+arg1-2*arg1p6 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+  22: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ 2-arg2 <= 0 /\ -2+arg1-2*x50 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+  24: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+  26: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+  28: f196_0_create_LE -> f196_0_create_LE : arg1'=-1+arg1, arg2'=arg2p14, arg1 > 0, cost: 1
+  14: __init -> f1_0_main_Load : arg1'=arg1p15, arg2'=arg2p15, T, cost: 1
+
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (arg1 > 0 /\ 1+arg1p1 > 0 /\ -arg2p1+x5 > 0 /\ 1+x4 > 0 /\ -1+arg2 > 0 /\ 1+x5 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (1+x10 > 0 /\ -1+arg2p2 < 0 /\ arg1 > 0 /\ 1+arg1p2 > 0 /\ -1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (-1+arg2p2 < 0 /\ arg1 > 0 /\ 1+arg1p2 > 0 /\ -1+arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1p3, arg2'=arg2p3, (arg1-arg1p3 == 0 /\ -arg2p3 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=0, (0 == 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p3 = arg1
+		
+		propagated equality arg2p3 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=0, (0 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=0, arg2 > 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=0, arg2 > 0, cost: 1
+	New rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=0, arg2 > 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1p4, arg2'=arg2p4, (-arg1p4+arg1 == 0 /\ 1-arg2p4 == 0), cost: 1
+	New rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=1, 0 == 0, cost: 1
+	
+		propagated equality arg1p4 = arg1
+		
+		propagated equality arg2p4 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=1, 0 == 0, cost: 1
+	New rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=1, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg1'=arg1, arg2'=1, T, cost: 1
+	New rule:
+	f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=1, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p5, arg2'=arg2p5, (x29 > 0 /\ -arg2p5+arg2 == 0 /\ arg1-x36 >= 0 /\ arg1-2*x25 == 0 /\ x29-arg2 < 0 /\ arg1-arg1p5 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ x29 > 0 /\ arg1-x36 >= 0 /\ arg1-2*x25 == 0 /\ x29-arg2 < 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p5 = arg2
+		
+		propagated equality arg1p5 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ x29 > 0 /\ arg1-x36 >= 0 /\ arg1-2*x25 == 0 /\ x29-arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (x29 > 0 /\ arg1-x36 >= 0 /\ arg1-2*x25 == 0 /\ x29-arg2 < 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (x29 > 0 /\ arg1-x36 >= 0 /\ arg1-2*x25 == 0 /\ x29-arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (arg1-2*x25 == 0 /\ 2-arg2 <= 0 /\ arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (arg1-2*x25 == 0 /\ 2-arg2 <= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x25 == 0 /\ 2-arg2 <= 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=arg2p6, (-arg2p6 == 0 /\ arg1-arg1p6 >= 0 /\ arg1-2*arg1p6 >= 0 /\ x41 > 0 /\ -2+arg1-2*arg1p6 < 0 /\ x41-arg2 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (0 == 0 /\ arg1-arg1p6 >= 0 /\ arg1-2*arg1p6 >= 0 /\ x41 > 0 /\ -2+arg1-2*arg1p6 < 0 /\ x41-arg2 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p6 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (0 == 0 /\ arg1-arg1p6 >= 0 /\ arg1-2*arg1p6 >= 0 /\ x41 > 0 /\ -2+arg1-2*arg1p6 < 0 /\ x41-arg2 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (arg1-arg1p6 >= 0 /\ arg1-2*arg1p6 >= 0 /\ x41 > 0 /\ -2+arg1-2*arg1p6 < 0 /\ x41-arg2 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (arg1-arg1p6 >= 0 /\ arg1-2*arg1p6 >= 0 /\ x41 > 0 /\ -2+arg1-2*arg1p6 < 0 /\ x41-arg2 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (arg1-arg1p6 >= 0 /\ 2-arg2 <= 0 /\ arg1-2*arg1p6 >= 0 /\ -2+arg1-2*arg1p6 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p7, arg2'=arg2p7, (-arg2p7+arg2 == 0 /\ arg1-arg1p7 == 0 /\ -1+arg1-2*x44 == 0 /\ -x46+arg1 >= 0 /\ x45 > 0 /\ x45-arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ -1+arg1-2*x44 == 0 /\ -x46+arg1 >= 0 /\ x45 > 0 /\ x45-arg2 < 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p7 = arg2
+		
+		propagated equality arg1p7 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ -1+arg1-2*x44 == 0 /\ -x46+arg1 >= 0 /\ x45 > 0 /\ x45-arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (-1+arg1-2*x44 == 0 /\ -x46+arg1 >= 0 /\ x45 > 0 /\ x45-arg2 < 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (-1+arg1-2*x44 == 0 /\ -x46+arg1 >= 0 /\ x45 > 0 /\ x45-arg2 < 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (2-arg2 <= 0 /\ -1+arg1-2*x44 == 0 /\ arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (2-arg2 <= 0 /\ -1+arg1-2*x44 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (2-arg2 <= 0 /\ -1+arg1-2*x44 == 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=arg2p8, (x51 > 0 /\ arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ -2+arg1-2*x50 < 0 /\ x51-arg2 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ 1-arg2p8 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (0 == 0 /\ x51 > 0 /\ arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ -2+arg1-2*x50 < 0 /\ x51-arg2 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p8 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (0 == 0 /\ x51 > 0 /\ arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ -2+arg1-2*x50 < 0 /\ x51-arg2 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (x51 > 0 /\ arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ -2+arg1-2*x50 < 0 /\ x51-arg2 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (x51 > 0 /\ arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ -2+arg1-2*x50 < 0 /\ x51-arg2 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ 2-arg2 <= 0 /\ -2+arg1-2*x50 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p9, arg2'=arg2p9, (-arg1p9+arg1 == 0 /\ arg1-x56 >= 0 /\ x55-arg2 < 0 /\ -arg2p9+arg2 == 0 /\ -1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ arg1-x56 >= 0 /\ x55-arg2 < 0 /\ -1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p9 = arg1
+		
+		propagated equality arg2p9 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ arg1-x56 >= 0 /\ x55-arg2 < 0 /\ -1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (arg1-x56 >= 0 /\ x55-arg2 < 0 /\ -1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (arg1-x56 >= 0 /\ x55-arg2 < 0 /\ -1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (-1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (-1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (-1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=arg2p10, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ 1-arg2p10 == 0 /\ x61-arg2 < 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (0 == 0 /\ arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ x61-arg2 < 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p10 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (0 == 0 /\ arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ x61-arg2 < 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ x61-arg2 < 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ x61-arg2 < 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1p11, arg2'=arg2p11, (arg1-arg1p11 == 0 /\ x65-arg2 < 0 /\ arg1-2*x64 == 0 /\ arg1-x66 >= 0 /\ -arg2p11+arg2 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ x65-arg2 < 0 /\ arg1-2*x64 == 0 /\ arg1-x66 >= 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p11 = arg1
+		
+		propagated equality arg2p11 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (0 == 0 /\ x65-arg2 < 0 /\ arg1-2*x64 == 0 /\ arg1-x66 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (x65-arg2 < 0 /\ arg1-2*x64 == 0 /\ arg1-x66 >= 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (x65-arg2 < 0 /\ arg1-2*x64 == 0 /\ arg1-x66 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (arg1-2*x64 == 0 /\ arg2 > 0), cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : arg1'=arg1, arg2'=arg2, (arg1-2*x64 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x64 == 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=arg2p12, (-2+arg1-2*arg1p12 < 0 /\ 1-arg2p12 == 0 /\ x71-arg2 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (0 == 0 /\ -2+arg1-2*arg1p12 < 0 /\ x71-arg2 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p12 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (0 == 0 /\ -2+arg1-2*arg1p12 < 0 /\ x71-arg2 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ x71-arg2 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ x71-arg2 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f1_0_main_Load -> f196_0_create_LE : arg1'=arg1p13, arg2'=arg2p13, (arg1 > 0 /\ 1+x34 > 0 /\ 1+x33 > 0 /\ -1+x33-arg1p13 == 0 /\ -1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (0 == 0 /\ arg1 > 0 /\ 1+x34 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+	
+		propagated equality arg1p13 = -1+x33
+		
+	Simplified Guard
+
+	Original rule:
+	f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (0 == 0 /\ arg1 > 0 /\ 1+x34 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (arg1 > 0 /\ 1+x34 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+	
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (arg1 > 0 /\ 1+x34 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (arg1 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f196_0_create_LE -> f196_0_create_LE : arg1'=arg1p14, arg2'=arg2p14, (arg1 > 0 /\ -1-arg1p14+arg1 == 0), cost: 1
+	New rule:
+	f196_0_create_LE -> f196_0_create_LE : arg1'=-1+arg1, arg2'=arg2p14, (0 == 0 /\ arg1 > 0), cost: 1
+	
+		propagated equality arg1p14 = -1+arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f196_0_create_LE -> f196_0_create_LE : arg1'=-1+arg1, arg2'=arg2p14, (0 == 0 /\ arg1 > 0), cost: 1
+	New rule:
+	f196_0_create_LE -> f196_0_create_LE : arg1'=-1+arg1, arg2'=arg2p14, arg1 > 0, cost: 1
+
+Step with 14
+
+	Trace
+
+	14[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 15
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 17
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 17[(arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {17[T]}]
+
+Step with 18
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {}]
+
+Step with 23
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T], 23[(-1-2*x54+arg1 == 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {19[T], 21[T]}, {}]
+
+Step with 24
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T], 23[(-1-2*x54+arg1 == 0 /\ arg2 > 0)], 24[(arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {19[T], 21[T]}, {20[T], 22[T]}, {}]
+
+Accelerate and Drop
+
+Start location: __init
+Program variables: arg1 arg2
+  15: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0), cost: 1
+  16: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (-1+arg2p2 < 0 /\ arg1 > 0 /\ 1+arg1p2 > 0 /\ -1+arg2 > 0), cost: 1
+  27: f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (arg1 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+  17: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=0, arg2 > 0, cost: 1
+  18: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=1, T, cost: 1
+  19: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x25 == 0 /\ 2-arg2 <= 0 /\ arg2 > 0), cost: 1
+  21: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (2-arg2 <= 0 /\ -1+arg1-2*x44 == 0 /\ arg2 > 0), cost: 1
+  23: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (-1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+  25: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x64 == 0 /\ arg2 > 0), cost: 1
+  29: f951_0_slide93_EQ -> LoAT_sink : (arg1-arg1p10 <= 0 /\ arg1-arg1p10 >= 0 /\ arg1-2*x60 >= 0 /\ 2-arg1+2*arg1p10 > 0 /\ 1-arg1+2*x541 >= 0 /\ -1+arg1-2*x541 >= 0 /\ 2-arg1+2*x60 > 0 /\ arg1-2*arg1p10 >= 0 /\ 1-arg1+2*x60 >= 0 /\ -1+arg1-2*x60 >= 0 /\ arg2 > 0), cost: NONTERM
+  20: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (arg1-arg1p6 >= 0 /\ 2-arg2 <= 0 /\ arg1-2*arg1p6 >= 0 /\ -2+arg1-2*arg1p6 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+  22: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ 2-arg2 <= 0 /\ -2+arg1-2*x50 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+  24: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+  26: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+  28: f196_0_create_LE -> f196_0_create_LE : arg1'=-1+arg1, arg2'=arg2p14, arg1 > 0, cost: 1
+  14: __init -> f1_0_main_Load : arg1'=arg1p15, arg2'=arg2p15, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ -1+arg1-2*x541 == 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> LoAT_sink : (arg1-arg1p10 <= 0 /\ arg1-arg1p10 >= 0 /\ arg1-2*x60 >= 0 /\ 2-arg1+2*arg1p10 > 0 /\ 1-arg1+2*x541 >= 0 /\ -1+arg1-2*x541 >= 0 /\ 2-arg1+2*x60 > 0 /\ arg1-2*arg1p10 >= 0 /\ 1-arg1+2*x60 >= 0 /\ -1+arg1-2*x60 >= 0 /\ arg2 > 0), cost: NONTERM
+
+		arg1-arg1p10 >= 0 [0]: monotonic increase yields arg1-arg1p10 >= 0
+		
+		arg1-2*x60 >= 0 [0]: montonic decrease yields arg1p10-2*x60 >= 0, dependencies: arg1-arg1p10 >= 0
+		
+		arg1-2*x60 >= 0 [1]: eventual increase yields (arg1-arg1p10 <= 0 /\ arg1-2*x60 >= 0)
+		
+		2-arg1+2*arg1p10 > 0 [0]: monotonic increase yields 2-arg1+2*arg1p10 > 0, dependencies: arg1-arg1p10 >= 0
+		
+		1-arg1+2*x541 >= 0 [0]: monotonic increase yields 1-arg1+2*x541 >= 0, dependencies: arg1-arg1p10 >= 0
+		
+		-1+arg1-2*x541 >= 0 [0]: montonic decrease yields -1+arg1p10-2*x541 >= 0, dependencies: arg1-arg1p10 >= 0
+		
+		-1+arg1-2*x541 >= 0 [1]: eventual increase yields (arg1-arg1p10 <= 0 /\ -1+arg1-2*x541 >= 0)
+		
+		2-arg1+2*x60 > 0 [0]: monotonic increase yields 2-arg1+2*x60 > 0, dependencies: arg1-arg1p10 >= 0
+		
+		arg1-2*arg1p10 >= 0 [0]: montonic decrease yields -arg1p10 >= 0, dependencies: arg1-arg1p10 >= 0
+		
+		arg1-2*arg1p10 >= 0 [1]: eventual increase yields (arg1-arg1p10 <= 0 /\ arg1-2*arg1p10 >= 0)
+		
+		1-arg1+2*x60 >= 0 [0]: monotonic increase yields 1-arg1+2*x60 >= 0, dependencies: arg1-arg1p10 >= 0 2-arg1+2*x60 > 0
+		
+		-1+arg1-2*x60 >= 0 [0]: montonic decrease yields -1+arg1p10-2*x60 >= 0, dependencies: arg1-arg1p10 >= 0
+		
+		-1+arg1-2*x60 >= 0 [1]: eventual increase yields (arg1-arg1p10 <= 0 /\ -1+arg1-2*x60 >= 0)
+		
+		arg2 > 0 [0]: monotonic increase yields arg2 > 0
+		
+		Replacement map: {arg1-arg1p10 >= 0 -> arg1-arg1p10 >= 0, arg1-2*x60 >= 0 -> (arg1-arg1p10 <= 0 /\ arg1-2*x60 >= 0), 2-arg1+2*arg1p10 > 0 -> 2-arg1+2*arg1p10 > 0, 1-arg1+2*x541 >= 0 -> 1-arg1+2*x541 >= 0, -1+arg1-2*x541 >= 0 -> (arg1-arg1p10 <= 0 /\ -1+arg1-2*x541 >= 0), 2-arg1+2*x60 > 0 -> 2-arg1+2*x60 > 0, arg1-2*arg1p10 >= 0 -> (arg1-arg1p10 <= 0 /\ arg1-2*arg1p10 >= 0), 1-arg1+2*x60 >= 0 -> 1-arg1+2*x60 >= 0, -1+arg1-2*x60 >= 0 -> (arg1-arg1p10 <= 0 /\ -1+arg1-2*x60 >= 0), arg2 > 0 -> arg2 > 0}
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {19[T], 21[T], 23[T]}]
+
+Step with 25
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T], 25[(arg1-2*x64 == 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {19[T], 21[T], 23[T]}, {}]
+
+Step with 26
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T], 25[(arg1-2*x64 == 0 /\ arg2 > 0)], 26[(-2+arg1-2*arg1p12 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {19[T], 21[T], 23[T]}, {24[T]}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2
+  15: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p1, arg2'=arg2p1, (arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0), cost: 1
+  16: f1_0_main_Load -> f234_0_slide93_FieldAccess : arg1'=arg1p2, arg2'=arg2p2, (-1+arg2p2 < 0 /\ arg1 > 0 /\ 1+arg1p2 > 0 /\ -1+arg2 > 0), cost: 1
+  27: f1_0_main_Load -> f196_0_create_LE : arg1'=-1+x33, arg2'=arg2p13, (arg1 > 0 /\ 1+x33 > 0 /\ -1+arg2 > 0), cost: 1
+  17: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=0, arg2 > 0, cost: 1
+  18: f234_0_slide93_FieldAccess -> f951_0_slide93_EQ : arg2'=1, T, cost: 1
+  19: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x25 == 0 /\ 2-arg2 <= 0 /\ arg2 > 0), cost: 1
+  21: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (2-arg2 <= 0 /\ -1+arg1-2*x44 == 0 /\ arg2 > 0), cost: 1
+  23: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (-1-2*x54+arg1 == 0 /\ arg2 > 0), cost: 1
+  25: f951_0_slide93_EQ -> f951_0_slide93_EQ\' : (arg1-2*x64 == 0 /\ arg2 > 0), cost: 1
+  29: f951_0_slide93_EQ -> LoAT_sink : (arg1-arg1p10 <= 0 /\ arg1-arg1p10 >= 0 /\ arg1-2*x60 >= 0 /\ 2-arg1+2*arg1p10 > 0 /\ 1-arg1+2*x541 >= 0 /\ -1+arg1-2*x541 >= 0 /\ 2-arg1+2*x60 > 0 /\ arg1-2*arg1p10 >= 0 /\ 1-arg1+2*x60 >= 0 /\ -1+arg1-2*x60 >= 0 /\ arg2 > 0), cost: NONTERM
+  30: f951_0_slide93_EQ -> LoAT_sink : (arg1-2*arg1p12 >= 0 /\ arg1-2*x70 >= 0 /\ -arg1+2*x641 >= 0 /\ 2-arg1+2*arg1p12 > 0 /\ -arg1+2*x70 >= 0 /\ arg1-2*x641 >= 0 /\ arg1-arg1p12 <= 0 /\ arg1-arg1p12 >= 0 /\ 2-arg1+2*x70 > 0 /\ arg2 > 0), cost: NONTERM
+  20: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p6, arg2'=0, (arg1-arg1p6 >= 0 /\ 2-arg2 <= 0 /\ arg1-2*arg1p6 >= 0 /\ -2+arg1-2*arg1p6 < 0 /\ arg1-2*x40 >= 0 /\ arg1-2*x40 == 0 /\ -2+arg1-2*x40 < 0 /\ arg2 > 0), cost: 1
+  22: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p8, arg2'=1, (arg1-2*arg1p8 >= 0 /\ -2+arg1-2*arg1p8 < 0 /\ -1+arg1-2*x50 == 0 /\ 2-arg2 <= 0 /\ -2+arg1-2*x50 < 0 /\ arg1-arg1p8 >= 0 /\ arg1-2*x50 >= 0 /\ arg2 > 0), cost: 1
+  24: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p10, arg2'=1, (arg1-arg1p10 >= 0 /\ -2+arg1-2*x60 < 0 /\ arg1-2*x60 >= 0 /\ -2+arg1-2*arg1p10 < 0 /\ arg1-2*arg1p10 >= 0 /\ -1+arg1-2*x60 == 0 /\ arg2 > 0), cost: 1
+  26: f951_0_slide93_EQ\' -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+  28: f196_0_create_LE -> f196_0_create_LE : arg1'=-1+arg1, arg2'=arg2p14, arg1 > 0, cost: 1
+  14: __init -> f1_0_main_Load : arg1'=arg1p15, arg2'=arg2p15, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f951_0_slide93_EQ -> f951_0_slide93_EQ : arg1'=arg1p12, arg2'=1, (-2+arg1-2*arg1p12 < 0 /\ arg1-2*arg1p12 >= 0 /\ -2+arg1-2*x70 < 0 /\ arg1-2*x70 >= 0 /\ arg1-2*x70 == 0 /\ arg1-2*x641 == 0 /\ arg1-arg1p12 >= 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f951_0_slide93_EQ -> LoAT_sink : (arg1-2*arg1p12 >= 0 /\ arg1-2*x70 >= 0 /\ -arg1+2*x641 >= 0 /\ 2-arg1+2*arg1p12 > 0 /\ -arg1+2*x70 >= 0 /\ arg1-2*x641 >= 0 /\ arg1-arg1p12 <= 0 /\ arg1-arg1p12 >= 0 /\ 2-arg1+2*x70 > 0 /\ arg2 > 0), cost: NONTERM
+
+		arg1-2*arg1p12 >= 0 [0]: montonic decrease yields -arg1p12 >= 0, dependencies: arg1-arg1p12 >= 0
+		
+		arg1-2*arg1p12 >= 0 [1]: eventual decrease yields (arg1-2*arg1p12 >= 0 /\ -arg1p12 >= 0)
+		
+		arg1-2*arg1p12 >= 0 [2]: eventual increase yields (arg1-2*arg1p12 >= 0 /\ arg1-arg1p12 <= 0)
+		
+		arg1-2*x70 >= 0 [0]: montonic decrease yields arg1p12-2*x70 >= 0, dependencies: arg1-arg1p12 >= 0
+		
+		arg1-2*x70 >= 0 [1]: eventual decrease yields (arg1p12-2*x70 >= 0 /\ arg1-2*x70 >= 0)
+		
+		arg1-2*x70 >= 0 [2]: eventual increase yields (arg1-2*x70 >= 0 /\ arg1-arg1p12 <= 0)
+		
+		-arg1+2*x641 >= 0 [0]: monotonic increase yields -arg1+2*x641 >= 0, dependencies: arg1-arg1p12 >= 0
+		
+		-arg1+2*x641 >= 0 [1]: eventual decrease yields (-arg1p12+2*x641 >= 0 /\ -arg1+2*x641 >= 0)
+		
+		-arg1+2*x641 >= 0 [2]: eventual increase yields (-arg1+2*x641 >= 0 /\ -arg1+arg1p12 <= 0)
+		
+		2-arg1+2*arg1p12 > 0 [0]: monotonic increase yields 2-arg1+2*arg1p12 > 0, dependencies: arg1-arg1p12 >= 0
+		
+		2-arg1+2*arg1p12 > 0 [1]: eventual decrease yields (2-arg1+2*arg1p12 > 0 /\ 2+arg1p12 > 0)
+		
+		2-arg1+2*arg1p12 > 0 [2]: eventual increase yields (-arg1+arg1p12 <= 0 /\ 2-arg1+2*arg1p12 > 0)
+		
+		-arg1+2*x70 >= 0 [0]: monotonic increase yields -arg1+2*x70 >= 0, dependencies: arg1-arg1p12 >= 0
+		
+		-arg1+2*x70 >= 0 [1]: montonic decrease yields -arg1p12+2*x70 >= 0, dependencies: -arg1+2*x641 >= 0 arg1-2*x641 >= 0 2-arg1+2*x70 > 0
+		
+		-arg1+2*x70 >= 0 [2]: eventual decrease yields (-arg1p12+2*x70 >= 0 /\ -arg1+2*x70 >= 0)
+		
+		-arg1+2*x70 >= 0 [3]: eventual increase yields (-arg1+arg1p12 <= 0 /\ -arg1+2*x70 >= 0)
+		
+		arg1-2*x641 >= 0 [0]: montonic decrease yields arg1p12-2*x641 >= 0, dependencies: arg1-arg1p12 >= 0
+		
+		arg1-2*x641 >= 0 [1]: eventual decrease yields (arg1p12-2*x641 >= 0 /\ arg1-2*x641 >= 0)
+		
+		arg1-2*x641 >= 0 [2]: eventual increase yields (arg1-2*x641 >= 0 /\ arg1-arg1p12 <= 0)
+		
+		arg1-arg1p12 >= 0 [0]: monotonic increase yields arg1-arg1p12 >= 0
+		
+		2-arg1+2*x70 > 0 [0]: monotonic increase yields 2-arg1+2*x70 > 0, dependencies: -arg1+2*x70 >= 0 arg1-arg1p12 >= 0
+		
+		arg2 > 0 [0]: monotonic increase yields arg2 > 0
+		
+		Replacement map: {arg1-2*arg1p12 >= 0 -> (arg1-2*arg1p12 >= 0 /\ arg1-arg1p12 <= 0), arg1-2*x70 >= 0 -> (arg1-2*x70 >= 0 /\ arg1-arg1p12 <= 0), -arg1+2*x641 >= 0 -> -arg1+2*x641 >= 0, 2-arg1+2*arg1p12 > 0 -> 2-arg1+2*arg1p12 > 0, -arg1+2*x70 >= 0 -> -arg1+2*x70 >= 0, arg1-2*x641 >= 0 -> (arg1-2*x641 >= 0 /\ arg1-arg1p12 <= 0), arg1-arg1p12 >= 0 -> arg1-arg1p12 >= 0, 2-arg1+2*x70 > 0 -> 2-arg1+2*x70 > 0, arg2 > 0 -> arg2 > 0}
+
+Step with 30
+
+	Trace
+
+	14[T], 15[(arg1 > 0 /\ 1+arg1p1 > 0 /\ -1+arg2 > 0)], 18[T], 30[(arg1-2*arg1p12 >= 0 /\ arg1-2*x70 >= 0 /\ -arg1+2*x641 >= 0 /\ 2-arg1+2*arg1p12 > 0 /\ -arg1+2*x70 >= 0 /\ arg1-2*x641 >= 0 /\ arg1-arg1p12 <= 0 /\ arg1-arg1p12 >= 0 /\ 2-arg1+2*x70 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {17[T]}, {19[T], 21[T], 23[T]}, {30[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=2 ] 14 [ arg1=0 arg2=1 ] 15 [ arg1=0 arg2=1 ] 18 [ arg1=arg1 arg2=arg2 ] 30
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

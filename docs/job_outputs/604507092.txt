@@ -1,0 +1,278 @@
+NO
+
+Initial ITS
+
+Start location: l5
+Program variables: n^0 x^0
+   0: l0 -> l1 : n^0'=n^post1, x^0'=x^post1, (x^0-x^post1 == 0 /\ -n^post1+n^0 == 0), cost: 1
+   1: l1 -> l0 : n^0'=n^post2, x^0'=x^post2, (-x^post2+x^0 == 0 /\ n^0-n^post2 == 0), cost: 1
+   2: l2 -> l0 : n^0'=n^post3, x^0'=x^post3, (-1+x^post3 == 0 /\ n^0-n^post3 == 0 /\ x^1 == 0 /\ n^0 <= 0), cost: 1
+   3: l2 -> l3 : n^0'=n^post4, x^0'=x^post4, (1-n^0 <= 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+   4: l3 -> l2 : n^0'=n^post5, x^0'=x^post5, (-n^post5+n^0 == 0 /\ x^0-x^post5 == 0), cost: 1
+   5: l4 -> l2 : n^0'=n^post6, x^0'=x^post6, (0 == 0 /\ -1+x^post6 == 0), cost: 1
+   6: l5 -> l4 : n^0'=n^post7, x^0'=x^post7, (x^0-x^post7 == 0 /\ -n^post7+n^0 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l5
+Program variables: n^0 x^0
+   9: l0 -> l0 : n^0'=n^post2, x^0'=x^post2, (n^post1-n^post2 == 0 /\ x^0-x^post1 == 0 /\ -n^post1+n^0 == 0 /\ -x^post2+x^post1 == 0), cost: 1
+   2: l2 -> l0 : n^0'=n^post3, x^0'=x^post3, (-1+x^post3 == 0 /\ n^0-n^post3 == 0 /\ x^1 == 0 /\ n^0 <= 0), cost: 1
+   8: l2 -> l2 : n^0'=n^post5, x^0'=x^post5, (-x^post5+x^post4 == 0 /\ 1-n^0 <= 0 /\ -n^post5+n^post4 == 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+   7: l5 -> l2 : n^0'=n^post6, x^0'=x^post6, (0 == 0 /\ x^0-x^post7 == 0 /\ -n^post7+n^0 == 0 /\ -1+x^post6 == 0), cost: 1
+
+	Eliminating location l4 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l5 -> l4 : n^0'=n^post7, x^0'=x^post7, (x^0-x^post7 == 0 /\ -n^post7+n^0 == 0), cost: 1
+	Second rule:
+	l4 -> l2 : n^0'=n^post6, x^0'=x^post6, (0 == 0 /\ -1+x^post6 == 0), cost: 1
+	New rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=x^post6, (0 == 0 /\ x^0-x^post7 == 0 /\ -n^post7+n^0 == 0 /\ -1+x^post6 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 6
+	
+	Eliminating location l3 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l2 -> l3 : n^0'=n^post4, x^0'=x^post4, (1-n^0 <= 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+	Second rule:
+	l3 -> l2 : n^0'=n^post5, x^0'=x^post5, (-n^post5+n^0 == 0 /\ x^0-x^post5 == 0), cost: 1
+	New rule:
+	l2 -> l2 : n^0'=n^post5, x^0'=x^post5, (-x^post5+x^post4 == 0 /\ 1-n^0 <= 0 /\ -n^post5+n^post4 == 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 4
+	
+	Eliminating location l1 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l0 -> l1 : n^0'=n^post1, x^0'=x^post1, (x^0-x^post1 == 0 /\ -n^post1+n^0 == 0), cost: 1
+	Second rule:
+	l1 -> l0 : n^0'=n^post2, x^0'=x^post2, (-x^post2+x^0 == 0 /\ n^0-n^post2 == 0), cost: 1
+	New rule:
+	l0 -> l0 : n^0'=n^post2, x^0'=x^post2, (n^post1-n^post2 == 0 /\ x^0-x^post1 == 0 /\ -n^post1+n^0 == 0 /\ -x^post2+x^post1 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l5
+Program variables: n^0 x^0
+  13: l0 -> l0 : T, cost: 1
+  10: l2 -> l0 : x^0'=1, n^0 <= 0, cost: 1
+  12: l2 -> l2 : 1-n^0 <= 0, cost: 1
+  11: l5 -> l2 : n^0'=n^post6, x^0'=1, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l0 : n^0'=n^post3, x^0'=x^post3, (-1+x^post3 == 0 /\ n^0-n^post3 == 0 /\ x^1 == 0 /\ n^0 <= 0), cost: 1
+	New rule:
+	l2 -> l0 : n^0'=n^0, x^0'=1, (0 == 0 /\ x^1 == 0 /\ n^0 <= 0), cost: 1
+	
+		propagated equality x^post3 = 1
+		
+		propagated equality n^post3 = n^0
+		
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l0 : n^0'=n^0, x^0'=1, (0 == 0 /\ x^1 == 0 /\ n^0 <= 0), cost: 1
+	New rule:
+	l2 -> l0 : n^0'=n^0, x^0'=1, (0 == 0 /\ n^0 <= 0), cost: 1
+	
+		propagated equality x^1 = 0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l0 : n^0'=n^0, x^0'=1, (0 == 0 /\ n^0 <= 0), cost: 1
+	New rule:
+	l2 -> l0 : n^0'=n^0, x^0'=1, n^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l2 -> l0 : n^0'=n^0, x^0'=1, n^0 <= 0, cost: 1
+	New rule:
+	l2 -> l0 : x^0'=1, n^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=x^post6, (0 == 0 /\ x^0-x^post7 == 0 /\ -n^post7+n^0 == 0 /\ -1+x^post6 == 0), cost: 1
+	New rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=1, (0 == 0 /\ x^0-x^post7 == 0 /\ -n^post7+n^0 == 0), cost: 1
+	
+		propagated equality x^post6 = 1
+		
+	Propagated Equalities
+
+	Original rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=1, (0 == 0 /\ x^0-x^post7 == 0 /\ -n^post7+n^0 == 0), cost: 1
+	New rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=1, 0 == 0, cost: 1
+	
+		propagated equality x^post7 = x^0
+		
+		propagated equality n^post7 = n^0
+		
+	Simplified Guard
+
+	Original rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=1, 0 == 0, cost: 1
+	New rule:
+	l5 -> l2 : n^0'=n^post6, x^0'=1, T, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l2 : n^0'=n^post5, x^0'=x^post5, (-x^post5+x^post4 == 0 /\ 1-n^0 <= 0 /\ -n^post5+n^post4 == 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+	New rule:
+	l2 -> l2 : n^0'=n^post4, x^0'=x^post4, (0 == 0 /\ 1-n^0 <= 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+	
+		propagated equality x^post5 = x^post4
+		
+		propagated equality n^post5 = n^post4
+		
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l2 : n^0'=n^post4, x^0'=x^post4, (0 == 0 /\ 1-n^0 <= 0 /\ x^0-x^post4 == 0 /\ -n^post4+n^0 == 0), cost: 1
+	New rule:
+	l2 -> l2 : n^0'=n^0, x^0'=x^0, (0 == 0 /\ 1-n^0 <= 0), cost: 1
+	
+		propagated equality x^post4 = x^0
+		
+		propagated equality n^post4 = n^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l2 : n^0'=n^0, x^0'=x^0, (0 == 0 /\ 1-n^0 <= 0), cost: 1
+	New rule:
+	l2 -> l2 : n^0'=n^0, x^0'=x^0, 1-n^0 <= 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l2 -> l2 : n^0'=n^0, x^0'=x^0, 1-n^0 <= 0, cost: 1
+	New rule:
+	l2 -> l2 : 1-n^0 <= 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : n^0'=n^post2, x^0'=x^post2, (n^post1-n^post2 == 0 /\ x^0-x^post1 == 0 /\ -n^post1+n^0 == 0 /\ -x^post2+x^post1 == 0), cost: 1
+	New rule:
+	l0 -> l0 : n^0'=n^post1, x^0'=x^post1, (0 == 0 /\ x^0-x^post1 == 0 /\ -n^post1+n^0 == 0), cost: 1
+	
+		propagated equality n^post2 = n^post1
+		
+		propagated equality x^post2 = x^post1
+		
+	Propagated Equalities
+
+	Original rule:
+	l0 -> l0 : n^0'=n^post1, x^0'=x^post1, (0 == 0 /\ x^0-x^post1 == 0 /\ -n^post1+n^0 == 0), cost: 1
+	New rule:
+	l0 -> l0 : n^0'=n^0, x^0'=x^0, 0 == 0, cost: 1
+	
+		propagated equality x^post1 = x^0
+		
+		propagated equality n^post1 = n^0
+		
+	Simplified Guard
+
+	Original rule:
+	l0 -> l0 : n^0'=n^0, x^0'=x^0, 0 == 0, cost: 1
+	New rule:
+	l0 -> l0 : n^0'=n^0, x^0'=x^0, T, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	l0 -> l0 : n^0'=n^0, x^0'=x^0, T, cost: 1
+	New rule:
+	l0 -> l0 : T, cost: 1
+
+Step with 11
+
+	Trace
+
+	11[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 10
+
+	Trace
+
+	11[T], 10[(n^0 <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 13
+
+	Trace
+
+	11[T], 10[(n^0 <= 0)], 13[T]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Nonterm
+
+Start location: l5
+Program variables: n^0 x^0
+  13: l0 -> l0 : T, cost: 1
+  14: l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+  10: l2 -> l0 : x^0'=1, n^0 <= 0, cost: 1
+  12: l2 -> l2 : 1-n^0 <= 0, cost: 1
+  11: l5 -> l2 : n^0'=n^post6, x^0'=1, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	l0 -> l0 : T, cost: 1
+	New rule:
+	l0 -> LoAT_sink : -1+n >= 0, cost: NONTERM
+
+		Replacement map: {}
+
+Step with 14
+
+	Trace
+
+	11[T], 10[(n^0 <= 0)], 14[-1+n >= 0]
+	
+	Blocked
+
+	[{}, {}, {}, {14[T]}]
+
+Refute
+
+	Counterexample
+
+	[ n^0=0 x^0=1 ] 11 [ n^0=0 x^0=1 ] 10 [ n^0=n^0 x^0=x^0 ] 14
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

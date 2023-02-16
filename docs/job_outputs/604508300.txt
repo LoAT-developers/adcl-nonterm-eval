@@ -1,0 +1,225 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l19, true>
+<l1, l2, (2 <= (0 + n^0))>
+<l1, l2, ((1 + n^0) <= 1)>
+<l1, l3, ((0 + n^0) <= 1) /\ (1 <= (0 + n^0))>
+<l4, l5, ((1 + m2^0) <= (0 + j^0)), par{m^0 -> (1 + m^0)}>
+<l4, l6, ((0 + j^0) <= (0 + m2^0)) /\ (undef80 = undef80) /\ (undef81 = undef81) /\ (undef83 = undef83) /\ (undef84 = undef84), par{j^0 -> (1 + j^0), k^0 -> (~(1) + k^0), pt1^0 -> undef80, pt2^0 -> undef81, qt1^0 -> undef83, qt2^0 -> undef84, tmp^0 -> (0 + k^0)}>
+<l5, l7, true>
+<l8, l9, true>
+<l10, l6, ((1 + m^0) <= (0 + j^0)) /\ (undef130 = undef130) /\ (undef133 = undef133) /\ (undef136 = undef136), par{j^0 -> 1, k^0 -> (0 + m^0), m2^0 -> undef130, pp^0 -> undef133, qq^0 -> undef136}>
+<l10, l11, ((0 + j^0) <= (0 + m^0)) /\ (undef159 = undef159) /\ (undef160 = undef160) /\ (undef158 = undef158), par{j^0 -> (1 + j^0), sgd^0 -> undef158, sgn^0 -> undef159, shn^0 -> undef160}>
+<l12, l11, (undef177 = undef177) /\ (undef178 = undef178) /\ (undef176 = undef176), par{j^0 -> 1, sgd^0 -> undef176, sgn^0 -> undef177, shn^0 -> undef178}>
+<l13, l14, true>
+<l15, l12, ((1 + n^0) <= (0 + m1^0))>
+<l15, l12, ((1 + m1^0) <= (0 + n^0))>
+<l15, l3, ((0 + m1^0) <= (0 + n^0)) /\ ((0 + n^0) <= (0 + m1^0))>
+<l14, l15, ((1 + m^0) <= (0 + j^0))>
+<l14, l13, ((0 + j^0) <= (0 + m^0)), par{j^0 -> (1 + j^0)}>
+<l16, l13, true, par{j^0 -> 1}>
+<l11, l10, true>
+<l17, l16, (1 <= (0 + sd^0))>
+<l17, l16, ((1 + sd^0) <= 0)>
+<l17, l16, ((0 + sd^0) <= 0) /\ (0 <= (0 + sd^0))>
+<l9, l17, ((1 + m^0) <= (0 + j^0))>
+<l9, l8, ((0 + j^0) <= (0 + m^0)) /\ (undef413 = undef413) /\ (undef409 = undef409), par{j^0 -> (1 + j^0), sd^0 -> undef409, sxn^0 -> undef413}>
+<l6, l4, true>
+<l7, l3, ((1 + n^0) <= (0 + m^0))>
+<l7, l8, ((0 + m^0) <= (0 + n^0)) /\ (undef467 = undef467) /\ (undef463 = undef463), par{j^0 -> 1, m1^0 -> (1 + m^0), sd^0 -> undef463, sxn^0 -> undef467}>
+<l2, l5, true, par{m^0 -> 1}>
+<l18, l1, true>
+<l19, l18, true>
+
+Fresh variables:
+undef80, undef81, undef83, undef84, undef130, undef133, undef136, undef158, undef159, undef160, undef176, undef177, undef178, undef409, undef413, undef463, undef467, 
+
+Undef variables:
+undef80, undef81, undef83, undef84, undef130, undef133, undef136, undef158, undef159, undef160, undef176, undef177, undef178, undef409, undef413, undef463, undef467, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l8, (2 <= (0 + n^0)) /\ ((0 + 1) <= (0 + n^0)) /\ (undef467 = undef467) /\ (undef463 = undef463), par{j^0 -> 1, m1^0 -> (1 + 1), m^0 -> 1, sd^0 -> undef463}>
+<l0, l3, ((1 + n^0) <= 1) /\ ((1 + n^0) <= (0 + 1)), par{m^0 -> 1}>
+<l0, l3, ((0 + n^0) <= 1) /\ (1 <= (0 + n^0))>
+<l6, l3, ((1 + m2^0) <= (0 + j^0)) /\ ((1 + n^0) <= (0 + (1 + m^0))), par{m^0 -> (1 + m^0)}>
+<l6, l8, ((1 + m2^0) <= (0 + j^0)) /\ ((0 + (1 + m^0)) <= (0 + n^0)) /\ (undef467 = undef467) /\ (undef463 = undef463), par{j^0 -> 1, m1^0 -> (1 + (1 + m^0)), m^0 -> (1 + m^0), sd^0 -> undef463}>
+<l6, l6, ((0 + j^0) <= (0 + m2^0)) /\ (undef80 = undef80) /\ (undef81 = undef81) /\ (undef83 = undef83) /\ (undef84 = undef84), par{j^0 -> (1 + j^0), k^0 -> (~(1) + k^0)}>
+<l8, l13, ((1 + m^0) <= (0 + j^0)) /\ (1 <= (0 + sd^0)), par{j^0 -> 1}>
+<l8, l13, ((1 + m^0) <= (0 + j^0)) /\ ((1 + sd^0) <= 0), par{j^0 -> 1}>
+<l8, l13, ((1 + m^0) <= (0 + j^0)) /\ ((0 + sd^0) <= 0) /\ (0 <= (0 + sd^0)), par{j^0 -> 1}>
+<l8, l8, ((0 + j^0) <= (0 + m^0)) /\ (undef413 = undef413) /\ (undef409 = undef409), par{j^0 -> (1 + j^0), sd^0 -> undef409}>
+<l11, l6, ((1 + m^0) <= (0 + j^0)) /\ (undef130 = undef130) /\ (undef133 = undef133) /\ (undef136 = undef136), par{j^0 -> 1, k^0 -> (0 + m^0), m2^0 -> undef130}>
+<l11, l11, ((0 + j^0) <= (0 + m^0)) /\ (undef159 = undef159) /\ (undef160 = undef160) /\ (undef158 = undef158), par{j^0 -> (1 + j^0)}>
+<l13, l11, ((1 + m^0) <= (0 + j^0)) /\ ((1 + n^0) <= (0 + m1^0)) /\ (undef177 = undef177) /\ (undef178 = undef178) /\ (undef176 = undef176), par{j^0 -> 1}>
+<l13, l11, ((1 + m^0) <= (0 + j^0)) /\ ((1 + m1^0) <= (0 + n^0)) /\ (undef177 = undef177) /\ (undef178 = undef178) /\ (undef176 = undef176), par{j^0 -> 1}>
+<l13, l3, ((1 + m^0) <= (0 + j^0)) /\ ((0 + m1^0) <= (0 + n^0)) /\ ((0 + n^0) <= (0 + m1^0))>
+<l13, l13, ((0 + j^0) <= (0 + m^0)), par{j^0 -> (1 + j^0)}>
+
+Fresh variables:
+undef80, undef81, undef83, undef84, undef130, undef133, undef136, undef158, undef159, undef160, undef176, undef177, undef178, undef409, undef413, undef463, undef467, 
+
+Undef variables:
+undef80, undef81, undef83, undef84, undef130, undef133, undef136, undef158, undef159, undef160, undef176, undef177, undef178, undef409, undef413, undef463, undef467, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l6, l8, 1 + m2^0 <= j^0 /\ 1 + m^0 <= n^0, {j^0 -> 1, m1^0 -> 2 + m^0, m^0 -> 1 + m^0, sd^0 -> undef463, rest remain the same}>
+<l6, l6, j^0 <= m2^0, {j^0 -> 1 + j^0, k^0 -> -1 + k^0, rest remain the same}>
+<l8, l13, 1 + m^0 <= j^0 /\ 1 <= sd^0, {j^0 -> 1, rest remain the same}>
+<l8, l13, 1 + m^0 <= j^0 /\ 1 + sd^0 <= 0, {j^0 -> 1, rest remain the same}>
+<l8, l13, 1 + m^0 <= j^0 /\ sd^0 = 0, {j^0 -> 1, rest remain the same}>
+<l8, l8, j^0 <= m^0, {j^0 -> 1 + j^0, sd^0 -> undef409, rest remain the same}>
+<l11, l6, 1 + m^0 <= j^0, {j^0 -> 1, k^0 -> m^0, m2^0 -> undef130, rest remain the same}>
+<l11, l11, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+<l13, l11, 1 + m^0 <= j^0 /\ 1 + n^0 <= m1^0, {j^0 -> 1, rest remain the same}>
+<l13, l11, 1 + m^0 <= j^0 /\ 1 + m1^0 <= n^0, {j^0 -> 1, rest remain the same}>
+<l13, l13, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0, m1^0, m2^0, m^0, n^0, sd^0, k^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l8, 2 <= n^0, {j^0 -> 1, m1^0 -> 2, m^0 -> 1, sd^0 -> undef463, rest remain the same}>
+
+Graph 2
+<l0, l3, n^0 <= 0, {m^0 -> 1, rest remain the same}>
+<l0, l3, n^0 = 1, {all remain the same}>
+<l6, l3, n^0 <= m^0 /\ 1 + m2^0 <= j^0, {m^0 -> 1 + m^0, rest remain the same}>
+<l13, l3, 1 + m^0 <= j^0 /\ m1^0 = n^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 3 , 2 )
+( 6 , 1 )
+( 8 , 1 )
+( 11 , 1 )
+( 13 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 4.00057
+
+Checking conditional termination of SCC {l6, l8, l11, l13}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.010661s
+[33mRanking function: [36m-3 - 3*m^0 + 3*n^0[0m
+New Graphs: 
+Transitions:
+<l8, l8, j^0 <= m^0, {j^0 -> 1 + j^0, sd^0 -> undef409, rest remain the same}>
+Variables:
+j^0, m^0, sd^0
+Transitions:
+<l13, l13, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0, m^0
+Transitions:
+<l11, l11, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0, m^0
+Transitions:
+<l6, l6, j^0 <= m2^0, {j^0 -> 1 + j^0, k^0 -> -1 + k^0, rest remain the same}>
+Variables:
+j^0, k^0, m2^0
+Checking conditional termination of SCC {l8}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000570s
+[33mRanking function: [36m-j^0 + m^0[0m
+New Graphs: 
+Transitions:
+<l13, l13, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0, m^0
+Transitions:
+<l11, l11, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0, m^0
+Transitions:
+<l6, l6, j^0 <= m2^0, {j^0 -> 1 + j^0, k^0 -> -1 + k^0, rest remain the same}>
+Variables:
+j^0, k^0, m2^0
+Checking conditional termination of SCC {l13}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000495s
+[33mRanking function: [36m-j^0 + m^0[0m
+New Graphs: 
+Transitions:
+<l11, l11, j^0 <= m^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+j^0, m^0
+Transitions:
+<l6, l6, j^0 <= m2^0, {j^0 -> 1 + j^0, k^0 -> -1 + k^0, rest remain the same}>
+Variables:
+j^0, k^0, m2^0
+Checking conditional termination of SCC {l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000488s
+[33mRanking function: [36m-j^0 + m^0[0m
+New Graphs: 
+Transitions:
+<l6, l6, j^0 <= m2^0, {j^0 -> 1 + j^0, k^0 -> -1 + k^0, rest remain the same}>
+Variables:
+j^0, k^0, m2^0
+Checking conditional termination of SCC {l6}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000533s
+[33mRanking function: [36m-j^0 + m2^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Analyzing SCC {l3}...
+No cycles found.
+
+[32mProgram Terminates[0m

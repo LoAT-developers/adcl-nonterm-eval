@@ -1,0 +1,205 @@
+NO
+
+Initial ITS
+
+Start location: [1]
+Program variables: a b r
+   0: [1] -> [2] : a'=nondet, T, cost: 1
+   1: [2] -> [3] : b'=nondet1, T, cost: 1
+   2: [3] -> [4] : b > 0, cost: 1
+   7: [3] -> [8] : b <= 0, cost: 1
+   3: [4] -> [5] : r'=nondet2, T, cost: 1
+   4: [5] -> [6] : b'=-1-r+a, T, cost: 1
+   5: [6] -> [7] : a'=-1-r+a, T, cost: 1
+   6: [7] -> [3] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: a b r
+   8: [1] -> [3] : a'=nondet, b'=nondet1, T, cost: 1
+   7: [3] -> [8] : b <= 0, cost: 1
+  12: [3] -> [3] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : a'=nondet, T, cost: 1
+	Second rule:
+	[2] -> [3] : b'=nondet1, T, cost: 1
+	New rule:
+	[1] -> [3] : a'=nondet, b'=nondet1, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [4] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [4] : b > 0, cost: 1
+	Second rule:
+	[4] -> [5] : r'=nondet2, T, cost: 1
+	New rule:
+	[3] -> [5] : r'=nondet2, b > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 3
+	
+	Eliminating location [5] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [5] : r'=nondet2, b > 0, cost: 1
+	Second rule:
+	[5] -> [6] : b'=-1-r+a, T, cost: 1
+	New rule:
+	[3] -> [6] : b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 9
+	
+	Eliminating location [6] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [6] : b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+	Second rule:
+	[6] -> [7] : a'=-1-r+a, T, cost: 1
+	New rule:
+	[3] -> [7] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 5 10
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[3] -> [7] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+	Second rule:
+	[7] -> [3] : T, cost: 1
+	New rule:
+	[3] -> [3] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 11
+
+Step with 8
+
+	Trace
+
+	8[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 7
+
+	Trace
+
+	8[T], 7[(b <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	8[T]
+	
+	Blocked
+
+	[{}, {7[T]}]
+
+Step with 12
+
+	Trace
+
+	8[T], 12[(b > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {}]
+
+Nonterm
+
+Start location: [1]
+Program variables: a b r
+   8: [1] -> [3] : a'=nondet, b'=nondet1, T, cost: 1
+   7: [3] -> [8] : b <= 0, cost: 1
+  12: [3] -> [3] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, b > 0, cost: 1
+  13: [3] -> LoAT_sink : (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ -1+n >= 0 /\ b > 0), cost: NONTERM
+  14: [3] -> [3] : a'=(1+b-a)*n-n+a, b'=1+(1+b-a)*(-1+n)-n+b, r'=-1-b+a, (-b+a == 0 /\ -1+n >= 0 /\ b > 0), cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	[3] -> [3] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, (b > 0), cost: 1
+	New rule:
+	[3] -> LoAT_sink : (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ -1+n >= 0 /\ b > 0), cost: NONTERM
+
+		b > 0 [0]: fixpoint yields (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ b > 0)
+		
+		Replacement map: {b > 0 -> (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ b > 0)}
+
+	Loop Acceleration
+
+	Original rule:
+	[3] -> [3] : a'=-1-nondet2+a, b'=-1-nondet2+a, r'=nondet2, (b > 0), cost: 1
+	New rule:
+	[3] -> [3] : a'=-n-nondet2*n+a, b'=-nondet2*(-1+n)-nondet2-n+a, r'=nondet2, (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ -1+n >= 0 /\ b > 0), cost: 1
+
+		b > 0 [0]: fixpoint yields (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ b > 0)
+		
+		Replacement map: {b > 0 -> (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ b > 0)}
+
+	Propagated Equalities
+
+	Original rule:
+	[3] -> [3] : a'=-n-nondet2*n+a, b'=-nondet2*(-1+n)-nondet2-n+a, r'=nondet2, (0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ -1+n >= 0 /\ b > 0), cost: 1
+	New rule:
+	[3] -> [3] : a'=(1+b-a)*n-n+a, b'=1+(1+b-a)*(-1+n)-n+b, r'=-1-b+a, (0 == 0 /\ -b+a == 0 /\ -1+n >= 0 /\ b > 0), cost: 1
+	
+		propagated equality nondet2 = -1-b+a
+		
+	Simplified Guard
+
+	Original rule:
+	[3] -> [3] : a'=(1+b-a)*n-n+a, b'=1+(1+b-a)*(-1+n)-n+b, r'=-1-b+a, (0 == 0 /\ -b+a == 0 /\ -1+n >= 0 /\ b > 0), cost: 1
+	New rule:
+	[3] -> [3] : a'=(1+b-a)*n-n+a, b'=1+(1+b-a)*(-1+n)-n+b, r'=-1-b+a, (-b+a == 0 /\ -1+n >= 0 /\ b > 0), cost: 1
+
+Step with 13
+
+	Trace
+
+	8[T], 13[(0 == 0 /\ 1+nondet2+b-a == 0 /\ 1+nondet2 == 0 /\ -1+n >= 0 /\ b > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {13[T]}]
+
+Refute
+
+	Counterexample
+
+	[ a=1 b=1 r=0 ] 8 [ a=a b=b r=0 ] 13
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

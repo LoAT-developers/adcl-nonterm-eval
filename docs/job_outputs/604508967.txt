@@ -1,0 +1,2964 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l26, true>
+<l1, l2, true>
+<l3, l4, true>
+<l5, l6, true>
+<l7, l8, ((1 + ip3^0) <= (0 + i2^0)), par{i1^0 -> (2 + i1^0)}>
+<l7, l9, ((0 + i2^0) <= (0 + ip3^0)) /\ (undef121 = (0 + i2^0)) /\ (undef129 = undef129) /\ (undef128 = undef128), par{i2^0 -> ((0 + i2^0) + ifp2^0), k1^0 -> undef121, k2^0 -> ((0 + ifp1^0) + undef121), tempi^0 -> undef128, tempr^0 -> undef129}>
+<l10, l11, (((~(1) + i3^0) + ip1^0) <= (0 + i1^0)) /\ (undef161 = undef161) /\ (undef158 = undef158), par{i3^0 -> ((0 + i3^0) + ip1^0), wi^0 -> undef158, wr^0 -> undef161, wtemp^0 -> (0 + wr^0)}>
+<l10, l9, ((0 + i1^0) <= ((~(2) + i3^0) + ip1^0))>
+<l12, l13, ((1 + ifp1^0) <= (0 + i3^0)), par{ifp1^0 -> (0 + ifp2^0)}>
+<l12, l8, ((0 + i3^0) <= (0 + ifp1^0))>
+<l14, l15, true>
+<l16, l17, ((0 + ip2^0) <= (0 + ifp1^0)) /\ (undef287 = undef287), par{idim^0 -> (~(1) + idim^0), nprev^0 -> undef287}>
+<l16, l11, ((1 + ifp1^0) <= (0 + ip2^0)) /\ (undef306 = undef306) /\ (undef319 = undef319) /\ (undef324 = undef324) /\ (undef322 = undef322) /\ (undef321 = undef321), par{ifp2^0 -> undef306, theta^0 -> undef319, wi^0 -> 0, wpi^0 -> undef321, wpr^0 -> undef322, wr^0 -> 1, wtemp^0 -> undef324}>
+<l18, l1, true, par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0)}>
+<l13, l16, true>
+<l19, l18, ((0 + i2rev^0) <= (0 + ibit^0))>
+<l19, l14, ((1 + ibit^0) <= (0 + i2rev^0)) /\ (undef411 = undef411), par{i2rev^0 -> ((0 + i2rev^0) + (~(1) * ibit^0)), ibit^0 -> undef411}>
+<l15, l18, ((1 + ibit^0) <= (0 + ip1^0))>
+<l15, l19, ((0 + ip1^0) <= (0 + ibit^0))>
+<l20, l14, (undef492 = undef492), par{ibit^0 -> undef492}>
+<l11, l12, true>
+<l6, l3, ((1 + ip3^0) <= (0 + i3^0)), par{i1^0 -> (2 + i1^0)}>
+<l6, l5, ((0 + i3^0) <= (0 + ip3^0)) /\ (undef595 = undef595) /\ (undef588 = undef588), par{i3^0 -> ((0 + i3^0) + ip2^0), i3rev^0 -> (((0 + (~(1) * i2^0)) + i2rev^0) + i3^0), tempr^0 -> undef588}>
+<l8, l10, true>
+<l4, l20, (((~(1) + i2^0) + ip1^0) <= (0 + i1^0))>
+<l4, l5, ((0 + i1^0) <= ((~(2) + i2^0) + ip1^0))>
+<l21, l20, ((0 + i2rev^0) <= (0 + i2^0))>
+<l21, l3, ((1 + i2^0) <= (0 + i2rev^0))>
+<l2, l13, ((1 + ip2^0) <= (0 + i2^0)), par{ifp1^0 -> (0 + ip1^0)}>
+<l2, l21, ((0 + i2^0) <= (0 + ip2^0))>
+<l9, l7, true>
+<l22, l23, ((1 + idim^0) <= 1)>
+<l22, l1, (1 <= (0 + idim^0)) /\ (undef853 = undef853) /\ (undef856 = undef856) /\ (undef848 = undef848) /\ (undef849 = undef849) /\ (undef850 = undef850), par{i2rev^0 -> 1, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, n^0 -> undef853, nrem^0 -> undef856}>
+<l24, l17, ((1 + ndim^0) <= (0 + idim^0)), par{nprev^0 -> 1}>
+<l24, l25, ((0 + idim^0) <= (0 + ndim^0)) /\ (undef911 = undef911), par{idim^0 -> (1 + idim^0), ntot^0 -> undef911}>
+<l17, l22, true>
+<l25, l24, true>
+<l26, l25, true>
+
+Fresh variables:
+undef121, undef128, undef129, undef158, undef161, undef287, undef306, undef319, undef321, undef322, undef324, undef411, undef492, undef588, undef595, undef848, undef849, undef850, undef853, undef856, undef911, 
+
+Undef variables:
+undef121, undef128, undef129, undef158, undef161, undef287, undef306, undef319, undef321, undef322, undef324, undef411, undef492, undef588, undef595, undef848, undef849, undef850, undef853, undef856, undef911, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l25, true>
+<l5, l14, ((1 + ip3^0) <= (0 + i3^0)) /\ (((~(1) + i2^0) + ip1^0) <= (0 + (2 + i1^0))) /\ (undef492 = undef492), par{i1^0 -> (2 + i1^0), ibit^0 -> undef492}>
+<l5, l5, ((1 + ip3^0) <= (0 + i3^0)) /\ ((0 + (2 + i1^0)) <= ((~(2) + i2^0) + ip1^0)), par{i1^0 -> (2 + i1^0)}>
+<l5, l5, ((0 + i3^0) <= (0 + ip3^0)) /\ (undef595 = undef595) /\ (undef588 = undef588), par{i3^0 -> ((0 + i3^0) + ip2^0)}>
+<l9, l11, ((1 + ip3^0) <= (0 + i2^0)) /\ (((~(1) + i3^0) + ip1^0) <= (0 + (2 + i1^0))) /\ (undef161 = undef161) /\ (undef158 = undef158), par{i1^0 -> (2 + i1^0), i3^0 -> ((0 + i3^0) + ip1^0), wr^0 -> undef161}>
+<l9, l9, ((1 + ip3^0) <= (0 + i2^0)) /\ ((0 + (2 + i1^0)) <= ((~(2) + i3^0) + ip1^0)), par{i1^0 -> (2 + i1^0)}>
+<l9, l9, ((0 + i2^0) <= (0 + ip3^0)) /\ (undef121 = (0 + i2^0)) /\ (undef129 = undef129) /\ (undef128 = undef128), par{i2^0 -> ((0 + i2^0) + ifp2^0)}>
+<l11, l17, ((1 + ifp1^0) <= (0 + i3^0)) /\ ((0 + ip2^0) <= (0 + (0 + ifp2^0))) /\ (undef287 = undef287), par{idim^0 -> (~(1) + idim^0), ifp1^0 -> (0 + ifp2^0)}>
+<l11, l11, ((1 + ifp1^0) <= (0 + i3^0)) /\ ((1 + (0 + ifp2^0)) <= (0 + ip2^0)) /\ (undef306 = undef306) /\ (undef319 = undef319) /\ (undef324 = undef324) /\ (undef322 = undef322) /\ (undef321 = undef321), par{ifp1^0 -> (0 + ifp2^0), ifp2^0 -> undef306, wr^0 -> 1}>
+<l11, l11, ((0 + i3^0) <= (0 + ifp1^0)) /\ (((~(1) + i3^0) + ip1^0) <= (0 + i1^0)) /\ (undef161 = undef161) /\ (undef158 = undef158), par{i3^0 -> ((0 + i3^0) + ip1^0), wr^0 -> undef161}>
+<l11, l9, ((0 + i3^0) <= (0 + ifp1^0)) /\ ((0 + i1^0) <= ((~(2) + i3^0) + ip1^0))>
+<l14, l17, ((1 + ibit^0) <= (0 + ip1^0)) /\ ((1 + ip2^0) <= (0 + ((0 + i2^0) + ip1^0))) /\ ((0 + ip2^0) <= (0 + (0 + ip1^0))) /\ (undef287 = undef287), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), idim^0 -> (~(1) + idim^0), ifp1^0 -> (0 + ip1^0)}>
+<l14, l11, ((1 + ibit^0) <= (0 + ip1^0)) /\ ((1 + ip2^0) <= (0 + ((0 + i2^0) + ip1^0))) /\ ((1 + (0 + ip1^0)) <= (0 + ip2^0)) /\ (undef306 = undef306) /\ (undef319 = undef319) /\ (undef324 = undef324) /\ (undef322 = undef322) /\ (undef321 = undef321), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), ifp1^0 -> (0 + ip1^0), ifp2^0 -> undef306, wr^0 -> 1}>
+<l14, l14, ((1 + ibit^0) <= (0 + ip1^0)) /\ ((0 + ((0 + i2^0) + ip1^0)) <= (0 + ip2^0)) /\ ((0 + ((0 + i2rev^0) + ibit^0)) <= (0 + ((0 + i2^0) + ip1^0))) /\ (undef492 = undef492), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), ibit^0 -> undef492}>
+<l14, l14, ((1 + ibit^0) <= (0 + ip1^0)) /\ ((0 + ((0 + i2^0) + ip1^0)) <= (0 + ip2^0)) /\ ((1 + ((0 + i2^0) + ip1^0)) <= (0 + ((0 + i2rev^0) + ibit^0))) /\ (((~(1) + ((0 + i2^0) + ip1^0)) + ip1^0) <= (0 + i1^0)) /\ (undef492 = undef492), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), ibit^0 -> undef492}>
+<l14, l5, ((1 + ibit^0) <= (0 + ip1^0)) /\ ((0 + ((0 + i2^0) + ip1^0)) <= (0 + ip2^0)) /\ ((1 + ((0 + i2^0) + ip1^0)) <= (0 + ((0 + i2rev^0) + ibit^0))) /\ ((0 + i1^0) <= ((~(2) + ((0 + i2^0) + ip1^0)) + ip1^0)), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0)}>
+<l14, l17, ((0 + ip1^0) <= (0 + ibit^0)) /\ ((0 + i2rev^0) <= (0 + ibit^0)) /\ ((1 + ip2^0) <= (0 + ((0 + i2^0) + ip1^0))) /\ ((0 + ip2^0) <= (0 + (0 + ip1^0))) /\ (undef287 = undef287), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), idim^0 -> (~(1) + idim^0), ifp1^0 -> (0 + ip1^0)}>
+<l14, l11, ((0 + ip1^0) <= (0 + ibit^0)) /\ ((0 + i2rev^0) <= (0 + ibit^0)) /\ ((1 + ip2^0) <= (0 + ((0 + i2^0) + ip1^0))) /\ ((1 + (0 + ip1^0)) <= (0 + ip2^0)) /\ (undef306 = undef306) /\ (undef319 = undef319) /\ (undef324 = undef324) /\ (undef322 = undef322) /\ (undef321 = undef321), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), ifp1^0 -> (0 + ip1^0), ifp2^0 -> undef306, wr^0 -> 1}>
+<l14, l14, ((0 + ip1^0) <= (0 + ibit^0)) /\ ((0 + i2rev^0) <= (0 + ibit^0)) /\ ((0 + ((0 + i2^0) + ip1^0)) <= (0 + ip2^0)) /\ ((0 + ((0 + i2rev^0) + ibit^0)) <= (0 + ((0 + i2^0) + ip1^0))) /\ (undef492 = undef492), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), ibit^0 -> undef492}>
+<l14, l14, ((0 + ip1^0) <= (0 + ibit^0)) /\ ((0 + i2rev^0) <= (0 + ibit^0)) /\ ((0 + ((0 + i2^0) + ip1^0)) <= (0 + ip2^0)) /\ ((1 + ((0 + i2^0) + ip1^0)) <= (0 + ((0 + i2rev^0) + ibit^0))) /\ (((~(1) + ((0 + i2^0) + ip1^0)) + ip1^0) <= (0 + i1^0)) /\ (undef492 = undef492), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0), ibit^0 -> undef492}>
+<l14, l5, ((0 + ip1^0) <= (0 + ibit^0)) /\ ((0 + i2rev^0) <= (0 + ibit^0)) /\ ((0 + ((0 + i2^0) + ip1^0)) <= (0 + ip2^0)) /\ ((1 + ((0 + i2^0) + ip1^0)) <= (0 + ((0 + i2rev^0) + ibit^0))) /\ ((0 + i1^0) <= ((~(2) + ((0 + i2^0) + ip1^0)) + ip1^0)), par{i2^0 -> ((0 + i2^0) + ip1^0), i2rev^0 -> ((0 + i2rev^0) + ibit^0)}>
+<l14, l14, ((0 + ip1^0) <= (0 + ibit^0)) /\ ((1 + ibit^0) <= (0 + i2rev^0)) /\ (undef411 = undef411), par{i2rev^0 -> ((0 + i2rev^0) + (~(1) * ibit^0)), ibit^0 -> undef411}>
+<l17, l23, ((1 + idim^0) <= 1)>
+<l17, l17, (1 <= (0 + idim^0)) /\ (undef853 = undef853) /\ (undef856 = undef856) /\ (undef848 = undef848) /\ (undef849 = undef849) /\ (undef850 = undef850) /\ ((1 + undef849) <= (0 + i2^0)) /\ ((0 + undef849) <= (0 + (0 + undef848))) /\ (undef287 = undef287), par{i2rev^0 -> 1, idim^0 -> (~(1) + idim^0), ifp1^0 -> (0 + undef848), ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850}>
+<l17, l11, (1 <= (0 + idim^0)) /\ (undef853 = undef853) /\ (undef856 = undef856) /\ (undef848 = undef848) /\ (undef849 = undef849) /\ (undef850 = undef850) /\ ((1 + undef849) <= (0 + i2^0)) /\ ((1 + (0 + undef848)) <= (0 + undef849)) /\ (undef306 = undef306) /\ (undef319 = undef319) /\ (undef324 = undef324) /\ (undef322 = undef322) /\ (undef321 = undef321), par{i2rev^0 -> 1, ifp1^0 -> (0 + undef848), ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1}>
+<l17, l14, (1 <= (0 + idim^0)) /\ (undef853 = undef853) /\ (undef856 = undef856) /\ (undef848 = undef848) /\ (undef849 = undef849) /\ (undef850 = undef850) /\ ((0 + i2^0) <= (0 + undef849)) /\ ((0 + 1) <= (0 + i2^0)) /\ (undef492 = undef492), par{i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850}>
+<l17, l14, (1 <= (0 + idim^0)) /\ (undef853 = undef853) /\ (undef856 = undef856) /\ (undef848 = undef848) /\ (undef849 = undef849) /\ (undef850 = undef850) /\ ((0 + i2^0) <= (0 + undef849)) /\ ((1 + i2^0) <= (0 + 1)) /\ (((~(1) + i2^0) + undef848) <= (0 + i1^0)) /\ (undef492 = undef492), par{i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850}>
+<l17, l5, (1 <= (0 + idim^0)) /\ (undef853 = undef853) /\ (undef856 = undef856) /\ (undef848 = undef848) /\ (undef849 = undef849) /\ (undef850 = undef850) /\ ((0 + i2^0) <= (0 + undef849)) /\ ((1 + i2^0) <= (0 + 1)) /\ ((0 + i1^0) <= ((~(2) + i2^0) + undef848)), par{i2rev^0 -> 1, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850}>
+<l25, l17, ((1 + ndim^0) <= (0 + idim^0))>
+<l25, l25, ((0 + idim^0) <= (0 + ndim^0)) /\ (undef911 = undef911), par{idim^0 -> (1 + idim^0)}>
+
+Fresh variables:
+undef121, undef128, undef129, undef158, undef161, undef287, undef306, undef319, undef321, undef322, undef324, undef411, undef492, undef588, undef595, undef848, undef849, undef850, undef853, undef856, undef911, 
+
+Undef variables:
+undef121, undef128, undef129, undef158, undef161, undef287, undef306, undef319, undef321, undef322, undef324, undef411, undef492, undef588, undef595, undef848, undef849, undef850, undef853, undef856, undef911, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l25, l25, idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+Variables:
+idim^0, ndim^0
+
+Graph 2:
+Transitions:
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+<l5, l5, 1 + ip3^0 <= i3^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l5, l5, i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+<l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ ip2^0 <= ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ 1 + ip1^0 <= ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+<l17, l14, 1 <= i2^0 /\ 1 <= idim^0 /\ i2^0 <= undef849, {i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l17, l14, 1 <= idim^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ i2^0 + undef848 <= 1 + i1^0, {i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l17, l5, 1 <= idim^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ 2 + i1^0 <= i2^0 + undef848, {i2rev^0 -> 1, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ibit^0, ip1^0, ip3^0, ip2^0, wr^0, ifp2^0, idim^0, ifp1^0, i2rev^0
+
+Graph 3:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l25, true, {all remain the same}>
+
+Graph 2
+<l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+
+Graph 3
+<l17, l23, idim^0 <= 0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 5 , 2 )
+( 9 , 2 )
+( 11 , 2 )
+( 14 , 2 )
+( 17 , 2 )
+( 23 , 3 )
+( 25 , 1 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.000881
+
+Checking conditional termination of SCC {l25}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000655s
+[33mRanking function: [36m-idim^0 + ndim^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 4.00233
+
+Checking conditional termination of SCC {l5, l9, l11, l14, l17}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.019113s
+[33mRanking function: [36midim^0[0m
+New Graphs: 
+Transitions:
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+<l5, l5, 1 + ip3^0 <= i3^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l5, l5, i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+<l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + undef849 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + undef848 <= undef849 /\ ip2^0 <= ifp2^0 /\ 2 <= idim^0, {i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+<l11, l14, 1 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ i2^0 <= undef849 /\ ip2^0 <= ifp2^0 /\ 2 <= idim^0, {i2rev^0 -> 1, ibit^0 -> undef492, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ifp2^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l11, l14, 1 + ifp1^0 <= i3^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ ip2^0 <= ifp2^0 /\ 2 <= idim^0 /\ i2^0 + undef848 <= 1 + i1^0, {i2rev^0 -> 1, ibit^0 -> undef492, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ifp2^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l11, l5, 1 + ifp1^0 <= i3^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ ip2^0 <= ifp2^0 /\ 2 + i1^0 <= i2^0 + undef848 /\ 2 <= idim^0, {i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ifp2^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + undef849 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ 1 + undef848 <= undef849 /\ ip2^0 <= ip1^0 /\ 2 <= idim^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+<l14, l14, 1 <= i2^0 + ip1^0 /\ 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= undef849 /\ ip2^0 <= ip1^0 /\ 2 <= idim^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, ibit^0 -> undef492, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ip1^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l14, l14, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= 0 /\ i2^0 + ip1^0 <= undef849 /\ ip2^0 <= ip1^0 /\ 2 <= idim^0 /\ i2^0 + ip1^0 + undef848 <= 1 + i1^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, ibit^0 -> undef492, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ip1^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l14, l5, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= 0 /\ i2^0 + ip1^0 <= undef849 /\ ip2^0 <= ip1^0 /\ 2 + i1^0 <= i2^0 + ip1^0 + undef848 /\ 2 <= idim^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ip1^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ 1 + ip1^0 <= ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + undef849 <= i2^0 + ip1^0 /\ 1 + undef848 <= undef849 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0 /\ 2 <= idim^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+<l14, l14, 1 <= i2^0 + ip1^0 /\ 1 + ip2^0 <= i2^0 + ip1^0 /\ i2^0 + ip1^0 <= undef849 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0 /\ 2 <= idim^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, ibit^0 -> undef492, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ip1^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l14, l14, 1 + ip2^0 <= i2^0 + ip1^0 /\ i2^0 + ip1^0 <= 0 /\ i2^0 + ip1^0 <= undef849 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0 /\ 2 <= idim^0 /\ i2^0 + ip1^0 + undef848 <= 1 + i1^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, ibit^0 -> undef492, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ip1^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l14, l5, 1 + ip2^0 <= i2^0 + ip1^0 /\ i2^0 + ip1^0 <= 0 /\ i2^0 + ip1^0 <= undef849 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0 /\ 2 + i1^0 <= i2^0 + ip1^0 + undef848 /\ 2 <= idim^0, {i2^0 -> ((0 + 0) + 0) + i2^0 + ip1^0, i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> ip1^0, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, i3^0, ibit^0, idim^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l5, l9, l11, l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.022098s
+[33mRanking function: [36m4 + idim^0[0m
+New Graphs: 
+Transitions:
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+<l5, l5, 1 + ip3^0 <= i3^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l5, l5, i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, i3^0, ibit^0, ip1^0, ip2^0, ip3^0
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l5, l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003929s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.041423s
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.035244s
+Time used: 0.031477
+Trying to remove transition: <l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.095918s
+Time used: 0.089449
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.052586s
+Time used: 0.040197
+Trying to remove transition: <l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.042236s
+Time used: 0.02993
+Trying to remove transition: <l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.074451s
+Time used: 0.06471
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.058981s
+Time used: 0.046436
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.048230s
+Time used: 0.035771
+Trying to remove transition: <l5, l5, i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.030612s
+Time used: 0.020814
+Trying to remove transition: <l5, l5, 1 + ip3^0 <= i3^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.758191s
+Time used: 0.750847
+Trying to remove transition: <l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.053318s
+Time used: 0.042044
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.279167s
+Time used: 1.26846
+
+LOG: SAT solveNonLinear - Elapsed time: 1.279167s
+Cost: 0; Total time: 1.26846
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l5: i2^0 <= ip2^0[0m
+[36mInvariant at l9: 1 + ip1^0 <= ip2^0[0m
+[36mInvariant at l11: 1 + ip1^0 <= ip2^0[0m
+[36mInvariant at l14: i2^0 <= 1 + ip2^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ ip2^0 <= ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+[33mRanking function: [36m-i1^0 + ip1^0 + ip2^0[0m
+New Graphs: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Transitions:
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+<l5, l5, i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, i3^0, ibit^0, ip1^0, ip2^0, ip3^0
+Checking conditional termination of SCC {l9, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001801s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.014305s
+Trying to remove transition: <l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018529s
+Time used: 0.017337
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027264s
+Time used: 0.023128
+Trying to remove transition: <l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017688s
+Time used: 0.013531
+Trying to remove transition: <l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.375979s
+Time used: 0.373868
+Trying to remove transition: <l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.031544s
+Time used: 0.025967
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.917277s
+Time used: 1.91085
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.001905s
+Time used: 1.0019
+
+LOG: SAT solveNonLinear - Elapsed time: 2.919182s
+Cost: 1; Total time: 2.91275
+[31mFailed at location 17: 1 + idim^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l5: 1 <= 0[0m
+[36mQuasi-invariant at l9: 1 <= 0[0m
+[36mQuasi-invariant at l11: 1 <= 0[0m
+[36mQuasi-invariant at l14: 1 <= 0[0m
+[36mQuasi-invariant at l17: 1 + idim^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.027893s
+Remaining time after improvement: 0.986077
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l5: 1 <= 0[0m
+[36mQuasi-invariant at l9: 1 <= 0[0m
+[36mQuasi-invariant at l11: 1 <= 0[0m
+[36mQuasi-invariant at l14: 1 <= 0[0m
+[36mQuasi-invariant at l17: 1 + idim^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l5, l5, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l5, l5, i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ ip2^0 <= ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l14, 1 <= i2^0 /\ 1 <= idim^0 /\ i2^0 <= undef849, {i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l14, 1 <= idim^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ i2^0 + undef848 <= 1 + i1^0, {i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l5, 1 <= idim^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ 2 + i1^0 <= i2^0 + undef848, {i2rev^0 -> 1, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l9, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+New Graphs: 
+Transitions:
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+<l5, l5, i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, i3^0, ibit^0, ip1^0, ip2^0, ip3^0
+Checking conditional termination of SCC {l5, l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004604s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.067565s
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.045464s
+Time used: 0.040998
+Trying to remove transition: <l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.062360s
+Time used: 0.053794
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.054345s
+Time used: 0.041455
+Trying to remove transition: <l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.044278s
+Time used: 0.032524
+Trying to remove transition: <l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.070131s
+Time used: 0.06002
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.067428s
+Time used: 0.054424
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.052966s
+Time used: 0.040545
+Trying to remove transition: <l5, l5, i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.036925s
+Time used: 0.027703
+Trying to remove transition: <l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.066050s
+Time used: 0.058679
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.023207s
+Time used: 0.005763
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.095542s
+Time used: 0.095036
+
+LOG: SAT solveNonLinear - Elapsed time: 0.095542s
+Cost: 0; Total time: 0.095036
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l5: 1 + i3^0 + ip2^0 <= i2^0 + ip3^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 <= ip2^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l5, l5, 1 + i3^0 + ip2^0 <= i2^0 + ip3^0 /\ i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+New Graphs: 
+Transitions:
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, ibit^0, ip1^0, ip2^0
+Transitions:
+<l5, l5, 1 + i3^0 + ip2^0 <= i2^0 + ip3^0 /\ i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+Variables:
+i2^0, i3^0, ip2^0, ip3^0
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002696s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.031164s
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.018732s
+Time used: 0.016723
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.020460s
+Time used: 0.017728
+Trying to remove transition: <l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.019234s
+Time used: 0.015748
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.022136s
+Time used: 0.019846
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.020019s
+Time used: 0.016667
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007002s
+Time used: 0.00329
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.050794s
+Time used: 0.050431
+
+LOG: SAT solveNonLinear - Elapsed time: 0.050794s
+Cost: 0; Total time: 0.050431
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l14: i2rev^0 <= ibit^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+New Graphs: 
+Transitions:
+<l5, l5, 1 + i3^0 + ip2^0 <= i2^0 + ip3^0 /\ i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+Variables:
+i2^0, i3^0, ip2^0, ip3^0
+Transitions:
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, ibit^0, ip1^0, ip2^0
+Checking conditional termination of SCC {l5}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000617s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002037s
+Trying to remove transition: <l5, l5, 1 + i3^0 + ip2^0 <= i2^0 + ip3^0 /\ i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007372s
+Time used: 0.007261
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.001643s
+Time used: 0.000906
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014197s
+Time used: 0.01413
+
+LOG: SAT solveNonLinear - Elapsed time: 0.014197s
+Cost: 0; Total time: 0.01413
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l5: ip3^0 <= i3^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l5, l5, 1 + i3^0 + ip2^0 <= i2^0 + ip3^0 /\ i2^0 <= ip2^0 /\ i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+New Graphs: 
+Transitions:
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, ibit^0, ip1^0, ip2^0
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003664s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.030754s
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.016476s
+Time used: 0.015041
+Trying to remove transition: <l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015789s
+Time used: 0.013506
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.026102s
+Time used: 0.024206
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.019062s
+Time used: 0.016657
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.005893s
+Time used: 0.003101
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.045418s
+Time used: 0.045113
+
+LOG: SAT solveNonLinear - Elapsed time: 0.045418s
+Cost: 0; Total time: 0.045113
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l14: ip1^0 <= 1 + i2^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+New Graphs: 
+Transitions:
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, ibit^0, ip1^0, ip2^0
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002304s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013913s
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014601s
+Time used: 0.013542
+Trying to remove transition: <l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013813s
+Time used: 0.01202
+Trying to remove transition: <l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015982s
+Time used: 0.014586
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004380s
+Time used: 0.002296
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.043715s
+Time used: 0.04356
+
+LOG: SAT solveNonLinear - Elapsed time: 0.043715s
+Cost: 0; Total time: 0.04356
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l14: 1 + ip2^0 <= i2rev^0 + ip1^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ip2^0 <= i2rev^0 + ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+New Graphs: 
+Transitions:
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ip2^0 <= i2rev^0 + ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, ibit^0, ip1^0, ip2^0
+Checking conditional termination of SCC {l14}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000881s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004277s
+Trying to remove transition: <l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ip2^0 <= i2rev^0 + ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012132s
+Time used: 0.011967
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002424s
+Time used: 0.001322
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.015748s
+Time used: 0.015664
+
+LOG: SAT solveNonLinear - Elapsed time: 0.015748s
+Cost: 0; Total time: 0.015664
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l14: ibit^0 + ip1^0 <= ip2^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ip2^0 <= i2rev^0 + ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0 /\ i2^0 <= 1 + ip2^0 /\ ip1^0 <= 1 + i2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+New Graphs: 
+INVARIANTS: 
+5: i2^0 <= ip2^0 , 
+9: 1 + ip1^0 <= ip2^0 , 
+11: 1 + ip1^0 <= ip2^0 , 
+14: i2^0 <= 1 + ip2^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+5: 
+9: 
+11: 
+14: 
+Calling Safety with literal 1 + idim^0 <= 0 and entry <l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+
+LOG: CALL check - Post:1 + idim^0 <= 0 - Process 1
+* Exit transition: <l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+* Postcondition  : 1 + idim^0 <= 0
+
+FIXED: Entro call 
+FIXED (try DiffLogic): 0
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002698s
+Time used: 4.0026
+FIXED (FARKAS): fail
+FIXED (FARKAS): 4.00415
+
+FIXED: Entro call 
+FIXED (try DiffLogic): 0
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005893s
+Time used: 4.00322
+FIXED (FARKAS): fail
+FIXED (FARKAS): 4.00762
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012066s
+Time used: 0.009583
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.003028s
+Time used: 1.00302
+
+LOG: SAT solveNonLinear - Elapsed time: 1.015093s
+Cost: 51; Total time: 1.0126
+[31mFailed at location 25: 1 + ndim^0 <= idim^0[0m
+Before Improving: 
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013626s
+Remaining time after improvement: 0.998453
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:1 + ndim^0 <= idim^0 - Process 2
+* Exit transition: <l0, l25, true, {all remain the same}>
+* Postcondition  : 1 + ndim^0 <= idim^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002106s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002139s
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.019538s
+Time used: 0.019424
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002449s
+Time used: 1.00244
+
+LOG: SAT solveNonLinear - Elapsed time: 1.021987s
+Cost: 2; Total time: 1.02187
+[31mFailed at location 25: 1 + idim^0 <= 0[0m
+[31mFailed at location 25: 1 + ndim^0 <= idim^0[0m
+Before Improving: 
+[36mQuasi-invariant at l25: 1 + idim^0 <= 0[0m
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003146s
+Remaining time after improvement: 0.998743
+[33mPostcondition implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l25: 1 + idim^0 <= 0[0m
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+Postcondition: 1 + idim^0 <= 0
+
+LOG: CALL check - Post:1 + idim^0 <= 0 - Process 3
+* Exit transition: <l0, l25, true, {all remain the same}>
+* Postcondition  : 1 + idim^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002218s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002247s
+Postcondition: 1 + ndim^0 <= idim^0
+
+LOG: CALL check - Post:1 + ndim^0 <= idim^0 - Process 4
+* Exit transition: <l0, l25, true, {all remain the same}>
+* Postcondition  : 1 + ndim^0 <= idim^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002047s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002077s
+
+LOG: NarrowEntry size 2
+INVARIANTS: 
+25: 
+Quasi-INVARIANTS to narrow Graph: 
+25: 1 + idim^0 <= 0 , 1 + ndim^0 <= idim^0 , 
+Narrowing transition: 
+<l25, l25, idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+ENTRIES:
+<l0, l25, 1 + idim^0 <= 0 /\ idim^0 <= ndim^0, {all remain the same}>
+<l0, l25, 0 <= idim^0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l25, l25, 1 + idim^0 <= 0 /\ idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+<l25, l25, idim^0 <= ndim^0 /\ 0 <= idim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+END GRAPH:
+EXIT: <l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+POST: 1 + idim^0 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003845s
+Time used: 4.00375
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.067949s
+Time used: 0.064627
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002641s
+Time used: 1.00263
+
+LOG: SAT solveNonLinear - Elapsed time: 1.070590s
+Cost: 3; Total time: 1.06725
+[31mFailed at location 25: idim^0 <= 1 + ndim^0[0m
+[31mFailed at location 25: 2 + ndim^0 <= 0[0m
+[31mFailed at location 25: 2 + ndim^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l25: idim^0 <= 1 + ndim^0[0m
+[36mQuasi-invariant at l25: 2 + ndim^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005562s
+Remaining time after improvement: 0.997998
+[33mPostcondition implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l25: idim^0 <= 1 + ndim^0[0m
+[36mQuasi-invariant at l25: 2 + ndim^0 <= 0[0m
+Postcondition: 2 + ndim^0 <= 0
+
+LOG: CALL check - Post:2 + ndim^0 <= 0 - Process 5
+* Exit transition: <l0, l25, 1 + idim^0 <= 0 /\ idim^0 <= ndim^0, {all remain the same}>
+* Postcondition  : 2 + ndim^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002500s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002541s
+Postcondition: idim^0 <= 1 + ndim^0
+
+LOG: CALL check - Post:idim^0 <= 1 + ndim^0 - Process 6
+* Exit transition: <l0, l25, 0 <= idim^0, {all remain the same}>
+* Postcondition  : idim^0 <= 1 + ndim^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002194s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002230s
+Postcondition: 2 + ndim^0 <= 0
+
+LOG: CALL check - Post:2 + ndim^0 <= 0 - Process 7
+* Exit transition: <l0, l25, 0 <= idim^0, {all remain the same}>
+* Postcondition  : 2 + ndim^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001884s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001914s
+
+LOG: NarrowEntry size 1
+
+LOG: NarrowEntry size 2
+INVARIANTS: 
+25: 
+Quasi-INVARIANTS to narrow Graph: 
+25: 2 + ndim^0 <= 0 , idim^0 <= 1 + ndim^0 , 
+Narrowing transition: 
+<l25, l25, 1 + idim^0 <= 0 /\ idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+Narrowing transition: 
+<l25, l25, idim^0 <= ndim^0 /\ 0 <= idim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+ENTRIES:
+<l0, l25, 1 + idim^0 <= 0 /\ idim^0 <= ndim^0 /\ 0 <= 1 + ndim^0, {all remain the same}>
+<l0, l25, 0 <= idim^0 /\ idim^0 <= 1 + ndim^0 /\ 0 <= 1 + ndim^0, {all remain the same}>
+<l0, l25, 0 <= idim^0 /\ 2 + ndim^0 <= idim^0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l25, l25, 1 + idim^0 <= 0 /\ idim^0 <= ndim^0 /\ 0 <= 1 + ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+<l25, l25, idim^0 <= ndim^0 /\ 0 <= idim^0 /\ 0 <= 1 + ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+END GRAPH:
+EXIT: <l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+POST: 1 + idim^0 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.004541s
+Time used: 4.00445
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006870s
+Time used: 4.00339
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005268s
+Time used: 1.00304
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 24.220738s
+INVARIANTS: 
+5: 
+9: 
+11: 
+14: 
+17: 
+Quasi-INVARIANTS to narrow Graph: 
+5: 1 <= 0 , 
+9: 1 <= 0 , 
+11: 1 <= 0 , 
+14: 1 <= 0 , 
+17: 1 + idim^0 <= 0 , 
+INVARIANTS: 
+5: 1 + i3^0 + ip2^0 <= i2^0 + ip3^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+5: 
+INVARIANTS: 
+14: i2rev^0 <= ibit^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+14: 
+INVARIANTS: 
+5: ip3^0 <= i3^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+5: 
+INVARIANTS: 
+14: ip1^0 <= 1 + i2^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+14: 
+INVARIANTS: 
+14: 1 + ip2^0 <= i2rev^0 + ip1^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+14: 
+INVARIANTS: 
+14: ibit^0 + ip1^0 <= ip2^0 , 
+Quasi-INVARIANTS to narrow Graph: 
+14: 
+It's unfeasible. Removing transition: 
+<l5, l14, 1 + ip3^0 <= i3^0 /\ i2^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, ibit^0 -> undef492, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l5, l5, 1 + ip3^0 <= i3^0 /\ 4 + i1^0 <= i2^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l5, l5, i3^0 <= ip3^0, {i3^0 -> i3^0 + ip2^0, rest remain the same}>
+Narrowing transition: 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l9, l9, i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l11, i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l9, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: Narrow transition size 1
+It's unfeasible. Removing transition: 
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ ip2^0 <= ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ibit^0 <= ip1^0 /\ 1 + ip1^0 <= ip2^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ 1 + ibit^0 <= ip1^0 /\ i2^0 + ip1^0 <= ip2^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l17, 1 + ip2^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ ip2^0 <= ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, idim^0 -> -1 + idim^0, ifp1^0 -> ip1^0, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l11, 1 + ip2^0 <= i2^0 + ip1^0 /\ 1 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ifp1^0 -> ip1^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l14, i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 + ibit^0 <= i2^0 + ip1^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ i2^0 + 2*ip1^0 <= 1 + i1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, ibit^0 -> undef492, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l5, 1 + i2^0 + ip1^0 <= i2rev^0 + ibit^0 /\ i2^0 + ip1^0 <= ip2^0 /\ i2rev^0 <= ibit^0 /\ ip1^0 <= ibit^0 /\ 2 + i1^0 <= i2^0 + 2*ip1^0, {i2^0 -> i2^0 + ip1^0, i2rev^0 -> i2rev^0 + ibit^0, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l14, l14, 1 + ibit^0 <= i2rev^0 /\ ip1^0 <= ibit^0, {i2rev^0 -> i2rev^0 - ibit^0, ibit^0 -> undef411, rest remain the same}>
+Narrowing transition: 
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+
+LOG: Narrow transition size 1
+It's unfeasible. Removing transition: 
+<l17, l14, 1 <= i2^0 /\ 1 <= idim^0 /\ i2^0 <= undef849, {i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l17, l14, 1 <= idim^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ i2^0 + undef848 <= 1 + i1^0, {i2rev^0 -> 1, ibit^0 -> undef492, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+It's unfeasible. Removing transition: 
+<l17, l5, 1 <= idim^0 /\ i2^0 <= 0 /\ i2^0 <= undef849 /\ 2 + i1^0 <= i2^0 + undef848, {i2rev^0 -> 1, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+invGraph after Narrowing: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ibit^0, ip1^0, ip3^0, ip2^0, wr^0, ifp2^0, idim^0, ifp1^0, i2rev^0
+Checking conditional termination of SCC {l9, l11, l17}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007420s
+[33mRanking function: [36midim^0[0m
+New Graphs: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + undef849 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 1 + undef848 <= undef849 /\ ip2^0 <= ifp2^0 /\ 2 <= idim^0, {i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, i3^0, idim^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l9, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006691s
+[33mRanking function: [36m4 + idim^0[0m
+New Graphs: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l9, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002888s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.017466s
+Trying to remove transition: <l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.032829s
+Time used: 0.031505
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.038145s
+Time used: 0.031978
+Trying to remove transition: <l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.035217s
+Time used: 0.029093
+Trying to remove transition: <l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.497785s
+Time used: 0.492754
+Trying to remove transition: <l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.048512s
+Time used: 0.041127
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.720559s
+Time used: 0.714331
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.899618s
+Time used: 0.899611
+
+LOG: SAT solveNonLinear - Elapsed time: 1.620177s
+Cost: 1; Total time: 1.61394
+[31mFailed at location 17: idim^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l9: 1 <= 0[0m
+[36mQuasi-invariant at l11: 1 <= 0[0m
+[36mQuasi-invariant at l17: idim^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013417s
+Remaining time after improvement: 0.992065
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l9: 1 <= 0[0m
+[36mQuasi-invariant at l11: 1 <= 0[0m
+[36mQuasi-invariant at l17: idim^0 <= 0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+> It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+> It's unfeasible. Removing transition: 
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+New Graphs: 
+Calling Safety with literal idim^0 <= 0 and entry <l25, l17, 1 + ndim^0 <= idim^0 /\ 0 <= idim^0, {all remain the same}>
+
+LOG: CALL check - Post:idim^0 <= 0 - Process 8
+* Exit transition: <l25, l17, 1 + ndim^0 <= idim^0 /\ 0 <= idim^0, {all remain the same}>
+* Postcondition  : idim^0 <= 0
+
+FIXED: Entro call 
+FIXED (try DiffLogic): 0
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002262s
+Time used: 4.00216
+FIXED (FARKAS): fail
+FIXED (FARKAS): 4.00364
+
+FIXED: Entro call 
+FIXED (try DiffLogic): 0
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.015806s
+Time used: 4.00928
+FIXED (FARKAS): fail
+FIXED (FARKAS): 4.01723
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.012643s
+Time used: 0.01012
+Improving Solution with cost 51 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.035424s
+Time used: 1.03541
+
+LOG: SAT solveNonLinear - Elapsed time: 1.048067s
+Cost: 51; Total time: 1.04553
+[31mFailed at location 25: 1 + ndim^0 <= idim^0[0m
+Before Improving: 
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013873s
+Remaining time after improvement: 0.998453
+[33mSome transition disabled by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+
+LOG: NEXT CALL check - disable
+
+LOG: CALL check - Post:1 + ndim^0 <= idim^0 - Process 9
+* Exit transition: <l0, l25, true, {all remain the same}>
+* Postcondition  : 1 + ndim^0 <= idim^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002902s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002943s
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.016127s
+Time used: 0.016006
+Improving Solution with cost 2 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.003683s
+Time used: 1.00367
+
+LOG: SAT solveNonLinear - Elapsed time: 1.019809s
+Cost: 2; Total time: 1.01968
+[31mFailed at location 25: 1 + ndim^0 <= idim^0[0m
+[31mFailed at location 25: 1 + idim^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+[36mQuasi-invariant at l25: 1 + idim^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006343s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001110s
+Remaining time after improvement: 0.994672
+[33mPostcondition implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l25: 1 + ndim^0 <= idim^0[0m
+[36mQuasi-invariant at l25: idim^0 <= 0[0m
+Postcondition: 1 + ndim^0 <= idim^0
+
+LOG: Postcondition is not implied - Post: 1 + ndim^0 <= idim^0 - Already checked
+Already checked with failure
+Postcondition: idim^0 <= 0
+
+LOG: CALL check - Post:idim^0 <= 0 - Process 10
+* Exit transition: <l0, l25, true, {all remain the same}>
+* Postcondition  : idim^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002558s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002584s
+
+LOG: NarrowEntry size 2
+INVARIANTS: 
+25: 
+Quasi-INVARIANTS to narrow Graph: 
+25: 1 + ndim^0 <= idim^0 , idim^0 <= 0 , 
+Narrowing transition: 
+<l25, l25, idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+ENTRIES:
+<l0, l25, 1 <= idim^0 /\ 1 + ndim^0 <= idim^0, {all remain the same}>
+<l0, l25, idim^0 <= ndim^0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l25, l25, idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+END GRAPH:
+EXIT: <l25, l17, 1 + ndim^0 <= idim^0 /\ 0 <= idim^0, {all remain the same}>
+POST: idim^0 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002456s
+Time used: 4.00236
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027539s
+Time used: 0.019721
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.017866s
+Time used: 1.01786
+
+LOG: SAT solveNonLinear - Elapsed time: 1.045405s
+Cost: 3; Total time: 1.03758
+[31mFailed at location 25: 1 + ndim^0 <= 0[0m
+[31mFailed at location 25: 1 + ndim^0 <= 0[0m
+[31mFailed at location 25: idim^0 <= 1 + ndim^0[0m
+Before Improving: 
+[36mQuasi-invariant at l25: 1 + ndim^0 <= 0[0m
+[36mQuasi-invariant at l25: idim^0 <= 1 + ndim^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003680s
+Remaining time after improvement: 0.998344
+[33mPostcondition implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l25: 1 + ndim^0 <= 0[0m
+[36mQuasi-invariant at l25: idim^0 <= 1 + ndim^0[0m
+Postcondition: 1 + ndim^0 <= 0
+
+LOG: CALL check - Post:1 + ndim^0 <= 0 - Process 11
+* Exit transition: <l0, l25, 1 <= idim^0 /\ 1 + ndim^0 <= idim^0, {all remain the same}>
+* Postcondition  : 1 + ndim^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003234s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.003274s
+Postcondition: idim^0 <= 1 + ndim^0
+
+LOG: CALL check - Post:idim^0 <= 1 + ndim^0 - Process 12
+* Exit transition: <l0, l25, 1 <= idim^0 /\ 1 + ndim^0 <= idim^0, {all remain the same}>
+* Postcondition  : idim^0 <= 1 + ndim^0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002810s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002861s
+Postcondition: 1 + ndim^0 <= 0
+
+LOG: CALL check - Post:1 + ndim^0 <= 0 - Process 13
+* Exit transition: <l0, l25, idim^0 <= ndim^0, {all remain the same}>
+* Postcondition  : 1 + ndim^0 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002338s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.002371s
+
+LOG: NarrowEntry size 2
+
+LOG: NarrowEntry size 1
+INVARIANTS: 
+25: 
+Quasi-INVARIANTS to narrow Graph: 
+25: 1 + ndim^0 <= 0 , idim^0 <= 1 + ndim^0 , 
+Narrowing transition: 
+<l25, l25, idim^0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+
+LOG: Narrow transition size 2
+ENTRIES:
+<l0, l25, 1 <= idim^0 /\ 1 + ndim^0 <= 0 /\ 2 + ndim^0 <= idim^0, {all remain the same}>
+<l0, l25, 1 <= idim^0 /\ 1 + ndim^0 <= idim^0 /\ 0 <= ndim^0, {all remain the same}>
+<l0, l25, idim^0 <= ndim^0 /\ 0 <= ndim^0, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l25, l25, idim^0 <= ndim^0 /\ 0 <= ndim^0, {idim^0 -> 1 + idim^0, rest remain the same}>
+END GRAPH:
+EXIT: <l25, l17, 1 + ndim^0 <= idim^0 /\ 0 <= idim^0, {all remain the same}>
+POST: idim^0 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006112s
+Time used: 4.00601
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007939s
+Time used: 4.0051
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006944s
+Time used: 1.00497
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 24.245578s
+INVARIANTS: 
+9: 
+11: 
+17: 
+Quasi-INVARIANTS to narrow Graph: 
+9: 1 <= 0 , 
+11: 1 <= 0 , 
+17: idim^0 <= 0 , 
+Narrowing transition: 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: Narrow transition size 1
+Narrowing transition: 
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+
+LOG: Narrow transition size 1
+invGraph after Narrowing: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ibit^0, ip1^0, ip3^0, ip2^0, wr^0, ifp2^0, idim^0, ifp1^0, i2rev^0
+Checking conditional termination of SCC {l9, l11, l17}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.008012s
+[33mRanking function: [36m4 + idim^0[0m
+New Graphs: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + undef849 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 1 + undef848 <= undef849 /\ ip2^0 <= ifp2^0 /\ 2 <= idim^0, {i2rev^0 -> 1, idim^0 -> ((0 + ~(1)) + 0) + idim^0, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i2rev^0, i3^0, idim^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l9, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.007313s
+[33mRanking function: [36m4 + idim^0[0m
+New Graphs: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l9, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003004s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.017866s
+Trying to remove transition: <l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.033912s
+Time used: 0.032505
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.039633s
+Time used: 0.034241
+Trying to remove transition: <l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.036390s
+Time used: 0.029898
+Trying to remove transition: <l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.512358s
+Time used: 0.507282
+Trying to remove transition: <l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.049808s
+Time used: 0.04225
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.008531s
+Time used: 4.00265
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 2.205281s
+Time used: 2.20183
+
+LOG: SAT solveNonLinear - Elapsed time: 2.205281s
+Cost: 0; Total time: 2.20183
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: i3^0 <= 1 + ifp1^0[0m
+[36mInvariant at l9: 1 + ifp1^0 <= ip2^0[0m
+[36mInvariant at l11: 1 + ifp1^0 <= ip2^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+[33mRanking function: [36m-i1^0 - ip1^0 + 3*ip2^0[0m
+New Graphs: 
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0, wr^0
+Checking conditional termination of SCC {l9, l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002880s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.013762s
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.027009s
+Time used: 0.025588
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.034797s
+Time used: 0.030297
+Trying to remove transition: <l9, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.033441s
+Time used: 0.02846
+Trying to remove transition: <l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.048815s
+Time used: 0.043278
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.247808s
+Time used: 0.242258
+
+LOG: SAT solveNonLinear - Elapsed time: 0.247808s
+Cost: 0; Total time: 0.242258
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: 1 + i1^0 <= i3^0 + ip1^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l11, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l11, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+[33mRanking function: [36m-i1^0 + 2*ip2^0[0m
+New Graphs: 
+Transitions:
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Variables:
+i1^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, wr^0
+Transitions:
+<l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0
+Checking conditional termination of SCC {l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001763s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006105s
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.013954s
+Time used: 0.013458
+Trying to remove transition: <l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.016368s
+Time used: 0.015114
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.998018s
+Time used: 0.997167
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.727102s
+Time used: 1.72357
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002833s
+Time used: 1.00282
+
+LOG: SAT solveNonLinear - Elapsed time: 2.729934s
+Cost: 1; Total time: 2.72639
+[31mFailed at location 17: i2^0 <= i3^0[0m
+Before Improving: 
+[36mQuasi-invariant at l9: 1 <= 0[0m
+[36mQuasi-invariant at l9: ip1^0 <= ip2^0[0m
+[36mQuasi-invariant at l11: 1 + ip2^0 <= i2^0[0m
+[36mQuasi-invariant at l11: i2^0 <= i3^0[0m
+[36mQuasi-invariant at l17: i2^0 <= i3^0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.015859s
+Remaining time after improvement: 0.991037
+[33mTermination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l9: 1 <= 0[0m
+[36mQuasi-invariant at l9: ip1^0 <= ip2^0[0m
+[36mQuasi-invariant at l11: 1 + ip2^0 <= i2^0[0m
+[36mQuasi-invariant at l11: i2^0 <= i3^0[0m
+[36mQuasi-invariant at l17: i2^0 <= i3^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l11, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= 1 + ifp1^0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l17, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l9, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ i2^0 <= i3^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849 /\ i2^0 <= i3^0, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+New Graphs: 
+Transitions:
+<l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, ip3^0
+Transitions:
+<l11, l11, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Variables:
+i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, wr^0
+Checking conditional termination of SCC {l9}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000969s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.004308s
+Trying to remove transition: <l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.014666s
+Time used: 0.014276
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.026477s
+Time used: 0.025437
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.104203s
+Time used: 0.102076
+
+LOG: SAT solveNonLinear - Elapsed time: 0.104203s
+Cost: 0; Total time: 0.102076
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l9: ip2^0 <= ifp2^0 + ip1^0[0m
+[36mInvariant at l11: i2rev^0 + ip2^0 <= i2^0 + idim^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l17, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0 /\ i2rev^0 + ip2^0 <= i2^0 + idim^0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0 /\ i2rev^0 + ip2^0 <= i2^0 + idim^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l9, l9, 1 + i1^0 <= i3^0 + ip1^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ ip2^0 <= ifp2^0 + ip1^0 /\ i3^0 <= 1 + ifp1^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+[33mRanking function: [36m-i2^0 + ip3^0[0m
+New Graphs: 
+Transitions:
+<l11, l11, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Variables:
+i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, wr^0
+Checking conditional termination of SCC {l11}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000951s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003642s
+Trying to remove transition: <l11, l11, 1 + ip2^0 <= i2^0 /\ 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= i3^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.017932s
+Time used: 0.017754
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.078820s
+Time used: 0.078106
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003483s
+Time used: 4.00001
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.002305s
+Time used: 1.00021
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.050150s
+Time used: 0.041843
+
+Proving non-termination of subgraph 2
+Transitions:
+<l9, l11, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 + ip1^0 <= 3 + i1^0, {i1^0 -> 2 + i1^0, i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l9, l9, 1 + ip3^0 <= i2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ 4 + i1^0 <= i3^0 + ip1^0, {i1^0 -> 2 + i1^0, rest remain the same}>
+<l9, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i2^0 <= ip3^0 /\ i2^0 = undef121, {i2^0 -> i2^0 + ifp2^0, rest remain the same}>
+<l11, l17, 1 + ifp1^0 <= i3^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ip2^0 <= ifp2^0, {idim^0 -> -1 + idim^0, ifp1^0 -> ifp2^0, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+<l11, l9, 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+<l17, l17, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ undef849 <= undef848, {i2rev^0 -> 1, idim^0 -> -1 + idim^0, ifp1^0 -> undef848, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, rest remain the same}>
+<l17, l11, 1 + undef849 <= i2^0 /\ 1 <= idim^0 /\ 1 + undef848 <= undef849, {i2rev^0 -> 1, ifp1^0 -> undef848, ifp2^0 -> undef306, ip1^0 -> undef848, ip2^0 -> undef849, ip3^0 -> undef850, wr^0 -> 1, rest remain the same}>
+Variables:
+i1^0, i2^0, i3^0, ibit^0, ip1^0, ip3^0, ip2^0, wr^0, ifp2^0, idim^0, ifp1^0, i2rev^0
+
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005724s
+Checking conditional non-termination of SCC {l9, l11, l17}...
+EXIT TRANSITIONS:
+<l17, end, idim^0 <= 0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.000247s
+Time used: 5.00005
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.014824s
+Time used: 5.00041
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 5.011871s
+Time used: 5.00004
+> Checking if the negation of the conditions of every pending exit is quasi-invariant... NO
+
+Proving non-termination of subgraph 2
+Transitions:
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+Variables:
+i1^0, i3^0, ifp1^0, ifp2^0, ip1^0, ip2^0, wr^0
+
+Checking conditional non-termination of SCC {l11}...
+EXIT TRANSITIONS:
+<l11, end, 1 + ifp1^0 <= i3^0 /\ ip2^0 <= ifp2^0, {all remain the same}>
+<l11, end, i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.042837s
+Time used: 0.042555
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.102769s
+Time used: 0.102766
+
+LOG: SAT solveNonLinear - Elapsed time: 0.145606s
+Cost: 1; Total time: 0.145321
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.021089s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l11: 1 + ifp2^0 <= ip2^0[0m
+Constraint over undef 'undef306 <= ifp2^0' in transition:
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l11: 1
+Strengthening exit transition (result): 
+<l11, end, 1 + ifp2^0 <= ip2^0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ undef306 <= ifp2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+Checking conditional non-termination of SCC {l11}...
+EXIT TRANSITIONS:
+<l11, end, 1 + ifp2^0 <= ip2^0 /\ i3^0 <= ifp1^0 /\ 2 + i1^0 <= i3^0 + ip1^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 3.141237s
+Time used: 3.13742
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.172330s
+Time used: 0.169722
+
+LOG: SAT solveNonLinear - Elapsed time: 0.172330s
+Cost: 0; Total time: 0.169722
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.022251s
+Number of undef constraints reduced!
+
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l11: ifp2^0 <= ifp1^0[0m
+[36mQuasi-invariant at l11: ifp1^0 + ip2^0 <= i3^0 + ifp2^0[0m
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l11: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l11, l11, 1 + ifp1^0 <= i3^0 /\ 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ ifp1^0 + ip2^0 <= i3^0 + ifp2^0 /\ ifp2^0 <= ifp1^0 /\ undef306 <= ifp2^0, {ifp1^0 -> ifp2^0, ifp2^0 -> undef306, wr^0 -> 1, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+It's unfeasible. Removing transition: 
+<l11, l11, 1 + ifp1^0 <= ip2^0 /\ 1 + ifp2^0 <= ip2^0 /\ 1 + ip1^0 <= ip2^0 /\ 0 <= 0 /\ i3^0 <= ifp1^0 /\ i3^0 + ip1^0 <= 1 + i1^0, {i3^0 -> i3^0 + ip1^0, wr^0 -> undef161, rest remain the same}>
+
+Calling reachability with...
+Transition: <l17, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l17, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l25, l17, 1 + ndim^0 <= idim^0, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l25, true, {all remain the same}>
+Conditions: 1 + ndim^0 <= idim^0, 
+OPEN EXITS: 
+<l0, l25, 1 + ndim^0 <= idim^0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

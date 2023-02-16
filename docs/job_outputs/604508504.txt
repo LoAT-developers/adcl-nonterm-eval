@@ -1,0 +1,2534 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l74, true>
+<l1, l2, ((0 + i21^0) <= 0)>
+<l1, l3, (1 <= (0 + i21^0)), par{i21^0 -> (~(1) + i21^0)}>
+<l3, l1, true>
+<l4, l3, ((1 + i21^0) <= 0), par{i21^0 -> (16 + i21^0)}>
+<l4, l5, (0 <= (0 + i21^0))>
+<l2, l6, true>
+<l7, l8, true, par{i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0)}>
+<l9, l5, (65536 <= (0 + fcode5^0)) /\ (undef379 = (0 + hsize^0)) /\ (undef377 = (0 + undef379)), par{hshift11^0 -> (8 + (~(1) * hshift11^0)), hsize___019^0 -> undef377, hsize_reg10^0 -> undef379, i21^0 -> (~(16) + undef377), m122^0 -> ~(1)}>
+<l9, l10, ((1 + fcode5^0) <= 65536) /\ (undef424 = undef424), par{fcode5^0 -> undef424, hshift11^0 -> (1 + hshift11^0)}>
+<l11, l12, true, par{i29^0 -> (~(16) + i29^0)}>
+<l13, l10, (undef557 = (0 + ret_getbyte18^0)), par{ent8^0 -> (0 + undef557), fcode5^0 -> (0 + hsize^0), hshift11^0 -> 0, tmp12^0 -> undef557}>
+<l14, l15, true>
+<l16, l13, ((0 + tmp___017^0) <= 0), par{ret_getbyte18^0 -> 429496}>
+<l16, l13, (1 <= (0 + tmp___017^0)) /\ (undef706 = undef706), par{InCnt^0 -> (~(1) + InCnt^0), ret_getbyte18^0 -> undef706}>
+<l17, l13, ((0 + InCnt^0) <= 0), par{ret_getbyte18^0 -> 429496}>
+<l17, l16, (1 <= (0 + InCnt^0)), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), tmp___017^0 -> (0 + apsim_InCnt^0)}>
+<l18, l17, true, par{free_ent^0 -> 257}>
+<l19, l17, ((0 + block_compress^0) <= 0) /\ (0 <= (0 + block_compress^0)), par{free_ent^0 -> 256}>
+<l19, l18, (1 <= (0 + block_compress^0))>
+<l19, l18, ((1 + block_compress^0) <= 0)>
+<l20, l21, (undef1027 = undef1027), par{bits33^0 -> (~(1) + bits33^0), c37^0 -> undef1027}>
+<l22, l23, true>
+<l24, l25, true>
+<l26, l24, ((0 + bytes_out^0) <= (0 + in_count^0))>
+<l26, l24, ((1 + in_count^0) <= (0 + bytes_out^0)), par{exit_stat^0 -> 2}>
+<l27, l28, (undef1281 = undef1281), par{bytes_out^0 -> undef1281, offset^0 -> 0}>
+<l29, l27, true>
+<l30, l29, (16 <= (0 + i45^0))>
+<l30, l31, ((1 + i45^0) <= 16), par{i45^0 -> (1 + i45^0)}>
+<l32, l29, ((0 + n44^0) <= (0 + i45^0))>
+<l32, l30, ((1 + i45^0) <= (0 + n44^0))>
+<l33, l27, ((0 + offset^0) <= 0)>
+<l33, l31, (1 <= (0 + offset^0)) /\ (undef1668 = undef1668), par{i45^0 -> 0, n44^0 -> undef1668}>
+<l34, l28, (undef1716 = undef1716), par{maxcode^0 -> undef1716}>
+<l35, l34, ((1 + maxbits^0) <= (0 + n_bits^0))>
+<l35, l34, ((1 + n_bits^0) <= (0 + maxbits^0))>
+<l35, l28, ((0 + n_bits^0) <= (0 + maxbits^0)) /\ ((0 + maxbits^0) <= (0 + n_bits^0)), par{maxcode^0 -> (0 + maxmaxcode^0)}>
+<l28, l36, true>
+<l37, l28, (undef1971 = undef1971), par{clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9}>
+<l38, l35, ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)), par{n_bits^0 -> (1 + n_bits^0)}>
+<l38, l37, (1 <= (0 + clear_flg^0))>
+<l38, l37, ((1 + clear_flg^0) <= 0)>
+<l39, l38, true, par{offset^0 -> 0}>
+<l40, l39, true, par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0)}>
+<l41, l40, (16 <= (0 + i41^0))>
+<l41, l22, ((1 + i41^0) <= 16), par{i41^0 -> (1 + i41^0)}>
+<l23, l40, ((0 + n40^0) <= (0 + i41^0))>
+<l23, l41, ((1 + i41^0) <= (0 + n40^0))>
+<l42, l39, ((0 + offset^0) <= 0)>
+<l42, l22, (1 <= (0 + offset^0)), par{i41^0 -> 0, n40^0 -> (0 + n_bits^0)}>
+<l43, l28, ((0 + clear_flg^0) <= 0)>
+<l43, l42, (1 <= (0 + clear_flg^0))>
+<l44, l43, ((0 + free_ent^0) <= (0 + maxcode^0))>
+<l44, l42, ((1 + maxcode^0) <= (0 + free_ent^0))>
+<l45, l44, true, par{offset^0 -> 0}>
+<l46, l20, true>
+<l46, l45, true>
+<l21, l45, ((0 + bits33^0) <= 0) /\ (0 <= (0 + bits33^0))>
+<l21, l46, (1 <= (0 + bits33^0))>
+<l21, l46, ((1 + bits33^0) <= 0)>
+<l47, l20, (undef3064 = (0 + n_bits^0)), par{bits33^0 -> undef3064, bytes_out^0 -> ((0 + undef3064) + bytes_out^0)}>
+<l47, l44, true>
+<l48, l47, true, par{offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l49, l48, true>
+<l50, l48, ((0 + bits33^0) <= 0) /\ (0 <= (0 + bits33^0))>
+<l50, l49, (1 <= (0 + bits33^0))>
+<l50, l49, ((1 + bits33^0) <= 0)>
+<l51, l50, ((1 + bits33^0) <= 8)>
+<l51, l50, (8 <= (0 + bits33^0)) /\ (undef3479 = undef3479), par{bits33^0 -> (~(8) + bits33^0), code31^0 -> undef3479}>
+<l31, l32, true>
+<l52, l33, ((1 + code31^0) <= 0)>
+<l52, l51, (0 <= (0 + code31^0)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632), par{bits33^0 -> ((~(8) + bits33^0) + undef3661), code31^0 -> undef3632, r_off32^0 -> undef3661}>
+<l15, l52, ((0 + i29^0) <= 0), par{bits33^0 -> (0 + n_bits^0), clear_flg^0 -> 1, code31^0 -> 256, free_ent^0 -> 257, r_off32^0 -> (0 + offset^0)}>
+<l15, l14, (1 <= (0 + i29^0)), par{i29^0 -> (~(1) + i29^0)}>
+<l12, l14, ((1 + i29^0) <= 0), par{i29^0 -> (16 + i29^0)}>
+<l12, l11, (0 <= (0 + i29^0))>
+<l36, l2, true>
+<l53, l54, (undef3968 = undef3968), par{rat26^0 -> undef3968}>
+<l54, l11, ((0 + rat26^0) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{hsize___027^0 -> undef3999, i29^0 -> (~(16) + undef3999), m130^0 -> ~(1), ratio^0 -> 0}>
+<l54, l36, ((1 + ratio^0) <= (0 + rat26^0)), par{ratio^0 -> (0 + rat26^0)}>
+<l55, l53, (1 <= (0 + rat26^0))>
+<l55, l53, ((1 + rat26^0) <= 0)>
+<l55, l54, ((0 + rat26^0) <= 0) /\ (0 <= (0 + rat26^0)), par{rat26^0 -> 2147483647}>
+<l56, l19, (50 <= (0 + i3^0)) /\ (undef4267 = undef4267) /\ (undef4266 = undef4266), par{InCnt^0 -> (0 + count^0), apsim_InCnt^0 -> 53, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0}>
+<l56, l57, ((1 + i3^0) <= 50) /\ (undef4329 = undef4329), par{i3^0 -> (1 + i3^0), seed2^0 -> undef4329, tabort4^0 -> (0 + i3^0)}>
+<l58, l54, ((0 + in_count^0) <= 8388607) /\ (undef4376 = undef4376), par{rat26^0 -> undef4376}>
+<l58, l55, (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427), par{rat26^0 -> undef4427}>
+<l59, l58, true, par{checkpoint^0 -> (10000 + in_count^0)}>
+<l60, l2, ((0 + block_compress^0) <= 0) /\ (0 <= (0 + block_compress^0))>
+<l60, l59, (1 <= (0 + block_compress^0))>
+<l60, l59, ((1 + block_compress^0) <= 0)>
+<l61, l2, ((1 + in_count^0) <= (0 + checkpoint^0))>
+<l61, l60, ((0 + checkpoint^0) <= (0 + in_count^0))>
+<l62, l61, ((0 + maxmaxcode^0) <= (0 + free_ent^0))>
+<l62, l2, ((1 + free_ent^0) <= (0 + maxmaxcode^0)), par{free_ent^0 -> (1 + free_ent^0), tmp___115^0 -> (0 + free_ent^0)}>
+<l63, l62, true, par{ent8^0 -> (0 + c7^0), out_count^0 -> (1 + out_count^0)}>
+<l64, l63, ((0 + in_count^0) <= (0 + apsim_bound11113^0))>
+<l64, l7, ((1 + apsim_bound11113^0) <= (0 + in_count^0))>
+<l65, l64, true, par{apsim_bound11113^0 -> (1 + apsim_bound11113^0)}>
+<l65, l63, true>
+<l66, l65, true>
+<l66, l2, (undef5165 = undef5165), par{ent8^0 -> undef5165}>
+<l66, l65, true>
+<l8, l66, (0 <= (0 + i6^0))>
+<l8, l66, ((1 + i6^0) <= 0), par{i6^0 -> ((0 + hsize_reg10^0) + i6^0)}>
+<l67, l7, (1 <= (0 + i6^0))>
+<l67, l7, ((1 + i6^0) <= 0)>
+<l67, l7, ((0 + i6^0) <= 0) /\ (0 <= (0 + i6^0)), par{disp9^0 -> 1}>
+<l68, l63, true>
+<l68, l67, true, par{disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * i6^0))}>
+<l69, l68, true>
+<l69, l2, (undef5675 = undef5675), par{ent8^0 -> undef5675}>
+<l69, l68, true>
+<l57, l56, true>
+<l70, l69, (undef5862 = (0 + ret_getbyte25^0)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842), par{c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0), tmp___014^0 -> undef5862}>
+<l10, l9, true>
+<l71, l70, ((0 + tmp___024^0) <= 0), par{ret_getbyte25^0 -> 429496}>
+<l71, l70, (1 <= (0 + tmp___024^0)) /\ (undef6011 = undef6011), par{InCnt^0 -> (~(1) + InCnt^0), ret_getbyte25^0 -> undef6011}>
+<l72, l70, ((0 + InCnt^0) <= 0), par{ret_getbyte25^0 -> 429496}>
+<l72, l71, (1 <= (0 + InCnt^0)), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), tmp___024^0 -> (0 + apsim_InCnt^0)}>
+<l6, l26, ((0 + InCnt^0) <= 0)>
+<l6, l72, (1 <= (0 + InCnt^0)), par{apsim_bound11113^0 -> 0}>
+<l5, l4, true, par{i21^0 -> (~(16) + i21^0)}>
+<l73, l57, true, par{count^0 -> 50, i3^0 -> 0, seed2^0 -> 1}>
+<l74, l73, true>
+
+Fresh variables:
+undef377, undef379, undef424, undef557, undef706, undef1027, undef1281, undef1668, undef1716, undef1971, undef3064, undef3479, undef3632, undef3661, undef3968, undef3999, undef4266, undef4267, undef4329, undef4376, undef4427, undef5165, undef5675, undef5830, undef5842, undef5862, undef6011, 
+
+Undef variables:
+undef377, undef379, undef424, undef557, undef706, undef1027, undef1281, undef1668, undef1716, undef1971, undef3064, undef3479, undef3632, undef3661, undef3968, undef3999, undef4266, undef4267, undef4329, undef4376, undef4427, undef5165, undef5675, undef5830, undef5842, undef5862, undef6011, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l57, (50 = 50) /\ (i3^0 = 0)>
+<l2, l25, ((0 + InCnt^0) <= 0) /\ ((0 + bytes_out^0) <= (0 + in_count^0))>
+<l2, l25, ((0 + InCnt^0) <= 0) /\ ((1 + in_count^0) <= (0 + bytes_out^0))>
+<l2, l62, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0), out_count^0 -> (1 + out_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ (1 <= (0 + undef5842)), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((1 + undef5842) <= 0), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((0 + undef5842) <= 0) /\ (0 <= (0 + undef5842)), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l2, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ (undef5675 = undef5675), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l62, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0), out_count^0 -> (1 + out_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ (1 <= (0 + undef5842)), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((1 + undef5842) <= 0), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ ((0 + (0 + apsim_InCnt^0)) <= 0) /\ (undef5862 = (0 + 429496)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((0 + undef5842) <= 0) /\ (0 <= (0 + undef5842)), par{apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l62, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0), out_count^0 -> (1 + out_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ (1 <= (0 + undef5842)), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((1 + undef5842) <= 0), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((0 + undef5842) <= 0) /\ (0 <= (0 + undef5842)), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l2, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ (undef5675 = undef5675), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l62, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0), out_count^0 -> (1 + out_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ (1 <= (0 + undef5842)), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((1 + undef5842) <= 0), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> ((0 + hsize_reg10^0) + (~(1) * undef5842)), fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l2, l7, (1 <= (0 + InCnt^0)) /\ (1 <= (0 + InCnt^0)) /\ (1 <= (0 + (0 + apsim_InCnt^0))) /\ (undef6011 = undef6011) /\ (undef5862 = (0 + undef6011)) /\ (undef5830 = undef5830) /\ (undef5842 = undef5842) /\ ((0 + undef5842) <= 0) /\ (0 <= (0 + undef5842)), par{InCnt^0 -> (~(1) + InCnt^0), apsim_InCnt^0 -> (~(1) + apsim_InCnt^0), apsim_bound11113^0 -> 0, c7^0 -> (0 + undef5862), disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> (1 + in_count^0)}>
+<l3, l2, ((0 + i21^0) <= 0)>
+<l3, l3, (1 <= (0 + i21^0)), par{i21^0 -> (~(1) + i21^0)}>
+<l5, l3, ((1 + (~(16) + i21^0)) <= 0), par{i21^0 -> (16 + (~(16) + i21^0))}>
+<l5, l5, (0 <= (0 + (~(16) + i21^0))), par{i21^0 -> (~(16) + i21^0)}>
+<l7, l62, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))) /\ ((0 + in_count^0) <= (0 + (1 + apsim_bound11113^0))), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0), out_count^0 -> (1 + out_count^0)}>
+<l7, l7, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))) /\ ((1 + (1 + apsim_bound11113^0)) <= (0 + in_count^0)), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0)}>
+<l7, l62, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))), par{i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0), out_count^0 -> (1 + out_count^0)}>
+<l7, l2, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))) /\ (undef5165 = undef5165), par{i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0)}>
+<l7, l62, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))) /\ ((0 + in_count^0) <= (0 + (1 + apsim_bound11113^0))), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0), out_count^0 -> (1 + out_count^0)}>
+<l7, l7, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))) /\ ((1 + (1 + apsim_bound11113^0)) <= (0 + in_count^0)), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0)}>
+<l7, l62, (0 <= (0 + ((0 + (~(1) * disp9^0)) + i6^0))), par{i6^0 -> ((0 + (~(1) * disp9^0)) + i6^0), out_count^0 -> (1 + out_count^0)}>
+<l7, l62, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0) /\ ((0 + in_count^0) <= (0 + (1 + apsim_bound11113^0))), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0)), out_count^0 -> (1 + out_count^0)}>
+<l7, l7, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0) /\ ((1 + (1 + apsim_bound11113^0)) <= (0 + in_count^0)), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0))}>
+<l7, l62, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0), par{i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0)), out_count^0 -> (1 + out_count^0)}>
+<l7, l2, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0) /\ (undef5165 = undef5165), par{i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0))}>
+<l7, l62, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0) /\ ((0 + in_count^0) <= (0 + (1 + apsim_bound11113^0))), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0)), out_count^0 -> (1 + out_count^0)}>
+<l7, l7, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0) /\ ((1 + (1 + apsim_bound11113^0)) <= (0 + in_count^0)), par{apsim_bound11113^0 -> (1 + apsim_bound11113^0), i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0))}>
+<l7, l62, ((1 + ((0 + (~(1) * disp9^0)) + i6^0)) <= 0), par{i6^0 -> ((0 + hsize_reg10^0) + ((0 + (~(1) * disp9^0)) + i6^0)), out_count^0 -> (1 + out_count^0)}>
+<l10, l5, (65536 <= (0 + fcode5^0)) /\ (undef379 = (0 + hsize^0)) /\ (undef377 = (0 + undef379)), par{hshift11^0 -> (8 + (~(1) * hshift11^0)), hsize_reg10^0 -> undef379, i21^0 -> (~(16) + undef377)}>
+<l10, l10, ((1 + fcode5^0) <= 65536) /\ (undef424 = undef424), par{fcode5^0 -> undef424, hshift11^0 -> (1 + hshift11^0)}>
+<l11, l14, ((1 + (~(16) + i29^0)) <= 0), par{i29^0 -> (16 + (~(16) + i29^0))}>
+<l11, l11, (0 <= (0 + (~(16) + i29^0))), par{i29^0 -> (~(16) + i29^0)}>
+<l14, l20, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ ((0 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 0) /\ (0 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3064 = (0 + n_bits^0)), par{bits33^0 -> undef3064, bytes_out^0 -> ((0 + undef3064) + bytes_out^0), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ ((0 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 0) /\ (0 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ ((0 + 257) <= (0 + maxcode^0)) /\ (1 <= (0 + 1)), par{bits33^0 -> ((~(8) + (0 + n_bits^0)) + undef3661), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ ((0 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 0) /\ (0 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ ((1 + maxcode^0) <= (0 + 257)), par{bits33^0 -> ((~(8) + (0 + n_bits^0)) + undef3661), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l20, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ (1 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3064 = (0 + n_bits^0)), par{bits33^0 -> undef3064, bytes_out^0 -> ((0 + undef3064) + bytes_out^0), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ (1 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ ((0 + 257) <= (0 + maxcode^0)) /\ (1 <= (0 + 1)), par{bits33^0 -> ((~(8) + (0 + n_bits^0)) + undef3661), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ (1 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ ((1 + maxcode^0) <= (0 + 257)), par{bits33^0 -> ((~(8) + (0 + n_bits^0)) + undef3661), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l20, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 0) /\ (undef3064 = (0 + n_bits^0)), par{bits33^0 -> undef3064, bytes_out^0 -> ((0 + undef3064) + bytes_out^0), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 0) /\ ((0 + 257) <= (0 + maxcode^0)) /\ (1 <= (0 + 1)), par{bits33^0 -> ((~(8) + (0 + n_bits^0)) + undef3661), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 8) /\ ((1 + ((~(8) + (0 + n_bits^0)) + undef3661)) <= 0) /\ ((1 + maxcode^0) <= (0 + 257)), par{bits33^0 -> ((~(8) + (0 + n_bits^0)) + undef3661), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l20, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ (8 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3479 = undef3479) /\ ((0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661))) <= 0) /\ (0 <= (0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)))) /\ (undef3064 = (0 + n_bits^0)), par{bits33^0 -> undef3064, bytes_out^0 -> ((0 + undef3064) + bytes_out^0), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ (8 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3479 = undef3479) /\ ((0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661))) <= 0) /\ (0 <= (0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)))) /\ ((0 + 257) <= (0 + maxcode^0)) /\ (1 <= (0 + 1)), par{bits33^0 -> (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ (8 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3479 = undef3479) /\ ((0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661))) <= 0) /\ (0 <= (0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)))) /\ ((1 + maxcode^0) <= (0 + 257)), par{bits33^0 -> (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l20, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ (8 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3479 = undef3479) /\ (1 <= (0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)))) /\ (undef3064 = (0 + n_bits^0)), par{bits33^0 -> undef3064, bytes_out^0 -> ((0 + undef3064) + bytes_out^0), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ (8 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3479 = undef3479) /\ (1 <= (0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)))) /\ ((0 + 257) <= (0 + maxcode^0)) /\ (1 <= (0 + 1)), par{bits33^0 -> (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l42, ((0 + i29^0) <= 0) /\ (0 <= (0 + 256)) /\ (undef3661 = undef3661) /\ (undef3632 = undef3632) /\ (8 <= (0 + ((~(8) + (0 + n_bits^0)) + undef3661))) /\ (undef3479 = undef3479) /\ (1 <= (0 + (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)))) /\ ((1 + maxcode^0) <= (0 + 257)), par{bits33^0 -> (~(8) + ((~(8) + (0 + n_bits^0)) + undef3661)), clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> ((0 + n_bits^0) + offset^0)}>
+<l14, l14, (1 <= (0 + i29^0)), par{i29^0 -> (~(1) + i29^0)}>
+<l20, l2, (undef1027 = undef1027) /\ ((0 + (~(1) + bits33^0)) <= 0) /\ (0 <= (0 + (~(1) + bits33^0))) /\ ((0 + free_ent^0) <= (0 + maxcode^0)) /\ ((0 + clear_flg^0) <= 0), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l42, (undef1027 = undef1027) /\ ((0 + (~(1) + bits33^0)) <= 0) /\ (0 <= (0 + (~(1) + bits33^0))) /\ ((0 + free_ent^0) <= (0 + maxcode^0)) /\ (1 <= (0 + clear_flg^0)), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l42, (undef1027 = undef1027) /\ ((0 + (~(1) + bits33^0)) <= 0) /\ (0 <= (0 + (~(1) + bits33^0))) /\ ((1 + maxcode^0) <= (0 + free_ent^0)), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l20, (undef1027 = undef1027) /\ (1 <= (0 + (~(1) + bits33^0))), par{bits33^0 -> (~(1) + bits33^0)}>
+<l20, l2, (undef1027 = undef1027) /\ (1 <= (0 + (~(1) + bits33^0))) /\ ((0 + free_ent^0) <= (0 + maxcode^0)) /\ ((0 + clear_flg^0) <= 0), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l42, (undef1027 = undef1027) /\ (1 <= (0 + (~(1) + bits33^0))) /\ ((0 + free_ent^0) <= (0 + maxcode^0)) /\ (1 <= (0 + clear_flg^0)), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l42, (undef1027 = undef1027) /\ (1 <= (0 + (~(1) + bits33^0))) /\ ((1 + maxcode^0) <= (0 + free_ent^0)), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l20, (undef1027 = undef1027) /\ ((1 + (~(1) + bits33^0)) <= 0), par{bits33^0 -> (~(1) + bits33^0)}>
+<l20, l2, (undef1027 = undef1027) /\ ((1 + (~(1) + bits33^0)) <= 0) /\ ((0 + free_ent^0) <= (0 + maxcode^0)) /\ ((0 + clear_flg^0) <= 0), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l42, (undef1027 = undef1027) /\ ((1 + (~(1) + bits33^0)) <= 0) /\ ((0 + free_ent^0) <= (0 + maxcode^0)) /\ (1 <= (0 + clear_flg^0)), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l20, l42, (undef1027 = undef1027) /\ ((1 + (~(1) + bits33^0)) <= 0) /\ ((1 + maxcode^0) <= (0 + free_ent^0)), par{bits33^0 -> (~(1) + bits33^0), offset^0 -> 0}>
+<l22, l2, ((0 + n40^0) <= (0 + i41^0)) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((1 + maxbits^0) <= (0 + (1 + n_bits^0))) /\ (undef1716 = undef1716), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), maxcode^0 -> undef1716, n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l22, l2, ((0 + n40^0) <= (0 + i41^0)) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((1 + (1 + n_bits^0)) <= (0 + maxbits^0)) /\ (undef1716 = undef1716), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), maxcode^0 -> undef1716, n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l22, l2, ((0 + n40^0) <= (0 + i41^0)) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((0 + (1 + n_bits^0)) <= (0 + maxbits^0)) /\ ((0 + maxbits^0) <= (0 + (1 + n_bits^0))), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), maxcode^0 -> (0 + maxmaxcode^0), n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l22, l2, ((0 + n40^0) <= (0 + i41^0)) /\ (1 <= (0 + clear_flg^0)) /\ (undef1971 = undef1971), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0}>
+<l22, l2, ((0 + n40^0) <= (0 + i41^0)) /\ ((1 + clear_flg^0) <= 0) /\ (undef1971 = undef1971), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0}>
+<l22, l2, ((1 + i41^0) <= (0 + n40^0)) /\ (16 <= (0 + i41^0)) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((1 + maxbits^0) <= (0 + (1 + n_bits^0))) /\ (undef1716 = undef1716), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), maxcode^0 -> undef1716, n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l22, l2, ((1 + i41^0) <= (0 + n40^0)) /\ (16 <= (0 + i41^0)) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((1 + (1 + n_bits^0)) <= (0 + maxbits^0)) /\ (undef1716 = undef1716), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), maxcode^0 -> undef1716, n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l22, l2, ((1 + i41^0) <= (0 + n40^0)) /\ (16 <= (0 + i41^0)) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((0 + (1 + n_bits^0)) <= (0 + maxbits^0)) /\ ((0 + maxbits^0) <= (0 + (1 + n_bits^0))), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), maxcode^0 -> (0 + maxmaxcode^0), n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l22, l2, ((1 + i41^0) <= (0 + n40^0)) /\ (16 <= (0 + i41^0)) /\ (1 <= (0 + clear_flg^0)) /\ (undef1971 = undef1971), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0}>
+<l22, l2, ((1 + i41^0) <= (0 + n40^0)) /\ (16 <= (0 + i41^0)) /\ ((1 + clear_flg^0) <= 0) /\ (undef1971 = undef1971), par{bytes_out^0 -> ((0 + bytes_out^0) + n_bits^0), clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0}>
+<l22, l22, ((1 + i41^0) <= (0 + n40^0)) /\ ((1 + i41^0) <= 16), par{i41^0 -> (1 + i41^0)}>
+<l42, l2, ((0 + offset^0) <= 0) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((1 + maxbits^0) <= (0 + (1 + n_bits^0))) /\ (undef1716 = undef1716), par{maxcode^0 -> undef1716, n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l42, l2, ((0 + offset^0) <= 0) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((1 + (1 + n_bits^0)) <= (0 + maxbits^0)) /\ (undef1716 = undef1716), par{maxcode^0 -> undef1716, n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l42, l2, ((0 + offset^0) <= 0) /\ ((0 + clear_flg^0) <= 0) /\ (0 <= (0 + clear_flg^0)) /\ ((0 + (1 + n_bits^0)) <= (0 + maxbits^0)) /\ ((0 + maxbits^0) <= (0 + (1 + n_bits^0))), par{maxcode^0 -> (0 + maxmaxcode^0), n_bits^0 -> (1 + n_bits^0), offset^0 -> 0}>
+<l42, l2, ((0 + offset^0) <= 0) /\ (1 <= (0 + clear_flg^0)) /\ (undef1971 = undef1971), par{clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0}>
+<l42, l2, ((0 + offset^0) <= 0) /\ ((1 + clear_flg^0) <= 0) /\ (undef1971 = undef1971), par{clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0}>
+<l42, l22, (1 <= (0 + offset^0)), par{i41^0 -> 0, n40^0 -> (0 + n_bits^0)}>
+<l57, l10, (50 <= (0 + i3^0)) /\ (undef4267 = undef4267) /\ (undef4266 = undef4266) /\ ((0 + block_compress^0) <= 0) /\ (0 <= (0 + block_compress^0)) /\ (1 <= (0 + (0 + 50))) /\ (1 <= (0 + (0 + 53))) /\ (undef706 = undef706) /\ (undef557 = (0 + undef706)), par{InCnt^0 -> (~(1) + (0 + 50)), apsim_InCnt^0 -> (~(1) + 53), bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> (0 + hsize^0), free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0}>
+<l57, l10, (50 <= (0 + i3^0)) /\ (undef4267 = undef4267) /\ (undef4266 = undef4266) /\ (1 <= (0 + block_compress^0)) /\ (1 <= (0 + (0 + 50))) /\ (1 <= (0 + (0 + 53))) /\ (undef706 = undef706) /\ (undef557 = (0 + undef706)), par{InCnt^0 -> (~(1) + (0 + 50)), apsim_InCnt^0 -> (~(1) + 53), bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> (0 + hsize^0), free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0}>
+<l57, l10, (50 <= (0 + i3^0)) /\ (undef4267 = undef4267) /\ (undef4266 = undef4266) /\ ((1 + block_compress^0) <= 0) /\ (1 <= (0 + (0 + 50))) /\ (1 <= (0 + (0 + 53))) /\ (undef706 = undef706) /\ (undef557 = (0 + undef706)), par{InCnt^0 -> (~(1) + (0 + 50)), apsim_InCnt^0 -> (~(1) + 53), bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> (0 + hsize^0), free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0}>
+<l57, l57, ((1 + i3^0) <= 50) /\ (undef4329 = undef4329), par{i3^0 -> (1 + i3^0)}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((1 + in_count^0) <= (0 + checkpoint^0))>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((0 + block_compress^0) <= 0) /\ (0 <= (0 + block_compress^0))>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ ((0 + in_count^0) <= 8388607) /\ (undef4376 = undef4376) /\ ((0 + undef4376) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> undef4376, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ ((0 + in_count^0) <= 8388607) /\ (undef4376 = undef4376) /\ ((1 + ratio^0) <= (0 + undef4376)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> undef4376, ratio^0 -> (0 + undef4376)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ (1 <= (0 + undef4427)) /\ (undef3968 = undef3968) /\ ((0 + undef3968) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> undef3968, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ (1 <= (0 + undef4427)) /\ (undef3968 = undef3968) /\ ((1 + ratio^0) <= (0 + undef3968)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> undef3968, ratio^0 -> (0 + undef3968)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((1 + undef4427) <= 0) /\ (undef3968 = undef3968) /\ ((0 + undef3968) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> undef3968, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((1 + undef4427) <= 0) /\ (undef3968 = undef3968) /\ ((1 + ratio^0) <= (0 + undef3968)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> undef3968, ratio^0 -> (0 + undef3968)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((0 + undef4427) <= 0) /\ (0 <= (0 + undef4427)) /\ ((0 + 2147483647) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> 2147483647, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ (1 <= (0 + block_compress^0)) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((0 + undef4427) <= 0) /\ (0 <= (0 + undef4427)) /\ ((1 + ratio^0) <= (0 + 2147483647)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> 2147483647, ratio^0 -> (0 + 2147483647)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ ((0 + in_count^0) <= 8388607) /\ (undef4376 = undef4376) /\ ((0 + undef4376) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> undef4376, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ ((0 + in_count^0) <= 8388607) /\ (undef4376 = undef4376) /\ ((1 + ratio^0) <= (0 + undef4376)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> undef4376, ratio^0 -> (0 + undef4376)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ (1 <= (0 + undef4427)) /\ (undef3968 = undef3968) /\ ((0 + undef3968) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> undef3968, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ (1 <= (0 + undef4427)) /\ (undef3968 = undef3968) /\ ((1 + ratio^0) <= (0 + undef3968)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> undef3968, ratio^0 -> (0 + undef3968)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((1 + undef4427) <= 0) /\ (undef3968 = undef3968) /\ ((0 + undef3968) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> undef3968, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((1 + undef4427) <= 0) /\ (undef3968 = undef3968) /\ ((1 + ratio^0) <= (0 + undef3968)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> undef3968, ratio^0 -> (0 + undef3968)}>
+<l62, l11, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((0 + undef4427) <= 0) /\ (0 <= (0 + undef4427)) /\ ((0 + 2147483647) <= (0 + ratio^0)) /\ (undef3999 = (0 + hsize^0)), par{checkpoint^0 -> (10000 + in_count^0), i29^0 -> (~(16) + undef3999), rat26^0 -> 2147483647, ratio^0 -> 0}>
+<l62, l2, ((0 + maxmaxcode^0) <= (0 + free_ent^0)) /\ ((0 + checkpoint^0) <= (0 + in_count^0)) /\ ((1 + block_compress^0) <= 0) /\ (8388608 <= (0 + in_count^0)) /\ (undef4427 = undef4427) /\ ((0 + undef4427) <= 0) /\ (0 <= (0 + undef4427)) /\ ((1 + ratio^0) <= (0 + 2147483647)), par{checkpoint^0 -> (10000 + in_count^0), rat26^0 -> 2147483647, ratio^0 -> (0 + 2147483647)}>
+<l62, l2, ((1 + free_ent^0) <= (0 + maxmaxcode^0)), par{free_ent^0 -> (1 + free_ent^0)}>
+
+Fresh variables:
+undef377, undef379, undef424, undef557, undef706, undef1027, undef1281, undef1668, undef1716, undef1971, undef3064, undef3479, undef3632, undef3661, undef3968, undef3999, undef4266, undef4267, undef4329, undef4376, undef4427, undef5165, undef5675, undef5830, undef5842, undef5862, undef6011, 
+
+Undef variables:
+undef377, undef379, undef424, undef557, undef706, undef1027, undef1281, undef1668, undef1716, undef1971, undef3064, undef3479, undef3632, undef3661, undef3968, undef3999, undef4266, undef4267, undef4329, undef4376, undef4427, undef5165, undef5675, undef5830, undef5842, undef5862, undef6011, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l57, l57, i3^0 <= 49, {i3^0 -> 1 + i3^0, rest remain the same}>
+Variables:
+i3^0
+
+Graph 2:
+Transitions:
+<l10, l10, fcode5^0 <= 65535, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+Variables:
+fcode5^0, hshift11^0
+
+Graph 3:
+Transitions:
+<l5, l5, 16 <= i21^0, {i21^0 -> -16 + i21^0, rest remain the same}>
+Variables:
+i21^0
+
+Graph 4:
+Transitions:
+<l3, l3, 1 <= i21^0, {i21^0 -> -1 + i21^0, rest remain the same}>
+Variables:
+i21^0
+
+Graph 5:
+Transitions:
+<l2, l62, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l2, l7, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ 1 <= undef5842 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ 1 + undef5842 <= 0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ undef5842 = 0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l2, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l62, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l2, l7, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ 1 <= undef5842 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ 1 + undef5842 <= 0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, apsim_InCnt^0 <= 0 /\ 1 <= InCnt^0 /\ undef5842 = 0 /\ undef5862 = 429496, {apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l62, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l2, l7, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ 1 <= undef5842 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ 1 + undef5842 <= 0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ undef5842 = 0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l2, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l62, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l2, l7, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ 1 <= undef5842 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ 1 + undef5842 <= 0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> hsize_reg10^0 - undef5842, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l2, l7, 1 <= InCnt^0 /\ 1 <= apsim_InCnt^0 /\ undef5842 = 0 /\ undef5862 = undef6011, {InCnt^0 -> -1 + InCnt^0, apsim_InCnt^0 -> -1 + apsim_InCnt^0, apsim_bound11113^0 -> 0, c7^0 -> undef5862, disp9^0 -> 1, fcode5^0 -> undef5830, i6^0 -> undef5842, in_count^0 -> 1 + in_count^0, rest remain the same}>
+<l7, l62, disp9^0 <= i6^0 /\ in_count^0 <= 1 + apsim_bound11113^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l7, disp9^0 <= i6^0 /\ 2 + apsim_bound11113^0 <= in_count^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + i6^0, rest remain the same}>
+<l7, l62, disp9^0 <= i6^0, {i6^0 -> -disp9^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l2, disp9^0 <= i6^0, {i6^0 -> -disp9^0 + i6^0, rest remain the same}>
+<l7, l62, disp9^0 <= i6^0 /\ in_count^0 <= 1 + apsim_bound11113^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l7, disp9^0 <= i6^0 /\ 2 + apsim_bound11113^0 <= in_count^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + i6^0, rest remain the same}>
+<l7, l62, disp9^0 <= i6^0, {i6^0 -> -disp9^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l62, 1 + i6^0 <= disp9^0 /\ in_count^0 <= 1 + apsim_bound11113^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l7, 1 + i6^0 <= disp9^0 /\ 2 + apsim_bound11113^0 <= in_count^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, rest remain the same}>
+<l7, l62, 1 + i6^0 <= disp9^0, {i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l2, 1 + i6^0 <= disp9^0, {i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, rest remain the same}>
+<l7, l62, 1 + i6^0 <= disp9^0 /\ in_count^0 <= 1 + apsim_bound11113^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l7, l7, 1 + i6^0 <= disp9^0 /\ 2 + apsim_bound11113^0 <= in_count^0, {apsim_bound11113^0 -> 1 + apsim_bound11113^0, i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, rest remain the same}>
+<l7, l62, 1 + i6^0 <= disp9^0, {i6^0 -> -disp9^0 + hsize_reg10^0 + i6^0, out_count^0 -> 1 + out_count^0, rest remain the same}>
+<l11, l14, i29^0 <= 15, {all remain the same}>
+<l11, l11, 16 <= i29^0, {i29^0 -> -16 + i29^0, rest remain the same}>
+<l14, l20, i29^0 <= 0 /\ n_bits^0 = undef3064 /\ n_bits^0 + undef3661 = 8, {bits33^0 -> undef3064, bytes_out^0 -> bytes_out^0 + undef3064, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ 257 <= maxcode^0 /\ n_bits^0 + undef3661 = 8, {bits33^0 -> -8 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ maxcode^0 <= 256 /\ n_bits^0 + undef3661 = 8, {bits33^0 -> -8 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l20, i29^0 <= 0 /\ 9 <= n_bits^0 + undef3661 /\ n_bits^0 + undef3661 <= 15 /\ n_bits^0 = undef3064, {bits33^0 -> undef3064, bytes_out^0 -> bytes_out^0 + undef3064, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ 257 <= maxcode^0 /\ 9 <= n_bits^0 + undef3661 /\ n_bits^0 + undef3661 <= 15, {bits33^0 -> -8 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ 9 <= n_bits^0 + undef3661 /\ n_bits^0 + undef3661 <= 15 /\ maxcode^0 <= 256, {bits33^0 -> -8 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l20, i29^0 <= 0 /\ n_bits^0 + undef3661 <= 7 /\ n_bits^0 = undef3064, {bits33^0 -> undef3064, bytes_out^0 -> bytes_out^0 + undef3064, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ 257 <= maxcode^0 /\ n_bits^0 + undef3661 <= 7, {bits33^0 -> -8 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ maxcode^0 <= 256 /\ n_bits^0 + undef3661 <= 7, {bits33^0 -> -8 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l20, i29^0 <= 0 /\ n_bits^0 = undef3064 /\ n_bits^0 + undef3661 = 16, {bits33^0 -> undef3064, bytes_out^0 -> bytes_out^0 + undef3064, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ 257 <= maxcode^0 /\ n_bits^0 + undef3661 = 16, {bits33^0 -> -16 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ maxcode^0 <= 256 /\ n_bits^0 + undef3661 = 16, {bits33^0 -> -16 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l20, i29^0 <= 0 /\ 17 <= n_bits^0 + undef3661 /\ n_bits^0 = undef3064, {bits33^0 -> undef3064, bytes_out^0 -> bytes_out^0 + undef3064, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ 257 <= maxcode^0 /\ 17 <= n_bits^0 + undef3661, {bits33^0 -> -16 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l42, i29^0 <= 0 /\ maxcode^0 <= 256 /\ 17 <= n_bits^0 + undef3661, {bits33^0 -> -16 + n_bits^0 + undef3661, clear_flg^0 -> 1, free_ent^0 -> 257, offset^0 -> n_bits^0 + offset^0, rest remain the same}>
+<l14, l14, 1 <= i29^0, {i29^0 -> -1 + i29^0, rest remain the same}>
+<l20, l2, clear_flg^0 <= 0 /\ free_ent^0 <= maxcode^0 /\ bits33^0 = 1, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l42, free_ent^0 <= maxcode^0 /\ 1 <= clear_flg^0 /\ bits33^0 = 1, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l42, 1 + maxcode^0 <= free_ent^0 /\ bits33^0 = 1, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l20, 2 <= bits33^0, {bits33^0 -> -1 + bits33^0, rest remain the same}>
+<l20, l2, clear_flg^0 <= 0 /\ free_ent^0 <= maxcode^0 /\ 2 <= bits33^0, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l42, free_ent^0 <= maxcode^0 /\ 1 <= clear_flg^0 /\ 2 <= bits33^0, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l42, 1 + maxcode^0 <= free_ent^0 /\ 2 <= bits33^0, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l20, bits33^0 <= 0, {bits33^0 -> -1 + bits33^0, rest remain the same}>
+<l20, l2, bits33^0 <= 0 /\ clear_flg^0 <= 0 /\ free_ent^0 <= maxcode^0, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l42, bits33^0 <= 0 /\ free_ent^0 <= maxcode^0 /\ 1 <= clear_flg^0, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l20, l42, bits33^0 <= 0 /\ 1 + maxcode^0 <= free_ent^0, {bits33^0 -> -1 + bits33^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, n40^0 <= i41^0 /\ maxbits^0 <= n_bits^0 /\ clear_flg^0 = 0, {bytes_out^0 -> bytes_out^0 + n_bits^0, maxcode^0 -> undef1716, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, n40^0 <= i41^0 /\ 2 + n_bits^0 <= maxbits^0 /\ clear_flg^0 = 0, {bytes_out^0 -> bytes_out^0 + n_bits^0, maxcode^0 -> undef1716, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, n40^0 <= i41^0 /\ clear_flg^0 = 0 /\ maxbits^0 = 1 + n_bits^0, {bytes_out^0 -> bytes_out^0 + n_bits^0, maxcode^0 -> maxmaxcode^0, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, n40^0 <= i41^0 /\ 1 <= clear_flg^0, {bytes_out^0 -> bytes_out^0 + n_bits^0, clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0, rest remain the same}>
+<l22, l2, n40^0 <= i41^0 /\ 1 + clear_flg^0 <= 0, {bytes_out^0 -> bytes_out^0 + n_bits^0, clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0, rest remain the same}>
+<l22, l2, maxbits^0 <= n_bits^0 /\ 1 + i41^0 <= n40^0 /\ 16 <= i41^0 /\ clear_flg^0 = 0, {bytes_out^0 -> bytes_out^0 + n_bits^0, maxcode^0 -> undef1716, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, 1 + i41^0 <= n40^0 /\ 16 <= i41^0 /\ 2 + n_bits^0 <= maxbits^0 /\ clear_flg^0 = 0, {bytes_out^0 -> bytes_out^0 + n_bits^0, maxcode^0 -> undef1716, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, 1 + i41^0 <= n40^0 /\ 16 <= i41^0 /\ clear_flg^0 = 0 /\ maxbits^0 = 1 + n_bits^0, {bytes_out^0 -> bytes_out^0 + n_bits^0, maxcode^0 -> maxmaxcode^0, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l22, l2, 1 <= clear_flg^0 /\ 1 + i41^0 <= n40^0 /\ 16 <= i41^0, {bytes_out^0 -> bytes_out^0 + n_bits^0, clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0, rest remain the same}>
+<l22, l2, 1 + clear_flg^0 <= 0 /\ 1 + i41^0 <= n40^0 /\ 16 <= i41^0, {bytes_out^0 -> bytes_out^0 + n_bits^0, clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0, rest remain the same}>
+<l22, l22, 1 + i41^0 <= n40^0 /\ i41^0 <= 15, {i41^0 -> 1 + i41^0, rest remain the same}>
+<l42, l2, maxbits^0 <= n_bits^0 /\ offset^0 <= 0 /\ clear_flg^0 = 0, {maxcode^0 -> undef1716, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l42, l2, offset^0 <= 0 /\ 2 + n_bits^0 <= maxbits^0 /\ clear_flg^0 = 0, {maxcode^0 -> undef1716, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l42, l2, offset^0 <= 0 /\ clear_flg^0 = 0 /\ maxbits^0 = 1 + n_bits^0, {maxcode^0 -> maxmaxcode^0, n_bits^0 -> 1 + n_bits^0, offset^0 -> 0, rest remain the same}>
+<l42, l2, offset^0 <= 0 /\ 1 <= clear_flg^0, {clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0, rest remain the same}>
+<l42, l2, offset^0 <= 0 /\ 1 + clear_flg^0 <= 0, {clear_flg^0 -> 0, maxcode^0 -> undef1971, n_bits^0 -> 9, offset^0 -> 0, rest remain the same}>
+<l42, l22, 1 <= offset^0, {i41^0 -> 0, n40^0 -> n_bits^0, rest remain the same}>
+<l62, l2, maxmaxcode^0 <= free_ent^0 /\ 1 + in_count^0 <= checkpoint^0, {all remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ block_compress^0 = 0, {all remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ undef4376 <= ratio^0 /\ 1 <= block_compress^0 /\ in_count^0 <= 8388607 /\ hsize^0 = undef3999, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> undef4376, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 <= block_compress^0 /\ 1 + ratio^0 <= undef4376 /\ in_count^0 <= 8388607, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> undef4376, ratio^0 -> undef4376, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ undef3968 <= ratio^0 /\ 1 <= block_compress^0 /\ 1 <= undef4427 /\ 8388608 <= in_count^0 /\ hsize^0 = undef3999, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> undef3968, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 <= block_compress^0 /\ 1 + ratio^0 <= undef3968 /\ 1 <= undef4427 /\ 8388608 <= in_count^0, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> undef3968, ratio^0 -> undef3968, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ undef3968 <= ratio^0 /\ 1 <= block_compress^0 /\ 1 + undef4427 <= 0 /\ 8388608 <= in_count^0 /\ hsize^0 = undef3999, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> undef3968, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 <= block_compress^0 /\ 1 + ratio^0 <= undef3968 /\ 1 + undef4427 <= 0 /\ 8388608 <= in_count^0, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> undef3968, ratio^0 -> undef3968, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 <= block_compress^0 /\ 2147483647 <= ratio^0 /\ 8388608 <= in_count^0 /\ hsize^0 = undef3999 /\ undef4427 = 0, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> 2147483647, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 <= block_compress^0 /\ 8388608 <= in_count^0 /\ ratio^0 <= 2147483646 /\ undef4427 = 0, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> 2147483647, ratio^0 -> 2147483647, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ undef4376 <= ratio^0 /\ 1 + block_compress^0 <= 0 /\ in_count^0 <= 8388607 /\ hsize^0 = undef3999, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> undef4376, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 + block_compress^0 <= 0 /\ 1 + ratio^0 <= undef4376 /\ in_count^0 <= 8388607, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> undef4376, ratio^0 -> undef4376, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ undef3968 <= ratio^0 /\ 1 + block_compress^0 <= 0 /\ 1 <= undef4427 /\ 8388608 <= in_count^0 /\ hsize^0 = undef3999, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> undef3968, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 + block_compress^0 <= 0 /\ 1 + ratio^0 <= undef3968 /\ 1 <= undef4427 /\ 8388608 <= in_count^0, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> undef3968, ratio^0 -> undef3968, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ undef3968 <= ratio^0 /\ 1 + block_compress^0 <= 0 /\ 1 + undef4427 <= 0 /\ 8388608 <= in_count^0 /\ hsize^0 = undef3999, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> undef3968, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 + block_compress^0 <= 0 /\ 1 + ratio^0 <= undef3968 /\ 1 + undef4427 <= 0 /\ 8388608 <= in_count^0, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> undef3968, ratio^0 -> undef3968, rest remain the same}>
+<l62, l11, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 + block_compress^0 <= 0 /\ 2147483647 <= ratio^0 /\ 8388608 <= in_count^0 /\ hsize^0 = undef3999 /\ undef4427 = 0, {checkpoint^0 -> 10000 + in_count^0, i29^0 -> -16 + undef3999, rat26^0 -> 2147483647, ratio^0 -> 0, rest remain the same}>
+<l62, l2, checkpoint^0 <= in_count^0 /\ maxmaxcode^0 <= free_ent^0 /\ 1 + block_compress^0 <= 0 /\ 8388608 <= in_count^0 /\ ratio^0 <= 2147483646 /\ undef4427 = 0, {checkpoint^0 -> 10000 + in_count^0, rat26^0 -> 2147483647, ratio^0 -> 2147483647, rest remain the same}>
+<l62, l2, 1 + free_ent^0 <= maxmaxcode^0, {free_ent^0 -> 1 + free_ent^0, rest remain the same}>
+Variables:
+InCnt^0, apsim_InCnt^0, c7^0, fcode5^0, i6^0, in_count^0, out_count^0, disp9^0, hsize_reg10^0, apsim_bound11113^0, i29^0, bits33^0, bytes_out^0, n_bits^0, offset^0, maxcode^0, clear_flg^0, free_ent^0, i41^0, maxbits^0, n40^0, maxmaxcode^0, checkpoint^0, block_compress^0, hsize^0, rat26^0, ratio^0
+
+Graph 6:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l57, i3^0 = 0, {all remain the same}>
+
+Graph 2
+<l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+<l57, l10, 1 <= block_compress^0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+<l57, l10, 1 + block_compress^0 <= 0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+
+Graph 3
+<l10, l5, 65536 <= fcode5^0 /\ hsize^0 = undef379 /\ undef377 = undef379, {hshift11^0 -> 8 - hshift11^0, hsize_reg10^0 -> undef379, i21^0 -> -16 + undef377, rest remain the same}>
+
+Graph 4
+<l5, l3, i21^0 <= 15, {all remain the same}>
+
+Graph 5
+<l3, l2, i21^0 <= 0, {all remain the same}>
+
+Graph 6
+<l2, l25, InCnt^0 <= 0 /\ bytes_out^0 <= in_count^0, {all remain the same}>
+<l2, l25, InCnt^0 <= 0 /\ 1 + in_count^0 <= bytes_out^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 5 )
+( 3 , 4 )
+( 5 , 3 )
+( 7 , 5 )
+( 10 , 2 )
+( 11 , 5 )
+( 14 , 5 )
+( 20 , 5 )
+( 22 , 5 )
+( 25 , 6 )
+( 42 , 5 )
+( 57 , 1 )
+( 62 , 5 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.000944
+
+Checking conditional termination of SCC {l57}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001683s
+[33mRanking function: [36m49 - i3^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.001337
+
+Checking conditional termination of SCC {l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000378s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000860s
+Trying to remove transition: <l10, l10, fcode5^0 <= 65535, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002298s
+Time used: 0.00223
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001794s
+Time used: 4.00161
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006152s
+Time used: 4.00271
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.005758s
+Time used: 1.00186
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.009761s
+Time used: 0.006547
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.002055s
+Time used: 1.00205
+
+LOG: SAT solveNonLinear - Elapsed time: 1.011816s
+Cost: 1; Total time: 1.00859
+[33mQuasi-ranking function: [36m50000 - hshift11^0[0m
+New Graphs: 
+Transitions:
+<l10, l10, fcode5^0 <= 65535 /\ 50001 <= hshift11^0, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+Variables:
+fcode5^0, hshift11^0
+Checking conditional termination of SCC {l10}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000431s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001133s
+Trying to remove transition: <l10, l10, fcode5^0 <= 65535 /\ 50001 <= hshift11^0, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.002907s
+Time used: 0.002825
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002914s
+Time used: 4.00273
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006381s
+Time used: 4.00301
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006515s
+Time used: 1.00214
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.006755s
+Time used: 4.00372
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+* Postcondition  : 1 <= 0
+Postcodition moved up: 1 <= 0
+
+LOG: Try proving POST
+Postcondition: 1 <= 0
+
+LOG: CALL check - Post:1 <= 0 - Process 2
+* Exit transition: <l0, l57, block_compress^0 = 0 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001506s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.001549s
+
+LOG: NarrowEntry size 1
+Narrowing transition: 
+<l57, l57, i3^0 <= 49, {i3^0 -> 1 + i3^0, rest remain the same}>
+
+LOG: Narrow transition size 1
+ENTRIES:
+<l0, l57, 0 <= 0 /\ block_compress^0 = 0 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+END ENTRIES:
+GRAPH:
+<l57, l57, 0 <= 0 /\ i3^0 <= 49 /\ block_compress^0 = 0 /\ undef557 = undef706, {i3^0 -> 1 + i3^0, rest remain the same}>
+END GRAPH:
+EXIT: <l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+POST: 1 <= 0
+
+
+LOG: Try proving POST
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.023963s
+Time used: 0.023894
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.363268s
+Time used: 0.362486
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.006039s
+Time used: 1.00286
+
+LOG: Postcondition is not implied - no solution
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 1.415047s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 2
+Transitions:
+<l10, l10, fcode5^0 <= 65535, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+Variables:
+fcode5^0, hshift11^0
+
+Checking conditional non-termination of SCC {l10}...
+EXIT TRANSITIONS:
+<l10, end, 65536 <= fcode5^0, {all remain the same}>
+
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008591s
+Time used: 0.008439
+Improving Solution with cost 3 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 0.008687s
+Time used: 0.008685
+
+LOG: SAT solveNonLinear - Elapsed time: 0.017278s
+Cost: 3; Total time: 0.017124
+[31mFailed at location 10: 1 + fcode5^0 <= 0[0m
+[31mFailed at location 10: 1 + fcode5^0 <= 0[0m
+[31mFailed at location 10: 1 + fcode5^0 <= 0[0m
+Before Improving: 
+[36mQuasi-invariant at l10: 1 + fcode5^0 <= 0[0m
+Optimizing invariants...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.005321s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003015s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002540s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002475s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002433s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002385s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002398s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002359s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002399s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002389s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002386s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002373s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002395s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002367s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002391s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002392s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002392s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002389s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002403s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002383s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002387s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002403s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002399s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002388s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002381s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002394s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002390s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002403s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002386s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002408s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002410s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002421s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002391s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002428s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002394s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002392s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002420s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002412s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002408s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002395s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002429s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002404s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002404s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002374s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002393s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002397s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002396s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002385s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002399s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002394s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002388s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002389s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002383s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002408s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002391s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002403s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002410s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002433s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002444s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002457s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002441s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002424s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002447s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002437s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002426s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002437s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002531s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002447s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002430s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002405s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002425s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002418s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002404s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002429s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002402s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002441s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002403s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002406s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002393s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002425s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002424s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002422s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002450s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002401s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002433s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002422s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002409s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002375s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002429s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002391s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002395s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002393s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002404s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002406s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002382s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002398s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002402s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002417s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002434s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002402s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002394s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002385s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002410s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002410s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002412s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002408s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002392s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002391s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002428s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002412s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002409s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002396s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002429s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002401s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002390s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002408s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002432s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002408s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002396s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002409s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002422s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002402s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002416s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002391s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002426s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002395s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002410s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002411s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002421s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002407s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002413s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002427s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002414s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002416s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002426s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002412s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002415s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002434s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002425s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002416s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002449s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002449s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002475s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002438s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002447s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002436s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002441s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002412s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002423s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002438s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002421s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002410s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002441s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002427s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002424s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002411s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002415s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002417s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002428s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002418s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002439s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002417s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002428s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002420s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002445s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002426s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002427s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002435s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002450s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002435s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002435s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002444s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002440s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002426s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002424s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002432s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002460s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002434s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002438s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002449s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002454s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002439s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002426s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002439s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002442s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002438s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002461s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002448s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002457s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002434s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002463s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002439s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002433s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003812s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003779s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003729s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003741s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003760s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003738s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003732s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003723s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003754s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003731s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003740s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003718s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003747s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003734s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003737s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003752s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003761s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003736s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003761s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003745s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003767s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003763s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003752s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003746s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003742s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003771s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003791s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003768s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003765s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003779s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003753s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003756s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003787s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003760s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003782s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003784s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003773s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003788s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003816s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003774s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003764s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003799s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003789s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003788s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003781s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003820s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003785s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003777s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003810s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003809s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003789s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003786s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003817s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003800s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003805s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003805s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003798s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003796s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003785s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003806s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003823s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003801s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003805s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003812s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003815s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003818s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003831s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003812s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003838s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003822s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003828s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003821s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003833s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003816s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003828s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003833s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003842s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003829s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003844s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003830s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003839s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003819s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003830s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003846s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003837s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003832s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003851s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003833s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003839s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003838s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003839s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003848s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003858s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003861s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003872s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003857s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003872s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003840s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003851s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003885s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003893s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003884s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003861s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003889s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003882s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003868s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003879s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003860s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003861s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003863s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003891s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003878s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003879s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003920s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003904s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003918s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003902s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003882s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003887s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003893s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003864s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003870s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003879s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003858s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003901s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003897s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003892s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003900s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003916s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003877s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003905s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003902s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003883s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003896s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003885s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003882s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003897s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003896s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003916s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003891s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003914s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003899s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003903s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003905s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003916s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003906s
+Quasi-invariant improved
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.003908s
+Quasi-invariant improved
+Remaining time after improvement: -0.000872
+Minimizing number of undef constraints...
+
+LOG: CALL solveNonLinear
+
+LOG: RETURN solveNonLinear - Elapsed time: 0.004778s
+[33mNon-termination implied by a set of quasi-invariant(s):[0m
+[36mQuasi-invariant at l10: fcode5^0 <= 345[0m
+Constraint over undef '1 + undef424 <= fcode5^0' in transition:
+<l10, l10, fcode5^0 <= 65535, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+
+[33mStrengthening and disabling EXIT transitions...[0m
+Closed exits from l10: 1
+
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l10, l10, 1 + undef424 <= fcode5^0 /\ fcode5^0 <= 345, {fcode5^0 -> undef424, hshift11^0 -> 1 + hshift11^0, rest remain the same}>
+
+Calling reachability with...
+Transition: <l10, end, true, {all remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l10, end, true, {all remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l10, end, true, {all remain the same}>
+Conditions: fcode5^0 <= 345, 
+OPEN EXITS: 
+<l10, end, fcode5^0 <= 345, {all remain the same}>
+<l10, end, fcode5^0 <= 345, {all remain the same}>
+<l10, end, fcode5^0 <= 345, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 1 <= block_compress^0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 1 + block_compress^0 <= 0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 1 <= block_compress^0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 1 + block_compress^0 <= 0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 50 <= i3^0 /\ block_compress^0 = 0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 1 <= block_compress^0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+Transition: <l57, l10, 1 + block_compress^0 <= 0 /\ 50 <= i3^0 /\ undef557 = undef706, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}>
+Conditions: fcode5^0 <= 345, 
+OPEN EXITS: 
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 256, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345)
+<l57, l10, 50 <= i3^0, {InCnt^0 -> 49, apsim_InCnt^0 -> 52, bytes_out^0 -> 3, checkpoint^0 -> 10000, clear_flg^0 -> 0, fcode5^0 -> hsize^0, free_ent^0 -> 257, hshift11^0 -> 0, i6^0 -> 0, in_count^0 -> 1, maxbits^0 -> 16, maxcode^0 -> undef4266, maxmaxcode^0 -> undef4267, n_bits^0 -> 9, offset^0 -> 0, out_count^0 -> 0, ratio^0 -> 0, rest remain the same}> (condsUp: 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345)
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 50 <= i3^0, 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345, 
+OPEN EXITS: 
+
+[31m> Conditions are not feasible after transitions.[0m
+--- Reachability graph ---
+Transitions:
+<l57, l57, i3^0 <= 49, {i3^0 -> 1 + i3^0, rest remain the same}>
+Variables:
+i3^0
+Checking edge-closing of SCC {l57}...
+> No exit transition to close.
+Checking conditional termination of SCC {l57}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.002386s
+[33mRanking function: [36m49 - i3^0[0m
+New Graphs: 
+Calling reachability with...
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: block_compress^0 = 0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 1 <= block_compress^0, undef557 = undef706, hsize^0 <= 345, 
+Transition: <l0, l57, i3^0 = 0, {all remain the same}>
+Conditions: 1 + block_compress^0 <= 0, undef557 = undef706, hsize^0 <= 345, 
+OPEN EXITS: 
+<l0, l57, hsize^0 <= 345 /\ block_compress^0 = 0 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, 1 <= block_compress^0 /\ hsize^0 <= 345 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, 1 + block_compress^0 <= 0 /\ hsize^0 <= 345 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, hsize^0 <= 345 /\ block_compress^0 = 0 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, 1 <= block_compress^0 /\ hsize^0 <= 345 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, 1 + block_compress^0 <= 0 /\ hsize^0 <= 345 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, hsize^0 <= 345 /\ block_compress^0 = 0 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, 1 <= block_compress^0 /\ hsize^0 <= 345 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+<l0, l57, 1 + block_compress^0 <= 0 /\ hsize^0 <= 345 /\ i3^0 = 0 /\ undef557 = undef706, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

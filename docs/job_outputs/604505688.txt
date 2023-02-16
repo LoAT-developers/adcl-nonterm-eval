@@ -1,0 +1,508 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: __init
+   0: f303_0_createIntList_Return -> f517_0_random_ArrayAccess : arg2'=arg2P0, arg4'=arg4P0, arg1'=arg1P0, arg3'=arg3P0, (1+arg1P0 > 0 /\ 1+arg1 > 0 /\ -arg1+arg1P0 <= 0), cost: 1
+   2: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg1 > 0 /\ 1+x70-arg4P2 == 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+   1: f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  10: f1_0_main_Load -> f673_0_createIntList_LE : arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1-arg2P10 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+   3: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (arg1P3-arg1 <= 0 /\ 1+arg1 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0 /\ -2+arg3 < 0 /\ arg4-arg3P3 == 0), cost: 1
+   4: f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (1+arg1 > 0 /\ -arg4P4+arg4 == 0 /\ arg2 > 0 /\ -1-arg3P4+arg3 == 0 /\ -1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+   5: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1-arg4P5+arg3 == 0 /\ 1+arg2P5-arg1 <= 0 /\ arg1 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+   6: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (-arg3P6+arg4 == 0 /\ 1+arg1 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ -2+arg3 < 0), cost: 1
+   7: f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1 > 0 /\ arg2 > 0 /\ 1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ -arg4P7+arg4 == 0 /\ -1-arg3P7+arg3 == 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+   8: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, (1+arg1 > 0 /\ arg1P8-arg1 <= 0 /\ arg4-arg3P8 == 0 /\ 1+arg2 > 0 /\ -2+arg3 < 0 /\ -arg2P8 == 0 /\ 1+arg1P8 > 0), cost: 1
+   9: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, (1+arg1 > 0 /\ -arg2P9 == 0 /\ 1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0 /\ arg4-arg3P9 == 0), cost: 1
+  11: f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg3'=arg3P11, (-1-arg1P11+arg1 == 0 /\ arg2 > 0 /\ 1+arg2-arg2P11 == 0 /\ arg1 > 0), cost: 1
+  12: __init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: __init
+   2: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg1 > 0 /\ 1+x70-arg4P2 == 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+   1: f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  10: f1_0_main_Load -> f673_0_createIntList_LE : arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1-arg2P10 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+   3: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (arg1P3-arg1 <= 0 /\ 1+arg1 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0 /\ -2+arg3 < 0 /\ arg4-arg3P3 == 0), cost: 1
+   4: f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (1+arg1 > 0 /\ -arg4P4+arg4 == 0 /\ arg2 > 0 /\ -1-arg3P4+arg3 == 0 /\ -1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+   5: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1-arg4P5+arg3 == 0 /\ 1+arg2P5-arg1 <= 0 /\ arg1 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+   6: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (-arg3P6+arg4 == 0 /\ 1+arg1 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ -2+arg3 < 0), cost: 1
+   7: f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1 > 0 /\ arg2 > 0 /\ 1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ -arg4P7+arg4 == 0 /\ -1-arg3P7+arg3 == 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+   8: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, (1+arg1 > 0 /\ arg1P8-arg1 <= 0 /\ arg4-arg3P8 == 0 /\ 1+arg2 > 0 /\ -2+arg3 < 0 /\ -arg2P8 == 0 /\ 1+arg1P8 > 0), cost: 1
+   9: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, (1+arg1 > 0 /\ -arg2P9 == 0 /\ 1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0 /\ arg4-arg3P9 == 0), cost: 1
+  11: f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg3'=arg3P11, (-1-arg1P11+arg1 == 0 /\ arg2 > 0 /\ 1+arg2-arg2P11 == 0 /\ arg1 > 0), cost: 1
+  12: __init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+
+
+Applied preprocessing
+Original rule:
+f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=arg4P2, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg1 > 0 /\ 1+x70-arg4P2 == 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+New rule:
+f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg3P3, (arg1P3-arg1 <= 0 /\ 1+arg1 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0 /\ -2+arg3 < 0 /\ arg4-arg3P3 == 0), cost: 1
+New rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg4'=arg4P4, arg1'=arg1P4, arg3'=arg3P4, (1+arg1 > 0 /\ -arg4P4+arg4 == 0 /\ arg2 > 0 /\ -1-arg3P4+arg3 == 0 /\ -1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+New rule:
+f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg1'=arg1P4, arg3'=-1+arg3, (-1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=arg4P5, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1-arg4P5+arg3 == 0 /\ 1+arg2P5-arg1 <= 0 /\ arg1 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+New rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg3P6, (-arg3P6+arg4 == 0 /\ 1+arg1 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ -2+arg3 < 0), cost: 1
+New rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=arg4P7, arg1'=arg1P7, arg3'=arg3P7, (1+arg1 > 0 /\ arg2 > 0 /\ 1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ -arg4P7+arg4 == 0 /\ -1-arg3P7+arg3 == 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+New rule:
+f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg1'=arg1P7, arg3'=-1+arg3, (1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P8, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg3P8, (1+arg1 > 0 /\ arg1P8-arg1 <= 0 /\ arg4-arg3P8 == 0 /\ 1+arg2 > 0 /\ -2+arg3 < 0 /\ -arg2P8 == 0 /\ 1+arg1P8 > 0), cost: 1
+New rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P9, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg3P9, (1+arg1 > 0 /\ -arg2P9 == 0 /\ 1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0 /\ arg4-arg3P9 == 0), cost: 1
+New rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f1_0_main_Load -> f673_0_createIntList_LE : arg2'=arg2P10, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1-arg2P10 == 0 /\ 1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+New rule:
+f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+
+Applied preprocessing
+Original rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2P11, arg4'=arg4P11, arg1'=arg1P11, arg3'=arg3P11, (-1-arg1P11+arg1 == 0 /\ arg2 > 0 /\ 1+arg2-arg2P11 == 0 /\ arg1 > 0), cost: 1
+New rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=1+arg2, arg4'=arg4P11, arg1'=-1+arg1, arg3'=arg3P11, (arg2 > 0 /\ arg1 > 0), cost: 1
+
+Simplified rules
+Start location: __init
+  13: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+   1: f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  21: f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  15: f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg1'=arg1P4, arg3'=-1+arg3, (-1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+  16: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+  17: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+  18: f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg1'=arg1P7, arg3'=-1+arg3, (1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+  19: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+  20: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+  22: f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=1+arg2, arg4'=arg4P11, arg1'=-1+arg1, arg3'=arg3P11, (arg2 > 0 /\ arg1 > 0), cost: 1
+  12: __init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+
+
+Applied acceleration
+Original rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=1+arg2, arg4'=arg4P11, arg1'=-1+arg1, arg3'=arg3P11, (arg2 > 0 /\ arg1 > 0), cost: 1
+New rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+n1, arg4'=arg4P11, arg1'=-n1+arg1, arg3'=arg3P11, (arg2 > 0 /\ -1+n1 >= 0 /\ 1-n1+arg1 > 0), cost: n1
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_bGkBdp.txt
+
+Applied instantiation
+Original rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+n1, arg4'=arg4P11, arg1'=-n1+arg1, arg3'=arg3P11, (arg2 > 0 /\ -1+n1 >= 0 /\ 1-n1+arg1 > 0), cost: n1
+New rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+arg1, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (1 > 0 /\ arg2 > 0 /\ -1+arg1 >= 0), cost: arg1
+
+Applied simplification
+Original rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+arg1, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (1 > 0 /\ arg2 > 0 /\ -1+arg1 >= 0), cost: arg1
+New rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+arg1, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (arg2 > 0 /\ -1+arg1 >= 0), cost: arg1
+
+Applied deletion
+Removed the following rules: 22
+
+Accelerated simple loops
+Start location: __init
+  13: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+   1: f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  21: f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  15: f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg1'=arg1P4, arg3'=-1+arg3, (-1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+  16: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+  17: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+  18: f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg1'=arg1P7, arg3'=-1+arg3, (1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+  19: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+  20: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+  24: f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+arg1, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (arg2 > 0 /\ -1+arg1 >= 0), cost: arg1
+  12: __init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+
+
+Applied chaining
+First rule:
+f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+Second rule:
+f704_0_nth_LE -> f704_0_nth_LE : arg2'=arg2P4, arg1'=arg1P4, arg3'=-1+arg3, (-1+arg3 > 0 /\ 1+arg1P4 > 0 /\ 1-arg2+arg2P4 <= 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 1
+New rule:
+f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ 1-arg1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 15
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+Second rule:
+f964_0_nth_LE -> f964_0_nth_LE : arg2'=arg2P7, arg1'=arg1P7, arg3'=-1+arg3, (1+arg1P7 > 0 /\ arg1P7-arg1 <= 0 /\ -1+arg3 > 0 /\ 1+arg2P7 > 0 /\ 1-arg2+arg2P7 <= 0), cost: 1
+New rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+
+Applied deletion
+Removed the following rules: 18
+
+Applied chaining
+First rule:
+f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+Second rule:
+f673_0_createIntList_LE -> f673_0_createIntList_LE : arg2'=arg2+arg1, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (arg2 > 0 /\ -1+arg1 >= 0), cost: arg1
+New rule:
+f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1+arg1P10, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (-1+arg1P10 >= 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1+arg1P10
+
+Applied deletion
+Removed the following rules: 24
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  13: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+  25: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ 1-arg1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 2
+   1: f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  21: f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1, arg4'=arg4P10, arg1'=arg1P10, arg3'=arg3P10, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1P10 > 0), cost: 1
+  27: f1_0_main_Load -> f673_0_createIntList_LE : arg2'=1+arg1P10, arg4'=arg4P11, arg1'=0, arg3'=arg3P11, (-1+arg1P10 >= 0 /\ 1+arg2 > 0 /\ arg1 > 0), cost: 1+arg1P10
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  16: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+  26: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+  17: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+  19: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+  20: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+  12: __init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  13: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+  25: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ 1-arg1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 2
+   1: f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  16: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+  26: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+  17: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+  19: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+  20: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+  12: __init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+
+
+Eliminating location f1_0_main_Load by chaining:
+
+Applied chaining
+First rule:
+__init -> f1_0_main_Load : arg2'=arg2P12, arg4'=arg4P12, arg1'=arg1P12, arg3'=arg3P12, TRUE, cost: 1
+Second rule:
+f1_0_main_Load -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (1+arg1P1 > 0 /\ arg1 > 0), cost: 1
+New rule:
+__init -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (arg1P12 > 0 /\ 1+arg1P1 > 0), cost: 2
+
+Applied deletion
+Removed the following rules: 1 12
+
+Eliminated locations on linear paths
+Start location: __init
+  13: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+  25: f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ 1-arg1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 2
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  16: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+  26: f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+  17: f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+  19: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+  20: f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+  28: __init -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (arg1P12 > 0 /\ 1+arg1P1 > 0), cost: 2
+
+
+Eliminating location f517_0_random_ArrayAccess by chaining:
+
+Applied chaining
+First rule:
+__init -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (arg1P12 > 0 /\ 1+arg1P1 > 0), cost: 2
+Second rule:
+f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg1+arg1P2 <= 0 /\ -arg2P2+arg1 >= 0), cost: 1
+New rule:
+__init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ 1+arg1P1 > 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+
+Applied simplification
+Original rule:
+__init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ 1+arg1P1 > 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+New rule:
+__init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+
+Applied chaining
+First rule:
+__init -> f517_0_random_ArrayAccess : arg2'=arg2P1, arg4'=arg4P1, arg1'=arg1P1, arg3'=arg3P1, (arg1P12 > 0 /\ 1+arg1P1 > 0), cost: 2
+Second rule:
+f517_0_random_ArrayAccess -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ 1-arg1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0 /\ arg1P4-arg1 <= 0), cost: 2
+New rule:
+__init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ 1+arg1P1 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+Applied simplification
+Original rule:
+__init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ 1+arg1P1 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+New rule:
+__init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+Applied deletion
+Removed the following rules: 13 25 28
+
+Eliminating location f964_0_nth_LE by chaining:
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+Second rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (-arg1P5+arg1P6 <= 0 /\ 1+arg1P5 > 0 /\ arg2 > 0 /\ arg2P5 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 2-arg2P5+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (-arg1P5+arg1P6 <= 0 /\ 1+arg1P5 > 0 /\ arg2 > 0 /\ arg2P5 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 2-arg2P5+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 2
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (-arg1P5+arg1P6 <= 0 /\ arg2 > 0 /\ arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 2-arg2P5+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 2
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+Second rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg1P8-arg1P5 <= 0 /\ 1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg1P8 > 0 /\ 1+arg3P5 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg1P8-arg1P5 <= 0 /\ 1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg1P8 > 0 /\ 1+arg3P5 > 0), cost: 2
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg1P8-arg1P5 <= 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg1P8 > 0 /\ 1+arg3P5 > 0), cost: 2
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P5, arg4'=1+arg3, arg1'=arg1P5, arg3'=arg3P5, (1+arg1P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 1
+Second rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (1+arg1P5 > 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 1+arg1P9 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ -arg1P5+arg1P9 <= 0 /\ 1+arg3P5 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (1+arg1P5 > 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 1+arg1P9 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ -arg1P5+arg1P9 <= 0 /\ 1+arg3P5 > 0), cost: 2
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 1+arg1P9 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ -arg1P5+arg1P9 <= 0), cost: 2
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+Second rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=arg4, (2-arg3 > 0 /\ arg2 > 0 /\ 2-arg2+arg2P6 <= 0 /\ -arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0), cost: 1
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 2+arg2P6-arg2P7 <= 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 3-arg3P5 > 0 /\ 1+arg1P6 > 0 /\ 1+arg2P7 > 0 /\ -arg1P7+arg1P6 <= 0 /\ arg3 > 0 /\ arg2P7 > 0), cost: 3
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 2+arg2P6-arg2P7 <= 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 3-arg3P5 > 0 /\ 1+arg1P6 > 0 /\ 1+arg2P7 > 0 /\ -arg1P7+arg1P6 <= 0 /\ arg3 > 0 /\ arg2P7 > 0), cost: 3
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 2+arg2P6-arg2P7 <= 0 /\ 1+arg1P7-arg1 <= 0 /\ 3-arg3P5 > 0 /\ 1+arg1P6 > 0 /\ -arg1P7+arg1P6 <= 0 /\ arg3 > 0 /\ arg2P7 > 0), cost: 3
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+Second rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=arg4, (2-arg3 > 0 /\ arg1P8-arg1 <= 0 /\ 1+arg2 > 0 /\ 1+arg1P8 > 0), cost: 1
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 3-arg3P5 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -arg1P7+arg1P8 <= 0 /\ 1+arg1P8 > 0), cost: 3
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 3-arg3P5 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -arg1P7+arg1P8 <= 0 /\ 1+arg1P8 > 0), cost: 3
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 3-arg3P5 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -arg1P7+arg1P8 <= 0 /\ 1+arg1P8 > 0), cost: 3
+
+Applied chaining
+First rule:
+f754_0_main_LE -> f964_0_nth_LE : arg2'=arg2P7, arg4'=1+arg3, arg1'=arg1P7, arg3'=-1+arg3P5, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0), cost: 2
+Second rule:
+f964_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=arg4, (1+arg2 > 0 /\ -1+arg3 > 0 /\ 1+arg1P9 > 0 /\ -arg1+arg1P9 <= 0), cost: 1
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ -arg1P7+arg1P9 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg1P9 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -2+arg3P5 > 0), cost: 3
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ -arg1P7+arg1P9 <= 0 /\ 1+arg1P7 > 0 /\ 1+arg1P9 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -2+arg3P5 > 0), cost: 3
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ -arg1P7+arg1P9 <= 0 /\ 1+arg1P9 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -2+arg3P5 > 0), cost: 3
+
+Applied deletion
+Removed the following rules: 16 17 19 20 26
+
+Eliminated locations on tree-shaped paths
+Start location: __init
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  31: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (-arg1P5+arg1P6 <= 0 /\ arg2 > 0 /\ arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 2-arg2P5+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 2
+  32: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg1P8-arg1P5 <= 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg1P8 > 0 /\ 1+arg3P5 > 0), cost: 2
+  33: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 1+arg1P9 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ -arg1P5+arg1P9 <= 0), cost: 2
+  34: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 2+arg2P6-arg2P7 <= 0 /\ 1+arg1P7-arg1 <= 0 /\ 3-arg3P5 > 0 /\ 1+arg1P6 > 0 /\ -arg1P7+arg1P6 <= 0 /\ arg3 > 0 /\ arg2P7 > 0), cost: 3
+  35: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ 3-arg3P5 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -arg1P7+arg1P8 <= 0 /\ 1+arg1P8 > 0), cost: 3
+  36: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ -arg1P7+arg1P9 <= 0 /\ 1+arg1P9 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -2+arg3P5 > 0), cost: 3
+  29: __init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+  30: __init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+
+Applied pruning (of leafs and parallel rules):
+Start location: __init
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  31: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (-arg1P5+arg1P6 <= 0 /\ arg2 > 0 /\ arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 2-arg2P5+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 2
+  32: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg1P8-arg1P5 <= 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg1P8 > 0 /\ 1+arg3P5 > 0), cost: 2
+  33: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 1+arg1P9 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ -arg1P5+arg1P9 <= 0), cost: 2
+  34: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 2+arg2P6-arg2P7 <= 0 /\ 1+arg1P7-arg1 <= 0 /\ 3-arg3P5 > 0 /\ 1+arg1P6 > 0 /\ -arg1P7+arg1P6 <= 0 /\ arg3 > 0 /\ arg2P7 > 0), cost: 3
+  36: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ -arg1P7+arg1P9 <= 0 /\ 1+arg1P9 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -2+arg3P5 > 0), cost: 3
+  29: __init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+  30: __init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (-arg1P5+arg1P6 <= 0 /\ arg2 > 0 /\ arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 2-arg2P5+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg3P5 > 0), cost: 2
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ 2-arg1 <= 0 /\ 3-arg1+arg2P6 <= 0 /\ arg3 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg1P8-arg1P5 <= 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 2-arg3P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ 1+arg1P8 > 0 /\ 1+arg3P5 > 0), cost: 2
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P8-arg1 <= 0 /\ arg3 > 0 /\ 1+arg1P8 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-1+arg3P5 > 0 /\ arg2 > 0 /\ 1+arg2P5 > 0 /\ 1+arg2P5-arg1 <= 0 /\ 1+arg1P9 > 0 /\ arg3 > 0 /\ 1-arg1+arg1P5 <= 0 /\ -arg1P5+arg1P9 <= 0), cost: 2
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 2
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ -1+arg3P5 > 0 /\ arg2 > 0 /\ 2+arg2P6-arg2P7 <= 0 /\ 1+arg1P7-arg1 <= 0 /\ 3-arg3P5 > 0 /\ 1+arg1P6 > 0 /\ -arg1P7+arg1P6 <= 0 /\ arg3 > 0 /\ arg2P7 > 0), cost: 3
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 4-arg1+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ 3-arg1 <= 0 /\ arg3 > 0), cost: 3
+
+Applied simplification
+Original rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (2-arg1+arg2P7 <= 0 /\ arg2 > 0 /\ 1+arg1P7-arg1 <= 0 /\ -arg1P7+arg1P9 <= 0 /\ 1+arg1P9 > 0 /\ 1+arg2P7 > 0 /\ arg3 > 0 /\ -2+arg3P5 > 0), cost: 3
+New rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-2+arg1 >= 0 /\ arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 3
+
+Simplified simple loops
+Start location: __init
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  37: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ 2-arg1 <= 0 /\ 3-arg1+arg2P6 <= 0 /\ arg3 > 0), cost: 2
+  38: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P8-arg1 <= 0 /\ arg3 > 0 /\ 1+arg1P8 > 0), cost: 2
+  39: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 2
+  40: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 4-arg1+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ 3-arg1 <= 0 /\ arg3 > 0), cost: 3
+  41: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-2+arg1 >= 0 /\ arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 3
+  29: __init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+  30: __init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+
+Accelerated simple loops
+Start location: __init
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  37: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ 2-arg1 <= 0 /\ 3-arg1+arg2P6 <= 0 /\ arg3 > 0), cost: 2
+  38: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P8-arg1 <= 0 /\ arg3 > 0 /\ 1+arg1P8 > 0), cost: 2
+  39: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 2
+  40: f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 4-arg1+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ 3-arg1 <= 0 /\ arg3 > 0), cost: 3
+  41: f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-2+arg1 >= 0 /\ arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 3
+  29: __init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+  30: __init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+
+Applied chaining
+First rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+Second rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 1+arg1P6 > 0 /\ 2-arg1 <= 0 /\ 3-arg1+arg2P6 <= 0 /\ arg3 > 0), cost: 2
+New rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg4, (2-arg3 > 0 /\ 1-arg1+arg1P6 <= 0 /\ arg4 > 0 /\ -3+arg2 >= 0 /\ 1+arg1P6 > 0 /\ 2-arg1 <= 0 /\ 3-arg1+arg2P6 <= 0), cost: 3
+
+Applied chaining
+First rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+Second rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P8-arg1 <= 0 /\ arg3 > 0 /\ 1+arg1P8 > 0), cost: 2
+New rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg4, (2-arg3 > 0 /\ 1+arg1P8-arg1 <= 0 /\ arg4 > 0 /\ -3+arg2 >= 0 /\ 1+arg1P8 > 0), cost: 3
+
+Applied chaining
+First rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+Second rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 2
+New rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg4, (2-arg3 > 0 /\ arg4 > 0 /\ 1+arg1P9 > 0 /\ -3+arg2 >= 0 /\ 1-arg1+arg1P9 <= 0), cost: 3
+
+Applied chaining
+First rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+Second rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg3, (arg2 > 0 /\ 1-arg1+arg1P6 <= 0 /\ 4-arg1+arg2P6 <= 0 /\ 1+arg1P6 > 0 /\ 3-arg1 <= 0 /\ arg3 > 0), cost: 3
+New rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg4, (2-arg3 > 0 /\ 1-arg1+arg1P6 <= 0 /\ arg4 > 0 /\ 4-arg1+arg2P6 <= 0 /\ -3+arg2 >= 0 /\ 1+arg1P6 > 0 /\ 3-arg1 <= 0), cost: 4
+
+Applied chaining
+First rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+Second rule:
+f754_0_main_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg3, (-2+arg1 >= 0 /\ arg2 > 0 /\ 1+arg1P9 > 0 /\ 1-arg1+arg1P9 <= 0 /\ arg3 > 0), cost: 3
+New rule:
+f704_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg4, (-2+arg1 >= 0 /\ 2-arg3 > 0 /\ arg4 > 0 /\ 1+arg1P9 > 0 /\ -3+arg2 >= 0 /\ 1-arg1+arg1P9 <= 0), cost: 4
+
+Applied deletion
+Removed the following rules: 37 38 39 40 41
+
+Chained accelerated rules with incoming rules
+Start location: __init
+  14: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P3, arg4'=arg4P3, arg1'=arg1P3, arg3'=arg4, (arg1P3-arg1 <= 0 /\ 2-arg3 > 0 /\ arg2 > 0 /\ 1+arg1P3 > 0 /\ 2-arg2+arg2P3 <= 0), cost: 1
+  42: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg4, (2-arg3 > 0 /\ 1-arg1+arg1P6 <= 0 /\ arg4 > 0 /\ -3+arg2 >= 0 /\ 1+arg1P6 > 0 /\ 2-arg1 <= 0 /\ 3-arg1+arg2P6 <= 0), cost: 3
+  43: f704_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P8, arg1'=arg1P8, arg3'=1+arg4, (2-arg3 > 0 /\ 1+arg1P8-arg1 <= 0 /\ arg4 > 0 /\ -3+arg2 >= 0 /\ 1+arg1P8 > 0), cost: 3
+  44: f704_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg4, (2-arg3 > 0 /\ arg4 > 0 /\ 1+arg1P9 > 0 /\ -3+arg2 >= 0 /\ 1-arg1+arg1P9 <= 0), cost: 3
+  45: f704_0_nth_LE -> f754_0_main_LE : arg2'=arg2P6, arg4'=arg4P6, arg1'=arg1P6, arg3'=1+arg4, (2-arg3 > 0 /\ 1-arg1+arg1P6 <= 0 /\ arg4 > 0 /\ 4-arg1+arg2P6 <= 0 /\ -3+arg2 >= 0 /\ 1+arg1P6 > 0 /\ 3-arg1 <= 0), cost: 4
+  46: f704_0_nth_LE -> f754_0_main_LE : arg2'=0, arg4'=arg4P9, arg1'=arg1P9, arg3'=1+arg4, (-2+arg1 >= 0 /\ 2-arg3 > 0 /\ arg4 > 0 /\ 1+arg1P9 > 0 /\ -3+arg2 >= 0 /\ 1-arg1+arg1P9 <= 0), cost: 4
+  29: __init -> f704_0_nth_LE : arg2'=arg2P2, arg4'=1+x70, arg1'=arg1P2, arg3'=arg3P2, (x70 > 0 /\ 1+arg2P2 > 0 /\ arg1P12 > 0 /\ 1+arg3P2 > 0 /\ 1+arg1P2 > 0 /\ -arg2P2+arg1P1 >= 0 /\ arg1P2-arg1P1 <= 0), cost: 3
+  30: __init -> f704_0_nth_LE : arg2'=arg2P4, arg4'=1+x70, arg1'=arg1P4, arg3'=-1+arg3P2, (x70 > 0 /\ arg1P12 > 0 /\ arg1P4-arg1P1 <= 0 /\ 1-arg1P1+arg2P4 <= 0 /\ 1+arg1P4 > 0 /\ -1+arg3P2 > 0 /\ 1+arg2P4 > 0), cost: 4
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: __init
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

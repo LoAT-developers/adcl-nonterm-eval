@@ -1,0 +1,143 @@
+WORST_CASE(Omega(0),?)
+
+Initial ITS
+Start location: l4
+   0: l0 -> l1 : b_7^0'=b_7^post0, y_6^0'=y_6^post0, Result_4^0'=Result_4^post0, x_5^0'=x_5^post0, (b_7^post0 == 0 /\ 1-y_6^0+y_6^post0 == 0 /\ x_5^0-x_5^post0 == 0 /\ Result_4^0-Result_4^post0 == 0 /\ 1-b_7^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+   1: l0 -> l2 : b_7^0'=b_7^post1, y_6^0'=y_6^post1, Result_4^0'=Result_4^post1, x_5^0'=x_5^post1, (0 == 0 /\ y_6^0-y_6^post1 == 0 /\ y_6^0-x_5^0 <= 0 /\ b_7^0-b_7^post1 == 0 /\ -x_5^post1+x_5^0 == 0), cost: 1
+   3: l1 -> l0 : b_7^0'=b_7^post3, y_6^0'=y_6^post3, Result_4^0'=Result_4^post3, x_5^0'=x_5^post3, (-Result_4^post3+Result_4^0 == 0 /\ b_7^0 <= 0 /\ -1+b_7^post3 == 0 /\ -y_6^post3+y_6^0 == 0 /\ -1+x_5^post3-x_5^0 == 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+   4: l1 -> l2 : b_7^0'=b_7^post4, y_6^0'=y_6^post4, Result_4^0'=Result_4^post4, x_5^0'=x_5^post4, (0 == 0 /\ -x_5^post4+x_5^0 == 0 /\ -y_6^post4+y_6^0 == 0 /\ y_6^0-x_5^0 <= 0 /\ -b_7^post4+b_7^0 == 0), cost: 1
+   2: l3 -> l1 : b_7^0'=b_7^post2, y_6^0'=y_6^post2, Result_4^0'=Result_4^post2, x_5^0'=x_5^post2, (-y_6^post2+y_6^0 == 0 /\ -Result_4^post2+Result_4^0 == 0 /\ b_7^post2 == 0 /\ -x_5^post2+x_5^0 == 0), cost: 1
+   5: l4 -> l3 : b_7^0'=b_7^post5, y_6^0'=y_6^post5, Result_4^0'=Result_4^post5, x_5^0'=x_5^post5, (y_6^0-y_6^post5 == 0 /\ x_5^0-x_5^post5 == 0 /\ b_7^0-b_7^post5 == 0 /\ Result_4^0-Result_4^post5 == 0), cost: 1
+
+
+Removed unreachable rules and leafs
+Start location: l4
+   0: l0 -> l1 : b_7^0'=b_7^post0, y_6^0'=y_6^post0, Result_4^0'=Result_4^post0, x_5^0'=x_5^post0, (b_7^post0 == 0 /\ 1-y_6^0+y_6^post0 == 0 /\ x_5^0-x_5^post0 == 0 /\ Result_4^0-Result_4^post0 == 0 /\ 1-b_7^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+   3: l1 -> l0 : b_7^0'=b_7^post3, y_6^0'=y_6^post3, Result_4^0'=Result_4^post3, x_5^0'=x_5^post3, (-Result_4^post3+Result_4^0 == 0 /\ b_7^0 <= 0 /\ -1+b_7^post3 == 0 /\ -y_6^post3+y_6^0 == 0 /\ -1+x_5^post3-x_5^0 == 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+   2: l3 -> l1 : b_7^0'=b_7^post2, y_6^0'=y_6^post2, Result_4^0'=Result_4^post2, x_5^0'=x_5^post2, (-y_6^post2+y_6^0 == 0 /\ -Result_4^post2+Result_4^0 == 0 /\ b_7^post2 == 0 /\ -x_5^post2+x_5^0 == 0), cost: 1
+   5: l4 -> l3 : b_7^0'=b_7^post5, y_6^0'=y_6^post5, Result_4^0'=Result_4^post5, x_5^0'=x_5^post5, (y_6^0-y_6^post5 == 0 /\ x_5^0-x_5^post5 == 0 /\ b_7^0-b_7^post5 == 0 /\ Result_4^0-Result_4^post5 == 0), cost: 1
+
+
+Applied preprocessing
+Original rule:
+l0 -> l1 : b_7^0'=b_7^post0, y_6^0'=y_6^post0, Result_4^0'=Result_4^post0, x_5^0'=x_5^post0, (b_7^post0 == 0 /\ 1-y_6^0+y_6^post0 == 0 /\ x_5^0-x_5^post0 == 0 /\ Result_4^0-Result_4^post0 == 0 /\ 1-b_7^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+New rule:
+l0 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, (-1+b_7^0 >= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l3 -> l1 : b_7^0'=b_7^post2, y_6^0'=y_6^post2, Result_4^0'=Result_4^post2, x_5^0'=x_5^post2, (-y_6^post2+y_6^0 == 0 /\ -Result_4^post2+Result_4^0 == 0 /\ b_7^post2 == 0 /\ -x_5^post2+x_5^0 == 0), cost: 1
+New rule:
+l3 -> l1 : b_7^0'=0, TRUE, cost: 1
+
+Applied preprocessing
+Original rule:
+l1 -> l0 : b_7^0'=b_7^post3, y_6^0'=y_6^post3, Result_4^0'=Result_4^post3, x_5^0'=x_5^post3, (-Result_4^post3+Result_4^0 == 0 /\ b_7^0 <= 0 /\ -1+b_7^post3 == 0 /\ -y_6^post3+y_6^0 == 0 /\ -1+x_5^post3-x_5^0 == 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+New rule:
+l1 -> l0 : b_7^0'=1, x_5^0'=1+x_5^0, (b_7^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+
+Applied preprocessing
+Original rule:
+l4 -> l3 : b_7^0'=b_7^post5, y_6^0'=y_6^post5, Result_4^0'=Result_4^post5, x_5^0'=x_5^post5, (y_6^0-y_6^post5 == 0 /\ x_5^0-x_5^post5 == 0 /\ b_7^0-b_7^post5 == 0 /\ Result_4^0-Result_4^post5 == 0), cost: 1
+New rule:
+l4 -> l3 : TRUE, cost: 1
+
+Simplified rules
+Start location: l4
+   6: l0 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, (-1+b_7^0 >= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+   8: l1 -> l0 : b_7^0'=1, x_5^0'=1+x_5^0, (b_7^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+   7: l3 -> l1 : b_7^0'=0, TRUE, cost: 1
+   9: l4 -> l3 : TRUE, cost: 1
+
+
+Eliminating location l3 by chaining:
+
+Applied chaining
+First rule:
+l4 -> l3 : TRUE, cost: 1
+Second rule:
+l3 -> l1 : b_7^0'=0, TRUE, cost: 1
+New rule:
+l4 -> l1 : b_7^0'=0, TRUE, cost: 2
+
+Applied deletion
+Removed the following rules: 7 9
+
+Eliminating location l0 by chaining:
+
+Applied chaining
+First rule:
+l1 -> l0 : b_7^0'=1, x_5^0'=1+x_5^0, (b_7^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+Second rule:
+l0 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, (-1+b_7^0 >= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 1
+New rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, x_5^0'=1+x_5^0, (0 >= 0 /\ b_7^0 <= 0 /\ 2-y_6^0+x_5^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 2
+
+Applied simplification
+Original rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, x_5^0'=1+x_5^0, (0 >= 0 /\ b_7^0 <= 0 /\ 2-y_6^0+x_5^0 <= 0 /\ 1-y_6^0+x_5^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, x_5^0'=1+x_5^0, (b_7^0 <= 0 /\ 2-y_6^0+x_5^0 <= 0), cost: 2
+
+Applied deletion
+Removed the following rules: 6 8
+
+Eliminated locations on linear paths
+Start location: l4
+  11: l1 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, x_5^0'=1+x_5^0, (b_7^0 <= 0 /\ 2-y_6^0+x_5^0 <= 0), cost: 2
+  10: l4 -> l1 : b_7^0'=0, TRUE, cost: 2
+
+
+Applied acceleration
+Original rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=-1+y_6^0, x_5^0'=1+x_5^0, (b_7^0 <= 0 /\ 2-y_6^0+x_5^0 <= 0), cost: 2
+New rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ -b_7^0 >= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2*n
+Sub-proof via acceration calculus written to file:///tmp/tmpnam_IJDDNo.txt
+
+Applied simplification
+Original rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ -b_7^0 >= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2*n
+New rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ b_7^0 <= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2*n
+
+Applied deletion
+Removed the following rules: 11
+
+Accelerated simple loops
+Start location: l4
+  13: l1 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ b_7^0 <= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2*n
+  10: l4 -> l1 : b_7^0'=0, TRUE, cost: 2
+
+
+Applied chaining
+First rule:
+l4 -> l1 : b_7^0'=0, TRUE, cost: 2
+Second rule:
+l1 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ b_7^0 <= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2*n
+New rule:
+l4 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2+2*n
+
+Applied deletion
+Removed the following rules: 13
+
+Chained accelerated rules with incoming rules
+Start location: l4
+  10: l4 -> l1 : b_7^0'=0, TRUE, cost: 2
+  14: l4 -> l1 : b_7^0'=0, y_6^0'=y_6^0-n, x_5^0'=x_5^0+n, (-1+n >= 0 /\ y_6^0-x_5^0-2*n >= 0), cost: 2+2*n
+
+
+Removed unreachable locations and irrelevant leafs
+Start location: l4
+  <empty>
+
+
+Computing asymptotic complexity
+
+Proved the following lower bound
+Complexity:  Unknown
+Cpx degree: ?
+
+Solved cost: 0
+Rule cost:   0
+

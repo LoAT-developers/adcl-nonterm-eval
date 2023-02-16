@@ -1,0 +1,355 @@
+unknown
+
+Initial ITS
+
+Start location: [1]
+Program variables: i x y
+   0: [1] -> [2] : i'=0, T, cost: 1
+   1: [2] -> [3] : x'=nondet, T, cost: 1
+   2: [3] -> [4] : y'=nondet1, T, cost: 1
+   3: [4] -> [6] : (x < 0 \/ x > 0), cost: 1
+  10: [4] -> [5] : (x <= 0 /\ x >= 0), cost: 1
+   4: [6] -> [7] : (y > 0 /\ x > 0), cost: 1
+   8: [6] -> [10] : (y <= 0 \/ x <= 0), cost: 1
+   5: [7] -> [8] : i'=1+i, T, cost: 1
+   6: [8] -> [9] : x'=-y+x, T, cost: 1
+   7: [9] -> [6] : T, cost: 1
+   9: [10] -> [5] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: i x y
+  12: [1] -> [4] : i'=0, x'=nondet, y'=nondet1, T, cost: 1
+   3: [4] -> [6] : (x < 0 \/ x > 0), cost: 1
+  10: [4] -> [5] : (x <= 0 /\ x >= 0), cost: 1
+  14: [6] -> [5] : (y <= 0 \/ x <= 0), cost: 1
+  16: [6] -> [6] : i'=1+i, x'=-y+x, (y > 0 /\ x > 0), cost: 1
+
+	Eliminating location [2] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [2] : i'=0, T, cost: 1
+	Second rule:
+	[2] -> [3] : x'=nondet, T, cost: 1
+	New rule:
+	[1] -> [3] : i'=0, x'=nondet, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+	
+	Eliminating location [3] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[1] -> [3] : i'=0, x'=nondet, T, cost: 1
+	Second rule:
+	[3] -> [4] : y'=nondet1, T, cost: 1
+	New rule:
+	[1] -> [4] : i'=0, x'=nondet, y'=nondet1, T, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 2 11
+	
+	Eliminating location [7] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [7] : (y > 0 /\ x > 0), cost: 1
+	Second rule:
+	[7] -> [8] : i'=1+i, T, cost: 1
+	New rule:
+	[6] -> [8] : i'=1+i, (y > 0 /\ x > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 4 5
+	
+	Eliminating location [10] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [10] : (y <= 0 \/ x <= 0), cost: 1
+	Second rule:
+	[10] -> [5] : T, cost: 1
+	New rule:
+	[6] -> [5] : (y <= 0 \/ x <= 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 8 9
+	
+	Eliminating location [8] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [8] : i'=1+i, (y > 0 /\ x > 0), cost: 1
+	Second rule:
+	[8] -> [9] : x'=-y+x, T, cost: 1
+	New rule:
+	[6] -> [9] : i'=1+i, x'=-y+x, (y > 0 /\ x > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 6 13
+	
+	Eliminating location [9] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[6] -> [9] : i'=1+i, x'=-y+x, (y > 0 /\ x > 0), cost: 1
+	Second rule:
+	[9] -> [6] : T, cost: 1
+	New rule:
+	[6] -> [6] : i'=1+i, x'=-y+x, (y > 0 /\ x > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 7 15
+
+Step with 12
+
+	Trace
+
+	12[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 3
+
+	Trace
+
+	12[T], 3[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 14
+
+	Trace
+
+	12[T], 3[(x > 0)], 14[(y <= 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	12[T], 3[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {14[y <= 0]}]
+
+Step with 16
+
+	Trace
+
+	12[T], 3[(x > 0)], 16[(y > 0 /\ x > 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T]}, {}]
+
+Accelerate
+
+Start location: [1]
+Program variables: i x y
+  12: [1] -> [4] : i'=0, x'=nondet, y'=nondet1, T, cost: 1
+   3: [4] -> [6] : (x < 0 \/ x > 0), cost: 1
+  10: [4] -> [5] : (x <= 0 /\ x >= 0), cost: 1
+  14: [6] -> [5] : (y <= 0 \/ x <= 0), cost: 1
+  16: [6] -> [6] : i'=1+i, x'=-y+x, (y > 0 /\ x > 0), cost: 1
+  17: [6] -> [6] : i'=i+n, x'=x-y*n, (y > 0 /\ -y*(-1+n)+x > 0 /\ -1+n >= 0), cost: 1
+
+	Loop Acceleration
+
+	Original rule:
+	[6] -> [6] : i'=1+i, x'=-y+x, (y > 0 /\ x > 0), cost: 1
+	New rule:
+	[6] -> [6] : i'=i+n, x'=x-y*n, (y > 0 /\ -y*(-1+n)+x > 0 /\ -1+n >= 0), cost: 1
+
+		y > 0 [0]: monotonic increase yields y > 0
+		
+		x > 0 [0]: montonic decrease yields -y*(-1+n)+x > 0, dependencies: y > 0
+		
+		x > 0 [1]: eventual increase yields (y <= 0 /\ x > 0), dependencies: y > 0
+		
+		Replacement map: {y > 0 -> y > 0, x > 0 -> -y*(-1+n)+x > 0}
+
+	Trace
+
+	12[T], 3[(x > 0)], 17[(y > 0 /\ -y*(-1+n)+x > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T]}, {16[T], 17[T]}]
+
+Step with 14
+
+	Trace
+
+	12[T], 3[(x > 0)], 17[(y > 0 /\ -y*(-1+n)+x > 0 /\ -1+n >= 0)], 14[(x <= 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T]}, {16[T], 17[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	12[T], 3[(x > 0)], 17[(y > 0 /\ -y*(-1+n)+x > 0 /\ -1+n >= 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T]}, {14[x <= 0], 16[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	12[T], 3[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T], 17[T]}]
+
+Step with 16
+
+	Trace
+
+	12[T], 3[(x > 0)], 16[(y > 0 /\ x > 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T], 17[T]}, {}]
+
+Covered
+
+	Trace
+
+	12[T], 3[(x > 0)]
+	
+	Blocked
+
+	[{}, {}, {14[T], 16[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	12[T]
+	
+	Blocked
+
+	[{}, {3[x > 0]}]
+
+Step with 3
+
+	Trace
+
+	12[T], 3[(x < 0)]
+	
+	Blocked
+
+	[{}, {3[x > 0]}, {}]
+
+Step with 14
+
+	Trace
+
+	12[T], 3[(x < 0)], 14[(y <= 0)]
+	
+	Blocked
+
+	[{}, {3[x > 0]}, {16[T], 17[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	12[T], 3[(x < 0)]
+	
+	Blocked
+
+	[{}, {3[x > 0]}, {14[y <= 0], 16[T], 17[T]}]
+
+Step with 14
+
+	Trace
+
+	12[T], 3[(x < 0)], 14[(x <= 0)]
+	
+	Blocked
+
+	[{}, {3[x > 0]}, {14[y <= 0], 16[T], 17[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	12[T], 3[(x < 0)]
+	
+	Blocked
+
+	[{}, {3[x > 0]}, {14[(y <= 0 /\ x <= 0)], 16[T], 17[T]}]
+
+Backtrack
+
+	Trace
+
+	12[T]
+	
+	Blocked
+
+	[{}, {3[(x < 0 /\ x > 0)]}]
+
+Step with 10
+
+	Trace
+
+	12[T], 10[(x <= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {3[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	12[T]
+	
+	Blocked
+
+	[{}, {3[T], 10[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{12[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

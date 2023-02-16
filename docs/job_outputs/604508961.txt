@@ -1,0 +1,363 @@
+NO
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l7, true>
+<l1, l2, (undef2 = (0 + x_5^0)) /\ (undef8 = (0 + undef2)) /\ (undef1 = undef1), par{Result_4^0 -> undef1, ___cil_tmp2_6^0 -> undef2, selected_11^0 -> (0 + undef8)}>
+<l3, l2, (undef10 = (0 + x_5^0)) /\ (undef16 = (0 + undef10)) /\ (undef9 = undef9), par{Result_4^0 -> undef9, ___cil_tmp2_6^0 -> undef10, selected_11^0 -> (0 + undef16)}>
+<l4, l5, (undef19 = (0 + selected_11^0)), par{Result_4^0 -> (0 + undef19), ___cil_tmp6_12^0 -> undef19}>
+<l4, l2, (undef25 = (0 + x_5^0)) /\ (undef31 = (0 + undef25)) /\ (undef24 = undef24), par{Result_4^0 -> undef24, ___cil_tmp2_6^0 -> undef25, selected_11^0 -> (0 + undef31)}>
+<l2, l4, true, par{retryCount_10^0 -> (1 + retryCount_10^0)}>
+<l6, l4, true, par{maxRetries_9^0 -> 4, retryCount_10^0 -> 0, selected_11^0 -> 0}>
+<l7, l6, true>
+
+Fresh variables:
+undef1, undef2, undef8, undef9, undef10, undef16, undef19, undef24, undef25, undef31, 
+
+Undef variables:
+undef1, undef2, undef8, undef9, undef10, undef16, undef19, undef24, undef25, undef31, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l4, (retryCount_10^0 = 0) /\ (selected_11^0 = 0)>
+<l4, l5, (undef19 = (0 + selected_11^0))>
+<l4, l4, (undef25 = (0 + x_5^0)) /\ (undef31 = (0 + undef25)) /\ (undef24 = undef24), par{retryCount_10^0 -> (1 + retryCount_10^0), selected_11^0 -> (0 + undef31)}>
+
+Fresh variables:
+undef1, undef2, undef8, undef9, undef10, undef16, undef19, undef24, undef25, undef31, 
+
+Undef variables:
+undef1, undef2, undef8, undef9, undef10, undef16, undef19, undef24, undef25, undef31, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l4, l4, x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Variables:
+retryCount_10^0, selected_11^0, x_5^0
+
+Graph 2:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l4, retryCount_10^0 = 0 /\ selected_11^0 = 0, {all remain the same}>
+
+Graph 2
+<l4, l5, selected_11^0 = undef19, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 4 , 1 )
+( 5 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.001751
+
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000634s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001626s
+Trying to remove transition: <l4, l4, x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004496s
+Time used: 0.004351
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.001187s
+Time used: 4.00091
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.020516s
+Time used: 4.01703
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.023610s
+Time used: 1.0004
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.006737s
+Time used: 0.00456
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.006310s
+Time used: 1.00628
+
+LOG: SAT solveNonLinear - Elapsed time: 1.013047s
+Cost: 1; Total time: 1.01084
+[33mTermination implied by a set of invariant(s):[0m
+[36mInvariant at l4: 0 <= 1 + retryCount_10^0[0m
+[ Invariant Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 0 <= 1 + retryCount_10^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+[ Termination Graph ]
+[33mStrengthening and disabling transitions...[0m
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l4, l4, 0 <= 1 + retryCount_10^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+[33mQuasi-ranking function: [36m50000 - retryCount_10^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 50001 <= retryCount_10^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Variables:
+retryCount_10^0, selected_11^0, x_5^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000335s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001260s
+Trying to remove transition: <l4, l4, 50001 <= retryCount_10^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003479s
+Time used: 0.003385
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.003741s
+Time used: 4.0034
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005620s
+Time used: 4.00116
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009634s
+Time used: 1.0009
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.007960s
+Time used: 0.005631
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000723s
+Time used: 1.00072
+
+LOG: SAT solveNonLinear - Elapsed time: 1.008683s
+Cost: 1; Total time: 1.00635
+[33mQuasi-ranking function: [36m50000 - retryCount_10^0 + x_5^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 50001 <= retryCount_10^0 /\ 50001 + x_5^0 <= retryCount_10^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Variables:
+retryCount_10^0, selected_11^0, x_5^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000378s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001461s
+Trying to remove transition: <l4, l4, 50001 <= retryCount_10^0 /\ 50001 + x_5^0 <= retryCount_10^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.003960s
+Time used: 0.003855
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002894s
+Time used: 4.00248
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005781s
+Time used: 4.00159
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009279s
+Time used: 1.00075
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.008523s
+Time used: 0.005766
+Improving Solution with cost 1 ...
+
+LOG: CALL solveNonLinearGetNextSolution
+
+LOG: RETURN solveNonLinearGetNextSolution - Elapsed time: 1.000981s
+Time used: 1.00097
+
+LOG: SAT solveNonLinear - Elapsed time: 1.009505s
+Cost: 1; Total time: 1.00674
+[33mQuasi-ranking function: [36m50000 - retryCount_10^0 - x_5^0[0m
+New Graphs: 
+Transitions:
+<l4, l4, 50001 <= retryCount_10^0 /\ 50001 + x_5^0 <= retryCount_10^0 /\ 50001 <= retryCount_10^0 + x_5^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Variables:
+retryCount_10^0, selected_11^0, x_5^0
+Checking conditional termination of SCC {l4}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000442s
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001660s
+Trying to remove transition: <l4, l4, 50001 <= retryCount_10^0 /\ 50001 + x_5^0 <= retryCount_10^0 /\ 50001 <= retryCount_10^0 + x_5^0 /\ x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 0.004083s
+Time used: 0.003971
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.002446s
+Time used: 4.00203
+Solving with 2 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.007495s
+Time used: 4.00341
+Solving with 3 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 1.009499s
+Time used: 1.00086
+Solving with 1 template(s).
+
+LOG: CALL solveNonLinearGetFirstSolution
+
+LOG: RETURN solveNonLinearGetFirstSolution - Elapsed time: 4.005106s
+Time used: 4.00236
+Termination failed. Trying to show unreachability...
+Proving unreachability of entry: <l0, l4, retryCount_10^0 = 0 /\ selected_11^0 = 0, {all remain the same}>
+
+LOG: CALL check - Post:1 <= 0 - Process 1
+* Exit transition: <l0, l4, retryCount_10^0 = 0 /\ selected_11^0 = 0, {all remain the same}>
+* Postcondition  : 1 <= 0
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.006169s
+[31m> Postcondition is not implied![0m
+
+LOG: RETURN check - Elapsed time: 0.006214s
+Cannot prove unreachability
+
+Proving non-termination of subgraph 1
+Transitions:
+<l4, l4, x_5^0 = undef25 /\ undef25 = undef31, {retryCount_10^0 -> 1 + retryCount_10^0, selected_11^0 -> undef31, rest remain the same}>
+Variables:
+retryCount_10^0, selected_11^0, x_5^0
+
+Checking conditional non-termination of SCC {l4}...
+> No exit transition to close.
+Checking that every undef value has an assignment...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.001163s
+Calling reachability with...
+Transition: <l4, end, true, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l4, end, true, {all remain the same}>
+
+--- Reachability graph ---
+> Graph without transitions.
+
+Calling reachability with...
+Transition: <l0, l4, retryCount_10^0 = 0 /\ selected_11^0 = 0, {all remain the same}>
+Conditions: 
+OPEN EXITS: 
+<l0, l4, retryCount_10^0 = 0 /\ selected_11^0 = 0, {all remain the same}>
+
+[32m> Conditions are reachable![0m
+
+[32mProgram does NOT terminate[0m

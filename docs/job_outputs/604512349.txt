@@ -1,0 +1,389 @@
+unknown
+
+Initial ITS
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   1: [2] -> [3] : x >= 0, cost: 1
+   4: [2] -> [5] : x < 0, cost: 1
+   2: [3] -> [4] : x'=10-2*x, T, cost: 1
+   3: [4] -> [2] : T, cost: 1
+
+Chained Linear Paths
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   4: [2] -> [5] : x < 0, cost: 1
+   6: [2] -> [2] : x'=10-2*x, x >= 0, cost: 1
+
+	Eliminating location [3] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[2] -> [3] : x >= 0, cost: 1
+	Second rule:
+	[3] -> [4] : x'=10-2*x, T, cost: 1
+	New rule:
+	[2] -> [4] : x'=10-2*x, x >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+	
+	Eliminating location [4] by chaining:
+
+	Applied chaining
+
+	First rule:
+	[2] -> [4] : x'=10-2*x, x >= 0, cost: 1
+	Second rule:
+	[4] -> [2] : T, cost: 1
+	New rule:
+	[2] -> [2] : x'=10-2*x, x >= 0, cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 3 5
+
+Unrolled Loops
+
+Start location: [1]
+Program variables: x
+   0: [1] -> [2] : x'=nondet, T, cost: 1
+   4: [2] -> [5] : x < 0, cost: 1
+   6: [2] -> [2] : x'=10-2*x, x >= 0, cost: 1
+   7: [2] -> [2] : x'=-10+4*x, (10-2*x >= 0 /\ x >= 0), cost: 1
+
+	Unrolling
+
+	Original rule:
+	[2] -> [2] : x'=10-2*x, x >= 0, cost: 1
+	New rule:
+	[2] -> [2] : x'=-10+4*x, (10-2*x >= 0 /\ x >= 0), cost: 1
+
+Step with 0
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 4
+
+	Trace
+
+	0[T], 4[(x < 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {4[T]}]
+
+Step with 6
+
+	Trace
+
+	0[T], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 6
+
+	Trace
+
+	0[T], 6[(x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	0[T], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}]
+
+Step with 7
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 4
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)], 4[(x < 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {7[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {4[T], 7[T]}]
+
+Step with 6
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {4[T], 7[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 4
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)], 4[(x < 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {4[T], 7[T]}, {6[T], 7[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {4[T], 7[T]}, {4[T], 6[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T], 6[(x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T]}, {4[T], 6[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T], 7[T]}]
+
+Step with 4
+
+	Trace
+
+	0[T], 6[(x >= 0)], 4[(x < 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {6[T], 7[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T]}, {4[T], 6[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}]
+
+Step with 7
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {7[T]}]
+
+Step with 4
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 4[(x < 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {7[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 7[T]}]
+
+Step with 6
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 7[T]}, {}]
+
+Step with 6
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 7[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 7[T]}, {6[T]}]
+
+Step with 4
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)], 4[(x < 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 7[T]}, {6[T], 7[T]}, {}]
+
+Backtrack
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)], 6[(x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 7[T]}, {4[T], 6[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T], 7[(10-2*x >= 0 /\ x >= 0)]
+	
+	Blocked
+
+	[{}, {4[T], 6[T]}, {4[T], 6[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	0[T]
+	
+	Blocked
+
+	[{}, {4[T], 6[T], 7[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{0[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

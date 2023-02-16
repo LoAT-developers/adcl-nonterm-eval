@@ -1,0 +1,94 @@
+unknown
+
+Initial ITS
+
+Start location: l2
+Program variables: a^0 ret_incr3^0 x2^0
+   0: l0 -> l1 : a^0'=a^post1, ret_incr3^0'=ret_incr3^post1, x2^0'=x2^post1, (-a^1+x2^post1 == 0 /\ a^post1-ret_incr3^post1 == 0 /\ ret_incr3^post1-x2^post1 == 0 /\ 1+a^1 == 0), cost: 1
+   1: l2 -> l0 : a^0'=a^post2, ret_incr3^0'=ret_incr3^post2, x2^0'=x2^post2, (ret_incr3^0-ret_incr3^post2 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+
+Chained Linear Paths
+
+Start location: l2
+Program variables: a^0 ret_incr3^0 x2^0
+   2: l2 -> l1 : a^0'=a^post1, ret_incr3^0'=ret_incr3^post1, x2^0'=x2^post1, (-a^1+x2^post1 == 0 /\ a^post1-ret_incr3^post1 == 0 /\ ret_incr3^post1-x2^post1 == 0 /\ ret_incr3^0-ret_incr3^post2 == 0 /\ 1+a^1 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+
+	Eliminating location l0 by chaining:
+
+	Applied chaining
+
+	First rule:
+	l2 -> l0 : a^0'=a^post2, ret_incr3^0'=ret_incr3^post2, x2^0'=x2^post2, (ret_incr3^0-ret_incr3^post2 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+	Second rule:
+	l0 -> l1 : a^0'=a^post1, ret_incr3^0'=ret_incr3^post1, x2^0'=x2^post1, (-a^1+x2^post1 == 0 /\ a^post1-ret_incr3^post1 == 0 /\ ret_incr3^post1-x2^post1 == 0 /\ 1+a^1 == 0), cost: 1
+	New rule:
+	l2 -> l1 : a^0'=a^post1, ret_incr3^0'=ret_incr3^post1, x2^0'=x2^post1, (-a^1+x2^post1 == 0 /\ a^post1-ret_incr3^post1 == 0 /\ ret_incr3^post1-x2^post1 == 0 /\ ret_incr3^0-ret_incr3^post2 == 0 /\ 1+a^1 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 1
+
+Simplified Transitions
+
+Start location: l2
+Program variables: a^0 ret_incr3^0 x2^0
+   3: l2 -> l1 : a^0'=-1, ret_incr3^0'=-1, x2^0'=-1, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : a^0'=a^post1, ret_incr3^0'=ret_incr3^post1, x2^0'=x2^post1, (-a^1+x2^post1 == 0 /\ a^post1-ret_incr3^post1 == 0 /\ ret_incr3^post1-x2^post1 == 0 /\ ret_incr3^0-ret_incr3^post2 == 0 /\ 1+a^1 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+	New rule:
+	l2 -> l1 : a^0'=a^1, ret_incr3^0'=a^1, x2^0'=a^1, (0 == 0 /\ ret_incr3^0-ret_incr3^post2 == 0 /\ 1+a^1 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+	
+		propagated equality x2^post1 = a^1
+		
+		propagated equality a^post1 = ret_incr3^post1
+		
+		propagated equality ret_incr3^post1 = a^1
+		
+	Propagated Equalities
+
+	Original rule:
+	l2 -> l1 : a^0'=a^1, ret_incr3^0'=a^1, x2^0'=a^1, (0 == 0 /\ ret_incr3^0-ret_incr3^post2 == 0 /\ 1+a^1 == 0 /\ -a^post2+a^0 == 0 /\ x2^0-x2^post2 == 0), cost: 1
+	New rule:
+	l2 -> l1 : a^0'=-1, ret_incr3^0'=-1, x2^0'=-1, 0 == 0, cost: 1
+	
+		propagated equality ret_incr3^post2 = ret_incr3^0
+		
+		propagated equality a^1 = -1
+		
+		propagated equality a^post2 = a^0
+		
+		propagated equality x2^post2 = x2^0
+		
+	Simplified Guard
+
+	Original rule:
+	l2 -> l1 : a^0'=-1, ret_incr3^0'=-1, x2^0'=-1, 0 == 0, cost: 1
+	New rule:
+	l2 -> l1 : a^0'=-1, ret_incr3^0'=-1, x2^0'=-1, T, cost: 1
+
+Step with 3
+
+	Trace
+
+	3[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{3[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

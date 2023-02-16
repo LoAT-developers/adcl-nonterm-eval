@@ -1,0 +1,433 @@
+unknown
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2
+   0: f1_0_main_Load -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+   1: f200_0_gcd_LE -> f200_0_gcd_LE\' : arg1'=arg1p2, arg2'=arg2p2, (-arg2p2+arg2 == 0 /\ arg1 > 0 /\ arg1-arg1p2 == 0 /\ arg2 > 0), cost: 1
+   2: f200_0_gcd_LE\' -> f200_0_gcd_LE : arg1'=arg1p3, arg2'=arg2p3, (-x8*arg2+arg1 >= 0 /\ -arg2p3-x8*arg2+arg1 == 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ -arg1p3+arg2 == 0 /\ arg2 > 0), cost: 1
+   3: __init -> f1_0_main_Load : arg1'=arg1p4, arg2'=arg2p4, T, cost: 1
+
+Chained Linear Paths
+
+Start location: __init
+Program variables: arg1 arg2
+   5: f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg1p3, arg2'=arg2p3, (arg2p2 > 0 /\ arg2p2+arg2p2*x8-arg1p2 > 0 /\ -arg2p2+arg2 == 0 /\ arg2p2-arg1p3 == 0 /\ arg1 > 0 /\ -arg2p2*x8+arg1p2 >= 0 /\ arg1-arg1p2 == 0 /\ -arg2p3-arg2p2*x8+arg1p2 == 0 /\ arg1p2 > 0 /\ arg2 > 0), cost: 1
+   4: __init -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Eliminating location f1_0_main_Load by chaining:
+
+	Applied chaining
+
+	First rule:
+	__init -> f1_0_main_Load : arg1'=arg1p4, arg2'=arg2p4, T, cost: 1
+	Second rule:
+	f1_0_main_Load -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2 > 0 /\ arg1 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+	New rule:
+	__init -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 0 3
+	
+	Eliminating location f200_0_gcd_LE\' by chaining:
+
+	Applied chaining
+
+	First rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE\' : arg1'=arg1p2, arg2'=arg2p2, (-arg2p2+arg2 == 0 /\ arg1 > 0 /\ arg1-arg1p2 == 0 /\ arg2 > 0), cost: 1
+	Second rule:
+	f200_0_gcd_LE\' -> f200_0_gcd_LE : arg1'=arg1p3, arg2'=arg2p3, (-x8*arg2+arg1 >= 0 /\ -arg2p3-x8*arg2+arg1 == 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ -arg1p3+arg2 == 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg1p3, arg2'=arg2p3, (arg2p2 > 0 /\ arg2p2+arg2p2*x8-arg1p2 > 0 /\ -arg2p2+arg2 == 0 /\ arg2p2-arg1p3 == 0 /\ arg1 > 0 /\ -arg2p2*x8+arg1p2 >= 0 /\ arg1-arg1p2 == 0 /\ -arg2p3-arg2p2*x8+arg1p2 == 0 /\ arg1p2 > 0 /\ arg2 > 0), cost: 1
+	
+	Applied deletion
+
+	Removed the following rules: 1 2
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2
+   7: f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2, arg2'=-x8*arg2+arg1, (-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+   6: __init -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Eliminated Temporary Variables via Transitive Closure
+
+	Original rule:
+	__init -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg2p4 > 0 /\ arg1p4 > 0 /\ 1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+	New rule:
+	__init -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg1p3, arg2'=arg2p3, (arg2p2 > 0 /\ arg2p2+arg2p2*x8-arg1p2 > 0 /\ -arg2p2+arg2 == 0 /\ arg2p2-arg1p3 == 0 /\ arg1 > 0 /\ -arg2p2*x8+arg1p2 >= 0 /\ arg1-arg1p2 == 0 /\ -arg2p3-arg2p2*x8+arg1p2 == 0 /\ arg1p2 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2p2, arg2'=-arg2p2*x8+arg1p2, (0 == 0 /\ arg2p2 > 0 /\ arg2p2+arg2p2*x8-arg1p2 > 0 /\ -arg2p2+arg2 == 0 /\ arg1 > 0 /\ -arg2p2*x8+arg1p2 >= 0 /\ arg1-arg1p2 == 0 /\ arg1p2 > 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg1p3 = arg2p2
+		
+		propagated equality arg2p3 = -arg2p2*x8+arg1p2
+		
+	Propagated Equalities
+
+	Original rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2p2, arg2'=-arg2p2*x8+arg1p2, (0 == 0 /\ arg2p2 > 0 /\ arg2p2+arg2p2*x8-arg1p2 > 0 /\ -arg2p2+arg2 == 0 /\ arg1 > 0 /\ -arg2p2*x8+arg1p2 >= 0 /\ arg1-arg1p2 == 0 /\ arg1p2 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2, arg2'=-x8*arg2+arg1, (0 == 0 /\ -x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+	
+		propagated equality arg2p2 = arg2
+		
+		propagated equality arg1p2 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2, arg2'=-x8*arg2+arg1, (0 == 0 /\ -x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2, arg2'=-x8*arg2+arg1, (-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+
+Unrolled Loops
+
+Start location: __init
+Program variables: arg1 arg2
+   7: f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2, arg2'=-x8*arg2+arg1, (-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+   8: f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=-x8*arg2+arg1, arg2'=x81*(x8*arg2-arg1)+arg2, (-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+   6: __init -> f200_0_gcd_LE : arg1'=arg1p1, arg2'=arg2p1, (1+arg1p1 > 0 /\ 1+arg2p1 > 0), cost: 1
+
+	Unrolling
+
+	Original rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=arg2, arg2'=-x8*arg2+arg1, (-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+	New rule:
+	f200_0_gcd_LE -> f200_0_gcd_LE : arg1'=-x8*arg2+arg1, arg2'=x81*(x8*arg2-arg1)+arg2, (-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0), cost: 1
+
+Step with 6
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}]
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {8[T]}]
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {8[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {8[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {8[T]}, {7[T]}]
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {8[T]}, {7[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {8[T]}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T]}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}]
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {}]
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}]
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {}]
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T]}]
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T]}, {}]
+
+Step with 8
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T]}, {8[T]}]
+
+Step with 7
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T]}, {8[T]}, {}]
+
+Covered
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T]}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)], 7[(-x8*arg2+arg1 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {8[T]}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)], 8[(-x8*arg2+arg1 > 0 /\ -x8*arg2+arg1 >= 0 /\ -x81*(x8*arg2-arg1)-x8*arg2+arg1-arg2 > 0 /\ x81*(x8*arg2-arg1)+arg2 >= 0 /\ x8*arg2-arg1+arg2 > 0 /\ arg1 > 0 /\ arg2 > 0)]
+	
+	Blocked
+
+	[{}, {7[T]}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	6[(1+arg1p1 > 0 /\ 1+arg2p1 > 0)]
+	
+	Blocked
+
+	[{}, {7[T], 8[T]}]
+
+Backtrack
+
+	Trace
+
+	Blocked
+
+	[{6[T]}]
+
+Accept
+
+unknown
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

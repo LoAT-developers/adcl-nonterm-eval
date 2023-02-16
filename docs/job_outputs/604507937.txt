@@ -1,0 +1,275 @@
+NO
+
+Initial ITS
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4
+   0: f265_0_createMetaList_Return -> f724_0_countMetaList_NULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, (1+arg1p1 > 0 /\ 1+arg1 > 0 /\ arg1p1-arg1 <= 0), cost: 1
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, (-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0), cost: 1
+   3: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, (1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0), cost: 1
+   4: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, (-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 >= 0), cost: 1
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+   5: f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, (1+arg2p6 > 0 /\ -arg1p6 == 0 /\ 1-arg3p6 == 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+   6: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, (1+arg3p7 > 0 /\ arg3 > 0 /\ 1+arg3-arg4p7 == 0 /\ -arg2p7+arg1 == 0 /\ arg2-arg1p7 == 0 /\ arg2-arg1 > 0), cost: 1
+   7: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, (-arg3 == 0 /\ 1-arg1p8+arg2 == 0 /\ -arg3p8+arg4 == 0 /\ -arg2p8+arg1 == 0), cost: 1
+   8: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, (arg3 > 0 /\ arg2-arg2p9 == 0 /\ -1+arg3-arg3p9 == 0 /\ -arg1p9+arg1 == 0 /\ -arg4p9+arg4 == 0), cost: 1
+   9: __init -> f1_0_main_Load : arg1'=arg1p10, arg2'=arg2p10, arg3'=arg3p10, arg4'=arg4p10, T, cost: 1
+
+Simplified Transitions
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4
+   0: f265_0_createMetaList_Return -> f724_0_countMetaList_NULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, (1+arg1p1 > 0 /\ 1+arg1 > 0 /\ arg1p1-arg1 <= 0), cost: 1
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, (-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0), cost: 1
+   3: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, (1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0), cost: 1
+   4: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, (-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 >= 0), cost: 1
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+  10: f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=0, arg2'=arg2p6, arg3'=1, arg4'=arg4p6, (1+arg2p6 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+  11: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg2, arg2'=arg1, arg3'=arg3p7, arg4'=1+arg3, (1+arg3p7 > 0 /\ arg3 > 0 /\ arg2-arg1 > 0), cost: 1
+  12: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=1+arg2, arg2'=arg1, arg3'=arg4, arg4'=arg4p8, -arg3 == 0, cost: 1
+  13: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-1+arg3, arg3 > 0, cost: 1
+   9: __init -> f1_0_main_Load : arg1'=arg1p10, arg2'=arg2p10, arg3'=arg3p10, arg4'=arg4p10, T, cost: 1
+
+	Propagated Equalities
+
+	Original rule:
+	f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=arg1p6, arg2'=arg2p6, arg3'=arg3p6, arg4'=arg4p6, (1+arg2p6 > 0 /\ -arg1p6 == 0 /\ 1-arg3p6 == 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=0, arg2'=arg2p6, arg3'=1, arg4'=arg4p6, (0 == 0 /\ 1+arg2p6 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	
+		propagated equality arg1p6 = 0
+		
+		propagated equality arg3p6 = 1
+		
+	Simplified Guard
+
+	Original rule:
+	f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=0, arg2'=arg2p6, arg3'=1, arg4'=arg4p6, (0 == 0 /\ 1+arg2p6 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	New rule:
+	f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=0, arg2'=arg2p6, arg3'=1, arg4'=arg4p6, (1+arg2p6 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg1p7, arg2'=arg2p7, arg3'=arg3p7, arg4'=arg4p7, (1+arg3p7 > 0 /\ arg3 > 0 /\ 1+arg3-arg4p7 == 0 /\ -arg2p7+arg1 == 0 /\ arg2-arg1p7 == 0 /\ arg2-arg1 > 0), cost: 1
+	New rule:
+	f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg2, arg2'=arg1, arg3'=arg3p7, arg4'=1+arg3, (0 == 0 /\ 1+arg3p7 > 0 /\ arg3 > 0 /\ arg2-arg1 > 0), cost: 1
+	
+		propagated equality arg4p7 = 1+arg3
+		
+		propagated equality arg2p7 = arg1
+		
+		propagated equality arg1p7 = arg2
+		
+	Simplified Guard
+
+	Original rule:
+	f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg2, arg2'=arg1, arg3'=arg3p7, arg4'=1+arg3, (0 == 0 /\ 1+arg3p7 > 0 /\ arg3 > 0 /\ arg2-arg1 > 0), cost: 1
+	New rule:
+	f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg2, arg2'=arg1, arg3'=arg3p7, arg4'=1+arg3, (1+arg3p7 > 0 /\ arg3 > 0 /\ arg2-arg1 > 0), cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=arg1p8, arg2'=arg2p8, arg3'=arg3p8, arg4'=arg4p8, (-arg3 == 0 /\ 1-arg1p8+arg2 == 0 /\ -arg3p8+arg4 == 0 /\ -arg2p8+arg1 == 0), cost: 1
+	New rule:
+	f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=1+arg2, arg2'=arg1, arg3'=arg4, arg4'=arg4p8, (0 == 0 /\ -arg3 == 0), cost: 1
+	
+		propagated equality arg1p8 = 1+arg2
+		
+		propagated equality arg3p8 = arg4
+		
+		propagated equality arg2p8 = arg1
+		
+	Simplified Guard
+
+	Original rule:
+	f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=1+arg2, arg2'=arg1, arg3'=arg4, arg4'=arg4p8, (0 == 0 /\ -arg3 == 0), cost: 1
+	New rule:
+	f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=1+arg2, arg2'=arg1, arg3'=arg4, arg4'=arg4p8, -arg3 == 0, cost: 1
+	
+	Propagated Equalities
+
+	Original rule:
+	f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg1'=arg1p9, arg2'=arg2p9, arg3'=arg3p9, arg4'=arg4p9, (arg3 > 0 /\ arg2-arg2p9 == 0 /\ -1+arg3-arg3p9 == 0 /\ -arg1p9+arg1 == 0 /\ -arg4p9+arg4 == 0), cost: 1
+	New rule:
+	f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg1'=arg1, arg2'=arg2, arg3'=-1+arg3, arg4'=arg4, (0 == 0 /\ arg3 > 0), cost: 1
+	
+		propagated equality arg2p9 = arg2
+		
+		propagated equality arg3p9 = -1+arg3
+		
+		propagated equality arg1p9 = arg1
+		
+		propagated equality arg4p9 = arg4
+		
+	Simplified Guard
+
+	Original rule:
+	f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg1'=arg1, arg2'=arg2, arg3'=-1+arg3, arg4'=arg4, (0 == 0 /\ arg3 > 0), cost: 1
+	New rule:
+	f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg1'=arg1, arg2'=arg2, arg3'=-1+arg3, arg4'=arg4, arg3 > 0, cost: 1
+	
+	Removed Trivial Updates
+
+	Original rule:
+	f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg1'=arg1, arg2'=arg2, arg3'=-1+arg3, arg4'=arg4, arg3 > 0, cost: 1
+	New rule:
+	f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-1+arg3, arg3 > 0, cost: 1
+
+Step with 9
+
+	Trace
+
+	9[T]
+	
+	Blocked
+
+	[{}, {}]
+
+Step with 1
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}]
+
+Step with 2
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 2
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {}, {}]
+
+Covered
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {2[T]}]
+
+Step with 3
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)], 3[(1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {2[T]}, {}]
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Acceleration Failed
+
+marked recursive suffix as redundant
+
+Step with 3
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)], 3[(1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0)], 3[(1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {2[T]}, {}, {}]
+
+Covered
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)], 3[(1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {2[T]}, {3[T]}]
+
+Step with 4
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)], 3[(1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0)], 4[(-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {2[T]}, {3[T]}, {}]
+
+Nonterm
+
+Start location: __init
+Program variables: arg1 arg2 arg3 arg4
+   0: f265_0_createMetaList_Return -> f724_0_countMetaList_NULL : arg1'=arg1p1, arg2'=arg2p1, arg3'=arg3p1, arg4'=arg4p1, (1+arg1p1 > 0 /\ 1+arg1 > 0 /\ arg1p1-arg1 <= 0), cost: 1
+   2: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p3, arg2'=arg2p3, arg3'=arg3p3, arg4'=arg4p3, (-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0), cost: 1
+   3: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p4, arg2'=arg2p4, arg3'=arg3p4, arg4'=arg4p4, (1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0), cost: 1
+   4: f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, (-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 >= 0), cost: 1
+  14: f724_0_countMetaList_NULL -> LoAT_sink : (-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 <= 0 /\ -arg1p5+arg1 >= 0), cost: NONTERM
+   1: f1_0_main_Load -> f724_0_countMetaList_NULL : arg1'=arg1p2, arg2'=arg2p2, arg3'=arg3p2, arg4'=arg4p2, (1+arg1p2 > 0 /\ arg1 > 0), cost: 1
+  10: f1_0_main_Load -> f693_0_createMetaList_GE : arg1'=0, arg2'=arg2p6, arg3'=1, arg4'=arg4p6, (1+arg2p6 > 0 /\ arg1 > 0 /\ 1+arg2 > 0), cost: 1
+  11: f693_0_createMetaList_GE -> f932_0_createMetaList_LE : arg1'=arg2, arg2'=arg1, arg3'=arg3p7, arg4'=1+arg3, (1+arg3p7 > 0 /\ arg3 > 0 /\ arg2-arg1 > 0), cost: 1
+  12: f932_0_createMetaList_LE -> f693_0_createMetaList_GE : arg1'=1+arg2, arg2'=arg1, arg3'=arg4, arg4'=arg4p8, -arg3 == 0, cost: 1
+  13: f932_0_createMetaList_LE -> f932_0_createMetaList_LE : arg3'=-1+arg3, arg3 > 0, cost: 1
+   9: __init -> f1_0_main_Load : arg1'=arg1p10, arg2'=arg2p10, arg3'=arg3p10, arg4'=arg4p10, T, cost: 1
+
+	Certificate of Non-Termination
+
+	Original rule:
+	f724_0_countMetaList_NULL -> f724_0_countMetaList_NULL : arg1'=arg1p5, arg2'=arg2p5, arg3'=arg3p5, arg4'=arg4p5, (-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 >= 0), cost: 1
+	New rule:
+	f724_0_countMetaList_NULL -> LoAT_sink : (-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 <= 0 /\ -arg1p5+arg1 >= 0), cost: NONTERM
+
+		-2+arg1 > 0 [0]: montonic decrease yields -2+arg1p5 > 0, dependencies: -arg1p5+arg1 >= 0
+		
+		-2+arg1 > 0 [1]: eventual decrease yields (-2+arg1 > 0 /\ -2+arg1p5 > 0)
+		
+		-2+arg1 > 0 [2]: eventual increase yields (-2+arg1 > 0 /\ -arg1p5+arg1 <= 0)
+		
+		arg1p5 > 0 [0]: monotonic increase yields arg1p5 > 0
+		
+		-arg1p5+arg1 >= 0 [0]: monotonic increase yields -arg1p5+arg1 >= 0
+		
+		Replacement map: {-2+arg1 > 0 -> (-2+arg1 > 0 /\ -arg1p5+arg1 <= 0), arg1p5 > 0 -> arg1p5 > 0, -arg1p5+arg1 >= 0 -> -arg1p5+arg1 >= 0}
+
+Step with 14
+
+	Trace
+
+	9[T], 1[(1+arg1p2 > 0 /\ arg1 > 0)], 2[(-2+arg1 > 0 /\ 2+arg1p3-arg1 <= 0 /\ 1+arg1p3 > 0)], 3[(1+arg1p4 > 0 /\ 2+arg1p4-arg1 <= 0 /\ -1+arg1 > 0)], 14[(-2+arg1 > 0 /\ arg1p5 > 0 /\ -arg1p5+arg1 <= 0 /\ -arg1p5+arg1 >= 0)]
+	
+	Blocked
+
+	[{}, {}, {}, {2[T]}, {3[T]}, {14[T]}]
+
+Refute
+
+	Counterexample
+
+	[ arg1=1 arg2=0 arg3=0 arg4=0 ] 9 [ arg1=7 arg2=0 arg3=0 arg4=0 ] 1 [ arg1=5 arg2=0 arg3=0 arg4=0 ] 2 [ arg1=3 arg2=0 arg3=0 arg4=0 ] 3 [ arg1=arg1 arg2=arg2 arg3=arg3 arg4=arg4 ] 14
+	
+NO
+
+Build SHA: a05f16bf13df659c382799650051f91bf6828c7b

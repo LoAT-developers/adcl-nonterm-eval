@@ -1,0 +1,162 @@
+YES
+
+Solver Timeout: 4
+Global Timeout: 300
+No parsing errors!
+Init Location: 0
+Transitions:
+<l0, l11, true>
+<l1, l2, ((0 + k^0) <= (0 + __const_100^0)) /\ (undef6 = undef6), par{i^0 -> 0, tmp___0^0 -> undef6}>
+<l1, l3, ((1 + __const_100^0) <= (0 + k^0))>
+<l4, l1, (1 <= (0 + k^0))>
+<l4, l3, ((0 + k^0) <= 0)>
+<l2, l5, true>
+<l6, l3, ((0 + i^0) <= (0 + j^0))>
+<l6, l7, ((1 + j^0) <= (0 + i^0)), par{j^0 -> (1 + j^0)}>
+<l8, l7, true, par{i^0 -> (~(1) + i^0), j^0 -> 0}>
+<l7, l6, true>
+<l9, l2, true, par{i^0 -> (1 + i^0)}>
+<l9, l8, true>
+<l5, l8, ((0 + i^0) <= (0 + k^0)) /\ ((0 + k^0) <= (0 + i^0))>
+<l5, l9, ((1 + k^0) <= (0 + i^0))>
+<l5, l9, ((1 + i^0) <= (0 + k^0))>
+<l10, l4, (undef89 = undef89), par{k^0 -> (0 + undef89), tmp^0 -> undef89}>
+<l11, l10, true>
+
+Fresh variables:
+undef6, undef89, 
+
+Undef variables:
+undef6, undef89, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+Preprocessed LLVMGraph
+Init Location: 0
+Transitions:
+<l0, l2, (k^0 = (0 + undef89)) /\ (undef89 = undef89) /\ (1 <= (0 + (0 + undef89))) /\ ((0 + (0 + undef89)) <= (0 + __const_100^0)) /\ (undef6 = undef6), par{i^0 -> 0}>
+<l0, l3, (k^0 = (0 + undef89)) /\ (undef89 = undef89) /\ (1 <= (0 + (0 + undef89))) /\ ((1 + __const_100^0) <= (0 + (0 + undef89)))>
+<l0, l3, (k^0 = (0 + undef89)) /\ (undef89 = undef89) /\ ((0 + (0 + undef89)) <= 0)>
+<l2, l7, ((0 + i^0) <= (0 + k^0)) /\ ((0 + k^0) <= (0 + i^0)), par{i^0 -> (~(1) + i^0), j^0 -> 0}>
+<l2, l2, ((1 + k^0) <= (0 + i^0)), par{i^0 -> (1 + i^0)}>
+<l2, l7, ((1 + k^0) <= (0 + i^0)), par{i^0 -> (~(1) + i^0), j^0 -> 0}>
+<l2, l2, ((1 + i^0) <= (0 + k^0)), par{i^0 -> (1 + i^0)}>
+<l2, l7, ((1 + i^0) <= (0 + k^0)), par{i^0 -> (~(1) + i^0), j^0 -> 0}>
+<l7, l3, ((0 + i^0) <= (0 + j^0))>
+<l7, l7, ((1 + j^0) <= (0 + i^0)), par{j^0 -> (1 + j^0)}>
+
+Fresh variables:
+undef6, undef89, 
+
+Undef variables:
+undef6, undef89, 
+
+Abstraction variables:
+
+Exit nodes:
+
+Accepting locations:
+
+Asserts:
+
+*************************************************************
+*******************************************************************************************
+***********************       WORKING TRANSITION SYSTEM (DAG)       ***********************
+*******************************************************************************************
+
+Init Location: 0
+Graph 0:
+Transitions:
+Variables:
+
+Graph 1:
+Transitions:
+<l2, l2, 1 + k^0 <= i^0, {i^0 -> 1 + i^0, rest remain the same}>
+<l2, l2, 1 + i^0 <= k^0, {i^0 -> 1 + i^0, rest remain the same}>
+Variables:
+i^0, k^0
+
+Graph 2:
+Transitions:
+<l7, l7, 1 + j^0 <= i^0, {j^0 -> 1 + j^0, rest remain the same}>
+Variables:
+i^0, j^0
+
+Graph 3:
+Transitions:
+Variables:
+
+Precedence: 
+Graph 0
+
+Graph 1
+<l0, l2, undef89 <= __const_100^0 /\ 1 <= undef89 /\ k^0 = undef89, {i^0 -> 0, rest remain the same}>
+
+Graph 2
+<l2, l7, i^0 = k^0, {i^0 -> -1 + i^0, j^0 -> 0, rest remain the same}>
+<l2, l7, 1 + k^0 <= i^0, {i^0 -> -1 + i^0, j^0 -> 0, rest remain the same}>
+<l2, l7, 1 + i^0 <= k^0, {i^0 -> -1 + i^0, j^0 -> 0, rest remain the same}>
+
+Graph 3
+<l0, l3, 1 + __const_100^0 <= undef89 /\ 1 <= undef89 /\ k^0 = undef89, {all remain the same}>
+<l0, l3, undef89 <= 0 /\ k^0 = undef89, {all remain the same}>
+<l7, l3, i^0 <= j^0, {all remain the same}>
+
+Map Locations to Subgraph:
+( 0 , 0 )
+( 2 , 1 )
+( 3 , 3 )
+( 7 , 2 )
+
+*******************************************************************************************
+********************************    CHECKING ASSERTIONS    ********************************
+*******************************************************************************************
+
+Proving termination of subgraph 0
+Proving termination of subgraph 1
+Checking unfeasibility...
+Time used: 0.002577
+[33mSome transition disabled by a set of invariant(s):[0m
+[36mInvariant at l2: i^0 <= k^0[0m
+
+[33mStrengthening and disabling transitions...[0m
+> It's unfeasible. Removing transition: 
+<l2, l2, 1 + k^0 <= i^0, {i^0 -> 1 + i^0, rest remain the same}>
+
+LOG: CALL solverLinear in Graph for feasibility
+
+LOG: RETURN solveLinear in Graph for feasibility
+Strengthening transition (result): 
+<l2, l2, 1 + i^0 <= k^0, {i^0 -> 1 + i^0, rest remain the same}>
+Checking unfeasibility...
+Time used: 0.001227
+
+Checking conditional termination of SCC {l2}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000521s
+[33mRanking function: [36m-1 - i^0 + k^0[0m
+New Graphs: 
+Proving termination of subgraph 2
+Checking unfeasibility...
+Time used: 0.001415
+
+Checking conditional termination of SCC {l7}...
+
+LOG: CALL solveLinear
+
+LOG: RETURN solveLinear - Elapsed time: 0.000541s
+[33mRanking function: [36m-1 + i^0 - j^0[0m
+New Graphs: 
+Proving termination of subgraph 3
+Analyzing SCC {l3}...
+No cycles found.
+
+[32mProgram Terminates[0m
