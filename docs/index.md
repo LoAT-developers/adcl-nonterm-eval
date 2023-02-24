@@ -59,7 +59,7 @@
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a737357a-83c6-4d1e-b144-40e68d621037">T2</a>, configuration <code>default fixed</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=4798c8a9-e698-4029-a052-5ba641e2e0ea">VeryMax</a>, configuration <code>termcomp2019_ITS</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=ca1897a6-b107-48ab-8c94-11f3e009bad4">iRankFinder</a>, configuration <code>competition_its</code> and <code>competition_c</code>, respectively</li>
-      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a6e85c65-6074-4ae3-9337-2bb9834554a6">Ultimate</a>, configuration default</li>
+      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a6e85c65-6074-4ae3-9337-2bb9834554a6">Ultimate</a>, configuration <code>default</code></li>
     </ul>
 
     <h2>Results</h2>
