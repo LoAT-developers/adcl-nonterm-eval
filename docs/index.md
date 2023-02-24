@@ -75,11 +75,11 @@
           <th>NO</th>
           <th>unique NO</th>
           <th>Yes</th>
-          <th>average runtime</th>
-          <th>median runtime</th>
-          <th>timeouts</th>
-          <th>average runtime NO</th>
-          <th>median runtime NO</th>
+          <th>avg rt</th>
+          <th>median rt</th>
+          <th>TO</th>
+          <th>avg rt NO</th>
+          <th>median rt NO</th>
         </tr>
       </thead>
       <tbody>
