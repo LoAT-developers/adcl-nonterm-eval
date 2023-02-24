@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-    <title>Proving Non-Termination via Acceleration Driven Clause Learning</title>
+    <title>Proving Non-Termination by Acceleration Driven Clause Learning</title>
     <style>
       table, th, td {border: 1px solid black;}
       td {text-align: center;}
@@ -11,7 +11,7 @@
   <body>
 
     <p>
-      This is the empirical evaluation of the paper <a href="???"><i>Proving Non-Termination via Acceleration Driven Clause Learning</i></a>.
+      This is the empirical evaluation of the paper <a href="???"><i>Proving Non-Termination by Acceleration Driven Clause Learning</i></a>.
     </p>
 
     <p>
@@ -160,7 +160,7 @@
     </p>
 
     <p>
-      The next table below shows the results for our evaluation on C Integer Programs.
+      The next table shows the results for our evaluation on C Integer Programs.
     </p>
 
     <table>
@@ -170,11 +170,11 @@
           <th>NO</th>
           <th>unique NO</th>
           <th>Yes</th>
-          <th>average runtime</th>
-          <th>median runtime</th>
-          <th>timeouts</th>
-          <th>average runtime NO</th>
-          <th>median runtime NO</th>
+          <th>avg rt</th>
+          <th>median rt</th>
+          <th>TO</th>
+          <th>avg rt NO</th>
+          <th>median rt NO</th>
         </tr>
       </thead>
       <tbody>
@@ -237,7 +237,7 @@
     </table>
 
     <p>
-      Finally, we provide tables with the detailed results of our benchmarks.
+      Finally, we provide tables with the detailed results of our benchmarks on separate sites.
     </p>
     <ul>
       <li>
