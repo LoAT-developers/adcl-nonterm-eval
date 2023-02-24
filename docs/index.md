@@ -66,6 +66,8 @@
 
     <p>
       The table below shows the results for our evaluation on ITSs.
+      Here, avg, rt, and TO abberviate average, runtime, and Timeouts, respectively.
+      Moreover, VB refers to the virtual best solver, i.e., the combination of all tools from our evaluation.
     </p>
 
     <table>
@@ -138,11 +140,105 @@
           <td>12.3s</td>
           <td>1.7s</td>
         </tr>
+        <tr>
+          <td>VB</td>
+          <td>536</td>
+          <td>--</td>
+          <td>661</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
       </tbody>
     </table>
 
+    <p>
+      Impressively, the virtual best solver can solve all but 25 of the 1222 examples.
+      As a reference, the participants of the first run of the category Termination of ITSs on the same set of examples in 2015 could solve all but 105 examples.
+    </p>
 
-    In the following, we provide tables with the detailed results of our benchmarks.
+    <p>
+      The next table below shows the results for our evaluation on C Integer Programs.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>NO</th>
+          <th>unique NO</th>
+          <th>Yes</th>
+          <th>average runtime</th>
+          <th>median runtime</th>
+          <th>timeouts</th>
+          <th>average runtime NO</th>
+          <th>median runtime NO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LoAT ADCL</td>
+          <td>102</td>
+          <td>2</td>
+          <td>0</td>
+          <td>24.7s</td>
+          <td>0.1s</td>
+          <td>26</td>
+          <td>0.2s</td>
+          <td>0.1s</td>
+        </tr>
+        <tr>
+          <td>VeryMax</td>
+          <td>103</td>
+          <td>1</td>
+          <td>213</td>
+          <td>5.5s</td>
+          <td>0.1s</td>
+          <td>0</td>
+          <td>12.0s</td>
+          <td>8.3s</td>
+        </tr>
+        <tr>
+          <td>Ultimate</td>
+          <td>100</td>
+          <td>0</td>
+          <td>205</td>
+          <td>14.8s</td>
+          <td>4.6s</td>
+          <td>9</td>
+          <td>6.1s</td>
+          <td>3.9s</td>
+        </tr>
+        <tr>
+          <td>iRankFinder</td>
+          <td>90</td>
+          <td>1</td>
+          <td>206</td>
+          <td>9.9s</td>
+          <td>1.7s</td>
+          <td>2</td>
+          <td>5.0s</td>
+          <td>1.6s</td>
+        </tr>
+        <tr>
+          <td>VB</td>
+          <td>109</td>
+          <td>--</td>
+          <td>215</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Finally, we provide tables with the detailed results of our benchmarks.
+    </p>
     <ul>
       <li>
         <a href="table.html">Integer Transition Systems</a>
