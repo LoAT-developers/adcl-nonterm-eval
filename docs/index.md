@@ -59,9 +59,88 @@
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a737357a-83c6-4d1e-b144-40e68d621037">T2</a>, configuration <code>default fixed</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=4798c8a9-e698-4029-a052-5ba641e2e0ea">VeryMax</a>, configuration <code>termcomp2019_ITS</code></li>
       <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=ca1897a6-b107-48ab-8c94-11f3e009bad4">iRankFinder</a>, configuration <code>competition_its</code> and <code>competition_c</code>, respectively</li>
+      <li><a href="https://www.starexec.org/starexec/secure/details/solver.jsp?anonId=a6e85c65-6074-4ae3-9337-2bb9834554a6">Ultimate</a>, configuration default</li>
     </ul>
 
     <h2>Results</h2>
+
+    <p>
+      The table below shows the results for our evaluation on ITSs.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>NO</th>
+          <th>unique NO</th>
+          <th>Yes</th>
+          <th>average runtime</th>
+          <th>median runtime</th>
+          <th>timeouts</th>
+          <th>average runtime NO</th>
+          <th>median runtime NO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>LoAT ADCL</td>
+          <td>521</td>
+          <td>9</td>
+          <td>0</td>
+          <td>48.6s</td>
+          <td>0.1s</td>
+          <td>183</td>
+          <td>2.9s</td>
+          <td>0.1s</td>
+        </tr>
+        <tr>
+          <td>LoAT '22</td>
+          <td>494</td>
+          <td>2</td>
+          <td>0</td>
+          <td>7.4s</td>
+          <td>0.1s</td>
+          <td>0</td>
+          <td>6.2s</td>
+          <td>0.1s</td>
+        </tr>
+        <tr>
+          <td>T2</td>
+          <td>442</td>
+          <td>3</td>
+          <td>615</td>
+          <td>17.2s</td>
+          <td>0.6s</td>
+          <td>45</td>
+          <td>7.4s</td>
+          <td>0.6s</td>
+        </tr>
+        <tr>
+          <td>VeryMax</td>
+          <td>421</td>
+          <td>6</td>
+          <td>631</td>
+          <td>28.3s</td>
+          <td>0.5s</td>
+          <td>30</td>
+          <td>30.5s</td>
+          <td>14.5s</td>
+        </tr>
+        <tr>
+          <td>iRankFinder</td>
+          <td>409</td>
+          <td>0</td>
+          <td>642</td>
+          <td>32.0s</td>
+          <td>2.0s</td>
+          <td>93</td>
+          <td>12.3s</td>
+          <td>1.7s</td>
+        </tr>
+      </tbody>
+    </table>
+
 
     In the following, we provide tables with the detailed results of our benchmarks.
     <ul>
