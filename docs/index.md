@@ -32,6 +32,23 @@
       We evaluated our implementation on all 1222 examples from the category <i>Termination of Integer Transition Systems</i> and all 335 examples from the category <i>Termination of C Integer Programs</i> of the <i><a href="https://github.com/TermCOMP/TPDB">Termination Problems Data Base</a></i>.
     </p>
 
+    <h2>Tools</h2>
+
+    <p>
+      We compared our implementation (<a href="https://github.com/LoAT-developers/LoAT/releases/tag/adcl-nt">LoAT ADCL</a>) with other leading termination analyzers: <a href="http://irankfinder.loopkiller.com:8081/">iRankFinder</a>, <a href="https://github.com/mmjb/T2">T2</a>, <a href="https://monteverdi.informatik.uni-freiburg.de/tomcat/Website/?ui=tool&tool=automizer">Ultimate</a>, <a href="https://www.cs.upc.edu/~albert/VeryMax.html">VeryMax</a>, and the previous version of LoAT (<a href="https://github.com/aprove-developers/LoAT/releases/tag/ijcar22">LoAT '22</a>).
+    </p>
+
+    <p>
+      For T2, VeryMax, and Ultimate, we took the versions of their last participations at the <a href="https://termination-portal.org/wiki/Termination_Competition">Termination and Complexity Competition</a> (2015, 2019, and 2022).
+      For iRankFinder, we used the configuration from the evaluation of our <a href="https://doi.org/10.1007/978-3-031-10769-6_41">IJCAR '22 paper</a>, which is tailored towards proving non-termination.
+    </p>
+
+    <p>
+      We excluded <a href="https://aprove.informatik.rwth-aachen.de/">AProVE</a>, as it cannot prove non-termination of ITSs, and it uses LoAT and T2 as backends when analyzing C programs.
+      Moreover, we excluded Ultimate from the evaluation on ITSs, as it cannot parse them.
+      For the same reason, we excluded T2 and LoAT '22 from the evaluation on C integer programs.
+    </p>
+
     <h2>StarExec Bundles</h2>
 
     We provide StarExec bundles for all tools used in our evaluation.
