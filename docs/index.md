@@ -11,7 +11,7 @@
   <body>
 
     <p>
-      This is the empirical evaluation of the paper <a href="main.pdf"><i>Proving Non-Termination by Acceleration Driven Clause Learning</i></a>.
+      This is the empirical evaluation of the paper <a href="https://arxiv.org/abs/2304.10166"><i>Proving Non-Termination by Acceleration Driven Clause Learning</i></a>.
     </p>
 
     <p>
